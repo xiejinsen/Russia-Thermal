@@ -4,79 +4,85 @@ Last updated: 2026-10-02
 
 ## Overall status
 
-**Estimated completion: ~14%**  
-**Estimated remaining work: ~86%**
+**Estimated completion: ~18%**  
+**Estimated remaining work: ~82%**
 
-This remains deliberately conservative. Progress is measured against the full path from evidence discovery to collaboration/PoC/3-year strategy, not by file count or paper count.
+The increase this round comes mainly from starting the China benchmark and filling two previously missing Russian capability tracks. This is still a conservative decision-chain estimate.
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity | What changed this round |
 |---|---|---:|---|
-| 01 | Global smartphone thermal problem space | ~45% | no major change |
-| 02 | Thermal technology landscape | ~22% | stronger two-phase / LHP / acoustic transfer framing |
-| 03 | Russian institution landscape | ~15% | broadened candidate queue; known seed institutions validated further |
-| 04 | Russian labs / researchers | ~18% | first deep-dive cards for Kutateladze, Ural LHP and aeroacoustics cluster |
-| 05 | Russian papers / patents | ~10% | direct electronics-cooling patent and recent paper seed set added |
-| 06 | Active-cooling deep dive | ~14% | aeroacoustic and thin-film/droplet hypotheses strengthened |
-| 07 | China benchmark & gap | 0% | pending |
-| 08 | Transfer / open problems / hypotheses | ~5% | mobile-transfer kill criteria becoming explicit |
-| 09 | Collaboration / PoC / 3-year directions | 0% | pending |
+| 01 | Global smartphone thermal problem space | ~45% | product examples reinforced active-cooling evolution |
+| 02 | Thermal technology landscape | ~26% | China product maturity now informs technology thresholds |
+| 03 | Russian institution landscape | ~17% | materials/software candidates added |
+| 04 | Russian labs / researchers | ~24% | SPbU DVFS line and materials candidates added |
+| 05 | Russian papers / patents | ~12% | materials/software evidence expanded |
+| 06 | Active-cooling deep dive | ~18% | benchmark now includes mass-produced Chinese fan/liquid systems |
+| 07 | China benchmark & gap | **~18%** | first structured academic + OEM baseline created |
+| 08 | Transfer / open problems / hypotheses | ~10% | first Russia–China gap map created |
+| 09 | Collaboration / PoC / 3-year directions | 0% | still intentionally gated |
 
 ## Major new findings this round
 
-### 1. Kutateladze is at least two separate collaboration targets
-**Pavlenko line:** dielectric boiling + modified/capillary-porous surfaces + CHF.
+### 1. China is already a very high miniaturization benchmark
+Public academic/product evidence includes:
+- ~0.35 mm academic ultra-thin VC;
+- HONOR product claim of 0.22 mm titanium VC;
+- ~0.7–0.71 mm mobile LHP research;
+- foldable-device flexible LHP.
 
-**Kabov/Kochkin/Chinnov line:** micro/minichannels + thin liquid films + gas-liquid flows + direct electronics cooling.
+Therefore Russian LHP/VC capability cannot be labeled differentiated on heritage alone.
 
-Treating the institute as a single “thermal lab” would hide important differences.
+### 2. Active liquid cooling is already productized in Chinese mobile products
+Huawei markets a micropump liquid-cooling phone case combining:
+- phase-change heat storage;
+- pumped liquid loop;
+- temperature / usage-scenario intelligent start-stop.
 
-### 2. Direct electronics-cooling IP exists
-Kutateladze owns RU 2822416 (registered 2024) covering cooling of electronic equipment using gas flow plus combined liquid-film/droplet flows.
+REDMAGIC publicly documents a mass-produced smartphone architecture combining:
+- circulating fluorinated liquid;
+- 3D VC;
+- liquid metal;
+- 24,000 RPM internal fan.
 
-A 2026 Kabov/Kuznetsov paper is also explicitly about a shear-driven liquid-film cooling system for microelectronic equipment.
+Vendor performance claims remain unverified independently.
 
-### 3. Microchannel capability is unusually small-scale
-A 2024 Kutateladze-associated experiment studied two-phase flow in a **12.5 μm × 10 mm slit microchannel**.
+### 3. Russia has a direct Android DVFS research line
+SPbU researchers published 2023 work on:
+- Android DVFS;
+- Energy-Aware Scheduling;
+- stochastic online optimization;
+- real smartphone behavior.
 
-This is strong evidence of microscale flow capability, but not yet a product architecture.
+This is relevant for future software/hardware thermal co-control, but the current work is energy-centric rather than thermal-control-centric.
 
-### 4. Ural LHP program is current and has a miniaturization foothold
-2025 conference work reports a miniature copper-water LHP with **2.3 mm flat evaporator** and 20–44 W heat-load cases depending on condenser cooling.
+### 4. Russian materials capability exists but is not yet a clear differentiator
+Skoltech BN/graphene/CNT polymer work, SPbU graphite-panel IP and MSU graphite-foil process research are relevant.
 
-This remains thicker than normal smartphone thermal-stack targets, so miniaturization is the key research challenge.
+However China currently shows stronger public evidence of:
+- smartphone material integration;
+- sub-mm thermal structures;
+- broad graphene/TIM research.
 
-### 5. Russia aeroacoustics capability remains current
-TsAGI has 2025 active-noise-control work; PNRPU has an active experimental aeroacoustic facility and current staff/publications.
+### 5. Early Russia–China whitespace is shifting
+The most interesting Russia-side opportunities now look less like standard components and more like:
+- aeroacoustic optimization;
+- thin-film/droplet multiphase cooling;
+- extreme microscale flow physics;
+- operating-limit / capillary science;
+- adaptive control.
 
-The likely transfer is methodology and experimental science, not aircraft hardware.
+## Current most important caution
 
-## Current high-signal research lines
+**Do not interpret “Russian historical strength” as “current collaboration advantage.”**
 
-- dielectric boiling + micro/nano modified surfaces
-- ultra-thin gas/liquid two-phase flow
-- shear-driven thin-film electronics cooling
-- gas-droplet / spray cooling
-- loop heat pipes / distributed heat routing
-- synthetic jets
-- fan / duct aeroacoustics
-- exploratory EHD / ionic wind
-
-## What remains before any collaboration recommendation
-
-- substantially broader Russia coverage;
-- full researcher cards / publication networks for more institutions;
-- systematic 2023–2026 paper corpus;
-- patent-claim / family analysis;
-- China benchmark;
-- Russia–China capability overlap/whitespace;
-- normalized phone constraints: thickness, power, acoustic, orientation, water/dust, reliability, manufacturability;
-- PoC designs with success and kill criteria.
+Every candidate must now be tested against a China baseline in the same dimension.
 
 ## Next round
 
-1. Finish the first-tier Kutateladze researcher network and recent-paper map.
-2. Expand patent analysis around RU 2822416 / microdroplet / microchannel cooling.
-3. Scan Russian **materials/TIM/graphite/advanced surfaces** and **software/control** capabilities, which are currently under-covered.
-4. Begin a structured China baseline so that “Russian advantage” can be tested rather than assumed.
+1. Deepen China academic baseline by institution/lab: Xi'an Jiaotong, SCUT, HUST, SJTU, PKU and others.
+2. Start China patent/OEM architecture map for active cooling, LHP/VC and micro-pump liquid cooling.
+3. Revisit Russian active-cooling lines with equal-envelope constraints.
+4. Expand Russian software/control search beyond the SPbU DVFS line.
+5. Begin defining normalized comparison experiments for the first 3–4 Russia–China whitespace hypotheses.
