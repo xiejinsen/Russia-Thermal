@@ -4,81 +4,79 @@ Last updated: 2026-10-02
 
 ## Overall status
 
-**Estimated completion: ~10–12%**  
-**Estimated remaining work: ~88–90%**
+**Estimated completion: ~14%**  
+**Estimated remaining work: ~86%**
 
-This is deliberately conservative.
+This remains deliberately conservative. Progress is measured against the full path from evidence discovery to collaboration/PoC/3-year strategy, not by file count or paper count.
 
-The earlier ~18% estimate over-weighted early framework-building and first-pass discovery. The project goal is not “find some promising institutions”; it is to reach an evidence-backed decision on:
-- Russian differentiated capabilities;
-- Russia–China complementarity;
-- mobile-transfer feasibility;
-- collaboration targets;
-- PoCs;
-- 3-year R&D directions.
+## Workstream maturity
 
-Those high-value synthesis stages have barely started.
-
-## Progress interpretation
-
-Progress is measured against the **full research-to-decision chain**, not:
-- number of folders;
-- number of papers found;
-- number of institutions listed.
-
-A workstream can be “started” while still being far from complete.
-
-| # | Workstream | Current maturity | What remains |
+| # | Workstream | Current maturity | What changed this round |
 |---|---|---:|---|
-| 01 | Global smartphone thermal problem space | ~45% | stronger OEM evidence, human-factor limits, workload/power evolution, tablet comparison |
-| 02 | Thermal technology landscape | ~20% | normalized metrics, maturity, negative evidence, product constraints, recent papers |
-| 03 | Russian institution landscape | ~10% | broader national scan, false-negative reduction, institutional verification |
-| 04 | Russian labs / researchers | ~5% | systematic PI/lab cards, networks, current activity, facilities |
-| 05 | Russian papers / patents | ~3% | systematic 2023–2026 corpus, patent families, mechanism-level review |
-| 06 | Active-cooling deep dive | ~10% | fan/MEMS/synthetic-jet/EHD/TEC/liquid comparisons, acoustics, reliability |
-| 07 | China benchmark & gap | 0% | full benchmark using normalized dimensions |
-| 08 | Transfer / open problems / hypotheses | ~3% | cross-source synthesis, competing hypotheses, experiments |
-| 09 | Collaboration / PoC / 3-year directions | 0% | target selection, PoC design, roadmap |
+| 01 | Global smartphone thermal problem space | ~45% | no major change |
+| 02 | Thermal technology landscape | ~22% | stronger two-phase / LHP / acoustic transfer framing |
+| 03 | Russian institution landscape | ~15% | broadened candidate queue; known seed institutions validated further |
+| 04 | Russian labs / researchers | ~18% | first deep-dive cards for Kutateladze, Ural LHP and aeroacoustics cluster |
+| 05 | Russian papers / patents | ~10% | direct electronics-cooling patent and recent paper seed set added |
+| 06 | Active-cooling deep dive | ~14% | aeroacoustic and thin-film/droplet hypotheses strengthened |
+| 07 | China benchmark & gap | 0% | pending |
+| 08 | Transfer / open problems / hypotheses | ~5% | mobile-transfer kill criteria becoming explicit |
+| 09 | Collaboration / PoC / 3-year directions | 0% | pending |
 
-## What is actually complete so far
+## Major new findings this round
 
-- Research scope and platform boundary
-- Evidence classification rules
-- Initial global problem framing
-- Initial technology taxonomy
-- First Russian institution seed scan
-- First active-cooling hypothesis set
-- Repository scaffolding
+### 1. Kutateladze is at least two separate collaboration targets
+**Pavlenko line:** dielectric boiling + modified/capillary-porous surfaces + CHF.
 
-## What is NOT complete
+**Kabov/Kochkin/Chinnov line:** micro/minichannels + thin liquid films + gas-liquid flows + direct electronics cooling.
 
-- Russia-wide institution coverage
-- lab/researcher network reconstruction
-- paper corpus completeness
-- patent analysis
-- China benchmark
-- direct Russia-vs-China capability comparison
-- technology maturity comparison
-- active cooling thermal-acoustic normalized comparison
-- collaboration target validation
-- PoC definitions
-- 3-year R&D roadmap
+Treating the institute as a single “thermal lab” would hide important differences.
 
-## Current high-signal leads — provisional
+### 2. Direct electronics-cooling IP exists
+Kutateladze owns RU 2822416 (registered 2024) covering cooling of electronic equipment using gas flow plus combined liquid-film/droplet flows.
 
-- Kutateladze Institute of Thermophysics SB RAS
-- Institute of Thermal Physics UB RAS
-- TsAGI / PNRPU / CIAM aeroacoustics cluster
-- SPbU Electrophysics ionic-wind line
-- MPEI / Skoltech microstructured two-phase work
+A 2026 Kabov/Kuznetsov paper is also explicitly about a shear-driven liquid-film cooling system for microelectronic equipment.
 
-These are **leads, not final selections**.
+### 3. Microchannel capability is unusually small-scale
+A 2024 Kutateladze-associated experiment studied two-phase flow in a **12.5 μm × 10 mm slit microchannel**.
 
-## Next gate
+This is strong evidence of microscale flow capability, but not yet a product architecture.
 
-The project should not move to final collaboration recommendations until at least:
-1. Russia institution coverage is substantially broader;
-2. high-signal labs have researcher-level evidence cards;
-3. recent papers/patents are reviewed;
-4. China benchmark is available;
-5. mobile-transfer constraints are normalized.
+### 4. Ural LHP program is current and has a miniaturization foothold
+2025 conference work reports a miniature copper-water LHP with **2.3 mm flat evaporator** and 20–44 W heat-load cases depending on condenser cooling.
+
+This remains thicker than normal smartphone thermal-stack targets, so miniaturization is the key research challenge.
+
+### 5. Russia aeroacoustics capability remains current
+TsAGI has 2025 active-noise-control work; PNRPU has an active experimental aeroacoustic facility and current staff/publications.
+
+The likely transfer is methodology and experimental science, not aircraft hardware.
+
+## Current high-signal research lines
+
+- dielectric boiling + micro/nano modified surfaces
+- ultra-thin gas/liquid two-phase flow
+- shear-driven thin-film electronics cooling
+- gas-droplet / spray cooling
+- loop heat pipes / distributed heat routing
+- synthetic jets
+- fan / duct aeroacoustics
+- exploratory EHD / ionic wind
+
+## What remains before any collaboration recommendation
+
+- substantially broader Russia coverage;
+- full researcher cards / publication networks for more institutions;
+- systematic 2023–2026 paper corpus;
+- patent-claim / family analysis;
+- China benchmark;
+- Russia–China capability overlap/whitespace;
+- normalized phone constraints: thickness, power, acoustic, orientation, water/dust, reliability, manufacturability;
+- PoC designs with success and kill criteria.
+
+## Next round
+
+1. Finish the first-tier Kutateladze researcher network and recent-paper map.
+2. Expand patent analysis around RU 2822416 / microdroplet / microchannel cooling.
+3. Scan Russian **materials/TIM/graphite/advanced surfaces** and **software/control** capabilities, which are currently under-covered.
+4. Begin a structured China baseline so that “Russian advantage” can be tested rather than assumed.
