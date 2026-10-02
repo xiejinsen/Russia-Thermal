@@ -2,43 +2,53 @@
 
 Last updated: 2026-10-02
 
-## Core sources
+## Russia core sources
 
 | ID | Source | Type | Year/current | Main use |
 |---|---|---|---|---|
 | RU-KUT-001 | https://www.itp.nsc.ru/about.html | official institution | current | Kutateladze capability scope |
-| RU-KUT-002 | https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html | official lab | current | Pavlenko lab, current projects |
-| RU-KUT-003 | https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257 | official researcher/lab | current | Huawei collaboration, Pavlenko projects |
-| RU-KUT-004 | https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/2025_lab1.3.html | official publication list | 2025 | dielectric boiling / surfaces |
-| RU-KUT-005 | https://doi.org/10.1134/S086986432206018X | primary paper | 2022/23 | FC-72 microchannel boiling |
-| RU-KUT-006 | https://doi.org/10.31857/S0040364423020126 | primary paper | 2023 | synthetic-jet heat transfer |
-| RU-KUT-007 | https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/66_laboratoriya_intensifikacii_processov_teploobme.html | official lab | current | microchannels / electronics cooling / current staff |
+| RU-KUT-002 | https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html | official lab | current | Pavlenko lab, projects |
+| RU-KUT-003 | https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257 | official researcher/lab | current | Huawei collaboration |
+| RU-KUT-007 | https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/66_laboratoriya_intensifikacii_processov_teploobme.html | official lab | current | microchannels / electronics cooling |
 | RU-KUT-008 | https://doi.org/10.1016/j.expthermflusci.2024.111153 | primary paper | 2024 | 12.5 μm slit two-phase microchannel |
-| RU-KUT-009 | https://doi.org/10.1134/S0015462825604279 | primary paper | 2026 | shear-driven film cooling of microelectronics |
-| RU-KUT-010 | https://www.itp.nsc.ru/website/inst/upload/infoblock/file/96swu-2822416.eod%20%281%29.pdf | official patent | 2024 | gas + liquid-film/droplet electronic cooling |
-| RU-KUT-011 | https://doi.org/10.1134/S0869864325010147 | primary paper | 2025/26 | microdroplet generator |
-| RU-KUT-012 | https://www.itp.nsc.ru/website/inst/upload/infoblock/file/oajdq-2855641.eod.pdf | official patent | 2026 | microdroplet-flow generator |
-| RU-KUT-013 | https://www.itp.nsc.ru/structura/ctt/patenty/patenty_it_so_ran_2024_g/index.html | official patent list | 2024 | patent landscape seed |
-| RU-URAL-001 | https://itpuran.ru/index.php/sotrudniki | official staff | current | LHP lab current team |
-| RU-URAL-002 | https://itpuran.ru/index.php/about-us/struktura-instituta | official institution | current | lab history / Maydanik patent lineage |
-| RU-URAL-003 | https://doi.org/10.56304/S0040363625701152 | primary paper | 2025 | LHP serviceability / efficiency conditions |
-| RU-URAL-004 | https://ihpcs.org/wp-content/uploads/2025/04/Final-Proceedings-Update-16.4.25-V.1-2.pdf | conference proceedings | 2025 | miniature flat-evaporator LHP |
-| RU-URAL-005 | https://doi.org/10.31857/S0040364424010088 | primary paper | 2024 | flexible long LHP |
-| RU-URAL-006 | https://tptmai.ru/eng/publications.php?ID=111348&eng=Y&mobile=Y | primary journal page | prior lineage | multi-source electronics LHP |
-| RU-TSAGI-001 | https://www.tsagi.ru/en/research/aeroacoustics/ | official institute | current | acoustics department capabilities |
-| RU-TSAGI-002 | https://doi.org/10.31857/S0320791925030104 | primary paper | 2025 | active tonal-noise control |
-| RU-PNRPU-001 | https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/ | official facility | current | aeroacoustic test capability |
-| RU-PNRPU-002 | https://pstu.ru/about-the-university/teachers/palchikovskiy-vadim-vadimovich/ | official researcher | current | recent aeroacoustics publications |
-| RU-MPEI-001 | https://www.mpei.ru/Science/labs/Pages/nil6.aspx | official lab | current | thermal-stabilization lab |
-| RU-MPEI-002 | https://doi.org/10.1134/S0869864324040085 | primary paper | 2024/25 | 3D-printed microstructured thermosyphon |
-| RU-SPBU-001 | https://www.comsol.com/papers-presentations | conference index | 2024 | ionic-wind modeling seed |
-| RU-TSU-001 | https://en-news.tsu.ru/news/tsu-and-chinese-scientists-plan-to-conduct-a-joint-project-in-heat-transfer/ | official university | 2024 | electronics-cooling cooperation candidate |
-| RU-ICM-001 | https://doi.org/10.31857/S0544126924050068 | primary paper | 2024 | TEC modeling for heat-loaded electronics |
-| RU-SFEDU-001 | https://sfedu.ru/press-center/news/79223 | official university | 2025 | microfluidics ecosystem candidate |
-| RU-MISIS-001 | https://doi.org/10.30898/1684-1719.2024.11.12 | primary paper | 2024 | exploratory magnetocaloric microcooler |
+| RU-KUT-009 | https://doi.org/10.1134/S0015462825604279 | primary paper | 2026 | film cooling of microelectronics |
+| RU-KUT-010 | https://www.itp.nsc.ru/website/inst/upload/infoblock/file/96swu-2822416.eod%20%281%29.pdf | official patent | 2024 | film/droplet electronic cooling |
+| RU-URAL-001 | https://itpuran.ru/index.php/sotrudniki | official staff | current | LHP current team |
+| RU-URAL-003 | https://doi.org/10.56304/S0040363625701152 | primary paper | 2025 | LHP operating limits |
+| RU-URAL-004 | https://ihpcs.org/wp-content/uploads/2025/04/Final-Proceedings-Update-16.4.25-V.1-2.pdf | conference proceedings | 2025 | 2.3 mm miniature LHP |
+| RU-TSAGI-001 | https://www.tsagi.ru/en/research/aeroacoustics/ | official institute | current | aeroacoustics |
+| RU-TSAGI-002 | https://doi.org/10.31857/S0320791925030104 | primary paper | 2025 | active noise control |
+| RU-PNRPU-001 | https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/ | official facility | current | aeroacoustics |
+| RU-SPBU-SW-001 | https://doi.org/10.15622/ia.22.5.3 | primary paper | 2023 | Android DVFS / SPSA |
+| RU-SPBU-SW-002 | https://pureportal.spbu.ru/en/publications/on-stochastic-optimization-for-smartphone-cpu-energy-consumption-decrease%28ec5b4e2c-c537-483f-a193-343f464dfb7f%29.html | official university portal | current record | mobile software line |
+| RU-SKOL-001 | https://doi.org/10.3390/polym15051214 | primary paper | 2023 | BN polymer thermal composite |
+| RU-SKOL-002 | https://sci.skoltech.ru/compositematerialsandstructures | official lab | current | composite-material lab |
+| RU-SPBU-MAT-001 | https://pureportal.spbu.ru/ru/publications/-------------%28db861e86-924b-4f9a-8c2c-1159ba324c89%29/export.html | official patent record | 2025 | graphite/carbon conductive panel |
+| RU-MSU-MAT-001 | https://istina.msu.ru/workers/183477229/all/ | official university research database | 2023–2026 | graphite-foil process project |
+
+## China benchmark sources
+
+| ID | Source | Type | Year/current | Main use |
+|---|---|---|---|---|
+| CN-VC-001 | https://doi.org/10.1016/j.applthermaleng.2024.122813 | primary paper | 2024 | 0.35 mm UTVC |
+| CN-VC-002 | https://doi.org/10.1115/1.4065170 | primary paper | 2024 | composite-wick UTVC optimization |
+| CN-LHP-001 | https://doi.org/10.1016/j.device.2025.100783 | primary paper | 2025 | 0.7 mm mobile mLHP |
+| CN-LHP-002 | https://doi.org/10.3969/j.issn.1008-0198.2025.04.016 | primary paper | 2025 | 0.71 mm HUST LHP |
+| CN-LHP-003 | https://doi.org/10.1016/j.enconman.2024.119332 | primary paper | 2025 | 0.7 mm flexible mobile LHP |
+| CN-MICRO-001 | https://doi.org/10.1038/s41928-025-01449-4 | primary paper | 2025 | high-heat-flux manifold microchannels |
+| CN-HUAWEI-001 | https://consumer.huawei.com/uk/phones/mate-x6/ | OEM official | current | graphene + 3D VC |
+| CN-HUAWEI-002 | https://consumer.huawei.com/en/accessories/pura80-micropump-liquid-cooling-case/ | OEM official | current | micropump liquid-cooling accessory |
+| CN-HUAWEI-003 | https://consumer.huawei.com/cn/support/content/zh-cn16042940/ | OEM support | current | PCM + pumped liquid + control details |
+| CN-HONOR-001 | https://www.honor.com/uk/phones/honor-magic-v3/ | OEM official | current | 0.22 mm titanium VC claim |
+| CN-HONOR-002 | https://www.honor.com/uk/phones/honor-90/ | OEM official | product | VC + graphite + AI thermal control |
+| CN-XIAOMI-001 | https://www.mi.com/uk/support/faq/details/KA-544044/ | OEM support | current | Wing-type IceLoop |
+| CN-OPPO-001 | https://www.oppo.com/uk/smartphones/series-reno/reno13-f-5g/ | OEM official | product | AI multi-cooling + VC |
+| CN-VIVO-001 | https://www.vivo.com/en/products/x200 | OEM official | product | smartphone cooling claim |
+| CN-REDMAGIC-001 | https://global.redmagic.gg/pages/cooling-technology | OEM official | current | fan + flowing liquid + VC |
+| CN-REDMAGIC-002 | https://mea.redmagic.gg/blogs/product-information/freeze-frame-redmagic-aquacore-cooling-system | OEM technical article | 2025 | piezoelectric micropump statement |
 
 ## Audit note
 
-- Older sources are retained only for technical lineage when recent activity is separately verified.
-- Direct phone applicability is **not** inferred from institution prestige or publication count.
-- Vendor/company claims will be tracked separately from independent measurements.
+OEM quantitative claims are vendor claims until independently measured.
+
+Country comparison is capability-specific; this register must not be used to create an overall country ranking.
