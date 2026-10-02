@@ -4,75 +4,73 @@ Last updated: 2026-10-02
 
 ## Overall status
 
-**Estimated completion: ~21%**  
-**Estimated remaining work: ~79%**
+**Estimated completion: ~25%**  
+**Estimated remaining work: ~75%**
 
-This round advanced the China benchmark from representative examples to an institution/lab-level map and produced the first normalized Russia–China comparisons.
+This round created the phone-level constraint and falsification framework needed to turn interesting technologies into research decisions.
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity | What changed this round |
 |---|---|---:|---|
-| 01 | Global smartphone thermal problem space | ~45% | stable |
-| 02 | Thermal technology landscape | ~30% | direct comparison constraints added |
-| 03 | Russian institution landscape | ~17% | stable this round |
-| 04 | Russian labs / researchers | ~24% | stable this round |
-| 05 | Russian papers / patents | ~13% | comparison papers added |
-| 06 | Active-cooling deep dive | ~22% | fan/liquid/thin-film comparisons becoming normalized |
-| 07 | China benchmark & gap | **~32%** | XJTU, HUST, SCUT, SJTU, PKU, Beihang and software lines mapped |
-| 08 | Transfer / open problems / hypotheses | **~18%** | four direct Russia–China comparison modules created |
-| 09 | Collaboration / PoC / 3-year directions | 0% | still gated |
+| 01 | Global smartphone thermal problem space | ~52% | human thermal-comfort and current product-envelope evidence added |
+| 02 | Thermal technology landscape | ~32% | common product constraints now defined |
+| 03 | Russian institution landscape | ~17% | stable |
+| 04 | Russian labs / researchers | ~24% | stable |
+| 05 | Russian papers / patents | ~13% | patent deep-dive still pending |
+| 06 | Active-cooling deep dive | ~28% | explicit equal-envelope metrics / acoustic gates added |
+| 07 | China benchmark & gap | ~32% | stable this round |
+| 08 | Transfer / open problems / hypotheses | **~38%** | phone constraint model + five success/kill cards + common PoC matrix |
+| 09 | Collaboration / PoC / 3-year directions | ~3% | only generic PoC framework; no target selection yet |
 
-## Major corrections caused by this round
+## New project gate
 
-### 1. Russia's LHP heritage is not enough
-China has multiple independent sub-mm LHP research lines with explicit mobile targeting.
+A candidate technology must now pass four levels:
 
-Russian LHP collaboration must prove a different value:
-- multi-source routing;
-- operating-limit physics;
-- startup / stability;
-- topology;
-- control / diagnostics;
-- IP.
+1. **Mechanism plausibility**
+2. **Phone constraint compatibility**
+3. **Advantage versus China/product baseline**
+4. **Small discriminating PoC**
 
-### 2. Aeroacoustics is not simply a Russia-only advantage
-Beihang has a current Key Laboratory of Aeroacoustics and 2025 fan-noise / aeroacoustic-wind-tunnel work.
+Only then can it enter collaboration selection.
 
-Russia may still offer useful depth, but the hypothesis must be narrowed to specific methods or transfer capability.
+## Evidence-backed phone constraints added
 
-### 3. China's academic depth is not limited to product engineering
-Peking University has 2025 embedded microfluidic cooling at up to 3000 W/cm² in a non-mobile chip context.
+### Human thermal comfort
+2026 studies support:
+- strong user sensitivity to surface temperature and time-at-temperature;
+- elevated discomfort around >=42°C in sensitive grip regions;
+- comfort generally below ~38°C in one mobile-gaming study;
+- significant discomfort around mid-40°C.
 
-Therefore Kutateladze should be evaluated for its *specific* two-phase / film / droplet mechanisms, not for generic microfluidics.
+### Product geometry / ingress
+Representative 2026 flagships:
+- Samsung Galaxy S26: 7.2 mm, IP68
+- Huawei Mate 80 Pro: 7.95 mm, IP68/IP69
 
-### 4. China has a strong thermal-material benchmark
-SJTU has compact-electronics validation of thermally conductive electrically insulating graphene/BN tape systems.
+These are benchmarks, not universal product limits.
 
-Russian materials remain secondary unless distinctive performance or manufacturing IP emerges.
+## Five active hypotheses with explicit kill tests
 
-## Current high-value whitespace hypotheses
+1. sealed thin-film / droplet hybrid cooling
+2. sub-mm phase-change surface / capillary physics
+3. multi-hotspot two-phase heat routing
+4. confined microfan aeroacoustics / active tonal control
+5. compute + cooling joint adaptive control
 
-1. **Sealed thin-film / droplet hybrid cooling**
-2. **Sub-mm phase-change surface / capillary physics**
-3. **Multi-hotspot two-phase heat routing**
-4. **Confined microfan aeroacoustics / active tonal control**
-5. **Compute + cooling joint adaptive control**
+## What remains before collaboration selection
 
-## Remaining gating work
-
-Before moving Workstream 09 beyond 0%:
-- China patent/OEM architecture map;
-- Russian patent claim/family analysis;
-- direct lab/researcher cards for more China/Russia counterparts;
-- phone constraint model;
-- independent product measurements;
-- equal-envelope PoC definitions;
-- IP overlap / whitespace.
+- claim-level Russian / Chinese patent comparison;
+- deeper evidence for film/droplet architecture feasibility;
+- detailed active fan acoustic benchmark;
+- phone teardown / actual available thermal-stack volume;
+- manufacturing and reliability evidence;
+- partner-specific capability / contact validation;
+- IP whitespace.
 
 ## Next round
 
-1. Build a **phone thermal constraint model**: thickness, volume, power, noise, skin temperature, ingress, orientation, shock and cost.
-2. Turn the five whitespace hypotheses into explicit success/kill criteria.
-3. Expand China/Russia patent comparison for film/droplet, LHP and active cooling.
-4. Re-check earlier global-baseline assumptions against the new evidence.
+1. Patent family / claim comparison for RU 2822416 and related cooling IP.
+2. Search China/global prior art around gas-sheared film + droplet cooling.
+3. Revisit the five hypotheses and kill any with obvious IP / feasibility blockers.
+4. Start first partner-to-hypothesis matching table.
