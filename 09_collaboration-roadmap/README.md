@@ -3,6 +3,9 @@
 ## Goal
 Converge the research into actionable collaboration opportunities and future R&D directions.
 
+## Current outputs
+- [Partner-to-hypothesis matching v0.1](partner_hypothesis_map_v01.md)
+
 ## Required outputs
 - collaboration target cards
 - why Russia + why us / China complementarity
@@ -14,4 +17,12 @@ Converge the research into actionable collaboration opportunities and future R&D
 - 3-year technology roadmap
 
 ## Status
-Not started. This workstream depends on evidence from 01–08.
+**Started at hypothesis-matching level.**
+
+No final partner recommendation has been made.
+
+Current provisional:
+- Tier A: Kutateladze film/droplet; Kutateladze phase-change surfaces; SPbU adaptive control
+- Tier B: ITP Ural multi-hotspot routing; TsAGI/PNRPU aeroacoustics
+
+The next gate is partner-specific PoC definition plus IP / packaging feasibility.
