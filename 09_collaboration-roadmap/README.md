@@ -5,27 +5,53 @@ Converge the research into actionable collaboration opportunities and future R&D
 
 ## Current outputs
 - [Partner-to-hypothesis matching](partner_hypothesis_map_v01.md)
-- [PoC-1: Multi-arm Russian Surface/Wick × Ultra-Thin VC](poc01_surface_utvc_v01.md)
+- [PoC-1: IP-aware multi-stage Surface/Wick × Ultra-Thin VC](poc01_surface_utvc_v01.md)
+- [Surface/Wick partner readiness](partner_readiness_surface_v01.md)
 
 ## Current status — 2026-10-03
 
 No final collaboration recommendation has been made.
 
-### Current lead
-**Pavlenko / Kutateladze**
-- Tier A lead for fluid-specific sub-mm phase-change / capillary control;
-- GO for comparative lab PoC design;
-- not yet GO for product integration.
+### Tier-A lead — Pavlenko / Kutateladze
+Current thesis:
+**fluid-specific dryout / rewetting / wetting-state retention under sub-mm sealed confinement.**
 
-### New challengers
-**TPU**
-- Tier B+ challenger for biphilic / contrast-wettability design.
+Status:
+- technical-discussion ready;
+- Stage-0 coupon GO;
+- Huawei/background-IP boundary still unresolved;
+- no product-integration commitment.
 
-**MPEI**
-- Tier B+ challenger for ordered porous wick architecture;
-- must pass coupon/prototype evidence before sealed-device PoC.
+### Stage-0 challengers
 
-### Other portfolio
+**TPU / Feoktistov**
+- contrast-wettability / surface-engineering line;
+- direct current electronics-cooling evidence;
+- TPU institutional patent mapping incomplete.
+
+**MPEI / Ivanov**
+- tunable wettability / hierarchical coating / thermosyphon line;
+- current patents and 2026 project continuity;
+- dielectric-fluid / sub-mm transfer unproven.
+
+### Pre-device challenger
+
+**MPEI ordered porous wick**
+- model/design evidence strong enough to retain;
+- requires experimental thin coupon/prototype before sealed-device PoC.
+
+## PoC rule
+
+Stage 0 screens:
+- fluid compatibility;
+- thickness/process;
+- cycling;
+- capillary/wetting behavior;
+- IP specificity.
+
+Only **up to two Russian challengers** advance to sealed-device Stage 1 against a strong modern China-style reference.
+
+## Other portfolio
 - Film/droplet hybrid — Tier A-
 - SPbU adaptive control — Tier B+
 - Ural multi-hotspot routing — Tier B
@@ -33,4 +59,10 @@ No final collaboration recommendation has been made.
 
 ## Guardrail
 
-The comparison baseline must be a strong modern China/global reference, not a generic smooth surface or simple mesh.
+Do not mistake patent quantity or university prestige for collaboration value.
+
+A partner advances only when:
+- the mechanism is differentiated;
+- it survives phone constraints;
+- it beats the strong reference;
+- it offers a plausible clean foreground-IP control point.
