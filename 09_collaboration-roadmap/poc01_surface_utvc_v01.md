@@ -1,77 +1,117 @@
-# PoC-1 — Russian Surface × Ultra-Thin VC v0.2
+# PoC-1 — Multi-Arm Russian Surface/Wick × Ultra-Thin VC v0.3
 
 Last updated: 2026-10-03
 
 ## Decision status
 
-**GO for lab PoC design.**
+**GO for comparative lab PoC design.**
 
-This does not mean GO for product development or final partner selection.
+The PoC is no longer a single Pavlenko-vs-generic-baseline test.
 
-## Evidence base — original links
+New objective:
 
-### Russian surface capability
-1. Shvetsov, Zhukov, Pavlenko — 2D-modulated capillary-porous coatings, HFE-7100:
-   https://doi.org/10.1016/j.applthermaleng.2024.125344
+> determine whether any Russian mechanism can beat a **modern China-style 0.39–0.4 mm composite/wettability-enhanced UTVC reference**.
 
-2. Brester, Shvetsov, Zhukov, Pavlenko — electrochemically modified steel mesh, HFE-7100:
-   https://doi.org/10.1134/S1810232825700183
+## Evidence backbone
 
-3. Volodin et al. — black silicon / HFE-7100 negative evidence:
-   https://doi.org/10.1134/S1810232825700225
+### Pavlenko
+- https://doi.org/10.1016/j.applthermaleng.2024.125344
+- https://doi.org/10.1134/S1810232825700183
+- https://doi.org/10.1134/S1810232825700225
+- https://doi.org/10.3103/S8756699019060049
 
-4. Pavlenko laboratory / current project / Huawei collaboration:
-   https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
+### TPU
+- https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+- https://doi.org/10.1016/j.ijheatmasstransfer.2026.129217
+- https://doi.org/10.1021/acs.langmuir.6c01997
 
-### China / modern UTVC comparator
-5. Zhang et al. — 0.35 mm ultra-thin VC with composite mesh wick:
-   https://doi.org/10.1016/j.applthermaleng.2024.122813
+### MPEI
+- https://doi.org/10.1109/REEPE63962.2025.10970830
+- https://doi.org/10.30724/1998-9903-2026-28-4-193-205
 
-6. SCUT composite-wick UTVC optimization:
-   https://doi.org/10.1115/1.4065170
+### China / modern UTVC
+- 0.35 mm visualized UTVC:
+  https://doi.org/10.1016/j.applthermaleng.2024.122813
+- 0.39 mm sealed composite-wick UTVC:
+  https://doi.org/10.3390/mi15050627
+- 0.4 mm composite / wettability-patterned UTVC:
+  https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
+- laser-ablation wick modification:
+  https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
 
-### Evidence caveat
-The Russian boiling papers use test geometries and liquid-layer heights that are **not directly comparable** with a 0.3–0.5 mm sealed phone VC. Therefore this PoC tests transferability; it does not assume the published percentage gains will carry over.
+## Why the baseline was upgraded
 
-## Research question
+Modern Chinese/global UTVC evidence already combines:
+- sub-0.4 mm thickness;
+- composite mesh/SWM wick;
+- surface wettability enhancement;
+- sealed manufacturing;
+- orientation testing;
+- direct wick laser modification.
 
-Can Kutateladze phase-change / wettability / porous-surface knowledge improve a modern sub-mm VC under phone-relevant thickness and transient/orientation constraints?
+Therefore a smooth-surface or generic mesh baseline would be too weak.
 
-## Candidate interventions
+## Stage 0 — transfer feasibility before sealed devices
 
-### Variant A — baseline
-Modern composite mesh / printed wick reference.
+### Pavlenko coupon
+Verify:
+- modified mesh / coating thickness;
+- HFE-7100 capillary behavior;
+- vacuum/bake compatibility;
+- wetting retention;
+- adhesion.
 
-### Variant B — electrochemically modified mesh
-Inspired by:
-https://doi.org/10.1134/S1810232825700183
+### TPU coupon
+Transfer the **pattern concept**, not necessarily the exact original process:
+- same phone-relevant substrate as reference;
+- same working fluid;
+- biphilic / contrast-wetting geometry;
+- verify wetting-state stability under fluid exposure and thermal cycling.
 
-### Variant C — miniaturized 2D modulated porous surface
-Inspired by:
-https://doi.org/10.1016/j.applthermaleng.2024.125344
+Kill TPU arm before VC assembly if the contrast collapses in the target fluid/process.
 
-### Variant D — optional negative/control
-Black-silicon-inspired surface to study fluid-specific wettability degradation:
-https://doi.org/10.1134/S1810232825700225
+### MPEI coupon/model
+Require:
+- manufacturable thin ordered wick;
+- measured capillary pressure/permeability;
+- thickness compatible with the common VC envelope.
 
-## Fixed constraints
+Do not fabricate a sealed MPEI device until the Stage-0 coupon beats or meaningfully shifts the capillary/permeability tradeoff.
 
-Target total VC thickness classes:
-- 0.3 mm
-- 0.4 mm
-- 0.5 mm
+## Stage 1 — sealed 0.4-mm-class comparison
 
-Hold constant:
-- shell material;
+### A — strong reference
+China-style composite mesh/SWM + contemporary wettability treatment.
+
+Reference evidence:
+https://doi.org/10.3390/mi15050627
+https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
+
+### B — Pavlenko-inspired
+Fluid-specific electrochemically modified mesh / thin capillary surface.
+
+### C — TPU-inspired
+Spatially patterned biphilic surface, only if Stage 0 passes.
+
+### D — MPEI-inspired
+Ordered porous wick, only if Stage 0 passes.
+
+## Controlled variables
+
+Hold:
+- total thickness;
 - footprint;
+- shell material;
 - working fluid;
 - fill ratio;
-- heater dimensions;
+- vapor-space target;
+- heater;
 - condenser boundary;
-- test pressure;
-- assembly method.
+- degassing;
+- sealing method;
+- orientation protocol.
 
-## Workloads
+## Loads
 
 Steady:
 - 5 W
@@ -80,73 +120,62 @@ Steady:
 - 15 W
 
 Transient:
-- 5 -> 15 W step
-- 8 -> 15 -> 8 W
-- repeated burst cycles
+- 5 -> 15 W
+- repeated 8 -> 15 -> 8 W
+- moving / localized heater if coupon layout allows.
 
-## Orientation
+## Metrics
 
-- horizontal favorable
-- horizontal inverted
-- portrait
-- landscape
-- adverse gravity orientation
+Primary:
+- evaporator thermal resistance;
+- total device thermal resistance;
+- dryout/capillary limit;
+- rewetting time;
+- peak transient temperature;
+- orientation penalty.
 
-## Main metrics
+Process/reliability:
+- contact-angle / capillary change after assembly;
+- 100–500 thermal cycles;
+- vacuum retention;
+- surface delamination/corrosion;
+- repeatability across samples.
 
-- evaporator thermal resistance
-- total VC thermal resistance
-- dryout/capillary limit
-- startup overshoot
-- rewetting time
-- maximum wall temperature
-- orientation penalty
-- cycle drift
+## Advance gate
 
-## Success gate
+A Russian-inspired arm advances only if it beats the **strong modern reference**, not a weak control.
 
-Advance collaboration if one Russian-inspired variant gives repeatable:
+Project screening criteria:
 - >=15% lower evaporator resistance; or
 - >=20% higher dryout/capillary limit; or
 - >=20% faster rewetting;
 
-while:
-- total thickness is unchanged;
-- orientation penalty does not materially worsen;
-- process survives cycling;
-- manufacturing path looks scalable.
+plus:
+- no thickness increase;
+- no material orientation penalty;
+- no unacceptable cycle degradation;
+- manufacturable process.
 
-These thresholds are project screening criteria, not claims from the cited papers.
+## Partner interpretation
 
-## Kill / downgrade gate
+### Pavlenko/Kutateladze
+Lead candidate for Stage 0/1 because evidence is closest to:
+- dielectric boiling;
+- dryout;
+- CHF;
+- capillary surface physics.
 
-Downgrade if:
-- gains vanish under 0.3–0.5 mm confinement;
-- modified surfaces lose wettability after boiling / cycling;
-- added structure consumes vapor space and hurts total resistance;
-- fabrication variability is high;
-- strong Chinese composite-wick baseline matches the result.
+### TPU
+Optional co-design/challenger partner for:
+- laser patterning;
+- biphilic surface layout;
+- wettability control.
 
-## Collaboration split
+### MPEI
+Pre-device design challenger:
+- ordered pore geometry;
+- capillary/permeability model.
 
-### Kutateladze
-- select surface physics;
-- define modification parameters;
-- explain nucleation / dryout / rewetting;
-- characterize surfaces pre/post test.
+## Key strategic question
 
-### Our side / China manufacturing partner
-- fabricate sub-mm VC test coupons;
-- assemble controlled devices;
-- run phone-relevant transient/orientation tests;
-- perform reliability cycling.
-
-## IP target
-
-Potential joint claims should focus on:
-- surface + wick + confinement geometry;
-- fluid-specific wettability retention;
-- transient rewetting;
-- integration into sub-mm mobile two-phase device.
-
-Avoid broad claims on modified boiling surfaces; prior art is crowded.
+The collaboration is only justified if Russian physics changes the Pareto frontier beyond what modern Chinese UTVC process optimization already achieves.
