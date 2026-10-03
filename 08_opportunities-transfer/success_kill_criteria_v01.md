@@ -244,3 +244,50 @@ A hypothesis advances only if:
 4. there is a clear 3–6 month discriminating PoC.
 
 If not, kill or downgrade the direction early.
+
+---
+
+# Evidence basis for the five hypotheses
+
+## H1 film/droplet
+- shear-driven film foundation:
+  https://doi.org/10.1016/j.ijheatfluidflow.2006.05.010
+- microgroove FC-72:
+  https://doi.org/10.1051/epjconf/201715900016
+- RU2822416:
+  https://www.itp.nsc.ru/website/inst/upload/infoblock/file/96swu-2822416.eod%20%281%29.pdf
+- RU2860581:
+  https://patents.google.com/patent/RU2860581C1/en
+
+## H2 phase-change surface
+- 2D porous HFE-7100:
+  https://doi.org/10.1016/j.applthermaleng.2024.125344
+- electrochemically modified mesh:
+  https://doi.org/10.1134/S1810232825700183
+- black-silicon negative evidence:
+  https://doi.org/10.1134/S1810232825700225
+- Chinese 0.35 mm UTVC comparator:
+  https://doi.org/10.1016/j.applthermaleng.2024.122813
+
+## H3 multi-hotspot routing
+- Russia LHP limits:
+  https://doi.org/10.56304/S0040363625701152
+- China 0.7 mm mobile LHP:
+  https://doi.org/10.1016/j.device.2025.100783
+
+## H4 aeroacoustics
+- TsAGI official:
+  https://www.tsagi.ru/en/research/aeroacoustics/
+- TsAGI active noise control:
+  https://doi.org/10.31857/S0320791925030104
+- Beihang comparator:
+  https://doi.org/10.7638/kqdlxxb-2025.0030
+
+## H5 adaptive control
+- SPbU Android DVFS/SPSA:
+  https://doi.org/10.15622/ia.22.5.3
+- predictive-control comparator:
+  https://doi.org/10.1016/j.applthermaleng.2023.121079
+
+The numerical success/kill thresholds in this file are **project screening criteria**, not values claimed by these papers.
+
