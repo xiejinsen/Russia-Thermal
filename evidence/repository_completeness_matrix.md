@@ -188,3 +188,28 @@ Remaining Priority-0 gaps for H2:
 QA state for H2:
 **PASS-WITH-GAPS for PoC design; NOT collaboration-ready for contracting/outreach commitment.**
 
+## Surface/wick IP + partner readiness QA — 2026-10-03
+
+Completed first pass:
+- Russia surface/wick patent map;
+- claim-level chart for major verified patents;
+- China academic/OEM patent comparators;
+- current-role verification for Pavlenko, Shvetsov, Feoktistov and Ivanov;
+- new MPEI wettability/coating line identified and separated from ordered-wick line;
+- PoC-1 made IP-aware and converted to Stage-0 coupon gate.
+
+Priority-0 items now partially closed:
+- **China competing surface/wick patent map:** first pass complete;
+- **current partner roles:** lead roles substantially verified.
+
+Still open:
+1. TPU RU2812668 inventors + full independent claim;
+2. OPPO/vivo direct claim extraction;
+3. patent family / legal-status validation for final promoted claims;
+4. Huawei/Bel Huawei background-IP contractual implications;
+5. Pavlenko modified-mesh actual layer thickness/cycling;
+6. exact contact/role verification for all non-lead co-investigators.
+
+QA state:
+**Patent landscape sufficient for research gating, not sufficient for legal FTO or contract drafting.**
+
