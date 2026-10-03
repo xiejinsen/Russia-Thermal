@@ -62,6 +62,11 @@ Purpose: central index of original / primary sources used to support project dec
 | RU-ACOU-001 | https://doi.org/10.31857/S0320791925030104 | primary paper | 2025 | TsAGI active flow-noise control | VERIFIED-PRIMARY |
 | RU-SW-001 | https://doi.org/10.15622/ia.22.5.3 | primary paper | 2023 | SPbU Android DVFS/SPSA | VERIFIED-PRIMARY |
 | RU-SKOL-001 | https://doi.org/10.3390/polym15051214 | primary paper | 2023 | BN polymer thermal composite | VERIFIED-PRIMARY |
+| RU-SKOL-002 | https://www.skoltech.ru/en/applicants/mohammad-owais | official thesis-defense page | 2023 | thermal-management nanocomposite PhD | VERIFIED-OFFICIAL |
+| RU-SKOL-003 | https://www.skoltech.ru/app/data/uploads/2023/09/thesis3.pdf | official thesis PDF | 2023 | BN/graphene/CNT thermal-management thesis | VERIFIED-PRIMARY |
+| RU-SPBU-MAT-001 | https://patents.google.com/patent/RU2834604C1/ru | patent text | 2025 | 260 μm-class graphite/carbon conductive-cooling panel | VERIFIED-PRIMARY |
+| RU-SPBU-MAT-002 | https://pureportal.spbu.ru/ru/publications/-------------%28db861e86-924b-4f9a-8c2c-1159ba324c89%29/export.html | official university portal | 2025 | inventor/university record | VERIFIED-OFFICIAL |
+| RU-MSU-MAT-001 | https://istina.msu.ru/workers/183477229/all/ | official university research database | 2023–2026 | graphite-foil process project | VERIFIED-OFFICIAL |
 | RU-MPEI-002 | https://doi.org/10.1134/S0869864324040085 | primary paper | 2024/25 | 3D-printed microstructured thermosyphon | VERIFIED-PRIMARY |
 
 ## E. China — ultra-thin two-phase baseline
@@ -114,7 +119,7 @@ Purpose: central index of original / primary sources used to support project dec
 ## Audit notes
 
 - OEM quantitative statements are vendor claims unless independently measured.
-- DOI links are treated as traceable primary-paper entry points even when the full text is paywalled.
+- DOI links are traceable primary-paper entry points even when full text is paywalled.
 - Google Patents is used as an accessible patent-text mirror when an official patent-office page/PDF is not yet stored.
 - Non-phone high-heat-flux studies are mechanism references, not direct phone performance comparators.
 - Missing original-source links discovered later must be fixed before the related conclusion is promoted to decision-grade.
