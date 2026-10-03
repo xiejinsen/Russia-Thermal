@@ -122,3 +122,23 @@ Before a decision-critical paper set is considered complete:
 - quartile must include source/year/category;
 - ranking prestige must remain separate from technical-directness scoring.
 
+## Major-university coverage update — 2026-10-03
+
+First-pass matrix now covers all 20 minimum institutions with an explicit state:
+- HIGH-SIGNAL: 3
+- KEEP: 12
+- NO CURRENT SIGNAL FOUND — first pass: 2
+- PENDING: 3
+
+This materially improves coverage, but the QA gate is **not passed** because:
+- PENDING is not zero;
+- Bauman and FEFU NO-SIGNAL statuses need a second pass;
+- subject-ranking metadata remains incomplete;
+- several KEEP schools still lack primary peer-reviewed thermal papers.
+
+New candidate gaps:
+- MPEI ordered porous heat-pipe structures;
+- NSTU power-electronics thermal packaging;
+- Samara additive microchannel radiators.
+
+
