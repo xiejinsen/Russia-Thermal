@@ -1,50 +1,46 @@
-# Partner-to-Hypothesis Matching v0.2
+# Partner-to-Hypothesis Matching v0.3
 
 Last updated: 2026-10-03
 
-Status: provisional matching, not final collaboration recommendation.
+Status: provisional collaboration map.
 
-| Hypothesis | Russian partner | Russian contribution | China / our-side complement | Immediate gate | State |
-|---|---|---|---|---|---|
-| Sub-mm phase-change surface | Kutateladze — Pavlenko line | dielectric boiling, CHF, porous/modified surfaces | sub-mm VC manufacturing, reliability, phone integration | Beat modern composite/wettability-engineered UTVC at fixed thickness | **Tier A** |
-| Sealed adaptive film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | gas-liquid film/droplet physics, channel instability, long patent lineage | miniaturized pump/actuator, package, VC, control, manufacturing | Close full loop within phone-class power/volume budget | **Tier A-** |
-| Compute + cooling adaptive control | SPbU stochastic optimization line | SPSA / model-light online adaptation | Android hooks, thermal prediction, NPU/GPU control, fan/pump | Beat calibrated MPC/RL under boundary-condition changes | **Tier B+** |
-| Multi-hotspot heat routing | ITP UB RAS — Maydanik/Chernysheva/Vershinin | LHP operating limits, capillary routing, multi-source experience | sub-mm fabrication, phone integration | Beat VC / Chinese UTLHP under moving hotspots | **Tier B** |
-| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | source physics, arrays, tonal/active control | phone blower/duct, UX metrics, product integration | Reduce tonal prominence at equal pressure-flow/power/volume | **Tier B** |
+| Hypothesis | Russian partner | Immediate action | State |
+|---|---|---|---|
+| Sub-mm phase-change surface | Kutateladze — Pavlenko / Shvetsov / Zhukov / Brester line | **Design PoC-1: modified mesh / miniaturized porous surface inside 0.3–0.5 mm VC** | **Tier A — GO for lab PoC design** |
+| Sealed adaptive film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | reduced hotspot-cell feasibility bench; quantify gas/liquid flow and pressure drop | **Tier A- — NO-GO phone prototype, GO feasibility bench** |
+| Compute + cooling adaptive control | SPbU | seek stronger Russia-specific evidence vs calibrated MPC/RL | **Tier B+** |
+| Multi-hotspot heat routing | ITP UB RAS | defer until dynamic-routing proof can be normalized to Chinese UTLHP | **Tier B** |
+| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | defer until phone-scale fan/noise baseline is deeper | **Tier B** |
 
-## Current preferred first PoC
+## PoC-1 preferred Russian technical team
 
-### Phase-change surface PoC
-Why first:
-- smallest integration scope;
-- shortest experimental loop;
-- easy A/B comparison;
-- directly exploits Russian surface physics and Chinese device manufacturing;
-- avoids pump, sealing and acoustic confounders.
+Core:
+- A. N. Pavlenko
+- D. A. Shvetsov
+- V. I. Zhukov
+- A. E. Brester
 
-Russia side:
-- surface selection;
-- boiling / rewetting model;
-- coating / microstructure parameters;
-- dryout physics.
+Adjacent capability:
+- O. A. Volodin
+- V. S. Serdyukov
+- additive / coating fabrication collaborators
 
-Our / China side:
-- 0.3–0.5 mm VC baseline;
-- manufacturing;
-- standard heater / phone envelope;
-- reliability cycling;
-- metrology.
+## Why PoC-1 now passes the gate
 
-### Film/droplet feasibility bench
-Run in parallel only as a **system budget study**, not yet a phone prototype.
+Evidence chain exists for:
+1. active 2023–2025 research program;
+2. HFE-7100 dielectric-fluid experiments;
+3. multiple independently fabricated surface types;
+4. positive results plus negative evidence;
+5. known industrial Huawei interaction;
+6. a simple A/B experimental path;
+7. complementary China-side manufacturing capability.
 
-Required outputs:
-- gas flow requirement;
-- liquid flow requirement;
-- pressure drop;
-- actuator power;
-- separator/condenser volume;
-- fluid inventory;
-- 15 W steady / 25 W transient response.
+## Remaining before outreach
 
-If this budget fails, H1 is downgraded before a costly prototype.
+- verify exact current affiliations/contact points;
+- determine which surface process can be shared/transferred;
+- ask for coating thickness / durability / area capability;
+- define joint IP boundary;
+- confirm whether prior Huawei agreements constrain foreground/background IP.
+
