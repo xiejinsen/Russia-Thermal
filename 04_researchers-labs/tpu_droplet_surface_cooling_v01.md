@@ -137,3 +137,51 @@ Possible future experiment:
 compare surface-pattern principles under the **same sealed dielectric-fluid ultra-thin VC conditions**.
 
 Do not promote TPU above Pavlenko until transfer into relevant working fluid and confinement is shown.
+
+---
+
+## IP / current-role update — 2026-10-03
+
+### Current lead verified
+
+Dmitry V. Feoktistov:
+- Candidate of Technical Sciences;
+- Associate Professor;
+- Deputy Director, Research School of High-Energy Process Physics.
+
+Official:
+https://staff.tpu.ru/personal/employee?lid=119971
+https://tpu.ru/sveden/managers/
+
+Official email:
+fdv@tpu.ru
+
+### TPU institutional heat-transfer-surface patent
+
+RU2812668C1:
+https://patents.google.com/patent/RU2812668C1/en
+
+Verified:
+- priority 2023-11-01;
+- grant/publication 2024-01-31;
+- assignee: National Research Tomsk Polytechnic University;
+- title concerns formation of micro- and nanostructures on a steel heat-exchange surface.
+
+Not yet verified:
+- full independent claim;
+- exact inventors;
+- connection to Feoktistov/Syrodoy current cooling line.
+
+Therefore the repository must **not** attribute this patent to Feoktistov until inventor mapping is complete.
+
+### IP implication
+
+Broad biphilic / hydrophilic-hydrophobic VC transport is already crowded by:
+https://patents.google.com/patent/CN116989603B/en
+
+Generic laser-hierarchical UTVC wick processing is also crowded by:
+https://patents.google.com/patent/CN118744276B/en
+
+TPU's collaboration thesis must therefore be narrower:
+**target-fluid-stable spatial wettability control under phone-relevant confinement and cycling**, not generic laser texturing.
+
