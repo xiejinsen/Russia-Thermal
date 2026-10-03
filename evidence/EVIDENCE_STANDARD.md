@@ -119,3 +119,36 @@ Decision-critical sources should not remain SECONDARY-ONLY or PENDING without an
 ## Rule
 
 **Do not turn “interesting physics” into “mobile opportunity” until a mobile-transfer constraint check has passed.**
+
+## Ranking / bibliometric metadata
+
+University and journal rankings are retained as **context metadata**.
+
+For university rankings:
+- record ranking system;
+- edition/year;
+- overall rank/band;
+- relevant subject rank/band;
+- exact subject;
+- original ranking URL.
+
+For journal rankings:
+- record ranking source;
+- edition/year;
+- subject category;
+- quartile;
+- metric value only with its year/source.
+
+Never store ambiguous statements such as:
+- "top university";
+- "top-100";
+- "Q1 journal";
+
+without the ranking system/category/year/source.
+
+Rankings are never sufficient evidence for technical capability or collaboration priority.
+
+See:
+- `ranking_metadata_standard.md`
+- `../03_russia-institutions/major_university_coverage_matrix.md`
+
