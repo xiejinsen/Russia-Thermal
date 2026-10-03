@@ -4,33 +4,38 @@ Last updated: 2026-10-03
 
 ## Overall status
 
-**Estimated completion: ~37%**
-**Estimated remaining work: ~63%**
+**Estimated research completion: ~37%**
+**Estimated remaining research: ~63%**
 
-## Alignment audit — 2026-10-03
+Repository evidence quality is being tracked separately from research completion.
+
+## Repository QA status
+
+A systematic evidence audit was run on 2026-10-03.
+
+Key corrections completed:
+- decision-grade source register expanded;
+- decision files now carry local original-source links;
+- PoC-1 traceability repaired;
+- Workstream 04/05 stale status corrected;
+- direct Russia-China comparison and gap files now include evidence backbones;
+- active-cooling and success/kill files now link primary evidence;
+- materials file upgraded with direct Skoltech thesis and RU2834604 patent sources.
+
+See:
+- `evidence/evidence_traceability_audit_2026-10-03.md`
+- `evidence/repository_completeness_matrix.md`
+- `evidence/source_register.md`
+
+## Alignment audit
 
 The project remains aligned to the original objective:
 > identify differentiated Russian capabilities that can complement Chinese/mobile-industry strengths and produce new smartphone thermal technology, collaboration PoCs and 3-year R&D directions.
 
-### Alignment strengths
-- China benchmark is now mandatory before promoting a Russian capability.
-- Phone constraints and kill criteria are explicit.
-- Generic VC/LHP/fan/DVFS/synthetic-jet routes have been pruned rather than promoted by default.
-- Negative evidence is retained.
-- Collaboration work is starting at partner + hypothesis + PoC level rather than institution prestige.
-
 ### Main drift risk
-The research has recently concentrated heavily on Kutateladze / phase-change surfaces because this direction produced the first feasible PoC.
+Recent research has concentrated on Kutateladze / phase-change surfaces because this direction produced the first feasible PoC.
 
-This is useful, but **Russia-wide institution coverage is still only ~17%**.
-
-Therefore:
-- PoC-1 may proceed in design;
-- but it must not freeze the technology landscape or final collaboration choice;
-- horizontal Russia scanning and alternative-team validation must continue in parallel.
-
-### Repository consistency corrections
-Root README, Scope, Workstream 08 and Workstream 09 have been refreshed to reflect the current 37% state and current portfolio.
+Russia-wide institution coverage is still only ~17%, so horizontal scanning must continue.
 
 ## Workstream maturity
 
@@ -74,18 +79,17 @@ Reduced film/droplet hotspot cell.
 
 ## Remaining critical work
 
-1. continue Russia-wide coverage to reduce false-negative risk;
-2. verify alternative teams to avoid overfitting to Kutateladze;
-3. surface patent / Chinese competing IP map;
-4. exact partner availability and current roles;
-5. PoC-1 process thickness / durability / area feasibility;
-6. film/droplet complete pressure-drop / power budget;
-7. partner-specific background / foreground IP boundaries;
-8. full 3-year roadmap only after first PoC and partner assumptions stabilize.
+1. continue Russia-wide coverage;
+2. current-role/contact verification;
+3. surface patent / China competing IP map;
+4. PoC-1 process thickness / durability / area feasibility;
+5. film/droplet pressure-drop / power budget;
+6. background / foreground IP boundaries;
+7. independent OEM/product measurements;
+8. phone teardown/internal-volume evidence;
+9. full 3-year roadmap only after PoC and partner assumptions stabilize.
 
 ## Next-stage balance
-
-Next research should run in **two parallel lanes**:
 
 ### Lane A — exploit
 Make PoC-1 collaboration-ready.
@@ -93,4 +97,5 @@ Make PoC-1 collaboration-ready.
 ### Lane B — explore
 Continue horizontal Russia scanning and challenge whether a stronger candidate exists.
 
-This balance is required to keep the project aligned with the original goal.
+### Lane C — evidence QA
+Every research round must also close evidence gaps and refresh the repository completeness matrix.
