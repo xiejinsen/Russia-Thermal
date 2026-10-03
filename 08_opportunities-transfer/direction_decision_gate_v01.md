@@ -1,73 +1,85 @@
-# Direction Decision Gate — v0.3
+# Direction Decision Gate — v0.4
 
 Last updated: 2026-10-03
 
-## Decision categories
-- KEEP
-- REFRAME
-- DOWNGRADE
-- KILL
-
-## H2 — sub-mm phase-change / capillary surface
+## H2 — fluid-specific sub-mm phase-change / capillary control
 
 **REFRAME + KEEP as Tier A**
 
-Old broad thesis:
-> Russian modified surface / porous wick may improve ultra-thin VC.
+### What is now killed as a standalone novelty thesis
 
-New narrower thesis:
-> Russian **fluid-specific dryout / rewetting / wettability-retention physics** may improve a modern ultra-thin VC beyond already-mature Chinese composite-wick / laser / wettability processes.
+Do not use the following as a Russia-specific collaboration reason by itself:
+- generic hydrophilic surface;
+- generic biphilic surface;
+- generic laser texturing;
+- generic porous coating;
+- generic composite wick;
+- generic capillary/permeability gradient;
+- generic low-resistance liquid channel.
 
-Why reframed:
+Why:
+the patent and academic field is already dense.
 
-China/global evidence already includes:
-- 0.35 mm composite-wick UTVC:
-  https://doi.org/10.1016/j.applthermaleng.2024.122813
-- 0.39 mm sealed composite-wick device, up to 26 W in reported matrix:
-  https://doi.org/10.3390/mi15050627
-- 0.4 mm wettability-patterned composite wick:
-  https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
-- direct laser-ablation wick modification:
-  https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
+Key patent evidence:
+- China biphilic coreless VC:
+  https://patents.google.com/patent/CN116989603B/en
+- China laser hierarchical UTVC wick:
+  https://patents.google.com/patent/CN118744276B/en
+- Huawei differentiated capillary wick:
+  https://patents.google.com/patent/WO2025190051A1/en
+- Xiaomi lower-resistance wick channel:
+  https://patents.google.com/patent/US12631401B2/en
 
-Therefore generic:
-- laser roughening;
-- hydrophilic treatment;
-- composite mesh;
-- ordered pores;
+### Surviving Tier-A thesis
 
-are not whitespace by themselves.
+> **fluid-specific dryout / rewetting / wetting-state retention under sub-mm sealed confinement, proven beyond a strong modern China-style UTVC baseline.**
 
-### H2 lead
-Pavlenko/Kutateladze:
-- HFE-7100;
-- boiling/CHF;
-- dryout;
-- wettability failure evidence.
+Lead:
+- Pavlenko/Kutateladze.
 
-### H2 challengers
+Why:
+- dielectric HFE-7100 evidence;
+- CHF/dryout/wettability-failure depth;
+- thin surface IP exists in the wider line:
+  https://patents.google.com/patent/RU2793671C2/en
+
+### Challengers
+
 TPU:
-- biphilic/spatial wettability design.
+- current laser / contrast-wetting physics;
+- Stage-0 only until dielectric-fluid stability is proven.
 
-MPEI:
-- ordered porous geometry.
+MPEI — Ivanov coating line:
+- current hierarchical coating / adjustable wettability / thermosyphon line;
+- Stage-0 experimental challenger.
 
-### Advance gate
-Beat a **strong 0.39–0.4 mm modern reference** at equal envelope.
+MPEI — ordered-wick line:
+- pre-device challenger until measured thin prototype exists.
 
-### Kill gate
-Downgrade H2 if:
-- Russian gains vanish in sub-mm sealed confinement;
-- China-style laser/wettability/composite wick matches the result;
-- surface state degrades after target-fluid exposure / vacuum / cycling;
-- geometry consumes vapor space and erases thermal gain.
+### H2 IP advance gate
+
+A collaboration path advances only if it can support a claim/control point more specific than generic surface treatment.
+
+Preferred claim-space:
+1. target-fluid wetting retention;
+2. dryout/rewetting topology under <0.5 mm confinement;
+3. moving-hotspot liquid routing;
+4. manufacturing-state retention after vacuum/seal/cycling;
+5. optional physics + workload/control co-design.
+
+### H2 kill gate
+
+Downgrade if:
+- all Russian arms match but do not exceed strong China-style reference;
+- target-fluid wetting state is unstable;
+- surface/process is blocked by existing claims with no narrow design-around;
+- added structure consumes vapor space and erases gain;
+- repeatability / cycling fails.
 
 ---
 
-## H1 — sealed adaptive film/droplet hybrid
+## H1 — sealed film/droplet hybrid
 **KEEP as Tier A- / high-risk feasibility**
-
-No change.
 
 ## H3 — multi-hotspot routing
 **KEEP as Tier B**
@@ -76,21 +88,26 @@ No change.
 **KEEP as Tier B**
 
 ## H5 — compute + cooling adaptive control
-**KEEP as Tier B+ after reframing**
+**KEEP as Tier B+**
 
-## Current portfolio
+## Current technical portfolio
 
 Tier A:
-- fluid-specific sub-mm phase-change / capillary control
+- fluid-specific sub-mm phase-change / capillary control — Pavlenko lead
 
 Tier A-:
 - sealed adaptive film/droplet hybrid
 
 Tier B+:
-- TPU biphilic surface challenger
-- MPEI ordered-wick challenger
+- TPU target-fluid biphilic challenger
+- MPEI Ivanov wettability/coating challenger
 - model-light compute + cooling adaptive control
+
+Pre-device:
+- MPEI ordered porous wick
 
 Tier B:
 - multi-hotspot routing
 - confined microfan aeroacoustics
+
+Patent crowding increases the burden of proof; it does not by itself prove a direction is unusable.
