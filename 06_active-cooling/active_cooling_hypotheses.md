@@ -93,3 +93,58 @@ Once a phone contains an active thermal actuator, the best control variable is n
 - lower cooling energy.
 
 This will later connect the hardware thermal study with CPU/runtime/system-software research.
+
+---
+
+## Evidence backbone and current corrections — 2026-10-03
+
+This file contains hypotheses, not recommendations. Several original hypotheses have since been narrowed or killed as Russia-specific themes.
+
+### Synthetic jet
+Russian primary example:
+https://doi.org/10.31857/S0040364423020126
+
+Current correction:
+generic synthetic-jet cooling is **not** treated as Russia-specific whitespace. It remains only a possible actuator/benchmark.
+
+### Multi-source LHP
+Russia:
+- operating limits:
+  https://doi.org/10.56304/S0040363625701152
+- 2025 miniature flat-evaporator LHP proceedings:
+  https://ihpcs.org/wp-content/uploads/2025/04/Final-Proceedings-Update-16.4.25-V.1-2.pdf
+
+China comparators:
+- 0.7 mm mobile LHP:
+  https://doi.org/10.1016/j.device.2025.100783
+- 0.7 mm flexible LHP:
+  https://doi.org/10.1016/j.enconman.2024.119332
+
+Current correction:
+generic LHP miniaturization is not a Russia-specific opportunity; only dynamic/multi-hotspot routing remains active.
+
+### Aeroacoustics
+Russia:
+- TsAGI official:
+  https://www.tsagi.ru/en/research/aeroacoustics/
+- TsAGI active flow-noise control:
+  https://doi.org/10.31857/S0320791925030104
+- PNRPU facility:
+  https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustannovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/
+
+China comparator:
+https://doi.org/10.7638/kqdlxxb-2025.0030
+
+### Ionic wind
+Current evidence remains exploratory. Do not promote this route until a recent primary electronics-cooling demonstration and practical voltage/ozone/lifetime evidence are stored.
+
+### Predictive / adaptive control
+Russia:
+https://doi.org/10.15622/ia.22.5.3
+
+Global predictive-control comparator:
+https://doi.org/10.1016/j.applthermaleng.2023.121079
+
+Current correction:
+generic predictive thermal control / DVFS is crowded. The surviving Russian hypothesis is model-light online adaptation under uncertain phone boundary conditions.
+
