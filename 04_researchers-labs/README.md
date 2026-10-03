@@ -1,41 +1,40 @@
 # 04 — Russian Labs & Researchers
 
 ## Goal
-Build lab/PI/researcher cards for high-signal Russian teams and reconstruct collaboration/publication networks.
+Build lab/PI/researcher cards for high-signal Russian teams and reconstruct collaboration/publication/IP networks.
 
-## Required outputs
-- institution -> lab -> PI -> core researcher map
-- recent 2023–2026 publication activity
-- experimental facilities
-- technical specialization
-- industrial collaboration evidence
-- current activity verification
-- mobile-transfer relevance
-- contact / official homepage
-- uncertainty and evidence gaps
+## Current deep-dive cards — 2026-10-03
 
-## Status
-Initial seed names exist from Workstream 03. Systematic deep dive has not started.
-
-## Current status — 2026-10-03
-
-Systematic deep dives **have started**. Current partner/lab cards include:
-- Kutateladze Institute — Pavlenko phase-change surface line
+- Kutateladze — Pavlenko phase-change / capillary-surface line
 - Kutateladze — Kabov/Kochkin/Chinnov film/droplet line
 - ITP Ural — Maydanik/Chernysheva/Vershinin LHP line
 - TsAGI / PNRPU aeroacoustics cluster
 - SPbU smartphone DVFS / stochastic optimization
+- TPU — droplet / wettability surface cooling
+- MPEI — ordered porous heat-pipe/wick line
+- **MPEI — wettability / hierarchical-coating IP line**
 - Russian thermal-material candidate scan
 
-Decision-grade evidence is indexed in:
+## Important MPEI correction
+
+MPEI must now be represented as at least two separate technical lines:
+
+1. Bulaeva/Savchenkov/Savchenkova — ordered porous wick/modeling;
+2. Ivanov/Alyautdinova/Kuzma-Kichta lineage — wettability, micro/nanoparticle coatings and thermosyphons.
+
+Do not merge researchers or IP across these lines without evidence.
+
+## Partner-readiness rule
+
+Every promoted partner card must include:
+- official current role/lab page;
+- current contact where public;
+- 2023–2026 primary papers;
+- patent/background-IP links where relevant;
+- current project/facility evidence;
+- explicit transfer gaps;
+- background/foreground IP questions.
+
+Central evidence:
 - [Evidence register](../evidence/source_register.md)
 - [Traceability audit](../evidence/evidence_traceability_audit_2026-10-03.md)
-
-### Evidence requirement
-Every promoted partner card must include:
-- official current lab/researcher page where available;
-- 2023–2026 primary papers with DOI/publisher links;
-- patent links for IP-relevant claims;
-- industrial-collaboration source if used in partner selection;
-- explicit unknowns for missing current-role/contact information.
-
