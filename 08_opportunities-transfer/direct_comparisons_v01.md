@@ -214,3 +214,64 @@ This is a testable hypothesis, not established evidence.
 5. computation + cooling co-control using adaptive/model-light methods.
 
 The next step is to convert these into **mobile constraints + PoC kill criteria**, not continue accumulating technologies indefinitely.
+
+---
+
+# Evidence backbone — original sources
+
+## LHP comparison
+Russia:
+- LHP operating-limit analysis:
+  https://doi.org/10.56304/S0040363625701152
+- 2.3 mm miniature flat-evaporator proceedings:
+  https://ihpcs.org/wp-content/uploads/2025/04/Final-Proceedings-Update-16.4.25-V.1-2.pdf
+- flexible LHP:
+  https://doi.org/10.31857/S0040364424010088
+
+China:
+- 0.7 mm mobile LHP:
+  https://doi.org/10.1016/j.device.2025.100783
+- 0.71 mm HUST LHP:
+  https://doi.org/10.3969/j.issn.1008-0198.2025.04.016
+- flexible mobile LHP:
+  https://doi.org/10.1016/j.enconman.2024.119332
+
+## Micro-scale two-phase / microfluidics
+Russia:
+- 12.5 μm slit two-phase flow:
+  https://doi.org/10.1016/j.expthermflusci.2024.111153
+- RU2822416 official patent:
+  https://www.itp.nsc.ru/website/inst/upload/infoblock/file/96swu-2822416.eod%20%281%29.pdf
+
+China:
+- PKU embedded microfluidics:
+  https://doi.org/10.1038/s41928-025-01449-4
+- official PKU page:
+  https://mech.pku.edu.cn/xwzx/xwkx/0baed6d32511433dab994392c9de3f0b.htm
+
+## Aeroacoustics
+Russia:
+- TsAGI official:
+  https://www.tsagi.ru/en/research/aeroacoustics/
+- active flow-noise control:
+  https://doi.org/10.31857/S0320791925030104
+- PNRPU facility:
+  https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/
+
+China:
+- Beihang fan aeroacoustics:
+  https://doi.org/10.7638/kqdlxxb-2025.0030
+
+## Software / adaptive control
+Russia:
+https://doi.org/10.15622/ia.22.5.3
+
+China / global comparators:
+- USTC adaptive-DVFS publication list:
+  https://faculty.ustc.edu.cn/zhuzongwei/en/lwcg/501220/list/index.htm
+- predictive thermal/fan control:
+  https://doi.org/10.1016/j.applthermaleng.2023.121079
+
+## Traceability note
+Numbers in the comparison tables above are only decision-grade when traceable to these primary/official links. Conditions differ across many studies, so the file's direct/approximate/non-comparable labels remain mandatory.
+
