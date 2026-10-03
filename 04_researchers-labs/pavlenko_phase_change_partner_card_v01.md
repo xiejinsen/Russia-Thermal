@@ -210,3 +210,62 @@ Before collaboration commitment, request public/shareable technical answers on:
 - fluid compatibility;
 - vacuum compatibility.
 
+---
+
+## IP / readiness update — 2026-10-03
+
+### Current roles verified
+
+Alexander N. Pavlenko:
+- Professor;
+- Head of Laboratory of Low-Temperature Thermophysics;
+- Corresponding Member RAS.
+
+Official:
+https://www.itp.nsc.ru/lmpt/?lang=ru&page_id=855
+
+Contact:
+pav@itp.nsc.ru
+
+Dmitry A. Shvetsov:
+- Researcher, Laboratory of Low-Temperature Thermophysics;
+- Candidate of Physical and Mathematical Sciences.
+
+Official:
+https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html
+
+### Thin-coating patent evidence
+
+RU2793671C2:
+https://patents.google.com/patent/RU2793671C2/en
+
+This patent includes:
+- microarc-oxidation capillary-porous coating;
+- 6–12% surface-layer porosity;
+- water contact angle <40°;
+- dependent coating thickness 7–35 μm;
+- pore size 100 nm–10 μm.
+
+This materially strengthens the plausibility that the broader Pavlenko/Kutateladze surface program can operate at tens-of-microns scale.
+
+Caveat:
+the patent does not demonstrate an HFE-filled 0.3–0.5 mm phone VC.
+
+### Background-IP risk
+
+The official Pavlenko project page records Huawei-related boiling work in 2021–2023 and a Bel Huawei Technologies consulting agreement in 2024–2026:
+https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
+
+No inference is made about:
+- exclusivity;
+- product deployment;
+- ownership of specific foreground results.
+
+Before formal collaboration, explicitly separate:
+- institute background IP;
+- Huawei-related background/contract rights if any;
+- new phone-specific foreground IP.
+
+Current readiness:
+**technical discussion ready; IP boundary not yet contract-ready.**
+
