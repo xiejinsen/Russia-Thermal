@@ -169,3 +169,22 @@ The grant page itself lists heat/mass-transfer and droplet publications.
 Repository rule:
 do not call 25-79-10045 an “electronics-cooling grant”; describe it only as a funding source acknowledged/listed for relevant publications.
 
+## Surface/wick comparison QA — 2026-10-03
+
+Completed:
+- Pavlenko vs TPU vs MPEI normalized comparison;
+- China reference upgraded to 0.39–0.4 mm sealed / wettability-enhanced UTVC;
+- PoC-1 converted to multi-arm strong-baseline design;
+- generic surface modification removed as implied Russia-specific whitespace.
+
+Remaining Priority-0 gaps for H2:
+1. Pavlenko modified-mesh actual thickness / pore morphology / cycling;
+2. TPU target-fluid wettability stability;
+3. MPEI experimental thin-wick prototype;
+4. China surface/wick patent map;
+5. background IP / Huawei overlap;
+6. current partner-role/contact verification.
+
+QA state for H2:
+**PASS-WITH-GAPS for PoC design; NOT collaboration-ready for contracting/outreach commitment.**
+
