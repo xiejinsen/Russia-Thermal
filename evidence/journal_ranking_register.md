@@ -1,37 +1,24 @@
-# Journal Ranking Register — Decision-Relevant Venues v0.1
+# Journal Ranking Register — Decision-Relevant Venues v0.2
 
 Last updated: 2026-10-03
 
-Purpose: preserve bibliometric context for decision-relevant papers without confusing journal prestige with technical relevance.
+Rank is metadata, not technical proof.
 
-## Source policy
-
-Preferred:
-- Clarivate JCR / Scopus / SCImago original records when publicly accessible.
-
-When direct JCR pages are unavailable publicly, this register may use a clearly labeled bibliometric aggregation source and mark it **SECONDARY-BIBLIOMETRIC**.
-
-Quartile must include:
-- year;
-- category/source where available.
-
-## Current entries
-
-| Journal | Important project paper(s) | 2025 ranking context | Source | Verification |
+| Journal | Project relevance | 2025 context | Source | Verification |
 |---|---|---|---|---|
-| Applied Thermal Engineering | Pavlenko/Shvetsov/Zhukov 2D porous coating; China 0.35 mm UTVC | 2025 SJR **Q1**, SJR 1.556; secondary page reports JCR 2025 Q1 in Mechanical Engineering / Thermodynamics, Q2 in Energy & Fuels | https://researchcloud.net/journal/1359-4311 ; https://www.akaturk.com/journals/13688?lang=en | SECONDARY-BIBLIOMETRIC |
-| Experimental Thermal and Fluid Science | Kutateladze 12.5 μm slit two-phase paper | 2025 SJR **Q1** in Fluid Flow and Transfer Processes / Mechanical Engineering; SJR 0.706 | https://www.journalsbase.com/journals/experimental-thermal-and-fluid-science | SECONDARY-BIBLIOMETRIC |
-| Journal of Engineering Thermophysics | Pavlenko modified mesh / black-silicon papers | 2025 SJR **Q3** in listed Energy/Modeling categories; SJR 0.302 | https://www.journalsbase.com/journals/journal-of-engineering-thermophysics | SECONDARY-BIBLIOMETRIC |
+| Applied Thermal Engineering | Pavlenko 2D porous surface; China UTVC | SJR Q1; JCR context previously stored | https://researchcloud.net/journal/1359-4311 | SECONDARY-BIBLIOMETRIC |
+| International Journal of Heat and Mass Transfer | TPU wettability / acoustic droplet work; broad surface comparators | **JCR 2025 Q1, JIF 6.6; SJR 2025 Q1, 1.224** | https://www.iit.comillas.edu/publicacion/info_revista/en/933/International_Journal_of_Heat_and_Mass_Transfer | SECONDARY-BIBLIOMETRIC |
+| International Communications in Heat and Mass Transfer | TPU droplet-impact / negative evidence line | **SJR 2025 Q1, 1.023** | https://www.journalsbase.com/journals/international-communications-in-heat-and-mass-transfer | SECONDARY-BIBLIOMETRIC |
+| Experimental Thermal and Fluid Science | Kutateladze slit two-phase flow | SJR 2025 Q1 | https://www.journalsbase.com/journals/experimental-thermal-and-fluid-science | SECONDARY-BIBLIOMETRIC |
+| Journal of Engineering Thermophysics | Pavlenko modified mesh / black-silicon; NSU boiling microlayer | SJR 2025 Q3 | https://www.journalsbase.com/journals/journal-of-engineering-thermophysics | SECONDARY-BIBLIOMETRIC |
 
-## Interpretation rules
+## Interpretation
 
-1. Applied Thermal Engineering publication venue strengthens external venue context, but the 1.5–25 mm liquid-layer geometry remains non-comparable to a 0.3–0.5 mm phone VC.
-2. A Q3 venue does not invalidate a directly relevant experiment; technical directness and reproducibility remain separate fields.
-3. Journal quartile must never be used as a proxy for Russia-vs-China technology advantage.
+TPU now has multiple recent publications in Q1 heat-transfer venues. This strengthens evidence that the team is currently active.
 
-## Next entries to add
+It does **not** prove smartphone applicability because the dominant experimental geometry is open droplet/surface cooling rather than sealed sub-mm phone devices.
 
-- International Journal of Heat and Mass Transfer
+Next venues to normalize:
 - Device
 - Nature Electronics
 - Energy Conversion and Management
@@ -39,5 +26,4 @@ Quartile must include:
 - Thermal Engineering
 - Informatics and Automation
 - Advanced Functional Materials
-
-Use original JCR/Scopus/SJR sources when accessible; otherwise retain the SECONDARY-BIBLIOMETRIC label.
+- Langmuir
