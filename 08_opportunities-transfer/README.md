@@ -9,24 +9,29 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Smartphone thermal constraint model v0.1](smartphone_constraint_model_v01.md)
 - [Five whitespace hypotheses — success/kill criteria v0.1](success_kill_criteria_v01.md)
 - [Common PoC test matrix v0.1](poc_test_matrix_v01.md)
+- [Direction decision gate](direction_decision_gate_v01.md)
+- [Tier-A engineering feasibility review](tierA_engineering_feasibility_v01.md)
+- [Phase-change surface matrix](phase_change_surface_matrix_v01.md)
+- [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
-## Required outputs
-- cross-domain transfer map
-- problem x technology matrix
-- negative evidence / boundary conditions
-- mobile-transfer gates
-- competing hypotheses
-- smallest discriminating experiments
-- thermal / acoustic / power / thickness / reliability trade-offs
+## Current status — 2026-10-03
 
-## Current status
-The project has moved from opportunity discovery into **constraint and falsification**.
+The project is in **constraint, falsification and first GO/NO-GO** stage.
 
-The five surviving hypotheses now have explicit:
-- product constraints;
-- normalized baselines;
-- success criteria;
-- kill criteria;
-- common PoC conditions.
+Current portfolio:
+- Tier A — sub-mm phase-change / capillary surface
+- Tier A- — sealed adaptive film/droplet hybrid
+- Tier B+ — model-light compute + cooling adaptive control
+- Tier B — multi-hotspot two-phase routing
+- Tier B — confined microfan aeroacoustics
 
-The next gate is patent/IP overlap plus deeper evidence on the remaining five directions.
+Important:
+PoC-1 being selected does not close the landscape. Workstreams 03/04/05/07 remain active to prevent survivorship bias.
+
+## Next gate
+
+1. turn PoC-1 into a collaboration-ready technical package;
+2. continue Russia coverage / alternative-team scan;
+3. complete surface-related patent / IP map;
+4. verify whether the Russian surface advantage survives modern Chinese UTVC baselines;
+5. retain or kill film/droplet after full-loop feasibility evidence.
