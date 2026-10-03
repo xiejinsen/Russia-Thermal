@@ -95,3 +95,45 @@ First compare:
 - MPEI ordered porous wick;
 - Pavlenko electrochemically modified mesh;
 - modern Chinese composite-wick UTVC.
+
+---
+
+## Important institutional split — 2026-10-03
+
+MPEI now has two distinct relevant lines.
+
+### Line A — ordered porous wick
+This file's Bulaeva/Savchenkov/Savchenkova line remains:
+- model/design heavy;
+- no thin experimental phone-VC prototype yet.
+
+### Line B — wettability / hierarchical coating
+Separate current team:
+- Nikita S. Ivanov;
+- Maria M. Alyautdinova;
+- Yuri Kuzma-Kichta lineage.
+
+Dedicated card:
+[mpei_wettability_surface_ip_v01.md](mpei_wettability_surface_ip_v01.md)
+
+Current official 2026 MPEI activity:
+https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
+
+Nikita Ivanov is listed as supervisor for:
+**Hierarchical coatings for thermosyphons in permafrost regions.**
+
+Current official staff record lists Ivanov as Associate Professor / Candidate of Technical Sciences:
+https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%2Fpps%2Fteplofizika_01997bd2-acf9-796f-b02e-854ac5e10dd0.html
+
+Relevant patent lineage:
+- RU2727406C1:
+  https://patents.google.com/patent/RU2727406C1/en
+- RU2750831C1:
+  https://patents.google.com/patent/RU2750831C1/en
+- RU2860061C1:
+  https://patents.google.com/patent/RU2860061C1/en
+
+Decision:
+do not treat MPEI as only a modeling challenger anymore.
+The **Ivanov coating line enters Stage-0 experimental challenger screening**, while the ordered-wick line remains pre-device.
+
