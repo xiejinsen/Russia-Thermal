@@ -12,26 +12,29 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Direction decision gate](direction_decision_gate_v01.md)
 - [Tier-A engineering feasibility review](tierA_engineering_feasibility_v01.md)
 - [Phase-change surface matrix](phase_change_surface_matrix_v01.md)
+- [Pavlenko vs TPU vs MPEI vs China UTVC](surface_wick_russia_china_comparison_v01.md)
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## Current status — 2026-10-03
 
-The project is in **constraint, falsification and first GO/NO-GO** stage.
+The surface hypothesis has passed a second falsification step.
 
-Current portfolio:
-- Tier A — sub-mm phase-change / capillary surface
-- Tier A- — sealed adaptive film/droplet hybrid
-- Tier B+ — model-light compute + cooling adaptive control
-- Tier B — multi-hotspot two-phase routing
-- Tier B — confined microfan aeroacoustics
+Current interpretation:
+- generic porous / laser / hydrophilic / composite-wick techniques are already crowded;
+- the Tier-A thesis is now narrowed to **fluid-specific dryout / rewetting / wettability retention under sub-mm confinement**.
 
-Important:
-PoC-1 being selected does not close the landscape. Workstreams 03/04/05/07 remain active to prevent survivorship bias.
+Lead:
+- Pavlenko/Kutateladze.
+
+Challengers:
+- TPU biphilic / patterned wettability;
+- MPEI ordered porous wick.
+
+The comparison baseline is upgraded to modern 0.39–0.4 mm sealed / wettability-enhanced UTVCs.
 
 ## Next gate
 
-1. turn PoC-1 into a collaboration-ready technical package;
-2. continue Russia coverage / alternative-team scan;
-3. complete surface-related patent / IP map;
-4. verify whether the Russian surface advantage survives modern Chinese UTVC baselines;
-5. retain or kill film/droplet after full-loop feasibility evidence.
+1. Stage-0 surface/wick coupons under the same target fluid/material process;
+2. surface/wick patent map;
+3. current partner-role/IP verification;
+4. then sealed multi-arm PoC-1.
