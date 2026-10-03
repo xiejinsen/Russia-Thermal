@@ -4,75 +4,117 @@ Last updated: 2026-10-03
 
 ## Overall status
 
-**Estimated research completion: ~39%**
-**Estimated remaining research: ~61%**
+**Estimated research completion: ~42%**
+**Estimated remaining research: ~58%**
 
-Repository evidence quality is tracked separately from research completion.
+## Major Russian university coverage — Round 2
 
-## Major Russian university scan — Round 1 completed
+Mandatory minimum set:
+**20 / 20 checked**
 
-The mandatory 20-university set now has a first-pass status in:
-`03_russia-institutions/major_university_coverage_matrix.md`
+- HIGH-SIGNAL: **4**
+  - MPEI
+  - SPbU
+  - TPU
+  - PNRPU
+- KEEP: **14**
+- NO CURRENT SIGNAL FOUND: **2**
+  - KFU
+  - FEFU
+- PENDING: **0**
 
-Current first-pass distribution:
-- HIGH-SIGNAL: 3
-- KEEP: 12
-- NO CURRENT SIGNAL FOUND — first pass: 2
-- PENDING: 3
+Workstream 03 now has a complete first/second-pass minimum-set scan, though partner-level depth remains incomplete.
 
-This is a major coverage improvement, but not final closure.
+## Domestic ranking metadata added
 
-### New signals
-- **MPEI:** 2026 ordered porous heat-pipe optimization + current Engineering Thermophysics capability.
-- **NSTU-NETI:** 2025 power-electronics strategic infrastructure + explicit high-heat-dissipation cooling project signal.
-- **Samara University:** 2026 additive-manufactured radiator with configurable internal microchannels.
-- **SPbPU:** current Thermal Physics in Power Engineering center with electronic-device/battery applications.
-- **TSU:** thermal-control/digital-prototype project continues into 2027.
+Primary Russian domestic baseline:
+**RAEX-100 2026**
 
-### No portfolio change yet
-No new evidence is strong enough yet to displace the current Tier A surface hypothesis.
+Stored in:
+`evidence/russia_domestic_ranking_register.md`
 
-MPEI is the strongest new candidate for a targeted deep dive because its ordered porous heat-pipe work may overlap/complement the existing Pavlenko wick/surface thesis.
+Relevant RAEX subject rankings are also recorded for:
+- Energy / Power / Electrical
+- Mechanical Engineering & Robotics
+- Materials Technology
+- Physics
+- IT
+- Aviation / Rocket-space
 
-## Ranking metadata
+Important:
+technical status remains independent of ranking.
 
-The university matrix now stores latest available QS ranking context where verified.
+## Important new finding — TPU promoted
 
-A journal-ranking register has also been started:
-`evidence/journal_ranking_register.md`
+TPU moved from PENDING to **HIGH-SIGNAL**.
 
-Ranking metadata is context only; it does not determine technical priority.
+2026 direct evidence includes:
+- wettability-engineered heat-transfer surfaces:
+  https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+- acoustic droplet-cooling negative result:
+  https://doi.org/10.1016/j.ijheatmasstransfer.2026.129217
+- droplet initial-temperature / electronics-cooling evidence:
+  https://doi.org/10.1021/acs.langmuir.6c01997
+
+TPU may become a surface-engineering comparator/complement to Pavlenko.
+
+It does not yet displace Pavlenko because its current evidence is mainly open water-droplet / high-temperature surface cooling rather than sealed dielectric-fluid sub-mm VC conditions.
+
+## MPEI follow-up
+
+MPEI remains HIGH-SIGNAL:
+- ordered porous heat-pipe work in 2026;
+- ordered porous 3D modeling in 2025;
+- strong domestic Energy ranking (#3).
+
+A new MPEI candidate card has been added.
+
+## Correction / evidence-quality finding
+
+TPU publications acknowledge RSF 25-79-10045.
+
+Official RSF page shows that the project title concerns thermochemical processing of wood, although the same project page lists several relevant heat/mass-transfer and droplet publications.
+
+Therefore the repository will **not** characterize this as an electronics-cooling grant.
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity |
 |---|---:|
 | 01 | Global smartphone thermal problem space | ~52% |
-| 02 | Thermal technology landscape | ~39% |
-| 03 | Russian institution landscape | **~32%** |
-| 04 | Russian labs / researchers | ~35% |
-| 05 | Russian papers / patents | ~39% |
-| 06 | Active-cooling deep dive | ~42% |
+| 02 | Thermal technology landscape | ~40% |
+| 03 | Russian institution landscape | **~50%** |
+| 04 | Russian labs / researchers | **~40%** |
+| 05 | Russian papers / patents | ~40% |
+| 06 | Active-cooling deep dive | ~43% |
 | 07 | China benchmark & gap | ~41% |
 | 08 | Transfer / hypotheses / falsification | ~63% |
 | 09 | Collaboration / PoC / 3-year directions | ~24% |
 
-## Next immediate tasks
+## Current strategic portfolio
 
-1. close the 3 PENDING universities: TPU, NSU, KFU;
-2. second-pass Bauman and FEFU before retaining NO-SIGNAL status;
-3. deep-dive MPEI ordered porous heat-pipe/wick line;
-4. identify NSTU thermal PI / primary papers;
-5. map Samara additive microchannel team/patents;
-6. add subject-ranking metadata for HIGH-SIGNAL/KEEP institutions;
-7. continue PoC-1/IP evidence work in parallel.
+No Tier change yet.
 
-## Repository QA rule
+Tier A:
+- Pavlenko / Kutateladze sub-mm phase-change / capillary surface.
 
-Every subsequent university scan must update:
-- university coverage matrix;
-- source register;
-- ranking metadata if available;
-- repository completeness matrix;
-- PROGRESS.md.
+New challenge:
+- TPU laser/wettability surface line;
+- MPEI ordered porous wick line.
 
+These should now be compared against Pavlenko and Chinese UTVC references before finalizing the first collaboration target.
+
+## Next tasks
+
+1. **Three-way surface/wick comparison**
+   - Pavlenko
+   - TPU
+   - MPEI
+   - against Chinese UTVC baseline
+2. partner/current-role verification for TPU and MPEI;
+3. surface/wick patent map;
+4. continue NSTU thermal PI search;
+5. Samara additive-microchannel patent/paper lineage;
+6. phone teardown / actual internal-volume baseline;
+7. continue journal-ranking metadata completion;
+8. keep GitHub evidence and QA synchronized.
