@@ -1,96 +1,96 @@
-# Direction Decision Gate — v0.2
+# Direction Decision Gate — v0.3
 
 Last updated: 2026-10-03
 
 ## Decision categories
-- **KEEP** — continue active research
-- **REFRAME** — keep only a narrower hypothesis
-- **DOWNGRADE** — secondary / optional until new evidence
-- **KILL** — stop treating as a Russia-specific strategic direction
+- KEEP
+- REFRAME
+- DOWNGRADE
+- KILL
 
-## Current decisions
+## H2 — sub-mm phase-change / capillary surface
 
-### KILL as Russia-specific standalone themes
-- generic mobile LHP miniaturization
-- generic synthetic-jet cooling
-- generic VC
-- generic graphite/TIM
-- generic microfan
-- generic pumped liquid cooling
-- generic DVFS
+**REFRAME + KEEP as Tier A**
 
-### H1 — sealed adaptive film/droplet hybrid
-**REFRAME + KEEP as Tier A- / high-risk feasibility**
+Old broad thesis:
+> Russian modified surface / porous wick may improve ultra-thin VC.
 
-Why:
-- Kutateladze has unusually deep mechanism/IP continuity;
-- heat-transfer physics is credible;
-- but published rigs commonly require gas supply, liquid feed, two-phase exhaust, separation/recovery and active conditioning.
+New narrower thesis:
+> Russian **fluid-specific dryout / rewetting / wettability-retention physics** may improve a modern ultra-thin VC beyond already-mature Chinese composite-wick / laser / wettability processes.
 
-The core uncertainty is now:
-> can the full circulation system be simplified enough for a phone?
+Why reframed:
 
-Pre-PoC kill gate:
-- <=10–15 cm³ research-envelope loop;
-- <=2 W auxiliary cooling power;
-- 15 W sustained heat-load class;
-- no bulky external separator / compressor;
-- multi-orientation operation.
+China/global evidence already includes:
+- 0.35 mm composite-wick UTVC:
+  https://doi.org/10.1016/j.applthermaleng.2024.122813
+- 0.39 mm sealed composite-wick device, up to 26 W in reported matrix:
+  https://doi.org/10.3390/mi15050627
+- 0.4 mm wettability-patterned composite wick:
+  https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
+- direct laser-ablation wick modification:
+  https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
 
-### H2 — sub-mm phase-change/capillary surface
-**KEEP as Tier A**
+Therefore generic:
+- laser roughening;
+- hydrophilic treatment;
+- composite mesh;
+- ordered pores;
 
-Why:
-- integrates into an existing VC/LHP rather than creating a new cooling system;
-- Russian surface/boiling expertise is current;
-- fastest route to a discriminating PoC.
+are not whitespace by themselves.
 
-Competition threshold is now much higher because modern Chinese/global work includes 0.4 mm composite-wick UTVCs and advanced wettability structures.
+### H2 lead
+Pavlenko/Kutateladze:
+- HFE-7100;
+- boiling/CHF;
+- dryout;
+- wettability failure evidence.
 
-### H3 — multi-hotspot two-phase routing
-**KEEP as Tier B**
+### H2 challengers
+TPU:
+- biphilic/spatial wettability design.
 
-No change:
-- generic LHP is killed;
-- only dynamic routing / multi-source operating physics survives.
+MPEI:
+- ordered porous geometry.
 
-### H4 — confined microfan aeroacoustics
-**KEEP as Tier B**
+### Advance gate
+Beat a **strong 0.39–0.4 mm modern reference** at equal envelope.
 
-No change:
-- must prove phone-scale source/noise control beyond Chinese aeroacoustic and OEM capability.
-
-### H5 — compute + cooling joint adaptive control
-**REFRAME + DOWNGRADE to Tier B+**
-
-Why:
-- predictive thermal control, fan control, MPC and RL are already crowded globally;
-- SPbU's potential distinction is only **model-light stochastic online adaptation under uncertain boundary conditions**.
-
-Promote only if it beats a calibrated MPC/RL baseline across case/grip/ambient/device-variation changes.
+### Kill gate
+Downgrade H2 if:
+- Russian gains vanish in sub-mm sealed confinement;
+- China-style laser/wettability/composite wick matches the result;
+- surface state degrades after target-fluid exposure / vacuum / cycling;
+- geometry consumes vapor space and erases thermal gain.
 
 ---
 
-# Current portfolio
+## H1 — sealed adaptive film/droplet hybrid
+**KEEP as Tier A- / high-risk feasibility**
 
-## Tier A
-1. **Sub-mm phase-change / capillary-surface enhancement**
+No change.
 
-## Tier A- — high-risk, high-upside
-2. **Sealed adaptive film/droplet hybrid cooling**
+## H3 — multi-hotspot routing
+**KEEP as Tier B**
 
-## Tier B+
-3. **Model-light compute + cooling joint adaptive control**
+## H4 — confined microfan aeroacoustics
+**KEEP as Tier B**
 
-## Tier B
-4. **Multi-hotspot two-phase heat routing**
-5. **Confined microfan aeroacoustics / tonal control**
+## H5 — compute + cooling adaptive control
+**KEEP as Tier B+ after reframing**
 
-## Key interpretation
+## Current portfolio
 
-The project is no longer searching for five equal opportunities.
+Tier A:
+- fluid-specific sub-mm phase-change / capillary control
 
-It is converging toward:
-- one relatively low-integration-risk collaboration thesis;
-- one radical/high-risk architecture thesis;
-- three secondary hypotheses that require stronger differentiation evidence.
+Tier A-:
+- sealed adaptive film/droplet hybrid
+
+Tier B+:
+- TPU biphilic surface challenger
+- MPEI ordered-wick challenger
+- model-light compute + cooling adaptive control
+
+Tier B:
+- multi-hotspot routing
+- confined microfan aeroacoustics
