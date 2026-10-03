@@ -109,3 +109,16 @@ The repository is “decision-ready” only when:
 - the minimum major-university scan is complete;
 - current-role/current-project statements have freshness checks;
 - the top-level README, PROGRESS and workstream READMEs agree on current status.
+
+## Ranking metadata QA
+
+Before the final institution map:
+- every major university should have current ranking metadata where available;
+- ranking edition/year and original source must be stored;
+- relevant subject ranking should be preferred over overall ranking for technical context.
+
+Before a decision-critical paper set is considered complete:
+- journal ranking metadata should be recorded where available;
+- quartile must include source/year/category;
+- ranking prestige must remain separate from technical-directness scoring.
+
