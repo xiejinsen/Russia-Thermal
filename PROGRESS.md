@@ -4,117 +4,102 @@ Last updated: 2026-10-03
 
 ## Overall status
 
-**Estimated research completion: ~42%**
-**Estimated remaining research: ~58%**
+**Estimated research completion: ~45%**
+**Estimated remaining research: ~55%**
 
-## Major Russian university coverage — Round 2
+## Surface/Wick convergence round completed
 
-Mandatory minimum set:
-**20 / 20 checked**
+A normalized comparison is now stored:
+`08_opportunities-transfer/surface_wick_russia_china_comparison_v01.md`
 
-- HIGH-SIGNAL: **4**
-  - MPEI
-  - SPbU
-  - TPU
-  - PNRPU
-- KEEP: **14**
-- NO CURRENT SIGNAL FOUND: **2**
-  - KFU
-  - FEFU
-- PENDING: **0**
+Compared:
+- Pavlenko/Kutateladze;
+- TPU;
+- MPEI;
+- modern China/global UTVC baseline.
 
-Workstream 03 now has a complete first/second-pass minimum-set scan, though partner-level depth remains incomplete.
+## Main conclusion
 
-## Domestic ranking metadata added
+Pavlenko remains the Tier-A lead, but the hypothesis has been **narrowed**.
 
-Primary Russian domestic baseline:
-**RAEX-100 2026**
+Generic:
+- porous coatings;
+- laser texturing;
+- hydrophilic modification;
+- composite wicks;
 
-Stored in:
-`evidence/russia_domestic_ranking_register.md`
+are already strongly evidenced in China/global UTVC development.
 
-Relevant RAEX subject rankings are also recorded for:
-- Energy / Power / Electrical
-- Mechanical Engineering & Robotics
-- Materials Technology
-- Physics
-- IT
-- Aviation / Rocket-space
+The surviving collaboration thesis is:
 
-Important:
-technical status remains independent of ranking.
+> **fluid-specific dryout / rewetting / wettability-retention control under sub-mm sealed confinement.**
 
-## Important new finding — TPU promoted
+## Challenger roles
 
-TPU moved from PENDING to **HIGH-SIGNAL**.
+### TPU — Tier B+ challenger
+Potential unique value:
+- spatially patterned biphilic surfaces.
 
-2026 direct evidence includes:
-- wettability-engineered heat-transfer surfaces:
-  https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
-- acoustic droplet-cooling negative result:
-  https://doi.org/10.1016/j.ijheatmasstransfer.2026.129217
-- droplet initial-temperature / electronics-cooling evidence:
-  https://doi.org/10.1021/acs.langmuir.6c01997
+Main gap:
+- current evidence is open water-droplet / high-temperature cooling, not sealed dielectric-fluid UTVC.
 
-TPU may become a surface-engineering comparator/complement to Pavlenko.
+### MPEI — Tier B+ challenger
+2026 primary paper:
+https://doi.org/10.30724/1998-9903-2026-28-4-193-205
 
-It does not yet displace Pavlenko because its current evidence is mainly open water-droplet / high-temperature surface cooling rather than sealed dielectric-fluid sub-mm VC conditions.
+Source facts:
+- ordered-wick parametric model;
+- water 50 °C;
+- porosity ~0.63;
+- Re ~89;
+- capillary-pressure/permeability tradeoff.
 
-## MPEI follow-up
+Main gap:
+authors still call for experimental prototype validation.
 
-MPEI remains HIGH-SIGNAL:
-- ordered porous heat-pipe work in 2026;
-- ordered porous 3D modeling in 2025;
-- strong domestic Energy ranking (#3).
+## China baseline upgraded
 
-A new MPEI candidate card has been added.
+Key references:
+- 0.35 mm composite UTVC:
+  https://doi.org/10.1016/j.applthermaleng.2024.122813
+- 0.39 mm sealed composite-wick UTVC:
+  https://doi.org/10.3390/mi15050627
+- 0.4 mm wettability-patterned UTVC:
+  https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
+- laser-ablation wick modification:
+  https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
 
-## Correction / evidence-quality finding
+## PoC-1 upgraded
 
-TPU publications acknowledge RSF 25-79-10045.
+PoC-1 is now multi-arm:
 
-Official RSF page shows that the project title concerns thermochemical processing of wood, although the same project page lists several relevant heat/mass-transfer and droplet publications.
+A. strong China-style reference  
+B. Pavlenko-inspired fluid-specific surface/mesh  
+C. TPU-inspired biphilic pattern, only after Stage-0 fluid-compatibility pass  
+D. MPEI ordered wick, only after Stage-0 capillary/permeability prototype pass
 
-Therefore the repository will **not** characterize this as an electronics-cooling grant.
+A Russian arm must beat the **strong reference**, not a weak smooth/mesh control.
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity |
 |---|---:|
 | 01 | Global smartphone thermal problem space | ~52% |
-| 02 | Thermal technology landscape | ~40% |
-| 03 | Russian institution landscape | **~50%** |
-| 04 | Russian labs / researchers | **~40%** |
-| 05 | Russian papers / patents | ~40% |
+| 02 | Thermal technology landscape | ~42% |
+| 03 | Russian institution landscape | ~50% |
+| 04 | Russian labs / researchers | ~44% |
+| 05 | Russian papers / patents | ~42% |
 | 06 | Active-cooling deep dive | ~43% |
-| 07 | China benchmark & gap | ~41% |
-| 08 | Transfer / hypotheses / falsification | ~63% |
-| 09 | Collaboration / PoC / 3-year directions | ~24% |
+| 07 | China benchmark & gap | **~48%** |
+| 08 | Transfer / hypotheses / falsification | **~72%** |
+| 09 | Collaboration / PoC / 3-year directions | **~31%** |
 
-## Current strategic portfolio
+## Next critical tasks
 
-No Tier change yet.
-
-Tier A:
-- Pavlenko / Kutateladze sub-mm phase-change / capillary surface.
-
-New challenge:
-- TPU laser/wettability surface line;
-- MPEI ordered porous wick line.
-
-These should now be compared against Pavlenko and Chinese UTVC references before finalizing the first collaboration target.
-
-## Next tasks
-
-1. **Three-way surface/wick comparison**
-   - Pavlenko
-   - TPU
-   - MPEI
-   - against Chinese UTVC baseline
-2. partner/current-role verification for TPU and MPEI;
-3. surface/wick patent map;
-4. continue NSTU thermal PI search;
-5. Samara additive-microchannel patent/paper lineage;
+1. **Surface/wick patent map** — Russia + China + OEM/supply-chain;
+2. exact current roles/contact points for Pavlenko, TPU, MPEI;
+3. Pavlenko coating/mesh thickness and cycling evidence;
+4. TPU dielectric-fluid transfer evidence;
+5. MPEI prototype/fabrication evidence;
 6. phone teardown / actual internal-volume baseline;
-7. continue journal-ranking metadata completion;
-8. keep GitHub evidence and QA synchronized.
+7. then freeze PoC-1 hardware matrix.
