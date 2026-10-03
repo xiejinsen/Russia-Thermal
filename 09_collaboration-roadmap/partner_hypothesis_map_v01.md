@@ -1,59 +1,87 @@
-# Partner-to-Hypothesis Matching v0.5
+# Partner-to-Hypothesis Matching v0.6
 
 Last updated: 2026-10-03
 
-Status: provisional collaboration map after Pavlenko–TPU–MPEI–China comparison.
+Status: provisional map after surface/wick IP and current-role audit.
 
 | Hypothesis | Russian partner signal | Role | Immediate action | State |
 |---|---|---|---|---|
-| Fluid-specific sub-mm phase-change / capillary control | **Kutateladze — Pavlenko / Shvetsov / Zhukov / Brester** | **lead** | multi-arm PoC-1 against strong 0.39–0.4 mm China-style reference | **Tier A — GO for lab PoC design** |
-| Biphilic / contrast-wettability surface | TPU — Feoktistov / Syrodoy line | challenger / possible complement | same-fluid Stage-0 coupon; test wetting retention under target fluid/cycling | **Tier B+ challenger** |
-| Ordered porous wick architecture | MPEI — Bulaeva / Savchenkov / Savchenkova | pre-device design challenger | fabricate/measure thin coupon before sealed device | **Tier B+ challenger** |
-| Sealed film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | radical architecture | reduced hotspot-cell feasibility bench | **Tier A-** |
-| Compute + cooling adaptive control | SPbU | control hypothesis | differentiation vs calibrated MPC/RL | **Tier B+** |
-| Multi-hotspot heat routing | ITP UB RAS | routing physics | normalize vs Chinese UTLHP | **Tier B** |
-| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale source/tonal test | **Tier B** |
+| Fluid-specific dryout/rewetting under sub-mm confinement | **Kutateladze — Pavlenko / Shvetsov line** | lead | Stage-0 modified-mesh/thin-surface coupon + background-IP boundary | **Tier A** |
+| Target-fluid biphilic / contrast-wetting | TPU — Feoktistov line | challenger | dielectric-fluid coupon + RU2812668 inventor mapping | **Tier B+ challenger** |
+| Tunable wettability / hierarchical coating | **MPEI — Ivanov / Alyautdinova line** | experimental challenger | target-fluid thin-coating coupon | **Tier B+ challenger — NEW** |
+| Ordered porous wick | MPEI — Bulaeva / Savchenkov / Savchenkova | pre-device challenger | measured thin prototype/coupon before VC | **Pre-device** |
+| Sealed film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | radical architecture | reduced feasibility bench | **Tier A-** |
+| Compute + cooling adaptive control | SPbU | control hypothesis | compare with MPC/RL | **Tier B+** |
+| Multi-hotspot heat routing | ITP UB RAS | routing physics | compare with Chinese UTLHP | **Tier B** |
+| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale tonal test | **Tier B** |
 
-## Critical reframing of Tier A
+## Current role / readiness evidence
 
-Generic:
-- hydrophilic surfaces;
-- laser texturing;
-- composite mesh;
-- porous wick;
+### Pavlenko
+Official:
+https://www.itp.nsc.ru/lmpt/?lang=ru&page_id=855
 
-are **not** sufficient Russia-specific collaboration reasons.
+Current:
+- Professor;
+- Head, Low-Temperature Thermophysics Laboratory;
+- Corresponding Member RAS.
 
-Modern China/global UTVC evidence:
-- https://doi.org/10.3390/mi15050627
-- https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
-- https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
+### Shvetsov
+Official lab:
+https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html
 
-The remaining Pavlenko-specific thesis is:
-> dielectric-fluid boiling / dryout / rewetting / wettability-retention knowledge under extreme confinement.
+Current:
+- Researcher;
+- Candidate of Physical and Mathematical Sciences.
 
-## Why TPU is not promoted above Pavlenko
+### Feoktistov
+Official:
+https://staff.tpu.ru/personal/employee?lid=119971
 
-TPU is strong and current, but current public evidence is mainly:
-- open water droplets;
-- elevated-temperature surfaces;
-- no sealed sub-mm device.
+Current:
+- Associate Professor;
+- Deputy Director, Research School of High-Energy Process Physics.
 
-Primary:
-https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+### Ivanov
+Official staff:
+https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%2Fpps%2Fteplofizika_01997bd2-acf9-796f-b02e-854ac5e10dd0.html
 
-## Why MPEI is still challenger
+Current:
+- Associate Professor;
+- Candidate of Technical Sciences.
 
-MPEI 2026 ordered-wick work is valuable but explicitly still model-oriented and calls for prototype validation.
+Current 2026 activity:
+https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
 
-Primary:
-https://doi.org/10.30724/1998-9903-2026-28-4-193-205
+Supervises hierarchical thermosyphon-coating work.
 
-## Outreach implication
+## IP interpretation
 
-Do not yet approach three teams as equal partners.
+Generic surface/wick process is crowded.
 
-Current order of technical readiness:
-1. Pavlenko line — collaboration-ready technical discussion after current-role/IP checks.
-2. TPU — targeted technical query on transferring patterned wetting to dielectric fluid / copper or steel VC material.
-3. MPEI — request geometry/manufacturing/prototype evidence before collaboration-level discussion.
+See:
+- [surface/wick patent map](../05_papers-patents/surface_wick_patent_map_v01.md)
+- [claim chart](../05_papers-patents/surface_wick_claim_chart_v01.md)
+
+The collaboration case must rely on:
+- target-fluid phase-change physics;
+- sub-mm geometry;
+- transient hotspot conditions;
+- reliability/manufacturing retention;
+- system-level combination.
+
+## Current outreach posture
+
+### Pavlenko
+**Technical-discussion ready**, subject to explicit Huawei/background-IP questions.
+
+### TPU
+**Stage-0 technical-query ready**; patent-inventor mapping still incomplete.
+
+### MPEI Ivanov
+**Stage-0 technical-query ready**; target-fluid phone transfer unproven.
+
+### MPEI ordered wick
+**Not device-PoC ready**; ask for experimental prototype first.
+
+No team is yet contract-ready.
