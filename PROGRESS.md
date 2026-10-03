@@ -1,74 +1,74 @@
 # Research Progress
 
-Last updated: 2026-10-02
+Last updated: 2026-10-03
 
 ## Overall status
 
-**Estimated completion: ~29%**  
-**Estimated remaining work: ~71%**
+**Estimated completion: ~33%**  
+**Estimated remaining work: ~67%**
 
-This round completed the first patent/prior-art pruning and started partner-to-hypothesis matching.
+This round performed the first engineering feasibility challenge on the Tier A hypotheses and further narrowed the collaboration portfolio.
 
 ## Workstream maturity
 
-| # | Workstream | Current maturity | What changed this round |
+| # | Workstream | Current maturity | This round |
 |---|---|---:|---|
 | 01 | Global smartphone thermal problem space | ~52% | stable |
-| 02 | Thermal technology landscape | ~34% | generic vs differentiated routes separated |
+| 02 | Thermal technology landscape | ~36% | system-vs-component feasibility distinction strengthened |
 | 03 | Russian institution landscape | ~17% | stable |
-| 04 | Russian labs / researchers | ~27% | partner-role interpretation improved |
-| 05 | Russian papers / patents | **~28%** | Kutateladze patent lineage + China/global adjacent prior art mapped |
-| 06 | Active-cooling deep dive | ~31% | synthetic-jet generic theme pruned; film/droplet reframed |
-| 07 | China benchmark & gap | ~35% | patent/prior-art evidence added |
-| 08 | Transfer / open problems / hypotheses | **~46%** | first formal KEEP/REFRAME/KILL gate completed |
-| 09 | Collaboration / PoC / 3-year directions | **~10%** | first partner-to-hypothesis map created |
+| 04 | Russian labs / researchers | ~28% | partner-specific capability interpretation refined |
+| 05 | Russian papers / patents | ~32% | patent embodiments linked to engineering architecture |
+| 06 | Active-cooling deep dive | **~39%** | film/droplet system feasibility analyzed |
+| 07 | China benchmark & gap | ~38% | modern UTVC/surface/control baselines strengthened |
+| 08 | Transfer / hypotheses / falsification | **~55%** | Tier A engineering challenge completed |
+| 09 | Collaboration / PoC / 3-year directions | **~16%** | preferred first PoC identified |
 
-## First formal pruning decisions
+## Portfolio after engineering review
 
-### KILL as Russia-specific standalone themes
-- generic mobile LHP miniaturization
-- generic synthetic-jet cooling
+### Tier A
+- **Sub-mm phase-change / capillary-surface enhancement**
 
-Already previously downgraded:
-- generic VC
-- generic graphite/TIM
-- generic microfan
-- generic pumped liquid
-- generic DVFS
+### Tier A- high-risk/high-upside
+- **Sealed adaptive film/droplet hybrid cooling**
 
-### KEEP / REFRAME
-- sealed adaptive film/droplet hybrid cooling — **Tier A**
-- sub-mm phase-change/capillary-surface enhancement — **Tier A**
-- compute + cooling joint adaptive control — **Tier A exploratory**
-- multi-hotspot two-phase routing — **Tier B**
-- confined microfan aeroacoustics / tonal control — **Tier B**
+### Tier B+
+- **Model-light compute + cooling adaptive control**
 
-## Major patent finding
+### Tier B
+- **Multi-hotspot two-phase routing**
+- **Confined microfan aeroacoustics / tonal control**
 
-RU2822416 is part of a long Kutateladze / Novosibirsk technical lineage rather than a standalone novel concept.
+## Important new finding
 
-The broad film+droplet+gas concept has substantial prior art.
+The film/droplet direction appears much stronger as **heat-transfer physics** than as a ready smartphone architecture.
 
-The new collaboration whitespace should therefore be searched in:
-- phone-scale sealed integration;
-- adaptive variable-load operation;
-- low-power circulation;
-- hotspot-addressable injection;
-- VC/film hybrid architecture;
-- thermal-acoustic-control co-design.
+Representative laboratory systems include:
+- forced gas supply;
+- controlled liquid injection;
+- membrane / extraction pumps;
+- separators / refrigerant recovery;
+- inlet thermal conditioning.
 
-## Remaining gaps before real collaboration selection
+Therefore its next step is not a phone prototype but a **complete energy + volume budget**.
 
-1. claim-by-claim mapping of the most important Russian patents;
-2. Chinese patent search at CNIPA / major assignees for closer overlap;
-3. actual phone teardown volume and packaging constraints;
-4. partner current contact/project validation;
-5. detailed PoC resource / schedule / ownership split;
-6. IP creation strategy for joint work.
+## First preferred collaboration PoC
 
-## Next round
+The current lowest-risk high-information experiment is:
+**Russian phase-change / capillary-surface physics inserted into a Chinese-style sub-mm VC baseline.**
 
-- deepen claim chart around RU2822416 / RU2860581 and Chinese adjacent patents;
-- quantify film/droplet system power/flow requirements from papers/patents;
-- test whether Tier A H1 survives power + packaging reality;
-- start partner cards with proposed PoC ownership and IP boundaries.
+Reason:
+- simple A/B;
+- no new system architecture required;
+- failure is easy to measure;
+- high-value result can still create new wick/surface IP;
+- realistic 3–6 month scope.
+
+## Major remaining tasks
+
+1. build claim chart for Russian surface-related patents and Chinese competing wick/surface IP;
+2. identify exact Pavlenko-team surface processes available for transfer;
+3. quantify coating thickness / process / durability;
+4. construct H1 film/droplet full-loop power and volume budget;
+5. validate current partner availability and contact points;
+6. define IP ownership / joint-invention boundaries;
+7. start 3-year route only after first PoC choices are stable.
