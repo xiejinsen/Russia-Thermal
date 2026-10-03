@@ -122,3 +122,52 @@ Deep-diving one promising direction must not prematurely stop:
 - alternative technology comparison.
 
 This prevents the project from overfitting to the first promising lab discovered.
+
+## Major Russian university coverage requirement
+
+The Russia scan must explicitly check the major universities and leading technical universities, even when no strong thermal signal is initially found.
+
+At minimum, the scan should verify relevant activity across:
+- Moscow State University (MSU)
+- Bauman Moscow State Technical University
+- Moscow Power Engineering Institute (MPEI)
+- National Research Nuclear University MEPhI
+- NUST MISIS
+- Skoltech
+- Moscow Institute of Physics and Technology (MIPT)
+- St. Petersburg State University (SPbU)
+- Peter the Great St. Petersburg Polytechnic University
+- ITMO University
+- Tomsk State University
+- Tomsk Polytechnic University
+- Novosibirsk State University
+- Novosibirsk State Technical University
+- Ural Federal University
+- Kazan Federal University
+- Samara University
+- Perm National Research Polytechnic University
+- Southern Federal University
+- Far Eastern Federal University
+
+This list is a minimum coverage set, not a claim that every institution will be relevant.
+
+For each institution, record one of:
+- **HIGH-SIGNAL** — coherent recent capability worth deep dive;
+- **KEEP** — plausible adjacent signal;
+- **NO CURRENT SIGNAL FOUND** — searched, but no sufficiently relevant recent evidence found;
+- **PENDING** — not yet checked.
+
+A “no signal” result should still be stored so the same institution is not repeatedly rediscovered.
+
+## Freshness and correction policy
+
+The repository is a living research database.
+
+Rules:
+1. Prefer current 2023–2026 evidence; older material is lineage only unless still technically active.
+2. Current role / team / project claims must be re-verified before outreach.
+3. If new evidence contradicts an earlier conclusion, update the conclusion rather than preserving the old narrative.
+4. Correct factual errors immediately when discovered.
+5. Keep the relevant source link and note the reason for the correction when it materially changes a decision.
+6. Top-level README / PROGRESS / workstream READMEs must be refreshed when portfolio or status changes.
+7. A stale fact is treated as an evidence-quality problem, not as harmless historical context.
