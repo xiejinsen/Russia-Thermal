@@ -141,4 +141,31 @@ New candidate gaps:
 - NSTU power-electronics thermal packaging;
 - Samara additive microchannel radiators.
 
+## Major-university Round 2 — coverage gate
+
+Mandatory set is now **20/20 checked with PENDING = 0**.
+
+Current:
+- HIGH-SIGNAL: 4
+- KEEP: 14
+- NO CURRENT SIGNAL FOUND: 2
+- PENDING: 0
+
+Coverage gate status:
+**PASS-WITH-GAPS**
+
+Remaining gaps:
+- subject ranking not normalized for every KEEP institution;
+- several KEEP schools lack current partner-level PI cards;
+- domestic rank is context only;
+- TPU and MPEI need phone-transfer comparison before partner promotion.
+
+### Correction logged
+
+TPU cooling papers acknowledge RSF grant 25-79-10045, but the official RSF project is titled around thermochemical processing of wood.
+
+The grant page itself lists heat/mass-transfer and droplet publications.
+
+Repository rule:
+do not call 25-79-10045 an “electronics-cooling grant”; describe it only as a funding source acknowledged/listed for relevant publications.
 
