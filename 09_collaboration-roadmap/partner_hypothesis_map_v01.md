@@ -1,63 +1,50 @@
-# Partner-to-Hypothesis Matching v0.1
+# Partner-to-Hypothesis Matching v0.2
 
-Status: provisional matching, not a collaboration recommendation.
+Last updated: 2026-10-03
 
-| Hypothesis | Russian partner signal | What they uniquely contribute | China / our-side complement | Immediate PoC question | Current state |
+Status: provisional matching, not final collaboration recommendation.
+
+| Hypothesis | Russian partner | Russian contribution | China / our-side complement | Immediate gate | State |
 |---|---|---|---|---|---|
-| Sealed adaptive film/droplet hybrid | Kutateladze — Kabov / Kochkin / Chinnov line | gas-liquid microscale physics, thin films, droplets, microchannels, long IP lineage | phone packaging, micro-pump/actuator supply chain, VC, control, manufacturing | Can the lab mechanism be closed into <= phone-class module volume and beat VC+fan / pumped loop? | Tier A |
-| Sub-mm phase-change surface | Kutateladze — Pavlenko line | dielectric boiling, CHF, capillary-porous and modified surfaces | sub-mm VC manufacturing, mesh/etched wick production, phone reliability | Does a Russian-inspired surface improve dryout/thermal resistance at fixed 0.x-mm envelope? | Tier A |
-| Compute + cooling joint control | SPbU stochastic optimization line | online SPSA / model-light adaptation on Android/DVFS | active cooler hardware, mobile runtime, NPU/GPU control, thermal sensors | Can joint controller beat calibrated reactive policy under ambient/grip/case variation? | Tier A exploratory |
-| Multi-hotspot heat routing | ITP UB RAS — Maydanik/Chernysheva/Vershinin | LHP operating limits, capillary routing, multi-source experience | sub-mm manufacturing and phone integration | Does routing beat large-area VC / Chinese UTLHP under moving hotspots at equal thickness? | Tier B |
-| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | aeroacoustic source physics, arrays, tonal/active control methods | microblower hardware, phone duct, psychoacoustic UX, product measurement | Can their methods cut tonal prominence at equal pressure-flow / power / volume? | Tier B |
+| Sub-mm phase-change surface | Kutateladze — Pavlenko line | dielectric boiling, CHF, porous/modified surfaces | sub-mm VC manufacturing, reliability, phone integration | Beat modern composite/wettability-engineered UTVC at fixed thickness | **Tier A** |
+| Sealed adaptive film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | gas-liquid film/droplet physics, channel instability, long patent lineage | miniaturized pump/actuator, package, VC, control, manufacturing | Close full loop within phone-class power/volume budget | **Tier A-** |
+| Compute + cooling adaptive control | SPbU stochastic optimization line | SPSA / model-light online adaptation | Android hooks, thermal prediction, NPU/GPU control, fan/pump | Beat calibrated MPC/RL under boundary-condition changes | **Tier B+** |
+| Multi-hotspot heat routing | ITP UB RAS — Maydanik/Chernysheva/Vershinin | LHP operating limits, capillary routing, multi-source experience | sub-mm fabrication, phone integration | Beat VC / Chinese UTLHP under moving hotspots | **Tier B** |
+| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | source physics, arrays, tonal/active control | phone blower/duct, UX metrics, product integration | Reduce tonal prominence at equal pressure-flow/power/volume | **Tier B** |
 
-## Collaboration-value rule
+## Current preferred first PoC
 
-Do not choose a partner because the lab is prestigious.
+### Phase-change surface PoC
+Why first:
+- smallest integration scope;
+- shortest experimental loop;
+- easy A/B comparison;
+- directly exploits Russian surface physics and Chinese device manufacturing;
+- avoids pump, sealing and acoustic confounders.
 
-A partner advances only when:
-1. their specific capability is difficult to reproduce internally / in China;
-2. the joint PoC has a clear split of responsibilities;
-3. the result is measurable within 3–6 months;
-4. the resulting IP can plausibly contain new system-level claims.
+Russia side:
+- surface selection;
+- boiling / rewetting model;
+- coating / microstructure parameters;
+- dryout physics.
 
-## First responsibility split examples
+Our / China side:
+- 0.3–0.5 mm VC baseline;
+- manufacturing;
+- standard heater / phone envelope;
+- reliability cycling;
+- metrology.
 
-### Kutateladze + us / Chinese supply chain
-Russia:
-- film stability / dryout physics
-- surface / channel design
-- droplet formation
-- multiphase modeling
+### Film/droplet feasibility bench
+Run in parallel only as a **system budget study**, not yet a phone prototype.
 
-Our side:
-- phone geometry
-- heat-load traces
-- package integration
-- pump/actuator electronics
-- thermal-control firmware
-- manufacturing prototypes
+Required outputs:
+- gas flow requirement;
+- liquid flow requirement;
+- pressure drop;
+- actuator power;
+- separator/condenser volume;
+- fluid inventory;
+- 15 W steady / 25 W transient response.
 
-### TsAGI/PNRPU + us
-Russia:
-- acoustic source analysis
-- microphone-array / modal methods
-- aeroacoustic optimization
-
-Our side:
-- phone microblower / duct hardware
-- system pressure-flow constraints
-- psychoacoustic targets
-- phone mechanical integration
-
-### SPbU + us
-Russia:
-- online stochastic optimizer
-- convergence / robustness analysis
-
-Our side:
-- Android system hooks
-- thermal prediction
-- CPU/GPU/NPU actuation
-- fan/pump control
-- workload traces
-
+If this budget fails, H1 is downgraded before a costly prototype.
