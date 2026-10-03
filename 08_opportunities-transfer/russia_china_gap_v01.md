@@ -79,3 +79,58 @@ Before promoting any line:
 - phone thickness / ingress / shock limits;
 - manufacturing feasibility;
 - IP whitespace.
+
+---
+
+# Evidence backbone — original sources
+
+## Russia
+Phase-change / surface:
+- https://doi.org/10.1016/j.applthermaleng.2024.125344
+- https://doi.org/10.1134/S1810232825700183
+- https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
+
+Micro-scale film/droplet:
+- https://doi.org/10.1016/j.expthermflusci.2024.111153
+- https://www.itp.nsc.ru/website/inst/upload/infoblock/file/96swu-2822416.eod%20%281%29.pdf
+- https://patents.google.com/patent/RU2860581C1/en
+
+LHP:
+- https://doi.org/10.56304/S0040363625701152
+- https://doi.org/10.31857/S0040364424010088
+
+Aeroacoustics:
+- https://www.tsagi.ru/en/research/aeroacoustics/
+- https://doi.org/10.31857/S0320791925030104
+
+Software:
+- https://doi.org/10.15622/ia.22.5.3
+
+Materials:
+- https://doi.org/10.3390/polym15051214
+
+## China / product baseline
+Ultra-thin VC / LHP:
+- https://doi.org/10.1016/j.applthermaleng.2024.122813
+- https://doi.org/10.1016/j.device.2025.100783
+- https://doi.org/10.1016/j.enconman.2024.119332
+
+High-heat-flux microfluidics:
+- https://doi.org/10.1038/s41928-025-01449-4
+
+Aeroacoustics:
+- https://doi.org/10.7638/kqdlxxb-2025.0030
+
+OEM productization:
+- Huawei micropump liquid cooling:
+  https://consumer.huawei.com/en/accessories/pura80-micropump-liquid-cooling-case/
+- Huawei PCM + pump control:
+  https://consumer.huawei.com/cn/support/content/zh-cn16042940/
+- REDMAGIC internal active cooling:
+  https://global.redmagic.gg/pages/cooling-technology
+- HONOR titanium VC:
+  https://www.honor.com/uk/phones/honor-magic-v3/
+
+## Audit note
+This file is a synthesis. Each row should be read together with the evidence backbone and the normalized-comparison file. Vendor values remain vendor claims unless independently measured.
+
