@@ -27,3 +27,12 @@ Next venues to normalize:
 - Informatics and Automation
 - Advanced Functional Materials
 - Langmuir
+
+## Added after surface/wick comparison
+
+| Journal | Project relevance | Current ranking context | Source | Verification |
+|---|---|---|---|---|
+| Micromachines | 0.39 mm sealed composite-wick UTVC | publisher page: JCR Q2 (Instruments & Instrumentation); CiteScore Q1 (Mechanical Engineering); IF 3.5 for 2025 | https://www.mdpi.com/journal/micromachines | VERIFIED-PUBLISHER-METADATA |
+| International Journal of Heat and Fluid Flow | 0.4 mm wettability-patterned UTVC | 2025 IF 3.1; JCR Q2 in Mechanical/Mechanics/Thermodynamics on secondary bibliometric sources; SJR/CiteScore category includes Q1 Fluid Flow | https://www.sciencedirect.com/journal/international-journal-of-heat-and-fluid-flow | MIXED-OFFICIAL/SECONDARY |
+| Power engineering: research, equipment, technology | MPEI ordered porous wick 2026 | peer-reviewed official journal; international quartile not yet verified | https://www.energyret.ru/jour?locale=en_US | VERIFIED-JOURNAL; RANK-PENDING |
+
