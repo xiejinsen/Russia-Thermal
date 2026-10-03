@@ -7,7 +7,20 @@ Last updated: 2026-10-03
 **Estimated research completion: ~37%**
 **Estimated remaining research: ~63%**
 
-Repository evidence quality is being tracked separately from research completion.
+Repository evidence quality is tracked separately from research completion.
+
+## New mandatory coverage / freshness requirements
+
+Before final recommendations:
+- all major Russian universities in the minimum coverage set must be explicitly checked;
+- important findings must be archived in GitHub with direct original-source links;
+- current roles/projects/product facts must be refreshed before decision use;
+- errors or superseded conclusions must be corrected as soon as discovered;
+- material corrections must propagate to README / PROGRESS / decision files.
+
+This requirement is now recorded in:
+- `00_scope/research_scope.md`
+- `evidence/repository_completeness_matrix.md`
 
 ## Repository QA status
 
@@ -22,11 +35,6 @@ Key corrections completed:
 - active-cooling and success/kill files now link primary evidence;
 - materials file upgraded with direct Skoltech thesis and RU2834604 patent sources.
 
-See:
-- `evidence/evidence_traceability_audit_2026-10-03.md`
-- `evidence/repository_completeness_matrix.md`
-- `evidence/source_register.md`
-
 ## Alignment audit
 
 The project remains aligned to the original objective:
@@ -35,12 +43,12 @@ The project remains aligned to the original objective:
 ### Main drift risk
 Recent research has concentrated on Kutateladze / phase-change surfaces because this direction produced the first feasible PoC.
 
-Russia-wide institution coverage is still only ~17%, so horizontal scanning must continue.
+Russia-wide institution coverage is still only ~17%, so the next research stage must materially raise university/institution coverage.
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity |
-|---|---|---:|
+|---|---:|
 | 01 | Global smartphone thermal problem space | ~52% |
 | 02 | Thermal technology landscape | ~39% |
 | 03 | Russian institution landscape | ~17% |
@@ -77,9 +85,20 @@ Film/droplet hybrid.
 ### GO — feasibility bench
 Reduced film/droplet hotspot cell.
 
+## Next-stage priority
+
+### Lane A — major Russia coverage
+Systematically scan the minimum major-university set and create an institution coverage matrix.
+
+### Lane B — exploit
+Continue making PoC-1 collaboration-ready.
+
+### Lane C — evidence QA
+Refresh source register, completeness matrix and stale/incorrect facts during every research round.
+
 ## Remaining critical work
 
-1. continue Russia-wide coverage;
+1. major-university Russia scan;
 2. current-role/contact verification;
 3. surface patent / China competing IP map;
 4. PoC-1 process thickness / durability / area feasibility;
@@ -88,14 +107,3 @@ Reduced film/droplet hotspot cell.
 7. independent OEM/product measurements;
 8. phone teardown/internal-volume evidence;
 9. full 3-year roadmap only after PoC and partner assumptions stabilize.
-
-## Next-stage balance
-
-### Lane A — exploit
-Make PoC-1 collaboration-ready.
-
-### Lane B — explore
-Continue horizontal Russia scanning and challenge whether a stronger candidate exists.
-
-### Lane C — evidence QA
-Every research round must also close evidence gaps and refresh the repository completeness matrix.
