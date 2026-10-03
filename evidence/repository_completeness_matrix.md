@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-03
 
-Purpose: prevent the project from reaching a strong narrative conclusion while the GitHub research database remains incomplete or untraceable.
+Purpose: prevent the project from reaching a strong narrative conclusion while the GitHub research database remains incomplete, stale or untraceable.
 
 ## Quality gates
 
@@ -14,7 +14,9 @@ It must have:
 3. direct links beside important decisions;
 4. negative evidence / caveats;
 5. explicit unresolved gaps;
-6. enough evidence for independent manual review.
+6. enough evidence for independent manual review;
+7. freshness verification for current-role/current-project claims;
+8. correction of superseded or erroneous information.
 
 ## Workstream QA
 
@@ -23,7 +25,7 @@ It must have:
 | 00 Scope | good | current | none critical | PASS |
 | 01 Global baseline | good | current | independent teardown / real sustained-power dataset still thin | PASS-WITH-GAPS |
 | 02 Technology landscape | medium | framework current | technology rows need source IDs / evidence map | NEEDS-WORK |
-| 03 Russia institutions | medium-good | partial | Russia-wide coverage only ~17%; several candidates single-source | NEEDS-WORK |
+| 03 Russia institutions | medium-good | partial | major-university coverage incomplete; Russia-wide coverage only ~17% | NEEDS-WORK |
 | 04 Labs/researchers | good for deep dives | refreshed | current roles/contacts incomplete for some PI/researchers | NEEDS-WORK |
 | 05 Papers/patents | improved | refreshed | patent-family / claim charts incomplete | NEEDS-WORK |
 | 06 Active cooling | improved | refreshed | EHD / piezo / microblower primary evidence thin | NEEDS-WORK |
@@ -31,6 +33,16 @@ It must have:
 | 08 Opportunities | improved | current | some internal targets are assumptions, must remain labeled | PASS-WITH-GAPS |
 | 09 Collaboration | good for PoC-1 | current | partner contact/IP/availability not yet verified | NEEDS-WORK |
 | Evidence register | strong first pass | current | should continue growing with every research round | PASS-WITH-GAPS |
+
+## Major-university coverage QA
+
+A dedicated institution matrix must be maintained for major Russian universities.
+
+Minimum requirement before final recommendations:
+- all institutions in the scope's minimum-coverage set have a status;
+- HIGH-SIGNAL / KEEP institutions have direct official and primary evidence;
+- NO CURRENT SIGNAL FOUND entries include search date and search scope;
+- PENDING count is zero for the minimum-coverage set.
 
 ## Immediate traceability fixes completed
 
@@ -47,6 +59,7 @@ It must have:
 ## Missing-evidence backlog
 
 ### Priority 0 — must close before final recommendations
+- complete minimum-set major Russian university scan;
 - current official role/contact verification for proposed partner researchers;
 - direct patent-family / independent-claim charts for promoted IP-sensitive directions;
 - background-IP implications of prior Huawei collaboration;
@@ -55,7 +68,7 @@ It must have:
 - independent measurements for important OEM active-cooling claims.
 
 ### Priority 1 — must close before 3-year roadmap
-- broader Russia institution coverage;
+- broader Russia institution coverage beyond minimum university set;
 - additional active-cooling mechanism evidence: EHD, piezo/MEMS microblower;
 - Russian materials reliability / manufacturing evidence;
 - software/control current team continuity and recent outputs;
@@ -77,6 +90,14 @@ Any file that changes:
 
 must include an **Evidence backbone** section with direct original-source links.
 
+## Correction rule
+
+When an error or stale fact is discovered:
+1. correct the active file immediately;
+2. update source register / progress if decision-relevant;
+3. note the correction in an audit/changelog section when it changes interpretation, partner priority or quantitative evidence;
+4. do not silently retain the old statement elsewhere in the repo.
+
 ## Completion definition for the repository
 
 The repository is “decision-ready” only when:
@@ -85,4 +106,6 @@ The repository is “decision-ready” only when:
 - every vendor claim is labeled;
 - every non-comparable benchmark is marked;
 - every major unknown remains visible;
+- the minimum major-university scan is complete;
+- current-role/current-project statements have freshness checks;
 - the top-level README, PROGRESS and workstream READMEs agree on current status.
