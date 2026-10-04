@@ -114,6 +114,20 @@ Generic surface theses remain killed/reframed:
 
 ---
 
+## Execution packets
+
+The current decisions are operationalized in:
+- [Pavlenko / Kutateladze Partner Data Request + Experiment Packet](stage0_packet_pavlenko_v01.md)
+- [MPEI / Ivanov Partner Data Request + Experiment Packet](stage0_packet_mpei_ivanov_v01.md)
+- [TPU / Feoktistov Partner Data Request + Experiment Packet](stage0_packet_tpu_feoktistov_v01.md)
+
+Common packet protocol:
+[Stage-0 Partner Packet Index](stage0_partner_packet_index_v01.md)
+
+The scorecard changes only when partner-returned data or physical evidence changes a decision cell.
+
+---
+
 ## Blocker ownership / public-search exit
 
 ### Pavlenko
