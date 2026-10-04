@@ -47,6 +47,7 @@ This is not a national prestige ranking.
 | **Aeroacoustics / fan-noise** | TsAGI/PNRPU/CIAM facilities and methods | Beihang aeroacoustics + PKU/HKUST cooling-fan source imaging + SJTU electronic-fan inlet/duct/narrow-space acoustics | China has a coherent electronic-cooling fan aeroacoustic stack; neither side has public proof at actual smartphone microfan scale | benchmark Russian vs domestic methods on ~18–25 mm / ~20k rpm confined centrifugal fan | **WATCH / METHOD RESERVE — not a Russia advantage** |
 | **Piezo / synthetic jet / EHD active air** | Russia public evidence fragmented; SPbU EHD adjacent, Kutateladze synthetic jet | NCEPU piezo-fan electronics cooling; Chinese EHD literature present | Russia evidence currently weaker / incomplete | none established yet | **CHINA-BASELINE DOMINANT / UNRESOLVED EHD** |
 | **Thermal materials / TIM / graphite** | Skoltech/MISIS/MSU/SPbU material signals | SJTU and broad China materials ecosystem with compact-electronics validation | no Russian smartphone-specific edge established | unusual reliability/process/material combination only if future evidence appears | **KILL generic materials thesis** |
+| **Foundational mathematical physics / nonlinear stability** | Russian signals: exact solutions, stability theory, thermocapillary/evaporative two-layer flow, 3D film modeling from ICM SB RAS / Altai / Lavrentyev / Kutateladze-adjacent lines | China comparator not yet normalized at equivalent method/control-problem depth | potentially important enabling advantage, but national-level conclusion is premature | reduced-order / exact / stability models that expose dryout, rupture, bifurcation or control boundaries faster than experiment-only approaches | **FOUNDATIONAL CANDIDATE / COMPARATOR PENDING** |
 | **Mobile thermal control / DVFS** | SPbU direct smartphone stochastic/DVFS line | USTC adaptive DVFS; Beihang MobiRL real-phone/product deployment; global thermal-aware RL strong | generic adaptive DVFS is crowded | model-light uncertainty adaptation + active-cooler / skin / acoustic joint control | **COMPLEMENTARY / TEST; KILL generic DVFS thesis** |
 | **Diagnostics / long experimental lineage** | strong in Kutateladze, MPEI, TPU, TsAGI/PNRPU | China also has advanced diagnostics/facilities, but mapping is heterogeneous | this is not a product category; value may be shortening mechanism/failure learning | partner-specific diagnostic methods tied to Stage-0 falsification | **COMPLEMENTARY — cross-cutting** |
 
@@ -125,8 +126,8 @@ The residual Kutateladze signal is more specific:
 - wave/thermocapillary/interfacial instability;
 - 12.5 μm-high extreme-aspect-ratio slit two-phase-flow experiments.
 
-Important caveat:
-the 2022 shear-film paper includes Beijing University of Technology coauthors, so this cannot be described as Russia-exclusive public knowledge.
+Joint-authorship interpretation:
+the 2022 shear-film paper includes Beijing University of Technology coauthors. This is **joint capability / knowledge-transfer evidence**. It does not by itself establish an independent China capability equal to the Russian line. Attribution should follow research lineage, platform, method origin and independent follow-on evidence.
 
 Current state:
 **NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
@@ -165,18 +166,42 @@ Current state:
 
 ---
 
+### Foundational Candidate F — mathematical physics / instability modeling
+
+Representative Russia signal:
+- exact thermosolutal / evaporative-convection solutions;
+- linear stability thresholds and oscillatory-mode prediction;
+- thermocapillary / Marangoni mechanism separation;
+- coupled evaporation / condensation / free-surface-deformation models;
+- direct linkage to thin films and minichannels.
+
+Why it matters:
+this capability could improve the three surviving Russia mechanism candidates by turning empirical failure observations into:
+- predictive instability boundaries;
+- reduced-order design models;
+- discriminating experiment conditions;
+- controllable variables.
+
+Why it is not yet a final advantage:
+the China academic mirror has not yet been normalized at the same applied-mathematics / mathematical-physics depth.
+
+Current state:
+**FOUNDATIONAL CAPABILITY CANDIDATE / systematic comparator required.**
+
+---
+
 ## 5. Current management narrative
 
 The evidence is converging toward a narrower and more credible answer:
 
 > Russia does **not** appear to hold a broad product-level advantage in smartphone thermal hardware.
 
-Instead, the potential value is concentrated in a small number of:
+Instead, the potential value is concentrated in:
 - phase-change failure mechanisms;
 - long-duration two-phase reliability knowledge;
 - thin-film/interfacial physics;
-- two-phase routing/failure know-how;
-- aeroacoustic diagnostics.
+- **foundational mathematical-physics / stability / reduced-order modeling capability**;
+- selected diagnostics / method reserves.
 
 China's strongest role is:
 - ultra-thin device engineering;
