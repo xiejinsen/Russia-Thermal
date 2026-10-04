@@ -1,27 +1,58 @@
-# Thermal Technology Map — v0.1
+# Thermal Technology Map — v0.2
 
-| Technology | Main function | Smartphone attraction | Main blocking questions | Russia search targets |
-|---|---|---|---|---|
-| Ultra-thin VC | spreading | mature, thin, passive | capillary limit, local heat flux, thickness | two-phase / wick / boiling groups |
-| Loop heat pipe | transport | decouple source/sink, multi-source potential | miniaturization, startup, orientation, thickness | ITP UB RAS |
-| Microchannel boiling | high-flux removal | high heat-transfer coefficient | pump/seal/CHF/control | Kutateladze / MPEI |
-| Synthetic jet | local convection | no rotary bearing, localized flow | thickness, recirculation, noise, actuator life | Kutateladze |
-| Piezo/MEMS blower | forced convection | compact, solid-state | pressure-flow under phone impedance, drive electronics | Russia scan still incomplete |
-| Rotary microfan | forced convection | proven product path | noise, dust, vibration, ingress, volume | TsAGI/CIAM/PNRPU transfer potential |
-| EHD / ionic wind | airflow | no rotor, very thin potential | high voltage, ozone, contamination, efficiency | SPbU Electrophysics |
-| Thermoelectric | active heat pumping | local cold-side control | COP, hot-side heat rejection, power | Russia electronics / thermophysics scan |
-| Microfluidic loop | heat transport/removal | strong heat flux handling | pump, seal, reliability, volume | microfluidics / two-phase groups |
-| Predictive control | system optimization | no direct volume cost | model accuracy, sensors, actuator authority | controls + mobile systems scan |
-| Aeroacoustic optimization | noise reduction | critical for active cooling UX | scale transfer | TsAGI / PNRPU / CIAM |
+Last reviewed: 2026-10-04
 
-## Important research principle
+This is the canonical technology taxonomy and current disposition.
+Detailed evidence and decision rationale live in Workstreams 05 and 08.
 
-A technology can be scientifically strong but commercially irrelevant to smartphones if it fails:
-- geometry;
-- power;
-- noise;
-- reliability;
-- manufacturing;
-- user skin-temperature benefit.
+| Technology | Smartphone role | Current Russia signal | Current disposition |
+|---|---|---|---|
+| Ultra-thin VC / capillary surface | passive spreading + phase change | Pavlenko/Kutateladze dielectric boiling, modified mesh, dryout/rewetting physics | **Tier A, narrowed** |
+| Generic VC / graphite / TIM | passive spreading/interfaces | several Russian signals | **not Russia-specific** |
+| Loop heat pipe | remote / multi-source routing | Maydanik / ITP Ural | generic miniaturization rejected; routing physics retained |
+| Microchannel / boiling | high-flux removal | Kutateladze + adjacent MPEI/TPU | mechanism source; phone integration unproven |
+| Film/droplet hybrid | active high-flux removal | Kutateladze long paper/patent lineage | **Tier A- high risk** |
+| Synthetic jet | local airflow | Kutateladze | generic route rejected as Russia-specific; benchmark only |
+| Piezo/MEMS blower | compact airflow | Russia scan still thin | exploratory |
+| Rotary microfan | forced convection | TsAGI/PNRPU/CIAM methods | generic fan rejected; aeroacoustic optimization retained |
+| EHD / ionic wind | thin airflow actuation | SPbU electrophysics | exploratory |
+| Pumped liquid / microfluidic loop | active transport/removal | Russian fluid/phase-change competence | generic route not differentiated |
+| Thermoelectric | local heat pumping | limited Russia signals | low priority |
+| Predictive/adaptive control | workload + cooler optimization | SPbU SPSA / Android DVFS | **Tier B+, narrowed** |
+| Aeroacoustic optimization | noise-quality improvement | TsAGI / PNRPU / CIAM | **Tier B, narrow** |
+| Thermal materials | spreading/interfaces | Skoltech / MISIS / MSU candidates | supporting unless unusual measurable advantage |
 
-Every candidate will therefore pass a **mobile-transfer gate** before becoming a collaboration opportunity.
+## Current key questions
+
+### Tier A surface / wick
+Can target-fluid dryout, rewetting and wetting-state retention beat a strong 0.39–0.4 mm-class modern UTVC at the same thickness and fluid budget?
+
+### LHP
+Can routing under moving/multiple hotspots create a benefit that a simpler modern VC or Chinese-style ultra-thin LHP cannot?
+
+### Film / droplet
+Can a fully closed loop fit phone power, volume, sealing and reliability limits?
+
+### Active airflow
+Can Russian aeroacoustic methods improve installed tonal/noise quality at equal useful cooling?
+
+### Control
+Can model-light online adaptation outperform a calibrated modern thermal controller under uncertain ambient/case/grip/workload conditions?
+
+## Current authority
+
+For Tier / KEEP / downgrade / rejection decisions, use:
+`../08_opportunities-transfer/direction_decision_gate_v01.md`
+
+For evidence:
+- `../05_papers-patents/`
+- `../07_china-benchmark/`
+- `../evidence/source_register.md`
+
+## Refresh trigger
+
+Update this file whenever:
+- a generic route is rejected or reframed;
+- a new mechanism enters the active portfolio;
+- China/global evidence materially changes the baseline;
+- a Russia-specific value proposition changes.
