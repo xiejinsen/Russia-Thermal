@@ -155,7 +155,9 @@ Main unresolved:
 - vacuum outgassing;
 - hydrocarbon-layer contamination;
 - copper transfer;
-- sealed two-phase durability;
+- sealed two-phase durability.
+
+Closed this round:
 - RU2812668 inventor / claim mapping — **CLOSED publicly**.
 
 TPU remains valuable because its optical/surface-control capability can create a highly discriminating patterning experiment.
