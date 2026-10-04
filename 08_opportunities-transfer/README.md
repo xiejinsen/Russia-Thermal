@@ -17,6 +17,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Tier-A engineering feasibility](tierA_engineering_feasibility_v01.md)
 - [Phase-change surface matrix](phase_change_surface_matrix_v01.md)
 - [Russia–China surface/wick comparison](surface_wick_russia_china_comparison_v01.md)
+- [Russia–China academic capability heatmap](russia_china_academic_capability_heatmap_v01.md) — management-level country capability comparison
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## CURRENT / AUTHORITATIVE
@@ -26,7 +27,8 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 **Local Workstream-08 authority:**
 1. `direction_decision_gate_v01.md` — current technology/Tier/kill disposition;
 2. `smartphone_constraint_model_v01.md` — current phone-transfer constraints;
-3. `surface_wick_russia_china_comparison_v01.md` — current surface/wick comparator analysis.
+3. `russia_china_academic_capability_heatmap_v01.md` — current management-level Russia×China differentiation map;
+4. `surface_wick_russia_china_comparison_v01.md` — detailed current surface/wick comparator analysis.
 
 The local ordering above does not override the repository-wide authority hierarchy.
 
@@ -101,3 +103,24 @@ Current decisions:
 - MPEI ordered wick — **HOLD**
 
 This is permission for bounded falsification only, not final collaboration selection.
+
+
+## Country-level comparison consequence
+
+The first capability-matched China mirror materially narrows Russia-advantage claims.
+
+Current broad theses killed/reframed:
+- generic Russia VC advantage — **killed**;
+- generic Russia LHP miniaturization — **killed**;
+- generic Russia high-flux microchannel advantage — **killed/reframed**;
+- generic Russia aeroacoustics exclusivity — **killed**;
+- generic Russia DVFS advantage — **killed/reframed**.
+
+Current country-level differentiation candidates:
+1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
+2. MPEI/Ivanov — long-duration hierarchical two-phase surface aging/reliability;
+3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
+4. TsAGI/PNRPU/CIAM — confined aeroacoustic source-diagnosis methods;
+5. ITP UB RAS — LHP routing/operating-limit/failure physics.
+
+Only #1 and #2 currently have direct Stage-0 execution packets.
