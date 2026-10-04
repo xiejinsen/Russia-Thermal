@@ -52,6 +52,22 @@ Use this as the default human entry point for papers and patents.
 - ../07_china-benchmark/
 - ../08_opportunities-transfer/direct_comparisons_v01.md
 - ../08_opportunities-transfer/surface_wick_russia_china_comparison_v01.md
+- ../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md
+
+## G1. Foundational science / mathematical-physics evidence
+
+- [Russia Foundational Math-Physics → Thermal Capability Map](../03_russia-institutions/russia_foundational_math_physics_capability_v01.md)
+- [China Foundational Math-Physics → Thermal Capability Mirror](../07_china-benchmark/china_foundational_math_physics_mirror_v01.md)
+- [Russia × China Foundational Math-Physics Pressure Test](../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
+
+Use this section when a final claim depends on:
+- exact / group-invariant analytical solutions;
+- stability / bifurcation;
+- reduced-order / mechanistic modeling;
+- inverse thermal diagnostics;
+- model-to-experiment leverage.
+
+Do not cite national mathematics reputation as technical evidence.
 
 ## H. Phone/product constraints
 
