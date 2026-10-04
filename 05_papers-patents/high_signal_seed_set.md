@@ -1,3 +1,9 @@
+> **SEED SET — NOT THE CURRENT COMPLETE PATENT/PAPER INDEX**
+>
+> This file preserves early high-signal evidence. Current patent/claim conclusions are in [Surface/Wick Patent Map](surface_wick_patent_map_v01.md), [Claim Chart](surface_wick_claim_chart_v01.md), and the central [Source Register](../evidence/source_register.md).
+>
+> Last status review: 2026-10-04.
+
 # Papers & Patents — High-Signal Seed Set v0.2
 
 This file is not a complete corpus. It records items that materially change the collaboration hypothesis.
