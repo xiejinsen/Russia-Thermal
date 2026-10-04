@@ -10,6 +10,9 @@ Answer the management question:
 
 > After comparing Russian thermal-management capabilities with strong Chinese academic baselines, where does Russia still offer a credible differentiated or complementary value for smartphone thermal innovation?
 
+Focused pressure-test memo:
+[kabov_maydanik_china_pressure_test_v01.md](kabov_maydanik_china_pressure_test_v01.md)
+
 Inputs:
 - [Russia Thermal Capability Atlas](../03_russia-institutions/russia_thermal_capability_atlas_v01.md)
 - [China Academic Thermal Capability Mirror](../07_china-benchmark/china_academic_capability_mirror_v01.md)
@@ -38,8 +41,8 @@ This is not a national prestige ranking.
 | **Ultra-thin VC device** | no public Russian 0.25–0.4 mm frontier device | SCUT 0.35–0.39 mm; HUST 0.25 mm UTTGP frontier | China device miniaturization/manufacturing baseline is stronger | Russia contributes only a mechanism/process inserted into China-style device | **CHINA-BASELINE DOMINANT / KILL generic Russia VC thesis** |
 | **Hierarchical coating / two-phase surface reliability** | MPEI/Ivanov: 42-month R410A hierarchy, aging/capillary evidence | SCUT-led China line: oxygen-driven copper-water VC failure mechanism, wick oxidation grading, 150–200°C accelerated lifetime prediction | China is already strong in product-path VC reliability; MPEI retains a narrower evidence edge in **actual 42-month operation of one engineered hierarchy** | hierarchy-specific multi-year surface/capillary aging knowledge that still survives phone-scale transfer | **NARROW DIFFERENTIATION / COMPLEMENTARY TEST** |
 | **Biphilic / laser surface** | TPU/Feoktistov; MPEI wettability IP | China has extensive laser/composite/wettability UTVC work and patents | broad surface-treatment novelty is crowded | low-outgassing, vacuum-stable **confined liquid-routing/rewetting** pattern | **COMPLEMENTARY / TEST; KILL generic biphilic thesis** |
-| **Thin film / droplet / spray** | Kutateladze Kabov/Chinnov; TPU droplet diagnostics | NCEPU thin-film >2000 W/cm²; Beihang droplet-train CHF up to 1037 W/cm² | both ecosystems have strong fundamental work; neither category alone proves phone product value | Russia may have deeper film-instability/closure physics and diagnostics | **UNRESOLVED / high-risk complementary** |
-| **LHP / passive two-phase routing** | ITP UB RAS / Maydanik deep LHP lineage | XJTU 0.7 mm mobile/flexible LHP; HUST 0.71 mm LHP | China already demonstrates direct mobile miniaturization | multi-source/moving-hotspot routing, startup/failure-boundary knowledge | **COMPLEMENTARY / TEST; KILL generic LHP miniaturization** |
+| **Thin film / droplet / spray** | Kutateladze Kabov/Chinnov: shear-driven film, dry-spot/CHF lineage, 12.5 μm slit two-phase instability | NCEPU 2074 W/cm² thin-film boiling; CAS/NCEPU gradient-mesh film; Beihang droplet; broad China high-flux film activity | China is stronger on headline heat flux/passive-device film work; exact shear-driven free-surface instability lineage remains less matched | shear-driven microfilm / dry-spot / rupture / instability control under extreme confinement | **NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE** |
+| **LHP / passive two-phase routing** | ITP UB RAS / Maydanik foundational/deep LHP lineage | China: 0.7–1.0 mm mobile/laptop LHP, dual/multi-evaporator chip cooling, Beihang NCG/startup/elevation, SDU capillary/pressure-drop failure boundary | China now covers miniaturization **and** the residual routing/startup/failure-physics thesis | non-public expert review / failure-analysis know-how only | **WATCH / KNOWLEDGE RESERVE; KILL country-level differentiation** |
 | **Microchannel / embedded liquid cooling** | Kutateladze/MPEI/Bauman mechanism evidence | PKU 3000 W/cm² embedded microfluidics; XJTU flow-boiling chips | China academic integration frontier is very strong | niche dielectric/two-phase instability know-how only | **CHINA-BASELINE DOMINANT** |
 | **Aeroacoustics / fan-noise** | TsAGI/PNRPU/CIAM facilities and methods | Beihang aeroacoustics + PKU/HKUST cooling-fan source imaging + SJTU electronic-fan inlet/duct/narrow-space acoustics | China has a coherent electronic-cooling fan aeroacoustic stack; neither side has public proof at actual smartphone microfan scale | benchmark Russian vs domestic methods on ~18–25 mm / ~20k rpm confined centrifugal fan | **WATCH / METHOD RESERVE — not a Russia advantage** |
 | **Piezo / synthetic jet / EHD active air** | Russia public evidence fragmented; SPbU EHD adjacent, Kutateladze synthetic jet | NCEPU piezo-fan electronics cooling; Chinese EHD literature present | Russia evidence currently weaker / incomplete | none established yet | **CHINA-BASELINE DOMINANT / UNRESOLVED EHD** |
@@ -109,19 +112,24 @@ What would kill it:
 Current state:
 **Stage-0 priority #2 / narrow differentiation + complementary reliability candidate.**
 
-### Candidate C — thin-film / interfacial instability mechanism depth
+### Candidate C — shear-driven microfilm / interfacial-instability mechanism depth
 Institution:
 **Kutateladze — Kabov/Kochkin/Chinnov**
 
-Why it remains:
-Russia has long-running thin-film / slit / droplet physics and current microelectronic-film work.
+Why it survives, narrowly:
+China has very strong thin-film boiling and droplet/high-flux capability, including >2000 W/cm² thin-film boiling, so broad thin-film superiority is killed.
 
-Why it is not yet a bet:
-China has NCEPU high-flux thin-film and Beihang droplet cooling;
-phone closed-loop volume/pump/seal constraints remain severe.
+The residual Kutateladze signal is more specific:
+- shear-driven free-surface liquid film;
+- dry-spot / breakdown / CHF mechanics;
+- wave/thermocapillary/interfacial instability;
+- 12.5 μm-high extreme-aspect-ratio slit two-phase-flow experiments.
+
+Important caveat:
+the 2022 shear-film paper includes Beijing University of Technology coauthors, so this cannot be described as Russia-exclusive public knowledge.
 
 Current state:
-**high-risk reserve / further comparison required.**
+**NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
 
 ### Watch D — phone-scale confined aeroacoustic source diagnosis
 Institutions:
@@ -138,18 +146,22 @@ The unresolved niche is actual smartphone-scale centrifugal-fan acoustics, but R
 Current state:
 **WATCH / method reserve only; phone-scale equal-envelope benchmark required before it can re-enter the country differentiation set.**
 
-### Candidate E — LHP routing / failure physics
+### Watch E — LHP knowledge / failure-analysis reserve
 Institution:
 **ITP UB RAS / Maydanik line**
 
-Why it remains:
-deep passive two-phase operating-limit knowledge.
+Why it is downgraded:
+China now has:
+- 0.7–1.0 mm mobile/laptop LHP;
+- dual-evaporator multi-source routing;
+- variable-load/startup studies;
+- Beihang NCG/elevation/compensation-chamber physics;
+- 2026 multi-evaporator capillary-pressure / cumulative-pressure-drop failure boundary.
 
-Why generic thesis is killed:
-XJTU/HUST already demonstrate sub-mm mobile LHPs.
+Maydanik retains exceptional foundational depth, but the current residual thesis "routing / operating-limit / failure physics" is no longer sufficiently Russia-specific.
 
 Current state:
-**reserve for moving/multi-hotspot routing, not miniaturization.**
+**WATCH / KNOWLEDGE RESERVE; removed from active country-differentiation set.**
 
 ---
 
