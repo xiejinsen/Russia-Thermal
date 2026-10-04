@@ -32,8 +32,8 @@ manufacturing/process scaling.
 
 ### #2 MPEI / Ivanov — Tier B+ reliability/process challenger
 New evidence:
-- https://doi.org/10.1134/S0040601525600683
-- https://doi.org/10.1016/j.pes.2026.100314
+- **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
+- **[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
 
 Strength:
 - 42-month R410A two-phase durability evidence;
@@ -44,9 +44,9 @@ heat flux and geometry are far from phone.
 
 ### #3 TPU / Feoktistov — Tier B+ pattern/process challenger
 Evidence:
-- https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
-- https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
-- https://doi.org/10.1016/j.surfin.2026.109390
+- **[Biphilic Heat Exchange Surfaces for Drip Irrigation Cooling Systems](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316)** — D.V. Feoktistov, A. Abedtazehabadi, A.V. Dorozhkin *et al.* — *International Journal of Heat and Mass Transfer*, 2024.
+- **[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
+- **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
 
 Strength:
 - laser/wettability pattern control;
