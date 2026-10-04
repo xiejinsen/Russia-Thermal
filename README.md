@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~68%**
-**Estimated remaining: ~32%**
+**Estimated research completion: ~69%**
+**Estimated remaining: ~31%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -172,6 +172,15 @@ Focused files:
 - [Russia Foundational Math-Physics Capability Map](03_russia-institutions/russia_foundational_math_physics_capability_v01.md)
 - [China Foundational Math-Physics Mirror](07_china-benchmark/china_foundational_math_physics_mirror_v01.md)
 - [Foundational Math-Physics China Pressure Test](08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
+
+**Siberian modular capability network**
+- Kutateladze ↔ Lavrentyev: verified current technical link;
+- Kutateladze ↔ NSU: verified current institutional / talent / diagnostics bridge;
+- ICM/Altai ↔ Kutateladze: verified historical theory–experiment lineage with current methodological continuity;
+- one unified current consortium is **not** verified.
+
+Canonical map:
+[Siberian Theory–Fluid–Experiment Capability Network](03_russia-institutions/siberian_theory_fluid_experiment_network_v01.md).
 
 **Joint-paper attribution**
 - China–Russia coauthored papers may still support a Russian capability when Russian lineage/platform/method ownership is evidenced.
@@ -267,7 +276,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~68% research state.
+It is intentionally **not final** at the current ~69% research state.
 
 The report will ultimately contain:
 - executive decision;
