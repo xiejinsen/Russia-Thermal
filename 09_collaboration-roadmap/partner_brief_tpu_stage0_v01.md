@@ -79,7 +79,7 @@ Request:
 9. any exposure to refrigerants / non-water working fluids.
 
 Patent request:
-clarify inventor/claim mapping for TPU RU2812668C1 if relevant to the current team.
+RU2812668C1 inventor/claim mapping is now closed publicly; use it as Feoktistov/Orlova partner-line background IP, then clarify only copper/mobile field relevance.
 
 ### Phase T1 — phone-metal coupon
 Month 1–2
@@ -181,3 +181,71 @@ TPU can move back ahead if it demonstrates:
 - sealed two-phase durability: LOW
 - phone process compatibility: LOW
 - specific patent mapping: LOW-MEDIUM
+
+
+## Patent blocker closure — RU2812668C1
+
+Research date: 2026-10-04
+
+Direct patent review closes the previous attribution uncertainty.
+
+**[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — Tomsk Polytechnic University — 2024.
+
+Confirmed:
+- TPU assignee;
+- Feoktistov and Orlova are named inventors;
+- one independent method claim;
+- defined abrasive/ultrasonic-cleaning + 1064 nm nanosecond-laser window;
+- disclosed steel roughness mean height ~9–18 μm, max feature height ~17.5–120 μm.
+
+### Important technical interpretation
+
+RU2812668 is **not** the same as TPU's hydrocarbon-derived hydrophobic route.
+
+It gives a useful:
+**laser-only / low-organic process-control branch**
+
+while the 2026 hydrophobization route remains:
+**laser + organic chemistry / higher contamination-risk branch.**
+
+### Revised Stage-0 design
+
+Do not test one TPU coupon family.
+
+Test two branches on copper:
+1. laser-only / low-organic;
+2. biphilic/hydrocarbon-functionalized.
+
+Matched control:
+- standard oxidation / laser hydrophilic reference.
+
+First gate before two-phase performance:
+- feature height;
+- wetting state;
+- vacuum/process exposure;
+- mass-loss / contamination proxy;
+- DI-water soak;
+- post-process wetting retention.
+
+### Remaining blockers
+
+**CLOSED publicly**
+- RU2812668 inventor identity;
+- Feoktistov-team linkage;
+- independent process claim.
+
+**EXPERIMENT-ONLY**
+- copper transfer;
+- vacuum/outgassing;
+- fluid contamination;
+- post-degassing/weld stability;
+- sealed two-phase rewetting benefit.
+
+### Stage-0 decision
+
+**GO WITH PREREQUISITE.**
+
+Prerequisite:
+> the Stage-0 plan must explicitly separate the low-organic laser-only branch from the hydrocarbon-wetting branch, with contamination/process compatibility as the first gate.
+
+TPU remains priority #3.
