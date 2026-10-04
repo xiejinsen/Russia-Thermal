@@ -1,3 +1,9 @@
+> **SUPPORTING HYPOTHESIS HISTORY — NOT THE CURRENT PORTFOLIO AUTHORITY**
+>
+> This file preserves the initial active-cooling hypotheses plus later corrections. For current disposition use [06 README](README.md) and `../08_opportunities-transfer/direction_decision_gate_v01.md`.
+>
+> Last status review: 2026-10-04.
+
 # Active Cooling — Initial Hypotheses
 
 Status: hypotheses to test, not recommendations.
