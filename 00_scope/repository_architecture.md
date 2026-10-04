@@ -30,6 +30,7 @@ The 00–09 research workstreams are retained because they match the research de
 | 09_collaboration-roadmap | partner/PoC/roadmap research layer | readiness, PoC specs, collaboration roadmap |
 | 10-final-report | final decision/report layer | executive decision, strategic bets, collaboration portfolio, roadmap, evidence appendix |
 | evidence | evidence governance + cross-workstream registers | source register, QA, rankings, standards |
+| root `CONTINUE_HERE.md` | new-chat/session bootstrap only | startup protocol and continuation prompt; **not project status** |
 
 ## Current-vs-history rule
 
@@ -60,6 +61,31 @@ Each workstream may define a **local authority** for its own decision surface:
 A workstream README must not place its local authority above `PROGRESS.md` for overall project status.
 
 Dated audit files are governance/history snapshots only. They must carry an explicit non-authoritative banner and point to the live authority.
+
+## New-chat continuity rule
+
+The repository root contains:
+- `CONTINUE_HERE.md` — the canonical bootstrap / handoff protocol for a new ChatGPT conversation.
+
+Its role is to:
+- tell a new conversation what to read first;
+- point to the current authority chain;
+- preserve research/governance rules across chat-window changes;
+- provide a short copy/paste continuation prompt.
+
+It is **not** a status authority and must not duplicate current project state.
+
+The new-chat startup order is:
+
+1. `CONTINUE_HERE.md`
+2. `README.md`
+3. `PROGRESS.md`
+4. this architecture file
+5. the relevant workstream authority / decision files
+
+If chat memory and repository current authority disagree, repository current authority wins.
+
+Any decision-critical information that exists only in chat is considered not safely archived until written into the repository.
 
 ## Canonical status hierarchy
 
