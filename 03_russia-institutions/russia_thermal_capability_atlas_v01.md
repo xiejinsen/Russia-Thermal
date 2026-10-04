@@ -60,7 +60,7 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 | **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | China already has electronic-cooling fan source imaging and narrow-space/duct acoustics; Russian value is now a **watch-level method hypothesis**, not a country advantage |
 | **Thermal materials / interfaces** | Skoltech; NUST MISIS; MSU; SPbU carbon/graphite line | BN/graphene/CNT composites, graphite/carbon thermal structures, materials infrastructure | **Supporting** | No current evidence of a Russia-specific smartphone material advantage versus China/global ecosystem |
 | **Software thermal control / DVFS** | **SPbU smartphone DVFS / stochastic optimization** | direct Android/smartphone DVFS and optimization lineage | **Direct mobile relevance, differentiation unresolved** | Interesting direct mobile signal, but generic adaptive DVFS is crowded; only uncertainty-aware/system-level control may remain differentiated |
-| **Foundational mathematical physics / nonlinear stability** | **Institute of Computational Modelling SB RAS**; Altai State University; Siberian Federal University links; **Lavrentyev Institute of Hydrodynamics SB RAS**; Kutateladze-adjacent modeling line | current exact-solution / stability / evaporation-convection / thermocapillary-film models; coupled gas–liquid interface models; 3D evaporating-film microchannel modeling | **Foundational enabling relevance; device transfer indirect** | **PROMISING FOUNDATIONAL CAPABILITY CANDIDATE**: may strengthen dryout/instability/control insight, but China/global applied-math comparator is not yet normalized |
+| **Foundational mathematical physics / nonlinear stability** | **Institute of Computational Modelling SB RAS**; Altai State University; **Lavrentyev Institute of Hydrodynamics SB RAS**; Kutateladze-adjacent experimental line | continuous 2023–2026 exact/group-invariant evaporative-convection solutions; stability thresholds; experiment-informed closure; 3D evaporating-film microchannel modeling | **Foundational enabling relevance; strongest direct link to film-instability route** | **NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE**: China is strong in nonlinear stability, phase-change numerics and inverse thermal methods; residual Russian value is analytical interpretability / exact-solution lineage, not broad math superiority |
 | **Diagnostics / reliability / process know-how** | Kutateladze optical/multiphase diagnostics; **MPEI 42-month hierarchy**; TPU optical/PIV/PLIF/surface process; TsAGI/PNRPU acoustics | long-duration two-phase stability, optical flow/surface diagnostics, aeroacoustic test facilities | **Cross-cutting** | This may be more strategically important than individual components: Russia often shows depth in mechanism diagnosis, failure regimes and long experimental lineages |
 
 ---
@@ -233,16 +233,26 @@ Representative current evidence:
   - 3D model coupling heat/mass transfer, temperature-dependent properties, thermocapillarity, free-surface deformation, evaporation and condensation.
 
 Current interpretation:
-**there is a real project-relevant signal that Russian applied mathematics / mathematical physics can contribute to thermal failure-mechanism understanding.**
+the systematic China comparison is now complete enough to reject a broad national-mathematics claim.
 
-But the final claim must be narrower than:
-> "Russia is good at mathematics."
+China independently demonstrates:
+- nonlinear/long-wave film stability;
+- Marangoni-instability modeling;
+- experiment-validated phase-change numerical models;
+- physics-informed inverse thermal diagnostics.
 
-The decision question is:
-> can this foundation generate a better/faster model, instability boundary, reduced-order design rule or experiment than our domestic baseline?
+The residual Russian signal is narrower and more credible:
+
+> **continuous exact/group-invariant analytical modeling of coupled evaporative thermocapillary systems, used for interpretable stability/mechanism analysis and experiment-informed closure.**
 
 Current state:
-**FOUNDATIONAL CAPABILITY CANDIDATE — systematic China comparison pending.**
+**NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE / RESERVE.**
+
+Focused evidence:
+[Russia Foundational Math-Physics → Thermal Capability Map](russia_foundational_math_physics_capability_v01.md)
+
+Pressure test:
+[Russia × China Foundational Math-Physics Pressure Test](../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
 
 ---
 
