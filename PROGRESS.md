@@ -1,11 +1,32 @@
 # Research Progress
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 ## Overall status
 
 **Estimated research completion: ~49%**
 **Estimated remaining research: ~51%**
+
+## Repository architecture / freshness audit — 2026-10-04
+
+Repository housekeeping completed without changing the research completion estimate.
+
+Completed:
+- root README refreshed to current status;
+- repository architecture / refresh contract and CHANGELOG added;
+- missing workstream indexes added;
+- early scan/seed files marked historical or non-authoritative;
+- technology map refreshed to current portfolio state;
+- Russia candidate queue refreshed with separate MPEI ordered-wick and coating lines;
+- China / opportunity / collaboration indexes refreshed;
+- repository QA matrix converted from contradictory appended history to one current snapshot.
+
+Governance:
+- `00_scope/repository_architecture.md`
+- `CHANGELOG.md`
+- `evidence/README.md`
+- `evidence/repository_completeness_matrix.md`
+
 
 ## Surface/Wick Patent & Partner-Readiness round completed — first pass
 
