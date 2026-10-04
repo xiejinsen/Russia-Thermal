@@ -38,7 +38,7 @@ This is not a national prestige ranking.
 
 | Capability | Russia public signal | China academic mirror | Current comparative read | Residual Russia-specific hypothesis | Verdict |
 |---|---|---|---|---|---|
-| **Dielectric boiling / CHF / dryout / rewetting** | Kutateladze/Pavlenko: HFE-7100, modified mesh, dryout/CHF, thin-layer boiling | XJTU: HFE-7100 structured microchannel boiling; NCEPU: ultra-high-flux thin-film boiling | China is also strong in high-flux boiling; category-level "Russia leads boiling" is unsupported | modified-mesh **dryout/rewetting/failure-boundary control** transferred to <=100 μm wick + DI water | **DIFFERENTIATED CANDIDATE** |
+| **Dielectric boiling / CHF / dryout / rewetting** | Kutateladze/Pavlenko: HFE-7100/Novec dry-spot dynamics; IR + reflected-light + ML diagnostics; layer-height crisis-mode transition; modified surfaces | China: GDUT capillary-fed dryout + steam-induced rewetting + cycle degradation; SCUT modified mesh; SJTU dryout model; Changsha HFE-7100 1 mm confinement | China already covers dryout/rewetting and wick-failure physics; Russia no longer differentiates on the broad problem | **reversible→irreversible dry-spot/crisis diagnostics in dielectric fluids**, transferred to phone geometry and used to shift irreversible-dryout onset vs strong domestic control | **NARROW DIFFERENTIATION / STAGE-0 #1** |
 | **Ultra-thin VC device** | no public Russian 0.25–0.4 mm frontier device | SCUT 0.35–0.39 mm; HUST 0.25 mm UTTGP frontier | China device miniaturization/manufacturing baseline is stronger | Russia contributes only a mechanism/process inserted into China-style device | **CHINA-BASELINE DOMINANT / KILL generic Russia VC thesis** |
 | **Hierarchical coating / two-phase surface reliability** | MPEI/Ivanov: 42-month R410A hierarchy, aging/capillary evidence | SCUT-led China line: oxygen-driven copper-water VC failure mechanism, wick oxidation grading, 150–200°C accelerated lifetime prediction | China is already strong in product-path VC reliability; MPEI retains a narrower evidence edge in **actual 42-month operation of one engineered hierarchy** | hierarchy-specific multi-year surface/capillary aging knowledge that still survives phone-scale transfer | **NARROW DIFFERENTIATION / COMPLEMENTARY TEST** |
 | **Biphilic / laser surface** | TPU/Feoktistov; MPEI wettability IP | China has extensive laser/composite/wettability UTVC work and patents | broad surface-treatment novelty is crowded | low-outgassing, vacuum-stable **confined liquid-routing/rewetting** pattern | **COMPLEMENTARY / TEST; KILL generic biphilic thesis** |
@@ -91,7 +91,7 @@ What would kill it:
 - strong China-style UTVC control matches result.
 
 Current state:
-**Stage-0 priority #1 / differentiated candidate.**
+**Stage-0 priority #1 / NARROW differentiation candidate.**
 
 ### Candidate B — actual multi-year hierarchical surface aging / reliability
 Institution:
