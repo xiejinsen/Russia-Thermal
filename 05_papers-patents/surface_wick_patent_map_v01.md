@@ -1,6 +1,6 @@
 # Surface / Wick Patent & Prior-Art Map v0.1
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Status: research patent landscape for technical strategy. **Not a legal freedom-to-operate opinion.**
 
@@ -27,10 +27,11 @@ The more credible joint-IP space is narrower:
 
 ## 1. Russia — Kutateladze / Pavlenko-related surface IP
 
-### RU2793671C2 — heat-transfer wall / boiling-enhancement coating
+### [Heat Transfer Wall of a Heat Exchanger and Method for Forming a Coating to Intensify Heat Transfer](https://patents.google.com/patent/RU2793671C2/en)
 
-Google Patents:
-https://patents.google.com/patent/RU2793671C2/en
+**Inventors:** A.A. Nikiforov, A.N. Pavlenko, M.Yu. Kuprikov *et al.*  
+**Patent:** RU2793671C2  
+**Assignee:** Kutateladze Institute of Thermophysics SB RAS / A.A. Nikiforov
 
 Priority: 2021-05-06  
 Grant/publication: 2023-04-04
@@ -77,10 +78,11 @@ Still, it strengthens manufacturing plausibility for very thin modified surfaces
 
 ## 2. Russia — Kutateladze biphilic prior art
 
-### RU2542253C2 — boiling enhancement using patterned hydrophobic regions
+### [Method for Intensification of Heat Exchange at Boiling on a Smooth Surface](https://patents.google.com/patent/RU2542253C2/en)
 
-Google Patents:
-https://patents.google.com/patent/RU2542253C2/en
+**Inventors:** O.A. Kabov, E.Ya. Gatapova, E.A. Chinnov *et al.*  
+**Patent:** RU2542253C2  
+**Assignee:** Kutateladze Institute of Thermophysics SB RAS
 
 Priority: 2013-03-18  
 Grant/publication: 2015-02-20  
@@ -106,10 +108,11 @@ TPU's 2026 biphilic work therefore cannot be treated as broadly novel at the con
 
 ## 3. Russia — TPU surface patent signal
 
-### RU2812668C1 — micro/nanostructure on steel heat-exchange surface
+### [Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)
 
-Direct patent entry:
-https://patents.google.com/patent/RU2812668C1/en
+**Inventors:** pending direct verification  
+**Patent:** RU2812668C1  
+**Assignee:** National Research Tomsk Polytechnic University
 
 Priority: 2023-11-01  
 Grant/publication: 2024-01-31  
@@ -155,9 +158,11 @@ Core:
 - heat-exchange-surface nanorelief;
 - thermal-resistance / adhesion focus.
 
-### RU2727406C1 — porous Al2O3 nanoparticle coating
+### [Method of Forming a Porous Coating of Nanoparticles](https://patents.google.com/patent/RU2727406C1/en)
 
-https://patents.google.com/patent/RU2727406C1/en
+**Inventors:** Yu.A. Kuzma-Kichta, N.S. Ivanov, D.S. Kiselev, A.V. Lavrikov  
+**Patent:** RU2727406C1  
+**Assignee:** National Research University MPEI
 
 Priority: 2019-09-04  
 Grant/publication: 2020-07-21  
@@ -176,10 +181,11 @@ Claim-level process:
 - droplet evaporation in air;
 - intended to improve capillary surface properties.
 
-### RU2750831C1 — hydrophobic texture on metal
+### [Method for Forming Hydrophobic Texture on Metal Surface](https://patents.google.com/patent/RU2750831C1/en)
 
-Direct entry:
-https://patents.google.com/patent/RU2750831C1/en
+**Inventors:** Yu.A. Kuzma-Kichta, D. Chugunkov, A. Lavrikov *et al.*  
+**Patent:** RU2750831C1  
+**Assignee:** National Research University MPEI
 
 Priority: 2020-11-23  
 Grant/publication: 2021-07-05  
@@ -198,9 +204,11 @@ Claim-level concept:
 - contact angle ~140–150°;
 - target: hydrophobic heat-transfer surface / condensation enhancement.
 
-### RU2860061C1 — adjustable-wettability heat-transfer surface
+### [Method for Forming Heat Transfer Surface with Adjustable Wettability Properties](https://patents.google.com/patent/RU2860061C1/en)
 
-https://patents.google.com/patent/RU2860061C1/en
+**Inventors:** N.S. Ivanov, M.M. Alyautdinova  
+**Patent:** RU2860061C1  
+**Assignee:** National Research University MPEI
 
 Priority: 2025-12-17  
 Grant/publication: 2026-04-14  
@@ -245,9 +253,11 @@ The second line is more experimentally mature than previously recognized.
 
 ## 5. China — biphilic / wettability-patterned VC IP
 
-### CN116989603B — coreless VC with self-driven hydrophilic/hydrophobic pattern
+### [An Ultra-Thin Coreless Heat Spreader Based on Self-Driven Hydrophilic and Hydrophobic Patterns](https://patents.google.com/patent/CN116989603B/en)
 
-https://patents.google.com/patent/CN116989603B/en
+**Inventors:** Wang Changhong, Luo Qingyi  
+**Patent:** CN116989603B  
+**Assignee:** Guangdong University of Technology
 
 Priority: 2023-06-07  
 Grant: 2025-08-29  
@@ -274,9 +284,11 @@ This sharply narrows TPU's generic biphilic-IP whitespace.
 
 ## 6. China — laser / hierarchical wick IP
 
-### CN118744276B — laser hierarchical ultra-thin VC wick
+### [A Method for Preparing an Ultra-Thin Vapor Chamber Wick with High Heat Transfer Performance and an Ultra-Thin Vapor Chamber Wick](https://patents.google.com/patent/CN118744276B/en)
 
-https://patents.google.com/patent/CN118744276B/en
+**Inventors:** Chen Chaoda, Wu Siyang, Chen Ziyang *et al.*  
+**Patent:** CN118744276B  
+**Assignee:** Guangzhou Maritime University
 
 Priority: 2024-08-14  
 Grant: 2025-01-24  
@@ -300,9 +312,11 @@ is crowded.
 
 ## 7. China OEM — composite / graded capillary IP
 
-### Huawei WO2025190051A1 — wick, vapor chamber and electronic device
+### [Wick, Vapor Chamber and Electronic Device](https://patents.google.com/patent/WO2025190051A1/en)
 
-https://patents.google.com/patent/WO2025190051A1/en
+**Inventors:** Hu Qiang, Shi Jian, Niu Chenji  
+**Patent:** WO2025190051A1  
+**Assignee:** Huawei Technologies
 
 Priority: 2024-03-12  
 Published: 2025-09-18  
@@ -315,9 +329,11 @@ Core:
 - mesh / sintered powder / foam or electrodeposited structures;
 - balance capillary force, liquid resistance, vapor resistance and evaporation.
 
-### Xiaomi US12631401B2 — vapor chamber, housing and electronic device
+### [Vapor Chamber, Housing Assembly and Electronic Device](https://patents.google.com/patent/US12631401B2/en)
 
-https://patents.google.com/patent/US12631401B2/en
+**Inventors:** Anqi Chen, Duzi Huang, Mingyan Liu  
+**Patent:** US12631401B2  
+**Assignee:** Beijing Xiaomi Mobile Software
 
 Priority: 2022-08-18  
 Granted: 2026-05-19.
@@ -328,18 +344,21 @@ Independent-claim theme:
 - channel has lower fluid resistance than wick layer;
 - electronic-device housing integration.
 
-### Honor CN117529010B / WO2024021719A1
+### [A Vapor Chamber and Electronic Device](https://patents.google.com/patent/CN117529010B/en)
 
-https://patents.google.com/patent/CN117529010B/en
+**Patent family:** CN117529010B / WO2024021719A1  
+**Assignee:** Honor Device
 
 Core:
 - porous capillary + channel capillary composite;
 - high capillary force + high permeability;
 - thin electronic/mobile device context.
 
-### Honor WO2026045372A1
+### [Vapor Chamber, Vapor Chamber Manufacturing Method, and Electronic Device](https://patents.google.com/patent/WO2026045372A1/en)
 
-https://patents.google.com/patent/WO2026045372A1/en
+**Inventors:** Wei Zhenhong, Huo Enguang, Guo Tianshuo  
+**Patent:** WO2026045372A1  
+**Assignee:** Honor Device
 
 Priority: 2024-08-30  
 Published: 2026.
@@ -446,10 +465,11 @@ Direct claim extraction remains pending before using them for a blocking-IP conc
 
 ## 12. OPPO / vivo adjacent OEM claim update — 2026-10-04
 
-### OPPO CN118368852A / WO2024152684A1
+### [Electronic Equipment and Its Vapor Chamber](https://patents.google.com/patent/WO2024152684A1/en)
 
-PCT family:
-https://patents.google.com/patent/WO2024152684A1/en
+**Inventors:** Jiang Huawen, Zhu Yiwei, Jiang Jialin *et al.*  
+**Patent family:** WO2024152684A1 / CN118368852A  
+**Assignee:** OPPO
 
 Priority:
 2023-01-18.
@@ -469,10 +489,11 @@ this further crowds generic claims around:
 
 Do not treat the PCT application's ceased status as equivalent to no Chinese-family rights; CN family status must be evaluated separately before legal conclusions.
 
-### vivo CN118076072A
+### [CN118076072A — Vapor Chamber / Electronic Device Patent Record](https://patents.google.com/patent/CN118076072A/en)
 
-Patent record:
-https://patents.google.com/patent/CN118076072A/en
+**Patent:** CN118076072A  
+**Assignee:** vivo  
+**Exact English title / independent-claim citation:** pending
 
 Current round verified:
 - vivo assignee;
