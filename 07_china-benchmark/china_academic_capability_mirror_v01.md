@@ -53,6 +53,7 @@ This prevents double-counting the same joint work as two independent national ca
 | **Piezo / compact active air** | **North China Electric Power University** and other electronics-cooling groups | 2025 piezoelectric-fan + heat-sink work for confined microelectronics | Russia's current public active-air evidence is too thin for a country-level advantage |
 | **EHD / ionic wind** | Chinese academic evidence exists, but current institution mapping is incomplete | 2024 ionic-wind heat-sink literature confirms active Chinese research; affiliation normalization still pending | Keep as an explicit benchmark gap; do not claim Russian EHD advantage yet |
 | **Thermal materials / insulated spreaders** | **Shanghai Jiao Tong University**; other materials-heavy universities | recent graphene-paper multilayer thermal tapes with compact-electronics/smartphone validation | Generic Russian graphene/BN/TIM is not differentiated |
+| **Foundational mathematical physics / nonlinear stability** | **Harbin Institute of Technology + Institute of Mechanics CAS**; **Inner Mongolia University**; **Xi'an Jiaotong University**; **Huazhong University of Science and Technology** | 3D long-wave evaporating-film instability; weakly nonlinear film stability; experiment-validated phase-change model; integrated-circuit heat-source inversion | China has strong independent capability in nonlinear stability, engineering phase-change modeling and inverse thermal mathematics; Russian residual differentiation is limited to exact/group-invariant analytical lineage and interpretability |
 | **Mobile software / DVFS / runtime control** | **USTC**; **Beihang University**; wider China/global systems community | USTC adaptive DVFS line; Beihang MobiRL reports real-smartphone results and product deployment for UI smoothness/power; current thermal-specific China mirror still being strengthened | SPbU direct smartphone DVFS is relevant, but generic adaptive DVFS is not a Russian advantage |
 
 ---
@@ -264,6 +265,22 @@ Decision:
 China already spans **mobile miniaturization + multi-source routing + startup/operating-limit/failure physics**.
 
 Therefore Maydanik's value is expertise/heritage, not a current Russia-specific country advantage.
+
+### K. Foundational math-physics comparator
+
+Representative independent China evidence:
+- **[Three-Dimensional Long-Wave Instability of an Evaporation/Condensation Film](https://doi.org/10.3390/fluids9060143)** — HIT / Institute of Mechanics CAS — 2024.
+- **[Instability of nanofluid film flow under external electric field: Linear and weakly nonlinear analysis](https://doi.org/10.1088/1674-1056/addcc0)** — Inner Mongolia University — 2025.
+- **[Development and validation of finite-interface-heat-flux phase change model](https://doi.org/10.7527/S1000-6893.2026.32977)** — Xi'an Jiaotong University — 2026.
+- **[Heat source field inversion and detection based on physics-informed deep learning](https://doi.org/10.1016/j.icheatmasstransfer.2025.108824)** — HUST — 2025.
+
+Decision:
+China is **not weak in mathematical physics for thermal engineering**.
+
+The residual Russia hypothesis is narrower:
+> continuous exact/group-invariant analytical solutions for coupled evaporative thermocapillary systems, used as interpretable stability/mechanism benchmarks and linked to experiment.
+
+No equally continuous recent China line in that exact problem class was recovered in this pass, but this is an evidence gap rather than proof of absence.
 
 ## 3. Current domestic strengths that materially raise the Russia bar
 
