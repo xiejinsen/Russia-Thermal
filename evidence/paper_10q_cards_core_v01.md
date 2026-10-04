@@ -1848,6 +1848,260 @@ Decision impact: active differentiation -> Watch
 Open question: phone-scale transfer  
 Primary source: DOI above
 
+
+
+# H. Foundational math-physics pressure test
+
+## H1 — Russia 2026 exact evaporative-convection solution
+
+**[The effect of gas flow rate on evaporative convection in a multicomponent bilayer system subjected to linear boundary heating](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128594)** — Bekezhanova, Stepanova — 2026.
+
+### Q1 — problem + target mapping
+Problem:
+coupled evaporation, gas shear, thermocapillarity and concentration create a large parameter space and obscure dominant mechanisms.
+
+Phone mapping:
+indirect; relevant mainly to confined film / interfacial failure analysis, not current sealed VC directly.
+
+### Q2 — novelty / new-regime relevance
+Decision-relevant novelty:
+a current exact analytical solution of a two-sided multicomponent evaporative-convection problem tied to experimental conditions.
+
+### Q3 — falsifiable hypothesis
+> an exact reduced analytical representation can predict meaningful regime/parameter relations closely enough to reduce experiment search and act as a numerical benchmark.
+
+### Q4 — lineage / competing route
+ICM SB RAS exact-solution lineage runs through 2016–2026.
+
+Strong China competing routes:
+- long-wave nonlinear stability;
+- interface-resolved phase-change numerical models;
+- PINN / inverse methods.
+
+### Q5 — control point
+- gas flow;
+- wall temperature gradient;
+- liquid composition;
+- thermocapillary vs shear stress;
+- evaporation rate.
+
+### Q6 — method
+Simplified two-sided Navier–Stokes + heat/mass-transfer problem; exact analytical solution; experimental flow-rate condition used for closure/comparison.
+
+### Q7 — evidence / reproducibility
+Public source gives model assumptions, equations, operating geometry and experiment comparison.
+
+Reproducibility:
+**MEDIUM-HIGH analytically**, but transfer depends on assumption validity.
+
+### Q8 — evidence vs hypothesis
+Evidence supports:
+- current analytical capability;
+- interpretable parameter relations;
+- qualitative experiment consistency.
+
+Does not prove:
+- phone geometry accuracy;
+- dryout/boiling prediction;
+- product-level speed/accuracy benefit.
+
+### Q9 — real contribution
+Changes belief from:
+"Russian math strength is generic reputation"
+
+to:
+"there is a current, specific exact-solution capability on evaporative interfacial thermal physics."
+
+### Q10 — next action
+Build a blind instability-boundary PoC against a domestic high-fidelity numerical baseline.
+
+**Decision:** KEEP / FOUNDATIONAL DIFFERENTIATION CANDIDATE.
+
+Evidence maturity: STRUCTURAL_SIGNAL  
+Decision impact: supports a narrow foundational capability, strongest for Kabov/Chinnov  
+Open questions: phone-regime validity; experiment reduction; partner readiness  
+Primary source: DOI above
+
+---
+
+## H2 — China 3D long-wave evaporation/condensation film stability
+
+**[Three-Dimensional Long-Wave Instability of an Evaporation/Condensation Film](https://doi.org/10.3390/fluids9060143)** — Jiang, Huang, Yang, Ding — 2024.
+
+### Q1
+Problem:
+predict stability and nonlinear dynamics of 3D phase-changing thin films.
+
+### Q2
+For this project the key relevance is that it is an **independent China mathematical-stability capability**, not a joint Russia paper.
+
+### Q3
+Hypothesis:
+> a nonlinear long-wave model with a physically richer phase-change boundary condition can describe stability/dynamics across evaporation and condensation regimes.
+
+### Q4
+HIT + State Key Lab of Aerodynamics + Institute of Mechanics CAS.
+
+Competes directly with the claim that interfacial stability mathematics is Russia-specific.
+
+### Q5
+- evaporation/condensation;
+- long-wave disturbance;
+- phase-change boundary;
+- vapor recoil / thermal boundary effects.
+
+### Q6
+Derivation + nonlinear stability/dynamics calculation for a 3D falling film.
+
+### Q7
+Open equations/data in paper; primarily theoretical/numerical rather than phone experiment.
+
+### Q8
+Proves:
+China has current formal thin-film stability theory.
+
+Does not prove:
+an exact/group-invariant solution tradition identical to ICM SB RAS.
+
+### Q9
+Decision contribution
+Kills broad wording:
+> Russia has unique nonlinear/interfacial stability mathematics.
+
+Residual Russia wording:
+> continuous exact analytical / group-solution lineage with experiment-informed closure.
+
+### Q10
+Use as mandatory foundational comparator.
+
+**Decision:** PROMOTE COMPARATOR / NARROW RUSSIA CLAIM.
+
+Evidence maturity: STRUCTURAL_SIGNAL  
+Decision impact: prevents broad national math claim  
+Open question: exact-solution parity  
+Primary source: DOI above
+
+---
+
+## H3 — China finite-interface phase-change model
+
+**[Development and validation of finite-interface-heat-flux phase change model](https://doi.org/10.7527/S1000-6893.2026.32977)** — Tang, Han, Zheng, Ma — 2026.
+
+### Q1
+Problem:
+phase-change CFD models depend on uncertain empirical source terms.
+
+### Q2
+New-regime relevance:
+important as an engineering-model comparator, not a phone architecture.
+
+### Q3
+Hypothesis:
+> using finite-interface heat flux to construct phase-change source terms improves physical fidelity across multiple boiling benchmarks.
+
+### Q4
+Xi'an Jiaotong University current phase-change / microchannel modeling line.
+
+### Q5
+- interfacial heat flux;
+- phase-change source term;
+- wall superheat;
+- bubble interface;
+- microchannel geometry.
+
+### Q6
+Validated across:
+- 1D Stefan;
+- 2D pool boiling;
+- 3D microchannel boiling;
+- flow-boiling experiment.
+
+### Q7
+Public reported deviations:
+- ~3.33% instantaneous interface position;
+- ~1.2% time-averaged Nu;
+- ~4.48% instantaneous bubble diameter;
+- minimum wall-superheat deviation ~14.4% in flow-boiling experiment.
+
+### Q8
+Proves:
+China has serious physics-based, experiment-validated phase-change modeling.
+
+Does not prove:
+China has the same exact-solution analytical tradition.
+
+### Q9
+Decision contribution
+Kills:
+> Russia has a broad advantage in thermal-fluid numerical mathematics.
+
+### Q10
+Use as domestic engineering-model baseline in Foundation-PoC.
+
+**Decision:** PROMOTE COMPARATOR.
+
+Evidence maturity: SYSTEM_VALUE for modeling tool  
+Decision impact: Russia differentiation restricted to analytical interpretability  
+Open question: compute cost / phone geometry  
+Primary source: DOI above
+
+---
+
+## H4 — China PINN heat-source inversion for electronics
+
+**[Heat source field inversion and detection based on physics-informed deep learning](https://doi.org/10.1016/j.icheatmasstransfer.2025.108824)** — Chi, Li, Long *et al.* — 2025.
+
+### Q1
+Problem:
+infer unknown multi-heat-source distribution in integrated electronics.
+
+### Q2
+Direct target relevance:
+high — this is closer to chip/package diagnostic use than the Russian inverse-problem evidence recovered.
+
+### Q3
+Hypothesis:
+> embedding heat-transfer physics into neural-network inversion can reconstruct multiple source positions/shapes/powers with limited thermal information.
+
+### Q4
+HUST engineering-thermophysics line; broader domestic physics-informed / thermal reconstruction work exists.
+
+### Q5
+- heat-source location;
+- shape;
+- size;
+- power density;
+- thermal-field observations.
+
+### Q6
+PINN-based inversion across multi-source configurations.
+
+### Q7
+Public abstract reports:
+- source shape/position similarity >90% in tested configurations;
+- very small temperature-field errors in the reported synthetic/test cases.
+
+### Q8
+Proves:
+China has direct electronics inverse-thermal mathematical capability.
+
+Does not prove:
+production smartphone deployment.
+
+### Q9
+Decision contribution
+**KILL Russia inverse-diagnostics advantage claim.**
+
+### Q10
+If inverse thermal diagnostics becomes a project direction, benchmark domestically first; do not seek Russia simply for this method.
+
+**Decision:** CHINA-BASELINE DOMINANT.
+
+Evidence maturity: SYSTEM_VALUE / pre-product  
+Decision impact: no Russia strategic differentiation  
+Open question: real phone sensor sparsity/noise  
+Primary source: DOI above
+
 # Cross-paper synthesis
 
 ## What these 10Q cards change
