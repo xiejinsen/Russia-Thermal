@@ -11,7 +11,7 @@ Related:
 
 ## 1. Stage-0 decision question
 
-Can the MPEI/Ivanov **42-month-stable hierarchical microgroove + Al2O3 surface** retain a meaningful liquid-supply/dryout advantage after:
+Can the MPEI/Ivanov **42-month-operated hierarchical microgroove + Al2O3 surface** retain a meaningful liquid-supply/dryout advantage after scale-down, and can its **surface-state / capillary aging signal** predict loss of dryout margin before nominal thermal resistance degrades?
 - aggressive geometry scale-down;
 - transfer to copper;
 - DI-water product path;
@@ -195,7 +195,9 @@ And achieve at least one versus M3:
 - >=20% faster rewetting.
 
 ### Kill / reframe
-Kill the phone-transfer thesis if:
+Kill or reframe the phone-transfer thesis if:
+- domestic oxygen/oxidation metrics explain the relevant aging equally well and MPEI adds no earlier predictor;
+- capillary-state drift has no useful relation to dryout margin;
 - current geometry cannot be meaningfully scaled into the UTVC budget;
 - liquid supply/permeability collapses after scale-down;
 - high-flux benefit disappears;
