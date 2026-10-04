@@ -321,3 +321,32 @@ Kill:
 
 IP:
 protect phone-specific model-guided geometry/control/diagnostic chain, not generic mathematical equations.
+
+
+### MPEI China-pressure-test closure
+
+Broad reliability thesis:
+**KILLED.**
+
+China has strong direct evidence for:
+- copper-water VC failure mechanism;
+- accelerated lifetime prediction;
+- oxidation QA;
+- mobile two-phase device aging.
+
+Residual MPEI hypothesis:
+**actual multi-year engineered-surface aging can expose a surface/capillary degradation indicator before nominal thermal resistance fails.**
+
+Current state:
+**Strategic Reserve / Stage-0 #2 / NARROW DIFFERENTIATION RETAINED.**
+
+Promotion requires:
+- phone-compatible scaled hierarchy;
+- copper-water / vacuum/process compatibility;
+- repeatable link between surface/capillary aging and dryout-margin evolution;
+- useful predictive value beyond domestic oxidation metrics.
+
+Kill if:
+- aging behavior is R410A / large-groove thermosyphon specific;
+- domestic oxygen/oxidation metrics explain all relevant degradation;
+- capillary drift provides no useful early-warning value.
