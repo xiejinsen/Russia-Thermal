@@ -45,6 +45,7 @@ The project should ultimately produce four reading depths:
 - [Three-Year Roadmap](three_year_roadmap_v01.md)
 - [Evidence Appendix Index](evidence_appendix_index.md)
 - [Final Report Readiness Gate](final_report_readiness_gate.md)
+- [Visual Storyboard](visual_storyboard_v01.md)
 
 ## Authority rule
 
