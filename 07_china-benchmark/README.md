@@ -10,6 +10,7 @@ Compare Russian capabilities with Chinese academic, industrial, manufacturing an
 
 - [China Mobile Thermal Baseline](china_mobile_baseline_v01.md)
 - [China Institution / Lab Map](institution_map_v01.md)
+- [China Academic Thermal Capability Mirror](china_academic_capability_mirror_v01.md) — capability-matched domestic academic benchmark for management comparison.
 
 Patent evidence is indexed in:
 - ../05_papers-patents/surface_wick_patent_map_v01.md
@@ -29,11 +30,18 @@ China/global public evidence is already strong in:
 - recent vapor-chamber OEM patent integration.
 
 For the current Tier-A surface/wick route, the benchmark includes:
+- **0.25 mm UTTGP frontier signal (HUST, 2026)** for management/frontier awareness;
 - 0.35 mm UTVC;
 - 0.39 mm sealed composite-wick UTVC;
 - 0.4 mm wettability-patterned UTVC;
 - laser-modified wick;
 - recent Huawei/Xiaomi/Honor capillary-structure patents.
+
+### Stage-0 anchor vs frontier
+
+The **0.25 mm HUST frontier signal** raises the leadership/comparison bar.
+
+It does **not automatically replace** the current ~0.39 mm Stage-0 common geometry anchor, because the latter is used as a practical normalized experimental reference. Any future change to the Stage-0 geometry anchor requires device-condition normalization, not headline thickness alone.
 
 ## Rule
 
