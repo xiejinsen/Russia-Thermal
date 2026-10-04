@@ -12,9 +12,7 @@ Can TPU's laser + wettability-contrast surface engineering create a **stable, lo
 
 ### Biphilic heat-transfer physics
 
-2024:
-**Biphilic heat exchange surfaces for drip irrigation cooling systems**
-https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
+**[Biphilic Heat Exchange Surfaces for Drip Irrigation Cooling Systems](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316)** — D.V. Feoktistov, A. Abedtazehabadi, A.V. Dorozhkin *et al.* — *International Journal of Heat and Mass Transfer*, 2024.
 
 Source facts:
 - laser-textured biphilic surfaces;
@@ -24,7 +22,7 @@ Source facts:
 
 ### 2026 wettability-contrast mechanism
 
-https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+**[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
 
 Source facts:
 - aluminum biphilic surface;
@@ -36,8 +34,7 @@ Source facts:
 
 ### 2026 process durability paper
 
-**Hydrophobization of metal surfaces by laser treatment and subsequent heat treatment of hydrocarbon liquids**
-https://doi.org/10.1016/j.surfin.2026.109390
+**[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
 
 Publisher highlights:
 - AlMg3 alloy;
