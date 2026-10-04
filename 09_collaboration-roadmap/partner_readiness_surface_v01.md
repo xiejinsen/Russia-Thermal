@@ -1,8 +1,19 @@
-# Surface/Wick Partner Readiness v0.1
+# Surface/Wick Partner Readiness v0.2
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Purpose: separate technical attractiveness from actual partner readiness.
+
+## Current Stage-0 priority
+
+1. **Pavlenko / Kutateladze** — mechanism lead
+2. **MPEI / Ivanov** — reliability/process challenger
+3. **TPU / Feoktistov** — pattern/process challenger
+4. **MPEI ordered wick** — pre-device
+
+This is a Stage-0 execution priority, not a final partner ranking.
+
+---
 
 ## 1. Kutateladze — Pavlenko line
 
@@ -27,87 +38,43 @@ pav@itp.nsc.ru
 Official:
 https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html
 
-Contact on official lab page:
-shvetsov.kh301@ya.ru
-
 ### Technical readiness
-**High for technical discussion**
+**High for technical discussion / Stage-0 priority #1**
 
-Evidence:
-- current lab;
-- current surface papers;
-- dielectric-fluid experiments;
+Strength:
+- dielectric-fluid boiling;
+- dryout / CHF;
 - modified mesh;
-- relevant IP.
+- current team;
+- relevant surface IP.
+
+Main unresolved:
+- process transfer to ~60–100 μm-class phone wick;
+- exact added morphology/thickness/permeability;
+- product-fluid transfer;
+- vacuum/cycling.
 
 ### IP readiness
 **Needs explicit boundary discussion**
 
-Official project page records:
-- Huawei-related boiling work in 2021–2023;
-- Bel Huawei Technologies consulting in 2024–2026.
+Official project page records Huawei-related work:
+https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
 
-Do not infer exclusivity or product use.
+Do not infer exclusivity/product use.
 
-Before collaboration:
-- identify background IP;
-- identify any field/exclusivity restrictions;
-- define new phone-specific foreground IP.
+Detailed brief:
+[partner_brief_pavlenko_stage0_v01.md](partner_brief_pavlenko_stage0_v01.md)
 
 ---
 
-## 2. TPU — Feoktistov line
-
-### Current person verified
-
-**Dmitry V. Feoktistov**
-- Candidate of Technical Sciences;
-- Associate Professor;
-- Deputy Director, Research School of High-Energy Process Physics.
-
-Official staff:
-https://staff.tpu.ru/personal/employee?lid=119971
-
-Official management:
-https://tpu.ru/sveden/managers/
-
-Official email:
-fdv@tpu.ru
-
-2026 publication page:
-https://portal.tpu.ru/SHARED/f/FDV/publications?p=1
-
-### Technical readiness
-**Medium-high for Stage-0 surface discussion**
-
-Strength:
-- active 2026 cooling/surface work;
-- direct microchip-cooling framing;
-- laser/wettability expertise.
-
-### IP readiness
-**Incomplete**
-
-TPU owns RU2812668C1:
-https://patents.google.com/patent/RU2812668C1/en
-
-But inventor overlap with Feoktistov team is not yet verified.
-
-Before outreach-level IP discussion:
-- obtain direct patent inventors/claims;
-- confirm process ownership;
-- establish dielectric-fluid / Cu/SS transfer feasibility.
-
----
-
-## 3. MPEI — Ivanov/Alyautdinova coating line
+## 2. MPEI — Ivanov / Alyautdinova coating line
 
 ### Current lead verified
 
 **Nikita S. Ivanov**
 - Associate Professor;
 - Candidate of Technical Sciences;
-- current MPEI thermophysics staff.
+- MPEI thermophysics.
 
 Official staff:
 https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%2Fpps%2Fteplofizika_01997bd2-acf9-796f-b02e-854ac5e10dd0.html
@@ -115,30 +82,86 @@ https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%
 2024 dissertation:
 https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf
 
-### Maria M. Alyautdinova
+### New direct reliability evidence
 
-Current 2025–2026 MPEI project participation is verified, but a stable current staff title was not verified.
+Performance paper:
+https://doi.org/10.1134/S0040601525600683
 
-Official 2026 project:
-https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
+Reported:
+- ~0.1 mm-radius grooves;
+- 100–200 nm Al2O3;
+- Rth reduction ~2.4–3.0x in tested thermosyphon.
 
-Do not assign a formal current role beyond verified project participant/inventor until an official staff record is found.
+Long-term paper:
+https://doi.org/10.1016/j.pes.2026.100314
 
-### Technical readiness
-**Medium-high for Stage-0 coating/thermosyphon discussion**
+Reported:
+- R410A;
+- 42-month periodic operation;
+- Rth ~0.015 K/W;
+- ~3x lower than smooth reference in that system;
+- no pronounced coating erosion/degradation/contamination by post-test SEM/EDX;
+- capillary imbibition rate decreased after aging.
 
-Stronger than previously assessed because:
-- current thermosyphon coating project;
-- current patent RU2860061;
-- historical MPEI coating IP lineage.
+### Readiness change
+**Medium-high → high for Stage-0 technical discussion; priority #2**
 
-### Phone-transfer readiness
-**Low-medium**
+This closes much of the prior "no long-duration two-phase evidence" gap.
 
-No public:
-- dielectric-fluid result;
-- sub-mm VC;
-- phone-scale reliability data.
+It does **not** close:
+- phone heat-flux transfer;
+- <0.5 mm geometry;
+- exact coating thickness in phone stack;
+- copper compatibility.
+
+Important non-comparability:
+the MPEI thermosyphon operates at ultra-low heat flux compared with phone hotspot cooling.
+
+Detailed brief:
+[partner_brief_mpei_ivanov_stage0_v01.md](partner_brief_mpei_ivanov_stage0_v01.md)
+
+---
+
+## 3. TPU — Feoktistov line
+
+### Current lead verified
+
+**Dmitry V. Feoktistov**
+- Candidate of Technical Sciences;
+- Associate Professor;
+- Deputy Director, Research School of High-Energy Process Physics.
+
+Official:
+https://staff.tpu.ru/personal/employee?lid=119971
+
+### Technical evidence
+
+Current biphilic / cooling:
+https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
+https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+
+Surface-process durability:
+https://doi.org/10.1016/j.surfin.2026.109390
+
+This strengthens:
+- laser processing;
+- wettability control;
+- environmental/mechanical durability.
+
+### Readiness
+**Stage-0 priority #3**
+
+Main unresolved:
+- vacuum outgassing;
+- hydrocarbon-layer contamination;
+- copper transfer;
+- sealed two-phase durability;
+- RU2812668 inventor / claim mapping.
+
+TPU remains valuable because its optical/surface-control capability can create a highly discriminating patterning experiment.
+
+Detailed brief:
+[partner_brief_tpu_stage0_v01.md](partner_brief_tpu_stage0_v01.md)
 
 ---
 
@@ -149,27 +172,30 @@ People:
 - Natalia Savchenkova
 - Anton Savchenkov
 
-Current evidence:
+Primary:
 https://doi.org/10.30724/1998-9903-2026-28-4-193-205
 
 Readiness:
-**medium for modeling discussion, low for device PoC**
+**pre-device**
 
 Need:
-- actual prototype;
-- manufacturing route;
-- thickness;
-- measured permeability/capillary data.
+- physical thin specimen;
+- actual thickness;
+- permeability;
+- capillary pressure / uptake;
+- repeatability.
 
 ---
 
-## Current readiness interpretation
+## Normalized readiness table
 
-| Team | Current people verified | Direct relevant experiment | Relevant IP | Phone transfer | Readiness |
+| Team | Direct phase-change evidence | Long-duration two-phase evidence | Phone geometry | Process/IP evidence | Stage-0 priority |
 |---|---|---|---|---|---|
-| Pavlenko/Kutateladze | strong | strong | strong | unproven | **technical-discussion ready** |
-| TPU/Feoktistov | strong | strong | institutional IP, inventor mapping pending | unproven | **Stage-0 ready** |
-| MPEI Ivanov | strong lead | thermosyphon/surface | **strong current lineage** | unproven | **Stage-0 ready** |
-| MPEI ordered wick | partial | modeling-heavy | not yet mapped | low | **pre-PoC** |
+| Pavlenko/Kutateladze | **strong** | limited | low-medium | strong / gaps | **#1** |
+| MPEI Ivanov | strong in thermosyphon | **strong — 42 months R410A** | low | strong | **#2** |
+| TPU Feoktistov | strong surface/open-droplet | low for sealed two-phase | low | medium-strong | **#3** |
+| MPEI ordered wick | modeled | none | low | incomplete | pre-device |
 
-No team is yet “contract-ready” because background IP and phone-scale transfer remain unresolved.
+No team is contract-ready.
+
+Current order is based on the smallest evidence gap to a discriminating Stage-0 experiment, not prestige.
