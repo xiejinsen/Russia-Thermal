@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-04
 
-Status: provisional map after manufacturability / durability research and 3–6 month partner-brief definition.
+Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the [unified scorecard](stage0_partner_technology_decision_scorecard_v01.md).
 
 | Hypothesis | Russian partner signal | Role | Immediate action | State |
 |---|---|---|---|---|
@@ -18,13 +18,16 @@ Status: provisional map after manufacturability / durability research and 3–6 
 ## Why MPEI moved ahead of TPU for Stage 0
 
 Primary MPEI evidence:
-- https://doi.org/10.1134/S0040601525600683
-- https://doi.org/10.1016/j.pes.2026.100314
+- **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
+- **[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
+- **[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
 
-Newly verified:
+Newly verified / promoted:
 - R410A two-phase operation;
 - 42-month periodic campaign;
-- long-duration coating morphology / thermal-performance retention.
+- long-duration coating morphology / thermal-performance retention;
+- ~0.2 mm water-boiling/CHF lineage;
+- representative ~5 μm coating-state lineage from the 2024 dissertation.
 
 This materially reduces reliability uncertainty.
 
@@ -37,8 +40,9 @@ But MPEI is **not promoted to Tier A** because:
 
 TPU remains a strong pattern/process challenger.
 
-New durability evidence:
-https://doi.org/10.1016/j.surfin.2026.109390
+Current process evidence:
+- **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
+- **[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — TPU — 2024.
 
 But durability under:
 - humidity;
@@ -53,16 +57,16 @@ does not establish:
 ## Current outreach posture
 
 ### #1 Pavlenko
-Technical-discussion ready.
-Ask for thin-mesh process-transfer data and background-IP boundary.
+**GO WITH PREREQUISITE.**
+Ask for thin-mesh process-transfer window and background-IP boundary.
 
 ### #2 MPEI Ivanov
-Technical-discussion ready for Stage 0.
-Ask for exact groove/coating geometry, aged-vs-fresh capillary data, and high-flux scale-up feasibility.
+**GO WITH PREREQUISITE.**
+Ask for exact current as-built groove/coating distribution, aged-vs-fresh capillary data and agreement on the scale-down/high-flux ladder.
 
 ### #3 TPU Feoktistov
-Stage-0 technical-query ready.
-Ask for low-outgassing process, copper transfer and sealed-fluid compatibility.
+**GO WITH PREREQUISITE.**
+Separate laser-only low-organic and hydrocarbon-biphilic branches; ask for copper/vacuum/sealed-fluid data if any.
 
 ### Ordered-wick line
 Pre-PoC; request physical prototype first.
