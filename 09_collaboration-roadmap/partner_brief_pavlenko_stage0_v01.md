@@ -4,6 +4,12 @@ Last reviewed: 2026-10-04
 
 Status: **Stage-0 priority #1 — technical-discussion ready; not contract-ready**
 
+## Execution packet
+
+The actionable data-request / coupon / measurement / success-kill / IP package is maintained in:
+[Stage-0 Partner Data Request + Experiment Packet](stage0_packet_pavlenko_v01.md).
+
+
 ## Decision question
 
 Can the Pavlenko/Kutateladze surface-modification / boiling / dryout knowledge be transferred from published HFE-7100 experiments and relatively thick meshes into a **phone-relevant 60–100 μm-class wick / <=35 μm added functional layer**, while retaining benefit in a product-path working fluid?
