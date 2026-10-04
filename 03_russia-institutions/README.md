@@ -8,12 +8,17 @@ Institution-level coverage database used to avoid survivorship bias.
 
 ## CURRENT / AUTHORITATIVE
 
-1. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
+1. [Russia Thermal Capability Atlas](russia_thermal_capability_atlas_v01.md)
+   - capability-centric management view;
+   - includes universities, RAS institutes and other high-signal research organizations;
+   - maps capability -> institution -> mobile-transfer state.
+
+2. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
    - minimum university set;
    - current HIGH-SIGNAL / KEEP / NO CURRENT SIGNAL state;
    - global + Russian domestic ranking context.
 
-2. [Candidate Queue](candidate_queue.md)
+3. [Candidate Queue](candidate_queue.md)
    - institutions/teams retained for deeper investigation.
 
 ## HISTORICAL SNAPSHOTS
@@ -22,6 +27,17 @@ Institution-level coverage database used to avoid survivorship bias.
 - [Major University Scan — Round 1](major_university_scan_round1.md)
 
 These preserve discovery history only. Do not use them for current status.
+
+## Capability-coverage rule
+
+**University coverage is not the same as country capability coverage.**
+
+The management-facing Russia map must also retain:
+- Kutateladze Institute of Thermophysics SB RAS;
+- Institute of Thermal Physics UB RAS;
+- TsAGI;
+- CIAM;
+- other non-university teams when evidence is strong.
 
 ## Current minimum-set state
 
