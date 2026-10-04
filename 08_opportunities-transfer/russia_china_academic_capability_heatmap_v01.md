@@ -10,8 +10,9 @@ Answer the management question:
 
 > After comparing Russian thermal-management capabilities with strong Chinese academic baselines, where does Russia still offer a credible differentiated or complementary value for smartphone thermal innovation?
 
-Focused pressure-test memo:
-[kabov_maydanik_china_pressure_test_v01.md](kabov_maydanik_china_pressure_test_v01.md)
+Focused pressure-test memos:
+- [Kabov / Maydanik China pressure test](kabov_maydanik_china_pressure_test_v01.md)
+- [Foundational math-physics China pressure test](foundational_math_physics_china_pressure_test_v01.md)
 
 Inputs:
 - [Russia Thermal Capability Atlas](../03_russia-institutions/russia_thermal_capability_atlas_v01.md)
@@ -47,7 +48,7 @@ This is not a national prestige ranking.
 | **Aeroacoustics / fan-noise** | TsAGI/PNRPU/CIAM facilities and methods | Beihang aeroacoustics + PKU/HKUST cooling-fan source imaging + SJTU electronic-fan inlet/duct/narrow-space acoustics | China has a coherent electronic-cooling fan aeroacoustic stack; neither side has public proof at actual smartphone microfan scale | benchmark Russian vs domestic methods on ~18–25 mm / ~20k rpm confined centrifugal fan | **WATCH / METHOD RESERVE — not a Russia advantage** |
 | **Piezo / synthetic jet / EHD active air** | Russia public evidence fragmented; SPbU EHD adjacent, Kutateladze synthetic jet | NCEPU piezo-fan electronics cooling; Chinese EHD literature present | Russia evidence currently weaker / incomplete | none established yet | **CHINA-BASELINE DOMINANT / UNRESOLVED EHD** |
 | **Thermal materials / TIM / graphite** | Skoltech/MISIS/MSU/SPbU material signals | SJTU and broad China materials ecosystem with compact-electronics validation | no Russian smartphone-specific edge established | unusual reliability/process/material combination only if future evidence appears | **KILL generic materials thesis** |
-| **Foundational mathematical physics / nonlinear stability** | Russian signals: exact solutions, stability theory, thermocapillary/evaporative two-layer flow, 3D film modeling from ICM SB RAS / Altai / Lavrentyev / Kutateladze-adjacent lines | China comparator not yet normalized at equivalent method/control-problem depth | potentially important enabling advantage, but national-level conclusion is premature | reduced-order / exact / stability models that expose dryout, rupture, bifurcation or control boundaries faster than experiment-only approaches | **FOUNDATIONAL CANDIDATE / COMPARATOR PENDING** |
+| **Foundational mathematical physics / nonlinear stability** | ICM SB RAS exact/group-invariant evaporative-convection solutions; stability thresholds; Lavrentyev microfilm modeling; experimental linkage | China: HIT/CAS 3D long-wave instability; Inner Mongolia weakly nonlinear film stability; XJTU validated phase-change model; HUST IC heat-source inversion | both countries are strong mathematically; China is broader in engineering numerics/inverse methods, while Russia retains a narrower analytical exact-solution tradition | **interpretable exact/stability model that predicts failure boundary and reduces experiment count** | **NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE / TEST** |
 | **Mobile thermal control / DVFS** | SPbU direct smartphone stochastic/DVFS line | USTC adaptive DVFS; Beihang MobiRL real-phone/product deployment; global thermal-aware RL strong | generic adaptive DVFS is crowded | model-light uncertainty adaptation + active-cooler / skin / acoustic joint control | **COMPLEMENTARY / TEST; KILL generic DVFS thesis** |
 | **Diagnostics / long experimental lineage** | strong in Kutateladze, MPEI, TPU, TsAGI/PNRPU | China also has advanced diagnostics/facilities, but mapping is heterogeneous | this is not a product category; value may be shortening mechanism/failure learning | partner-specific diagnostic methods tied to Stage-0 falsification | **COMPLEMENTARY — cross-cutting** |
 
@@ -182,11 +183,17 @@ this capability could improve the three surviving Russia mechanism candidates by
 - discriminating experiment conditions;
 - controllable variables.
 
-Why it is not yet a final advantage:
-the China academic mirror has not yet been normalized at the same applied-mathematics / mathematical-physics depth.
+China pressure-test result:
+- China independently has strong nonlinear/long-wave stability theory;
+- strong experiment-validated phase-change numerical models;
+- strong electronics inverse thermal diagnostics;
+- therefore broad "Russian mathematical physics advantage" is rejected.
+
+Residual Russia-specific hypothesis:
+**exact/group-invariant analytical + stability modeling of evaporative thermocapillary interfacial systems, with experiment-informed closure.**
 
 Current state:
-**FOUNDATIONAL CAPABILITY CANDIDATE / systematic comparator required.**
+**NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE / TEST.**
 
 ---
 
