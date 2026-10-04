@@ -4,127 +4,157 @@ Last updated: 2026-10-04
 
 ## Overall status
 
-**Estimated research completion: ~49%**
-**Estimated remaining research: ~51%**
+**Estimated research completion: ~52%**
+**Estimated remaining research: ~48%**
 
-## Repository architecture / freshness audit — 2026-10-04
+## Current phase
 
-Repository housekeeping completed without changing the research completion estimate.
+**Stage-0 specification + packaging/fluid-transfer falsification**
 
-Completed:
-- root README refreshed to current status;
-- repository architecture / refresh contract and CHANGELOG added;
-- missing workstream indexes added;
-- early scan/seed files marked historical or non-authoritative;
-- technology map refreshed to current portfolio state;
-- Russia candidate queue refreshed with separate MPEI ordered-wick and coating lines;
-- China / opportunity / collaboration indexes refreshed;
-- repository QA matrix converted from contradictory appended history to one current snapshot.
+This increase from ~49% reflects substantive engineering research:
+- phone packaging/teardown baseline;
+- UTVC internal-geometry calibration;
+- Pavlenko mesh geometry closure;
+- working-fluid sustainability correction;
+- Stage-0 coupon matrix freeze.
 
-Governance:
-- `00_scope/repository_architecture.md`
-- `CHANGELOG.md`
-- `evidence/README.md`
-- `evidence/repository_completeness_matrix.md`
+It does not count repository housekeeping as research progress.
 
-
-## Surface/Wick Patent & Partner-Readiness round completed — first pass
+## This round — Phone Packaging + Stage-0 Calibration
 
 New outputs:
-- `05_papers-patents/surface_wick_patent_map_v01.md`
-- `05_papers-patents/surface_wick_claim_chart_v01.md`
-- `04_researchers-labs/mpei_wettability_surface_ip_v01.md`
-- `09_collaboration-roadmap/partner_readiness_surface_v01.md`
+- `01_global-baseline/phone_packaging_teardown_baseline_v01.md`
+- `09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md`
 
-## Main IP finding
+Key updates:
+- `01_global-baseline/mobile_thermal_baseline.md`
+- `08_opportunities-transfer/smartphone_constraint_model_v01.md`
+- `08_opportunities-transfer/direction_decision_gate_v01.md`
+- `09_collaboration-roadmap/poc01_surface_utvc_v01.md`
+- partner cards / patent map / source register / QA.
 
-The following are now treated as **crowded**:
-- generic hydrophilic/hydrophobic surface;
-- generic biphilic pattern;
-- generic laser-modified wick;
-- generic composite wick;
-- generic capillary/permeability gradient;
-- generic low-resistance wick channel.
+## Main new insight 1 — thermal architecture is cross-layer
 
-Key current patent comparators:
-- CN116989603B — biphilic self-driven coreless VC;
-- CN118744276B — laser hierarchical UTVC wick;
-- WO2025190051A1 — Huawei differentiated capillary structures;
-- US12631401B2 — Xiaomi low-resistance wick channel.
+Current teardown evidence shows flagship thermal design is increasingly coupled to:
+- SoC/package;
+- memory placement;
+- logic board;
+- TIM;
+- VC;
+- frame.
 
-## Tier-A implication
+Therefore future collaboration value should be judged as:
+**package -> interface -> VC/wick -> frame/skin co-design**, not only as standalone cooler performance.
 
-Pavlenko remains Tier-A lead, but the collaboration thesis is narrower:
+## Main new insight 2 — PoC-1 geometry became much stricter
 
-> **target-fluid-specific dryout / rewetting / wetting-state retention in a sealed <0.5 mm-class device, under transient phone heat loads and manufacturing/reliability constraints.**
+Strong UTVC reference:
+- 0.39 mm finished device;
+- ~0.2 mm internal steam-channel/support height;
+- 0.06 mm mesh.
 
-Important new Pavlenko IP evidence:
-RU2793671C2 includes a 7–35 μm dependent coating-thickness range and 100 nm–10 μm pore range.
+Pavlenko published mesh evidence includes:
+- 100 um wire;
+- 220 um wire;
+- related 160 um class evidence.
 
-This makes a thin functional surface more plausible, though it is not yet a phone-VC demonstration.
+Decision:
+**published Russian mesh is not treated as a drop-in phone wick.**
 
-## New MPEI finding
+The current collaboration question is whether Pavlenko's modification / nucleation / dryout / rewetting physics can transfer to:
+- ~60–100 um-class mesh;
+- or a tens-of-microns functional surface.
 
-MPEI has **two separate relevant lines**:
+## Main new insight 3 — working-fluid transfer is now mandatory
 
-1. ordered porous wick — Bulaeva/Savchenkov/Savchenkova;
-2. wettability / hierarchical coating — Ivanov/Alyautdinova/Kuzma-Kichta lineage.
+3M completed its PFAS manufacturing exit at end-2025.
 
-The second line is active in 2025–2026 thermosyphon coating work and has patents:
-- RU2727406C1
-- RU2750831C1
-- RU2860061C1
+Therefore:
+- HFE-7100 = legacy mechanism/reproduction bridge;
+- DI water = primary sealed copper-VC product-path reference;
+- future low-boiling dielectric = separate supply/regulatory/material screen.
 
-Nikita Ivanov is currently verified as MPEI Associate Professor / Candidate of Technical Sciences.
+Tier A is now stronger only if the Russian mechanism transfers across product-relevant fluids.
 
-Therefore MPEI is no longer treated only as a modeling challenger.
+## Stage-0 matrix v0.1
 
-## Partner readiness
+Common research targets:
+- ~60 um-class mesh preferred;
+- <=100 um mesh transfer/stretch;
+- added functional layer target <=35 um;
+- total surface/wick target <=120 um;
+- stretch ceiling <=150 um.
 
-- Pavlenko/Kutateladze: **technical-discussion ready**, background-IP boundary unresolved.
-- TPU/Feoktistov: **Stage-0 query ready**, TPU patent inventor mapping incomplete.
-- MPEI/Ivanov: **Stage-0 query ready**, phone/dielectric transfer unproven.
-- MPEI ordered wick: **pre-device**, experimental prototype needed.
+Arms:
+A. modern China-style reference  
+B. Pavlenko mechanism transfer  
+C. TPU biphilic/contrast-wetting  
+D. MPEI Ivanov hierarchical coating  
+E. MPEI ordered-wick pre-screen
 
-## PoC-1 update
+Process:
+- as-built metrology;
+- fluid soak;
+- vacuum/degassing-process simulation;
+- 100-cycle screen;
+- 500-cycle survivor test;
+- boiling/dryout/rewetting screen.
 
-PoC-1 is now two-stage.
+Promote at most two Russian-inspired arms.
 
-Stage 0:
-- coupon + fluid + thickness + reliability + IP gate.
+## Current portfolio
 
-Stage 1:
-- strong China-style reference + at most **two** Russian challenger arms.
+### Tier A
+Pavlenko/Kutateladze:
+**working-fluid-transferable dryout / rewetting / wetting-state retention under <0.5 mm sealed confinement**
 
-This prevents wasting sealed-device builds on concepts already invalidated by prior art or fluid/process incompatibility.
+### Tier A-
+sealed adaptive film/droplet hybrid
+
+### Tier B+
+- TPU target-fluid biphilic challenger
+- MPEI Ivanov coating challenger
+- compute + cooling adaptive control
+
+### Pre-device
+MPEI ordered porous wick
+
+### Tier B
+- multi-hotspot routing
+- confined microfan aeroacoustics
 
 ## Workstream maturity
 
 | # | Workstream | Current maturity |
 |---|---:|
-| 01 | Global smartphone thermal problem space | ~52% |
-| 02 | Thermal technology landscape | ~42% |
+| 01 | Global smartphone thermal problem space | **~64%** |
+| 02 | Thermal technology landscape | ~44% |
 | 03 | Russian institution landscape | ~50% |
-| 04 | Russian labs / researchers | **~50%** |
-| 05 | Russian papers / patents | **~57%** |
-| 06 | Active-cooling deep dive | ~43% |
-| 07 | China benchmark & gap | **~52%** |
-| 08 | Transfer / hypotheses / falsification | **~76%** |
-| 09 | Collaboration / PoC / 3-year directions | **~39%** |
+| 04 | Russian labs / researchers | **~53%** |
+| 05 | Russian papers / patents | **~60%** |
+| 06 | Active-cooling deep dive | ~45% |
+| 07 | China benchmark & gap | **~56%** |
+| 08 | Transfer / hypotheses / falsification | **~81%** |
+| 09 | Collaboration / PoC / 3-year directions | **~48%** |
 
-## Next critical tasks
+## Highest-priority blockers now
 
-1. close patent gaps:
-   - TPU RU2812668 claim/inventor;
-   - OPPO/vivo claims;
-   - promoted patent families/status;
-2. resolve Pavlenko/Huawei background-IP question as far as public evidence permits;
-3. quantify Stage-0 surface specifications:
-   - thickness;
-   - substrate;
-   - target fluid;
-   - vacuum/bake;
-   - cycling;
-4. build phone teardown / internal-volume evidence baseline;
-5. freeze Stage-0 coupon matrix;
-6. after this, begin partner-specific 3–6 month collaboration briefs.
+1. Pavlenko modification feasibility on ~60–100 um-class wick;
+2. actual added layer thickness / permeability penalty;
+3. TPU RU2812668 inventor + full independent claim;
+4. TPU product-fluid / vacuum / cycling stability;
+5. MPEI actual coating thickness + product-fluid/cycling;
+6. MPEI ordered-wick physical prototype;
+7. promoted patent family/status review;
+8. Huawei/background-IP boundary;
+9. future dielectric-fluid screen only if required by the surviving architecture.
+
+## Next research stage
+
+Do **not** reopen broad discovery yet.
+
+Next:
+1. close Stage-0 manufacturability/process blockers;
+2. convert each surviving Russian arm into a partner-specific 3–6 month technical brief;
+3. define exact partner data requests and minimum coupon deliverables;
+4. then decide which two arms deserve sealed Stage-1 investment.
