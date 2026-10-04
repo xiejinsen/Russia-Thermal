@@ -1,6 +1,6 @@
 # MPEI Wettability / Hierarchical-Coating IP Line v0.1
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Status: **new HIGH-SIGNAL MPEI sub-line; separate from the ordered-wick group.**
 
@@ -184,3 +184,70 @@ Target:
 - <=150 um total surface/wick element stretch ceiling.
 
 The line remains a **Tier B+ experimental challenger**, not Tier A.
+
+
+## Reliability / alternate-fluid evidence update — 2026-10-04
+
+This section **supersedes the earlier statement that no direct public alternate-fluid/cycling evidence had been recovered**.
+
+### 2025/2026 thermosyphon performance
+
+Ivanov, Kuzma-Kichta, Alyautdinova:
+**Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon**
+
+Primary:
+https://doi.org/10.1134/S0040601525600683
+
+Publicly indexed source facts:
+- longitudinal microgrooves with radius ~0.1 mm;
+- Al2O3 nanoparticles ~100–200 nm;
+- AISI304 stainless-steel thermosyphon;
+- reported heat flux ~200–1700 W/m²;
+- reported thermal-resistance reduction ~2.4–3.0x vs smooth reference;
+- strongest effect near horizontal / mildly inclined operation.
+
+### 2026 long-term stability
+
+Ivanov:
+**Long-term operational stability of a hierarchical evaporator surface in a two-phase thermosyphon**
+
+Primary:
+https://doi.org/10.1016/j.pes.2026.100314
+
+Source facts:
+- hierarchical microgroove + Al2O3 nanoparticle evaporator;
+- stainless-steel two-phase thermosyphon;
+- working fluid: **R410A**;
+- **42-month periodic operating campaign**;
+- reported thermal resistance remained about **0.015 K/W**, approximately 3x lower than the smooth reference in that system;
+- post-operation SEM/EDX did not show pronounced erosion/degradation/contamination;
+- capillary imbibition rate decreased after long operation.
+
+### What this closes
+
+This is now strong public evidence for:
+- non-water / non-HFE two-phase operation;
+- long-duration cyclic survival;
+- surface morphology retention at device level.
+
+### What it does NOT close
+
+The application regime is far from phone hotspots:
+- the paper discusses ultra-low thermosyphon heat-load conditions, around q < ~2000 W/m²;
+- current groove radius ~0.1 mm is large relative to a ~0.2 mm internal UTVC channel;
+- no <0.5 mm sealed VC evidence;
+- actual total nanoparticle-layer thickness in a phone manufacturing stack is still unresolved.
+
+Therefore do **not** transfer the 2.4–3.0x / 3x thermal-resistance result to smartphone cooling.
+
+## Updated decision
+
+**UPGRADE within Tier B+: Stage-0 priority #2 / reliability-process challenger.**
+
+Reason:
+among current challengers, this line now has the strongest public long-duration two-phase reliability evidence.
+
+It remains below Pavlenko as Tier-A lead because phone heat-flux, sub-mm geometry and sealed-VC transfer remain unproven.
+
+Detailed collaboration brief:
+../09_collaboration-roadmap/partner_brief_mpei_ivanov_stage0_v01.md
