@@ -167,27 +167,47 @@ The broad idea “adjust wettability” is crowded. The opportunity would have t
 
 # C. Russia — TPU
 
-## C1. RU2812668C1 — heat-exchange micro/nanostructure on steel
+## C1. RU2812668C1 — Feoktistov/Orlova steel heat-exchange laser micro/nanostructure
 
-**[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — inventor mapping pending — RU2812668C1 — Tomsk Polytechnic University — 2024.
+**[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — Tomsk Polytechnic University — 2024.
 
-**Review status:** PATENT METADATA / PARTIAL CLAIM REVIEW.
+**Review status:** DIRECT PATENT / INDEPENDENT-CLAIM REVIEWED.
 
 **Problem**  
-Create micro/nanostructured heat-exchange surfaces on steel to alter heat-transfer behavior.
+Create a reproducible micro/nanostructure on a steel heat-exchange surface without adding the older nanoparticle-boiling/inert-atmosphere route.
 
-**Claim / technical method**  
-The patent record confirms TPU institutional IP in forming micro/nanostructure on a heat-exchange surface. Exact independent-claim boundaries and inventor mapping are still incomplete in our public evidence.
+**Independent claim / technical control point**  
+One independent method claim specifies:
+- 10 min abrasive preparation with diamond-paste grain decreasing 40 → 1 μm;
+- 5 min ultrasonic cleaning at 35 kHz in 95 wt.% distilled water / 5 wt.% ethanol;
+- 24 h drying;
+- 1064 nm nanosecond fiber-laser treatment;
+- pulse energy 0.3–1.0 mJ;
+- 2–140 kHz;
+- 1–120 ns;
+- scan speed 100–500 mm/s;
+- spot diameter 20–100 μm;
+- longitudinal/transverse overlap 1–10 times.
+
+The disclosed steel embodiment reports multimodal roughness with mean height ~9–18 μm and maximum feature height ~17.5–120 μm.
+
+**Inventor / assignee lineage**  
+The previous uncertainty is closed:
+- assignee: Tomsk Polytechnic University;
+- named inventors include **D.V. Feoktistov and E.G. Orlova**.
+
+This is valid background-IP evidence for the current TPU surface-engineering partner line.
 
 **Strategic implication**  
-We know TPU has relevant institutional IP, but we cannot yet assume the patent belongs to the Feoktistov partner line.
+The claim is steel-centric and does not itself create the hydrocarbon-derived biphilic chemistry used in the 2026 wettability work. It is therefore useful as a **laser-only / low-organic process-control arm**, not as proof of a finished biphilic phone VC.
 
 **What we learn for our insight**  
-Before collaboration we need to establish:
-- inventor/team overlap;
-- background-IP ownership;
-- process compatibility with copper/VC;
-- whether the patent blocks or enables the proposed Stage-0 pattern route.
+TPU has a quantified laser-process window and partner-linked IP. Remaining uncertainty moves away from "who owns/controls the process?" toward:
+- copper transfer;
+- vacuum/outgassing;
+- sealed-fluid contamination;
+- post-weld wetting retention;
+- differentiation over existing wettability-patterned UTVC prior art.
 
 ---
 
