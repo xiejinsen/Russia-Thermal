@@ -14,8 +14,8 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 03 Russia institutions | **capability atlas current** | strong first pass | broader non-university coverage beyond current high-signal cluster | PASS-WITH-GAPS |
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
 | 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
-| 06 Active cooling | current | medium-good | EHD, piezo/MEMS, installed-fan evidence | NEEDS-WORK |
-| 07 China benchmark | **academic capability mirror current** | strong first pass | long-duration reliability, phone-scale acoustic, EHD/control comparator gaps | PASS-WITH-GAPS |
+| 06 Active cooling | comparator-refreshed | good for generic fan acoustics; medium for phone scale | EHD/piezo + actual smartphone microfan acoustic evidence | NEEDS-WORK |
+| 07 China benchmark | **reliability + fan-acoustic mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control | PASS-WITH-GAPS |
 | 08 Opportunity / falsification | **country heatmap + Stage-0 gates current** | strong | final 3–5 differentiation convergence + physical Stage-0 evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner packets + unified scorecard current** | strong | partner-returned data + physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
@@ -370,19 +370,38 @@ Broad Russia-advantage claims are explicitly rejected for:
 
 Current differentiation candidates remain provisional:
 - modified-mesh dryout/rewetting;
-- long-duration hierarchical surface reliability;
+- **actual multi-year hierarchical-surface operation/aging evidence**;
 - thin-film/interfacial-instability mechanism depth;
-- confined aeroacoustic source diagnosis;
 - LHP routing/operating-limit physics.
+
+Watch / method reserve:
+- confined phone-scale aeroacoustic source diagnosis.
 
 ### Remaining P0 comparator gaps
 
 Before the management heatmap is final:
-1. China long-duration two-phase surface-aging comparator vs MPEI;
-2. phone-scale acoustic/microfan comparator vs Russia aeroacoustic cluster;
+1. exact multi-year engineered-surface comparator vs MPEI remains open, but generic VC reliability/lifetime is now **closed as a gap**;
+2. actual phone-scale ~18–25 mm / ~20k rpm microfan acoustic benchmark remains open; generic electronics-fan acoustics is **closed as a gap**;
 3. EHD/piezo active-air normalization;
 4. direct thermal-aware mobile-control comparator;
-5. deeper China thin-film/interfacial diagnostics mirror.
+5. deeper China thin-film/interfacial diagnostics mirror;
+6. China LHP operating-limit/routing/failure comparator.
 
 QA judgment:
 **STRUCTURE PASS / COUNTRY DIFFERENTIATION NOT FINAL.**
+
+
+### Comparator-closure QA — reliability + aeroacoustics
+
+Decision-grade comparator chain now includes:
+- source register;
+- readable bibliography;
+- paper briefs;
+- 10Q decision cards;
+- China capability mirror;
+- Russia×China heatmap;
+- Russia lab/capability interpretation;
+- final-report gate.
+
+QA judgment:
+**PASS — broad MPEI reliability and Russia aeroacoustic advantage claims are no longer permitted.**
