@@ -14,7 +14,7 @@ This is not a prestige ranking.
 
 | Priority | Partner | Distinctive public strength | Biggest unresolved transfer risk | Current state |
 |---:|---|---|---|---|
-| **1** | Pavlenko / Kutateladze | dielectric boiling, CHF/dryout, modified mesh | process/geometry + product-fluid scaling | **GO with prerequisite / Candidate lead** |
+| **1** | Pavlenko / Kutateladze | dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics + surface/process line | phone-scale geometry/product-fluid transfer + proof beyond strong China dryout/rewetting baseline | **GO with prerequisite / Candidate lead / narrow differentiation** |
 | **2** | MPEI / Ivanov | hierarchical coating + **42-month R410A stability** + 0.2 mm water/CHF lineage | exact-hierarchy high-flux + sub-mm scaling | **GO with prerequisite / strong challenger** |
 | **3** | TPU / Feoktistov | laser/biphilic pattern + surface durability + claim-mapped RU2812668 | vacuum/sealed-fluid/copper compatibility | **GO with prerequisite / challenger** |
 | — | MPEI ordered wick | ordered capillary/permeability design | no thin physical prototype | **HOLD / pre-device** |
@@ -22,13 +22,25 @@ This is not a prestige ranking.
 ## #1 Pavlenko / Kutateladze
 
 Current collaboration question:
-> Can the published surface-modification/dryout mechanism survive transfer to ~60–100 μm phone-relevant wick and product-path fluid?
+> Can Kutateladze's dielectric crisis-diagnostic/process know-how **shift the irreversible-dryout boundary** in a ~60–100 μm-class phone-relevant wick/product-fluid system beyond strong domestic controls?
 
 3–6 month brief:
 ../09_collaboration-roadmap/partner_brief_pavlenko_stage0_v01.md
 
 Readiness:
 **GO WITH PREREQUISITE for Stage-0 technical exchange; exact process/IP boundary remains unresolved.**
+
+### Independent-China pressure-test correction
+
+China already has direct independent evidence for:
+- capillary-fed dryout and steam-induced rewetting;
+- repeated-cycle wettability degradation;
+- ultrathin grooved/composite wick design;
+- treated copper mesh;
+- pore-scale dryout modeling;
+- HFE-7100 confinement.
+
+Therefore Pavlenko remains #1 for **dielectric irreversible-dryout / crisis diagnostic depth**, not because China lacks dryout/rewetting knowledge.
 
 ## #2 MPEI / Ivanov
 
