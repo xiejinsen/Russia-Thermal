@@ -162,6 +162,15 @@ Watch / reserves:
 A useful pattern is emerging:
 the surviving Russia candidates are increasingly **failure-boundary / aging / instability capabilities**, not generic cooling-device categories.
 
+**Foundational enabling candidate**
+- Russian applied mathematics / mathematical physics / nonlinear-stability capability is now explicitly in scope.
+- Current preliminary evidence exists in exact evaporative-convection solutions, thermocapillary stability analysis and coupled thin-film microchannel modeling.
+- This is **not yet a final Russia advantage**; a matched China comparator is required.
+
+**Joint-paper attribution**
+- China–Russia coauthored papers may still support a Russian capability when Russian lineage/platform/method ownership is evidenced.
+- Coauthorship alone is not sufficient to count the same capability as an independent China baseline.
+
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
 
 ## Current PoC posture
