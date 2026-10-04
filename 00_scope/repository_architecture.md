@@ -46,6 +46,21 @@ Retained for provenance only. It must begin with a warning that it is superseded
 
 Historical files must never contain the only copy of a decision-critical source.
 
+## Global vs local authority rule
+
+There is exactly one **global current-status authority**:
+- `PROGRESS.md` — overall research maturity, current phase and next minimum task.
+
+Each workstream may define a **local authority** for its own decision surface:
+- 02 — technology map;
+- 03 — institution coverage matrix;
+- 08 — direction decision gate / transfer constraints;
+- 09 — partner decision scorecard / PoC specification.
+
+A workstream README must not place its local authority above `PROGRESS.md` for overall project status.
+
+Dated audit files are governance/history snapshots only. They must carry an explicit non-authoritative banner and point to the live authority.
+
 ## Canonical status hierarchy
 
 When files disagree, use this order:
@@ -59,6 +74,17 @@ When files disagree, use this order:
 `10-final-report/` is **not** part of the research-authority hierarchy. It summarizes only gated results from 00–09. If it disagrees with the research authority, Workstream 10 must be corrected.
 
 If inconsistency is found, fix the lower-level stale file or clearly mark it historical.
+
+## Dated audit snapshot rule
+
+Files named as dated audits (for example `repository_audit_YYYY-MM-DD.md` or `evidence_traceability_audit_YYYY-MM-DD.md`) record what was true at the time of the audit.
+
+They must:
+- begin with a **SNAPSHOT / NON-AUTHORITATIVE** banner;
+- point to the current live file (`PROGRESS.md`, workstream README, or `repository_completeness_matrix.md`);
+- never be silently updated into a competing current-status dashboard.
+
+If a later pass on the same day finds new issues, append an audit follow-up section but preserve the snapshot nature.
 
 ## Evidence placement rule
 
