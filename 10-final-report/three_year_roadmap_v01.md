@@ -24,7 +24,7 @@ Objectives:
 - select at most two Stage-1 arms.
 
 Deliverables:
-- partner technical briefs;
+- partner data-request + Stage-0 experiment packets;
 - sample/coupon specs;
 - normalized Stage-0 data;
 - updated patent/IP position;
@@ -88,12 +88,21 @@ At every gate:
 - keep one reserve mechanism;
 - avoid carrying technically interesting but non-differentiated work for prestige reasons.
 
+## Current project phase
+
+**Stage-0 Partner Data Request + Coupon Falsification**
+
+Repository cleanup, citation migration and report formatting do not advance the roadmap gate.
+
 ## Current path most likely to enter 0–6 month execution
 
 Candidate:
 **Surface/Wick Stage-0**
 
-Current gate:
+Current decision gate:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+Current experiment gate:
 ../09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md
 
 Other routes remain gated until their engineering evidence reaches comparable maturity.
