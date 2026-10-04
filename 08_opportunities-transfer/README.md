@@ -21,10 +21,14 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 
 ## CURRENT / AUTHORITATIVE
 
-For current portfolio status:
-1. `direction_decision_gate_v01.md`
-2. `smartphone_constraint_model_v01.md`
-3. `../PROGRESS.md`
+**Global project status:** `../PROGRESS.md`
+
+**Local Workstream-08 authority:**
+1. `direction_decision_gate_v01.md` — current technology/Tier/kill disposition;
+2. `smartphone_constraint_model_v01.md` — current phone-transfer constraints;
+3. `surface_wick_russia_china_comparison_v01.md` — current surface/wick comparator analysis.
+
+The local ordering above does not override the repository-wide authority hierarchy.
 
 ## Current Tier-A interpretation
 
