@@ -1532,6 +1532,322 @@ phone microfan + production-like inlet/outlet/mesh/duct; same cooling target; co
 
 ---
 
+
+
+# G. Country pressure-test — Kabov thin-film / Maydanik LHP
+
+## G1 — Kutateladze 12.5 μm slit two-phase-flow experiment
+
+**[An experimental investigation of adiabatic two-phase flow patterns in a slit microchannel with 1:800 aspect ratio](https://doi.org/10.1016/j.expthermflusci.2024.111153)** — Dementyev, Chinnov, Kochkin, Ronshin *et al.* — 2024.
+
+### Q1 — problem + target mapping
+How do gas-liquid flow patterns and instabilities change when a slit channel shrinks to **12.5 μm height** at extreme aspect ratio?
+
+Phone mapping:
+ultra-thin two-phase devices increasingly approach regimes where surface tension/wettability/interfacial instability dominate.
+
+### Q2 — novelty / new-regime relevance
+The novelty relevant to us is not generic microchannel flow.
+It is experimental access to **<20 μm slit two-phase flow** with high aspect ratio.
+
+### Q3 — falsifiable hypothesis
+> extreme confinement changes flow-pattern boundaries and introduces instability mechanisms not captured by larger-channel maps.
+
+### Q4 — lineage / competing route
+Kutateladze/Chinnov/Ronshin has a long slit/microchannel two-phase-flow lineage.
+
+Competing route:
+China/global embedded microfluidics is stronger at actual heat removal, but does not automatically replace this specific free-interface instability knowledge.
+
+### Q5 — control variables
+- channel height/width;
+- surface roughness/contact angle;
+- liquid physical properties;
+- liquid Capillary number;
+- gas Weber number;
+- interfacial instability.
+
+### Q6 — experiment
+Source facts:
+- 12.5 μm × 10 mm;
+- 1:800 aspect ratio;
+- five working liquids;
+- broad gas/liquid superficial-velocity ranges;
+- SEM/AFM/contact-angle surface characterization;
+- direct flow-pattern mapping.
+
+### Q7 — quantitative evidence / reproducibility
+Geometry and velocity windows are public and reproducible in principle.
+Fabrication/diagnostics burden is non-trivial.
+
+Evidence maturity:
+**SYSTEMATIC MECHANISM EXPERIMENT**, not product proof.
+
+### Q8 — what it proves / does not prove
+Proves:
+- real extreme-confinement experimental capability;
+- specific instability/pattern knowledge.
+
+Does not prove:
+- heat-removal advantage;
+- closed-loop phone feasibility;
+- acceptable pumping/volume/power.
+
+### Q9 — decision contribution
+Keeps a narrow Russia capability alive:
+**extreme-confinement interfacial-instability diagnostics**.
+
+### Q10 — next action
+Do not make a device bet yet.
+
+Smallest PoC:
+heated microgap cell under fixed parasitic-power budget, comparing passive and shear-driven film control.
+
+Kill:
+no thermal/user-value advantage after gas-flow/pump/loop overhead.
+
+**Decision:** KEEP / NARROW.
+
+Evidence maturity: STRUCTURAL_SIGNAL  
+Decision impact: preserves Kabov as high-risk mechanism reserve  
+Open question: thermalized phone-scale transfer  
+Primary source: DOI above
+
+---
+
+## G2 — China record-flux thin-film boiling comparator
+
+**[Manipulating thin film boiling to achieve record-breaking high heat flux](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125308)** — Zhang, Zhao, Li *et al.* — 2024.
+
+### Q1
+Problem:
+raise thin-film-boiling CHF for chip/electronics cooling.
+
+### Q2
+For our decision, this is a strongest-baseline paper that kills "Russia has superior thin-film cooling because of high heat flux."
+
+### Q3
+Hypothesis:
+> sample mechanical support + controlled pressure/power trajectory can push a nanoporous thin-film-boiling device closer to its theoretical CHF.
+
+### Q4
+NCEPU-led high-flux thin-film line; related earlier modeling and membrane work.
+
+### Q5
+- liquid pressure;
+- heating trajectory;
+- membrane/sample strength;
+- thin-film boiling state.
+
+### Q6
+Pressure/heating operating paths are manipulated; sample fixation is strengthened.
+
+### Q7
+**Source fact:** reported CHF reaches **2074 W/cm²**.
+
+This headline is not directly phone-comparable due architecture/pressure/feed differences.
+
+### Q8
+Proves:
+China has world-class thin-film-boiling heat-flux capability.
+
+Does not prove:
+China has the same shear-driven free-surface film-instability lineage as Kabov.
+
+### Q9
+Decision contribution:
+kills broad Russia thin-film superiority while preserving only the mechanism-specific shear-film gap.
+
+### Q10
+Use as mandatory strong comparator for any Kabov-derived PoC.
+
+**Decision:** PROMOTE COMPARATOR / NARROW RUSSIA CLAIM.
+
+Evidence maturity: SYSTEM_VALUE for high-flux TFB bench  
+Decision impact: broad thin-film Russia thesis killed  
+Open question: equal-budget shear-film comparison  
+Primary source: DOI above
+
+---
+
+## G3 — Maydanik/Chernysheva LHP serviceability conditions
+
+**[An Analysis of the Key Serviceability and Efficiency Conditions of Loop Heat Pipes](https://doi.org/10.56304/S0040363625701152)** — M.A. Chernysheva, Y.F. Maydanik — 2025.
+
+### Q1
+Problem:
+define conditions under which an LHP can circulate working fluid and transfer heat efficiently.
+
+### Q2
+Current value is depth/continuity from a foundational LHP group, not a novel mobile architecture.
+
+### Q3
+Hypothesis:
+> LHP serviceability can be bounded by coupled capillary-pressure, hydraulic-loss and thermodynamic conditions.
+
+### Q4
+Very deep Maydanik lineage.
+
+Competing route:
+Beihang/SCUT/QUST/SDU and other Chinese groups now study the same startup, NCG, orientation, multi-evaporator and failure-boundary space experimentally.
+
+### Q5
+- wick pore radius/capillary pressure;
+- pressure losses;
+- working fluid;
+- vapor/liquid lines;
+- compensation chamber;
+- heat-source/sink state.
+
+### Q6
+Analytical/serviceability framework; not a phone-scale hardware experiment.
+
+### Q7
+Strong theory lineage but lower product-directness than current China small-electronics LHP experiments.
+
+### Q8
+Proves:
+Maydanik remains a credible LHP expert.
+
+Does not prove:
+Russia has a current unique operating-limit control point.
+
+### Q9
+Decision contribution:
+supports **knowledge reserve**, not country differentiation.
+
+### Q10
+Do not fund standalone LHP PoC solely on this basis.
+
+Re-promote only if partner interaction reveals a specific non-public model/control point that beats domestic capability under phone constraints.
+
+**Decision:** DOWNGRADE -> WATCH / KNOWLEDGE RESERVE.
+
+Evidence maturity: STRUCTURAL_SIGNAL  
+Decision impact: remove Maydanik from active country-differentiation set  
+Open question: non-public transferable know-how  
+Primary source: DOI above
+
+---
+
+## G4 — China 1 mm dual-evaporator LHP for laptop cooling
+
+**[Study on heat transfer characteristics of a dual-evaporator ultra-thin loop heat pipe for laptop cooling](https://doi.org/10.1016/j.applthermaleng.2024.122395)** — He, Yan, Wang — 2024.
+
+### Q1
+Problem:
+route heat from spatially separated CPU/GPU sources in a thin laptop.
+
+### Q2
+This is directly relevant because it combines:
+- multi-source routing;
+- ultra-thin form factor;
+- electronics system constraints.
+
+### Q3
+Hypothesis:
+> a 1 mm dual-evaporator LHP can centralize heat from separated laptop sources and retain startup/steady performance.
+
+### Q4
+China has an active ultra-thin passive-device ecosystem; this is not an isolated LHP paper.
+
+### Q5
+- two evaporators;
+- equal/unequal loads;
+- orientation;
+- heat leak;
+- LHP thickness.
+
+### Q6
+**Source facts:**
+- 1 mm thickness;
+- startup from 5 W–5 W to 20 W–20 W;
+- maximum ~22 W–22 W;
+- minimum Rth ~0.69 °C/W.
+
+### Q7
+Direct small-electronics evidence is stronger than Maydanik's current 2.3 mm miniature example for our geometry question.
+
+### Q8
+Proves:
+China directly studies thin multi-source LHP routing.
+
+Does not prove:
+smartphone-ready 0.4–0.7 mm multi-evaporator LHP.
+
+### Q9
+Decision contribution:
+removes "multi-hotspot routing + miniaturization" as a Russia-specific reason to collaborate with Maydanik.
+
+### Q10
+Use as strongest direct geometry/routing comparator.
+
+**Decision:** PROMOTE COMPARATOR.
+
+Evidence maturity: SYSTEM_VALUE  
+Decision impact: Maydanik differentiation downgraded  
+Open question: smartphone thickness / dynamic workload  
+Primary source: DOI above
+
+---
+
+## G5 — China explicit capillary/pressure-drop failure boundary in multi-evaporator LHP
+
+**[Experimental Study on a Dual Compensation Chamber Multi-Evaporator Loop Heat Pipe System](https://doi.org/10.3390/eng7020084)** — Huang, Zhang, Li, Guo — 2026.
+
+### Q1
+Problem:
+stable passive transport for multiple distributed heat sources over long distances.
+
+### Q2
+For our decision this is important because it explicitly investigates **failure limit**, not only nominal thermal performance.
+
+### Q3
+Hypothesis:
+> charge ratio/startup sequencing can stabilize a multi-evaporator LHP until cumulative pressure drop exceeds capillary supply.
+
+### Q4
+Shandong University current multi-source LHP work; complements Beihang's older NCG/startup/elevation lineage.
+
+### Q5
+- charge ratio;
+- startup time interval;
+- multiple evaporator loads;
+- capillary driving force;
+- cumulative pressure drop.
+
+### Q6
+Open experimental system with multiple evaporators and dual compensation chambers.
+
+### Q7
+**Source facts:**
+- optimal charge ratio ~75%;
+- interval ~8–10 min;
+- stable total load ~270 W;
+- per-stage failure threshold ~70 W;
+- failure linked to insufficient liquid supply / cumulative pressure drop beyond capillary capability.
+
+### Q8
+Proves:
+China has active experimental LHP failure-boundary capability.
+
+Does not prove:
+phone-scale geometry or product manufacturability.
+
+### Q9
+Decision contribution:
+directly overlaps the residual "operating-limit/failure physics" argument for Maydanik.
+
+### Q10
+Kill country-level Maydanik differentiation unless a much narrower non-public control point emerges.
+
+**Decision:** PROMOTE COMPARATOR / DOWNGRADE MAYDANIK.
+
+Evidence maturity: SYSTEM_VALUE at non-mobile scale  
+Decision impact: active differentiation -> Watch  
+Open question: phone-scale transfer  
+Primary source: DOI above
+
 # Cross-paper synthesis
 
 ## What these 10Q cards change
