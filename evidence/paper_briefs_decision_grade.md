@@ -956,6 +956,137 @@ It does not establish a complete multi-institute consortium, nor phone product f
 
 **Mobile relevance:** HIGH for mechanism/model collaboration; LOW-MEDIUM for direct product readiness.
 
+
+
+# K. Pavlenko dryout / rewetting country pressure test
+
+## K1. Russia — dielectric dry-spot dynamics and boiling crisis
+
+**[Investigation of heat transfer, critical heat flux and dry spots dynamics during boiling of dielectric fluids HFE-7100 and Novec 649](https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855)** — Anton Surtaev, Ivan Malakhov, Pavel Perminov, Matvey Polovnikov, Aleksandr N. Pavlenko — *International Journal of Heat and Mass Transfer*, 2026.
+
+**Review status:** PUBLISHER FULL ABSTRACT / METHODS / CONCLUSIONS REVIEW.
+
+**Background / problem**  
+CHF in dielectric liquids varies strongly with heater material, thickness and surface state. Integral CHF alone does not reveal why a reversible dry patch becomes an irreversible runaway region.
+
+**Technical method**  
+Kutateladze/NSU combines high-speed IR thermography with reflected-light/internal-reflection-style phase visualization. ML segmentation is used to quantify dry-spot density, contact-line length, void fraction and size distribution up to CHF.
+
+**Main conclusion**  
+Near CHF, dry-spot statistics become bimodal and large long-lived dry regions appear before irreversible dryout. Irreversible dry-spot propagation is measured and compared with analytical thermal-wave models. The paper argues that boiling crisis is a coupled two-phase-hydrodynamic + dry-spot thermal-stability problem.
+
+**What we learn for our insight**  
+This is stronger than a surface-enhancement paper. It demonstrates a current Russian **failure-mechanism diagnostic capability** in dielectric fluids.
+
+Its weakness is geometry: it is not a <0.5 mm sealed phone VC.
+
+**Mobile relevance:** HIGH mechanism / MEDIUM transfer.
+
+---
+
+## K2. China — capillary-fed dryout degradation + steam-induced rewetting
+
+**[Hydrophilicity degradation and steam-induced rewetting during capillary-fed boiling](https://doi.org/10.1016/j.expthermflusci.2023.111030)** — Jiangyou Long, Junwei Wu, Yujun Zhou, Xiaozhu Xie — Guangdong University of Technology — 2024.
+
+**Review status:** PUBLISHER ABSTRACT + METHODS/CONCLUSIONS REVIEW.
+
+**Background / problem**  
+Capillary-fed evaporators can lose boiling limit during repeated use even when the initial wick is superhydrophilic.
+
+**Technical method**  
+A laser-fabricated grooved wick (~200 μm upper width, ~150 μm depth) is repeatedly boiled. Wettability and capillary behavior are tracked after dryout.
+
+**Main conclusion**  
+After five cycles, CHF drops from ~145.0 to ~70.1 W/cm². The surface becomes strongly hydrophobic (>140° static contact angle) due to airborne-organic adsorption after dryout. Subsequent liquid supply begins through **steam-induced rewetting**. A microgroove–nanoparticle composite wick mitigates the degradation.
+
+**What we learn for our insight**  
+China independently owns direct:
+- dryout;
+- rewetting;
+- repeated-cycle wetting degradation;
+- ultrathin-device wick relevance.
+
+Therefore broad Russia dryout/rewetting uniqueness is **killed**.
+
+**Mobile relevance:** VERY HIGH comparator.
+
+---
+
+## K3. China — superhydrophilic copper mesh capillary-film boiling
+
+**[Enhanced capillary-driven thin film boiling through superhydrophilic mesh wick structure](https://doi.org/10.1016/j.ijthermalsci.2025.109782)** — Longsheng Lu, Bo Tao, Shu Ting Yang, Yilin Zhong, Yingxi Xie — South China University of Technology — 2025.
+
+**Review status:** PUBLISHER ABSTRACT / DECISION REVIEW.
+
+**Background / problem**  
+Mesh wicks in vapor chambers fail when capillary supply cannot overcome liquid/vapor resistance at the evaporator.
+
+**Technical method**  
+Copper mesh is chemically treated to grow nanowires, increasing superhydrophilicity and reducing bubble adhesion.
+
+**Main conclusion**  
+Public results report:
+- wicking coefficient +~33.8%;
+- volumetric flow +~53.7%;
+- CHF +~75.8%;
+- HTC +~166.7% relative to untreated mesh under the tested conditions.
+
+**What we learn for our insight**  
+Generic:
+> modified mesh + better capillary supply + delayed dryout
+
+is already a strong China capability.
+
+Pavlenko cannot be differentiated merely by modified mesh.
+
+**Mobile relevance:** HIGH comparator.
+
+---
+
+## K4. China — pore-scale capillary dryout boundary
+
+**[Three-dimensional pore-scale simulations of thin-film evaporation on micro-pillar wicks](https://doi.org/10.1063/5.0271431)** — Junyang Li, Shuai Gong, Chaoyang Zhang, Ping Cheng — Shanghai Jiao Tong University — *Physics of Fluids*, 2025.
+
+**Review status:** PUBLISHER ABSTRACT / METHODS REVIEW.
+
+**Background / problem**  
+Capillary evaporators fail when evaporation demand exceeds liquid supply; the dryout boundary depends on wick geometry and wettability.
+
+**Technical method**  
+3D pore-scale phase-change lattice Boltzmann simulation tracks meniscus recession and dryout; a thermal-fluidic analytical dryout model is used as a cross-check.
+
+**Main conclusion**  
+Wettability, pillar pitch and height change the dryout heat flux primarily through wickability / volumetric liquid supply. Analytical predictions agree with the simulated dryout limit.
+
+**What we learn for our insight**  
+China also has explicit **dryout-boundary modeling**, not only experiments and performance optimization.
+
+This further narrows Russia's residual value toward diagnostic specificity in dielectric-boiling crisis.
+
+**Mobile relevance:** HIGH mechanism comparator / MEDIUM direct device evidence.
+
+---
+
+## K5. China — HFE-7100 confinement comparator
+
+**[Coupled effects of surface structuring and capillary-length-scale confinement on pool boiling heat transfer and critical heat flux of HFE-7100](https://doi.org/10.1016/j.applthermaleng.2026.133219)** — Er Shi, Xinxiang Zhong, Yucheng Li, Qi Peng, Changwei Jiang — Changsha University of Science and Technology — 2026.
+
+**Review status:** PUBLISHER ABSTRACT / DECISION REVIEW.
+
+**Technical method / result**  
+HFE-7100 pool boiling is tested on smooth, microchannel and hierarchical micro/nano surfaces under unconfined and 5/3/**1 mm** gaps.
+
+At 1 mm:
+- hierarchical surface peak HTC ~26.62 kW/(m²·K);
+- it retains ~71% of unconfined CHF;
+- simpler surfaces retain ~56–57%.
+
+**What we learn for our insight**  
+Independent China is already pushing **dielectric boiling + confinement + structured surface + CHF deterioration**.
+
+Pavlenko still has a more explicit crisis-mode/dry-spot diagnostic line, but China is closer on geometry.
+
+**Mobile relevance:** MEDIUM-HIGH comparator.
 # G. Synthesis for our project
 
 The papers collectively tell us:
