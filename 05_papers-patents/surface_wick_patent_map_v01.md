@@ -106,38 +106,49 @@ TPU's 2026 biphilic work therefore cannot be treated as broadly novel at the con
 
 ---
 
-## 3. Russia — TPU surface patent signal
+## 3. Russia — TPU / Feoktistov surface patent — claim mapping closed
 
 ### [Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)
 
-**Inventors:** pending direct verification  
+**Inventors:** Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov  
 **Patent:** RU2812668C1  
 **Assignee:** National Research Tomsk Polytechnic University
 
-Priority: 2023-11-01  
-Grant/publication: 2024-01-31  
-Assignee: National Research Tomsk Polytechnic University.
+Filing: 2023-11-01  
+Grant/publication: 2024-01-31
 
-Title:
-**Method for forming micro- and nanostructures on heat exchange surface of steel product**
+### Independent-claim control point
 
-### Current evidence state
+The patent contains one independent method claim covering a steel-surface preparation + nanosecond fiber-laser process:
+- abrasive preparation for 10 min with diamond-paste grain decreasing from 40 μm to 1 μm;
+- ultrasonic clean for 5 min at 35 kHz in 95 wt.% distilled water / 5 wt.% ethanol;
+- 24 h normal-condition drying;
+- 1064 nm nanosecond fiber laser;
+- pulse energy 0.3–1.0 mJ;
+- repetition 2–140 kHz;
+- pulse duration 1–120 ns;
+- scan speed 100–500 mm/s;
+- spot diameter 20–100 μm;
+- longitudinal/transverse overlap 1–10 passes.
 
-The patent is verified as TPU-owned and directly heat-transfer-surface related through patent citation records.
+The disclosed embodiment reports mean roughness height around 9–18 μm and maximum feature height around 17.5–120 μm.
 
-However:
-- exact inventors;
-- full independent claim;
-- quantitative texture geometry;
-- direct overlap with Feoktistov/Syrodoy team
+### Partner / mobile interpretation
 
-have **not yet been verified from the direct patent text** in this round.
+**Closed:** inventor/team linkage. Feoktistov and Orlova are named inventors, so this is valid TPU/Feoktistov-line background-IP evidence.
 
-Therefore do not attribute RU2812668 to Feoktistov or Syrodoy yet.
+**Still open:**
+- copper applicability;
+- vacuum/sealed-process behavior;
+- whether the laser-only texture can generate the desired phone-VC wetting function;
+- relationship to the separate hydrocarbon-derived hydrophobic layer used in TPU's 2026 wettability-contrast work.
 
-### Implication
+The patent is important because it supplies a **low-organic laser-texture control route**. It does not establish a biphilic sealed-VC solution.
 
-TPU has institutional IP in heat-transfer surface micro/nanostructuring, but partner-level ownership/readiness still needs inventor mapping.
+### IP implication
+
+Generic micro/nanotexturing remains crowded. The plausible joint foreground space is narrower:
+> copper-compatible, low-outgassing spatial wetting / rewetting control that survives sealed-VC manufacturing and cycling.
 
 ---
 
