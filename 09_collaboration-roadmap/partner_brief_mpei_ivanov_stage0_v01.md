@@ -14,11 +14,7 @@ Two new primary evidence points materially improve MPEI readiness.
 
 ### 2025/2026 thermosyphon performance paper
 
-Ivanov, Kuzma-Kichta, Alyautdinova:
-**Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon**
-
-DOI:
-https://doi.org/10.1134/S0040601525600683
+**[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
 
 Publicly indexed quantitative details:
 - longitudinal microgrooves with radius ~0.1 mm;
@@ -30,11 +26,7 @@ Publicly indexed quantitative details:
 
 ### 2026 long-term stability paper
 
-Ivanov:
-**Long-term operational stability of a hierarchical evaporator surface in a two-phase thermosyphon**
-
-Primary publisher:
-https://doi.org/10.1016/j.pes.2026.100314
+**[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
 
 Source facts:
 - hierarchical microgroove + Al2O3 nanoparticle evaporator;
