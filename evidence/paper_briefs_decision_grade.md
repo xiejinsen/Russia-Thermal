@@ -809,6 +809,126 @@ This directly overlaps the "multi-source operating-limit / capillary-failure phy
 Maydanik remains an expert/knowledge reserve, but the broad current country-level differentiation is no longer defensible.
 
 **Mobile relevance:** LOW direct scale / HIGH mechanism comparator.
+
+
+# J. Foundational math-physics pressure-test
+
+## J1. Russia — 2026 exact analytical evaporative-convection model
+
+**[The effect of gas flow rate on evaporative convection in a multicomponent bilayer system subjected to linear boundary heating](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128594)** — Victoria B. Bekezhanova, Irina V. Stepanova — *International Journal of Heat and Mass Transfer*, 2026.
+
+**Review status:** PUBLISHER ABSTRACT + METHODS / DISCUSSION REVIEW.
+
+**Background / problem**  
+Coupled liquid–gas evaporation with thermocapillary, shear and concentration effects is difficult to interpret using black-box simulation alone. The engineering need is to identify which variables control heat/mass transfer and stability before costly experiments.
+
+**Technical method**  
+The ICM SB RAS team derives an exact analytical solution of a simplified Navier–Stokes + heat/mass-transfer system for a binary liquid / gas-vapor bilayer. Experimental gas flow is used as an integral condition, enabling inverse determination of other operating parameters.
+
+**Main conclusion**  
+The model predicts how gas pumping intensifies evaporation, alters thermocapillary action and heat removal, and shows qualitative agreement with experimental data. The paper explicitly positions the exact solution as a benchmark and preliminary optimization tool.
+
+**What we learn**  
+This is the strongest current evidence that a Russian foundational advantage may exist in **interpretable exact-solution modeling tied to thermal experiments**.
+
+It does not prove direct phone value; the geometry and flow architecture remain non-mobile.
+
+**Mobile relevance:** MEDIUM mechanism / potentially HIGH experiment-design leverage.
+
+---
+
+## J2. Russia — exact-solution stability threshold
+
+**[Application of a Partially Invariant Exact Solution of the Thermosolutal Convection Equations for Studying the Instability of an Evaporative Flow in a Channel Heated from Above](https://doi.org/10.3390/sym15071447)** — Victoria B. Bekezhanova, Olga N. Goncharova — *Symmetry*, 2023.
+
+**Review status:** OPEN-ACCESS / TECHNICAL REVIEW.
+
+**Background / problem**  
+Evaporation, gas shear, buoyancy and thermocapillarity can generate several competing instability modes. A useful theory must expose the stability boundary and dominant mode.
+
+**Technical method**  
+Partially invariant exact solution + linear stability / spectral analysis of a two-layer evaporative minichannel.
+
+**Main conclusion**  
+The work derives stability thresholds and identifies oscillatory cellular disturbances; boundary heating can stabilize the basic flow under defined conditions.
+
+**What we learn**  
+The Russian signal is not merely “strong math”; it is a specific ability to convert coupled interfacial physics into **interpretable failure/stability boundaries**.
+
+**Mobile relevance:** MEDIUM; strongest link is to Kabov/Chinnov film-instability work.
+
+---
+
+## J3. China — independent 3D long-wave film-instability theory
+
+**[Three-Dimensional Long-Wave Instability of an Evaporation/Condensation Film](https://doi.org/10.3390/fluids9060143)** — Weiyang Jiang, Ruiqi Huang, Qiang Yang, Zijing Ding — *Fluids*, 2024.
+
+**Review status:** OPEN-ACCESS / TECHNICAL REVIEW.
+
+**Background / problem**  
+Evaporation/condensation changes long-wave instability and nonlinear evolution of thin films.
+
+**Technical method**  
+HIT / CAS authors derive a nonlinear long-wave model for a 3D evaporating/condensing film and analyze its stability/dynamics.
+
+**Main conclusion**  
+China independently has formal interfacial-stability mathematics, not only CFD or empirical experiments.
+
+**What we learn**  
+This kills a broad claim that nonlinear thin-film stability theory is uniquely Russian.
+
+Residual Russia differentiation must be narrower: **continuous exact/group-invariant evaporative-convection solutions plus experiment-informed closure**.
+
+**Mobile relevance:** MEDIUM comparator.
+
+---
+
+## J4. China — experimentally validated phase-change numerical model
+
+**[Development and validation of finite-interface-heat-flux phase change model](https://doi.org/10.7527/S1000-6893.2026.32977)** — Zicheng Tang, Zeran Han, Dan Zheng, Ting Ma — *Acta Aeronautica et Astronautica Sinica*, 2026.
+
+**Review status:** OFFICIAL JOURNAL FULL ABSTRACT / METHODS SUMMARY.
+
+**Background / problem**  
+Interface-resolved flow-boiling simulation is sensitive to empirical phase-change closures.
+
+**Technical method**  
+XJTU converts interfacial heat flux into finite-interface source terms and validates the model across Stefan, pool-boiling, microchannel-boiling and flow-boiling experiment cases.
+
+**Main conclusion**  
+The reported model shows low error on benchmark/interface quantities and meaningful agreement with experiment.
+
+**What we learn**  
+China is strong in **engineering-oriented mathematical modeling + validation**. Russia cannot claim broad superiority in phase-change numerics.
+
+**Mobile relevance:** MEDIUM-HIGH comparator for model-to-design translation.
+
+---
+
+## J5. China — inverse thermal diagnostics for integrated circuits
+
+**[Heat source field inversion and detection based on physics-informed deep learning](https://doi.org/10.1016/j.icheatmasstransfer.2025.108824)** — Yimeng Chi, Mingliang Li, Rui Long *et al.* — *International Communications in Heat and Mass Transfer*, 2025.
+
+**Review status:** PUBLISHER ABSTRACT / DECISION REVIEW.
+
+**Background / problem**  
+Electronics thermal diagnosis often needs to infer unknown heat-source positions, shapes and powers from limited thermal information.
+
+**Technical method**  
+HUST applies physics-informed neural networks to multi-source heat-source-field inversion.
+
+**Main conclusion**  
+Public results report >90% source shape/position similarity in tested multi-source configurations.
+
+**What we learn**  
+For inverse thermal problems with direct electronics relevance, the public China signal is stronger than the Russian evidence recovered in this pass.
+
+Therefore **inverse thermal diagnostics is not a Russia advantage**.
+
+**Mobile relevance:** HIGH comparator.
+
+---
+
 # G. Synthesis for our project
 
 The papers collectively tell us:
