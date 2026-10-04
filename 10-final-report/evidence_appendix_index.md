@@ -67,6 +67,7 @@ Use this as the default human entry point for papers and patents.
 
 ## J. Collaboration / PoC evidence
 
+- [Stage-0 Partner × Technology Decision Scorecard](../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
 - ../09_collaboration-roadmap/partner_hypothesis_map_v01.md
 - ../09_collaboration-roadmap/partner_readiness_surface_v01.md
 - ../09_collaboration-roadmap/poc01_surface_utvc_v01.md
