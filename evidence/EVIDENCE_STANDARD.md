@@ -250,3 +250,39 @@ A decision-grade source is not fully archived until:
 2. central source-register entry exists;
 3. source brief exists;
 4. the decision file links the source where used.
+
+
+## Paper/Patent 10Q method
+
+Decision-grade paper/patent interpretation should follow:
+`mobile_thermal_insight_10q_method.md`.
+
+### Paper records must go beyond summary
+
+In addition to background/method/conclusion, a decision-grade paper record must capture:
+- novelty versus the strongest relevant current baseline;
+- the paper's explicit or reconstructed falsifiable hypothesis;
+- related-work / researcher / lab capability lineage;
+- normalized thermal test conditions;
+- reproducibility/process openness;
+- whether the evidence actually supports the hypothesis;
+- partner/collaboration signal;
+- mobile/chip transfer path;
+- smallest discriminating PoC;
+- success/kill condition;
+- current decision state.
+
+### Patent records must go beyond abstract summary
+
+A decision-grade patent record must capture:
+- target problem/product relevance;
+- prior-art/crowding context;
+- independent-claim control point;
+- useful dependent-claim implementation bounds;
+- embodiment/manufacturability signal;
+- inventor/assignee capability lineage;
+- overlap/design-around context;
+- background vs potential foreground IP;
+- next claim/legal/partner/PoC action.
+
+This method is intended to turn literature review into **technology and collaboration insight**, not merely better summaries.
