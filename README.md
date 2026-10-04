@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~66%**
-**Estimated remaining: ~34%**
+**Estimated research completion: ~68%**
+**Estimated remaining: ~32%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -162,14 +162,22 @@ Watch / reserves:
 A useful pattern is emerging:
 the surviving Russia candidates are increasingly **failure-boundary / aging / instability capabilities**, not generic cooling-device categories.
 
-**Foundational enabling candidate**
-- Russian applied mathematics / mathematical physics / nonlinear-stability capability is now explicitly in scope.
-- Current preliminary evidence exists in exact evaporative-convection solutions, thermocapillary stability analysis and coupled thin-film microchannel modeling.
-- This is **not yet a final Russia advantage**; a matched China comparator is required.
+**Foundational enabling reserve**
+- The matched China comparator is now complete enough to reject a broad "Russia has superior mathematics/physics" claim.
+- China is independently strong in nonlinear/long-wave stability, experiment-validated phase-change modeling and electronics inverse thermal diagnostics.
+- The residual Russian signal is narrower: **continuous exact/group-invariant analytical + stability modeling of evaporative thermocapillary systems, with experiment-informed closure**.
+- Current state: **NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE / PoC reserve**, not a final advantage.
+
+Focused files:
+- [Russia Foundational Math-Physics Capability Map](03_russia-institutions/russia_foundational_math_physics_capability_v01.md)
+- [China Foundational Math-Physics Mirror](07_china-benchmark/china_foundational_math_physics_mirror_v01.md)
+- [Foundational Math-Physics China Pressure Test](08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
 
 **Joint-paper attribution**
 - China–Russia coauthored papers may still support a Russian capability when Russian lineage/platform/method ownership is evidenced.
 - Coauthorship alone is not sufficient to count the same capability as an independent China baseline.
+
+**Current management structure: 3 mechanism candidates + 1 foundational reserve.**
 
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
 
@@ -259,7 +267,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~66% research state.
+It is intentionally **not final** at the current ~68% research state.
 
 The report will ultimately contain:
 - executive decision;
