@@ -18,6 +18,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Phase-change surface matrix](phase_change_surface_matrix_v01.md)
 - [Russia–China surface/wick comparison](surface_wick_russia_china_comparison_v01.md)
 - [Russia–China academic capability heatmap](russia_china_academic_capability_heatmap_v01.md) — management-level country capability comparison
+- [Kabov / Maydanik China pressure test](kabov_maydanik_china_pressure_test_v01.md) — focused Keep/Kill analysis for thin-film instability and LHP routing/failure physics
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## CURRENT / AUTHORITATIVE
