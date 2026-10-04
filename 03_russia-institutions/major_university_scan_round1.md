@@ -1,3 +1,10 @@
+> **HISTORICAL SNAPSHOT — ROUND 1**
+>
+> This file preserves Round-1 discovery findings. Several PENDING/NO-SIGNAL judgments were changed by Round 2.
+> Current authority: [Major University Coverage Matrix](major_university_coverage_matrix.md).
+>
+> Last status review: 2026-10-04.
+
 # Major Russian University Scan — Round 1
 
 Last updated: 2026-10-03
