@@ -96,7 +96,7 @@ Repository governance:
 **Estimated remaining: ~41%**
 
 Current phase:
-**Stage-0 Partner Data Request + Coupon Falsification**
+**Stage-0 Partner Data Acquisition + Coupon Falsification**
 
 ### Current technical portfolio
 
