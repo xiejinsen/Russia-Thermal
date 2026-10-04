@@ -72,6 +72,7 @@ Current research inputs:
 - [China Academic Thermal Capability Mirror](../07_china-benchmark/china_academic_capability_mirror_v01.md)
 - [Russia × China Academic Capability Heatmap](../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md)
 - [Russia Foundational Math-Physics → Thermal Capability Map](../03_russia-institutions/russia_foundational_math_physics_capability_v01.md)
+- [Siberian Theory–Fluid–Experiment Capability Network](../03_russia-institutions/siberian_theory_fluid_experiment_network_v01.md)
 - [China Foundational Math-Physics → Thermal Capability Mirror](../07_china-benchmark/china_foundational_math_physics_mirror_v01.md)
 - [Russia × China Foundational Math-Physics Pressure Test](../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
 
