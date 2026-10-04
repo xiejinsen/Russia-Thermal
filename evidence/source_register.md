@@ -4,6 +4,8 @@ Last updated: 2026-10-04
 
 Purpose: central index of original / primary sources used to support project decisions. This is not an exhaustive bibliography.
 
+For human browsing, use [Human-Readable Bibliography](readable_bibliography.md). This register intentionally preserves compact IDs and raw source fields for audit/indexing.
+
 ## A. Russia — institutions, labs and people
 
 | ID | Source | Type | Year | Use | Status |
