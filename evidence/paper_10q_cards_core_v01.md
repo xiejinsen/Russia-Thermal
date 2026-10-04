@@ -2169,6 +2169,329 @@ Decision impact: current partner topology upgraded
 Open questions: current project ownership; ICM formal linkage; contracting structure  
 Primary source: DOI above
 
+
+
+# I. Pavlenko dryout / rewetting pressure test
+
+## I1 — Russia dielectric-fluid reversible→irreversible dry-spot dynamics
+
+**[Investigation of heat transfer, critical heat flux and dry spots dynamics during boiling of dielectric fluids HFE-7100 and Novec 649](https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855)** — Surtaev, Malakhov, Perminov, Polovnikov, Pavlenko — 2026.
+
+### Q1 — problem + target mapping
+Problem:
+what changes locally when dielectric-fluid boiling approaches CHF, and what distinguishes reversible dry spots from an irreversible thermal runaway region?
+
+Phone mapping:
+strong at the **failure mechanism** level; not a direct <0.5 mm sealed VC experiment.
+
+### Q2 — novelty / new-regime relevance
+Decision-relevant novelty:
+quantitative dry-spot dynamics in current electronic-cooling dielectric fluids, not only integral CHF.
+
+### Q3 — falsifiable hypothesis
+> boiling crisis in these dielectric fluids is governed by coupled near-wall two-phase hydrodynamics and thermal stability of dry spots; a measurable transition in dry-spot statistics precedes irreversible dryout.
+
+### Q4 — lineage / competing route
+Kutateladze/Pavlenko has a long crisis/thin-layer/modified-surface lineage.
+
+Independent China competing routes:
+- GDUT capillary-fed dryout / steam-induced rewetting;
+- SCUT mesh-wick capillary boiling;
+- SJTU pore-scale dryout models;
+- Changsha HFE confinement.
+
+### Q5 — control variables
+- fluid;
+- surface/heater state;
+- heat flux;
+- dry-spot density / size;
+- contact-line length;
+- void fraction;
+- propagation rate;
+- heater thermal response.
+
+### Q6 — experiment
+Source facts:
+- HFE-7100 and Novec 649;
+- high-speed IR thermography;
+- reflected-light/internal-reflection-style visualization;
+- ML-assisted segmentation;
+- dry-spot evolution up to CHF.
+
+### Q7 — quantitative evidence / reproducibility
+Source facts:
+- HFE-7100 maximum HTC and CHF exceed Novec 649 by factors ~1.47 and ~1.56 in the tested system;
+- bimodal dry-spot-area distribution near CHF;
+- irreversible dry-spot growth rate measured and compared with thermal-wave models.
+
+Reproducibility:
+MEDIUM-HIGH for the diagnostic concept; phone transfer remains unverified.
+
+### Q8 — what it proves / does not prove
+Proves:
+- current high-resolution failure-mechanism diagnostics;
+- dry-spot statistics can precede irreversible crisis;
+- dielectric-fluid specificity matters.
+
+Does not prove:
+- phone-scale sealed-device advantage;
+- modified mesh outperforms domestic ultrathin wick;
+- HFE-7100 should be the future product fluid.
+
+### Q9 — decision contribution
+Preserves a narrow Russia control point:
+**dielectric-fluid boiling-crisis diagnostics and reversible→irreversible dryout interpretation.**
+
+Kills none of the strong China wick evidence.
+
+### Q10 — next action
+Use this diagnostic philosophy in Stage-0 thin-coupon testing.
+
+Mandatory comparison:
+domestic composite/grooved/treated-mesh control.
+
+Promotion only if Russian-guided surface/process or diagnostic criteria shift irreversible-dryout onset in phone-relevant geometry.
+
+**Decision:** KEEP / NARROW / STAGE-0 PRIORITY #1.
+
+Evidence maturity: STRUCTURAL_SIGNAL → early SYSTEM_VALUE  
+Decision impact: Pavlenko remains #1, but broad dryout/rewetting uniqueness is removed  
+Open questions: geometry, product fluid, process transfer, sealed manufacturing  
+Primary source: DOI above
+
+---
+
+## I2 — China capillary-fed rewetting and cycle degradation
+
+**[Hydrophilicity degradation and steam-induced rewetting during capillary-fed boiling](https://doi.org/10.1016/j.expthermflusci.2023.111030)** — Long, Wu, Zhou, Xie — Guangdong University of Technology — 2024.
+
+### Q1
+Problem:
+why does a high-performing wick lose CHF after repeated dryout/boiling cycles?
+
+### Q2
+This is directly target-relevant because it is explicitly framed around ultrathin two-phase devices.
+
+### Q3
+Hypothesis:
+> dryout-induced exposure enables organic adsorption, degrading superhydrophilicity; later boiling requires steam-induced rewetting, reducing CHF unless nanostructures stabilize the surface state.
+
+### Q4
+Independent China capability; no Russian coauthor dependence.
+
+### Q5
+- groove geometry;
+- surface chemistry/wettability;
+- dryout exposure;
+- repeat cycle number;
+- composite nanoporous layer.
+
+### Q6
+Source facts:
+- ~200 μm upper groove width;
+- ~150 μm depth;
+- repeated capillary-fed boiling;
+- pre/post wettability characterization.
+
+### Q7
+Source facts:
+- CHF ~145.0 ± 3.3 -> 70.1 ± 2.9 W/cm² after five cycles;
+- >51% reduction;
+- contact angle >140° after degradation;
+- composite wick stabilizes performance.
+
+### Q8
+Proves:
+- China directly studies dryout, rewetting and cycling degradation in wick-scale thermal hardware.
+
+Does not prove:
+- same dielectric-fluid crisis diagnostics as Kutateladze;
+- sealed phone VC reliability.
+
+### Q9
+Decision contribution
+**KILLS broad Russia dryout/rewetting uniqueness.**
+
+### Q10
+Use as mandatory China Stage-0 comparator / design principle.
+
+**Decision:** PROMOTE COMPARATOR.
+
+Evidence maturity: SYSTEM_VALUE for wick mechanism  
+Decision impact: Pavlenko differentiation narrowed  
+Open question: fluid/product manufacturing differences  
+Primary source: DOI above
+
+---
+
+## I3 — China modified copper mesh / capillary boiling
+
+**[Enhanced capillary-driven thin film boiling through superhydrophilic mesh wick structure](https://doi.org/10.1016/j.ijthermalsci.2025.109782)** — Lu, Tao, Yang, Zhong, Xie — SCUT — 2025.
+
+### Q1
+Problem:
+delay evaporator dryout by improving liquid supply and bubble departure in a mesh wick.
+
+### Q2
+Very direct comparator to Pavlenko's modified-mesh route at the generic control-point level.
+
+### Q3
+Hypothesis:
+> nanowire-functionalized copper mesh raises capillary supply and lowers bubble adhesion, extending CHF and HTC.
+
+### Q4
+Independent China line.
+
+### Q5
+- copper mesh;
+- nanowire surface;
+- capillary coefficient;
+- volumetric liquid flow;
+- bubble adhesion;
+- CHF/HTC.
+
+### Q6
+Modified vs untreated mesh capillary-film boiling.
+
+### Q7
+Public results:
+- wicking coefficient +~33.8%;
+- volumetric flow +~53.7%;
+- CHF +~75.8%;
+- HTC +~166.7%.
+
+### Q8
+Proves:
+China has strong modified-mesh / capillary-supply / dryout engineering.
+
+Does not prove:
+same dielectric-fluid dry-spot diagnostic depth.
+
+### Q9
+Decision contribution
+Kills:
+> modified mesh itself is a Russia-specific collaboration whitespace.
+
+### Q10
+Pavlenko Stage-0 must beat a strong treated-copper-mesh baseline.
+
+**Decision:** PROMOTE COMPARATOR / KILL GENERIC MESH THESIS.
+
+Evidence maturity: SYSTEM_VALUE  
+Decision impact: narrows Pavlenko to failure diagnostics/process know-how  
+Open question: target-fluid and sealed-process behavior  
+Primary source: DOI above
+
+---
+
+## I4 — China pore-scale capillary dryout boundary
+
+**[Three-dimensional pore-scale simulations of thin-film evaporation on micro-pillar wicks](https://doi.org/10.1063/5.0271431)** — Li, Gong, Zhang, Cheng — SJTU — 2025.
+
+### Q1
+Problem:
+predict the capillary-driven dryout heat flux and meniscus recession inside a microstructured wick.
+
+### Q2
+Directly relevant to the failure-boundary hypothesis.
+
+### Q3
+Hypothesis:
+> wickability / volumetric liquid supply controls dryout; geometry and wettability influence the limit primarily through that transport capability.
+
+### Q4
+Independent China pore-scale modeling line.
+
+### Q5
+- wettability;
+- pillar pitch;
+- pillar height;
+- liquid-front velocity;
+- volumetric wicking rate.
+
+### Q6
+3D multiphase lattice-Boltzmann simulation + analytical dryout model.
+
+### Q7
+The simulation captures continuous meniscus recession after exceeding capillary dryout flux; analytical and numerical dryout predictions agree.
+
+### Q8
+Proves:
+China can model capillary dryout mechanistically.
+
+Does not prove:
+experimental reversible/irreversible dry-spot statistics in dielectric pool/thin-layer boiling.
+
+### Q9
+Decision contribution
+Eliminates any claim that Russia uniquely owns the dryout-boundary modeling problem.
+
+### Q10
+Use domestic model as Stage-0 mechanism baseline.
+
+**Decision:** PROMOTE COMPARATOR.
+
+Evidence maturity: STRUCTURAL_SIGNAL / modeling  
+Decision impact: Russia residual becomes diagnostic/experimental specificity  
+Open question: model-to-phone validation  
+Primary source: DOI above
+
+---
+
+## I5 — China HFE-7100 confinement comparator
+
+**[Coupled effects of surface structuring and capillary-length-scale confinement on pool boiling heat transfer and critical heat flux of HFE-7100](https://doi.org/10.1016/j.applthermaleng.2026.133219)** — Shi, Zhong, Li, Peng, Jiang — 2026.
+
+### Q1
+Problem:
+how does shrinking vapor-space confinement alter HFE-7100 boiling/CHF on different structured surfaces?
+
+### Q2
+Important because it directly attacks Pavlenko's "thin dielectric layer boundary-condition depth."
+
+### Q3
+Hypothesis:
+> stronger confinement creates an enhancement-to-deterioration transition; hierarchical surfaces better preserve liquid access / resist vapor congestion.
+
+### Q4
+Independent China line.
+
+### Q5
+- gap height;
+- surface topology;
+- HFE-7100;
+- vapor morphology;
+- HTC/CHF.
+
+### Q6
+Unconfined and 5/3/1 mm gaps; smooth vs microchannel vs hierarchical surface.
+
+### Q7
+At 1 mm:
+- hierarchical peak HTC ~26.62 kW/(m²·K);
+- CHF retention ~71% of unconfined;
+- simpler surfaces ~56–57%.
+
+### Q8
+Proves:
+China has current HFE confinement research closer to phone geometry than Pavlenko's public 1.5–6 mm crisis-transition work.
+
+Does not prove:
+reversible→irreversible dry-spot diagnostic equivalence.
+
+### Q9
+Decision contribution
+Further narrows Russia's residual value away from confinement in general.
+
+### Q10
+Use 1 mm China data as mandatory geometry-pressure comparator; still push to ~0.2 mm phone-reference scale.
+
+**Decision:** PROMOTE COMPARATOR / NARROW RUSSIA CLAIM.
+
+Evidence maturity: SYSTEM_VALUE at millimeter confinement  
+Decision impact: Pavlenko remains mechanism/diagnostic candidate, not geometry leader  
+Open question: sub-mm sealed transfer  
+Primary source: DOI above
 # Cross-paper synthesis
 
 ## What these 10Q cards change
