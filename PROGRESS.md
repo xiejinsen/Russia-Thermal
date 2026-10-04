@@ -4,9 +4,104 @@ Last updated: 2026-10-04
 
 ## Overall status
 
-**Estimated research completion: ~64%**
-**Estimated remaining research: ~36%**
+**Estimated research completion: ~66%**
+**Estimated remaining research: ~34%**
 
+
+## Comparator closure — Kabov thin-film + Maydanik LHP — 2026-10-04
+
+### Research-state effect
+
+**Progress moves conservatively from ~64% to ~66%.**
+
+The +2 percentage points come from substantive candidate convergence:
+
+1. Kabov/Chinnov survives only as a narrow shear-driven microfilm / instability mechanism candidate;
+2. Maydanik LHP routing / operating-limit / failure physics is removed from the active country-differentiation set after strong China comparison.
+
+Document synchronization is not counted separately.
+
+### Kabov / Chinnov — decision
+
+Strong China evidence now includes:
+- CAS/NCEPU gradient-mesh capillary thin-film boiling: CHF 202.8 W/cm²;
+- NCEPU-led thin-film boiling: reported CHF 2074 W/cm²;
+- additional structured-surface / electric-field / current film-boiling work.
+
+Therefore the broad thesis:
+**Russia is differentiated in thin-film cooling**
+is killed.
+
+Residual Russia candidate:
+**shear-driven free-surface microfilm + dry-spot / rupture / interfacial-instability physics under extreme confinement.**
+
+Supporting Russia evidence:
+- long-running shear-driven film / locally heated dry-spot lineage;
+- 2024 **12.5 μm-high × 10 mm** slit two-phase-flow experiment;
+- current microelectronics framing.
+
+Important caveat:
+the 2022 shear-driven-film paper includes Beijing University of Technology coauthors, so the public mechanism is not Russia-exclusive.
+
+Current state:
+**NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
+
+### Maydanik / ITP UB RAS — decision
+
+China current evidence now covers:
+- 0.7–1.0 mm mobile/laptop LHP;
+- dual-evaporator multi-source routing;
+- single/dual load startup;
+- variable-power operation;
+- Beihang NCG / tilt / elevation / compensation-chamber physics;
+- 2026 multi-evaporator capillary-pressure / cumulative-pressure-drop failure threshold.
+
+Therefore the residual thesis:
+**Russia is differentiated by LHP routing / operating-limit / failure physics**
+is no longer supported.
+
+Maydanik retains:
+- foundational LHP depth;
+- expert/model/failure-analysis value.
+
+Current state:
+**WATCH / KNOWLEDGE RESERVE.**
+
+### Current active country-differentiation set
+
+1. **Pavlenko / Kutateladze**
+   - modified-mesh dryout / rewetting / failure-boundary control.
+2. **MPEI / Ivanov**
+   - actual multi-year hierarchical-surface operation / aging evidence.
+3. **Kabov / Chinnov / Kutateladze**
+   - shear-driven microfilm / dry-spot / interfacial-instability physics.
+
+Watch:
+- TsAGI / PNRPU / CIAM — phone-scale aeroacoustic method reserve;
+- Maydanik / ITP UB RAS — LHP knowledge/failure-analysis reserve.
+
+### Emerging cross-candidate pattern
+
+The surviving Russia differentiation is increasingly concentrated in:
+- **dryout / rewetting failure boundaries**;
+- **long-duration surface aging**;
+- **film instability / dry-spot / rupture physics**.
+
+This suggests a more coherent management narrative:
+**Russia may be more valuable for understanding and controlling thermal failure limits than for supplying generic cooling components.**
+
+### Next public-research priority
+
+Do not broaden LHP or generic thin-film searches again.
+
+Next useful public work:
+1. pressure-test **Pavlenko dryout/rewetting** against the strongest China-specific failure-boundary evidence;
+2. search specifically for a China analogue to **actual multi-year engineered-surface aging** to finish the MPEI country comparison;
+3. synthesize the three surviving candidates into one **Russia failure-mechanism capability map** with distinct PoC/IP control points.
+
+Stage-0 partner data/coupon evidence remains the main non-public path to further promotion.
+
+---
 
 ## Comparator closure — MPEI reliability + electronics-fan aeroacoustics — 2026-10-04
 
@@ -642,11 +737,11 @@ MPEI ordered porous wick
 | 01 | Global smartphone thermal problem space | ~64% |
 | 02 | Thermal technology landscape | ~44% |
 | 03 | Russian institution landscape / capability atlas | **~66%** |
-| 04 | Russian labs / researchers | **~58%** |
+| 04 | Russian labs / researchers | **~62%** |
 | 05 | Russian papers / patents | **~63%** |
 | 06 | Active-cooling deep dive | **~51%** |
-| 07 | China academic/product benchmark & gap | **~77%** |
-| 08 | Transfer / country comparison / falsification | **~89%** |
+| 07 | China academic/product benchmark & gap | **~82%** |
+| 08 | Transfer / country comparison / falsification | **~93%** |
 | 09 | Collaboration / PoC / 3-year directions | **~62%** |
 
 ## Highest-priority blockers
