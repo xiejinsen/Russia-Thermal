@@ -95,28 +95,31 @@ Pavlenko:
 - background IP.
 
 MPEI:
-- actual layer thickness;
-- geometry scale-down;
-- high-flux transfer;
+- current exact as-built coating distribution/yield;
+- groove geometry scale-down;
+- high-flux transfer of the **exact long-life hierarchy**;
 - copper/phone process.
 
 TPU:
 - vacuum/outgassing;
 - organic layer contamination;
 - copper transfer;
-- sealed rewetting evidence.
+- sealed rewetting evidence;
 - RU2812668 inventor/claim closure is **complete**; mobile/copper relevance remains partial.
 
 No team is contract-ready.
 
 ## Next gate
 
-Use the three briefs to close public/shareable data gaps.
+The public blocker-closure/search phase is complete enough to stop broad literature hunting.
 
-After that:
-- score actual Stage-0 feasibility;
-- select physical coupon routes;
-- only then invest in sealed Stage-1.
+Next:
+1. convert each partner brief into a **Partner Data Request + Stage-0 Experiment Packet**;
+2. obtain shareable partner data or fabricate the smallest discriminating coupon;
+3. update the scorecard only when partner data or experiment evidence changes a cell;
+4. select at most two Stage-1 sealed-device arms only after Stage-0 physical evidence.
+
+Do not re-score based on repository cleanup alone.
 
 
 ## Current decision status — blocker-closure round
