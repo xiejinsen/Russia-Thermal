@@ -106,3 +106,37 @@ No current partner is final.
 ../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
 
 No candidate above is an unconditional collaboration GO.
+
+
+## Foundational / modular collaboration reserve
+
+### Siberian theory–fluid–experiment network
+
+Current status:
+**PARTIALLY VERIFIED MODULAR CAPABILITY NETWORK — not a single consortium.**
+
+Verified current core:
+- Kutateladze ↔ Lavrentyev — direct current microelectronic shear-film modeling link;
+- Kutateladze ↔ NSU — current people/lab/diagnostic execution bridge.
+
+Historical + methodological continuity:
+- ICM/Altai exact-solution line ↔ Kutateladze experiment/mechanism line.
+
+Unverified:
+- one current four-node program;
+- current formal ICM–Kutateladze grant/lab;
+- current direct ICM–Lavrentyev thermal link.
+
+Potential collaboration architecture:
+**Kutateladze anchor**
++ Lavrentyev fluid model
++ NSU execution/diagnostics
++ optional ICM/Altai analytical-stability module.
+
+Why this matters:
+a future Kabov/Chinnov-style phone film-instability PoC may be stronger as a modular team than as a single-PI project.
+
+Current portfolio state:
+**Foundational Reserve / architecture hypothesis.**
+
+This does not change the current Stage-0 surface ranking.
