@@ -8,6 +8,10 @@ For technical introductions, use:
 - [Paper Brief Library](paper_briefs_decision_grade.md)
 - [Patent Brief Library](patent_briefs_decision_grade.md)
 
+For full decision-oriented deep reading, use:
+- [Core Paper 10Q Decision Cards](paper_10q_cards_core_v01.md)
+- [Core Patent 10Q Decision Cards](patent_10q_cards_core_v01.md)
+
 This is not the complete source registry.
 Machine-oriented IDs, verification state and raw metadata remain in:
 [source_register.md](source_register.md)
@@ -43,6 +47,9 @@ For >4 authors, first 3 + *et al.* is used unless a later author is directly rel
 ---
 
 # B. MPEI — hierarchical coatings / wettability
+
+- **[Investigation of Transport Properties of Porous Coatings from Nanoparticles of Aluminum Oxide](https://doi.org/10.1088/1742-6596/2088/1/012022)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, A.V. Lavrikov — *Journal of Physics: Conference Series*, 2021.
+
 
 - **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
 
