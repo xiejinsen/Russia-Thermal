@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~64%**
-**Estimated remaining: ~36%**
+**Estimated research completion: ~66%**
+**Estimated remaining: ~34%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -153,11 +153,14 @@ The final domestic-leadership report is now constrained to include three evidenc
 Current country-level differentiation candidates after stronger China comparison:
 1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
 2. MPEI/Ivanov — **actual 42-month hierarchical-surface operation/aging evidence**, not generic reliability;
-3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
-4. ITP UB RAS — LHP routing/operating-limit/failure physics.
+3. Kutateladze Kabov/Chinnov — **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
 
-Watch / method reserve:
-- TsAGI/PNRPU/CIAM phone-scale aeroacoustic source diagnosis — China already has strong electronic-cooling fan source-imaging and narrow-space/duct acoustics; Russian phone-scale superiority is unproven.
+Watch / reserves:
+- TsAGI/PNRPU/CIAM — phone-scale aeroacoustic method reserve;
+- ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve; China now covers mobile miniaturization, multi-source routing and operating/failure physics.
+
+A useful pattern is emerging:
+the surviving Russia candidates are increasingly **failure-boundary / aging / instability capabilities**, not generic cooling-device categories.
 
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
 
@@ -247,7 +250,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~64% research state.
+It is intentionally **not final** at the current ~66% research state.
 
 The report will ultimately contain:
 - executive decision;
