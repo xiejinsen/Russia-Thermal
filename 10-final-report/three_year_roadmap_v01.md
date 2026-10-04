@@ -90,7 +90,7 @@ At every gate:
 
 ## Current project phase
 
-**Stage-0 Partner Data Request + Coupon Falsification**
+**Stage-0 Partner Data Acquisition + Coupon Falsification**
 
 Repository cleanup, citation migration and report formatting do not advance the roadmap gate.
 
@@ -104,5 +104,8 @@ Current decision gate:
 
 Current experiment gate:
 ../09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md
+
+Current execution packets:
+../09_collaboration-roadmap/stage0_partner_packet_index_v01.md
 
 Other routes remain gated until their engineering evidence reaches comparable maturity.
