@@ -686,8 +686,8 @@ The work supports a high-CHF potential for shear-driven films and builds a metho
 **What we learn for our insight**  
 The valuable Russian line is **film-instability / dry-spot / breakdown physics under gas shear**, not "thin-film cooling" in general.
 
-Important boundary:
-Beijing University of Technology coauthors participate in this paper, so the mechanism is not Russia-exclusive public knowledge.
+Cross-border attribution:
+Beijing University of Technology coauthors participate in this paper. Under the current attribution rule this is **joint capability / knowledge-transfer evidence**. It does not by itself erase the Russian capability signal because Kutateladze has the pre-existing shear-film lineage/platform; independent China capability should be evidenced separately.
 
 **Mobile relevance:** MEDIUM-HIGH mechanism / HIGH system-overhead risk.
 
