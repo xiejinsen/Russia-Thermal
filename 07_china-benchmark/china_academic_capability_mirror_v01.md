@@ -22,6 +22,23 @@ Existing institution-centric map:
 
 ---
 
+## Joint-publication attribution note
+
+A China–Russia coauthored paper is **not automatically an independent China capability comparator**.
+
+For a joint paper to materially weaken a Russia differentiation claim, prefer additional evidence that China independently owns the same capability through:
+- China-led corresponding/senior authorship or experiment platform;
+- an independent Chinese follow-on paper;
+- a domestic Chinese lab/facility lineage;
+- product/patent/engineering evidence.
+
+Joint papers can instead be valuable evidence of:
+- Russian-origin capability;
+- collaboration readiness;
+- successful knowledge transfer.
+
+This prevents double-counting the same joint work as two independent national capabilities.
+
 ## 1. China capability mirror
 
 | Capability domain | Representative China academic signals | Recent evidence / quantitative anchor | Implication for Russia comparison |
