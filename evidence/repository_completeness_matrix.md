@@ -563,3 +563,42 @@ QA judgment:
 
 Research-progress effect:
 **NONE.**
+
+
+### Comparator-closure QA — MPEI actual multi-year engineered-surface aging
+
+Canonical artifact:
+- [MPEI Multi-Year Engineered-Surface Aging vs China Pressure Test](../08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md)
+
+Normalization rule:
+- **actual calendar-time operation**;
+- **accelerated aging / Arrhenius prediction**;
+- **post-failure analysis**;
+- **manufacturing QA**;
+must be treated as different evidence types.
+
+China public capability is strong in:
+- copper-water VC failure physics;
+- oxygen/vacuum reliability;
+- accelerated lifetime prediction;
+- oxidation QA;
+- mobile-scale devices.
+
+No matched public China analogue was recovered for:
+- same engineered evaporator surface;
+- actual multi-year two-phase operation;
+- thermal + morphology + capillary-aging tracking.
+
+Allowed wording:
+> MPEI retains a narrow evidence edge in **actual multi-year engineered-surface aging**, not broad reliability leadership.
+
+Not allowed:
+> MPEI/Russia has better long-term reliability than China.
+
+Remaining gap:
+- phone-scale copper-water transfer;
+- early-warning value of capillary/surface aging;
+- partner access to historical 42-month data.
+
+QA judgment:
+**PASS-WITH-STAGE0-TRANSFER-GAP.**
