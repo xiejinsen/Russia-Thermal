@@ -640,6 +640,175 @@ The open question is scale/integration, not basic method availability.
 
 ---
 
+
+
+# H. Country pressure-test — thin film / LHP
+
+## H1. Kutateladze 12.5 μm slit two-phase-flow experiment
+
+**[An experimental investigation of adiabatic two-phase flow patterns in a slit microchannel with 1:800 aspect ratio](https://doi.org/10.1016/j.expthermflusci.2024.111153)** — Yu.A. Dementyev, E.A. Chinnov, D.Yu. Kochkin, F.V. Ronshin *et al.* — *Experimental Thermal and Fluid Science*, 2024.
+
+**Review status:** PUBLISHER ABSTRACT + METHODS REVIEW.
+
+**Background / problem**  
+Two-phase flows below ~100 μm confinement are poorly characterized, especially in slit channels with extremely high aspect ratio. Such flow-regime changes matter if future coolers compress vapor/liquid transport into very thin structures.
+
+**Technical method**  
+The team fabricated a **12.5 μm-high × 10 mm-wide** slit microchannel (1:800 aspect ratio) using photolithography, anisotropic etching and anodic bonding. Five liquids were tested over broad liquid/gas superficial-velocity ranges. Surface roughness/contact angle and flow patterns were characterized.
+
+**Main conclusion**  
+Flow-pattern transitions depend strongly on surface tension, wettability, Saffman–Taylor instability and transverse pressure-gradient effects. The authors report flow features not typical of larger channels.
+
+**What we learn for our insight**  
+This is a stronger Russia signal than generic "microchannel cooling": it demonstrates experimental access to **extreme-confinement two-phase instability physics**.
+
+But it is adiabatic and not a complete cooler. The phone value is mechanism/diagnostics, not direct thermal performance.
+
+**Mobile relevance:** HIGH-MECHANISM / LOW-SYSTEM.
+
+---
+
+## H2. Kutateladze shear-driven thin-film CHF methodology
+
+**[Shear-Driven Liquid Films in a Channel under Intense Local Heating: Methodology and Critical Heat Flux Results](https://doi.org/10.1615/InterfacPhenomHeatTransfer.2022045099)** — D.V. Zaitsev, V.V. Belosludtsev, E.M. Tkachenko, Fang Ye, Hang Guo, V.V. Cheverda, O.A. Kabov — *Interfacial Phenomena and Heat Transfer*, 2022.
+
+**Review status:** PUBLISHER RECORD + TECHNICAL REVIEW.
+
+**Background / problem**  
+Shear-driven thin liquid films can potentially remove high local heat flux while keeping the liquid layer very thin, but dry spots/film breakdown and measurement uncertainty become dominant.
+
+**Technical method**  
+A flat micro/minichannel with intense local heating is used to validate measurement methodology from convective heat transfer through shear-driven film operation and CHF.
+
+**Main conclusion**  
+The work supports a high-CHF potential for shear-driven films and builds a methodology around failure/breakdown rather than only nominal HTC.
+
+**What we learn for our insight**  
+The valuable Russian line is **film-instability / dry-spot / breakdown physics under gas shear**, not "thin-film cooling" in general.
+
+Important boundary:
+Beijing University of Technology coauthors participate in this paper, so the mechanism is not Russia-exclusive public knowledge.
+
+**Mobile relevance:** MEDIUM-HIGH mechanism / HIGH system-overhead risk.
+
+---
+
+## H3. China capillary-driven thin-film boiling baseline
+
+**[Enhanced capillary-driven thin film boiling on cost-effective gradient wire meshes for high-heat-flux applications](https://doi.org/10.1016/j.expthermflusci.2023.111018)** — Feng Zhou, Jingzhi Zhou, Xunfeng Li, Qihan Chen, Xiulan Huai — *Experimental Thermal and Fluid Science*, 2023.
+
+**Review status:** PUBLISHER ABSTRACT + TECHNICAL REVIEW.
+
+**Background / problem**  
+Capillary-driven thin-film boiling faces a capillary-pressure versus permeability/vapor-escape trade-off.
+
+**Technical method**  
+Four wire-mesh wick structures are compared using DI water; a gradient-porosity composite mesh is diffusion-bonded and tested under atmospheric/reduced-pressure conditions.
+
+**Main conclusion**  
+The gradient wick reports **202.8 W/cm² CHF** and ~**103–122 kW/(m²·K)** maximum HTC depending condition/reporting. The benefit is attributed to balancing capillary force, permeability, bubble separation and liquid replenishment.
+
+**What we learn for our insight**  
+China is already strong in passive thin-film / wick mechanism design. This kills any Russia thesis based merely on "thin film" or "capillary film boiling."
+
+**Mobile relevance:** HIGH comparator for passive two-phase structures.
+
+---
+
+## H4. China ultrahigh-flux thin-film boiling baseline
+
+**[Manipulating thin film boiling to achieve record-breaking high heat flux](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125308)** — Yuxiang Zhang, Xuan Zhao, Jiahua Li, Qingyang Wang, Dawen Zhong, Deyin Zheng, Xiaoze Du, Lin Chen — *International Journal of Heat and Mass Transfer*, 2024.
+
+**Review status:** PUBLISHER ABSTRACT + TECHNICAL REVIEW.
+
+**Background / problem**  
+Thin-film boiling can theoretically sustain extreme heat flux, but membrane strength, liquid pressure and experimental operating path constrain the achievable CHF.
+
+**Technical method**  
+The team strengthens nanoporous thin-film-boiling samples and manipulates liquid pressure/heating power using staged/asynchronous and near-simultaneous operating paths.
+
+**Main conclusion**  
+A reported **2074 W/cm² CHF** is achieved. This is a very strong China-side high-flux thin-film benchmark.
+
+**What we learn for our insight**  
+Headline heat flux cannot be used to justify Kabov as a Russia advantage.
+
+The residual Kabov hypothesis must be:
+**shear-driven free-surface instability control under extreme confinement**, not record heat flux.
+
+**Mobile relevance:** MEDIUM as device architecture; VERY HIGH as comparator pressure.
+
+---
+
+# I. Country pressure-test — LHP
+
+## I1. Maydanik/Chernysheva serviceability conditions
+
+**[An Analysis of the Key Serviceability and Efficiency Conditions of Loop Heat Pipes](https://doi.org/10.56304/S0040363625701152)** — M.A. Chernysheva, Y.F. Maydanik — *Thermal Engineering*, 2025.
+
+**Review status:** PUBLISHER ABSTRACT / DECISION REVIEW.
+
+**Background / problem**  
+LHP operation depends on pressure-loss, capillary pressure, heat leak, wick/working-fluid properties and the thermodynamic relation among evaporator, compensation chamber and condenser.
+
+**Technical method**  
+The paper analytically formulates key LHP serviceability and efficiency conditions using the established thermodynamic/capillary framework.
+
+**Main conclusion**  
+It provides a current synthesis of operating conditions and design relationships from one of the foundational LHP groups.
+
+**What we learn for our insight**  
+This confirms Maydanik's deep theoretical lineage. It does **not** by itself establish a current Russia-only control point, particularly because Chinese teams now experimentally study the same startup/pressure/capillary/failure space.
+
+**Mobile relevance:** MEDIUM mechanism / LOW differentiation after China comparison.
+
+---
+
+## I2. China 1 mm dual-evaporator LHP for laptops
+
+**[Study on heat transfer characteristics of a dual-evaporator ultra-thin loop heat pipe for laptop cooling](https://doi.org/10.1016/j.applthermaleng.2024.122395)** — Xuehao He, Wentao Yan, Shuangfeng Wang — *Applied Thermal Engineering*, 2024.
+
+**Review status:** PUBLISHER ABSTRACT + TECHNICAL REVIEW.
+
+**Technical method / result**  
+A **1 mm-thick** dual-evaporator LHP targets spatially separated CPU/GPU heat sources. It is tested under equal/unequal loads and orientations.
+
+Reported:
+- successful startup from 5 W–5 W to 20 W–20 W horizontally;
+- max ~22 W–22 W;
+- minimum thermal resistance ~0.69 °C/W;
+- orientation and heat-leak effects quantified.
+
+**What we learn for our insight**  
+China already combines **miniaturization + multi-source routing** in a directly small-electronics architecture. This materially weakens Maydanik as a country-level differentiation thesis.
+
+**Mobile relevance:** HIGH comparator.
+
+---
+
+## I3. China explicit multi-source LHP failure-boundary experiment
+
+**[Experimental Study on a Dual Compensation Chamber Multi-Evaporator Loop Heat Pipe System](https://doi.org/10.3390/eng7020084)** — Deqing Huang, Yuankun Zhang, Huajie Li, Chunsheng Guo — *Eng*, 2026.
+
+**Review status:** FULL OPEN-ACCESS ARTICLE / DECISION REVIEW.
+
+**Technical method**  
+A dual-compensation-chamber, multi-evaporator LHP is tested across charge ratio, startup interval and heat loads to determine hydrodynamic stability and failure limits.
+
+**Main conclusion**  
+Reported:
+- optimal charge ratio ~75%;
+- startup interval ~8–10 min;
+- stable total heat load ~270 W;
+- single-stage failure threshold around **70 W**;
+- failure attributed to cumulative pressure drop exceeding capillary pumping ability / insufficient liquid supply.
+
+**What we learn for our insight**  
+This directly overlaps the "multi-source operating-limit / capillary-failure physics" argument previously used to preserve Maydanik as a Russia difference.
+
+Maydanik remains an expert/knowledge reserve, but the broad current country-level differentiation is no longer defensible.
+
+**Mobile relevance:** LOW direct scale / HIGH mechanism comparator.
 # G. Synthesis for our project
 
 The papers collectively tell us:
