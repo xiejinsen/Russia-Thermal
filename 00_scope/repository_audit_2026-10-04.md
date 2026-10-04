@@ -1,3 +1,8 @@
+> **AUDIT SNAPSHOT / NON-AUTHORITATIVE**
+>
+> This file records repository conditions found during the 2026-10-04 architecture audit. It is **not** the live project-status source.
+> Current authority: [PROGRESS](../PROGRESS.md), [Repository Completeness Matrix](../evidence/repository_completeness_matrix.md), and the relevant workstream README/current decision file.
+>
 # Repository Architecture & Content Audit — 2026-10-04
 
 ## Audit objective
@@ -159,3 +164,23 @@ Highest-value next work:
 3. freeze Stage-0 coupon matrix.
 
 Do not start another broad discovery wave before those are completed.
+
+
+## Follow-up audit after Stage-0 blocker closure
+
+Later on 2026-10-04, after the project advanced to ~58%, a second governance pass found four new maintenance issues:
+
+1. this dated audit itself could be mistaken for current status because it contained old ~49% / next-work statements;
+2. `08_opportunities-transfer/README.md` described local authority in a way that could conflict with the repository-wide hierarchy;
+3. the canonical Stage-0 partner scorecard lacked a local original-source evidence spine;
+4. several current 09 partner/PoC files still used bare URLs and stale pre-blocker-closure wording.
+
+Corrective action:
+- mark dated audit files as non-authoritative snapshots;
+- preserve `PROGRESS.md` as the sole global status authority;
+- keep workstream authority local;
+- add local evidence spine to the partner scorecard;
+- migrate current 09 decision/PoC files to readable citations first;
+- update TPU/MPEI PoC descriptions to the latest blocker-closure state.
+
+This follow-up is a governance correction and does **not** change research completion.
