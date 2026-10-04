@@ -1,21 +1,27 @@
 # 05 — Papers, Patents & Core Technologies
 
-## Goal
+Last reviewed: 2026-10-04
 
-Deep-dive high-signal Russian technical lines using primary papers, patent families and claim-level comparison.
+## Role
+
+Interpret decision-relevant primary papers and patent families. This folder is not the central source registry.
+
+Central source metadata lives in:
+../evidence/source_register.md
 
 ## Current outputs
 
-- [High-signal seed set](high_signal_seed_set.md)
+- [High-signal seed set — historical/seed](high_signal_seed_set.md)
 - [Film/droplet patent prior art](patent_prior_art_film_droplet_v01.md)
+- [Film/droplet engineering addendum](film_droplet_engineering_addendum_v02.md)
 - [Surface/wick patent map](surface_wick_patent_map_v01.md)
 - [Surface/wick claim chart](surface_wick_claim_chart_v01.md)
 
-## Current status — 2026-10-03
+## Current state
 
-The workstream is now in **claim-level prior-art / whitespace analysis**, not seed collection.
+This workstream is now in **claim-level prior-art / whitespace analysis**, not seed collection.
 
-### Completed first-pass patent coverage
+First-pass coverage includes:
 
 Russia:
 - Kutateladze film/droplet lineage;
@@ -31,9 +37,9 @@ China / OEM:
 - Honor composite capillary / vapor-channel architecture;
 - adjacent OPPO/vivo records identified.
 
-## Main IP insight
+## Current IP interpretation
 
-Broad claims around:
+Broad ideas around:
 - hydrophilic/hydrophobic surfaces;
 - biphilic patterns;
 - laser-modified wicks;
@@ -42,7 +48,7 @@ Broad claims around:
 
 are crowded.
 
-Promising under-mapped space is at the intersection of:
+More interesting under-mapped space lies at the intersection of:
 - target-fluid behavior;
 - <0.5 mm sealed confinement;
 - dryout/rewetting;
@@ -50,12 +56,23 @@ Promising under-mapped space is at the intersection of:
 - post-manufacturing wetting retention;
 - phone-specific system integration.
 
-## Still incomplete
+## Open evidence gaps
 
-- TPU RU2812668 direct inventor/claim extraction;
-- exact family/status analysis for all promoted patents;
+- TPU RU2812668 inventor / full claim extraction;
+- exact family/status review for promoted patents;
 - OPPO/vivo independent claims;
-- Huawei prior-collaboration contractual/background-IP boundary;
-- professional FTO/legal review.
+- Huawei-related prior-collaboration background-IP boundary;
+- legal review for any final FTO conclusion.
 
-No repository statement should be treated as legal FTO advice.
+## Rule
+
+Do not duplicate raw source metadata here if it already exists in the source register.
+
+Store here only:
+- technical interpretation;
+- claim comparison;
+- lineage;
+- IP whitespace / risk;
+- decision relevance.
+
+No repository statement is legal FTO advice.
