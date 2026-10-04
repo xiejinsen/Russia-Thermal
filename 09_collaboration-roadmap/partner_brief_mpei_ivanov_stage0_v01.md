@@ -192,3 +192,77 @@ But among challengers, this line now has the **strongest public long-duration tw
 - phone heat-flux transfer: LOW
 - thin-phone geometry: LOW
 - IP lineage: HIGH
+
+
+## Public blocker closure — dissertation + thin-channel CHF lineage
+
+Research date: 2026-10-04
+
+### Historical/as-built process detail now public
+
+The 2024 official MPEI dissertation provides:
+- groove radius around **100 μm**;
+- representative thermosyphon coating state around **5 μm** nanoparticle-layer thickness;
+- representative Al2O3 particle scale around **150 nm**;
+- other deposition conditions capable of producing >10–15 μm coating;
+- capillary-aging behavior;
+- permeability estimated mainly through porous-media assumptions/modeling rather than a phone-grade direct measurement.
+
+Therefore:
+**"actual coating thickness completely unknown" is no longer an accurate blocker.**
+
+The remaining manufacturing question is:
+> what is the **current as-built thickness distribution / profile / yield** for the exact hierarchy MPEI would transfer to a phone coupon?
+
+### High-flux / thin-channel lineage now public
+
+**[Nanoparticle Coating of a Microchannel Surface is an Effective Method for Increasing the Critical Heat Flux](https://doi.org/10.1134/S0040601517040073)** — M.V. Shustov, Yu.A. Kuzma-Kichta, A.V. Lavrikov — *Thermal Engineering*, 2017.
+
+Source facts:
+- water boiling;
+- 0.2 mm-high channel;
+- Al2O3 coating;
+- CHF reported about 15–50% higher than uncoated channel in tested cases.
+
+**[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, **N.S. Ivanov** *et al.* — *Journal of Physics: Conference Series*, 2020.
+
+Source facts:
+- water;
+- horizontal ~12.5 × 3 × 0.2 mm microchannel;
+- Al2O3 coating;
+- explicit CHF / heat-transfer-crisis study.
+
+### Decision impact
+
+Upgrade:
+- **high-flux evidence: UNKNOWN/weak → PARTIAL**
+- **thin-geometry capability lineage: LOW → PARTIAL**
+
+Do **not** upgrade to PASS because:
+- these are earlier thin-channel configurations;
+- the exact 2026 long-life hierarchical groove + Al2O3 surface was not tested there;
+- passive sealed-VC operation is different from flow boiling.
+
+### Reclassified actions
+
+**PARTNER-ONLY**
+- current groove depth / width / pitch / tolerance;
+- current as-built coating profile and yield;
+- any current copper or high-flux data.
+
+**EXPERIMENT-ONLY**
+- scaled groove ladder;
+- measured permeability;
+- copper;
+- exact hierarchy at high heat flux;
+- DI-water sealed VC;
+- vacuum / cycling.
+
+### Stage-0 decision
+
+**GO WITH PREREQUISITE.**
+
+Prerequisite:
+> one complete current as-built geometry/coating dataset + agreement on a geometry scale-down ladder.
+
+MPEI remains priority #2.
