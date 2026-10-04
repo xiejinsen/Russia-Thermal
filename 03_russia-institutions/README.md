@@ -13,12 +13,16 @@ Institution-level coverage database used to avoid survivorship bias.
    - includes universities, RAS institutes and other high-signal research organizations;
    - maps capability -> institution -> mobile-transfer state.
 
-2. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
+2. [Russia Foundational Math-Physics → Thermal Capability Map](russia_foundational_math_physics_capability_v01.md)
+   - exact/stability/interfacial/reduced-model foundational layer;
+   - maps mathematical method -> thermal mechanism -> design/PoC leverage.
+
+3. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
    - minimum university set;
    - current HIGH-SIGNAL / KEEP / NO CURRENT SIGNAL state;
    - global + Russian domestic ranking context.
 
-3. [Candidate Queue](candidate_queue.md)
+4. [Candidate Queue](candidate_queue.md)
    - institutions/teams retained for deeper investigation.
 
 ## HISTORICAL SNAPSHOTS
