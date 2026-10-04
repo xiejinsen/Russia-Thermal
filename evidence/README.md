@@ -17,6 +17,8 @@ Technical conclusions should live in workstreams 03–09, not here.
 ## Human-readable entry point
 
 - [Human-Readable Bibliography](readable_bibliography.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
+- [Decision-Grade Paper Briefs](paper_briefs_decision_grade.md) — background, method, conclusion and mobile/chip insight for each current key paper.
+- [Decision-Grade Patent Briefs](patent_briefs_decision_grade.md) — problem, claim/control point, IP crowding and mobile/chip insight for each current key patent.
 
 ## Registers
 
