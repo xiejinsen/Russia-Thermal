@@ -354,3 +354,47 @@ MPEI/Ivanov is now priority #2 because of stronger long-duration two-phase relia
 
 Detailed 3–6 month brief:
 ../09_collaboration-roadmap/partner_brief_pavlenko_stage0_v01.md
+
+
+## Public-search exit / partner-only boundary
+
+Research date: 2026-10-04
+
+A targeted search was repeated across:
+- the modified-mesh journal record;
+- same-team precursor/review publications;
+- patent/author searches;
+- Russian/English process terminology around dynamic hydrogen-bubble templating.
+
+### Publicly recovered
+- steel mesh 40;
+- HFE-7100;
+- thin horizontal liquid layer about 6 mm;
+- dynamic hydrogen-bubble matrix/template modification;
+- three process conditions;
+- reported optimal HTC improvement up to ~81% versus the no-mesh-coating surface stated in the public abstract.
+
+### Not recovered to decision-grade public precision
+- electrolyte chemistry;
+- current density / voltage;
+- deposition/modification time;
+- deposited feature/layer thickness;
+- open-area or permeability penalty;
+- adhesion / handling window;
+- copper-specific recipe;
+- validated 60–100 μm mesh transfer.
+
+**Research decision:**
+continuing open-ended public search on those process parameters is now low-yield.
+
+Reclassify:
+- exact process recipe → **PARTNER-ONLY**;
+- current-batch morphology / adhesion data → **PARTNER-ONLY**;
+- permeability on 60–100 μm mesh → **EXPERIMENT-ONLY**;
+- copper transfer → **EXPERIMENT-ONLY**;
+- DI-water/product-fluid transfer → **EXPERIMENT-ONLY**;
+- vacuum / degassing / cycling → **EXPERIMENT-ONLY**.
+
+This does not downgrade the mechanism. It changes the next action from "search more" to **request process window + run a thin-coupon falsification**.
+
+**Current decision:** KEEP / GO WITH PREREQUISITE as Stage-0 priority #1.
