@@ -12,7 +12,7 @@ The actionable data-request / coupon / measurement / success-kill / IP package i
 
 ## Decision question
 
-Can MPEI's hierarchical microgroove + Al2O3 nanoparticle surface retain its unusually strong **long-term two-phase durability** after aggressive scaling into a phone-relevant thin VC surface geometry and high heat-flux regime?
+Can MPEI's hierarchical microgroove + Al2O3 nanoparticle surface retain useful function after aggressive phone-scale transfer, and can its unusual **42-month surface/capillary aging dataset** yield an early indicator of dryout-margin degradation that complements China's strong copper-water VC reliability stack?
 
 ## Why this line moved up
 
@@ -71,6 +71,21 @@ The phone question is whether the same hierarchical transport principle can be s
 - <=35 μm added functional layer;
 - <=120–150 μm total surface/wick budget.
 
+### Exact China comparator closure
+
+China is already stronger in:
+- copper-water VC failure physics;
+- oxygen/vacuum-process control;
+- accelerated lifetime prediction;
+- wick-oxidation QA;
+- mobile-scale two-phase hardware.
+
+No matched public China analogue was recovered for the exact evidence type:
+**one engineered evaporator surface under actual multi-year two-phase operation with thermal + morphology + capillary-aging tracking.**
+
+Therefore MPEI's value is:
+**actual multi-year engineered-surface aging evidence**, not generic reliability leadership.
+
 ## Proposed 3–6 month package
 
 ### Phase M0 — process/geometry disclosure
@@ -122,7 +137,7 @@ Test:
 - 100 cycles.
 
 Question:
-does the capillary/wetting function survive without relying on the geotechnical thermosyphon environment?
+does the capillary/wetting function survive without relying on the thermosyphon environment, and does its degradation provide a useful early warning for loss of dryout margin?
 
 ### Phase M3 — higher heat-flux step-up
 Month 3–5
