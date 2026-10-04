@@ -153,3 +153,34 @@ same substrate + same target fluid + same thickness envelope as Pavlenko/China r
 - cycling;
 - manufacturable area;
 - ability to produce <50 μm functional layer.
+
+## Stage-0 fluid / thickness update — 2026-10-04
+
+Current public evidence confirms:
+- active hierarchical-coating / thermosyphon work;
+- adjustable-wettability IP;
+- micro/nanoparticle coating lineage.
+
+This research round did **not** recover direct public evidence for:
+- HFE-7100 use in the current Ivanov/Alyautdinova line;
+- another identified phone-product dielectric fluid;
+- <0.5 mm sealed VC integration;
+- total functional coating thickness under phone manufacturing conditions.
+
+This is **NOT PUBLICLY EVIDENCED**, not evidence of absence.
+
+### Updated Stage-0 data requirement
+
+Before promotion to sealed VC:
+1. measure actual total coating thickness;
+2. test on copper or phone-relevant metal;
+3. test water as the first sealed-VC reference fluid;
+4. test vacuum/process stability;
+5. test 100 -> 500 thermal cycles;
+6. quantify capillary/wetting benefit and any permeability penalty.
+
+Target:
+- <=35 um added functional layer preferred;
+- <=150 um total surface/wick element stretch ceiling.
+
+The line remains a **Tier B+ experimental challenger**, not Tier A.
