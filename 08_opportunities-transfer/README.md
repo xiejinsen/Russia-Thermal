@@ -23,53 +23,62 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 
 For current portfolio status:
 1. `direction_decision_gate_v01.md`
-2. `../PROGRESS.md`
+2. `smartphone_constraint_model_v01.md`
+3. `../PROGRESS.md`
 
-Other files provide supporting analysis.
+## Current Tier-A interpretation
 
-## Current interpretation
+Pavlenko/Kutateladze remains lead only for:
 
-### Tier A
-Pavlenko/Kutateladze remains lead only for the narrowed thesis:
+**working-fluid-transferable dryout / rewetting / wetting-state retention under <0.5 mm-class sealed confinement.**
 
-**target-fluid dryout / rewetting / wetting-state retention under sub-mm sealed confinement.**
+This round added two stricter gates:
 
-Generic porous, laser, hydrophilic, biphilic and composite-wick processing is already crowded.
+### Geometry transfer gate
+A modern reference has ~0.2 mm internal channel height, while published Pavlenko mesh evidence includes 100–220 um wire diameters.
 
-### Challengers
-- TPU: target-fluid biphilic / contrast-wetting
-- MPEI Ivanov line: tunable wettability / hierarchical coatings
-- MPEI ordered-wick line: pre-device challenger
+Therefore:
+- do not copy thick published mesh directly;
+- test mechanism/process transfer to ~60–100 um-class phone-relevant structures.
 
-### Other portfolio
-- film/droplet hybrid: Tier A-
-- compute + cooling adaptive control: Tier B+
-- multi-hotspot routing: Tier B
-- confined microfan aeroacoustics: Tier B
+### Working-fluid transfer gate
+HFE-7100 is no longer assumed to be the product fluid.
 
-## Completed gates
+Use:
+- water as primary sealed copper-VC reference;
+- HFE-7100 only as legacy mechanism bridge;
+- future dielectric fluid only after a separate sustainability/supply/material screen.
 
-Completed first pass:
-- modern China UTVC baseline;
-- Pavlenko vs TPU vs MPEI comparison;
-- surface/wick patent map;
-- lead partner-role verification;
-- IP-aware PoC-1 restructuring.
+## Current challengers
+
+- TPU: biphilic / contrast-wetting Stage-0 challenger
+- MPEI Ivanov: hierarchical/tunable coating Stage-0 challenger
+- MPEI ordered wick: pre-device challenger
+
+## Completed this round
+
+- phone packaging / teardown baseline — first pass;
+- internal UTVC geometry calibrated;
+- Pavlenko mesh geometry partly closed;
+- HFE-7100 product-path assumption corrected;
+- Stage-0 coupon matrix v0.1 frozen;
+- OPPO/vivo adjacent OEM patent records extended.
 
 ## Next gate
 
-1. phone packaging / teardown baseline;
-2. close remaining patent/claim gaps;
-3. quantify Stage-0 coupon specifications;
-4. target-fluid / vacuum / cycling evidence for promoted surface routes;
-5. freeze Stage-0 hardware matrix;
-6. then create partner-specific 3–6 month collaboration briefs.
+1. close remaining Stage-0 process evidence;
+2. verify physical manufacturability of ~60–100 um Pavlenko transfer;
+3. close TPU patent inventor/claim mapping;
+4. quantify MPEI coating thickness;
+5. complete promoted patent family/status review;
+6. then produce partner-specific 3–6 month collaboration briefs.
 
 ## Update rule
 
-If a Tier, kill decision, or technical thesis changes, update:
-- this index if portfolio structure changes;
-- direction decision gate;
+When Tier, transfer gate, fluid/geometry assumption or PoC changes, refresh:
+- decision gate;
+- constraint model;
+- 09 PoC files;
 - PROGRESS;
-- relevant 09 PoC/partner file;
-- CHANGELOG when decision-relevant.
+- QA matrix;
+- CHANGELOG.
