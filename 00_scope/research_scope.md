@@ -1,6 +1,6 @@
 # Research Scope
 
-Last reviewed: 2026-10-03
+Last reviewed: 2026-10-04
 
 ## Decision context
 
@@ -54,6 +54,64 @@ Excluded product domains may be mined only for transferable mechanisms:
 - aeroacoustics;
 - advanced porous / capillary structures;
 - adaptive thermal control.
+
+## Mobile-terminal relevance hard gate
+
+This project is **not a general thermal-engineering survey**.
+
+A technology, lab, paper or patent may enter the main research line only if at least one of the following is true:
+
+1. **Direct mobile-terminal relevance**
+   - smartphone / tablet thermal management;
+   - phone VC / heat pipe / graphite / TIM / active cooler;
+   - mobile thermal control or workload-aware thermal management.
+
+2. **Direct chip / package thermal relevance**
+   - semiconductor / processor / memory / package heat removal;
+   - hotspot spreading/routing;
+   - high-heat-flux electronics cooling;
+   - package-to-spreader / package-to-VC transfer.
+
+3. **Credible transfer path to mobile terminals**
+   - geometry can plausibly scale to phone thickness/area;
+   - power/noise/mass/ingress/reliability can plausibly fit;
+   - materials/process can plausibly enter phone manufacturing;
+   - a phone-relevant PoC can be defined.
+
+Evidence from aerospace, energy, refrigeration, nuclear, permafrost, industrial heat exchangers, etc. is allowed **only as mechanism evidence** until a credible mobile/chip transfer path is demonstrated.
+
+### Promotion rule
+
+No direction may be promoted to:
+- HIGH-SIGNAL partner;
+- Tier A/B portfolio;
+- Stage-0 collaboration;
+- Strategic Bet;
+
+solely because its thermal physics is strong.
+
+It must answer:
+
+> **What mobile-terminal or chip-thermal problem does this solve, and what is the credible transfer path?**
+
+If that answer is weak, the evidence remains:
+**mechanism-source / supporting-only / out-of-scope for decision**.
+
+### Mandatory normalization for transferred evidence
+
+For non-mobile source domains, record:
+- heat flux;
+- characteristic thickness / channel size;
+- working fluid;
+- orientation;
+- power overhead;
+- pressure/flow source;
+- material/process;
+- reliability duration;
+- device/package geometry;
+- gap versus phone conditions.
+
+Do not compare a thermosyphon, reactor, aerospace or industrial result with a phone result without explicitly marking non-comparability.
 
 ## Time boundary
 
