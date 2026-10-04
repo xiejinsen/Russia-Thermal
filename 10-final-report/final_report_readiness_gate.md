@@ -204,8 +204,8 @@ Supporting Russia evidence:
 - shear-driven local-heating/CHF lineage;
 - 2024 12.5 μm-high × 10 mm slit two-phase-flow experiment.
 
-Important:
-the 2022 shear-film paper includes Beijing University of Technology coauthors, so public knowledge is not Russia-exclusive.
+Joint-authorship rule:
+the 2022 shear-film paper includes Beijing University of Technology coauthors. This is collaboration / knowledge-transfer evidence and does not automatically cancel Russian capability attribution. The gate should compare **independent capability**, research lineage and platform ownership, not author nationality alone.
 
 Current final-report state:
 **Reserve / high-risk mechanism — narrow differentiation only.**
@@ -239,3 +239,25 @@ Active:
 Watch:
 - TsAGI/PNRPU/CIAM — phone-scale aeroacoustic methods;
 - Maydanik/ITP UB RAS — LHP knowledge/failure analysis.
+
+
+### Foundational mathematical-physics gate
+
+A new enabling layer is now in scope:
+- applied mathematics;
+- mathematical physics;
+- nonlinear stability / bifurcation;
+- reduced-order / exact-solution modeling;
+- interfacial transport theory.
+
+Current Russian evidence is promising but preliminary.
+
+Promotion to a final Russia advantage requires:
+1. direct linkage to a thermal failure/control problem;
+2. strong independent China/global comparator;
+3. a measurable benefit such as faster prediction, a better instability boundary, a reduced experiment set, or a new controllable variable;
+4. a credible partner/platform capable of transferring the method;
+5. a phone/chip PoC or design decision.
+
+Current state:
+**FOUNDATIONAL CAPABILITY CANDIDATE — NOT YET GATED IN.**
