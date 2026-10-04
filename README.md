@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~58%**
-**Estimated remaining: ~42%**
+**Estimated research completion: ~59%**
+**Estimated remaining: ~41%**
 
 Current phase:
 **Stage-0 Partner Data Request + Coupon Falsification**
@@ -189,6 +189,9 @@ Partner-specific 3–6 month briefs are indexed in:
 Current normalized decision matrix:
 [Stage-0 Partner × Technology Decision Scorecard](09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md).
 
+Current execution packet set:
+[Stage-0 Partner Data Request + Experiment Packets](09_collaboration-roadmap/stage0_partner_packet_index_v01.md).
+
 Current decisions:
 - Pavlenko — **GO WITH PREREQUISITE**
 - MPEI / Ivanov — **GO WITH PREREQUISITE**
@@ -225,7 +228,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~58% research state.
+It is intentionally **not final** at the current ~59% research state.
 
 The report will ultimately contain:
 - executive decision;
