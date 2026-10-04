@@ -51,7 +51,7 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 
 | Capability domain | High-signal Russian institutions / lines | What is publicly evidenced now | Mobile/chip transfer state | Current country-level interpretation |
 |---|---|---|---|---|
-| **Boiling / CHF / dryout / rewetting** | **Kutateladze Institute SB RAS — Pavlenko/Shvetsov**; MPEI Ivanov lineage; NSU adjacent boiling diagnostics | dielectric HFE-7100 boiling, modified mesh, CHF/dryout, capillary surfaces; MPEI 0.2 mm water-boiling/CHF lineage | **High mechanism relevance / partial phone transfer** | One of Russia's strongest mechanism domains; potential value is not generic boiling but failure-boundary / dryout / rewetting control under constrained geometry |
+| **Boiling / CHF / dryout / rewetting** | **Kutateladze Institute SB RAS — Pavlenko/Surtaev/Shvetsov/Zhukov**; MPEI Ivanov lineage; NSU adjacent boiling diagnostics | HFE-7100 / Novec reversible→irreversible dry-spot dynamics; IR + reflected-light + ML-assisted crisis analysis; layer-height crisis transition; structured-surface drying fronts; MPEI 0.2 mm water-boiling/CHF lineage | **High mechanism relevance / partial phone transfer** | Independent China already covers dryout/rewetting, treated mesh and dryout modeling; residual Russian signal is **dielectric irreversible-dryout / boiling-crisis diagnostic depth**, not generic dryout expertise |
 | **Ultra-thin VC / wick / surface** | Kutateladze/Pavlenko; **MPEI/Ivanov**; TPU/Feoktistov; MPEI ordered-wick line | modified mesh, hierarchical Al2O3 coating, adjustable wettability, ordered porous modeling, laser/wetting surfaces | **Partial**; no Russian public 0.25–0.4 mm phone-class VC frontier demonstrated | Russia is a **mechanism/process contributor**, not currently a device-level UTVC leader |
 | **Thin film / droplet / spray / interfacial transport** | **Kutateladze — Kabov/Kochkin/Chinnov**; TPU/Feoktistov | shear-driven film/dry-spot/CHF lineage; **12.5 μm-high × 10 mm slit** two-phase instability mapping; microdroplet generation | **Mechanism strong / system transfer low** | broad thin-film advantage is killed by strong China evidence; residual Russia value is **shear-driven free-surface instability/dry-spot physics under extreme confinement** |
 | **LHP / passive routing** | **Institute of Thermal Physics UB RAS — Maydanik/Chernysheva/Vershinin** | foundational/deep LHP lineage; current serviceability theory; flat/flexible devices | **Partial** | China now covers mobile miniaturization, multi-source routing and operating/failure physics; Maydanik is **Watch / knowledge reserve**, not an active country-differentiation candidate |
@@ -288,8 +288,8 @@ Detailed map:
 
 These are **candidates for China comparison**, not final advantages:
 
-1. **Dielectric-fluid / modified-mesh dryout and rewetting physics**
-   - Kutateladze / Pavlenko.
+1. **Dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**
+   - Kutateladze / Pavlenko–Surtaev–Shvetsov–Zhukov.
 2. **Actual multi-year hierarchical two-phase surface operation / aging**
    - MPEI / Ivanov.
 3. **Shear-driven microfilm / interfacial-instability / dry-spot physics**
@@ -300,6 +300,9 @@ Watch / reserves:
 - **LHP knowledge / failure analysis** — ITP UB RAS / Maydanik; foundational depth remains, but current China comparison closes the country-differentiation claim.
 
 TPU surface engineering remains a **partner challenger**, but not yet a country-level Russia advantage because China/global surface prior art is crowded.
+
+Pavlenko focused pressure test:
+[Independent-China dryout / rewetting comparison](../08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md).
 
 ---
 
