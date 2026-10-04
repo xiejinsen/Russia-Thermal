@@ -4,6 +4,10 @@ Last reviewed: 2026-10-04
 
 Purpose: provide a readable bibliography for the project’s **decision-relevant** evidence.
 
+For technical introductions, use:
+- [Paper Brief Library](paper_briefs_decision_grade.md)
+- [Patent Brief Library](patent_briefs_decision_grade.md)
+
 This is not the complete source registry.
 Machine-oriented IDs, verification state and raw metadata remain in:
 [source_register.md](source_register.md)
