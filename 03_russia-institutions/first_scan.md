@@ -1,3 +1,10 @@
+> **HISTORICAL SNAPSHOT — SUPERSEDED FOR CURRENT STATUS**
+>
+> This file preserves the first discovery scan. Do **not** use it as the current institution/role status source.
+> Current authority: [03 README](README.md), [Major University Coverage Matrix](major_university_coverage_matrix.md), [Candidate Queue](candidate_queue.md).
+>
+> Last status review: 2026-10-04.
+
 # Russia Institution Landscape — First Scan
 
 Status: preliminary seed map. No overall ranking.
