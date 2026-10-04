@@ -7,7 +7,8 @@ Last reviewed: 2026-10-04
 Interpret decision-relevant primary papers and patent families. This folder is not the central source registry.
 
 Central source metadata lives in:
-../evidence/source_register.md
+- [Source Register](../evidence/source_register.md)
+- [Human-Readable Bibliography](../evidence/readable_bibliography.md) — preferred entry point for browsing papers/patents.
 
 ## Current outputs
 
@@ -76,3 +77,16 @@ Store here only:
 - decision relevance.
 
 No repository statement is legal FTO advice.
+
+
+## Citation display rule
+
+Human-facing files in this workstream should show:
+
+**[Paper title](link)** — Authors — *Journal*, Year.
+
+For patents:
+
+**[Patent title](link)** — Inventors — Patent No. — Assignee — Year.
+
+Do not use a bare DOI/URL as the visible citation unless the file is a machine-oriented registry.
