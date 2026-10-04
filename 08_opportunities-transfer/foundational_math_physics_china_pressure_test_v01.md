@@ -242,3 +242,25 @@ Before leadership-final promotion:
 2. identify strongest domestic Chinese exact/analytical comparator beyond numerical stability models;
 3. test whether the analytical method can predict an experimentally relevant instability boundary with fewer experiments;
 4. determine whether the method can be reduced to a tool our phone thermal team could actually use.
+
+
+## 12. Network verification update — 2026-10-04
+
+The first next gate — whether the Russian foundational line is connected to a real experimental ecosystem — is now partially closed.
+
+Verified:
+- Kutateladze ↔ Lavrentyev current direct technical collaboration on shear-driven film cooling for microelectronics;
+- Kutateladze ↔ NSU current institutional / lab / talent bridge;
+- historical direct Goncharova/Bekezhanova ↔ Kabov/Lyulin theory–experiment collaboration;
+- current exact-solution papers continue to use/cite the Kutateladze experimental lineage.
+
+Not verified:
+- current formal ICM–Kutateladze joint project;
+- current direct ICM–Lavrentyev project;
+- one unified consortium.
+
+Decision update:
+**Siberian cluster hypothesis -> PARTIALLY VERIFIED MODULAR CAPABILITY NETWORK.**
+
+Partner architecture consequence:
+use Kutateladze as the anchor; treat Lavrentyev and NSU as verified modules; treat ICM/Altai as an optional theory module pending current partner confirmation.
