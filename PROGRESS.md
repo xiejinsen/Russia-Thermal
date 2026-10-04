@@ -18,7 +18,28 @@ This increase from ~49% reflects substantive engineering research:
 - working-fluid sustainability correction;
 - Stage-0 coupon matrix freeze.
 
-It does not count repository housekeeping as research progress.
+It does not count repository housekeeping or report scaffolding as research progress.
+
+## Final-report framework — 2026-10-04
+
+The gated final decision/report layer is now established in `10-final-report/`.
+
+Created:
+- `README.md` — final-report architecture and promotion rule;
+- `executive_decision_v01.md` — management-level decision shell;
+- `full_technical_report_v01.md` — claim-driven full-report structure;
+- `strategic_bets_v01.md` — standardized opportunity-card format;
+- `collaboration_portfolio_v01.md` — partner-specific 3–6 month collaboration format;
+- `three_year_roadmap_v01.md` — 0–6 / 6–18 / 18–36 month frame;
+- `evidence_appendix_index.md` — audit-trail index;
+- `final_report_readiness_gate.md` — mandatory promotion gate.
+
+Important:
+- Workstream 10 is **not** an evidence authority;
+- it cannot override Workstreams 00–09;
+- current candidate bets remain provisional;
+- research completion remains ~52%.
+
 
 ## This round — Phone Packaging + Stage-0 Calibration
 
