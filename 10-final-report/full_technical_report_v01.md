@@ -56,6 +56,7 @@ Questions:
 - What is their recent evidence quality?
 
 Sources:
+- ../03_russia-institutions/russia_thermal_capability_atlas_v01.md
 - ../03_russia-institutions/
 - ../04_researchers-labs/
 - ../evidence/russia_domestic_ranking_register.md
@@ -76,12 +77,24 @@ Questions:
 - Which pairings create a plausible joint control point?
 
 Sources:
+- ../07_china-benchmark/china_academic_capability_mirror_v01.md
 - ../07_china-benchmark/
+- ../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md
 - ../08_opportunities-transfer/russia_china_gap_v01.md
 - ../08_opportunities-transfer/direct_comparisons_v01.md
 
 Required output:
 **Complementarity matrix**, not national ranking.
+
+### Current management correction — 2026-10-04
+
+The report must not state:
+- Russia has a broad two-phase reliability advantage;
+- Russia has a broad aeroacoustic advantage.
+
+Current evidence supports only:
+- MPEI: narrow value in **actual 42-month operation/aging of one hierarchical evaporator surface**, complementary to strong Chinese copper-water VC failure/lifetime engineering;
+- TsAGI/PNRPU/CIAM: **Watch / method reserve** for actual phone-scale microfan diagnosis, because China already has strong electronic-cooling fan source-imaging, duct and narrow-space aeroacoustic research.
 
 ---
 
