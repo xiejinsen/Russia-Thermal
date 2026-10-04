@@ -7,6 +7,19 @@ Last updated: 2026-10-04
 **Estimated research completion: ~55%**
 **Estimated remaining research: ~45%**
 
+## Scope guard reaffirmed — mobile terminal / chip thermal only
+
+All future rounds must keep the main decision surface centered on:
+- smartphone / tablet thermal management;
+- mobile SoC / memory / package heat;
+- ultra-thin heat spreading / two-phase devices;
+- phone-compatible active cooling;
+- mobile thermal control.
+
+Non-mobile thermal systems may contribute **mechanism evidence only** until a quantified phone/chip transfer path is established.
+
+This scope correction does not change the ~55% research completion estimate.
+
 ## Current phase
 
 **Stage-0 partner execution design + manufacturability falsification**
