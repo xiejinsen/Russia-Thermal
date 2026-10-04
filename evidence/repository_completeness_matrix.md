@@ -11,12 +11,12 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 00 Scope / governance | current | strong | none critical | PASS |
 | 01 Global baseline | refreshed | good | more Huawei/China flagship geometry; sustained-power data | PASS-WITH-GAPS |
 | 02 Technology landscape | current | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
-| 03 Russia institutions | current | good | broader non-university coverage | PASS-WITH-GAPS |
+| 03 Russia institutions | **capability atlas current** | strong first pass | broader non-university coverage beyond current high-signal cluster | PASS-WITH-GAPS |
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
 | 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
 | 06 Active cooling | current | medium-good | EHD, piezo/MEMS, installed-fan evidence | NEEDS-WORK |
-| 07 China benchmark | current | good | independent OEM measurements / supply-chain detail | PASS-WITH-GAPS |
-| 08 Opportunity / falsification | current | strong | physical Stage-0 transfer evidence | PASS-WITH-GAPS |
+| 07 China benchmark | **academic capability mirror current** | strong first pass | long-duration reliability, phone-scale acoustic, EHD/control comparator gaps | PASS-WITH-GAPS |
+| 08 Opportunity / falsification | **country heatmap + Stage-0 gates current** | strong | final 3–5 differentiation convergence + physical Stage-0 evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner packets + unified scorecard current** | strong | partner-returned data + physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
 | Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
@@ -333,3 +333,56 @@ QA judgment:
 **STRUCTURE PASS / EVIDENCE EXECUTION PENDING.**
 
 The next maturity increase requires returned partner data or physical coupon evidence, not more document elaboration.
+
+
+## Management capability-view QA
+
+Current artifacts:
+- [Russia Thermal Capability Atlas](../03_russia-institutions/russia_thermal_capability_atlas_v01.md)
+- [China Academic Thermal Capability Mirror](../07_china-benchmark/china_academic_capability_mirror_v01.md)
+- [Russia × China Academic Capability Heatmap](../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md)
+
+### Structural QA
+
+**PASS — first management-capability loop exists.**
+
+The current chain is:
+
+Russia capability domain
+→ institution/lab
+→ recent evidence
+→ mobile/chip transfer state
+→ China academic mirror
+→ generic-thesis kill/reframe
+→ residual Russia differentiation candidate
+→ partner / PoC where mature.
+
+### Current evidence consequence
+
+Broad Russia-advantage claims are explicitly rejected for:
+- generic VC / UTVC;
+- generic LHP miniaturization;
+- generic high-flux microchannels;
+- generic biphilic/laser surfaces;
+- generic aeroacoustic exclusivity;
+- generic DVFS;
+- generic thermal materials.
+
+Current differentiation candidates remain provisional:
+- modified-mesh dryout/rewetting;
+- long-duration hierarchical surface reliability;
+- thin-film/interfacial-instability mechanism depth;
+- confined aeroacoustic source diagnosis;
+- LHP routing/operating-limit physics.
+
+### Remaining P0 comparator gaps
+
+Before the management heatmap is final:
+1. China long-duration two-phase surface-aging comparator vs MPEI;
+2. phone-scale acoustic/microfan comparator vs Russia aeroacoustic cluster;
+3. EHD/piezo active-air normalization;
+4. direct thermal-aware mobile-control comparator;
+5. deeper China thin-film/interfacial diagnostics mirror.
+
+QA judgment:
+**STRUCTURE PASS / COUNTRY DIFFERENTIATION NOT FINAL.**
