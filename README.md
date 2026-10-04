@@ -92,11 +92,11 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~55%**
-**Estimated remaining: ~45%**
+**Estimated research completion: ~58%**
+**Estimated remaining: ~42%**
 
 Current phase:
-**Stage-0 partner execution design + manufacturability falsification**
+**Stage-0 Partner Data Request + Coupon Falsification**
 
 ### Current technical portfolio
 
@@ -179,12 +179,21 @@ No current partner is contract-ready.
 This is an experiment-readiness order, not a final partner ranking:
 
 1. **Pavlenko / Kutateladze** — high-flux boiling/dryout mechanism; main gap is thin-mesh/process/fluid scaling.
-2. **MPEI / Ivanov** — 42-month R410A hierarchical-surface stability; main gap is high-flux/sub-mm scaling.
-3. **TPU / Feoktistov** — laser/biphilic pattern and surface durability; main gap is vacuum/outgassing/sealed-fluid compatibility.
+2. **MPEI / Ivanov** — 42-month R410A hierarchical-surface stability + 0.2 mm water/CHF lineage; main gap is exact-hierarchy high-flux/sub-mm scaling.
+3. **TPU / Feoktistov** — laser/biphilic pattern, surface durability and claim-mapped RU2812668; main gap is copper/vacuum/outgassing/sealed-fluid compatibility.
 4. **MPEI ordered wick** — pre-device until a physical thin coupon exists.
 
 Partner-specific 3–6 month briefs are indexed in:
 [09 Collaboration Roadmap](09_collaboration-roadmap/README.md).
+
+Current normalized decision matrix:
+[Stage-0 Partner × Technology Decision Scorecard](09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md).
+
+Current decisions:
+- Pavlenko — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**.
 
 ## Evidence language
 
@@ -216,7 +225,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~55% research state.
+It is intentionally **not final** at the current ~58% research state.
 
 The report will ultimately contain:
 - executive decision;
