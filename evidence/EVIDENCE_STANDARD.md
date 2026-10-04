@@ -219,3 +219,34 @@ The surrounding text or citation should make clear whether it is:
 
 Existing high-priority decision files should be converted first.
 Historical snapshots may retain older formatting if they are clearly marked non-authoritative.
+
+
+## Decision-grade source brief requirement
+
+Any paper or patent promoted to **decision-grade evidence** must have a human-readable brief.
+
+### Paper brief minimum
+- review status;
+- background / problem;
+- technical method;
+- main conclusion;
+- what we learn for mobile/chip thermal insight;
+- mobile relevance / transfer caveat.
+
+### Patent brief minimum
+- review status;
+- problem;
+- core claim / control point;
+- prior-art / crowding implication;
+- what we learn for mobile/IP/PoC;
+- legal/claim caveat where relevant.
+
+Canonical libraries:
+- `paper_briefs_decision_grade.md`
+- `patent_briefs_decision_grade.md`
+
+A decision-grade source is not fully archived until:
+1. readable citation exists;
+2. central source-register entry exists;
+3. source brief exists;
+4. the decision file links the source where used.
