@@ -156,23 +156,41 @@ https://tpu.ru/sveden/managers/
 Official email:
 fdv@tpu.ru
 
-### TPU institutional heat-transfer-surface patent
+### TPU / Feoktistov heat-transfer-surface patent — claim mapping closed
 
 RU2812668C1:
 https://patents.google.com/patent/RU2812668C1/en
 
-Verified:
-- priority 2023-11-01;
-- grant/publication 2024-01-31;
+Verified from the direct patent record:
+- filing: 2023-11-01;
+- grant/publication: 2024-01-31;
 - assignee: National Research Tomsk Polytechnic University;
-- title concerns formation of micro- and nanostructures on a steel heat-exchange surface.
+- inventors: **Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov**;
+- one independent method claim.
 
-Not yet verified:
-- full independent claim;
-- exact inventors;
-- connection to Feoktistov/Syrodoy current cooling line.
+The independent process claim covers:
+- 10 min abrasive preparation using diamond pastes decreasing from 40 μm to 1 μm;
+- 5 min ultrasonic cleaning at 35 kHz in 95 wt.% distilled water / 5 wt.% ethanol;
+- 24 h drying under normal conditions;
+- 1064 nm nanosecond fiber-laser processing;
+- pulse energy 0.3–1.0 mJ;
+- repetition 2–140 kHz;
+- pulse duration 1–120 ns;
+- scan speed 100–500 mm/s;
+- laser spot 20–100 μm;
+- longitudinal/transverse spot overlap 1–10 times.
 
-Therefore the repository must **not** attribute this patent to Feoktistov until inventor mapping is complete.
+The disclosed steel embodiment reports developed laser roughness with mean height around 9–18 μm and maximum feature height around 17.5–120 μm.
+
+**Correction to the previous repository state:** RU2812668C1 can now be linked directly to the Feoktistov/Orlova team. It is not merely a TPU institutional signal.
+
+Important scope boundary:
+- the patent is steel-centric and framed around power/boiler heat-exchange surfaces;
+- it does **not** claim or demonstrate a sealed ultra-thin VC;
+- it does **not** establish copper compatibility;
+- it does **not** contain the hydrocarbon-derived hydrophobic layer used in the 2026 biphilic/hydrophobization route.
+
+This gives TPU a useful **low-organic laser-texture process-control arm** for Stage-0, but not a finished phone-VC solution.
 
 ### IP implication
 
@@ -269,3 +287,29 @@ TPU can regain priority if Stage 0 demonstrates:
 
 Detailed collaboration brief:
 ../09_collaboration-roadmap/partner_brief_tpu_stage0_v01.md
+
+
+## Stage-0 patent-closure consequence
+
+Research date: 2026-10-04
+
+The TPU Stage-0 experiment should now deliberately separate two process branches:
+
+1. **laser-only / low-organic branch**
+   - derived from the RU2812668C1 laser-micro/nanostructure capability;
+   - primary role: process-control / contamination-minimizing reference.
+
+2. **wettability-contrast branch**
+   - laser + hydrocarbon-derived hydrophobization;
+   - primary role: test whether spatial wetting adds rewetting/liquid-routing value;
+   - highest risk: outgassing / fluid contamination / post-seal drift.
+
+Public research has **not** recovered decision-grade evidence for:
+- vacuum outgassing;
+- sealed working-fluid contamination;
+- copper-substrate transfer;
+- post-weld/degassing wetting retention.
+
+These are now classified as **experiment-only**, with a partner request only for any already-existing unpublished/shareable data.
+
+**Current decision:** KEEP / GO WITH PREREQUISITE as Stage-0 priority #3.
