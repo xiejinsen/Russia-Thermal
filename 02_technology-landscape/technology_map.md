@@ -5,6 +5,8 @@ Last reviewed: 2026-10-04
 This is the canonical technology taxonomy and current disposition.
 Detailed evidence and decision rationale live in Workstreams 05 and 08.
 
+**China frontier note — 2026-10-04:** current academic evidence now includes a 0.25 mm HUST ultra-thin thermal-ground-plane signal in addition to the established 0.35–0.4 mm UTVC baseline. This strengthens the decision that Russia should be evaluated for mechanism/reliability/control-point contributions, not generic ultra-thin-device leadership.
+
 | Technology | Smartphone role | Current Russia signal | Current disposition |
 |---|---|---|---|
 | Ultra-thin VC / capillary surface | passive spreading + phase change | Pavlenko/Kutateladze dielectric boiling, modified mesh, dryout/rewetting physics | **Tier A, narrowed** |
