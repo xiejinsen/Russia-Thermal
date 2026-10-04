@@ -1,6 +1,6 @@
 # Evidence Standard
 
-Last reviewed: 2026-10-03
+Last reviewed: 2026-10-04
 
 ## Core rule
 
@@ -152,3 +152,70 @@ See:
 - `ranking_metadata_standard.md`
 - `../03_russia-institutions/major_university_coverage_matrix.md`
 
+
+
+## Human-readable citation rule
+
+Human-facing research files must **not** present a bare DOI / URL as the primary citation display.
+
+### Paper format
+
+Preferred inline format:
+
+**[Paper title](original DOI / publisher URL)** — Author 1, Author 2, Author 3 *et al.* — *Journal / Conference*, Year.
+
+Example:
+
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
+
+Author rule:
+- <=4 authors: list all;
+- >4 authors: first 3 + *et al.*;
+- where partner identity matters, list the relevant partner even if outside the first three.
+
+### Patent format
+
+Preferred inline format:
+
+**[Patent title](direct patent URL)** — Inventor 1, Inventor 2 *et al.* — Patent No. — Assignee — Year.
+
+If the English patent title is unavailable or uncertain:
+- use the verified official/Russian title;
+- do not invent a translation.
+
+### Official page / product / lab format
+
+**[Page title](official URL)** — Organization — current/year.
+
+### Where raw links are allowed
+
+Raw URLs may remain in:
+- `source_register.md`;
+- machine-oriented metadata fields;
+- URL/DOI columns explicitly intended for indexing.
+
+But in:
+- 04 researcher/lab cards;
+- 05 paper/patent analysis;
+- 07 benchmark narratives;
+- 08 decision files;
+- 09 collaboration/PoC files;
+- 10 final-report files;
+
+citations should be human-readable.
+
+### Citation quality rule
+
+A readable citation must not hide source type.
+
+The surrounding text or citation should make clear whether it is:
+- primary paper;
+- patent;
+- official institution/OEM source;
+- independent teardown/measurement;
+- secondary bibliometric source.
+
+### Migration rule
+
+Existing high-priority decision files should be converted first.
+Historical snapshots may retain older formatting if they are clearly marked non-authoritative.
