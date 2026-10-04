@@ -98,6 +98,26 @@ Current evidence supports only:
 
 ---
 
+### Current country-capability convergence — 2026-10-04
+
+After stronger China comparison, active Russia-specific candidates have narrowed to three:
+
+1. Pavlenko/Kutateladze — dryout / rewetting / failure-boundary control;
+2. MPEI/Ivanov — actual multi-year hierarchical-surface operation / aging evidence;
+3. Kabov/Chinnov/Kutateladze — shear-driven microfilm / dry-spot / interfacial-instability physics.
+
+Removed from active country differentiation:
+- TsAGI/PNRPU/CIAM aeroacoustics -> Watch / method reserve;
+- Maydanik/ITP UB RAS LHP routing/failure physics -> Watch / knowledge reserve.
+
+Important Kabov wording:
+China is already very strong in thin-film boiling and high-flux film devices. The residual Russia claim is only **shear-driven free-surface instability / dry-spot / rupture under extreme confinement**.
+
+Emerging management pattern:
+Russia's credible value is converging toward **failure-limit science** rather than generic cooler components.
+
+---
+
 ## Chapter 6 — Opportunity Funnel & Negative Evidence
 
 Purpose:
