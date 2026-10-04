@@ -36,3 +36,19 @@ When a university status changes:
 - update candidate queue if relevant;
 - create/update 04 partner card for promoted teams;
 - update rankings only with edition/year/source.
+
+
+## Mobile relevance screening
+
+Institution coverage may be broad, but **promotion is narrow**.
+
+A university/lab is promoted from coverage into a 04 deep dive only when there is:
+- direct mobile/electronics/chip thermal work; or
+- a mechanism with a credible phone/chip transfer path.
+
+Industrial, energy, aerospace, refrigeration, permafrost or other thermal work stays supporting-only unless:
+- heat-flux and geometry gaps are quantified;
+- phone packaging constraints are addressed;
+- a mobile/chip PoC can be defined.
+
+Prestige, publication count or general heat-transfer strength is insufficient.
