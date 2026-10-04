@@ -25,7 +25,7 @@ This is a Stage-0 execution priority, not a final partner ranking.
 - Corresponding Member RAS.
 
 Official:
-https://www.itp.nsc.ru/lmpt/?lang=ru&page_id=855
+[Alexander N. Pavlenko — Laboratory of Low-Temperature Thermophysics](https://www.itp.nsc.ru/lmpt/?lang=ru&page_id=855) — Kutateladze Institute of Thermophysics SB RAS.
 
 Official contact:
 pav@itp.nsc.ru
@@ -36,7 +36,7 @@ pav@itp.nsc.ru
 - Laboratory of Low-Temperature Thermophysics.
 
 Official:
-https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html
+[Laboratory of Low-Temperature Thermophysics — staff and research](https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html) — Kutateladze Institute of Thermophysics SB RAS.
 
 ### Technical readiness
 **High for technical discussion / Stage-0 priority #1**
@@ -58,7 +58,7 @@ Main unresolved:
 **Needs explicit boundary discussion**
 
 Official project page records Huawei-related work:
-https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
+[Laboratory projects / agreements](https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257) — Kutateladze Institute of Thermophysics SB RAS.
 
 Do not infer exclusivity/product use.
 
@@ -77,15 +77,15 @@ Detailed brief:
 - MPEI thermophysics.
 
 Official staff:
-https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%2Fpps%2Fteplofizika_01997bd2-acf9-796f-b02e-854ac5e10dd0.html
+[Nikita S. Ivanov — MPEI staff profile](https://mpei.ru/sveden/employees/Pages/default.aspx?short=%2Fsveden%2Femployees%2Fpps%2Fteplofizika_01997bd2-acf9-796f-b02e-854ac5e10dd0.html) — MPEI.
 
 2024 dissertation:
-https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf
+[Heat-transfer enhancement in a thermosyphon using coatings of micro- and nanoparticles](https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf) — N.S. Ivanov — MPEI, 2024.
 
 ### New direct reliability evidence
 
 Performance paper:
-https://doi.org/10.1134/S0040601525600683
+**[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
 
 Reported:
 - ~0.1 mm-radius grooves;
@@ -93,7 +93,7 @@ Reported:
 - Rth reduction ~2.4–3.0x in tested thermosyphon.
 
 Long-term paper:
-https://doi.org/10.1016/j.pes.2026.100314
+**[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
 
 Reported:
 - R410A;
@@ -109,9 +109,9 @@ Reported:
 This closes much of the prior "no long-duration two-phase evidence" gap.
 
 It does **not** close:
-- phone heat-flux transfer;
-- <0.5 mm geometry;
-- exact coating thickness in phone stack;
+- high-flux transfer of the exact 42-month hierarchy;
+- <0.5 mm sealed-device integration;
+- current as-built coating distribution/yield for the transfer coupon;
 - copper compatibility.
 
 Important non-comparability:
@@ -132,16 +132,17 @@ Detailed brief:
 - Deputy Director, Research School of High-Energy Process Physics.
 
 Official:
-https://staff.tpu.ru/personal/employee?lid=119971
+[Dmitry V. Feoktistov — TPU staff profile](https://staff.tpu.ru/personal/employee?lid=119971) — Tomsk Polytechnic University.
 
 ### Technical evidence
 
 Current biphilic / cooling:
-https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
-https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+- **[Biphilic Heat Exchange Surfaces for Drip Irrigation Cooling Systems](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316)** — D.V. Feoktistov, A. Abedtazehabadi, A.V. Dorozhkin *et al.* — *International Journal of Heat and Mass Transfer*, 2024.
+- **[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
 
 Surface-process durability:
-https://doi.org/10.1016/j.surfin.2026.109390
+- **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
+- **[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — TPU — 2024.
 
 This strengthens:
 - laser processing;
@@ -174,8 +175,8 @@ People:
 - Natalia Savchenkova
 - Anton Savchenkov
 
-Primary:
-https://doi.org/10.30724/1998-9903-2026-28-4-193-205
+Primary evidence:
+[MPEI ordered-wick capillary/permeability model](https://doi.org/10.30724/1998-9903-2026-28-4-193-205) — primary paper, 2026; retained here as a model/transport signal until the full human-readable citation is backfilled.
 
 Readiness:
 **pre-device**
