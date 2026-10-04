@@ -81,11 +81,11 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~52%**
-**Estimated remaining: ~48%**
+**Estimated research completion: ~55%**
+**Estimated remaining: ~45%**
 
 Current phase:
-**Stage-0 specification + packaging / working-fluid transfer falsification**
+**Stage-0 partner execution design + manufacturability falsification**
 
 ### Current technical portfolio
 
@@ -163,6 +163,18 @@ Phone packaging baseline:
 
 No current partner is contract-ready.
 
+## Current Stage-0 partner priority
+
+This is an experiment-readiness order, not a final partner ranking:
+
+1. **Pavlenko / Kutateladze** — high-flux boiling/dryout mechanism; main gap is thin-mesh/process/fluid scaling.
+2. **MPEI / Ivanov** — 42-month R410A hierarchical-surface stability; main gap is high-flux/sub-mm scaling.
+3. **TPU / Feoktistov** — laser/biphilic pattern and surface durability; main gap is vacuum/outgassing/sealed-fluid compatibility.
+4. **MPEI ordered wick** — pre-device until a physical thin coupon exists.
+
+Partner-specific 3–6 month briefs are indexed in:
+[09 Collaboration Roadmap](09_collaboration-roadmap/README.md).
+
 ## Evidence language
 
 Important statements are separated into:
@@ -193,7 +205,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~52% research state.
+It is intentionally **not final** at the current ~55% research state.
 
 The report will ultimately contain:
 - executive decision;
