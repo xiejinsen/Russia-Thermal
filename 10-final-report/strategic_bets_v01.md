@@ -77,7 +77,7 @@ Current verified team / PI.
 
 ---
 
-## Current candidate Bet A — working-fluid-transferable sub-mm dryout / rewetting control
+## Current candidate Bet A — phone-scale irreversible-dryout boundary control
 
 Status:
 **CANDIDATE PRIMARY BET — NOT FINAL**
@@ -86,7 +86,7 @@ Current lead:
 Pavlenko / Kutateladze.
 
 Current core thesis:
-transfer dryout / rewetting / wetting-state knowledge from strong dielectric-boiling evidence into phone-relevant thin wick / sealed UTVC geometry, while proving benefit in product-relevant working fluids.
+transfer Kutateladze's **dielectric boiling-crisis diagnostics and reversible→irreversible dry-spot control knowledge** into phone-relevant thin wick / sealed UTVC geometry, while proving additional value beyond strong independent China dryout/rewetting and wick baselines.
 
 Current proof path:
 - Stage-0 thin coupon / wick transfer
@@ -94,6 +94,21 @@ Current proof path:
 
 Current gating file:
 ../09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md
+
+### China-pressure-test correction for Bet A
+
+Strong independent China baseline now includes:
+- GDUT dryout / steam-rewetting / repeated-cycle degradation;
+- GDUT ultrathin grooved-porous wick;
+- SCUT treated copper mesh;
+- SJTU capillary dryout model;
+- Changsha HFE confinement.
+
+Therefore Bet A is **not**:
+> Russia knows dryout/rewetting better.
+
+It is:
+> can Russian dielectric-crisis diagnostics/process knowledge shift the **irreversible-dryout onset** in a phone-scale device beyond those strong baselines?
 
 Key unresolved blockers:
 - exact electrochemical recipe is now **partner-only**, not a public-search task;
