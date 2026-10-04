@@ -50,8 +50,8 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 |---|---|---|---|---|
 | **Boiling / CHF / dryout / rewetting** | **Kutateladze Institute SB RAS — Pavlenko/Shvetsov**; MPEI Ivanov lineage; NSU adjacent boiling diagnostics | dielectric HFE-7100 boiling, modified mesh, CHF/dryout, capillary surfaces; MPEI 0.2 mm water-boiling/CHF lineage | **High mechanism relevance / partial phone transfer** | One of Russia's strongest mechanism domains; potential value is not generic boiling but failure-boundary / dryout / rewetting control under constrained geometry |
 | **Ultra-thin VC / wick / surface** | Kutateladze/Pavlenko; **MPEI/Ivanov**; TPU/Feoktistov; MPEI ordered-wick line | modified mesh, hierarchical Al2O3 coating, adjustable wettability, ordered porous modeling, laser/wetting surfaces | **Partial**; no Russian public 0.25–0.4 mm phone-class VC frontier demonstrated | Russia is a **mechanism/process contributor**, not currently a device-level UTVC leader |
-| **Thin film / droplet / spray / interfacial transport** | **Kutateladze — Kabov/Kochkin/Chinnov**; TPU/Feoktistov | extreme-aspect-ratio slit flow, thin-film models, microdroplet generation, droplet/wettability cooling | **Mechanism strong / system transfer low** | Deep fluid/film physics may be differentiated, but closed-loop phone architecture remains high-risk |
-| **LHP / passive routing** | **Institute of Thermal Physics UB RAS — Maydanik/Chernysheva/Vershinin** | long LHP lineage, flat/flexible devices, current operating-limit work, multi-source relevance | **Partial** | Deep two-phase transport know-how; generic miniaturization is not sufficient as a Russia-specific advantage |
+| **Thin film / droplet / spray / interfacial transport** | **Kutateladze — Kabov/Kochkin/Chinnov**; TPU/Feoktistov | shear-driven film/dry-spot/CHF lineage; **12.5 μm-high × 10 mm slit** two-phase instability mapping; microdroplet generation | **Mechanism strong / system transfer low** | broad thin-film advantage is killed by strong China evidence; residual Russia value is **shear-driven free-surface instability/dry-spot physics under extreme confinement** |
+| **LHP / passive routing** | **Institute of Thermal Physics UB RAS — Maydanik/Chernysheva/Vershinin** | foundational/deep LHP lineage; current serviceability theory; flat/flexible devices | **Partial** | China now covers mobile miniaturization, multi-source routing and operating/failure physics; Maydanik is **Watch / knowledge reserve**, not an active country-differentiation candidate |
 | **Microchannel / embedded liquid cooling** | Kutateladze microchannels; MPEI thin-channel boiling; Bauman narrow-channel work | micro/slit-channel two-phase and thermal-hydraulic work | **Mechanism only / integration weak** | Useful source of physics; no evidence that Russia owns the current electronics integration frontier |
 | **Active airflow / synthetic jet / EHD** | Kutateladze synthetic-jet line; SPbU electrophysics/EHD | synthetic-jet heat transfer; ionic-wind modeling/adjacent work | **Exploratory** | Current Russian public evidence is too thin for a country-level advantage claim |
 | **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | China already has electronic-cooling fan source imaging and narrow-space/duct acoustics; Russian value is now a **watch-level method hypothesis**, not a country advantage |
@@ -210,15 +210,14 @@ These are **candidates for China comparison**, not final advantages:
 
 1. **Dielectric-fluid / modified-mesh dryout and rewetting physics**
    - Kutateladze / Pavlenko.
-2. **Long-duration hierarchical two-phase surface stability / aging**
+2. **Actual multi-year hierarchical two-phase surface operation / aging**
    - MPEI / Ivanov.
-3. **Thin-film / interfacial instability / droplet mechanism depth**
+3. **Shear-driven microfilm / interfacial-instability / dry-spot physics**
    - Kutateladze / Kabov–Kochkin–Chinnov.
-4. **LHP operating-limit / routing / failure physics**
-   - ITP UB RAS / Maydanik line.
 
-Watch / method reserve:
-- **phone-scale confined aeroacoustic source diagnosis** — TsAGI / PNRPU / CIAM; no longer counted as a current country-level differentiation candidate until a phone-scale benchmark is passed.
+Watch / reserves:
+- **phone-scale confined aeroacoustic source diagnosis** — TsAGI / PNRPU / CIAM;
+- **LHP knowledge / failure analysis** — ITP UB RAS / Maydanik; foundational depth remains, but current China comparison closes the country-differentiation claim.
 
 TPU surface engineering remains a **partner challenger**, but not yet a country-level Russia advantage because China/global surface prior art is crowded.
 
