@@ -33,7 +33,7 @@ Why:
 ### New geometry gate
 
 Strong reference:
-https://doi.org/10.3390/mi15050627
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 
 Reference includes:
 - 0.39 mm finished UTVC;
@@ -41,7 +41,7 @@ Reference includes:
 - 0.06 mm copper mesh.
 
 Pavlenko geometry evidence:
-https://doi.org/10.1134/S0040601525700454
+**[Effect of Layer Height on Heat Transfer during Boiling of Dielectric Liquid on Mesh Coatings](https://doi.org/10.1134/S0040601525700454)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Thermal Engineering*, 2025.
 
 Published mesh wire diameters include 100 and 220 um.
 
@@ -52,8 +52,8 @@ The collaboration value is mechanism/process transfer to a thinner wick.
 
 ### Working-fluid gate
 
-3M:
-https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+3M official supply context:
+**[PFAS Stewardship — Operations & Innovation](https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/)** — 3M — current.
 
 3M completed PFAS manufacturing exit at end-2025.
 
@@ -66,13 +66,17 @@ Downgrade H2 if the Russian advantage cannot transfer to a product-path fluid.
 
 ### Challengers
 
-TPU:
+TPU / Feoktistov:
 - target-fluid biphilic/contrast-wetting;
-- no direct public sealed/dielectric sub-mm evidence recovered so far.
+- **RU2812668C1 inventor + independent claim are now mapped to Feoktistov/Orlova/TPU**;
+- laser-only low-organic route is now a useful process-control branch;
+- sealed/copper/vacuum compatibility remains unproven.
 
-MPEI Ivanov:
+MPEI / Ivanov:
 - current hierarchical/tunable coating;
-- no direct public product-fluid/sub-mm VC evidence recovered so far.
+- official dissertation provides ~100 μm groove-radius and representative ~5 μm coating lineage;
+- same MPEI/Ivanov line includes ~0.2 mm **water-boiling / CHF** evidence;
+- the exact long-life hierarchy still lacks sealed phone-scale/high-flux proof.
 
 MPEI ordered wick:
 - pre-device until physical thin prototype and measured capillary/permeability exist.
@@ -136,3 +140,16 @@ Pre-device:
 Tier B:
 - multi-hotspot routing
 - confined microfan aeroacoustics
+
+
+### Current Stage-0 partner disposition
+
+Canonical:
+[Stage-0 Partner × Technology Decision Scorecard](../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
+
+- Pavlenko / Kutateladze — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
+
+This does not promote any challenger to Tier A; it only authorizes bounded Stage-0 falsification.
