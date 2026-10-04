@@ -27,12 +27,12 @@ Current lead:
 Pavlenko / Kutateladze.
 
 Current state:
-**Stage-0 research GO; not final collaboration GO.**
+**Stage-0 GO WITH PREREQUISITE; not final collaboration GO.**
 
 ### Challengers
-- TPU — contrast-wettability / biphilic surface
-- MPEI Ivanov — hierarchical / tunable-wetting coating
-- MPEI ordered porous wick — pre-device
+- MPEI Ivanov — **GO WITH PREREQUISITE**; hierarchical / tunable-wetting coating + long-life reliability
+- TPU — **GO WITH PREREQUISITE**; contrast-wettability / laser-process surface
+- MPEI ordered porous wick — **HOLD / pre-device**
 
 ### High-risk reserve
 Sealed adaptive film/droplet hybrid.
@@ -84,3 +84,19 @@ and separately show:
 - IP clarity.
 
 A recommendation cannot be called HIGH confidence merely because the academic evidence is strong.
+
+
+## 6. Current Stage-0 partner decision
+
+Canonical:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+| Priority | Partner | Current decision | Non-negotiable prerequisite |
+|---:|---|---|---|
+| 1 | Pavlenko / Kutateladze | **GO WITH PREREQUISITE** | shareable electrochemical process window + thin-mesh feasibility |
+| 2 | MPEI / Ivanov | **GO WITH PREREQUISITE** | exact current as-built hierarchy + scale-down ladder |
+| 3 | TPU / Feoktistov | **GO WITH PREREQUISITE** | laser-only vs hydrocarbon branch; copper/vacuum compatibility first |
+| — | MPEI ordered wick | **HOLD** | physical thin coupon |
+
+Management interpretation:
+**we have enough public evidence to stop broad searching and start bounded partner/experiment closure, but not enough to select a final partner.**
