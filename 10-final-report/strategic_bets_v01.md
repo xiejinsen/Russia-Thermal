@@ -207,7 +207,7 @@ Why it is still not a Strategic Bet:
 ### Portfolio implication
 
 The Stage-0 challengers now intentionally test different failure modes:
-- Pavlenko: mechanism scaling;
+- Pavlenko: irreversible-dryout diagnostic/control transfer;
 - MPEI: high-flux miniaturization of long-life surface;
 - TPU: manufacturing-compatible spatial wetting.
 
@@ -274,9 +274,9 @@ Maydanik remains:
 ### Portfolio interpretation
 
 The active Russia-specific set is converging around:
-1. dryout / rewetting failure boundary;
+1. **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
 2. long-duration surface aging;
-3. film instability / dry-spot / rupture.
+3. shear-driven film instability / dry-spot / rupture.
 
 This cross-cutting pattern should be tested as a possible final management thesis:
 > Russia contributes failure-mechanism depth; China/our team contributes phone-scale device engineering and product integration.
