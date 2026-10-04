@@ -31,3 +31,20 @@ A defensible collaboration claim should likely require a combination of:
 6. preferably system-level control interaction.
 
 A claim defined only by surface morphology or contact angle is unlikely to be a strong strategic control point.
+
+## OEM claim-chart addendum — 2026-10-04
+
+| Patent | Assignee | Publicly recovered control point | Current use |
+|---|---|---|---|
+| WO2024152684A1 / CN118368852A | OPPO | microporous support strips partition sealed VC into sub-cavities while allowing working-fluid transit; support + circulation / vapor-resistance control | strengthens crowding around structural-support + fluid-routing integration |
+| CN118076072A | vivo | vapor chamber / electronic device; exact independent claim still pending | comparator record only; no blocking conclusion yet |
+
+### Research implication
+
+Phone OEM IP is increasingly integrating:
+- structure;
+- vapor space;
+- capillary/liquid path;
+- device housing.
+
+This supports the project's shift from generic surface claims toward **fluid-transferable dryout/rewetting + package/VC co-design**.
