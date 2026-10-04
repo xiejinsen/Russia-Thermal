@@ -4,6 +4,12 @@ Last reviewed: 2026-10-04
 
 Status: **Stage-0 priority #2 — reliability/process challenger**
 
+## Execution packet
+
+The actionable data-request / coupon / measurement / success-kill / IP package is maintained in:
+[Stage-0 Partner Data Request + Experiment Packet](stage0_packet_mpei_ivanov_v01.md).
+
+
 ## Decision question
 
 Can MPEI's hierarchical microgroove + Al2O3 nanoparticle surface retain its unusually strong **long-term two-phase durability** after aggressive scaling into a phone-relevant thin VC surface geometry and high heat-flux regime?
