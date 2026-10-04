@@ -2,6 +2,33 @@
 
 Tracks decision-relevant corrections, architecture changes and major evidence refreshes.
 
+## 2026-10-04 — Stage-0 partner briefs and MPEI durability
+
+### New primary evidence
+- added MPEI thermosyphon performance paper: https://doi.org/10.1134/S0040601525600683
+- added MPEI 42-month R410A stability paper: https://doi.org/10.1016/j.pes.2026.100314
+- added TPU 2024 biphilic process lineage: https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
+- added TPU 2026 laser–thermolysis durability paper: https://doi.org/10.1016/j.surfin.2026.109390
+
+### Decision change
+- MPEI/Ivanov upgraded within Tier B+ to Stage-0 priority #2;
+- TPU/Feoktistov becomes Stage-0 priority #3;
+- Pavlenko remains priority #1 / Tier-A mechanism lead;
+- no final partner recommendation is made.
+
+### New execution artifacts
+- added Pavlenko 3–6 month Stage-0 collaboration brief;
+- added MPEI/Ivanov 3–6 month Stage-0 collaboration brief;
+- added TPU/Feoktistov 3–6 month Stage-0 collaboration brief.
+
+### Key caveats
+- MPEI's 42-month reliability evidence is strong but comes from an ultra-low heat-flux thermosyphon regime and is not directly comparable to phone hotspots;
+- TPU's humidity/saline/abrasion durability does not establish vacuum/sealed two-phase compatibility;
+- Pavlenko's exact thin-mesh modification recipe remains a partner data request.
+
+### Research-state effect
+Research completion advances conservatively to ~55%.
+
 ## 2026-10-04 — Final report architecture
 
 ### Added
