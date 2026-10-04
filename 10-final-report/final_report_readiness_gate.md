@@ -45,7 +45,7 @@ Search/evidence is incomplete. Do not convert uncertainty into a positive or neg
 
 | Direction | G1 | G2 | G3 | G4 | G5 | G6 | G7 | G8 | Current final-report state |
 |---|---|---|---|---|---|---|---|---|---|
-| Pavlenko fluid-transferable dryout/rewetting | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS | **Candidate Primary Bet** |
+| Pavlenko irreversible-dryout boundary control | PASS | PASS | **PASS+ comparator** | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS | **Candidate Primary Bet / narrow differentiation** |
 | TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | **PARTIAL+** | **PASS** | PASS-Stage0 | Reserve/Challenger — GO w/prerequisite |
 | MPEI Ivanov coating | PASS | PASS | PASS | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 — GO w/prerequisite** |
 | MPEI ordered wick | PASS | PASS | PASS | LOW | PARTIAL | PARTIAL | PARTIAL | PRE-PoC | Watch/Pre-device |
@@ -273,3 +273,35 @@ Focused foundational pressure test:
 - ../03_russia-institutions/russia_foundational_math_physics_capability_v01.md
 - ../07_china-benchmark/china_foundational_math_physics_mirror_v01.md
 - ../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md
+
+
+## 2026-10-04 Pavlenko independent-China dryout / rewetting update
+
+New strong independent China comparators:
+- GDUT capillary-fed dryout / steam-induced rewetting / repeated-cycle CHF degradation;
+- GDUT <=0.4 mm grooved-porous wick;
+- SCUT treated copper mesh;
+- SJTU dryout-boundary model;
+- Changsha UST HFE-7100 confinement.
+
+**Gate consequence:**
+G3 Strong Comparator is now materially stronger.
+
+Killed:
+- broad Russia dryout advantage;
+- broad Russia rewetting advantage;
+- modified-mesh dryout control as a country-level thesis.
+
+Residual Pavlenko hypothesis:
+**dielectric-fluid reversible→irreversible dry-spot / boiling-crisis diagnostics and control.**
+
+Current state:
+**Candidate Primary Bet / Stage-0 priority #1 / NARROW DIFFERENTIATION.**
+
+No G4 promotion:
+public Russia evidence is still open/millimeter-scale relative to phone internal geometry.
+
+Promotion now requires:
+- later irreversible-dryout onset vs strong domestic wick controls;
+- repeatable rewetting/recovery benefit;
+- product-fluid/copper/vacuum/process survival.
