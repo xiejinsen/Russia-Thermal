@@ -215,3 +215,53 @@ A Stage-0 GO means:
 
 It does not mean:
 **Russia-specific strategic advantage has already been proven.**
+
+
+## 2026-10-04 country-differentiation convergence
+
+### Kabov / Chinnov
+
+Broad thin-film differentiation:
+**KILLED.**
+
+Strong China baseline:
+- capillary-driven gradient-mesh thin-film boiling;
+- >2000 W/cm² pressure-controlled thin-film boiling;
+- broad current high-flux film activity.
+
+Residual Russia-specific hypothesis:
+**shear-driven free-surface microfilm / dry-spot / rupture / interfacial-instability control under extreme confinement.**
+
+State:
+**NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
+
+Not a Strategic Bet until system overhead is bounded.
+
+### Maydanik / ITP UB RAS
+
+Broad LHP miniaturization:
+already killed.
+
+Residual routing / operating-limit / failure-physics differentiation:
+**now also killed as a country-level Russia thesis.**
+
+Reason:
+current China academic evidence spans:
+- ultra-thin multi-source LHP;
+- startup / variable load;
+- NCG / orientation;
+- compensation chamber;
+- capillary-pressure / pressure-drop failure.
+
+Maydanik remains:
+**WATCH / KNOWLEDGE RESERVE** for expert review / failure analysis.
+
+### Portfolio interpretation
+
+The active Russia-specific set is converging around:
+1. dryout / rewetting failure boundary;
+2. long-duration surface aging;
+3. film instability / dry-spot / rupture.
+
+This cross-cutting pattern should be tested as a possible final management thesis:
+> Russia contributes failure-mechanism depth; China/our team contributes phone-scale device engineering and product integration.
