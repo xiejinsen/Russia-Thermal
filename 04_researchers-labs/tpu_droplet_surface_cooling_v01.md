@@ -185,3 +185,32 @@ https://patents.google.com/patent/CN118744276B/en
 TPU's collaboration thesis must therefore be narrower:
 **target-fluid-stable spatial wettability control under phone-relevant confinement and cycling**, not generic laser texturing.
 
+## Stage-0 fluid / packaging update — 2026-10-04
+
+The current TPU evidence remains strong for:
+- laser-created wettability contrast;
+- open-droplet evaporation;
+- surface-physics experiments.
+
+However, this research round did **not** recover direct public evidence for:
+- sealed <0.5 mm VC use;
+- HFE-7100 use;
+- another identified product-path dielectric fluid;
+- vacuum/sealing-process stability.
+
+This is recorded as:
+**NOT PUBLICLY EVIDENCED IN CURRENT SEARCH**, not proof that the team lacks the capability.
+
+### Updated Stage-0 role
+
+TPU should test the **pattern principle** on:
+- copper / thin phone-relevant substrate;
+- water first as the product-path sealed-VC reference;
+- a future dielectric candidate only after fluid screening.
+
+Promotion depends on wetting contrast surviving:
+- fluid soak;
+- vacuum/process exposure;
+- thermal cycling.
+
+Generic laser/biphilic processing remains too crowded to be the collaboration thesis by itself.
