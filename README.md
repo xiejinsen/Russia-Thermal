@@ -1,5 +1,7 @@
 # Russia Mobile Thermal Technology & Collaboration Insight
 
+**New chat / session continuation:** [Continue in a New Chat](CONTINUE_HERE.md)
+
 Evidence-backed research on Russian capabilities that may contribute to next-generation **smartphone thermal management**, with tablets as a secondary reference platform.
 
 Last repository review: **2026-10-04**
@@ -74,12 +76,14 @@ Russia-Thermal/
 ├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap research
 ├── 10-final-report/             # gated final decision/report layer
 ├── evidence/                   # standards, source/ranking registers, QA
+├── CONTINUE_HERE.md            # canonical new-chat/session bootstrap
 ├── CHANGELOG.md                # decision-relevant corrections/refreshes
 ├── PROGRESS.md                 # live project status
 └── README.md
 ```
 
 Repository governance:
+- [New Chat / Session Bootstrap](CONTINUE_HERE.md)
 - [Repository Architecture & Refresh Contract](00_scope/repository_architecture.md)
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
