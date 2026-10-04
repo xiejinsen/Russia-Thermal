@@ -47,6 +47,28 @@ The project should ultimately produce four reading depths:
 - [Final Report Readiness Gate](final_report_readiness_gate.md)
 - [Visual Storyboard](visual_storyboard_v01.md)
 
+## Management capability-view hard requirement
+
+Before the final management report is considered structurally complete, it must contain:
+
+1. **Russia Thermal Capability Atlas**
+   - capability -> institution/lab -> researchers -> evidence -> mobile-transfer state.
+
+2. **China Academic Capability Mirror**
+   - same taxonomy and comparable technical dimensions.
+
+3. **Russia × China Differentiation Heatmap**
+   - broad Russia advantage claims explicitly killed/reframed where China is already strong;
+   - 3–5 narrow Russia differentiation candidates;
+   - evidence gaps and falsifiers.
+
+Current research inputs:
+- [Russia Thermal Capability Atlas](../03_russia-institutions/russia_thermal_capability_atlas_v01.md)
+- [China Academic Thermal Capability Mirror](../07_china-benchmark/china_academic_capability_mirror_v01.md)
+- [Russia × China Academic Capability Heatmap](../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md)
+
+These are research-layer inputs. Workstream 10 may visualize them but must not override them.
+
 ## Current Stage-0 decision input
 
 - [Stage-0 Partner × Technology Decision Scorecard](../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
@@ -121,23 +143,29 @@ The final narrative is organized by **decision logic**.
 
 The final report should eventually contain:
 
-1. **Russia Thermal Research Map**
-   - Institution -> Lab -> Researcher -> Capability -> Evidence -> Current status
+1. **Russia Thermal Capability Atlas**
+   - Capability -> Institution/Lab -> Researcher -> Evidence -> Mobile-transfer status
 
-2. **Mobile Thermal Technology Map**
+2. **Russia × China Academic Capability Heatmap**
+   - same capability taxonomy;
+   - strongest domestic comparator;
+   - Russia residual differentiation;
+   - current verdict / evidence gap
+
+3. **Mobile Thermal Technology Map**
    - Smartphone problem -> technology route -> China maturity -> Russia signal -> disposition
 
-3. **Problem × Technology Matrix**
+4. **Problem × Technology Matrix**
    - hotspot / skin / sustained performance / acoustics / thickness / reliability
    - crossed with VC / surface / LHP / active cooling / materials / control
 
-4. **Collaboration Opportunity Map**
+5. **Collaboration Opportunity Map**
    - our problem × Russia capability × China baseline × phone feasibility × IP × PoC cost
 
-5. **Opportunity Funnel / Kill Map**
+6. **Opportunity Funnel / Kill Map**
    - broad search -> evidence -> comparator -> phone constraints -> IP -> engineering -> PoC -> surviving bets
 
-6. **3-Year Roadmap**
+7. **3-Year Roadmap**
    - 0–6 / 6–18 / 18–36 months
    - technology + partner + PoC + IP + product path
 
