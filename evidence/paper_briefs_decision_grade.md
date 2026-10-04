@@ -484,7 +484,163 @@ It also gives a useful engineering lesson:
 
 ---
 
-# E. Synthesis for our project
+
+# E. China — VC reliability / life
+
+## E1. Oxygen-driven copper-water VC failure mechanism
+
+**[Experimental study on the failure mechanism of the heat transfer performance under the action of oxygen of a copper–water vapour chamber without structural damage](https://doi.org/10.1016/j.applthermaleng.2025.125619)** — Xiaojun Guo, Yong Li, Wenjie Zhou, Rui Tang, Yue Tian, Ang Gao, Yang Yang — *Applied Thermal Engineering*, 2025.
+
+**Review status:** ABSTRACT + PUBLISHER SUMMARY / DECISION REVIEW.
+
+**Background / problem**  
+A vapor chamber can lose thermal performance even when its shell, seal and visible wick geometry remain intact. For mobile/product use, the key question is whether chemical aging changes wick wetting/capillary function before obvious structural failure.
+
+**Technical method**  
+The SCUT-led team compares normal and failed copper-water VCs and combines thermal testing with wick composition/surface analysis. The failed devices retain intact external structure and wick pore geometry, allowing the study to isolate chemical/surface-state degradation.
+
+**Main conclusion**  
+The failed wick shows increased oxygen and reduced copper fraction. Copper oxidation changes the wick from hydrophilic toward hydrophobic behavior; capillary pressure can move from positive to negative, reducing return flow and sharply increasing evaporation thermal resistance. The authors identify oxygen as the principal cause of the observed thermal-performance failure and point to the vacuum process as a key oxygen-control step.
+
+**What we learn for our insight**  
+This materially weakens any broad claim that MPEI uniquely understands two-phase reliability. Chinese academia already has a product-relevant **copper-water VC failure-mechanism** line linked to vacuum-process quality.
+
+The residual MPEI value becomes narrower:
+> actual multi-year operation of a specific hierarchical evaporator surface, with morphology and capillary-aging observations.
+
+**Mobile relevance:** HIGH comparator for product-path reliability.
+
+---
+
+## E2. Accelerated lifetime prediction for copper-water VCs
+
+**[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Xiaojun Guo, Yong Li, Wenjie Zhou, Yue Tian, Yang Yang, Fan Yang — *Applied Thermal Engineering*, 2026.
+
+**Review status:** ABSTRACT + PUBLISHER FULL-PREVIEW REVIEW.
+
+**Background / problem**  
+Actual VC service-life testing is too slow for product development. A practical method needs to relate accelerated aging to a physically meaningful degradation marker.
+
+**Technical method**  
+Copper-water VCs are subjected to high-temperature accelerated aging at **150–200 °C**, combined with XPS/EDS and failure analysis. The team uses wick oxygen content as the degradation characteristic and constructs an Arrhenius-based lifetime relation.
+
+**Main conclusion**  
+Oxygen-driven wick oxidation is again identified as the dominant thermal-failure mechanism. Public abstract data report:
+- when wick-surface oxygen is around **1%**, predicted operating life can be **>=13 years at 80 °C**;
+- oxygen content versus predicted service life follows a quadratic relation with **R² ≈ 0.98**;
+- reported prediction error is approximately **8%**.
+
+**What we learn for our insight**  
+China now has not only cycle/reliability data but also a **process-linked life-prediction methodology** for copper-water VCs.
+
+Therefore the MPEI 42-month result should be presented as:
+- unusual **actual multi-year same-surface operation**;
+- useful surface-aging/capillary evidence;
+- complementary to China's accelerated product-reliability engineering.
+
+It should **not** be presented as "China lacks long-term VC reliability research."
+
+**Mobile relevance:** HIGH comparator for sealed copper-water product reliability.
+
+---
+
+## E3. Wick-oxidation detection / grading
+
+**[Detection and grading of oxidation for copper–water heat pipe wicks based on the machine learning methods](https://doi.org/10.1016/j.applthermaleng.2025.126437)** — Xiaojun Guo, Yong Li, Guangwen Huang, Rui Tang, Fan Yang, Zhifeng Xin, Bowen Wu — *Applied Thermal Engineering*, 2025.
+
+**Review status:** ABSTRACT / PUBLISHER REVIEW.
+
+**Background / problem**  
+Wick oxidation can reduce heat-pipe/VC performance, but production inspection needs a rapid and repeatable way to classify oxidation state.
+
+**Technical method**  
+The team creates naturally oxidized copper-water heat-pipe wick samples at different oxidation levels, defines an oxidation grading standard, builds color/image datasets and applies machine-vision / machine-learning classification.
+
+**Main conclusion**  
+The paper proposes a production-oriented oxidation-grading workflow intended to improve rapid inspection efficiency and reliability.
+
+**What we learn for our insight**  
+The Chinese comparator includes not only device performance but **manufacturing QA around surface aging**. This further narrows MPEI's differentiation to the physics/history of long-running hierarchical surfaces rather than generic oxidation/reliability knowledge.
+
+**Mobile relevance:** MEDIUM-HIGH as process/QA comparator.
+
+---
+
+# F. China — electronics cooling-fan aeroacoustics
+
+## F1. Cooling-fan acoustic source imaging
+
+**[Experimental Analysis of Cooling Fan Noise by Wavelet-Based Beamforming and Proper Orthogonal Decomposition](https://doi.org/10.1109/ACCESS.2020.3006483)** — Sicong Liang, Wangqiao Chen, Rhea P. Liem, Xun Huang — *IEEE Access*, 2020.
+
+**Review status:** OPEN-ACCESS / TECHNICAL REVIEW.
+
+**Background / problem**  
+Acoustic-source imaging becomes difficult as cooling fans become small and their important tones/high-frequency sources approach array-resolution limits.
+
+**Technical method**  
+A practical CPU cooling fan is measured in an anechoic environment. The authors combine wavelet-based beamforming with proper orthogonal decomposition (POD) to separate acoustic-image modes. The public experiment uses a **90 mm** AMD CPU fan at 2650 and 3960 rpm.
+
+**Main conclusion**  
+The method can decompose cooling-fan acoustic source modes and improve interpretation beyond conventional beamforming. The measured spectra include BPF/harmonics, subharmonic tones and broadband/high-frequency turbulence contributions.
+
+**What we learn for our insight**  
+China already has academic capability in **cooling-fan source imaging and modal decomposition**, so Russian aeroacoustic methods are not unique at category level.
+
+But this test is still much larger/slower than a phone internal centrifugal fan. The phone-scale problem remains:
+- ~18–25 mm class;
+- ~20k rpm;
+- highly confined inlet/outlet;
+- close structural/acoustic coupling.
+
+**Mobile relevance:** MEDIUM comparator; strong method relevance, weak direct phone-size match.
+
+---
+
+## F2. Electronic cooling-fan narrow-space / duct acoustic control
+
+**[Aerodynamic Noise Characteristics of Axial Flow Fan in Narrow Space and Noise Reduction Based on Flow Control](https://doi.org/10.1115/1.4063127)** — Zonghan Sun, Pengfei Chai, Jie Tian, Zhaohui Du, Hua Ouyang — *Journal of Engineering for Gas Turbines and Power*, 2023.
+
+**Review status:** ABSTRACT + TECHNICAL METADATA REVIEW.
+
+**Background / problem**  
+Installed electronics fans do not operate in free field: obstacles and narrow spaces change flow rate, recirculation, source strength and tonal/broadband noise.
+
+**Technical method**  
+The SJTU team studies cooling fans under narrow-space / power-module installation using experiment and CFD/aeroacoustic analysis, linking downstream obstruction and inlet/recirculation distortion to acoustic behavior.
+
+**Main conclusion**  
+Confinement can materially increase noise and alter flow behavior; source-oriented flow control can reduce the acoustic penalty.
+
+**What we learn for our insight**  
+The domestic academic baseline already covers the core conceptual problem we hoped Russian aeroacoustics might uniquely solve:
+> installed-condition fan noise under confinement.
+
+Therefore a Russia collaboration must move to a much narrower gap:
+**phone-scale centrifugal microfan source diagnosis at equal cooling / package / ingress constraints.**
+
+**Mobile relevance:** MEDIUM-HIGH method comparator; dimensions are not yet smartphone-class.
+
+---
+
+## F3. Short-duct tonal/broadband reduction for electronic cooling fans
+
+**[Experimental Study on Aerodynamic Noise Reduction of In-series Axial Cooling Fans for Electronic Devices](https://doi.org/10.3901/JME.2022.22.406)** — Zonghan Sun, Jie Tian, Zhaohui Du, Hua Ouyang — *Journal of Mechanical Engineering*, 2022.
+
+**Review status:** FULL ABSTRACT + JOURNAL RECORD REVIEW.
+
+**Technical method / result**  
+Microphone-array measurements compare electronic-device axial fans connected in series with different intermediate connectors. At rated speed, a short-duct connector reduced reported tonal noise by about **1.2 dB(A)** and broadband noise by about **0.5 dB(A)** versus the square connector.
+
+**What we learn for our insight**  
+China has a coherent **electronic-cooling fan + duct + tonal-noise** academic lineage, not merely large wind-tunnel aeroacoustics.
+
+The open question is scale/integration, not basic method availability.
+
+**Mobile relevance:** MEDIUM comparator.
+
+---
+
+# G. Synthesis for our project
 
 The papers collectively tell us:
 
