@@ -1087,6 +1087,73 @@ Independent China is already pushing **dielectric boiling + confinement + struct
 Pavlenko still has a more explicit crisis-mode/dry-spot diagnostic line, but China is closer on geometry.
 
 **Mobile relevance:** MEDIUM-HIGH comparator.
+
+
+# L. MPEI multi-year engineered-surface aging pressure test
+
+## L1. Russia — 42-month hierarchical evaporator surface
+
+**[Long-term operational stability of a hierarchical evaporator surface in a two-phase thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
+
+**Review status:** PUBLISHER ABSTRACT + METHODS / CONCLUSIONS REVIEW.
+
+**Background / problem**  
+Most enhanced boiling/surface papers demonstrate short-term performance. The harder question is whether an engineered capillary/boiling surface changes function over real calendar time.
+
+**Technical method**  
+A microgroove + Al2O3 nanoparticle hierarchical evaporator was operated in an R410A two-phase thermosyphon over a **42-month** calendar-time campaign with periodic steady-state checks and post-operation surface/capillary characterization.
+
+**Main conclusion**  
+The modified thermosyphon retained comparatively stable integral thermal performance (~0.015 K/W reported, about 3× lower than the smooth reference in that system) while capillary imbibition showed aging/degradation and surface-state changes were examined after long operation.
+
+**What we learn**  
+The unique value is not generic reliability. It is **real multi-year observation of one engineered functional evaporator surface**, including the possibility that capillary-state degradation can emerge before obvious integral thermal failure.
+
+**Mobile relevance:** MEDIUM mechanism / LOW direct geometry.
+
+---
+
+## L2. China — oxygen-driven copper-water VC failure
+
+**[Experimental study on the failure mechanism of the heat transfer performance under the action of oxygen of a copper–water vapour chamber without structural damage](https://doi.org/10.1016/j.applthermaleng.2025.125619)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2025.
+
+**Technical method / result**  
+Failed copper-water VCs were compared with normal devices. Structural integrity remained intact, but wick oxygen content increased and copper transformed toward Cu2O/CuO. The wick changed from hydrophilic toward hydrophobic, capillary pressure deteriorated, liquid return weakened and evaporation thermal resistance increased.
+
+**What we learn**  
+China has very strong **product-path failure physics** and vacuum/oxygen process understanding.
+
+This paper is more device-relevant than MPEI, but it is a failure-analysis study rather than a prospective multi-year engineered-surface campaign.
+
+**Mobile relevance:** VERY HIGH comparator.
+
+---
+
+## L3. China — accelerated VC lifetime prediction
+
+**[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2026.
+
+**Technical method / result**  
+Copper-water VCs undergo **150–200 °C high-temperature accelerated aging**, combined with XPS/EDS failure analysis and lifetime modeling.
+
+**What we learn**  
+China is strong in accelerated lifetime engineering. But an Arrhenius-type predicted lifetime is not the same evidence type as **42 months of actual calendar-time two-phase operation**.
+
+**Mobile relevance:** VERY HIGH product-reliability comparator.
+
+---
+
+## L4. China — 0.7 mm mobile mLHP accelerated aging
+
+**[A thin and lightweight miniature loop heat pipe for cooling mobile electronic devices](https://doi.org/10.1016/j.device.2025.100783)** — Cui, You, Ma *et al.* — *Device*, 2025.
+
+**Technical method / result**  
+A 0.7 mm, 3.95 g mLHP targeting mobile electronics was demonstrated, with **30 days at 90 °C** accelerated aging and stable post-aging performance.
+
+**What we learn**  
+China is clearly closer on form factor and productization. It does not duplicate the MPEI multi-year surface-state dataset.
+
+**Mobile relevance:** DIRECT / HIGH.
 # G. Synthesis for our project
 
 The papers collectively tell us:
