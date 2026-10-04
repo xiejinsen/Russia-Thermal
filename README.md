@@ -78,18 +78,18 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~49%**
-**Estimated remaining: ~51%**
+**Estimated research completion: ~52%**
+**Estimated remaining: ~48%**
 
 Current phase:
-**falsification + IP/partner readiness + Stage-0 PoC definition**
+**Stage-0 specification + packaging / working-fluid transfer falsification**
 
 ### Current technical portfolio
 
 **Tier A**
-- fluid-specific sub-mm phase-change / capillary control
+- working-fluid-transferable sub-mm phase-change / capillary control
   - lead: Pavlenko/Kutateladze
-  - thesis: target-fluid dryout / rewetting / wetting-state retention under <0.5 mm-class confinement
+  - thesis: dryout / rewetting / wetting-state retention that survives transfer to product-relevant fluids and <0.5 mm-class confinement
 
 **Tier A-**
 - sealed adaptive film/droplet hybrid
@@ -133,17 +133,30 @@ See:
 PoC-1 is now **IP-aware and two-stage**.
 
 Stage 0:
-- coupon;
-- target-fluid compatibility;
-- thickness/process;
-- vacuum/bake;
+- ~60–100 μm-class wick/surface transfer;
+- product-path working-fluid compatibility;
+- <=35 μm preferred added functional layer;
+- vacuum/process tolerance;
 - cycling;
-- capillary/wetting behavior;
+- capillary/wetting/permeability behavior;
 - IP specificity.
+
+The first frozen Stage-0 matrix is:
+[PoC-1 Stage-0 Coupon Matrix](09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md).
+
+Current geometry anchor:
+- ~0.39 mm finished UTVC reference;
+- ~0.2 mm internal channel;
+- 0.06 mm mesh.
+
+HFE-7100 is treated as a legacy mechanism bridge, not the assumed future product fluid.
 
 Stage 1:
 - strong 0.39–0.4 mm-class China-style reference;
 - at most two Russian challenger arms.
+
+Phone packaging baseline:
+[Phone Packaging & Teardown Reality](01_global-baseline/phone_packaging_teardown_baseline_v01.md)
 
 No current partner is contract-ready.
 
