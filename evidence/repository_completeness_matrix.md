@@ -13,11 +13,11 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 02 Technology landscape | current | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
 | 03 Russia institutions | current | good | broader non-university coverage | PASS-WITH-GAPS |
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
-| 05 Papers / patents | refreshed this round | strong first pass | family/status depth; TPU/vivo claim gaps | PASS-WITH-GAPS |
+| 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
 | 06 Active cooling | current | medium-good | EHD, piezo/MEMS, installed-fan evidence | NEEDS-WORK |
 | 07 China benchmark | current | good | independent OEM measurements / supply-chain detail | PASS-WITH-GAPS |
 | 08 Opportunity / falsification | current | strong | physical Stage-0 transfer evidence | PASS-WITH-GAPS |
-| 09 Collaboration / PoC | **partner briefs current** | strong | physical coupons + background IP | PASS-WITH-GAPS |
+| 09 Collaboration / PoC | **partner briefs + unified scorecard current** | strong | physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
 | Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
 
@@ -73,9 +73,9 @@ Primary:
 https://doi.org/10.1016/j.pes.2026.100314
 
 Still open:
-- actual nanoparticle-layer total thickness;
+- current exact as-built layer distribution/yield;
 - scale-down from ~0.1 mm-radius grooves;
-- phone-relevant high heat flux;
+- exact long-life hierarchy at phone-relevant high heat flux;
 - copper / VC manufacturing process;
 - <0.5 mm sealed device.
 
@@ -100,7 +100,7 @@ Still open:
 - hydrocarbon residue / working-fluid contamination;
 - copper transfer;
 - sealed two-phase cycling;
-- RU2812668 inventor/claim mapping.
+- RU2812668 inventor/claim mapping — **CLOSED publicly**.
 
 State:
 **Tier B+ Stage-0 priority #3.**
@@ -144,10 +144,9 @@ Before selecting sealed Stage-1 arms:
 1. Pavlenko thin-mesh manufacturability/process evidence;
 2. MPEI actual layer/groove scale-down and high-flux response;
 3. TPU vacuum/outgassing/fluid compatibility;
-4. TPU RU2812668 inventor/full claim;
-5. promoted patent family/status review;
-6. Huawei/background-IP boundary;
-7. actual/shareable coupon evidence.
+4. promoted patent family/status review for surviving candidates;
+5. Huawei/background-IP boundary;
+6. actual/shareable coupon evidence.
 
 ## Priority-1 backlog
 
@@ -231,3 +230,24 @@ They are only required when promoted into:
 
 State:
 **CORE 10Q PASS / LONG-TAIL ON-DEMAND.**
+
+
+## Stage-0 decision-scorecard QA
+
+Canonical:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+Coverage:
+- PASS/PARTIAL/FAIL/UNKNOWN across all required partner dimensions;
+- public / partner-only / experiment-only closure route;
+- explicit GO WITH PREREQUISITE / HOLD decisions;
+- smallest next experiment;
+- kill/promotion logic.
+
+Current:
+- Pavlenko — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
+
+The repository is still **not decision-final** because Stage-0 physical evidence does not yet exist.
