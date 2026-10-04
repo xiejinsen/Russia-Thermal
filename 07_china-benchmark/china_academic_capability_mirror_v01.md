@@ -319,6 +319,36 @@ China's independent baseline is now strong enough to reject any broad claim that
 Residual Russia question:
 whether Kutateladze's **dielectric reversible→irreversible dry-spot statistics, crisis-mode transition and drying-front diagnostics** create additional phone-scale value.
 
+### M. Actual multi-year engineered-surface aging comparator
+
+Strong China baseline:
+- 2025 SCUT-led copper-water VC oxygen-driven failure analysis;
+- 2026 150–200 °C accelerated lifetime prediction with XPS/EDS;
+- 2025 wick-oxidation grading / production QA;
+- XJTU 0.7 mm mobile mLHP with 30-day 90 °C accelerated aging.
+
+China is stronger on:
+- product-path copper-water VC reliability;
+- oxygen/vacuum-process control;
+- accelerated lifetime engineering;
+- manufacturing QA;
+- mobile geometry.
+
+Targeted searches did not recover a matched public Chinese study that combines:
+1. the same engineered evaporator surface;
+2. actual multi-year calendar-time two-phase operation;
+3. thermal-performance tracking;
+4. post-operation morphology/chemistry;
+5. capillary-function aging.
+
+Decision:
+MPEI retains a narrow **actual multi-year engineered-surface aging** evidence edge.
+
+This is not a broad reliability advantage and is not phone-product proof.
+
+Focused comparison:
+../08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md
+
 ## 3. Current domestic strengths that materially raise the Russia bar
 
 The China academic baseline is already strong in:
@@ -350,7 +380,7 @@ It should be justified by one of:
 
 Before management-final, strengthen:
 
-- exact Chinese counterpart for **actual multi-year operation of the same engineered hierarchical surface** remains open, but generic VC reliability/lifetime capability is now closed as a gap;
+- targeted multi-year / 1000 h / 5000 h / 10000 h searches did **not recover a matched public Chinese analogue** for actual multi-year operation of the same engineered two-phase evaporator surface with thermal + morphology + capillary-aging tracking; generic VC reliability/lifetime capability is already strong and closed as a gap.
 - Chinese phone-scale **~18–25 mm / ~20k rpm microfan acoustic** academic test remains open, despite strong larger electronics-fan aeroacoustic evidence;
 - China/Russia EHD institution normalization;
 - direct China mobile **thermal-control**, not only energy/DVFS optimization;
