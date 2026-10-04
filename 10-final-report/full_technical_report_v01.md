@@ -116,6 +116,33 @@ China is already very strong in thin-film boiling and high-flux film devices. Th
 Emerging management pattern:
 Russia's credible value is converging toward **failure-limit science** rather than generic cooler components.
 
+### MPEI exact multi-year aging comparator closure
+
+Focused source:
+../08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md
+
+China is already stronger in product-path reliability:
+- oxygen-driven copper-water VC failure analysis;
+- vacuum-process oxygen control;
+- accelerated lifetime prediction;
+- oxidation grading / manufacturing QA;
+- mobile-scale two-phase hardware.
+
+But no matched public Chinese study was recovered that combines:
+- the same engineered evaporator surface;
+- actual multi-year calendar-time two-phase operation;
+- thermal-performance tracking;
+- post-operation morphology;
+- capillary-function aging.
+
+Residual MPEI signal:
+**actual 42-month engineered-surface aging evidence.**
+
+Potential phone value:
+a surface-state / capillary early-warning indicator for loss of dryout margin before nominal Rth collapse.
+
+This is a complementary reliability mechanism, not product-reliability leadership.
+
 ### Pavlenko independent-China pressure-test update
 
 Focused source:
