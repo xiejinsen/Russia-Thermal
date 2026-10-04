@@ -508,3 +508,27 @@ Not allowed:
 
 QA judgment:
 **PASS-WITH-PARTNER-CONFIRMATION-GAP.**
+
+
+### Comparator-closure QA — Pavlenko dryout / rewetting
+
+Canonical focused artifact:
+- [Pavlenko Dryout / Rewetting vs Independent China Pressure Test](../08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md)
+
+Closed broad claims:
+- Russia uniquely understands dryout or rewetting;
+- modified mesh is itself a Russia-specific control point;
+- capillary-fed dryout-limit modeling is uniquely Russian.
+
+Allowed current wording:
+> Pavlenko/Kutateladze retains a narrower signal in **dielectric-fluid reversible-to-irreversible dry-spot / boiling-crisis diagnostics and control**, pending phone-scale transfer.
+
+Stage-0 #1 status:
+**retained, but NARROW DIFFERENTIATION.**
+
+Remaining evidence gap:
+- phone-scale / product-fluid / copper / vacuum / sealed-device proof;
+- measurable shift of irreversible-dryout onset versus strong domestic control.
+
+QA judgment:
+**PASS-WITH-STAGE0-PHYSICAL-GAP.**
