@@ -17,12 +17,16 @@ Institution-level coverage database used to avoid survivorship bias.
    - exact/stability/interfacial/reduced-model foundational layer;
    - maps mathematical method -> thermal mechanism -> design/PoC leverage.
 
-3. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
+3. [Siberian Theory–Fluid–Experiment Capability Network](siberian_theory_fluid_experiment_network_v01.md)
+   - verifies which theory/model/experiment links are real;
+   - distinguishes current direct links from historical lineage and unverified consortium assumptions.
+
+4. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
    - minimum university set;
    - current HIGH-SIGNAL / KEEP / NO CURRENT SIGNAL state;
    - global + Russian domestic ranking context.
 
-4. [Candidate Queue](candidate_queue.md)
+5. [Candidate Queue](candidate_queue.md)
    - institutions/teams retained for deeper investigation.
 
 ## HISTORICAL SNAPSHOTS
