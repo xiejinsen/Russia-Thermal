@@ -2,34 +2,34 @@
 
 Evidence-backed research on Russian capabilities that may contribute to next-generation **smartphone thermal management**, with tablets as a secondary reference platform.
 
+Last repository review: **2026-10-04**
+
 ## Core objective
 
-> Identify Russian thermal-management capabilities that are **differentiated, mobile-relevant and complementary to Chinese/mobile-industry strengths**, then convert the strongest ones into testable collaboration PoCs and 3-year R&D directions.
+> Identify Russian thermal-management capabilities that are differentiated, mobile-relevant and complementary to Chinese/mobile-industry strengths, then convert the strongest ones into testable collaboration PoCs and 3-year R&D directions.
 
-This is **not**:
+This is not:
 - a directory of Russian thermal researchers;
 - a Russia-vs-China overall ranking;
 - a search for technologies merely because they are novel;
 - a program to prove that a Russian capability must be useful.
 
-The research is allowed to **kill** attractive directions when China/global capability, phone constraints, IP or system overhead make them unattractive.
+The research is allowed to **kill or reframe** attractive directions when China/global capability, phone constraints, IP or system overhead make them unattractive.
 
 ## Final decision outputs
 
-The project is only complete when it can answer:
+The project is complete only when it can answer:
 
-1. **What strong Russian thermal research capabilities exist?**
-2. **What are they actually good at today (2023–2026)?**
-3. **Which capabilities are differentiated/complementary versus China?**
-4. **Which can survive real smartphone constraints?**
-5. **Which Russian labs / researchers are credible collaboration targets?**
-6. **What joint PoC should be run, with explicit success / kill criteria?**
-7. **What new IP / technical control points could result?**
-8. **What should the 0–6 month, 6–18 month and 18–36 month R&D roadmap be?**
+1. What strong Russian thermal research capabilities exist?
+2. What are they actually good at now?
+3. Which are differentiated/complementary versus China?
+4. Which survive smartphone constraints?
+5. Which labs/researchers are credible collaboration targets?
+6. What joint PoCs should be run, with explicit success/kill criteria?
+7. What new IP/control points could result?
+8. What should the 0–6, 6–18 and 18–36 month R&D roadmap be?
 
 ## Strategic combination
-
-Preferred opportunity pattern:
 
 **Russian mechanism / theory / special experimental capability**
 ×
@@ -41,87 +41,133 @@ Preferred opportunity pattern:
 
 ## Scope
 
-- Primary platform: **smartphones**
-- Secondary platform: **tablets**
-- Other domains: only as transferable technology sources
-- Main evidence window: **2021–2026**
-- Priority window: **2023–2026**
-- Older work: only for technical lineage / foundational mechanisms / lab capability
+- Primary platform: smartphones
+- Secondary: tablets
+- Other domains: technology-source only
+- Priority evidence: 2023–2026
+- Main evidence: 2021–2026
+- Older work: lineage / foundational physics / IP / lab capability
 
-## Research guardrails
+## Repository architecture
 
-To avoid drift:
-
-1. **Russia coverage must remain broad enough to avoid survivorship bias.** A deep dive on one promising lab does not close the institution scan.
-2. **China benchmark is mandatory for every promoted Russian capability.**
-3. **Phone constraints are mandatory before a technology becomes a collaboration opportunity.**
-4. **Negative evidence is retained.**
-5. **Generic technologies are not treated as Russia-specific advantages.**
-6. **No final partner recommendation is made from publication strength alone.**
-7. **PoC priority does not equal final strategic priority.** A first PoC may be selected because it is cheap and discriminating.
-8. **IP / prior collaboration must be checked before outreach or joint-invention planning.**
-9. **The final output must still cover the complete technology space, not only the current leading hypothesis.**
-
-## Repository structure
+The top-level 00–09 structure follows the research decision chain.
 
 ```
 Russia-Thermal/
-├── 00_scope/
-├── 01_global-baseline/
-├── 02_technology-landscape/
-├── 03_russia-institutions/
-├── 04_researchers-labs/
-├── 05_papers-patents/
-├── 06_active-cooling/
-├── 07_china-benchmark/
-├── 08_opportunities-transfer/
-├── 09_collaboration-roadmap/
-├── evidence/
-├── PROGRESS.md
+├── 00_scope/                   # scope + repository governance
+├── 01_global-baseline/         # smartphone/user/product constraints
+├── 02_technology-landscape/    # canonical technology taxonomy
+├── 03_russia-institutions/     # institution coverage database
+├── 04_researchers-labs/        # current lab/PI/partner dossiers
+├── 05_papers-patents/          # paper interpretation + patent/IP maps
+├── 06_active-cooling/          # active-cooling mechanism track
+├── 07_china-benchmark/         # China/global comparison baseline
+├── 08_opportunities-transfer/  # constraints, comparisons, decision gates
+├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap
+├── evidence/                   # standards, source/ranking registers, QA
+├── CHANGELOG.md                # decision-relevant corrections/refreshes
+├── PROGRESS.md                 # live project status
 └── README.md
 ```
 
-## Nine workstreams
+Repository governance:
+- [Repository Architecture & Refresh Contract](00_scope/repository_architecture.md)
+- [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
+- [Evidence & QA Index](evidence/README.md)
+- [Research Repository Changelog](CHANGELOG.md)
 
-| # | Workstream | Purpose |
-|---|---|---|
-| 01 | Global smartphone thermal problem space | Define real user/system thermal problems |
-| 02 | Thermal technology landscape | Cover passive, active, emerging, materials, software and acoustic routes |
-| 03 | Russian institution landscape | Avoid missing important Russian capability clusters |
-| 04 | Russian labs / researchers | Resolve PI / researcher / facility / project capability |
-| 05 | Papers, patents & core technologies | Build auditable evidence and IP lineage |
-| 06 | Active-cooling deep dive | Examine fan, liquid, synthetic jet, EHD and hybrid active routes |
-| 07 | China benchmark & gap | Test whether Russian capability is truly complementary |
-| 08 | Transfer / open problems / hypotheses | Apply mobile constraints and falsification gates |
-| 09 | Collaboration / PoC / 3-year R&D | Convert surviving hypotheses into actionable collaboration plans |
+## Current status — 2026-10-04
 
-## Current status — 2026-10-03
+**Estimated research completion: ~49%**
+**Estimated remaining: ~51%**
 
-**Estimated completion: ~37%**
-**Estimated remaining: ~63%**
+Current phase:
+**falsification + IP/partner readiness + Stage-0 PoC definition**
 
-Current research phase:
-**constraint + falsification + first partner-specific PoC design**
+### Current technical portfolio
 
-Current portfolio:
-- Tier A: sub-mm phase-change / capillary-surface enhancement
-- Tier A-: sealed adaptive film/droplet hybrid cooling
-- Tier B+: model-light compute + cooling adaptive control
-- Tier B: multi-hotspot two-phase routing
-- Tier B: confined microfan aeroacoustics
+**Tier A**
+- fluid-specific sub-mm phase-change / capillary control
+  - lead: Pavlenko/Kutateladze
+  - thesis: target-fluid dryout / rewetting / wetting-state retention under <0.5 mm-class confinement
 
-Important:
-the Tier A surface route is a **GO for a discriminating lab PoC design**, not a final declaration that it is the best 3-year strategy.
+**Tier A-**
+- sealed adaptive film/droplet hybrid
+  - high-risk feasibility
 
-See [PROGRESS.md](PROGRESS.md) for live status.
+**Tier B+**
+- TPU target-fluid biphilic / contrast-wetting challenger
+- MPEI Ivanov wettability / hierarchical-coating challenger
+- compute + cooling joint adaptive control
+
+**Pre-device challenger**
+- MPEI ordered porous wick
+
+**Tier B**
+- multi-hotspot two-phase routing
+- confined microfan aeroacoustics / tonal control
+
+### Important killed/reframed generic theses
+
+Not treated as Russia-specific strategic advantages by themselves:
+- generic LHP miniaturization;
+- generic synthetic-jet cooling;
+- generic VC / graphite / TIM;
+- generic microfan;
+- generic DVFS;
+- generic hydrophilic/biphilic/laser/composite-wick surface treatment.
+
+## Current Russia coverage
+
+Minimum major-university set:
+- 20/20 checked;
+- PENDING = 0;
+- HIGH-SIGNAL: MPEI, SPbU, TPU, PNRPU;
+- other institutions remain KEEP or NO CURRENT SIGNAL according to current evidence.
+
+See:
+[Russia Institution Index](03_russia-institutions/README.md)
+
+## Current PoC posture
+
+PoC-1 is now **IP-aware and two-stage**.
+
+Stage 0:
+- coupon;
+- target-fluid compatibility;
+- thickness/process;
+- vacuum/bake;
+- cycling;
+- capillary/wetting behavior;
+- IP specificity.
+
+Stage 1:
+- strong 0.39–0.4 mm-class China-style reference;
+- at most two Russian challenger arms.
+
+No current partner is contract-ready.
 
 ## Evidence language
 
 Important statements are separated into:
-- **Source fact**
-- **Author/company claim**
-- **Cross-source observation**
-- **Analyst inference**
-- **Hypothesis**
+- Source fact
+- Author/company claim
+- Cross-source observation
+- Analyst inference
+- Hypothesis
 
-Absence of public evidence is recorded as uncertainty, not evidence of absence.
+Absence of public evidence is uncertainty, not proof of absence.
+
+## Refresh rule
+
+A substantive research round is not archived until the relevant:
+- source register,
+- local workstream,
+- decision file,
+- PROGRESS,
+- QA matrix,
+- and CHANGELOG (when decision-relevant)
+
+have been refreshed.
+
+See [PROGRESS.md](PROGRESS.md) for live next steps.
