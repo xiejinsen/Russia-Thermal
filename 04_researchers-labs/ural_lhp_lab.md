@@ -102,3 +102,52 @@ Instead:
 > What is the **minimum viable LHP topology** that preserves capillary routing benefits when evaporator/compensation-chamber thickness is pushed toward smartphone limits?
 
 That is a meaningful joint research question and is falsifiable.
+
+
+## China pressure-test update — 2026-10-04
+
+Stronger China comparators now include:
+
+1. **[Study on heat transfer characteristics of a dual-evaporator ultra-thin loop heat pipe for laptop cooling](https://doi.org/10.1016/j.applthermaleng.2024.122395)** — 1 mm dual-evaporator LHP for separated laptop heat sources.
+
+2. **[Performance and energy consumption study of a dual-evaporator loop heat pipe for chip-level cooling](https://doi.org/10.1016/j.applthermaleng.2024.124757)** — QUST / SDU — startup, variable load, fluid distribution, up to 300 W total load.
+
+3. **[Experimental Study on a Dual Compensation Chamber Multi-Evaporator Loop Heat Pipe System](https://doi.org/10.3390/eng7020084)** — SDU — 2026.
+   - multi-source;
+   - charge/startup optimization;
+   - explicit ~70 W stage failure threshold;
+   - failure linked to cumulative pressure drop exceeding capillary pumping ability.
+
+4. Beihang / Guiping Lin / Lizhan Bai lineage:
+   - NCG;
+   - startup;
+   - tilt/elevation;
+   - compensation-chamber behavior.
+
+### Decision correction
+
+The old residual thesis:
+> Maydanik is differentiated by multi-hotspot routing / operating-limit / failure physics
+
+is no longer sufficiently supported after strong China comparison.
+
+China now combines:
+- direct mobile/laptop miniaturization;
+- multiple evaporators;
+- variable load/startup;
+- NCG/orientation;
+- capillary/pressure-drop failure analysis.
+
+### What remains valuable
+
+Maydanik / ITP UB RAS still offers:
+- foundational LHP expertise;
+- unusually long design/history depth;
+- potential expert review / model review / failure-analysis value.
+
+But this is **knowledge depth**, not a current Russia country-level strategic differentiation.
+
+Current state:
+**WATCH / KNOWLEDGE RESERVE.**
+
+Do not allocate a standalone strategic PoC unless partner discussion reveals a specific non-public control point unavailable domestically.
