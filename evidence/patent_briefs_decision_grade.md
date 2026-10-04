@@ -16,6 +16,28 @@ Each brief uses:
 
 This is a technical prior-art aid, **not legal freedom-to-operate advice**.
 
+## Patent 10Q migration status
+
+The project now uses:
+[Mobile Thermal Insight — Paper & Patent 10Q Method](mobile_thermal_insight_10q_method.md)
+
+Existing patent briefs already cover:
+- problem;
+- core technical method;
+- strategic prior-art implication;
+- mobile/IP insight.
+
+They will be progressively backfilled with:
+- independent-claim control point;
+- dependent-claim implementation bounds;
+- embodiment/manufacturability evidence;
+- inventor/assignee capability lineage;
+- overlap/design-around status;
+- background vs potential foreground IP;
+- explicit next claim/legal/partner/PoC action.
+
+Until those are filled, do not interpret an abstract-level brief as a complete claim analysis.
+
 ---
 
 # A. Russia — Kutateladze / Pavlenko
