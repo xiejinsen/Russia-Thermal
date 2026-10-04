@@ -20,6 +20,25 @@ Non-mobile thermal systems may contribute **mechanism evidence only** until a qu
 
 This scope correction does not change the ~55% research completion estimate.
 
+## Citation readability refresh — 2026-10-04
+
+Human-facing paper/patent citations are being standardized to:
+
+**[Title](link)** — Authors / Inventors — *Journal / Patent No. / Assignee* — Year.
+
+Completed first-pass migration for:
+- three Stage-0 partner briefs;
+- surface/wick patent map;
+- Russia–China surface/wick comparison;
+- collaboration index;
+- final-report evidence appendix.
+
+Added:
+- `evidence/readable_bibliography.md` as the preferred human entry point;
+- machine-oriented `source_register.md` remains compact/raw by design.
+
+This presentation cleanup does not change the ~55% research completion estimate.
+
 ## Current phase
 
 **Stage-0 partner execution design + manufacturability falsification**
@@ -42,8 +61,8 @@ New:
 ## New finding 1 — MPEI becomes a stronger challenger
 
 Primary:
-https://doi.org/10.1134/S0040601525600683
-https://doi.org/10.1016/j.pes.2026.100314
+- **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
+- **[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
 
 Public evidence now includes:
 - ~0.1 mm-radius hierarchical microgrooves;
@@ -65,7 +84,7 @@ Not Tier A because:
 ## New finding 2 — TPU process evidence strengthens, but exposes a new risk
 
 Primary:
-https://doi.org/10.1016/j.surfin.2026.109390
+- **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
 
 TPU demonstrates:
 - laser micro/nanotexture;
