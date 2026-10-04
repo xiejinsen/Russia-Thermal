@@ -31,7 +31,7 @@ Key facts:
 - Beijing University of Technology coauthors are already present.
 
 Implication:
-the mechanism lineage is Russian-led/long-running, but **not Russia-exclusive knowledge**.
+the mechanism lineage is Russian-led/long-running and the joint paper demonstrates **China–Russia knowledge transfer / collaboration readiness**. Chinese coauthorship does not by itself establish an independently equivalent Chinese capability.
 
 ### B. Extreme-aspect-ratio slit two-phase flow
 
@@ -120,13 +120,16 @@ Keep only:
 
 > **shear-driven ultra-thin free-surface film / interfacial-instability / dry-spot physics under extreme confinement**, supported by a long experimental lineage and a 12.5 μm slit-flow capability.
 
-### Important caveat
+### Joint-authorship attribution
 
 The 2022 shear-driven-film paper includes Beijing University of Technology coauthors.
 
-Therefore:
-- the know-how is not necessarily Russia-exclusive;
-- collaboration value must come from the **current Kutateladze experimental platform / mechanism depth / tacit know-how**, not from claiming China has never worked on it.
+Under the updated project rule:
+- this paper may still support a Russian capability because Kutateladze has the pre-existing shear-film lineage and platform;
+- it also proves collaboration readiness / knowledge transfer;
+- it should count as a strong China comparator **only if independent Chinese capability on the same control problem is separately evidenced**.
+
+Collaboration value therefore can legitimately include the **Kutateladze experimental platform / mechanism depth / tacit know-how**.
 
 ### Current country state
 
