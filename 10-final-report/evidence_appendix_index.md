@@ -17,6 +17,8 @@ This file indexes evidence; it should not duplicate the entire source register.
 ## B. Human-readable bibliography
 
 - [Decision-Grade Papers & Patents](../evidence/readable_bibliography.md)
+- [Paper Brief Library](../evidence/paper_briefs_decision_grade.md)
+- [Patent Brief Library](../evidence/patent_briefs_decision_grade.md)
 
 Use this as the default human entry point for papers and patents.
 
