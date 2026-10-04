@@ -47,7 +47,7 @@ Search/evidence is incomplete. Do not convert uncertainty into a positive or neg
 |---|---|---|---|---|---|---|---|---|---|
 | Pavlenko irreversible-dryout boundary control | PASS | PASS | **PASS+ comparator** | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS | **Candidate Primary Bet / narrow differentiation** |
 | TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | **PARTIAL+** | **PASS** | PASS-Stage0 | Reserve/Challenger — GO w/prerequisite |
-| MPEI Ivanov coating | PASS | PASS | PASS | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 — GO w/prerequisite** |
+| MPEI Ivanov coating | PASS | PASS | **PASS+ comparator** | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 — narrow differentiation retained** |
 | MPEI ordered wick | PASS | PASS | PASS | LOW | PARTIAL | PARTIAL | PARTIAL | PRE-PoC | Watch/Pre-device |
 | Film/droplet hybrid | PASS | PASS | PASS | LOW | PASS | PARTIAL | PARTIAL | Feasibility only | Reserve high-risk |
 | Generic LHP miniaturization | PASS | PASS | PASS | FAIL differentiation | PASS | crowded | n/a | n/a | Killed as Russia-specific thesis |
@@ -305,3 +305,32 @@ Promotion now requires:
 - later irreversible-dryout onset vs strong domestic wick controls;
 - repeatable rewetting/recovery benefit;
 - product-fluid/copper/vacuum/process survival.
+
+
+## 2026-10-04 MPEI exact multi-year aging comparator closure
+
+Strong China evidence:
+- copper-water VC oxygen-driven failure analysis;
+- 150–200 °C accelerated lifetime prediction;
+- oxidation QA;
+- 0.7 mm mobile mLHP 30-day aging.
+
+Targeted actual-duration searches:
+- multi-year;
+- 1000 h;
+- 5000 h;
+- 10000 h;
+- engineered evaporator surface.
+
+No matched public China analogue was recovered for the exact MPEI evidence type:
+**same engineered surface + actual multi-year two-phase operation + thermal/morphology/capillary aging.**
+
+Gate consequence:
+- broad reliability advantage remains **KILLED**;
+- narrow actual multi-year engineered-surface aging distinction is **RETAINED**;
+- phone transfer remains PARTIAL+ rather than PASS.
+
+Current final-report state:
+**Reserve / Stage-0 #2 / NARROW DIFFERENTIATION.**
+
+Promotion requires a phone-scale early-aging indicator with predictive value beyond domestic oxidation/vacuum-process metrics.
