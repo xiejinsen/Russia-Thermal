@@ -8,108 +8,111 @@ Convert surviving hypotheses into actionable partner discussions, discriminating
 
 ## CURRENT outputs
 
+### Portfolio / readiness
 - [Partner-to-hypothesis matching](partner_hypothesis_map_v01.md)
-- [PoC-1: IP-aware Surface/Wick × Ultra-Thin VC](poc01_surface_utvc_v01.md)
-- [PoC-1 Stage-0 Coupon Matrix](poc01_stage0_coupon_matrix_v01.md)
 - [Surface/Wick partner readiness](partner_readiness_surface_v01.md)
 
-## Current lead
+### PoC
+- [PoC-1: IP-aware Surface/Wick × Ultra-Thin VC](poc01_surface_utvc_v01.md)
+- [PoC-1 Stage-0 Coupon Matrix](poc01_stage0_coupon_matrix_v01.md)
 
-### Pavlenko / Kutateladze — Tier A lead
+### 3–6 month partner briefs
+- [Pavlenko / Kutateladze Stage-0 Brief](partner_brief_pavlenko_stage0_v01.md)
+- [MPEI / Ivanov Stage-0 Brief](partner_brief_mpei_ivanov_stage0_v01.md)
+- [TPU / Feoktistov Stage-0 Brief](partner_brief_tpu_stage0_v01.md)
 
-Current thesis:
-**working-fluid-transferable dryout / rewetting / wetting-state retention under sub-mm sealed confinement.**
+## Current Stage-0 execution priority
 
-Status:
-- technical-discussion ready;
-- Stage-0 coupon GO;
-- demonstrated mesh geometry itself is not phone-ready;
-- background-IP boundary still unresolved;
-- no product-integration commitment.
+### #1 Pavlenko / Kutateladze — Tier A lead
+Question:
+can strong boiling/dryout physics be transferred to ~60–100 μm-class phone wick and product-path fluid?
 
-## Stage-0 challengers
+Main risk:
+manufacturing/process scaling.
 
-### TPU / Feoktistov
-- contrast-wettability / surface-engineering line;
-- current electronics-cooling evidence;
-- Stage-0 requires product-path fluid + vacuum/cycling validation.
+### #2 MPEI / Ivanov — Tier B+ reliability/process challenger
+New evidence:
+- https://doi.org/10.1134/S0040601525600683
+- https://doi.org/10.1016/j.pes.2026.100314
 
-### MPEI / Ivanov
-- tunable wettability / hierarchical coating / thermosyphon line;
-- current patents and 2026 project continuity;
-- actual coating thickness + product-fluid/sub-mm transfer still unproven.
+Strength:
+- 42-month R410A two-phase durability evidence;
+- current coating/IP line.
 
-## Pre-device challenger
+Main risk:
+heat flux and geometry are far from phone.
 
-### MPEI ordered porous wick
-- model/design evidence retained;
-- physical thin coupon/prototype required before sealed-device PoC.
+### #3 TPU / Feoktistov — Tier B+ pattern/process challenger
+Evidence:
+- https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
+- https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+- https://doi.org/10.1016/j.surfin.2026.109390
 
-## Stage-0 geometry / fluid anchor
+Strength:
+- laser/wettability pattern control;
+- current surface durability evidence.
 
-Strong reference:
-- 0.39 mm finished UTVC;
-- ~0.2 mm internal steam-channel/support height;
-- 0.06 mm copper mesh;
-- water working fluid.
+Main risk:
+vacuum/outgassing / fluid contamination / sealed two-phase transfer.
 
-Current internal targets:
-- ~60 um-class mesh preferred;
-- <=100 um transfer/stretch mesh;
-- <=35 um added functional layer preferred;
-- <=120 um total surface/wick target;
-- <=150 um stretch ceiling.
+### Pre-device — MPEI ordered porous wick
+Needs a physical thin coupon before joining the main Stage-0 competition.
 
-Working-fluid policy:
-- DI water = primary sealed-VC product-path reference;
-- HFE-7100 = legacy mechanism bridge only;
-- future low-boiling dielectric = separate supply/regulatory/material screen.
+## Important interpretation
 
-## Stage-0 rule
+The order above is **not a final partner ranking**.
 
-Stage 0 screens:
-- geometry;
-- working-fluid compatibility;
-- vacuum/process tolerance;
-- cycling;
-- capillary/wetting behavior;
-- permeability penalty;
-- repeatability;
-- IP specificity.
+It ranks:
+> the current evidence-to-Stage-0 path.
 
-Only up to two Russian challenger arms advance to sealed Stage 1.
+Each team attacks a different uncertainty:
+- Pavlenko: high-flux mechanism;
+- MPEI: long-duration stability;
+- TPU: controllable spatial surface engineering.
 
-## Phone-packaging implication
+## Stage-0 common anchor
 
-The current teardown baseline shows future thermal design is increasingly package/board/VC/frame co-design.
+- ~0.39 mm finished UTVC reference;
+- ~0.2 mm internal channel;
+- ~60 μm reference mesh;
+- water product-path reference;
+- HFE-7100 literature bridge only.
 
-For PoC-1, preferred architecture is:
-**integrated modification / replacement inside an existing VC**, not an additive 1–2 mm module.
+Internal target:
+- ~60 μm-class mesh preferred;
+- <=100 μm transfer/stretch;
+- <=35 μm added functional layer preferred;
+- <=120 μm total functional element preferred;
+- <=150 μm stretch ceiling.
 
-See:
-../01_global-baseline/phone_packaging_teardown_baseline_v01.md
+## Partner-commitment blockers
 
-## Other portfolio
+Pavlenko:
+- thin-mesh process window;
+- permeability/adhesion;
+- product-fluid transfer;
+- background IP.
 
-- Film/droplet hybrid — Tier A-
-- SPbU adaptive control — Tier B+
-- Ural multi-hotspot routing — Tier B
-- TsAGI/PNRPU/CIAM aeroacoustics — Tier B
+MPEI:
+- actual layer thickness;
+- geometry scale-down;
+- high-flux transfer;
+- copper/phone process.
 
-## Current blockers before partner commitment
+TPU:
+- vacuum/outgassing;
+- organic layer contamination;
+- copper transfer;
+- RU2812668 inventor/claim closure;
+- sealed rewetting evidence.
 
-- Pavlenko thin-mesh process transfer evidence;
-- TPU RU2812668 inventor/claim closure;
-- MPEI coating thickness/product-fluid evidence;
-- patent family/status review for promoted IP;
-- Huawei/background-IP boundary;
-- physical Stage-0 coupon feasibility.
+No team is contract-ready.
 
-## Guardrail
+## Next gate
 
-A partner advances only when:
-- mechanism is differentiated;
-- it fits the phone thermal stack;
-- benefit survives product-path fluid/process/cycling;
-- a strong comparator is beaten;
-- a plausible foreground control point remains.
+Use the three briefs to close public/shareable data gaps.
+
+After that:
+- score actual Stage-0 feasibility;
+- select physical coupon routes;
+- only then invest in sealed Stage-1.
