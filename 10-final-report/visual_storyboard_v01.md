@@ -145,6 +145,20 @@ ICM SB RAS / Lavrentyev
 
 Do not imply this foundation supports every Russia candidate equally.
 
+### Capability-network overlay
+
+Where a collaboration capability crosses institutions, show a **network edge**, not duplicate isolated boxes.
+
+Current verified example:
+- Kutateladze ↔ Lavrentyev — current model/mechanism link;
+- Kutateladze ↔ NSU — current execution/talent/diagnostic bridge;
+- ICM/Altai ↔ Kutateladze — historical theory–experiment lineage + current methodological continuity, but current formal project unverified.
+
+Label this:
+**Siberian modular capability network**
+rather than:
+**integrated consortium**.
+
 ### Avoid
 Do not imply university rank = technology rank.
 
