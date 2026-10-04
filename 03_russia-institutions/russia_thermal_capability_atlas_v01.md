@@ -256,6 +256,34 @@ Pressure test:
 
 ---
 
+### G. Siberian modular capability network
+
+A focused network check shows that the Russia foundational/mechanism signal is not only a collection of geographically adjacent institutes.
+
+Verified:
+- **Kutateladze ↔ Lavrentyev** — current direct technical coauthorship on shear-driven liquid-film cooling for microelectronics;
+- **Kutateladze ↔ NSU** — current dual affiliations, labs, diagnostics and electronics-cooling execution bridge;
+- **ICM/Altai ↔ Kutateladze** — direct historical theory–experiment coauthorship and current methodological continuity.
+
+Not verified:
+- one current four-node consortium;
+- a 2023–2026 formal ICM–Kutateladze joint project;
+- current ICM ↔ Lavrentyev thermal collaboration.
+
+Management wording:
+**partially verified Siberian modular capability network**, anchored on Kutateladze.
+
+This matters because collaboration can potentially combine:
+analytical stability
+→ detailed fluid model
+→ phase-change experiment/diagnostics
+→ phone boundary conditions.
+
+Detailed map:
+[siberian_theory_fluid_experiment_network_v01.md](siberian_theory_fluid_experiment_network_v01.md)
+
+---
+
 ## 5. Initial country-level differentiation candidates
 
 These are **candidates for China comparison**, not final advantages:
