@@ -59,6 +59,49 @@ Every decision-grade item should record:
 - verification status;
 - caveats.
 
+
+
+## Cross-border coauthorship attribution rule
+
+International coauthorship must **not** be converted mechanically into country capability.
+
+A China–Russia coauthored paper may legitimately support a Russian capability when one or more of the following are evidenced:
+- the Russian lab owns or operates the core experimental platform;
+- the Russian group has a pre-existing research lineage on the mechanism before the joint paper;
+- the key method/model/diagnostic framework originates from the Russian group;
+- the Russian PI/lab leads the relevant work package, corresponding-author role, project or facility;
+- the transferable tacit know-how is plausibly tied to the Russian platform/team.
+
+Likewise, Chinese coauthorship shows that knowledge has crossed the collaboration boundary, but it does **not by itself** prove that the same capability is independently established in China.
+
+To count a joint paper as a **strong China comparator**, prefer at least one additional signal:
+1. China-led corresponding / senior authorship or China-owned experiment/platform;
+2. an independent Chinese follow-on paper without the Russian group;
+3. an established domestic Chinese lab/facility line on the same control problem;
+4. Chinese patent/product/engineering evidence showing internalized capability.
+
+### Attribution labels
+
+Use:
+- **RUSSIA-LED / JOINT**
+- **CHINA-LED / JOINT**
+- **BALANCED JOINT**
+- **ORIGIN UNCLEAR**
+- **INDEPENDENT CHINA**
+- **INDEPENDENT RUSSIA**
+
+The label is about **capability attribution**, not nationality prestige.
+
+### Double-counting rule
+
+A joint paper may simultaneously show:
+- Russian origin/platform strength;
+- successful China–Russia knowledge transfer;
+- collaboration readiness.
+
+But it must not automatically be counted as two independent national capabilities.
+
+
 ## Decision-file traceability rule
 
 A document in folders:
