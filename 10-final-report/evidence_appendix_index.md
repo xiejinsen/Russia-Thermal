@@ -19,6 +19,8 @@ This file indexes evidence; it should not duplicate the entire source register.
 - [Decision-Grade Papers & Patents](../evidence/readable_bibliography.md)
 - [Paper Brief Library](../evidence/paper_briefs_decision_grade.md)
 - [Patent Brief Library](../evidence/patent_briefs_decision_grade.md)
+- [Core Paper 10Q Decision Cards](../evidence/paper_10q_cards_core_v01.md)
+- [Core Patent 10Q Decision Cards](../evidence/patent_10q_cards_core_v01.md)
 
 Use this as the default human entry point for papers and patents.
 
