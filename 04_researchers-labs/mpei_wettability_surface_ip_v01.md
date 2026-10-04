@@ -317,3 +317,33 @@ The strongest newly reduced uncertainty is no longer "does MPEI have any thin-ch
 
 The remaining decisive question is:
 > can the *current hierarchical long-life surface* be scaled from ~100 μm-radius grooves into the phone vertical budget without losing liquid supply or vapor space, and retain advantage at phone-relevant heat flux?
+
+
+## China reliability comparator update — 2026-10-04
+
+New decision-grade China comparators:
+
+- **[Experimental study on the failure mechanism of the heat transfer performance under the action of oxygen of a copper–water vapour chamber without structural damage](https://doi.org/10.1016/j.applthermaleng.2025.125619)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2025.
+- **[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2026.
+- **[Detection and grading of oxidation for copper–water heat pipe wicks based on the machine learning methods](https://doi.org/10.1016/j.applthermaleng.2025.126437)** — Guo, Li, Huang *et al.* — *Applied Thermal Engineering*, 2025.
+
+China public capability now includes:
+- copper-water VC oxygen-driven failure mechanism;
+- hydrophilic -> hydrophobic wick-state degradation;
+- capillary-pressure collapse;
+- vacuum-process reliability linkage;
+- 150–200 °C accelerated-aging lifetime prediction;
+- production-oriented wick-oxidation grading.
+
+Decision correction:
+**MPEI is not differentiated by "reliability" in general.**
+
+Residual MPEI differentiation candidate:
+> actual 42-month periodic operation of a specific hierarchical evaporator surface with post-operation morphology and capillary-aging evidence.
+
+This makes the Stage-0 question stricter:
+- does the MPEI hierarchy provide a hierarchy-specific long-life mechanism beyond generic oxygen/vacuum/process reliability already covered by the China baseline?
+- does that mechanism survive geometry shrink, copper transfer and high heat flux?
+
+Current country-level state:
+**NARROW DIFFERENTIATION / COMPLEMENTARY RELIABILITY CANDIDATE**, not broad Russia reliability leadership.
