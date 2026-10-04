@@ -1,175 +1,168 @@
-# PoC-1 — IP-Aware Multi-Stage Surface/Wick × Ultra-Thin VC v0.4
+# PoC-1 — IP-Aware Multi-Stage Surface/Wick × Ultra-Thin VC v0.5
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 ## Decision status
 
-**GO for Stage-0 comparative screening.**
+**GO for Stage-0 comparative coupon screening.**
 
-Do not fabricate every candidate as a sealed VC immediately.
-
-Reason:
-the surface/wick IP field is crowded, and several candidate processes may fail target-fluid or thickness constraints before device assembly.
+Detailed frozen Stage-0 matrix:
+[poc01_stage0_coupon_matrix_v01.md](poc01_stage0_coupon_matrix_v01.md)
 
 ## Strong reference
 
-Reference A must represent a modern China-style UTVC:
-- 0.39–0.4 mm-class sealed device;
-- composite wick;
-- modern wettability treatment;
-- realistic liquid/vapor budget.
+Modern 0.39–0.4 mm-class sealed UTVC.
 
-Evidence:
+Primary:
 https://doi.org/10.3390/mi15050627
+
+Reference facts:
+- 0.39 mm finished UTVC;
+- ~0.2 mm steam-channel/support height;
+- 0.06 mm copper mesh;
+- water working fluid;
+- composite wick + wettability treatment.
+
+Additional modern references:
 https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
 https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
 
-## Stage 0 — coupon + IP gate
+## Important transfer correction
 
-All surface challengers use:
-- same target substrate where possible;
-- same target working fluid;
-- same process thermal budget;
-- phone-relevant thickness ceiling.
+Published Russian structures must not be copied blindly into the 0.4 mm device.
 
-### B — Pavlenko
-Candidate:
-- electrochemically modified mesh / thin capillary surface.
+Pavlenko mesh-geometry paper:
+https://doi.org/10.1134/S0040601525700454
 
-Measure:
-- functional-layer thickness;
-- pore morphology;
-- capillary response;
-- wetting state before/after fluid exposure;
-- vacuum-bake impact;
-- repeated thermal cycling.
+Reported wire sizes include:
+- 100 um;
+- 220 um;
 
-Relevant IP:
-https://patents.google.com/patent/RU2793671C2/en
+with additional related single-layer work using 160 um.
+
+A 220 um wire is already comparable to/exceeds the ~200 um reference channel height.
+
+Therefore Stage 0 tests **mechanism transfer to thinner phone-relevant structures**, not direct reuse of the thick published mesh.
+
+## Working-fluid correction
+
+Pavlenko literature uses HFE-7100.
+
+3M:
+https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+
+3M completed its PFAS manufacturing exit at end-2025.
+
+PoC policy:
+- W1: DI water = primary sealed-VC product-path reference;
+- W2: HFE-7100 = legacy mechanism bridge only if practically available;
+- W3: future low-boiling dielectric candidate = TBD after supply/regulatory/material screen.
+
+A Russian arm is weakened if its advantage only exists in legacy HFE-7100.
+
+## Stage 0 arms
+
+### A — strong reference
+Thin copper mesh + modern wettability treatment.
+
+### B — Pavlenko mechanism transfer
+- modified mesh / thin capillary surface;
+- transfer to ~60–100 um-class mesh;
+- characterize modification thickness, pore morphology and permeability.
 
 ### C — TPU
-Candidate:
-- spatial contrast / biphilic layout.
+- spatial biphilic / contrast-wetting pattern;
+- must retain function in W1/W3 and through processing/cycling.
 
-Kill before device assembly if:
-- wetting contrast collapses in target dielectric fluid;
-- pattern requires a thick/fragile coating;
-- only generic CN116989603-like functionality remains.
-
-Prior art:
-https://patents.google.com/patent/CN116989603B/en
-
-### D — MPEI Ivanov coating line
-Candidate:
-- hierarchical / tunable-wettability coating.
-
-Evidence:
-https://patents.google.com/patent/RU2860061C1/en
-https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
-
-Kill before device assembly if:
-- coating cannot reach phone-compatible thickness;
-- target-fluid behavior is not retained;
-- thermal/vacuum processing destroys function.
+### D — MPEI Ivanov
+- hierarchical / tunable-wetting coating;
+- must quantify actual total coating thickness and target-fluid stability.
 
 ### E — MPEI ordered wick
-Candidate only after:
-- real thin coupon/prototype;
-- measured capillary pressure;
-- permeability;
-- thickness.
+Pre-device only until a physical thin coupon exists.
 
-Primary:
-https://doi.org/10.30724/1998-9903-2026-28-4-193-205
+## Stage-0 geometry targets
+
+Internal screening, not industry standards:
+- ~60 um-class mesh preferred where feasible;
+- <=100 um transfer/stretch mesh;
+- added functional layer target <=35 um;
+- total surface/wick element target <=120 um;
+- stretch ceiling <=150 um.
+
+A >=200 um structure is disfavored unless it replaces another structural/channel function.
+
+## Stage-0 process sequence
+
+- as-fabricated metrology;
+- fluid soak;
+- vacuum/degassing-process simulation;
+- initial 100 thermal cycles;
+- survivor 500 cycles;
+- boiling/dryout/rewetting screen.
 
 ## Stage-0 promotion rule
 
-Promote **at most two Russian challenger arms** to sealed-device Stage 1.
-
-A challenger must show:
-- target-fluid compatibility;
-- thickness/process feasibility;
-- repeatable capillary/wetting improvement;
-- a technically narrower IP thesis than generic hydrophilic/biphilic/laser/porous treatment.
-
-## Stage 1 — sealed 0.4-mm-class device
+Promote at most two Russian-inspired arms.
 
 Minimum:
-A. strong China-style reference
+- product-path fluid compatibility;
+- geometry/process feasibility;
+- repeatable capillary/wetting benefit;
+- no severe permeability penalty;
+- >=3-sample repeatability;
+- plausible narrow foreground-IP thesis;
+- no dependence on HFE-7100 as the only useful fluid.
 
-Plus up to two Stage-0 Russian winners.
+## Stage 1
+
+Strong reference + up to two Russian winners.
 
 Hold:
 - total thickness;
 - footprint;
-- shell material;
-- working fluid;
+- shell;
+- product-path working fluid;
 - fill ratio;
-- vapor-space budget;
+- internal channel budget;
 - heater;
 - condenser;
-- degassing;
-- sealing;
-- orientation protocol.
+- degassing/sealing;
+- orientation.
 
-## Loads
+Loads:
+- 5 / 8 / 12 / 15 W steady;
+- 5 -> 15 W transient;
+- repeated 8 -> 15 -> 8 W;
+- localized/moving hotspot when feasible.
 
-Steady:
-- 5 / 8 / 12 / 15 W
-
-Transient:
-- 5 → 15 W
-- repeated 8 → 15 → 8 W
-- localized/moving heat source when layout supports it
-
-## Primary metrics
-
-- evaporator thermal resistance;
-- total device resistance;
+Metrics:
+- evaporator/device Rth;
 - dryout/capillary limit;
-- rewetting time;
+- rewetting;
 - transient overshoot;
-- adverse-orientation penalty.
+- orientation penalty;
+- cycle/process drift.
 
-Reliability/process:
-- wetting/capillary drift;
-- 100–500 thermal cycles;
-- vacuum retention;
-- adhesion/corrosion;
-- sample-to-sample repeatability.
-
-## Advance gate
-
-Russian arm must beat the strong reference with:
-- >=15% lower evaporator resistance; OR
+Internal advance criterion:
+- >=15% lower evaporator Rth; OR
 - >=20% higher dryout/capillary limit; OR
 - >=20% faster rewetting;
 
-and:
-- no thickness increase;
-- no material orientation penalty;
-- acceptable cycling;
-- credible manufacturing path.
+plus no unacceptable thickness/process/reliability penalty.
 
-These are internal screening gates, not literature claims.
+## Integration rule
 
-## IP-aware foreground target
+For PoC-1, classify the route as:
+**integrated modification / replacement inside an existing VC**, not a generic additive cooling module.
 
-Do not target broad claims on:
-- hydrophilic treatment;
-- biphilic patterns;
-- laser roughening;
-- composite wick.
-
-Prefer:
-- fluid-specific retained wetting state;
-- sub-mm dryout/rewetting structure;
-- moving-hotspot liquid-return topology;
-- post-seal/process reliability;
-- physics + workload-aware control combination.
+Phone packaging baseline:
+../01_global-baseline/phone_packaging_teardown_baseline_v01.md
 
 ## Collaboration meaning
 
-The PoC is successful only if:
-1. physics performance moves the device Pareto frontier; and
-2. the surviving design has a plausible, narrower joint-IP control point.
+A Russian route wins only if:
+1. physics moves the strong-device Pareto frontier;
+2. the benefit survives fluid and manufacturing transfer;
+3. geometry fits the internal phone thermal stack;
+4. a plausible joint IP/control point remains.
