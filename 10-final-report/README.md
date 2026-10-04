@@ -47,6 +47,18 @@ The project should ultimately produce four reading depths:
 - [Final Report Readiness Gate](final_report_readiness_gate.md)
 - [Visual Storyboard](visual_storyboard_v01.md)
 
+## Current Stage-0 decision input
+
+- [Stage-0 Partner × Technology Decision Scorecard](../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
+
+Current partner-stage decisions:
+- Pavlenko / Kutateladze — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
+
+These are Stage-0 falsification decisions, not final recommendations.
+
 ## Authority rule
 
 This folder does **not** override current research-state files.
