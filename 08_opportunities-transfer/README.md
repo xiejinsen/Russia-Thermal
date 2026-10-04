@@ -1,40 +1,75 @@
 # 08 — Technology Transfer, Open Problems & Innovation Hypotheses
 
+Last reviewed: 2026-10-04
+
 ## Goal
+
 Translate evidence into smartphone-relevant open problems and falsifiable innovation hypotheses.
 
 ## Current outputs
-- [Russia–China gap map v0.1](russia_china_gap_v01.md)
-- [Direct Russia–China comparisons v0.1](direct_comparisons_v01.md)
-- [Smartphone thermal constraint model v0.1](smartphone_constraint_model_v01.md)
-- [Five whitespace hypotheses — success/kill criteria v0.1](success_kill_criteria_v01.md)
-- [Common PoC test matrix v0.1](poc_test_matrix_v01.md)
+
+- [Russia–China gap map](russia_china_gap_v01.md)
+- [Direct Russia–China comparisons](direct_comparisons_v01.md)
+- [Smartphone constraint model](smartphone_constraint_model_v01.md)
+- [Success / kill criteria](success_kill_criteria_v01.md)
+- [Common PoC test matrix](poc_test_matrix_v01.md)
 - [Direction decision gate](direction_decision_gate_v01.md)
-- [Tier-A engineering feasibility review](tierA_engineering_feasibility_v01.md)
+- [Tier-A engineering feasibility](tierA_engineering_feasibility_v01.md)
 - [Phase-change surface matrix](phase_change_surface_matrix_v01.md)
-- [Pavlenko vs TPU vs MPEI vs China UTVC](surface_wick_russia_china_comparison_v01.md)
+- [Russia–China surface/wick comparison](surface_wick_russia_china_comparison_v01.md)
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
-## Current status — 2026-10-03
+## CURRENT / AUTHORITATIVE
 
-The surface hypothesis has passed a second falsification step.
+For current portfolio status:
+1. `direction_decision_gate_v01.md`
+2. `../PROGRESS.md`
 
-Current interpretation:
-- generic porous / laser / hydrophilic / composite-wick techniques are already crowded;
-- the Tier-A thesis is now narrowed to **fluid-specific dryout / rewetting / wettability retention under sub-mm confinement**.
+Other files provide supporting analysis.
 
-Lead:
-- Pavlenko/Kutateladze.
+## Current interpretation
 
-Challengers:
-- TPU biphilic / patterned wettability;
-- MPEI ordered porous wick.
+### Tier A
+Pavlenko/Kutateladze remains lead only for the narrowed thesis:
 
-The comparison baseline is upgraded to modern 0.39–0.4 mm sealed / wettability-enhanced UTVCs.
+**target-fluid dryout / rewetting / wetting-state retention under sub-mm sealed confinement.**
+
+Generic porous, laser, hydrophilic, biphilic and composite-wick processing is already crowded.
+
+### Challengers
+- TPU: target-fluid biphilic / contrast-wetting
+- MPEI Ivanov line: tunable wettability / hierarchical coatings
+- MPEI ordered-wick line: pre-device challenger
+
+### Other portfolio
+- film/droplet hybrid: Tier A-
+- compute + cooling adaptive control: Tier B+
+- multi-hotspot routing: Tier B
+- confined microfan aeroacoustics: Tier B
+
+## Completed gates
+
+Completed first pass:
+- modern China UTVC baseline;
+- Pavlenko vs TPU vs MPEI comparison;
+- surface/wick patent map;
+- lead partner-role verification;
+- IP-aware PoC-1 restructuring.
 
 ## Next gate
 
-1. Stage-0 surface/wick coupons under the same target fluid/material process;
-2. surface/wick patent map;
-3. current partner-role/IP verification;
-4. then sealed multi-arm PoC-1.
+1. phone packaging / teardown baseline;
+2. close remaining patent/claim gaps;
+3. quantify Stage-0 coupon specifications;
+4. target-fluid / vacuum / cycling evidence for promoted surface routes;
+5. freeze Stage-0 hardware matrix;
+6. then create partner-specific 3–6 month collaboration briefs.
+
+## Update rule
+
+If a Tier, kill decision, or technical thesis changes, update:
+- this index if portfolio structure changes;
+- direction decision gate;
+- PROGRESS;
+- relevant 09 PoC/partner file;
+- CHANGELOG when decision-relevant.
