@@ -6,12 +6,13 @@ Last reviewed: 2026-10-04
 
 Prevent attractive but immature research directions from being promoted into final recommendations.
 
-A direction cannot become a **Final Strategic Bet** until all mandatory gates pass.
+A direction cannot become a **Final Strategic Bet** until all mandatory gates pass. **G0 is a hard precondition**: general thermal excellence without mobile-terminal/chip relevance cannot enter the final portfolio.
 
 ## Mandatory gates
 
 | Gate | Required evidence | Pass condition |
 |---|---|---|
+| **G0 — Mobile/chip relevance** | 00 / 01 / 08 | direct mobile/chip thermal relevance OR a credible quantified transfer path |
 | G1 — Real phone problem | 01 / 08 | problem tied to user/system/product constraint |
 | G2 — Current Russia capability | 03 / 04 | active team + recent primary/official evidence |
 | G3 — Strong comparator | 07 / 08 | modern China/global baseline, not weak control |
