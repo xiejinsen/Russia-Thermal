@@ -125,6 +125,26 @@ For each promoted node show small metadata:
 - ../evidence/russia_domestic_ranking_register.md
 - ../evidence/journal_ranking_register.md
 
+### Foundational layer inside Visual 3
+
+Add a lower foundation band under the capability atlas:
+
+**Mathematical physics / stability / exact models**
+→
+**failure mechanisms**
+→
+**thermal technologies**
+→
+**smartphone PoC**
+
+Current example:
+ICM SB RAS / Lavrentyev
+→ exact/stability modeling
+→ film instability / dry spot
+→ Kabov/Chinnov mechanism route.
+
+Do not imply this foundation supports every Russia candidate equally.
+
 ### Avoid
 Do not imply university rank = technology rank.
 
@@ -151,7 +171,9 @@ Only after this comparison add an "our/team capability" overlay and collaboratio
 
 ### Data source
 - ../07_china-benchmark/china_academic_capability_mirror_v01.md
+- ../07_china-benchmark/china_foundational_math_physics_mirror_v01.md
 - ../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md
+- ../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md
 - ../08_opportunities-transfer/direct_comparisons_v01.md
 
 ### Avoid
