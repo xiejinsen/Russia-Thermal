@@ -11,7 +11,7 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 00 Scope / governance | current | strong | none critical | PASS |
 | 01 Global baseline | refreshed | good | more Huawei/China flagship geometry; sustained-power data | PASS-WITH-GAPS |
 | 02 Technology landscape | current | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
-| 03 Russia institutions | **capability atlas + foundational map current** | strong | verify current Siberian theory/experiment collaboration network; broader non-university coverage | PASS-WITH-GAPS |
+| 03 Russia institutions | **capability atlas + foundational + Siberian network map current** | strong | current ICM/Kutateladze project ownership; broader non-university coverage | PASS-WITH-GAPS |
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
 | 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
 | 06 Active cooling | comparator-refreshed | good for generic fan acoustics; medium for phone scale | EHD/piezo + actual smartphone microfan acoustic evidence | NEEDS-WORK |
@@ -482,3 +482,29 @@ Not allowed:
 
 QA judgment:
 **PASS-WITH-POC-GAP.**
+
+
+### Siberian network verification QA
+
+Canonical artifact:
+- [Siberian Theory–Fluid–Experiment Capability Network](../03_russia-institutions/siberian_theory_fluid_experiment_network_v01.md)
+
+Verified:
+- current Kutateladze–Lavrentyev technical link;
+- current Kutateladze–NSU institutional/execution bridge;
+- historical ICM/Altai–Kutateladze theory–experiment closure;
+- current methodological continuity through the same evaporative-convection problem lineage.
+
+Not verified:
+- current formal ICM–Kutateladze project;
+- current ICM–Lavrentyev link;
+- one unified consortium.
+
+Allowed wording:
+**partially verified Siberian modular capability network.**
+
+Not allowed:
+**existing integrated Siberian thermal consortium.**
+
+QA judgment:
+**PASS-WITH-PARTNER-CONFIRMATION-GAP.**
