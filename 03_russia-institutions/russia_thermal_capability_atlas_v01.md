@@ -54,7 +54,7 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 | **LHP / passive routing** | **Institute of Thermal Physics UB RAS — Maydanik/Chernysheva/Vershinin** | long LHP lineage, flat/flexible devices, current operating-limit work, multi-source relevance | **Partial** | Deep two-phase transport know-how; generic miniaturization is not sufficient as a Russia-specific advantage |
 | **Microchannel / embedded liquid cooling** | Kutateladze microchannels; MPEI thin-channel boiling; Bauman narrow-channel work | micro/slit-channel two-phase and thermal-hydraulic work | **Mechanism only / integration weak** | Useful source of physics; no evidence that Russia owns the current electronics integration frontier |
 | **Active airflow / synthetic jet / EHD** | Kutateladze synthetic-jet line; SPbU electrophysics/EHD | synthetic-jet heat transfer; ionic-wind modeling/adjacent work | **Exploratory** | Current Russian public evidence is too thin for a country-level advantage claim |
-| **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | Potential Russian strength is measurement/source-identification methodology, not generic fan hardware |
+| **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | China already has electronic-cooling fan source imaging and narrow-space/duct acoustics; Russian value is now a **watch-level method hypothesis**, not a country advantage |
 | **Thermal materials / interfaces** | Skoltech; NUST MISIS; MSU; SPbU carbon/graphite line | BN/graphene/CNT composites, graphite/carbon thermal structures, materials infrastructure | **Supporting** | No current evidence of a Russia-specific smartphone material advantage versus China/global ecosystem |
 | **Software thermal control / DVFS** | **SPbU smartphone DVFS / stochastic optimization** | direct Android/smartphone DVFS and optimization lineage | **Direct mobile relevance, differentiation unresolved** | Interesting direct mobile signal, but generic adaptive DVFS is crowded; only uncertainty-aware/system-level control may remain differentiated |
 | **Diagnostics / reliability / process know-how** | Kutateladze optical/multiphase diagnostics; **MPEI 42-month hierarchy**; TPU optical/PIV/PLIF/surface process; TsAGI/PNRPU acoustics | long-duration two-phase stability, optical flow/surface diagnostics, aeroacoustic test facilities | **Cross-cutting** | This may be more strategically important than individual components: Russia often shows depth in mechanism diagnosis, failure regimes and long experimental lineages |
@@ -103,7 +103,10 @@ Key evidence:
 - **[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Ivanov *et al.* — 2020.
 
 Management interpretation:
-MPEI's most unusual public signal is **long-duration two-phase surface stability/aging knowledge**, not generic nanoparticle coating.
+MPEI's most unusual public signal is **actual 42-month operation of one engineered hierarchical evaporator surface**, including morphology and capillary-aging observations.
+
+Important China correction:
+SCUT-led work now provides copper-water VC oxygen-failure physics, wick oxidation grading and accelerated service-life prediction. Therefore MPEI must not be presented as uniquely owning "two-phase reliability" in general.
 
 ### C. Tomsk Polytechnic University — Feoktistov line
 
@@ -151,7 +154,15 @@ Evidence:
 - [PNRPU acoustic chamber with aerodynamic sources](https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/)
 
 Management interpretation:
-Potential value is **phone-scale fan tonal/source methodology**. China also has strong aeroacoustic institutions, so Russia cannot be sold as having a monopoly on aeroacoustics.
+This line is downgraded to **WATCH / method reserve**.
+
+China academic evidence now includes:
+- cooling-fan acoustic source imaging with POD + wavelet beamforming;
+- electronic-device fan inlet-asymmetry / tonal-noise studies;
+- short-duct acoustic control;
+- narrow-space installed-condition aeroacoustics.
+
+The remaining open niche is actual smartphone-scale ~18–25 mm / ~20k rpm centrifugal-fan diagnosis. Russia also lacks direct public phone-scale proof.
 
 ### F. SPbU — control / EHD adjacency
 
@@ -203,10 +214,11 @@ These are **candidates for China comparison**, not final advantages:
    - MPEI / Ivanov.
 3. **Thin-film / interfacial instability / droplet mechanism depth**
    - Kutateladze / Kabov–Kochkin–Chinnov.
-4. **Aeroacoustic source-identification / experimental methodology**
-   - TsAGI / PNRPU / CIAM.
-5. **LHP operating-limit / routing / failure physics**
+4. **LHP operating-limit / routing / failure physics**
    - ITP UB RAS / Maydanik line.
+
+Watch / method reserve:
+- **phone-scale confined aeroacoustic source diagnosis** — TsAGI / PNRPU / CIAM; no longer counted as a current country-level differentiation candidate until a phone-scale benchmark is passed.
 
 TPU surface engineering remains a **partner challenger**, but not yet a country-level Russia advantage because China/global surface prior art is crowded.
 
