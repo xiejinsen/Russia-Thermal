@@ -11,6 +11,7 @@ Compare Russian capabilities with Chinese academic, industrial, manufacturing an
 - [China Mobile Thermal Baseline](china_mobile_baseline_v01.md)
 - [China Institution / Lab Map](institution_map_v01.md)
 - [China Academic Thermal Capability Mirror](china_academic_capability_mirror_v01.md) — capability-matched domestic academic benchmark for management comparison.
+- [China Foundational Math-Physics → Thermal Capability Mirror](china_foundational_math_physics_mirror_v01.md) — independent domestic comparator for stability theory, phase-change modeling, inverse thermal diagnostics and analytical methods.
 
 Patent evidence is indexed in:
 - ../05_papers-patents/surface_wick_patent_map_v01.md
