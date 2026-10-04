@@ -189,6 +189,51 @@ Thermal modeling, prediction, scheduling, DVFS, workload placement, MPC, ML / ad
 ### G. Thermal-acoustic-mechanical
 SPL, tonal noise, blade-passing-frequency effects, turbulence noise, vibration, resonance, psychoacoustics, shock/dust/water reliability.
 
+### H. Foundational science capability layer
+Applied mathematics, mathematical physics, nonlinear dynamics, stability theory, asymptotic/reduced-order modeling, transport theory, interfacial-wave theory, exact solutions, inverse/diagnostic methods and advanced numerical methods **when they map to a thermal control problem**.
+
+This layer is allowed to contribute to a Russia advantage even when it is not itself a device technology.
+
+However, "Russia has strong mathematics/physics" is not sufficient as a conclusion.
+
+A foundational advantage must show a chain such as:
+
+**fundamental method**
+→ **thermal mechanism understood better / faster**
+→ **failure boundary or control variable exposed**
+→ **measurable PoC or design decision**
+→ **joint IP / product value**
+
+Examples of potentially relevant foundational control problems:
+- dryout / rewetting bifurcation;
+- thermocapillary / Marangoni instability;
+- film rupture / dry-spot nucleation;
+- capillary-pressure / permeability trade-offs;
+- two-phase flow-pattern transitions in extreme confinement;
+- nonlinear transient hotspot propagation;
+- acoustic-source inverse problems;
+- reduced-order models fast enough for design/control.
+
+The project will evaluate this as a **Foundational Enabling Capability**, separate from product-level device leadership.
+
+## Cross-border coauthorship interpretation
+
+China–Russia joint publications are **collaboration evidence and capability evidence**, not an automatic reason to cancel a Russian advantage.
+
+Attribution must consider:
+- research lineage before the joint paper;
+- experimental platform ownership;
+- corresponding/senior author and project leadership;
+- method/model origin;
+- independent follow-on capability in each country.
+
+A Russian-origin mechanism demonstrated in a joint paper may still count as a Russian strength.
+
+Chinese coauthorship alone means **knowledge access / transfer occurred**, not that an equivalent independent Chinese capability is already mature.
+
+See:
+[evidence attribution rule](../evidence/EVIDENCE_STANDARD.md).
+
 ## Russia–China comparison principle
 
 Do not ask only “where is Russia stronger?”
