@@ -4,6 +4,12 @@ Last reviewed: 2026-10-04
 
 Status: **Stage-0 priority #3 — pattern/process challenger**
 
+## Execution packet
+
+The actionable data-request / coupon / measurement / success-kill / IP package is maintained in:
+[Stage-0 Partner Data Request + Experiment Packet](stage0_packet_tpu_feoktistov_v01.md).
+
+
 ## Decision question
 
 Can TPU's laser + wettability-contrast surface engineering create a **stable, low-outgassing, phone-compatible spatial wetting pattern** that improves rewetting or liquid routing inside a sealed ultra-thin VC beyond a strong modern reference?
