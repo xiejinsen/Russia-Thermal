@@ -27,7 +27,7 @@ First-pass coverage includes:
 Russia:
 - Kutateladze film/droplet lineage;
 - Pavlenko/Kutateladze boiling-surface IP;
-- TPU institutional heat-transfer-surface patent signal;
+- TPU/Feoktistov heat-transfer-surface patent with inventor + independent-claim mapping;
 - MPEI micro/nano coating / wettability lineage.
 
 China / OEM:
@@ -59,7 +59,6 @@ More interesting under-mapped space lies at the intersection of:
 
 ## Open evidence gaps
 
-- TPU RU2812668 inventor / full claim extraction;
 - exact family/status review for promoted patents;
 - OPPO/vivo independent claims;
 - Huawei-related prior-collaboration background-IP boundary;
@@ -90,3 +89,24 @@ For patents:
 **[Patent title](link)** — Inventors — Patent No. — Assignee — Year.
 
 Do not use a bare DOI/URL as the visible citation unless the file is a machine-oriented registry.
+
+
+## Stage-0 claim-closure update
+
+Research date: 2026-10-04
+
+RU2812668C1 is no longer a claim/inventor blocker:
+- D.V. Feoktistov and E.G. Orlova are named inventors;
+- TPU is assignee;
+- the single independent laser-process claim has been mapped.
+
+New decision-grade MPEI high-flux lineage:
+- 2017 0.2 mm water-boiling Al2O3-coated microchannel;
+- 2020 ~0.2 mm water-boiling/CHF study including N.S. Ivanov.
+
+These sources are now represented in:
+- `../evidence/readable_bibliography.md`;
+- `../evidence/source_register.md`;
+- `../evidence/paper_briefs_decision_grade.md`;
+- `../evidence/paper_10q_cards_core_v01.md`;
+- patent brief / patent 10Q files.
