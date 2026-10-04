@@ -38,8 +38,8 @@ Current state:
 Sealed adaptive film/droplet hybrid.
 
 ### Narrow retained themes
-- multi-hotspot two-phase routing
 - model-light compute + cooling control
+- multi-hotspot two-phase routing as a generic technical opportunity, **not currently a Russia-specific advantage**
 
 ### Watch / method reserve
 - confined phone-microfan aeroacoustic source diagnosis — broad China electronic-cooling fan acoustic capability is now established; only actual phone-scale method superiority remains open
@@ -71,6 +71,24 @@ Current residual Russia differentiation candidates:
 4. ITP UB RAS / Maydanik — LHP routing/operating-limit/failure physics.
 
 Aeroacoustics is currently **Watch / method reserve**, not counted in the differentiation set.
+
+### Current country-differentiation convergence
+
+After stronger China comparison, the active Russia-specific candidate set is now only:
+
+1. **Pavlenko / Kutateladze**
+   - dryout / rewetting / failure-boundary control.
+2. **MPEI / Ivanov**
+   - actual multi-year hierarchical-surface operation / aging evidence.
+3. **Kabov / Chinnov / Kutateladze**
+   - shear-driven microfilm / dry-spot / interfacial-instability physics.
+
+Current Watch / reserves:
+- TsAGI / PNRPU / CIAM — phone-scale aeroacoustic method reserve;
+- ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve.
+
+Management pattern:
+**the Russia-side differentiation is converging toward failure-limit science, not generic cooler hardware.**
 
 ## 3. Final management table — template
 
