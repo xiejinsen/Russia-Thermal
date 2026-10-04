@@ -259,5 +259,17 @@ Promotion to a final Russia advantage requires:
 4. a credible partner/platform capable of transferring the method;
 5. a phone/chip PoC or design decision.
 
+China comparator result:
+- broad stability / numerical / inverse-math exclusivity is rejected;
+- residual exact/group-invariant analytical lineage remains differentiated enough for a bounded test.
+
 Current state:
-**FOUNDATIONAL CAPABILITY CANDIDATE — NOT YET GATED IN.**
+**FOUNDATIONAL RESERVE — GATED FOR PoC TEST ONLY, NOT A FINAL ADVANTAGE.**
+
+Promotion requires a blind failure-boundary benchmark showing measurable experiment/design leverage.
+
+
+Focused foundational pressure test:
+- ../03_russia-institutions/russia_foundational_math_physics_capability_v01.md
+- ../07_china-benchmark/china_foundational_math_physics_mirror_v01.md
+- ../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md
