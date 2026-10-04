@@ -21,6 +21,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Kabov / Maydanik China pressure test](kabov_maydanik_china_pressure_test_v01.md) — focused Keep/Kill analysis for thin-film instability and LHP routing/failure physics
 - [Foundational math-physics China pressure test](foundational_math_physics_china_pressure_test_v01.md) — tests whether Russian mathematical-physics foundations create a real thermal-management control point
 - [Pavlenko dryout / rewetting China pressure test](pavlenko_dryout_rewetting_china_pressure_test_v01.md) — independent-China pressure test that narrows Pavlenko to dielectric irreversible-dryout/crisis diagnostics
+- [MPEI multi-year aging China pressure test](mpei_multiyear_aging_china_pressure_test_v01.md) — separates actual 42-month engineered-surface operation from accelerated lifetime / failure-analysis evidence
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## CURRENT / AUTHORITATIVE
