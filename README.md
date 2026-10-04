@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~69%**
-**Estimated remaining: ~31%**
+**Estimated research completion: ~71%**
+**Estimated remaining: ~29%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -101,9 +101,9 @@ Current phase:
 ### Current technical portfolio
 
 **Tier A**
-- working-fluid-transferable sub-mm phase-change / capillary control
+- phone-scale irreversible-dryout boundary control
   - lead: Pavlenko/Kutateladze
-  - thesis: dryout / rewetting / wetting-state retention that survives transfer to product-relevant fluids and <0.5 mm-class confinement
+  - thesis: transfer **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostic and control know-how** into product-relevant fluids and <0.5 mm-class confinement, and beat strong independent China dryout/rewetting baselines
 
 **Tier A-**
 - sealed adaptive film/droplet hybrid
@@ -151,7 +151,7 @@ The final domestic-leadership report is now constrained to include three evidenc
 - [Russia × China Academic Capability Heatmap](08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md) — which broad Russia claims are killed, which capabilities are complementary, and which narrow Russia differentiation candidates survive.
 
 Current country-level differentiation candidates after stronger China comparison:
-1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
+1. Kutateladze/Pavlenko — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
 2. MPEI/Ivanov — **actual 42-month hierarchical-surface operation/aging evidence**, not generic reliability;
 3. Kutateladze Kabov/Chinnov — **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
 
@@ -185,6 +185,14 @@ Canonical map:
 **Joint-paper attribution**
 - China–Russia coauthored papers may still support a Russian capability when Russian lineage/platform/method ownership is evidenced.
 - Coauthorship alone is not sufficient to count the same capability as an independent China baseline.
+
+**Pavlenko China-pressure-test result**
+- Independent China already covers capillary-fed dryout, steam-induced rewetting, repeated-cycle wetting degradation, treated copper mesh, pore-scale dryout modeling and HFE-7100 confinement.
+- Therefore broad "Russia dryout/rewetting advantage" is rejected.
+- Pavlenko remains Stage-0 #1 only on the narrower **dielectric irreversible-dryout/crisis diagnostic** hypothesis.
+
+Focused file:
+[Pavlenko Dryout/Rewetting China Pressure Test](08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md)
 
 **Current management structure: 3 mechanism candidates + 1 foundational reserve.**
 
@@ -226,7 +234,7 @@ No current partner is contract-ready.
 
 This is an experiment-readiness order, not a final partner ranking:
 
-1. **Pavlenko / Kutateladze** — high-flux boiling/dryout mechanism; main gap is thin-mesh/process/fluid scaling.
+1. **Pavlenko / Kutateladze** — dielectric irreversible-dryout / boiling-crisis diagnostics; main gap is whether this depth shifts the failure boundary in phone-scale thin wick / product-fluid conditions beyond strong domestic controls.
 2. **MPEI / Ivanov** — 42-month R410A hierarchical-surface stability + 0.2 mm water/CHF lineage; main gap is exact-hierarchy high-flux/sub-mm scaling.
 3. **TPU / Feoktistov** — laser/biphilic pattern, surface durability and claim-mapped RU2812668; main gap is copper/vacuum/outgassing/sealed-fluid compatibility.
 4. **MPEI ordered wick** — pre-device until a physical thin coupon exists.
@@ -276,7 +284,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~69% research state.
+It is intentionally **not final** at the current ~71% research state.
 
 The report will ultimately contain:
 - executive decision;
