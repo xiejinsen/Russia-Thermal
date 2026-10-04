@@ -26,12 +26,13 @@ Existing institution-centric map:
 
 | Capability domain | Representative China academic signals | Recent evidence / quantitative anchor | Implication for Russia comparison |
 |---|---|---|---|
+| **VC reliability / surface aging** | **South China University of Technology** + Guangdong/industry collaborators | 2025 oxygen-driven copper-water VC failure mechanism; 2026 150–200°C accelerated life prediction; wick oxidation grading/QA | MPEI cannot claim generic reliability advantage; residual difference is actual 42-month operation of one hierarchical surface with capillary-aging evidence |
 | **Ultra-thin VC / thermal ground plane** | **South China University of Technology**; **Huazhong University of Science and Technology**; Xi'an Jiaotong adjacent VC work | SCUT 0.35–0.39 mm-class UTVC line; HUST 2026 reports **0.25 mm** UTTGP with 17,213 W/(m·K) equivalent conductivity and dynamic/cyclic stability | China already has a strong sub-0.4 mm device frontier; Russian generic VC/wick claims face a very high bar |
 | **Mobile LHP / flexible two-phase routing** | **Xi'an Jiaotong University**; HUST | XJTU 2025 mLHP: **0.7 mm**, 3.95 g, 30-day 90°C aging; flexible 0.7 mm line; HUST 0.71 mm ultra-thin LHP | Generic Russian LHP miniaturization is not differentiated |
 | **Flow boiling / CHF / structured surfaces** | **Xi'an Jiaotong University**; North China Electric Power University; other strong heat-transfer groups | XJTU 2025 HFE-7100 semi-open microchannel with structured/nanotube chip surface; reported CHF/HTC enhancement; NCEPU 2024 thin-film boiling >2000 W/cm² | China also has deep high-flux boiling capability; Russia must differentiate on a narrower mechanism/failure-control axis |
 | **Thin film / droplet / spray** | **North China Electric Power University**; **Beihang University** | NCEPU thin-film boiling >2000 W/cm²; Beihang 2025 controlled droplet-train cooling reported CHF up to 1037 W/cm² | Russia's Kabov/TPU film/droplet work is not unique at the category level |
 | **Embedded microfluidic / extreme chip cooling** | **Peking University** | 2025 Nature Electronics: embedded manifold + microjet + sawtooth microchannels, **3000 W/cm²**, ~0.9 W/cm² pumping at extreme condition | China has world-class embedded-chip cooling; generic Russian microchannel competence is not a strategic advantage |
-| **Aeroacoustics / fan noise** | **Beihang University** | Key Laboratory of Aeroacoustics; 2025 large aeroacoustic wind-tunnel fan/noise studies with CFD/ACTRAN and experimental validation | Russia's TsAGI/PNRPU cluster may be complementary, but "China lacks aeroacoustics" is false |
+| **Aeroacoustics / fan noise** | **Beihang University**; **Peking University / HKUST**; **Shanghai Jiao Tong University** | Beihang aeroacoustics; PKU/HKUST CPU cooling-fan POD + wavelet beamforming; SJTU electronic cooling-fan inlet-asymmetry, duct-mode and narrow-space studies | China already has electronic-cooling fan source imaging and installed-condition aeroacoustics; Russia can only differentiate at actual phone-microfan scale or via clearly better diagnostics |
 | **Piezo / compact active air** | **North China Electric Power University** and other electronics-cooling groups | 2025 piezoelectric-fan + heat-sink work for confined microelectronics | Russia's current public active-air evidence is too thin for a country-level advantage |
 | **EHD / ionic wind** | Chinese academic evidence exists, but current institution mapping is incomplete | 2024 ionic-wind heat-sink literature confirms active Chinese research; affiliation normalization still pending | Keep as an explicit benchmark gap; do not claim Russian EHD advantage yet |
 | **Thermal materials / insulated spreaders** | **Shanghai Jiao Tong University**; other materials-heavy universities | recent graphene-paper multilayer thermal tapes with compact-electronics/smartphone validation | Generic Russian graphene/BN/TIM is not differentiated |
@@ -145,6 +146,57 @@ Beihang is an important domestic mirror for **both thermal-fluid experiments and
 
 ---
 
+### G. South China University of Technology — VC reliability / life
+
+Failure mechanism:
+**[Experimental study on the failure mechanism of the heat transfer performance under the action of oxygen of a copper–water vapour chamber without structural damage](https://doi.org/10.1016/j.applthermaleng.2025.125619)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2025.
+
+Public result:
+- failed VCs can retain intact shell/seal/pore geometry;
+- wick-surface oxygen rises while copper fraction falls;
+- oxidation drives hydrophilic -> hydrophobic transition;
+- capillary pressure degrades and evaporation thermal resistance rises;
+- vacuum-process oxygen control is identified as a key reliability lever.
+
+Lifetime prediction:
+**[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Guo, Li, Zhou *et al.* — *Applied Thermal Engineering*, 2026.
+
+Public result:
+- accelerated aging at 150–200 °C;
+- XPS/EDS surface analysis;
+- ~1% wick-surface oxygen maps to predicted >=13 years at 80 °C;
+- reported R² ≈ 0.98 and prediction error ~8%.
+
+Decision impact:
+China has a coherent **VC reliability / failure / life-prediction** capability. MPEI's remaining differentiation is the narrower fact of **actual multi-year operation of a specific hierarchical evaporator surface**, not generic two-phase reliability.
+
+### H. PKU/HKUST + SJTU — electronics cooling-fan aeroacoustics
+
+Source imaging:
+**[Experimental Analysis of Cooling Fan Noise by Wavelet-Based Beamforming and Proper Orthogonal Decomposition](https://doi.org/10.1109/ACCESS.2020.3006483)** — Liang, Chen, Liem, Huang — *IEEE Access*, 2020.
+
+Public setup:
+- practical CPU fan;
+- 90 mm diameter;
+- 2650 / 3960 rpm;
+- BPF/harmonic/subharmonic/broadband source decomposition.
+
+Installed-condition line:
+- **[Study on the Influence of Inlet Asymmetry on Aerodynamic Noise of Cooling Fan](https://doi.org/10.1115/1.4048449)** — SJTU, 2020.
+- **[Aerodynamic Noise Characteristics of Axial Flow Fan in Narrow Space and Noise Reduction Based on Flow Control](https://doi.org/10.1115/1.4063127)** — SJTU, 2023.
+- **[Experimental Study on Aerodynamic Noise Reduction of In-series Axial Cooling Fans for Electronic Devices](https://doi.org/10.3901/JME.2022.22.406)** — SJTU, 2022.
+
+Decision impact:
+China already has cooling-fan source imaging, tonal-noise diagnosis, inlet/duct interaction and narrow-space installed-condition research.
+
+Remaining gap:
+strong public academic work on **smartphone-class ~18–25 mm, ~20k rpm centrifugal microfans** remains thin.
+
+Therefore Russian aeroacoustic collaboration, if pursued, should be framed as:
+> phone-scale method transfer / benchmark competition,
+not:
+> Russia has an aeroacoustic capability China lacks.
+
 ## 3. Current domestic strengths that materially raise the Russia bar
 
 The China academic baseline is already strong in:
@@ -176,8 +228,8 @@ It should be justified by one of:
 
 Before management-final, strengthen:
 
-- Chinese direct counterpart for MPEI's **42-month surface aging**;
-- Chinese phone-scale **microfan acoustic** test rather than large aeroacoustic fan only;
+- exact Chinese counterpart for **actual multi-year operation of the same engineered hierarchical surface** remains open, but generic VC reliability/lifetime capability is now closed as a gap;
+- Chinese phone-scale **~18–25 mm / ~20k rpm microfan acoustic** academic test remains open, despite strong larger electronics-fan aeroacoustic evidence;
 - China/Russia EHD institution normalization;
 - direct China mobile **thermal-control**, not only energy/DVFS optimization;
 - Chinese academic-to-OEM transfer evidence for several mechanisms;
