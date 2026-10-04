@@ -184,3 +184,58 @@ Current state:
 **WATCH / METHOD RESERVE**, pending an equal-envelope smartphone-class (~18–25 mm / ~20k rpm centrifugal fan) benchmark.
 
 Do not present TsAGI/PNRPU/CIAM as a proven Russia advantage in the final report.
+
+
+## 2026-10-04 thin-film + LHP country-pressure-test update
+
+### Kabov / Chinnov
+
+New strong China comparators:
+- CAS/NCEPU gradient-mesh capillary thin-film boiling;
+- NCEPU-led thin-film boiling with reported CHF 2074 W/cm².
+
+**Gate consequence:**
+the broad "Russia thin-film cooling advantage" fails G3 Strong Comparator.
+
+Residual hypothesis:
+**shear-driven free-surface microfilm / dry-spot / rupture / interfacial-instability control under extreme confinement.**
+
+Supporting Russia evidence:
+- shear-driven local-heating/CHF lineage;
+- 2024 12.5 μm-high × 10 mm slit two-phase-flow experiment.
+
+Important:
+the 2022 shear-film paper includes Beijing University of Technology coauthors, so public knowledge is not Russia-exclusive.
+
+Current final-report state:
+**Reserve / high-risk mechanism — narrow differentiation only.**
+
+No promotion until system power/volume/loop overhead is measured against strong passive references.
+
+### Maydanik / ITP UB RAS
+
+New China comparators now cover:
+- 1 mm dual-evaporator laptop LHP;
+- dual-evaporator chip cooling under variable loads;
+- multi-evaporator / dual-compensation-chamber startup and failure limits;
+- Beihang NCG / elevation / startup lineage;
+- explicit cumulative-pressure-drop vs capillary-force failure.
+
+**Gate consequence:**
+the residual "Russia LHP routing / operating-limit / failure-physics advantage" fails G3.
+
+Current final-report state:
+**WATCH / KNOWLEDGE RESERVE.**
+
+Maydanik may remain useful for expert/model/failure review, but is removed from the active country-differentiation set.
+
+### Current country-differentiation set
+
+Active:
+1. Pavlenko/Kutateladze — dryout/rewetting failure-boundary control;
+2. MPEI/Ivanov — actual multi-year hierarchical-surface operation/aging evidence;
+3. Kabov/Chinnov/Kutateladze — shear-driven microfilm / dry-spot / instability physics.
+
+Watch:
+- TsAGI/PNRPU/CIAM — phone-scale aeroacoustic methods;
+- Maydanik/ITP UB RAS — LHP knowledge/failure analysis.
