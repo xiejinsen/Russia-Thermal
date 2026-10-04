@@ -11,7 +11,7 @@ Related:
 
 ## 1. Stage-0 decision question
 
-Can the Kutateladze/Pavlenko modified-mesh dryout/boiling mechanism be transferred from published HFE-7100 / relatively thick-mesh conditions to a **<=100 μm-class phone-relevant wick/mesh and DI-water product path** without unacceptable permeability, thickness, adhesion or process penalties?
+Can Kutateladze's **dielectric-fluid irreversible-dryout diagnostic/control know-how** be transferred from open HFE/modified-surface experiments to a **<=100 μm-class phone-relevant wick/mesh and DI-water/product-fluid path**, and shift the irreversible-dryout boundary beyond strong domestic ultrathin-wick controls without unacceptable process penalties?
 
 Current prerequisite before meaningful coupon spend:
 
@@ -53,6 +53,16 @@ The request should explicitly accept **shareable ranges** rather than exact prop
 ### Explicit non-request
 
 Do not request confidential Huawei/customer contract text. Ask only whether any existing background agreement creates a field restriction relevant to the proposed phone/VC work.
+
+### Strong China comparator update
+
+Mandatory external baselines now include:
+- GDUT-style grooved/composite capillary-fed wick logic;
+- SCUT-style treated copper mesh;
+- strong China-style UTVC mesh/control.
+
+Reason:
+China already has direct dryout/rewetting/failure-boundary capability. A weak untreated-mesh control is no longer decision-grade.
 
 ## 4. Coupon drawing / arm definition
 
@@ -156,8 +166,12 @@ Ramp heat flux in identical increments from stable low-load operation until:
 Report:
 - evaporator thermal resistance/superheat;
 - dryout/limit heat flux;
+- **first reversible dry-spot onset**;
+- **reversible→irreversible transition heat flux/time**;
+- **dry-spot growth / propagation rate** where diagnostics allow;
 - rewetting time after load reduction;
 - transient peak temperature;
+- post-cycle wetting/capillary state;
 - n>=3 repeatability.
 
 ## 6. Success / kill thresholds
@@ -166,11 +180,19 @@ Report:
 - partner confirms a shareable process range that is technically plausible on <=100 μm-class mesh/phone metal.
 
 ### Stage-0 promotion
-Must satisfy common geometry/process/repeatability rules and at least one:
+Must satisfy common geometry/process/repeatability rules and show **failure-boundary value**, not only a higher boiling curve.
+
+Require at least one thermal improvement:
 - >=15% lower evaporator thermal resistance; OR
 - >=20% higher dryout/capillary limit; OR
-- >=20% faster rewetting
-versus strong matched reference.
+- >=20% faster rewetting;
+
+and at least one failure-mechanism improvement versus strong matched reference:
+- materially later irreversible-dryout onset; OR
+- lower dry-spot growth/propagation at matched heat flux; OR
+- better wetting/capillary retention after repeated dryout/process cycles.
+
+Thresholds remain internal Stage-0 targets, not literature claims.
 
 ### Kill / reframe
 Kill the phone-transfer thesis if:
@@ -179,7 +201,7 @@ Kill the phone-transfer thesis if:
 - adhesion/process stability fails;
 - useful behavior exists only in legacy HFE-7100;
 - DI-water/copper route loses the claimed dryout/rewetting advantage;
-- strong modern reference matches or exceeds the result.
+- strong modern domestic reference matches or exceeds irreversible-dryout/recovery behavior even if the Russian arm shows a nominal HTC gain.
 
 Reframe as mechanism-only if published physics remains interesting but phone transfer fails.
 
