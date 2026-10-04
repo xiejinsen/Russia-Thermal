@@ -2492,6 +2492,186 @@ Evidence maturity: SYSTEM_VALUE at millimeter confinement
 Decision impact: Pavlenko remains mechanism/diagnostic candidate, not geometry leader  
 Open question: sub-mm sealed transfer  
 Primary source: DOI above
+
+
+# J. MPEI multi-year surface-aging pressure test
+
+## J1 — MPEI 42-month hierarchical-surface operation
+
+**[Long-term operational stability of a hierarchical evaporator surface in a two-phase thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — 2026.
+
+### Q1 — problem + target mapping
+Problem:
+does an engineered two-phase evaporator surface retain function over real calendar time, and which surface properties age before system thermal performance visibly fails?
+
+Phone mapping:
+indirect but strategically relevant to long-life evaporator/wick reliability.
+
+### Q2 — novelty / new-regime relevance
+Not generic long-term testing. The relevant novelty is:
+**42-month actual operation of the same engineered hierarchical evaporator surface plus post-operation morphology/capillary assessment.**
+
+### Q3 — falsifiable hypothesis
+> integral thermal resistance can remain stable while capillary/surface-state metrics degrade, so surface-state aging may provide an earlier reliability indicator than nominal Rth.
+
+### Q4 — lineage / competing route
+MPEI has prior hierarchical surface / nanoparticle coating / capillary work.
+
+Strong China route:
+product-path copper-water VC failure physics, accelerated lifetime prediction and oxidation QA.
+
+### Q5 — control variables
+- microgroove geometry;
+- Al2O3 nanoparticle layer;
+- surface state;
+- capillary imbibition;
+- R410A two-phase operation;
+- periodic cycling / calendar time.
+
+### Q6 — experiment
+Source facts:
+- 42 months;
+- periodic steady-state measurements;
+- representative load ~100 W;
+- R410A thermosyphon;
+- post-operation surface/capillary analysis.
+
+### Q7 — evidence / reproducibility
+Real calendar-time evidence is unusually strong.
+Transfer reproducibility is limited because geometry, fluid and operating regime differ from phone VC conditions.
+
+### Q8 — what it proves / does not prove
+Proves:
+- actual multi-year functional-surface operation;
+- capillary aging can coexist with comparatively stable thermal performance.
+
+Does not prove:
+- phone lifetime;
+- DI-water copper compatibility;
+- sub-mm geometry durability;
+- superior product reliability versus China.
+
+### Q9 — contribution to decision
+Preserves a narrow MPEI differentiation:
+**actual multi-year engineered-surface aging evidence.**
+
+### Q10 — next action
+Request historical aging dataset and test whether an early surface/capillary indicator transfers to a scaled copper-water coupon.
+
+**Decision:** KEEP / NARROW / STAGE-0 PRIORITY #2.
+
+Evidence maturity: SYSTEM_VALUE for aging method, not phone product  
+Decision impact: MPEI remains narrow complementary candidate  
+Open questions: geometry, DI water, copper, process/vacuum transfer  
+Primary source: DOI above
+
+---
+
+## J2 — China accelerated VC life prediction
+
+**[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Guo, Li, Zhou *et al.* — 2026.
+
+### Q1
+Problem:
+rapidly estimate actual VC service life for high-power chip packaging.
+
+### Q2
+Direct product-path relevance is very high.
+
+### Q3
+Hypothesis:
+> elevated-temperature aging plus surface-chemistry failure analysis can establish an activation-energy-based lifetime model.
+
+### Q4
+SCUT-led sequence:
+oxygen failure mechanism → oxidation grading → accelerated lifetime prediction.
+
+### Q5
+- aging temperature;
+- wick oxygen/oxide state;
+- XPS/EDS;
+- thermal performance;
+- activation energy.
+
+### Q6
+150–200 °C accelerated aging + failure analysis.
+
+### Q7
+Strong product reliability evidence, but lifetime is extrapolated rather than measured over multiple calendar years.
+
+### Q8
+Proves:
+China has advanced VC reliability/lifetime engineering.
+
+Does not prove:
+same-surface actual multi-year operation.
+
+### Q9
+Decision contribution
+Kills any broad MPEI/Russia reliability advantage.
+
+### Q10
+Use as mandatory product-reliability comparator; keep MPEI only for actual multi-year surface-aging evidence.
+
+**Decision:** PROMOTE COMPARATOR / NARROW MPEI CLAIM.
+
+Evidence maturity: SYSTEM_VALUE  
+Decision impact: broad reliability thesis killed  
+Open question: exact multi-year functional-surface analogue  
+Primary source: DOI above
+
+---
+
+## J3 — China mobile mLHP accelerated aging
+
+**[A thin and lightweight miniature loop heat pipe for cooling mobile electronic devices](https://doi.org/10.1016/j.device.2025.100783)** — Cui, You, Ma *et al.* — 2025.
+
+### Q1
+Problem:
+durable thin passive two-phase cooling for mobile electronics.
+
+### Q2
+Direct mobile relevance.
+
+### Q3
+Hypothesis:
+> a 0.7 mm integrated mLHP can retain thermal performance after accelerated high-temperature aging.
+
+### Q4
+XJTU mobile LHP line.
+
+### Q5
+- 0.7 mm form factor;
+- wick architecture;
+- 90 °C aging;
+- thermal performance.
+
+### Q6
+30-day 90 °C accelerated aging.
+
+### Q7
+Strong mobile hardware signal, but not multi-year actual operation.
+
+### Q8
+Proves:
+China is closer to phone-scale productization.
+
+Does not prove:
+long calendar-time surface-state evolution.
+
+### Q9
+Decision contribution
+Prevents MPEI durability from being interpreted as a mobile-device edge.
+
+### Q10
+Use as mobile-geometry baseline; MPEI must supply a distinct aging indicator, not compete on thinness.
+
+**Decision:** PROMOTE MOBILE COMPARATOR.
+
+Evidence maturity: SYSTEM_VALUE  
+Decision impact: MPEI remains complementary only  
+Open question: long-term hierarchy-specific field evidence  
+Primary source: DOI above
 # Cross-paper synthesis
 
 ## What these 10Q cards change
