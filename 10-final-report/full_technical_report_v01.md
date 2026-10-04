@@ -116,6 +116,30 @@ China is already very strong in thin-film boiling and high-flux film devices. Th
 Emerging management pattern:
 Russia's credible value is converging toward **failure-limit science** rather than generic cooler components.
 
+### Foundational complementarity layer
+
+Focused pressure test:
+- ../03_russia-institutions/russia_foundational_math_physics_capability_v01.md
+- ../07_china-benchmark/china_foundational_math_physics_mirror_v01.md
+- ../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md
+
+Current conclusion:
+
+China is already strong in:
+- nonlinear / long-wave interfacial stability;
+- experiment-validated phase-change numerical models;
+- inverse thermal diagnostics / physics-informed learning.
+
+Russia therefore does **not** get a broad "mathematics/physics advantage" label.
+
+Residual Russia foundational signal:
+**continuous exact/group-invariant analytical modeling of coupled evaporative thermocapillary systems, with stability analysis and experiment-informed closure.**
+
+This foundational capability is most directly complementary to the Kabov/Chinnov film-instability route, only indirectly relevant to Pavlenko dryout, and not currently explanatory for MPEI aging.
+
+Management interpretation:
+**3 mechanism candidates + 1 foundational enabling reserve.**
+
 ---
 
 ## Chapter 6 — Opportunity Funnel & Negative Evidence
