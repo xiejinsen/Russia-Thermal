@@ -22,6 +22,12 @@ Convert surviving hypotheses into actionable partner discussions, discriminating
 - [MPEI / Ivanov Stage-0 Brief](partner_brief_mpei_ivanov_stage0_v01.md)
 - [TPU / Feoktistov Stage-0 Brief](partner_brief_tpu_stage0_v01.md)
 
+### Partner data-request + experiment packets
+- [Packet Index / Common Protocol](stage0_partner_packet_index_v01.md)
+- [Pavlenko / Kutateladze Packet](stage0_packet_pavlenko_v01.md)
+- [MPEI / Ivanov Packet](stage0_packet_mpei_ivanov_v01.md)
+- [TPU / Feoktistov Packet](stage0_packet_tpu_feoktistov_v01.md)
+
 ## Current Stage-0 execution priority
 
 ### #1 Pavlenko / Kutateladze — Tier A lead
@@ -111,13 +117,14 @@ No team is contract-ready.
 
 ## Next gate
 
-The public blocker-closure/search phase is complete enough to stop broad literature hunting.
+The three **Partner Data Request + Stage-0 Experiment Packets are now complete**.
 
 Next:
-1. convert each partner brief into a **Partner Data Request + Stage-0 Experiment Packet**;
-2. obtain shareable partner data or fabricate the smallest discriminating coupon;
-3. update the scorecard only when partner data or experiment evidence changes a cell;
-4. select at most two Stage-1 sealed-device arms only after Stage-0 physical evidence.
+1. use the packets to obtain shareable partner data;
+2. classify every request as RECEIVED / NOT SHAREABLE / NOT AVAILABLE / EXPERIMENT REQUIRED;
+3. fabricate the smallest discriminating coupons for unresolved experiment-only items;
+4. update the scorecard only when partner data or physical evidence changes a cell;
+5. select at most two Stage-1 sealed-device arms only after Stage-0 physical evidence.
 
 Do not re-score based on repository cleanup alone.
 
