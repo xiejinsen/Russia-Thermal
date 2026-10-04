@@ -45,8 +45,10 @@ This is not a final partner ranking.
 ### Pavlenko
 
 Strong:
-- dielectric boiling / CHF / dryout;
-- modified mesh;
+- dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics;
+- high-speed IR / reflected-light / ML-assisted crisis analysis;
+- layer-height crisis-mode and structured-surface drying-front evidence;
+- current surface/process line;
 - current lab;
 - relevant IP.
 
@@ -369,9 +371,9 @@ Broad Russia-advantage claims are explicitly rejected for:
 - generic thermal materials.
 
 Current differentiation candidates remain provisional:
-- modified-mesh dryout/rewetting;
-- **actual multi-year hierarchical-surface operation/aging evidence**;
-- **shear-driven microfilm / dry-spot / interfacial-instability physics**.
+- **Pavlenko: dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
+- **MPEI: actual multi-year hierarchical-surface operation/aging evidence**;
+- **Kabov/Chinnov: shear-driven microfilm / dry-spot / interfacial-instability physics**.
 
 Watch / reserves:
 - confined phone-scale aeroacoustic source diagnosis;
