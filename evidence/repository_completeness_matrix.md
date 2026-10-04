@@ -427,3 +427,32 @@ QA judgment:
 Allowed wording:
 - Kabov/Chinnov: narrow shear-driven microfilm / dry-spot / instability mechanism candidate;
 - Maydanik: Watch / knowledge reserve.
+
+
+## Foundational mathematical-physics layer — 2026-10-04
+
+New scope:
+- exact solutions / reduced-order models;
+- nonlinear stability / bifurcation;
+- thermocapillary / evaporative interfacial dynamics;
+- mathematical models tied to dryout, rupture, instability and control.
+
+Preliminary Russia evidence:
+- Institute of Computational Modelling SB RAS;
+- Altai / Siberian Federal links;
+- Lavrentyev Institute of Hydrodynamics;
+- Kutateladze-adjacent model/experiment lineage.
+
+Current QA:
+**STRUCTURAL SIGNAL ONLY.**
+
+Missing before promotion:
+- matched China/global applied-math comparator;
+- partner/lab ownership map;
+- direct evidence that the foundational method improves a mobile/chip thermal decision or PoC.
+
+Cross-border coauthorship rule also updated:
+joint papers are attributed by lineage/platform/method ownership; they are not automatically double-counted as two independent country capabilities.
+
+Progress effect:
+**none — project remains ~66%.**
