@@ -39,6 +39,14 @@ The project is complete only when it can answer:
 →
 **differentiated mobile thermal innovation**
 
+### Mobile/chip relevance hard rule
+
+This project is not a general heat-transfer survey.
+
+Non-mobile evidence from energy, aerospace, refrigeration, permafrost, nuclear or industrial systems is retained only as **mechanism evidence** unless a credible smartphone/tablet/chip/package transfer path is quantified.
+
+No direction may enter the main collaboration portfolio solely because its thermal science is strong.
+
 ## Scope
 
 - Primary platform: smartphones
