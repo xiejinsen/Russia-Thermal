@@ -20,6 +20,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Russia–China academic capability heatmap](russia_china_academic_capability_heatmap_v01.md) — management-level country capability comparison
 - [Kabov / Maydanik China pressure test](kabov_maydanik_china_pressure_test_v01.md) — focused Keep/Kill analysis for thin-film instability and LHP routing/failure physics
 - [Foundational math-physics China pressure test](foundational_math_physics_china_pressure_test_v01.md) — tests whether Russian mathematical-physics foundations create a real thermal-management control point
+- [Pavlenko dryout / rewetting China pressure test](pavlenko_dryout_rewetting_china_pressure_test_v01.md) — independent-China pressure test that narrows Pavlenko to dielectric irreversible-dryout/crisis diagnostics
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## CURRENT / AUTHORITATIVE
@@ -38,7 +39,7 @@ The local ordering above does not override the repository-wide authority hierarc
 
 Pavlenko/Kutateladze remains lead only for:
 
-**working-fluid-transferable dryout / rewetting / wetting-state retention under <0.5 mm-class sealed confinement.**
+**phone-scale irreversible-dryout boundary control, using dielectric-fluid crisis diagnostics/process know-how under <0.5 mm-class sealed confinement.**
 
 This round added two stricter gates:
 
@@ -119,7 +120,7 @@ Current broad theses killed/reframed:
 - generic Russia DVFS advantage — **killed/reframed**.
 
 Current active country-level mechanism candidates:
-1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
+1. Kutateladze/Pavlenko — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
 2. MPEI/Ivanov — actual multi-year hierarchical-surface operation/aging evidence;
 3. Kutateladze Kabov/Chinnov — shear-driven microfilm/dry-spot/interfacial-instability physics.
 
