@@ -14,6 +14,7 @@ Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the
 | Compute + cooling adaptive control | SPbU | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
 | Multi-hotspot heat routing | ITP UB RAS | routing physics | normalize vs Chinese UTLHP | **Tier B** |
 | Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale tonal/source test | **Tier B** |
+| Analytical failure-boundary + shear-film mechanism | **Kutateladze anchor + Lavrentyev + NSU; optional ICM/Altai theory module** | modular theory–model–experiment team | verify current ownership, then blind instability-boundary PoC | **Foundational Reserve / network partially verified** |
 
 ## Why MPEI moved ahead of TPU for Stage 0
 
@@ -77,3 +78,25 @@ Detailed briefs:
 - partner_brief_tpu_stage0_v01.md
 
 No team is contract-ready.
+
+
+## Siberian modular-network outreach posture
+
+Focused verification:
+../03_russia-institutions/siberian_theory_fluid_experiment_network_v01.md
+
+Current evidence supports:
+- **Kutateladze ↔ Lavrentyev** — verified current direct technical link;
+- **Kutateladze ↔ NSU** — verified current institutional / execution bridge;
+- **ICM/Altai ↔ Kutateladze** — verified historical theory–experiment lineage + current methodological continuity;
+- **ICM ↔ Lavrentyev** — not yet verified as a current direct thermal collaboration.
+
+Therefore do not treat the network as one contracting entity.
+
+Preferred architecture:
+1. contact Kutateladze as mechanism/experimental anchor;
+2. ask whether current film/microchannel modeling is jointly owned with Lavrentyev;
+3. use NSU as execution/talent/diagnostic bridge when useful;
+4. add ICM/Altai only after current relationship and model ownership are confirmed.
+
+This network opportunity does **not** change the current Stage-0 surface partner order.
