@@ -19,6 +19,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Russia–China surface/wick comparison](surface_wick_russia_china_comparison_v01.md)
 - [Russia–China academic capability heatmap](russia_china_academic_capability_heatmap_v01.md) — management-level country capability comparison
 - [Kabov / Maydanik China pressure test](kabov_maydanik_china_pressure_test_v01.md) — focused Keep/Kill analysis for thin-film instability and LHP routing/failure physics
+- [Foundational math-physics China pressure test](foundational_math_physics_china_pressure_test_v01.md) — tests whether Russian mathematical-physics foundations create a real thermal-management control point
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
 
 ## CURRENT / AUTHORITATIVE
@@ -117,11 +118,16 @@ Current broad theses killed/reframed:
 - generic Russia aeroacoustics exclusivity — **killed**;
 - generic Russia DVFS advantage — **killed/reframed**.
 
-Current country-level differentiation candidates:
+Current active country-level mechanism candidates:
 1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
-2. MPEI/Ivanov — long-duration hierarchical two-phase surface aging/reliability;
-3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
-4. TsAGI/PNRPU/CIAM — confined aeroacoustic source-diagnosis methods;
-5. ITP UB RAS — LHP routing/operating-limit/failure physics.
+2. MPEI/Ivanov — actual multi-year hierarchical-surface operation/aging evidence;
+3. Kutateladze Kabov/Chinnov — shear-driven microfilm/dry-spot/interfacial-instability physics.
 
-Only #1 and #2 currently have direct Stage-0 execution packets.
+Foundational enabling candidate:
+- ICM SB RAS / Lavrentyev / linked Russian mathematical-physics line — **exact/group-invariant analytical + stability modeling of evaporative thermocapillary systems**.
+
+Watch / reserves:
+- TsAGI/PNRPU/CIAM — phone-scale aeroacoustic method reserve;
+- ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve.
+
+Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
