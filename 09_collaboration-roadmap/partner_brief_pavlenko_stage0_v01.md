@@ -12,17 +12,24 @@ The actionable data-request / coupon / measurement / success-kill / IP package i
 
 ## Decision question
 
-Can the Pavlenko/Kutateladze surface-modification / boiling / dryout knowledge be transferred from published HFE-7100 experiments and relatively thick meshes into a **phone-relevant 60–100 μm-class wick / <=35 μm added functional layer**, while retaining benefit in a product-path working fluid?
+Can Kutateladze's **dielectric boiling-crisis / irreversible-dryout diagnostic and control know-how** be transferred from published HFE-7100 / Novec and relatively thick/open geometries into a **phone-relevant 60–100 μm-class wick / <=35 μm added functional layer**, while creating measurable value beyond strong domestic dryout/rewetting baselines in a product-path working fluid?
 
 ## Why this partner is first
 
 Current strongest differentiators:
-- direct dielectric-fluid boiling evidence;
-- dryout / CHF / nucleation depth;
-- negative wettability-retention evidence;
-- electrochemically modified metal mesh;
-- thin capillary-surface IP in the broader team;
+- HFE-7100 / Novec reversible→irreversible dry-spot diagnostics;
+- high-speed IR + reflected-light/internal-reflection + ML-assisted crisis analysis;
+- liquid-layer-height-driven crisis-mode transition;
+- structured-surface drying-front dynamics;
+- electrochemically modified mesh / surface-process know-how;
 - current lab and researchers verified.
+
+Not a differentiator anymore:
+- dryout or rewetting in general;
+- modified mesh in general;
+- capillary-limit modeling in general.
+
+Independent China evidence now covers all three.
 
 Primary evidence:
 
@@ -60,6 +67,23 @@ The 2025/2026 modified-mesh paper states:
 The exact transferable manufacturing recipe needed for a 60–100 μm-class wick was **not recovered from the public abstract/index evidence in this round**.
 
 Treat this as a partner data request, not as a known process.
+
+### Strong China pressure-test correction
+
+Mandatory external references now include:
+- GDUT repeated capillary-fed dryout + steam-induced rewetting;
+- GDUT ultrathin grooved-porous wick;
+- SCUT treated copper mesh;
+- SJTU capillary dryout model;
+- Changsha HFE confinement.
+
+Therefore Phase P4 must measure:
+- first dry-spot onset;
+- reversible→irreversible transition;
+- dry-spot growth/propagation where observable;
+- rewetting time;
+- post-cycle wetting/capillary state;
+not only CHF and HTC.
 
 ## Proposed 3–6 month package
 
@@ -151,8 +175,12 @@ Compare:
 Primary:
 - evaporator resistance;
 - dryout/capillary limit;
+- first reversible dry-spot onset;
+- reversible→irreversible dryout transition;
+- dry-spot growth/propagation where observable;
 - rewetting time;
 - transient peak;
+- post-cycle wetting/capillary retention;
 - sample repeatability.
 
 Internal Stage-1 gate:
@@ -193,7 +221,7 @@ Do not ask for confidential prior-contract terms not available for disclosure; a
 **KEEP as Stage-0 priority #1.**
 
 Reason:
-best direct phase-change mechanism evidence.
+best current Russian **dielectric boiling-crisis / irreversible-dryout diagnostic** evidence, not because China lacks dryout/rewetting expertise.
 
 Main risk:
 published geometry/process may not scale to the phone wick budget.
