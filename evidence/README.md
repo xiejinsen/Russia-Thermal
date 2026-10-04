@@ -14,6 +14,10 @@ Technical conclusions should live in workstreams 03–09, not here.
 - [Ranking Metadata Standard](ranking_metadata_standard.md)
 - [Paper Metadata Template](paper_metadata_template.md)
 
+## Human-readable entry point
+
+- [Human-Readable Bibliography](readable_bibliography.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
+
 ## Registers
 
 - [Decision-grade Source Register](source_register.md)
