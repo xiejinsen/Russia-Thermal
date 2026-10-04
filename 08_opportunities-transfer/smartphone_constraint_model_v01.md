@@ -1,250 +1,299 @@
-# Smartphone Thermal Constraint Model v0.1
+# Smartphone Thermal Constraint Model v0.2
 
-Status: screening model for research and PoC design. It deliberately separates **evidence-backed boundaries** from **internal engineering targets**.
+Last reviewed: 2026-10-04
 
-## 1. Why this model exists
+Status: research/PoC screening model. It separates evidence-backed boundaries from internal engineering targets.
 
-A thermal mechanism is not a smartphone opportunity until it can survive product constraints.
+## 1. Objective
 
-The screening objective is:
+> maximize sustained useful performance while respecting human thermal comfort, product geometry, cooling energy, acoustic quality, ingress protection, reliability, orientation, manufacturing and working-fluid sustainability.
 
-> maximize sustained useful performance while respecting human thermal comfort, product geometry, cooling energy, acoustic quality, ingress protection, reliability, orientation and manufacturing constraints.
-
-This model is not a product specification. It is a common test framework for comparing candidate technologies.
-
----
+This is not a product specification.
 
 ## 2. Evidence-backed external constraints
 
-### A. Human thermal comfort
+### Human thermal comfort
 
-2026 smartphone studies provide a useful human-factor basis.
-
-**Strategic thermal design for smartphones**:
+DRS 2026:
 https://doi.org/10.21606/drs.2026.2351
 
-Evidence:
-- tested 36.0 / 39.5 / 42.0 / 43.5°C;
-- discomfort increases with both temperature and time-at-temperature;
-- the thenar eminence becomes disproportionately sensitive at >=42°C;
-- hotspot position matters, not only maximum device temperature.
-
-**Assessing mobile gaming thermal experience using machine learning**:
+Gaming thermal-experience study:
 https://doi.org/10.1016/j.ergon.2026.104014
 
-Reported under the tested gaming conditions:
-- comfort generally below ~38°C;
-- experience degradation begins around 39–43°C;
-- strong discomfort around 44–48°C.
+Research screening zones:
+- preferred/stretch: <=38–40 C in sustained contact regions;
+- caution: 40–42 C;
+- strong penalty: >=42 C in grip-sensitive regions;
+- early PoC kill: sustained >45 C in defined high-contact region.
 
-### Screening interpretation
-Use three surface-temperature zones:
+These are research screening values, not universal safety standards.
 
-- **Preferred / stretch target:** <=38–40°C in sustained hand-contact regions
-- **Caution zone:** 40–42°C
-- **Strong penalty:** >=42°C in grip-sensitive regions
-- **PoC kill condition:** sustained >45°C on a high-contact region under the defined target workload
+### Current phone envelope
 
-Important: these are research screening thresholds, not universal medical/safety standards.
+Apple iPhone 18 Pro:
+https://www.apple.com/uk/iphone-18-pro/specs/
+- 8.75 mm, 211 g, IP68.
 
----
-
-### B. Product thickness / mass
-
-Representative 2026 flagships:
-
-Samsung Galaxy S26:
-- 7.2 mm thickness
-- 167 g
-- IP68
-
-Official:
-https://news.samsung.com/global/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet
+Samsung Galaxy S26 Ultra:
+https://www.samsung.com/uk/smartphones/galaxy-s26-ultra/
+- 7.9 mm, 214 g.
 
 Huawei Mate 80 Pro:
-- 7.95 mm thickness
-- ~219 g
-- IP68 / IP69
-
-Official:
 https://consumer.huawei.com/cn/phones/mate80-pro/specs/
+- 7.95 mm, ~219 g, IP68/IP69.
 
-### Screening interpretation
-Any thermal concept that requires large additional thickness is structurally disadvantaged.
+### Packaging reality
 
-The PoC should track:
-- total thermal-stack thickness;
-- incremental thickness over a VC baseline;
-- volume occupied;
-- mass added.
+iPhone 18 Pro teardown:
+https://www.ifixit.com/News/119329/inside-the-tiny-unfixable-eye-iphone-18-pro-and-pro-max-teardown
 
----
+Evidence shows thermal path is co-designed with:
+- SoC location;
+- memory placement;
+- TIM;
+- VC;
+- aluminum structure.
 
-### C. Ingress protection
+Therefore phone integration is not represented adequately by a single module-volume number.
 
-Current mainstream flagships publicly target IP68-class resistance; some devices extend to IP69.
+### UTVC internal anchor
 
-Implication:
-Active cooling cannot be evaluated as a thermal-only system.
+Primary:
+https://doi.org/10.3390/mi15050627
 
-It must answer:
-- how air/fluid paths affect water/dust ingress;
-- seals and membranes;
-- contamination / clogging;
-- long-term degradation.
+Reference:
+- 0.39 mm completed UTVC;
+- ~0.2 mm steam-channel/support height;
+- 0.06 mm copper mesh;
+- water working fluid.
 
-A concept requiring permanently open airflow paths carries a major product penalty unless equivalent ingress protection is demonstrated.
+For surface/wick concepts, **internal channel/wick height** is the primary geometry gate.
 
----
+## 3. Architecture classification
 
-## 3. Internal engineering screening targets — v0.1
+Every candidate must be labeled as one of:
 
-These are **project assumptions**, not external facts. They are intended to make prototypes comparable and will be refined using teardowns / OEM constraints.
+1. **integrated modification**
+   - modifies surface/wick inside an existing VC/device envelope;
 
-### Geometry
-For early PoC:
-- active thermal device thickness sweep: 0.8 / 1.2 / 1.5 / 2.0 mm
-- total active-cooling module volume: 5 / 10 / 15 cm³ classes
-- thermal component incremental mass: report per design; minimize rather than use a hard first-round limit
+2. **replacement**
+   - replaces a current VC/wick/spreader component;
 
-### Heat-load classes
-Use hotspot emulator workloads:
-- 8 W sustained
-- 15 W sustained
-- 25 W transient / burst
+3. **additive module**
+   - consumes new thickness/area/volume;
 
-For multi-source studies:
-- 3 or 5 heat sources
-- moving / alternating hotspot sequence
-- independent power traces
+4. **structural thermal element**
+   - frame/midplate/cover becomes part of heat path;
 
-These are research normalization loads, not claims about a particular phone SoC.
+5. **package-level change**
+   - changes SoC/memory/board/interface layout.
 
-### Cooling electrical power
+Packaging penalty generally rises from integrated/replacement toward additive, unless the additive module produces a large system-level frontier shift.
+
+## 4. Geometry metrics
+
+Always report:
+
+### Vertical
+- total phone/device thickness;
+- local thermal-stack thickness;
+- component thickness;
+- internal channel height;
+- wick height;
+- functional coating added thickness.
+
+### In-plane
+- footprint area;
+- overlap with SoC/DRAM;
+- coverage/spreading area;
+- conflict with camera/mainboard/battery/wireless-charging area.
+
+### Mechanical
+- mass;
+- structural role;
+- sealing/opening requirement;
+- service/assembly impact.
+
+## 5. Internal screening targets — active modules
+
+These remain project assumptions for active-cooling architecture comparison, not product facts:
+
+Thickness sweep:
+- 0.8 / 1.2 / 1.5 / 2.0 mm
+
+Module-volume classes:
+- 5 / 10 / 15 cm3
+
+But these are **not the primary geometry model for PoC-1 internal VC surface/wick work**.
+
+## 6. Internal screening targets — surface/wick PoC-1
+
+Strong reference:
+~0.4 mm total-class UTVC with ~0.2 mm internal channel.
+
+Stage-0 research targets:
+- ~60 um-class thin mesh where feasible;
+- <=100 um mesh as transfer/stretch route;
+- added functional layer target <=35 um;
+- total functional wick/surface element target <=120 um;
+- stretch ceiling <=150 um.
+
+These are internal gates informed by the current reference, not published industry standards.
+
+A >=200 um local structure is disfavored for a 0.4 mm-class reference unless it replaces another structural/channel function.
+
+See:
+../09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md
+
+## 7. Working-fluid gate
+
+### Product-path reference
+DI water for sealed copper VC comparison.
+
+### Mechanism bridge
+HFE-7100 only where available/appropriate to reproduce Pavlenko literature.
+
+3M:
+https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+
+3M completed PFAS manufacturing exit at end-2025.
+
+Therefore HFE-7100 is not assumed to be a sustainable future product fluid.
+
+### Future dielectric candidate
+TBD after:
+- supply;
+- regulatory trajectory;
+- thermophysical properties;
+- material compatibility;
+- flammability;
+- environmental profile;
+- sealing/vacuum compatibility.
+
+A Russian surface route is stronger if benefits transfer across product-relevant fluids.
+
+## 8. Heat-load normalization
+
+Internal research loads:
+- 8 W sustained;
+- 15 W sustained;
+- 25 W transient/burst.
+
+Multi-source:
+- 3 or 5 heat sources;
+- moving/alternating hotspots.
+
+These are normalization loads, not claims about a specific SoC.
+
+For PoC-1 Stage 1, retain:
+- 5 / 8 / 12 / 15 W steady;
+- 5 -> 15 W transient;
+- repeated 8 -> 15 -> 8 W.
+
+## 9. Cooling power — active routes
+
 Sweep:
-- 0.25 W
-- 0.5 W
-- 1.0 W
-- 2.0 W
+- 0.25 / 0.5 / 1.0 / 2.0 W
 
-Primary metric:
-**extra heat rejected per watt of cooling power** and resulting sustained-compute gain.
+Report:
+- extra heat rejected per cooling W;
+- sustained compute gain;
+- net system energy.
 
-A design that requires large cooling power but merely transfers heat internally should be penalized.
-
-### Acoustic evaluation
-Do not use dBA alone.
+## 10. Acoustic evaluation
 
 Measure:
 - overall SPL;
 - 1/3-octave spectrum;
 - tonal prominence;
-- blade-passing-frequency components where applicable;
-- specific loudness / sharpness proxy;
-- structure-borne vibration.
+- blade-passing components;
+- loudness/sharpness proxy;
+- vibration.
 
-First-round success should be **relative to a same-envelope rotary-fan baseline**, rather than using an arbitrary absolute dBA cutoff.
+Compare against same-envelope installed baseline, not free-air fan data alone.
 
-### Orientation
-Test at least:
+## 11. Orientation / environment
+
+Orientation:
 - face up;
 - face down;
-- portrait vertical;
+- portrait;
 - landscape;
-- adverse gravity orientation for capillary systems.
+- adverse gravity orientation.
 
-### Environmental
-Minimum research sweep:
-- 20°C ambient
-- 25°C ambient
-- 35°C ambient
+Ambient:
+- 20 / 25 / 35 C.
 
 Later:
-- high humidity;
-- thermal cycling;
-- dust exposure.
-
-### Reliability
-Early PoC:
-- 100 h continuous operation
-- 500 start/stop cycles
-- 5-orientation repeated startup
-- repeated thermal cycling
-
-Later engineering gate:
+- humidity;
+- dust;
 - shock/drop;
+- long aging.
+
+## 12. Reliability
+
+Early mechanism/coupon:
+- fluid soak;
+- vacuum/process exposure;
+- 100 thermal cycles;
+- survivor 500 cycles.
+
+Active system:
+- 100 h continuous;
+- 500 start/stop;
+- repeated orientation startup.
+
+Later:
 - ingress;
-- aging;
-- pump/bearing/actuator fatigue;
-- liquid loss / permeation.
+- fatigue;
+- permeation/liquid loss;
+- corrosion/adhesion.
 
----
+## 13. Primary normalized metrics
 
-## 4. Primary normalized metrics
+Thermal:
+- hotspot temperature;
+- skin/contact-zone temperature;
+- evaporator/device thermal resistance;
+- dryout/capillary limit;
+- rewetting time;
+- time to thermal threshold.
 
-### Thermal
-- hotspot peak temperature
-- maximum skin-side temperature
-- temperature at high-contact zones
-- thermal resistance
-- heat transported / rejected
-- time to 40 / 42 / 45°C skin thresholds
-- time to throttling equivalent
+Performance:
+- sustainable heat load;
+- sustained compute proxy.
 
-### Performance
-- sustainable heat load at fixed skin-temperature limit
-- burst-to-sustained transition
-- sustained compute-performance proxy
+Energy:
+- cooling power;
+- net energy.
 
-### Energy
-- cooling electrical power
-- cooling energy per workload
-- net system energy
+Mechanical:
+- vertical budget;
+- in-plane footprint;
+- mass.
 
-### Acoustic / vibration
-- dBA
-- tonal prominence
-- spectrum
-- vibration RMS / peak
+Reliability:
+- process/cycle drift;
+- orientation;
+- sample repeatability.
 
-### Mechanical
-- thickness
-- volume
-- mass
+Product:
+- ingress;
+- manufacturability;
+- assembly;
+- BOM proxy;
+- working-fluid sustainability.
 
-### Reliability
-- startup success rate
-- orientation sensitivity
-- cycle degradation
-- contamination sensitivity
+## 14. Decision rule
 
-### Product integration
-- ingress penalty
-- manufacturability
-- assembly complexity
-- serviceability
-- BOM proxy
+A technology advances only if:
+1. mechanism survives a plausible phone-scale geometry;
+2. strong China/global comparator is beaten on a normalized metric;
+3. packaging role is credible;
+4. reliability/process path exists;
+5. Russian capability is non-trivial to reproduce;
+6. a small falsifiable PoC exists;
+7. product path is not dependent on an obsolete/unsustainable fluid or process.
 
----
-
-## 5. Decision metric
-
-No single metric determines success.
-
-A candidate should be visualized on a Pareto surface:
-
-**sustained heat load / skin temperature / cooling power / noise / thickness / reliability**
-
-A candidate is interesting when it moves the Pareto frontier, not when it merely improves one isolated component metric.
-
----
-
-## 6. Research gate
-
-A Russian technology may move into collaboration selection only if:
-
-1. its mechanism has a plausible phone-scale implementation;
-2. it passes or has a credible path through the geometry / power / acoustic / ingress / reliability gates;
-3. it shows a measurable advantage or complementary capability versus Chinese academic + industrial baselines;
-4. the advantage can be tested with a small PoC within months rather than requiring a full phone redesign.
-
+Visualize candidates on a Pareto surface:
+**sustained heat load / skin temperature / power / noise / vertical+in-plane space / reliability / manufacturability**.
