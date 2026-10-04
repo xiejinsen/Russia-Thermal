@@ -1213,6 +1213,325 @@ Decision:
 
 ---
 
+
+# E. China VC reliability comparators
+
+## E1 — Oxygen-driven failure of copper-water VC
+
+**[Experimental study on the failure mechanism of the heat transfer performance under the action of oxygen of a copper–water vapour chamber without structural damage](https://doi.org/10.1016/j.applthermaleng.2025.125619)** — Xiaojun Guo, Yong Li, Wenjie Zhou, Rui Tang, Yue Tian, Ang Gao, Yang Yang — *Applied Thermal Engineering*, 2025.
+
+**Review status:** PUBLISHER ABSTRACT/SUMMARY + DECISION REVIEW.
+
+### Q1 — problem + mobile/chip mapping
+How can a sealed copper-water VC lose thermal performance even when shell, seal and visible wick structure remain intact?
+
+This maps directly to phone VC reliability because a chemically aged wick can fail before an obvious mechanical defect appears.
+
+### Q2 — novelty vs strong baseline
+For this project the novelty is not "VC reliability exists." It is a **mechanistic link from oxygen -> wick oxidation -> wetting reversal -> capillary collapse -> evaporation resistance increase** in a product-relevant copper-water system.
+
+### Q3 — falsifiable hypothesis
+> residual/internal oxygen can chemically age the copper wick enough to reverse wetting/capillary behavior and drive thermal failure without gross structural damage.
+
+### Q4 — lineage
+SCUT / Yong Li line:
+ultra-thin heat pipe/VC design
+→ vacuum/process studies
+→ flexible/bent UTVC
+→ failure mechanism
+→ service-life prediction.
+
+Industry-linked coauthors include China Mobile / Lenovo in the wider reliability line.
+
+### Q5 — actual control variable
+- copper-water sealed VC;
+- oxygen level / oxidation state;
+- wick-surface composition;
+- wettability/capillary pressure;
+- vacuum process quality.
+
+### Q6 — experiment design
+Normal and failed VCs are compared while checking:
+- shell flatness / leakage / visible structure;
+- wick surface composition;
+- wetting/capillary state;
+- thermal performance.
+
+### Q7 — quantitative evidence + reproducibility
+Public summary:
+- wick oxygen fraction in failed devices increases by about **3 percentage points**;
+- copper fraction decreases by about **3 percentage points**;
+- wick transitions from hydrophilic toward hydrophobic;
+- capillary pressure moves from positive toward negative.
+
+Reproducibility is **MEDIUM-HIGH conceptually**, but exact production process details remain device-specific.
+
+### Q8 — what it proves / does not prove
+Proves:
+- China has product-relevant VC chemical-aging/failure-mechanism research;
+- vacuum/process oxygen control can be a first-order reliability variable.
+
+Does not prove:
+- equivalence to MPEI's hierarchical-surface aging;
+- 42-month actual operation;
+- phone-specific 0.3–0.4 mm VC lifetime.
+
+### Q9 — contribution + partner/IP control point
+For our project this is primarily a **comparator/control-point correction**:
+surface reliability must include chemistry/vacuum state, not only morphology and thermal cycling.
+
+Potential internal control points:
+- oxygen budget;
+- surface-state retention after degassing/sealing;
+- capillary-pressure retention metric.
+
+### Q10 — next action / PoC / kill
+Use this paper to strengthen the MPEI Stage-0 process gate:
+- XPS/EDS or equivalent surface chemistry before/after process/cycling;
+- wetting/capillary change;
+- vacuum-process record.
+
+**Decision:** **PROMOTE AS DECISION-GRADE CHINA RELIABILITY COMPARATOR.**
+
+---
+
+## E2 — Rapid service-life prediction of copper-water VC
+
+**[Research on a rapid prediction method for the service life of copper-water vapour chambers](https://doi.org/10.1016/j.applthermaleng.2026.131067)** — Xiaojun Guo, Yong Li, Wenjie Zhou, Yue Tian, Yang Yang, Fan Yang — *Applied Thermal Engineering*, 2026.
+
+**Review status:** PUBLISHER FULL-PREVIEW / ABSTRACT REVIEW.
+
+### Q1
+Problem:
+full-life VC testing is too slow/expensive for product engineering.
+
+Mobile mapping:
+smartphone/consumer VC programs need rapid screening of sealed copper-water lifetime and manufacturing quality.
+
+### Q2
+The important novelty for our comparison is a **physics-linked accelerated-lifetime method** rather than generic thermal cycling.
+
+### Q3
+Hypothesis:
+> wick oxygen content is a stable degradation marker that can link high-temperature accelerated aging to actual VC service life.
+
+### Q4
+Same SCUT-led reliability line as E1, extending failure physics into production/lifetime prediction.
+
+### Q5
+Control variables:
+- high-temperature stress;
+- wick oxygen content;
+- thermal-performance failure time;
+- Arrhenius acceleration;
+- XPS/EDS surface state.
+
+### Q6
+Publicly reported design:
+- accelerated aging at **150–200 °C**;
+- copper-water VCs;
+- failure analysis + XPS/EDS;
+- Arrhenius life conversion.
+
+### Q7
+Public quantitative evidence:
+- ~1% wick-surface oxygen -> predicted **>=13 years at 80 °C**;
+- oxygen content vs actual service-life relation **R² ≈ 0.98**;
+- reported prediction error ~**8%**.
+
+The >=13-year figure is **model-predicted service life**, not 13 years of direct operation.
+
+### Q8
+Proves:
+- China has a serious VC life-engineering methodology;
+- reliability comparison with MPEI cannot use "China lacks long-term reliability" wording.
+
+Does not prove:
+- actual multi-year operation of the same engineered surface;
+- hierarchical coating aging under R410A or phone heat flux.
+
+### Q9
+Contribution for our insight:
+it shifts the Russia–China complementarity.
+
+China:
+- sealed copper-water manufacturing;
+- oxygen/vacuum failure control;
+- accelerated life prediction.
+
+Potential MPEI complement:
+- actual multi-year hierarchical evaporator aging / capillary evolution.
+
+### Q10
+Next action:
+compare MPEI Stage-0 results against a **China-style oxygen/process reliability control** rather than treating long-duration operation alone as sufficient.
+
+**Kill MPEI country-level reliability differentiation** if:
+- MPEI contributes only generic oxidation/vacuum reliability already covered by China;
+- no hierarchy-specific long-duration mechanism survives scale-down.
+
+**Decision:** **PROMOTE — narrows MPEI differentiation rather than killing it.**
+
+---
+
+# F. China electronics cooling-fan aeroacoustic comparators
+
+## F1 — POD + wavelet beamforming for cooling-fan source imaging
+
+**[Experimental Analysis of Cooling Fan Noise by Wavelet-Based Beamforming and Proper Orthogonal Decomposition](https://doi.org/10.1109/ACCESS.2020.3006483)** — Sicong Liang, Wangqiao Chen, Rhea P. Liem, Xun Huang — *IEEE Access*, 2020.
+
+**Review status:** OPEN-ACCESS / TECHNICAL REVIEW.
+
+### Q1
+Problem:
+small fan acoustic sources are hard to localize/separate with conventional array beamforming.
+
+Mobile mapping:
+phone microfans have even smaller apertures, higher rpm and stronger installed-condition coupling, making source separation difficult.
+
+### Q2
+Novelty:
+combines wavelet beamforming with POD specifically demonstrated on a practical electronics cooling fan.
+
+For our Russia comparison this closes the claim that advanced cooling-fan acoustic source imaging is absent in China.
+
+### Q3
+Hypothesis:
+> modal decomposition of beamformed acoustic images can separate physically distinct cooling-fan source contributions better than conventional time-averaged imaging.
+
+### Q4
+Capability lineage:
+PKU/HKUST aeroacoustic/acoustic-imaging work around wavelet beamforming and rotating sources.
+
+### Q5
+Control variables:
+- fan rpm;
+- frequency / BPF and harmonics;
+- subharmonics;
+- broadband/high-frequency turbulence noise;
+- acoustic-image modes.
+
+### Q6
+Public setup:
+- AMD Wraith Prism CPU fan;
+- **D = 90 mm**;
+- 2650 / 3960 rpm;
+- anechoic/half-anechoic acoustic measurement;
+- microphone array;
+- wavelet beamforming + POD.
+
+### Q7
+Quantitative/reproducibility
+The open paper reports clear spectra/source imaging and discusses BPF, subharmonic and high-frequency components.
+
+External reproducibility:
+**HIGH-MEDIUM**, because the signal-processing method and test architecture are public.
+
+### Q8
+Proves:
+- Chinese academia has cooling-fan source-imaging capability.
+
+Does not prove:
+- direct smartphone-scale microfan source diagnosis;
+- confined centrifugal fan at ~20k rpm;
+- equal-cooling acoustic optimization.
+
+### Q9
+Implication
+Russian aeroacoustic differentiation must be narrowed to:
+- much smaller fan scale;
+- confined ducts;
+- installed tonal/source interaction;
+- possibly psychoacoustic/user-perception constraints.
+
+### Q10
+Smallest comparison:
+same ~18–25 mm phone-class centrifugal fan in identical duct/impedance condition, tested with a Chinese baseline method and Russian method.
+
+Success for Russia collaboration:
+- materially better source attribution or design guidance at same test cost/time;
+- identifies a controllable noise mechanism not captured by domestic baseline.
+
+Kill:
+- domestic method resolves the same source modes equally well.
+
+**Decision:** **PROMOTE AS COMPARATOR; DOWNGRADE broad Russia aeroacoustic differentiation.**
+
+---
+
+## F2 — Narrow-space electronic cooling-fan aeroacoustics
+
+**[Aerodynamic Noise Characteristics of Axial Flow Fan in Narrow Space and Noise Reduction Based on Flow Control](https://doi.org/10.1115/1.4063127)** — Zonghan Sun, Pengfei Chai, Jie Tian, Zhaohui Du, Hua Ouyang — *Journal of Engineering for Gas Turbines and Power*, 2023.
+
+**Review status:** ABSTRACT + TECHNICAL METADATA REVIEW.
+
+### Q1
+Problem:
+electronic cooling fans change behavior when installed in narrow spaces with downstream obstacles and recirculation.
+
+This is closer to phone/compact-device installed conditions than free-field fan acoustics.
+
+### Q2
+Novelty for our benchmark:
+not generic fan noise, but **installed narrow-space flow/acoustic coupling**.
+
+### Q3
+Hypothesis:
+> confinement/obstacles alter flow rate and recirculation, increasing tonal/broadband noise; source-oriented flow control can reduce the penalty.
+
+### Q4
+Lineage:
+SJTU/Ouyang team has a coherent electronic-device cooling-fan aeroacoustics program:
+inlet asymmetry
+→ acoustic modes
+→ duct noise reduction
+→ narrow-space installed condition.
+
+### Q5
+Control variables:
+- inlet/outlet obstruction;
+- confinement;
+- fan speed;
+- recirculation;
+- tonal/broadband SPL;
+- duct/flow-control geometry.
+
+### Q6
+Experiment/simulation:
+electronic cooling fans are tested with free-field and installed narrow-space configurations, with CFD/aeroacoustic interpretation.
+
+### Q7
+Evidence/reproducibility
+The program includes experimental microphone measurements and repeated duct/noise-control studies.
+
+Direct smartphone-scale geometry is not established.
+
+### Q8
+Proves:
+China already studies the exact **installed-condition acoustic interaction** concept.
+
+Does not prove:
+phone microfan capability at ~18–25 mm / 20k rpm.
+
+### Q9
+Contribution/control point
+This kills the argument:
+> "Russia is differentiated because it knows how ducts/confinement change fan noise."
+
+The residual question is much narrower:
+> who can solve source identification and thermal-acoustic optimization at actual phone scale?
+
+### Q10
+Partner implication:
+TsAGI/PNRPU/CIAM remains a **method reserve**, not a national advantage.
+
+Smallest PoC:
+phone microfan + production-like inlet/outlet/mesh/duct; same cooling target; compare source diagnosis, tonal metric and actionable geometry recommendation.
+
+**Decision:** **PROMOTE COMPARATOR / DOWNGRADE RUSSIA AEROACOUSTIC CANDIDATE TO WATCH-RESERVE.**
+
+---
+
 # Cross-paper synthesis
 
 ## What these 10Q cards change
