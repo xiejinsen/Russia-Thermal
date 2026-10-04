@@ -534,3 +534,32 @@ Remaining evidence gap:
 
 QA judgment:
 **PASS-WITH-STAGE0-PHYSICAL-GAP.**
+
+
+### New-chat continuity / session-handoff QA
+
+Canonical entry:
+- [CONTINUE_HERE.md](../CONTINUE_HERE.md)
+
+Purpose:
+- allow a new ChatGPT conversation to reconstruct the current project state from GitHub;
+- prevent dependence on one long chat window;
+- preserve evidence, Kill/Keep, Stage-0, comparator and refresh rules.
+
+Authority safeguard:
+- CONTINUE_HERE.md is bootstrap-only;
+- PROGRESS.md remains the single global current-status authority;
+- current workstream files remain the local decision authority.
+
+Required behavior in a new chat:
+1. read CONTINUE_HERE.md;
+2. read README.md;
+3. read PROGRESS.md;
+4. read repository architecture;
+5. read the relevant current workstream authority before doing new research.
+
+QA judgment:
+**PASS — project continuity no longer depends on chat transcript length.**
+
+Research-progress effect:
+**NONE.**
