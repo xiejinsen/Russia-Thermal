@@ -96,6 +96,7 @@ Current gating file:
 ../09_collaboration-roadmap/poc01_stage0_coupon_matrix_v01.md
 
 Key unresolved blockers:
+- exact electrochemical recipe is now **partner-only**, not a public-search task;
 - thin-mesh modification feasibility;
 - permeability penalty;
 - product-fluid transfer;
@@ -158,6 +159,8 @@ New primary evidence:
 
 Why it matters:
 - 42-month R410A two-phase stability materially improves reliability confidence;
+- 2024 dissertation closes part of the as-built coating-thickness uncertainty;
+- 2017/2020 0.2 mm water-boiling/CHF lineage, including Ivanov, upgrades high-flux capability evidence to PARTIAL;
 - current coating/IP/project continuity is strong.
 
 Why it is still not a Strategic Bet:
@@ -174,7 +177,9 @@ New process evidence:
 https://doi.org/10.1016/j.surfin.2026.109390
 
 Why it matters:
-- strong surface-manufacturing durability.
+- strong surface-manufacturing durability;
+- RU2812668 inventor/claim mapping is now closed to Feoktistov/Orlova/TPU;
+- patent route offers a laser-only low-organic process-control branch.
 
 Why it is still not a Strategic Bet:
 - vacuum/outgassing / working-fluid contamination is unresolved;
@@ -188,3 +193,21 @@ The Stage-0 challengers now intentionally test different failure modes:
 - TPU: manufacturing-compatible spatial wetting.
 
 Do not merge them into one generic "modified surface" direction.
+
+
+### Stage-0 decision interpretation
+
+Current decisions are intentionally weaker than a final Strategic Bet promotion:
+- Pavlenko — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
+
+Canonical:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+A Stage-0 GO means:
+**spend the minimum effort needed to falsify the mechanism under phone constraints.**
+
+It does not mean:
+**Russia-specific strategic advantage has already been proven.**
