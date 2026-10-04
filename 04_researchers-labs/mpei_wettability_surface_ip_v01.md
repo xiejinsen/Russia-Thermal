@@ -251,3 +251,69 @@ It remains below Pavlenko as Tier-A lead because phone heat-flux, sub-mm geometr
 
 Detailed collaboration brief:
 ../09_collaboration-roadmap/partner_brief_mpei_ivanov_stage0_v01.md
+
+
+## Stage-0 blocker closure — public process / high-flux lineage
+
+Research date: 2026-10-04
+
+### What the 2024 dissertation closes
+
+The official MPEI dissertation gives substantially more manufacturing detail than the journal abstract alone.
+
+**Source fact — historical/as-built lineage:**
+- hierarchical microgroove radius: about **100 μm**;
+- representative Al2O3 particle scale in the thermosyphon model/experiment: about **150 nm**;
+- representative nanoparticle layer thickness used in the thermosyphon calculation: about **5 μm**;
+- separate deposition experiments show that thicker layers can exceed **10–15 μm** depending on deposition amount/process;
+- capillary rise degrades with aging/ambient contamination and can be partially recovered by reheating;
+- permeability was estimated using a porous-media model and assumed porosity, with large scatter; this is not a production-grade measured permeability value.
+
+Primary official dissertation:
+https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf
+
+**Decision impact:**
+the old blocker "actual coating thickness is completely unknown" is closed only at **lineage level**. A current as-built phone-transfer coupon still needs direct metrology.
+
+### High-flux / thin-channel lineage
+
+Two MPEI papers materially reduce, but do not close, the high-flux transfer uncertainty:
+
+- **[Nanoparticle Coating of a Microchannel Surface is an Effective Method for Increasing the Critical Heat Flux](https://doi.org/10.1134/S0040601517040073)** — M.V. Shustov, Yu.A. Kuzma-Kichta, A.V. Lavrikov — *Thermal Engineering*, 2017.
+  - water boiling;
+  - 0.2 mm-high × 3 mm-wide × 13.7 mm-long microchannel;
+  - Al2O3 nanoparticle coating;
+  - reported boiling crisis at materially higher heat flux, approximately 15–50% higher CHF than the uncoated channel in the reported tests.
+
+- **[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
+  - water boiling;
+  - horizontal microchannel about 12.5 × 3 × 0.2 mm;
+  - Al2O3 nanoparticle coating;
+  - N.S. Ivanov is a co-author;
+  - explicit CHF/heat-transfer-crisis investigation.
+
+**Analyst inference:**
+this is useful **same-group / same-material-system high-flux lineage**, and the 2020 paper directly links Ivanov to 0.2 mm water-boiling work. It does **not** prove that the later 100 μm-radius hierarchical thermosyphon surface survives smartphone hotspot heat flux in a sealed 0.4 mm-class VC.
+
+### Blocker routing after public research
+
+| Blocker | Current state | Resolution route |
+|---|---|---|
+| representative coating thickness | **PARTIAL — public evidence now available** | public + current-partner metrology |
+| groove radius | **PASS at lineage level: ~100 μm** | public |
+| exact groove depth / width / pitch / tolerance | **UNKNOWN** | partner-only |
+| permeability penalty / measured permeability | **UNKNOWN** | experiment-only / partner data if available |
+| high-flux evidence | **PARTIAL** | public lineage + exact-geometry experiment |
+| geometry scale-down | **UNKNOWN** | experiment-only |
+| copper compatibility | **UNKNOWN** | experiment-only |
+| vacuum / sealed-VC process compatibility | **UNKNOWN** | experiment-only |
+| product-path DI-water sealed-VC performance | **UNKNOWN** | experiment-only |
+
+### Current decision
+
+**KEEP / GO WITH PREREQUISITE as Stage-0 priority #2.**
+
+The strongest newly reduced uncertainty is no longer "does MPEI have any thin-channel/high-flux lineage?" It does.
+
+The remaining decisive question is:
+> can the *current hierarchical long-life surface* be scaled from ~100 μm-radius grooves into the phone vertical budget without losing liquid supply or vapor space, and retain advantage at phone-relevant heat flux?
