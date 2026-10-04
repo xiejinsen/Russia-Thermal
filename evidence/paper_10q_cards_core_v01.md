@@ -425,6 +425,165 @@ Decision:
 
 ---
 
+## B0a — 0.2 mm water-boiling microchannel / CHF precursor
+
+**[Nanoparticle Coating of a Microchannel Surface is an Effective Method for Increasing the Critical Heat Flux](https://doi.org/10.1134/S0040601517040073)** — M.V. Shustov, Yu.A. Kuzma-Kichta, A.V. Lavrikov — *Thermal Engineering*, 2017.
+
+**Review status:** FULL-TEXT / PUBLIC AUTHOR-COPY TECHNICAL REVIEW.
+
+### Q1 — problem + mobile/chip mapping
+Problem: boiling crisis limits heat removal in compact two-phase microchannels.
+
+Mapping: a **0.2 mm-high water-boiling channel** is much closer to the vertical scale of a modern UTVC internal space than MPEI's later full thermosyphon, although it is a pumped/flow microchannel rather than a sealed phone VC.
+
+### Q2 — novelty vs strong baseline
+The useful novelty for this project is not generic nanoparticle coating. It is evidence that an MPEI/Kuzma-Kichta coating can move the **CHF boundary inside a 0.2 mm channel**.
+
+Modern China/global UTVCs are stronger device baselines; this paper is a mechanism/partner-capability bridge.
+
+### Q3 — falsifiable hypothesis
+> Al2O3 coating changes near-wall liquid/vapor behavior enough to delay heat-transfer crisis in a very thin water-boiling channel.
+
+Falsified if matched coated/uncoated channels show no reproducible CHF shift under controlled geometry/flow.
+
+### Q4 — lineage
+Kuzma-Kichta and Lavrikov connect directly to the later MPEI nanoparticle/coating program. The work precedes Ivanov's current hierarchical thermosyphon line.
+
+### Q5 — actual control variable
+- Al2O3 nanoparticle coating vs smooth heating surface;
+- water;
+- microchannel mass flow / boiling state.
+
+### Q6 — experiment design
+**Source facts:**
+- water;
+- channel ~0.2 mm high × 3 mm wide × 13.7 mm long;
+- smooth vs Al2O3-coated surface;
+- thermal measurements + high-speed imaging.
+
+### Q7 — quantitative evidence + reproducibility
+**Source fact:** public full text reports boiling crisis at approximately **15–50% higher CHF** for the coated channel over the tested cases.
+
+Important boundary:
+this result is configuration-specific and not a sealed-VC result.
+
+### Q8 — what it proves / does not prove
+Proves:
+- thin-channel water boiling;
+- coating can shift CHF under the tested flow-boiling conditions.
+
+Does not prove:
+- passive capillary return;
+- <0.5 mm sealed VC;
+- long-term coating retention;
+- compatibility with the later 100 μm-radius hierarchical grooves.
+
+### Q9 — contribution + partner/IP control point
+Partner value:
+knowledge linking nanoparticle surface state to crisis behavior in a thin channel.
+
+Potential joint control point:
+phone-scale liquid-supply / dryout control that combines thin geometry with long-term coating stability.
+
+### Q10 — next action / PoC / kill
+Partner action:
+ask whether the same coating family/process was ever reproduced on copper or passive capillary devices.
+
+Smallest PoC:
+matched 0.2–0.4 mm confined water test with current MPEI coating and strong modern reference.
+
+Success:
+reproducible dryout/CHF or rewetting shift without unacceptable vapor-space/permeability penalty.
+
+Kill:
+benefit disappears when current hierarchical geometry is scaled into the phone budget.
+
+**Decision:** **PROMOTE AS HIGH-FLUX / THIN-CHANNEL LINEAGE; NOT PHONE PROOF.**
+
+---
+
+## B0b — Ivanov-linked 0.2 mm water-boiling CHF study
+
+**[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
+
+**Review status:** FULL-TEXT / OPEN-ACCESS TECHNICAL REVIEW.
+
+### Q1 — problem + mobile/chip mapping
+Problem:
+quantify heat-transfer crisis in a very thin water-boiling microchannel with and without Al2O3 coating.
+
+Mobile mapping:
+the **0.2 mm channel height** is geometrically relevant to the internal height scale of a ~0.39 mm UTVC, but the flow boundary condition is different.
+
+### Q2 — novelty vs strong baseline
+The decision-relevant novelty is **Ivanov's direct participation** in thin-channel, water, CHF work — a missing bridge between MPEI's current low-flux long-life thermosyphon and phone-relevant high-flux transfer.
+
+### Q3 — falsifiable hypothesis
+> coating geometry/particle scale changes the CHF boundary in a 0.2 mm water-boiling channel.
+
+The paper itself notes limited data, so this remains a transferable hypothesis rather than a universal rule.
+
+### Q4 — lineage
+Authors include:
+- Yu.A. Kuzma-Kichta;
+- A.V. Lavrikov;
+- **N.S. Ivanov**.
+
+This materially strengthens the continuity:
+thin water-boiling CHF → capillary transport → hierarchical thermosyphon → 42-month stability.
+
+### Q5 — control variables
+- coated vs uncoated;
+- coating thickness / particle scale in the modeling treatment;
+- water mass velocity;
+- microchannel geometry.
+
+### Q6 — experiment design
+**Source facts:**
+- horizontal microchannel approximately 12.5 × 3 × 0.2 mm;
+- water at atmospheric-pressure conditions;
+- Al2O3 nanoparticle coating;
+- mass-velocity range reported for coated tests;
+- CHF / heat-transfer-crisis measurement and correlation comparison.
+
+### Q7 — quantitative evidence + reproducibility
+The paper supplies experimental CHF data and compares them against calculation.
+
+Evidence-strength note:
+the paper explicitly states the dataset is limited and should be expanded. That is important negative/reproducibility context.
+
+### Q8 — what it proves / does not prove
+Proves:
+- MPEI/Ivanov has real thin-channel water-boiling/CHF experimental lineage.
+
+Does not prove:
+- the 2026 hierarchical microgroove + nanoparticle surface has the same high-flux behavior;
+- passive sealed-VC operation;
+- copper compatibility;
+- phone reliability.
+
+### Q9 — partner / IP control point
+This improves **partner capability confidence**, not broad IP novelty.
+
+A credible foreground target is:
+> miniaturized long-life hierarchical liquid-supply surface whose dryout benefit remains after vacuum/sealing/cycling.
+
+### Q10 — next action / PoC / kill
+Public research can no longer close the exact-surface transfer.
+
+Next:
+1. partner request for any current high-flux data on the 2026 hierarchy;
+2. geometry-scaled coupon;
+3. water high-flux step-up;
+4. sealed-VC only after coupon success.
+
+Kill:
+if the hierarchy loses its capillary/CHF advantage as grooves shrink or heat flux rises.
+
+**Decision:** **UPGRADE MPEI HIGH-FLUX EVIDENCE TO PARTIAL; EXPERIMENT REQUIRED FOR PASS.**
+
+---
+
 ## B1 — Microgroove + nanoparticle thermosyphon
 
 **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
