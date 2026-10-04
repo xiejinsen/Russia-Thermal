@@ -1,6 +1,6 @@
 # Journal Ranking Register — Decision-Relevant Venues v0.2
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Rank is metadata, not technical proof.
 
@@ -36,3 +36,17 @@ Next venues to normalize:
 | International Journal of Heat and Fluid Flow | 0.4 mm wettability-patterned UTVC | 2025 IF 3.1; JCR Q2 in Mechanical/Mechanics/Thermodynamics on secondary bibliometric sources; SJR/CiteScore category includes Q1 Fluid Flow | https://www.sciencedirect.com/journal/international-journal-of-heat-and-fluid-flow | MIXED-OFFICIAL/SECONDARY |
 | Power engineering: research, equipment, technology | MPEI ordered porous wick 2026 | peer-reviewed official journal; international quartile not yet verified | https://www.energyret.ru/jour?locale=en_US | VERIFIED-JOURNAL; RANK-PENDING |
 
+
+
+## Added after Stage-0 partner-brief round
+
+| Journal | Project relevance | Current ranking context | Source | Verification |
+|---|---|---|---|---|
+| Progress in Engineering Science | MPEI 42-month hierarchical thermosyphon stability | 2025 SCImago context: SJR ~0.539, Q2; young Elsevier journal | https://www.journalsbase.com/journals/progress-in-engineering-science | SECONDARY-BIBLIOMETRIC |
+| Surfaces and Interfaces | TPU laser–thermolysis hydrophobization durability | 2025 SCImago context: SJR ~0.930; Q1 best quartile, category-dependent (Surfaces and Interfaces category shown Q2 by some databases) | https://www.journalsbase.com/journals/surfaces-and-interfaces | SECONDARY-BIBLIOMETRIC |
+
+### Interpretation
+
+The MPEI long-duration result is technically important because of its **42-month device-level reliability evidence**, not because of venue prestige.
+
+The TPU durability paper is in a strong current surface/materials venue, but venue rank does not resolve its phone-vacuum/two-phase transfer gap.
