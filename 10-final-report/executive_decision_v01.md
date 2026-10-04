@@ -90,6 +90,23 @@ Current Watch / reserves:
 Management pattern:
 **the Russia-side differentiation is converging toward failure-limit science, not generic cooler hardware.**
 
+### Foundational enabling reserve
+
+A separate Russia capability now survives China pressure-testing:
+
+**ICM SB RAS / linked Siberian mathematical-physics line — exact/group-invariant analytical + stability modeling of evaporative thermocapillary systems.**
+
+Important:
+- this is **not** "Russia has better mathematics";
+- China is independently strong in nonlinear stability, phase-change numerical modeling and inverse thermal diagnostics;
+- the residual Russia value is **analytical interpretability + exact-solution lineage + experiment-informed mechanism closure**.
+
+Current state:
+**Foundational Reserve / test before promotion.**
+
+Smallest proof:
+blind prediction of a phone-relevant film-instability boundary versus a strong domestic high-fidelity model and physical experiment.
+
 ## 3. Final management table — template
 
 | Decision | Direction | Why now | Russia-specific contribution | China/global baseline | Next proof | Kill condition |
