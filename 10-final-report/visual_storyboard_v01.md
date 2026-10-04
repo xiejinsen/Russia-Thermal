@@ -1,0 +1,349 @@
+# Final Report Visual Storyboard v0.1
+
+Last reviewed: 2026-10-04
+
+Status: **presentation specification — not final figures**
+
+## Principle
+
+Every major visual must answer a decision question.
+
+Do not create charts merely because data exists.
+
+The final report should use visuals to compress:
+- capability;
+- evidence;
+- comparison;
+- elimination;
+- collaboration;
+- roadmap.
+
+---
+
+## Visual 1 — Smartphone Thermal Problem Stack
+
+### Decision question
+What are the actual constraints future phone thermal innovation must solve simultaneously?
+
+### Recommended form
+Layered system diagram:
+
+Workload / hotspot
+↓
+SoC + memory/package
+↓
+TIM/interface
+↓
+VC/wick / routing
+↓
+frame / back cover
+↓
+user hand / ambient
+
+Side constraints:
+- battery
+- camera
+- board
+- acoustics
+- ingress
+- reliability
+- cooling power
+
+### Data source
+- ../01_global-baseline/
+- ../08_opportunities-transfer/smartphone_constraint_model_v01.md
+
+### Avoid
+Do not turn this into a generic heat-transfer textbook figure.
+
+---
+
+## Visual 2 — Mobile Thermal Technology Map
+
+### Decision question
+Which technology categories are mature, crowded, promising, or killed?
+
+### Recommended form
+2D map.
+
+X-axis:
+**phone integration maturity**
+mechanism only -> component -> device -> shipping product
+
+Y-axis:
+**potential frontier shift**
+low -> high
+
+Marker encoding:
+- China/global maturity
+- Russia-specific signal
+- current disposition
+
+Labels:
+- Tier A
+- Tier A-
+- Tier B+
+- Tier B
+- killed/reframed
+
+### Data source
+- ../02_technology-landscape/technology_map.md
+- ../08_opportunities-transfer/direction_decision_gate_v01.md
+
+### Avoid
+Do not use publication count as bubble size.
+
+---
+
+## Visual 3 — Russia Thermal Research Map
+
+### Decision question
+Where does relevant Russian capability actually sit?
+
+### Recommended form
+Network / structured hierarchy:
+
+Institution
+→ Lab
+→ Researcher
+→ Capability
+→ Recent evidence
+→ Current status
+
+For each promoted node show small metadata:
+- current activity 2023–2026
+- university domestic/global ranking context
+- top relevant venue metadata
+- partner readiness
+
+### Data source
+- ../03_russia-institutions/
+- ../04_researchers-labs/
+- ../evidence/russia_domestic_ranking_register.md
+- ../evidence/journal_ranking_register.md
+
+### Avoid
+Do not imply university rank = technology rank.
+
+---
+
+## Visual 4 — Russia × China Complementarity Matrix
+
+### Decision question
+Why collaborate with a Russian team instead of solving the problem using existing China/global capability?
+
+### Recommended form
+Rows:
+technical control points, e.g.
+- sub-mm VC manufacturing
+- wick/capillary architecture
+- boiling/dryout physics
+- wettability retention
+- active airflow
+- aeroacoustics
+- adaptive control
+- package integration
+
+Columns:
+- Russia capability
+- China/global capability
+- our/team capability
+- complementarity value
+- remaining gap
+
+### Highlight
+Only cells where the combination could create:
+- new IP;
+- measurable frontier shift;
+- unique PoC.
+
+### Data source
+- ../07_china-benchmark/
+- ../08_opportunities-transfer/russia_china_gap_v01.md
+- ../08_opportunities-transfer/direct_comparisons_v01.md
+
+### Avoid
+No "Russia vs China winner" score.
+
+---
+
+## Visual 5 — Opportunity Funnel / Kill Map
+
+### Decision question
+How did the research eliminate attractive but non-strategic directions?
+
+### Recommended form
+
+Broad technology search
+↓
+current Russia evidence
+↓
+strong China/global comparator
+↓
+phone constraint
+↓
+IP/prior art
+↓
+engineering feasibility
+↓
+Stage-0 / PoC
+↓
+Strategic Bets
+
+Show killed/reframed branches at each gate.
+
+Examples:
+- generic LHP miniaturization -> killed as Russia-specific thesis
+- generic synthetic jet -> killed
+- generic biphilic / laser surface -> reframed
+- Pavlenko surface -> narrowed to fluid-transferable dryout/rewetting
+
+### Data source
+- ../CHANGELOG.md
+- ../08_opportunities-transfer/direction_decision_gate_v01.md
+- ../05_papers-patents/
+
+### Decision value
+This is a key credibility visual. It proves the project did not cherry-pick positive evidence.
+
+---
+
+## Visual 6 — Collaboration Opportunity Map
+
+### Decision question
+Which collaboration should receive resources first?
+
+### Recommended form
+Portfolio matrix.
+
+X-axis:
+**phone-transfer readiness**
+low -> high
+
+Y-axis:
+**strategic differentiation / control-point value**
+low -> high
+
+Bubble outline:
+- IP clarity
+
+Bubble fill/state:
+- partner readiness
+
+Bubble label:
+- partner + technical hypothesis
+
+Current provisional examples:
+- Pavlenko / dryout-rewetting
+- TPU / biphilic pattern
+- MPEI Ivanov / hierarchical coating
+- MPEI ordered wick
+- film/droplet
+- SPbU adaptive control
+
+### Data source
+- ../09_collaboration-roadmap/
+- final_report_readiness_gate.md
+
+### Avoid
+Do not call the top-right bubble "winner" until PoC gate passes.
+
+---
+
+## Visual 7 — Strategic Bet Card
+
+### Decision question
+What exactly are we betting on?
+
+### One-page card layout
+
+Top:
+**Bet + user problem + decision state**
+
+Left:
+- Russia-specific capability
+- evidence
+- China/global baseline
+
+Center:
+- technical mechanism / architecture diagram
+- phone integration
+
+Right:
+- PoC
+- success/kill
+- IP thesis
+- partner
+- confidence
+
+Bottom:
+0–6 / 6–18 / 18–36 month path
+
+### Data source
+- strategic_bets_v01.md
+- collaboration_portfolio_v01.md
+- three_year_roadmap_v01.md
+
+Each final Primary/Reserve Bet should use the same layout.
+
+---
+
+## Visual 8 — Three-Year Roadmap
+
+### Decision question
+What gets done when, and what decision unlocks the next phase?
+
+### Recommended form
+Swimlanes:
+
+- Technical proof
+- Partner
+- IP
+- Product/package integration
+- Reliability/manufacturing
+
+Columns:
+- 0–6 months
+- 6–18 months
+- 18–36 months
+
+Use explicit **gate diamonds** between phases:
+- Stage-0 pass
+- Stage-1 frontier shift
+- product-integration pass
+
+### Data source
+- three_year_roadmap_v01.md
+
+### Avoid
+Do not show a smooth linear timeline if continuation is conditional.
+
+---
+
+## Presentation hierarchy
+
+Management version:
+1. Executive decision
+2. Problem stack
+3. Opportunity funnel
+4. Complementarity map
+5. 2–4 Strategic Bet cards
+6. Collaboration portfolio
+7. Roadmap
+8. Key risks / asks
+
+Full technical report:
+adds evidence detail, comparator tables, patent maps and limitations.
+
+Evidence appendix:
+keeps bibliography/claim/ranking detail out of the main narrative.
+
+## Style rule
+
+Final visuals should be:
+- analytical, not decorative;
+- sparse enough to read in presentation form;
+- consistent in status labels;
+- explicit about evidence vs inference;
+- explicit about killed paths;
+- free of unsupported precision.
