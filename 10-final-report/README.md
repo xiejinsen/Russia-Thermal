@@ -62,6 +62,11 @@ Before the final management report is considered structurally complete, it must 
    - 3–5 narrow Russia differentiation candidates;
    - evidence gaps and falsifiers.
 
+4. **Foundational Science Layer**
+   - mathematical physics / applied mathematics / nonlinear stability / reduced-order modeling;
+   - explicit bridge from foundational method -> thermal mechanism -> failure/control boundary -> PoC/IP;
+   - cross-border coauthorship attributed by lineage/platform/method ownership rather than author nationality alone.
+
 Current research inputs:
 - [Russia Thermal Capability Atlas](../03_russia-institutions/russia_thermal_capability_atlas_v01.md)
 - [China Academic Thermal Capability Mirror](../07_china-benchmark/china_academic_capability_mirror_v01.md)
@@ -152,20 +157,20 @@ The final report should eventually contain:
    - Russia residual differentiation;
    - current verdict / evidence gap
 
-3. **Mobile Thermal Technology Map**
+4. **Mobile Thermal Technology Map**
    - Smartphone problem -> technology route -> China maturity -> Russia signal -> disposition
 
-4. **Problem × Technology Matrix**
+5. **Problem × Technology Matrix**
    - hotspot / skin / sustained performance / acoustics / thickness / reliability
    - crossed with VC / surface / LHP / active cooling / materials / control
 
-5. **Collaboration Opportunity Map**
+6. **Collaboration Opportunity Map**
    - our problem × Russia capability × China baseline × phone feasibility × IP × PoC cost
 
-6. **Opportunity Funnel / Kill Map**
+7. **Opportunity Funnel / Kill Map**
    - broad search -> evidence -> comparator -> phone constraints -> IP -> engineering -> PoC -> surviving bets
 
-7. **3-Year Roadmap**
+8. **3-Year Roadmap**
    - 0–6 / 6–18 / 18–36 months
    - technology + partner + PoC + IP + product path
 
