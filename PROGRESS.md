@@ -40,8 +40,8 @@ Supporting Russia evidence:
 - 2024 **12.5 μm-high × 10 mm** slit two-phase-flow experiment;
 - current microelectronics framing.
 
-Important caveat:
-the 2022 shear-driven-film paper includes Beijing University of Technology coauthors, so the public mechanism is not Russia-exclusive.
+Joint-authorship correction:
+the 2022 shear-driven-film paper includes Beijing University of Technology coauthors, but this is now treated as **joint capability / knowledge-transfer evidence**, not automatic proof of an independently equivalent China capability. Kutateladze's pre-existing lineage/platform still counts toward Russian capability attribution.
 
 Current state:
 **NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
@@ -90,14 +90,37 @@ The surviving Russia differentiation is increasingly concentrated in:
 This suggests a more coherent management narrative:
 **Russia may be more valuable for understanding and controlling thermal failure limits than for supplying generic cooling components.**
 
+### Methodology expansion before next round
+
+Two project rules were added:
+
+1. **Cross-border coauthorship attribution**
+   - joint Russia–China papers may still support Russian capability;
+   - do not count the same joint paper as two independent national capabilities;
+   - strong China comparator status requires independent China evidence or China-led platform/lineage.
+
+2. **Foundational mathematical-physics capability**
+   - applied mathematics / mathematical physics / nonlinear stability / reduced-order modeling now form a separate enabling layer;
+   - current preliminary Russian signals exist in evaporative convection, thermocapillary instability, exact solutions and coupled thin-film microchannel models;
+   - this is a **candidate**, not yet a final national advantage.
+
+Representative current foundation evidence:
+- Institute of Computational Modelling SB RAS exact-solution / instability work;
+- 2024 IJTS exact-solution evaporative-convection paper;
+- Lavrentyev Institute 3D evaporating-film microchannel model.
+
+**Progress remains ~66%.**
+This is a methodology/scope correction, not yet a completed research round.
+
 ### Next public-research priority
 
 Do not broaden LHP or generic thin-film searches again.
 
 Next useful public work:
-1. pressure-test **Pavlenko dryout/rewetting** against the strongest China-specific failure-boundary evidence;
-2. search specifically for a China analogue to **actual multi-year engineered-surface aging** to finish the MPEI country comparison;
-3. synthesize the three surviving candidates into one **Russia failure-mechanism capability map** with distinct PoC/IP control points.
+1. run a focused **Russia foundational math-physics -> thermal-management capability scan** and build the matched China comparator;
+2. pressure-test **Pavlenko dryout/rewetting** against the strongest independent China failure-boundary evidence;
+3. search specifically for a China analogue to **actual multi-year engineered-surface aging** to finish the MPEI country comparison;
+4. synthesize the surviving mechanism candidates plus the foundational layer into one management capability map with distinct PoC/IP control points.
 
 Stage-0 partner data/coupon evidence remains the main non-public path to further promotion.
 
