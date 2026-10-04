@@ -18,6 +18,7 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 07 China benchmark | refreshed | good | independent OEM measurements and deeper current supply-chain detail | PASS-WITH-GAPS |
 | 08 Opportunity / falsification | refreshed | strong | physical Stage-0 transfer evidence not yet available | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | refreshed | strong for PoC-1 design | physical coupon feasibility + background IP | PASS-WITH-GAPS |
+| 10 Final report | framework current | inherits 00–09 evidence | conclusions intentionally provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
 | Evidence governance | current | strong | source register may need thematic split as it grows | PASS-WITH-GAPS |
 
 ## Russia university coverage
@@ -120,3 +121,34 @@ The repository is decision-ready only when:
 - major unknowns stay visible;
 - README / PROGRESS / workstream indexes agree;
 - historical snapshots are clearly labeled.
+
+
+## Final-report readiness QA
+
+Framework:
+**PASS**
+
+Current content:
+**NOT FINAL BY DESIGN**
+
+A direction may enter the final Strategic Bets only after passing:
+- real phone problem;
+- current Russia capability;
+- strong comparator;
+- phone transfer;
+- falsification;
+- IP/prior art;
+- partner readiness;
+- PoC;
+- traceability;
+- unknowns/limitations.
+
+Canonical gate:
+../10-final-report/final_report_readiness_gate.md
+
+Current primary candidate still has partial gates in:
+- phone-scale transfer;
+- IP/background rights;
+- physical Stage-0 evidence.
+
+Therefore the existence of Workstream 10 does not increase research completion.
