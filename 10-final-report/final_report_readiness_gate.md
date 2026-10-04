@@ -46,7 +46,7 @@ Search/evidence is incomplete. Do not convert uncertainty into a positive or neg
 |---|---|---|---|---|---|---|---|---|---|
 | Pavlenko fluid-transferable dryout/rewetting | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS | **Candidate Primary Bet** |
 | TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS-Stage0 | Reserve/Challenger |
-| MPEI Ivanov coating | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS-Stage0 | Reserve/Challenger |
+| MPEI Ivanov coating | PASS | PASS | PASS | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 challenger** |
 | MPEI ordered wick | PASS | PASS | PASS | LOW | PARTIAL | PARTIAL | PARTIAL | PRE-PoC | Watch/Pre-device |
 | Film/droplet hybrid | PASS | PASS | PASS | LOW | PASS | PARTIAL | PARTIAL | Feasibility only | Reserve high-risk |
 | Generic LHP miniaturization | PASS | PASS | PASS | FAIL differentiation | PASS | crowded | n/a | n/a | Killed as Russia-specific thesis |
@@ -71,3 +71,21 @@ Update this gate only when:
 - partner readiness changes;
 - PoC result becomes available;
 - IP conclusion changes.
+
+
+## 2026-10-04 readiness update — MPEI durability
+
+New primary evidence:
+https://doi.org/10.1016/j.pes.2026.100314
+
+This improves MPEI/Ivanov on:
+- alternate working-fluid evidence;
+- long-duration two-phase reliability;
+- current partner readiness.
+
+It does **not** convert G4 Phone Transfer to PASS because:
+- heat flux is far below phone-hotspot conditions;
+- groove geometry is large relative to sub-mm UTVC;
+- no sealed phone-scale device is demonstrated.
+
+Therefore MPEI remains a Reserve/Challenger, not a Primary Bet.
