@@ -46,6 +46,7 @@ This prevents double-counting the same joint work as two independent national ca
 | **VC reliability / surface aging** | **South China University of Technology** + Guangdong/industry collaborators | 2025 oxygen-driven copper-water VC failure mechanism; 2026 150–200°C accelerated life prediction; wick oxidation grading/QA | MPEI cannot claim generic reliability advantage; residual difference is actual 42-month operation of one hierarchical surface with capillary-aging evidence |
 | **Ultra-thin VC / thermal ground plane** | **South China University of Technology**; **Huazhong University of Science and Technology**; Xi'an Jiaotong adjacent VC work | SCUT 0.35–0.39 mm-class UTVC line; HUST 2026 reports **0.25 mm** UTTGP with 17,213 W/(m·K) equivalent conductivity and dynamic/cyclic stability | China already has a strong sub-0.4 mm device frontier; Russian generic VC/wick claims face a very high bar |
 | **Mobile LHP / flexible two-phase routing** | **Xi'an Jiaotong University**; **South China University of Technology**; **Qingdao University of Science and Technology / Shandong University**; Beihang; HUST | XJTU 0.7 mm mobile LHP; 1 mm dual-evaporator laptop LHP; dual/multi-evaporator chip cooling; explicit capillary/pressure-drop failure studies; Beihang NCG/startup/elevation lineage | China now covers miniaturization **and** multi-source/startup/failure physics; Maydanik is no longer retained as a country-level differentiation candidate |
+| **Capillary dryout / rewetting / wick failure boundary** | **Guangdong University of Technology**; **South China University of Technology**; **Shanghai Jiao Tong University**; Changsha UST | GDUT repeated-cycle CHF loss + steam-induced rewetting; GDUT <=0.4 mm grooved-porous wick; SCUT treated copper mesh; SJTU pore-scale dryout-flux model; Changsha HFE-7100 1 mm confinement | China independently covers dryout, rewetting, cycle degradation, modified mesh and capillary-limit modeling; Pavlenko can only differentiate on dielectric reversible→irreversible dry-spot/crisis diagnostics |
 | **Flow boiling / CHF / structured surfaces** | **Xi'an Jiaotong University**; North China Electric Power University; other strong heat-transfer groups | XJTU 2025 HFE-7100 semi-open microchannel with structured/nanotube chip surface; reported CHF/HTC enhancement; NCEPU 2024 thin-film boiling >2000 W/cm² | China also has deep high-flux boiling capability; Russia must differentiate on a narrower mechanism/failure-control axis |
 | **Thin film / droplet / spray** | **North China Electric Power University**; **Chinese Academy of Sciences / UCAS**; **Beihang University**; SCUT | NCEPU thin-film boiling **2074 W/cm²**; CAS/NCEPU gradient-mesh capillary thin-film boiling **202.8 W/cm²**; Beihang droplet-train cooling; SCUT current mesh-film work | China is very strong in thin-film boiling/high-flux device physics; Russia can only differentiate on **shear-driven free-surface film / dry-spot / instability under extreme confinement** |
 | **Embedded microfluidic / extreme chip cooling** | **Peking University** | 2025 Nature Electronics: embedded manifold + microjet + sawtooth microchannels, **3000 W/cm²**, ~0.9 W/cm² pumping at extreme condition | China has world-class embedded-chip cooling; generic Russian microchannel competence is not a strategic advantage |
@@ -281,6 +282,42 @@ The residual Russia hypothesis is narrower:
 > continuous exact/group-invariant analytical solutions for coupled evaporative thermocapillary systems, used as interpretable stability/mechanism benchmarks and linked to experiment.
 
 No equally continuous recent China line in that exact problem class was recovered in this pass, but this is an evidence gap rather than proof of absence.
+
+### L. China dryout / rewetting failure-boundary benchmark
+
+Independent China evidence:
+
+- **[Hydrophilicity degradation and steam-induced rewetting during capillary-fed boiling](https://doi.org/10.1016/j.expthermflusci.2023.111030)** — Guangdong University of Technology — 2024.
+  - ~200 μm upper-width / ~150 μm-deep grooved wick;
+  - CHF ~145.0 -> 70.1 W/cm² after five cycles;
+  - hydrophilicity degradation;
+  - steam-induced rewetting;
+  - nanoporous composite mitigation.
+
+- **[Grooved-porous composite wick structures for highly efficient capillary-fed boiling heat transfer](https://doi.org/10.1016/j.applthermaleng.2024.124029)** — GDUT — 2024.
+  - <=0.4 mm structural depth;
+  - 0.6 mm copper substrate;
+  - CHF ~154.9 W/cm²;
+  - capillary-rise volume tied directly to CHF.
+
+- **[Enhanced capillary-driven thin film boiling through superhydrophilic mesh wick structure](https://doi.org/10.1016/j.ijthermalsci.2025.109782)** — SCUT — 2025.
+  - treated copper mesh;
+  - higher capillary supply / lower bubble adhesion;
+  - strong CHF/HTC improvement.
+
+- **[Three-dimensional pore-scale simulations of thin-film evaporation on micro-pillar wicks](https://doi.org/10.1063/5.0271431)** — SJTU — 2025.
+  - direct dryout transition and dryout-flux model.
+
+- **[Coupled effects of surface structuring and capillary-length-scale confinement on pool boiling heat transfer and critical heat flux of HFE-7100](https://doi.org/10.1016/j.applthermaleng.2026.133219)** — Changsha UST — 2026.
+  - HFE-7100;
+  - confinement to 1 mm;
+  - structured-surface CHF retention under vapor-space restriction.
+
+Decision:
+China's independent baseline is now strong enough to reject any broad claim that Russia uniquely owns dryout/rewetting or modified-mesh failure control.
+
+Residual Russia question:
+whether Kutateladze's **dielectric reversible→irreversible dry-spot statistics, crisis-mode transition and drying-front diagnostics** create additional phone-scale value.
 
 ## 3. Current domestic strengths that materially raise the Russia bar
 
