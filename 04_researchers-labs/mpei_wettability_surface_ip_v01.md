@@ -347,3 +347,50 @@ This makes the Stage-0 question stricter:
 
 Current country-level state:
 **NARROW DIFFERENTIATION / COMPLEMENTARY RELIABILITY CANDIDATE**, not broad Russia reliability leadership.
+
+
+## Exact multi-year China pressure-test closure — 2026-10-04
+
+Focused memo:
+../08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md
+
+### Strong China baseline confirmed
+
+China now has a coherent product reliability stack:
+- oxygen-driven copper-water VC failure mechanism;
+- vacuum-process oxygen linkage;
+- 150–200 °C accelerated life prediction;
+- XPS/EDS surface analysis;
+- production oxidation grading;
+- 0.7 mm mobile mLHP with 30-day 90 °C accelerated aging.
+
+### Exact comparator result
+
+Targeted searches for:
+- actual multi-year;
+- 1000 h;
+- 5000 h;
+- 10000 h;
+- engineered boiling/evaporator surfaces;
+- post-operation morphology/capillary tracking
+
+did not recover an independent Chinese public analogue matching the MPEI evidence type.
+
+Long-duration boiler/material coatings and permafrost thermosyphons were excluded because they do not satisfy the same functional-surface/mobile-transfer comparison gate.
+
+### Residual MPEI value
+
+Do not say:
+> Russia has better long-term reliability.
+
+Use:
+> MPEI has unusual **actual 42-month engineered-surface aging evidence**, where integral thermal performance remained comparatively stable while capillary/surface-state aging could still be observed.
+
+Potential transferable control point:
+**early surface-state/capillary indicator for future dryout-margin loss.**
+
+### Current state
+
+**Stage-0 Priority #2 / NARROW DIFFERENTIATION RETAINED.**
+
+The next evidence must be partner/coupon data, not more generic public reliability searching.
