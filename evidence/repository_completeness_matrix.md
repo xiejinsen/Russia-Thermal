@@ -11,12 +11,12 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 00 Scope / governance | current | strong | none critical | PASS |
 | 01 Global baseline | refreshed | good | more Huawei/China flagship geometry; sustained-power data | PASS-WITH-GAPS |
 | 02 Technology landscape | current | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
-| 03 Russia institutions | **capability atlas current** | strong first pass | broader non-university coverage beyond current high-signal cluster | PASS-WITH-GAPS |
+| 03 Russia institutions | **capability atlas + foundational map current** | strong | verify current Siberian theory/experiment collaboration network; broader non-university coverage | PASS-WITH-GAPS |
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
 | 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
 | 06 Active cooling | comparator-refreshed | good for generic fan acoustics; medium for phone scale | EHD/piezo + actual smartphone microfan acoustic evidence | NEEDS-WORK |
-| 07 China benchmark | **reliability + fan + thin-film + LHP mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control; exact shear-film analog | PASS-WITH-GAPS |
-| 08 Opportunity / falsification | **country heatmap + focused pressure tests current** | strong | validate final 3 active differentiation candidates + physical Stage-0 evidence | PASS-WITH-GAPS |
+| 07 China benchmark | **device + reliability + fan + thin-film + LHP + foundational mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control; exact analytical evaporative-solution analogue | PASS-WITH-GAPS |
+| 08 Opportunity / falsification | **country heatmap + mechanism + foundational pressure tests current** | strong | validate 3 mechanism candidates + foundational blind-boundary PoC + physical Stage-0 evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner packets + unified scorecard current** | strong | partner-returned data + physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
 | Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
@@ -444,15 +444,41 @@ Preliminary Russia evidence:
 - Kutateladze-adjacent model/experiment lineage.
 
 Current QA:
-**STRUCTURAL SIGNAL ONLY.**
+**COMPARATOR PASS / PRODUCT VALUE PENDING.**
 
-Missing before promotion:
-- matched China/global applied-math comparator;
-- partner/lab ownership map;
-- direct evidence that the foundational method improves a mobile/chip thermal decision or PoC.
+Completed:
+- Russia current foundational capability scan;
+- independent China mirror;
+- focused Russia×China pressure test;
+- decision-grade paper briefs / 10Q;
+- broad "Russian mathematics superiority" thesis rejected;
+- narrow exact/group-invariant analytical-stability capability retained.
 
-Cross-border coauthorship rule also updated:
+Still missing before final promotion:
+- verify current ICM SB RAS / Lavrentyev / Kutateladze collaboration topology and partner readiness;
+- blind failure-boundary PoC against domestic high-fidelity model;
+- direct evidence of experiment reduction / better design decision;
+- exact domestic comparator search can continue if a stronger current analytical line appears.
+
+Cross-border coauthorship rule:
 joint papers are attributed by lineage/platform/method ownership; they are not automatically double-counted as two independent country capabilities.
 
 Progress effect:
-**none — project remains ~66%.**
+**research round completed; project now ~68%.**
+
+
+### Foundational comparator closure QA
+
+Canonical artifacts:
+- [Russia Foundational Math-Physics Capability Map](../03_russia-institutions/russia_foundational_math_physics_capability_v01.md)
+- [China Foundational Math-Physics Mirror](../07_china-benchmark/china_foundational_math_physics_mirror_v01.md)
+- [Russia × China Foundational Math-Physics Pressure Test](../08_opportunities-transfer/foundational_math_physics_china_pressure_test_v01.md)
+
+Allowed final-report wording:
+> selected Russian groups show a continuous exact/group-invariant analytical + stability modeling lineage for evaporative thermocapillary systems, with experiment-informed closure.
+
+Not allowed:
+> Russia is broadly superior in mathematics or mathematical physics for thermal management.
+
+QA judgment:
+**PASS-WITH-POC-GAP.**
