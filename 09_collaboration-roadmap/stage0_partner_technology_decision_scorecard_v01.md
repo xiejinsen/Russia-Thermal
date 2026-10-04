@@ -90,7 +90,7 @@ Detailed interpretation remains in:
 | **Manufacturability** | **PARTIAL [PARTNER][EXPERIMENT]** — exact hydrogen-bubble recipe / adhesion / permeability are non-public | **PARTIAL [PUBLIC][PARTNER][EXPERIMENT]** — representative ~5 μm layer known; thicker >10–15 μm deposition states also exist; scale-down/yield unknown | **PARTIAL [PUBLIC][EXPERIMENT]** — laser window is claim-mapped; copper + biphilic chemistry process remains open | **UNKNOWN [PARTNER][EXPERIMENT]** |
 | **IP clarity** | **PARTIAL [PUBLIC][PARTNER]** — relevant institute IP + Huawei-related background; field boundary needs partner/legal discussion | **PARTIAL [PUBLIC][PARTNER]** — strong MPEI patent lineage; phone-specific foreground/design-around still to define | **PARTIAL [PUBLIC][PARTNER]** — RU2812668 inventor + independent claim now closed; generic laser/biphilic prior art remains crowded | **PARTIAL [PUBLIC][PARTNER]** |
 | **Partner readiness** | **PASS [PUBLIC][PARTNER]** — active team/contact; technical-discussion ready | **PASS [PUBLIC][PARTNER]** — Ivanov current role/project/patent continuity verified | **PASS [PUBLIC][PARTNER]** — Feoktistov current role + direct patent inventor linkage verified | **PARTIAL [PARTNER]** — team signal exists; device specimen not yet demonstrated |
-| **Strong comparator gap** | **PARTIAL [EXPERIMENT]** — must beat strong 0.39–0.4 mm UTVC on dryout/rewet, not a weak smooth plate | **PARTIAL [EXPERIMENT]** — long-life is differentiated, but device performance must survive China-style UTVC comparison | **PARTIAL [EXPERIMENT]** — generic biphilic/laser UTVC is already crowded; only confined stable routing/rewetting can differentiate | **UNKNOWN [EXPERIMENT]** |
+| **Strong comparator gap** | **PARTIAL [PUBLIC][EXPERIMENT]** — independent China now has direct capillary-fed dryout/steam-rewetting, treated mesh and dryout modeling; Pavlenko must beat strong domestic wick controls specifically on irreversible-dryout onset / recovery, not generic CHF | **PARTIAL [EXPERIMENT]** — long-life is differentiated, but device performance must survive China-style UTVC comparison | **PARTIAL [EXPERIMENT]** — generic biphilic/laser UTVC is already crowded; only confined stable routing/rewetting can differentiate | **UNKNOWN [EXPERIMENT]** |
 | **Stage-0 cost / time** | **PASS [EXPERIMENT]** — thin coupons can discriminate within 3–6 months | **PASS [EXPERIMENT]** — scaled coupons + heat-flux step-up are bounded | **PASS [EXPERIMENT]** — laser-only vs biphilic copper coupon screen is bounded | **PARTIAL [PARTNER][EXPERIMENT]** — first dependency is obtaining a physical specimen |
 | **Kill-risk acceptability** | **PARTIAL [EXPERIMENT]** — high geometry/fluid-transfer kill risk, but strong mechanism justifies a bounded test | **PARTIAL [EXPERIMENT]** — high scale-down/high-flux kill risk, partly offset by long-life + thin-channel lineage | **PARTIAL [EXPERIMENT]** — contamination/comparator risk is high, but low-cost two-branch screen is discriminating | **FAIL [EXPERIMENT]** — too many basics unknown before a physical thin coupon |
 
@@ -100,7 +100,7 @@ Detailed interpretation remains in:
 
 | Priority | Partner / line | Stage-0 decision | Required prerequisite before meaningful Stage-0 spend | Why |
 |---:|---|---|---|---|
-| **1** | Pavlenko / Kutateladze | **GO WITH PREREQUISITE** | partner-shareable process window + evidence the modification is not intrinsically incompatible with <=100 μm-class mesh / phone metal | strongest direct dryout/CHF mechanism; public recipe search has reached diminishing returns |
+| **1** | Pavlenko / Kutateladze | **GO WITH PREREQUISITE** | partner-shareable process window + phone-scale dry-spot diagnostic/control transfer path | strongest current Russian dielectric irreversible-dryout diagnostic signal; broad dryout/rewetting advantage is now killed by independent China evidence |
 | **2** | MPEI / Ivanov | **GO WITH PREREQUISITE** | exact current groove/as-built dataset + geometry-scaled coupon plan | strongest long-life two-phase evidence; new 0.2 mm water/CHF lineage reduces but does not close high-flux risk |
 | **3** | TPU / Feoktistov | **GO WITH PREREQUISITE** | separate **laser-only low-organic control** from hydrocarbon-wetting branch; copper + vacuum/fluid screen must be first | patent/team linkage now clear; main risk has shifted from IP identity to sealed-process compatibility |
 | — | MPEI ordered wick | **HOLD** | physical thin coupon with thickness/permeability/capillary/repeatability data | no decision-grade physical phone-scale specimen yet |
@@ -304,3 +304,27 @@ It supports a narrower collaboration hypothesis:
 > **Russia may contribute specific phase-change / surface-state / reliability know-how that is worth testing inside a China-style ultra-thin manufacturing and smartphone boundary.**
 
 This is the decision logic to carry into partner outreach and PoC design.
+
+
+### Pavlenko comparator correction — independent China dryout/rewetting
+
+New China comparators:
+- GDUT repeated dryout / steam-induced rewetting / cycle degradation;
+- GDUT ultrathin grooved-porous capillary-fed wick;
+- SCUT treated copper-mesh capillary-film boiling;
+- SJTU pore-scale dryout-limit model;
+- Changsha UST HFE-7100 confinement down to 1 mm.
+
+Decision:
+Pavlenko remains #1 but **broad dryout/rewetting differentiation is removed**.
+
+Residual Stage-0 hypothesis:
+> Kutateladze's dielectric-fluid reversible→irreversible dry-spot diagnostics and crisis-mode knowledge can identify and delay a phone-relevant irreversible-dryout boundary beyond strong domestic controls.
+
+Stage-0 reporting must therefore include:
+- dry-spot onset;
+- reversible/irreversible transition;
+- dry-spot growth/propagation;
+- rewetting delay;
+- post-cycle wetting state;
+in addition to CHF/thermal resistance.
