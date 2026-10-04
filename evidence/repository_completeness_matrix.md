@@ -9,17 +9,17 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | Workstream | Freshness | Traceability | Main gap | State |
 |---|---|---|---|---|
 | 00 Scope / governance | current | strong | none critical | PASS |
-| 01 Global baseline | refreshed | good | more Huawei/China flagship internal geometry; sustained-power data | PASS-WITH-GAPS |
-| 02 Technology landscape | refreshed | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
+| 01 Global baseline | refreshed | good | more Huawei/China flagship geometry; sustained-power data | PASS-WITH-GAPS |
+| 02 Technology landscape | current | medium-good | emerging active routes need more primary evidence | PASS-WITH-GAPS |
 | 03 Russia institutions | current | good | broader non-university coverage | PASS-WITH-GAPS |
-| 04 Labs / researchers | refreshed | good | several co-investigator/facility details remain | PASS-WITH-GAPS |
-| 05 Papers / patents | refreshed | strong first pass | family/status depth; TPU/vivo claim gaps | PASS-WITH-GAPS |
-| 06 Active cooling | refreshed | medium-good | EHD, piezo/MEMS, installed-fan evidence | NEEDS-WORK |
-| 07 China benchmark | refreshed | good | independent OEM measurements and deeper current supply-chain detail | PASS-WITH-GAPS |
-| 08 Opportunity / falsification | refreshed | strong | physical Stage-0 transfer evidence not yet available | PASS-WITH-GAPS |
-| 09 Collaboration / PoC | refreshed | strong for PoC-1 design | physical coupon feasibility + background IP | PASS-WITH-GAPS |
-| 10 Final report | framework current | inherits 00–09 evidence | conclusions intentionally provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
-| Evidence governance | current | strong | source register may need thematic split as it grows | PASS-WITH-GAPS |
+| 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
+| 05 Papers / patents | refreshed this round | strong first pass | family/status depth; TPU/vivo claim gaps | PASS-WITH-GAPS |
+| 06 Active cooling | current | medium-good | EHD, piezo/MEMS, installed-fan evidence | NEEDS-WORK |
+| 07 China benchmark | current | good | independent OEM measurements / supply-chain detail | PASS-WITH-GAPS |
+| 08 Opportunity / falsification | current | strong | physical Stage-0 transfer evidence | PASS-WITH-GAPS |
+| 09 Collaboration / PoC | **partner briefs current** | strong | physical coupons + background IP | PASS-WITH-GAPS |
+| 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
+| Evidence governance | current | strong | source register may need thematic split later | PASS-WITH-GAPS |
 
 ## Russia university coverage
 
@@ -29,126 +29,159 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 - NO CURRENT SIGNAL FOUND: 2
 - PENDING: 0
 
-Canonical source:
+Canonical:
 ../03_russia-institutions/major_university_coverage_matrix.md
 
-## Phone packaging / baseline QA
+## Stage-0 partner-readiness QA
 
-First-pass baseline now completed with:
-- current flagship outer-envelope references;
-- iPhone 17/18 independent teardown evidence;
-- Samsung S26 Ultra teardown evidence;
-- Huawei Mate 80 public teardown/package summaries;
-- RedMagic active-cooling official + independent boundary evidence;
-- exact 0.39 mm UTVC internal geometry anchor.
+Current execution order:
+1. Pavlenko / Kutateladze
+2. MPEI / Ivanov
+3. TPU / Feoktistov
+4. MPEI ordered wick — pre-device
 
-Important current engineering anchor:
-- ~0.39 mm finished reference;
-- ~0.2 mm internal steam-channel/support height;
-- 0.06 mm mesh.
+This is not a final partner ranking.
 
-Still open:
-- more public Huawei/Chinese flagship internal dimensions;
-- independent sustained-power / package-temperature data;
-- installed active-cooling electrical/acoustic measurements.
+### Pavlenko
+
+Strong:
+- dielectric boiling / CHF / dryout;
+- modified mesh;
+- current lab;
+- relevant IP.
+
+Open:
+- exact thin-mesh modification process window;
+- added layer/morphology and permeability penalty;
+- copper / 60–100 μm transfer;
+- product-fluid transfer;
+- vacuum/cycling;
+- Huawei/background-IP boundary.
 
 State:
-**baseline sufficient to calibrate Stage-0 geometry, not a complete phone mechanical model.**
+**Stage-0 priority #1; technical-discussion ready.**
 
-## Surface / wick current QA
+### MPEI / Ivanov
+
+Newly closed/strengthened:
+- R410A alternate-fluid evidence;
+- 42-month periodic two-phase operation;
+- long-duration surface morphology / thermal-performance retention;
+- current hierarchical-coating program.
+
+Primary:
+https://doi.org/10.1016/j.pes.2026.100314
+
+Still open:
+- actual nanoparticle-layer total thickness;
+- scale-down from ~0.1 mm-radius grooves;
+- phone-relevant high heat flux;
+- copper / VC manufacturing process;
+- <0.5 mm sealed device.
+
+Important:
+the 42-month result is **not directly comparable** with phone thermal load because the application heat flux is much lower.
+
+State:
+**Tier B+ Stage-0 priority #2; reliability gap partially closed.**
+
+### TPU / Feoktistov
+
+Newly strengthened:
+- 2024 biphilic process lineage;
+- 2026 laser–thermolysis surface durability;
+- humidity/saline/abrasion robustness.
+
+Primary:
+https://doi.org/10.1016/j.surfin.2026.109390
+
+Still open:
+- vacuum outgassing;
+- hydrocarbon residue / working-fluid contamination;
+- copper transfer;
+- sealed two-phase cycling;
+- RU2812668 inventor/claim mapping.
+
+State:
+**Tier B+ Stage-0 priority #3.**
+
+### MPEI ordered wick
+
+Still open:
+- physical thin specimen;
+- thickness;
+- measured permeability / capillary pressure;
+- repeatability.
+
+State:
+**pre-device.**
+
+## 3–6 month collaboration-brief gate
 
 Completed:
-- Pavlenko vs TPU vs MPEI vs China comparison;
-- first-pass patent/claim map;
-- lead-role verification;
-- MPEI technical lines separated;
-- Pavlenko mesh geometry partly resolved;
-- working-fluid sustainability gate added;
-- Stage-0 coupon matrix v0.1 frozen.
+- Pavlenko brief
+- MPEI/Ivanov brief
+- TPU brief
 
-Current Stage-0 corrections:
-- published Pavlenko mesh is not assumed drop-in phone geometry;
-- transfer target is ~60–100 um-class structure / thin functional surface;
-- HFE-7100 is legacy mechanism bridge, not default product fluid;
-- water is primary sealed-VC product-path reference;
-- future dielectric fluid requires separate screen.
+Canonical:
+../09_collaboration-roadmap/
 
-Still open:
-1. actual Pavlenko modification thickness/permeability on thin mesh;
-2. TPU target-fluid wetting/process stability;
-3. TPU RU2812668 inventor + independent claim;
-4. MPEI actual coating thickness + target-fluid/cycling data;
-5. MPEI ordered-wick physical prototype;
-6. vivo independent claim; OPPO CN-family legal status;
-7. final family/status review for promoted patents;
-8. Huawei-related background-IP implications.
+A brief is research-ready when it contains:
+- exact partner question;
+- data request;
+- coupon geometry;
+- common comparator;
+- process sequence;
+- success/kill;
+- IP questions;
+- role split.
 
-State:
-**sufficient for a Stage-0 specification; not sufficient for final IP, contract or partner commitment.**
+All three current briefs pass this structural gate.
 
 ## Priority-0 backlog
 
-Before final partner recommendations:
-- demonstrate or obtain evidence for thin-mesh/process feasibility;
-- close key patent claim/family gaps;
-- refresh promoted partner availability/current roles before outreach;
-- establish background/foreground IP boundaries;
-- obtain physical coupon data or partner-shareable equivalent;
-- validate future product-fluid choice if a dielectric fluid is required.
+Before selecting sealed Stage-1 arms:
+1. Pavlenko thin-mesh manufacturability/process evidence;
+2. MPEI actual layer/groove scale-down and high-flux response;
+3. TPU vacuum/outgassing/fluid compatibility;
+4. TPU RU2812668 inventor/full claim;
+5. promoted patent family/status review;
+6. Huawei/background-IP boundary;
+7. actual/shareable coupon evidence.
 
 ## Priority-1 backlog
 
 Before final 3-year roadmap:
-- broader Russia lab/institute coverage;
+- broader Russia labs beyond current strong candidates;
 - practical EHD evidence;
 - piezo/MEMS microblower evidence;
 - multi-hotspot LHP geometry/IP;
 - materials manufacturing/reliability;
 - software/control current comparator set;
-- more complete phone thermal packaging baselines.
-
-## Traceability rule
-
-Any file that changes Tier, GO/NO-GO, partner priority, IP position, PoC scope or roadmap must include local original-source links.
-
-## Decision-ready definition
-
-The repository is decision-ready only when:
-- final recommendations are traceable to original evidence;
-- key numbers have primary/official sources;
-- vendor claims are labeled;
-- non-comparable evidence is marked;
-- major unknowns stay visible;
-- README / PROGRESS / workstream indexes agree;
-- historical snapshots are clearly labeled.
-
+- more complete product thermal packaging baselines.
 
 ## Final-report readiness QA
 
 Framework:
 **PASS**
 
-Current content:
+Content:
 **NOT FINAL BY DESIGN**
 
-A direction may enter the final Strategic Bets only after passing:
-- real phone problem;
-- current Russia capability;
-- strong comparator;
-- phone transfer;
-- falsification;
-- IP/prior art;
-- partner readiness;
-- PoC;
-- traceability;
-- unknowns/limitations.
+Pavlenko remains Candidate Primary Bet.
+MPEI reliability evidence improves its Reserve/Challenger readiness but does not pass phone-transfer Gate G4.
+TPU remains Reserve/Challenger.
 
-Canonical gate:
+Canonical:
 ../10-final-report/final_report_readiness_gate.md
 
-Current primary candidate still has partial gates in:
-- phone-scale transfer;
-- IP/background rights;
-- physical Stage-0 evidence.
+## Decision-ready definition
 
-Therefore the existence of Workstream 10 does not increase research completion.
+The repository is decision-ready only when:
+- final recommendations trace to primary/original evidence;
+- strong comparators are used;
+- non-comparable data is labeled;
+- partner roles are fresh;
+- major unknowns stay visible;
+- Stage-0 physical evidence closes the current transfer gaps;
+- README / PROGRESS / workstream indexes agree.
