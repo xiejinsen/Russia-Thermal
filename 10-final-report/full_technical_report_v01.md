@@ -102,7 +102,7 @@ Current evidence supports only:
 
 After stronger China comparison, active Russia-specific candidates have narrowed to three:
 
-1. Pavlenko/Kutateladze — dryout / rewetting / failure-boundary control;
+1. Pavlenko/Kutateladze — dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control;
 2. MPEI/Ivanov — actual multi-year hierarchical-surface operation / aging evidence;
 3. Kabov/Chinnov/Kutateladze — shear-driven microfilm / dry-spot / interfacial-instability physics.
 
@@ -115,6 +115,27 @@ China is already very strong in thin-film boiling and high-flux film devices. Th
 
 Emerging management pattern:
 Russia's credible value is converging toward **failure-limit science** rather than generic cooler components.
+
+### Pavlenko independent-China pressure-test update
+
+Focused source:
+../08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md
+
+Independent China now has direct evidence for:
+- capillary-fed dryout + steam-induced rewetting;
+- repeated-cycle hydrophilicity degradation;
+- <=0.4 mm grooved-porous capillary-fed wick;
+- treated copper-mesh thin-film boiling;
+- pore-scale dryout boundary modeling;
+- HFE-7100 confinement down to 1 mm.
+
+Therefore broad Russia dryout/rewetting differentiation is killed.
+
+Residual Russia-specific signal:
+**dielectric reversible→irreversible dry-spot statistics, dry-spot propagation, crisis-mode transition and high-speed/ML-assisted failure diagnostics.**
+
+Management consequence:
+Pavlenko remains #1 only if this diagnostic/control depth can produce a measurable phone-scale shift in irreversible-dryout onset beyond domestic wick controls.
 
 ### Foundational complementarity layer
 
