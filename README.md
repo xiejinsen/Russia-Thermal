@@ -92,8 +92,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~62%**
-**Estimated remaining: ~38%**
+**Estimated research completion: ~64%**
+**Estimated remaining: ~36%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -150,14 +150,16 @@ The final domestic-leadership report is now constrained to include three evidenc
 - [China Academic Thermal Capability Mirror](07_china-benchmark/china_academic_capability_mirror_v01.md) — domestic academic institutions mapped using the same taxonomy;
 - [Russia × China Academic Capability Heatmap](08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md) — which broad Russia claims are killed, which capabilities are complementary, and which narrow Russia differentiation candidates survive.
 
-Current first-pass country-level differentiation candidates:
+Current country-level differentiation candidates after stronger China comparison:
 1. Kutateladze/Pavlenko — modified-mesh dryout/rewetting/failure-boundary control;
-2. MPEI/Ivanov — long-duration hierarchical two-phase surface aging/reliability;
+2. MPEI/Ivanov — **actual 42-month hierarchical-surface operation/aging evidence**, not generic reliability;
 3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
-4. TsAGI/PNRPU/CIAM — confined aeroacoustic source-diagnosis methodology;
-5. ITP UB RAS — LHP routing/operating-limit/failure physics.
+4. ITP UB RAS — LHP routing/operating-limit/failure physics.
 
-These are **not final advantages** until the remaining China comparator and mobile-transfer gaps close.
+Watch / method reserve:
+- TsAGI/PNRPU/CIAM phone-scale aeroacoustic source diagnosis — China already has strong electronic-cooling fan source-imaging and narrow-space/duct acoustics; Russian phone-scale superiority is unproven.
+
+These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
 
 ## Current PoC posture
 
@@ -245,7 +247,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~62% research state.
+It is intentionally **not final** at the current ~64% research state.
 
 The report will ultimately contain:
 - executive decision;
