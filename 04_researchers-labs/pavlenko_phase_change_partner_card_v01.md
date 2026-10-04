@@ -398,3 +398,70 @@ Reclassify:
 This does not downgrade the mechanism. It changes the next action from "search more" to **request process window + run a thin-coupon falsification**.
 
 **Current decision:** KEEP / GO WITH PREREQUISITE as Stage-0 priority #1.
+
+
+## Independent-China dryout / rewetting pressure test — 2026-10-04
+
+Focused comparison:
+../08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md
+
+### What China now clearly has independently
+
+- GDUT:
+  capillary-fed dryout + repeated-cycle CHF degradation + steam-induced rewetting;
+- GDUT:
+  <=0.4 mm grooved-porous wick on thin copper, with capillary transport tied to CHF;
+- SCUT:
+  modified superhydrophilic copper mesh with improved capillary supply and dryout limit;
+- SJTU:
+  pore-scale dryout transition and analytical dryout-flux modeling;
+- Changsha UST:
+  HFE-7100 confinement study down to 1 mm.
+
+### Decision correction
+
+Do **not** describe Pavlenko as differentiated because:
+- the team studies dryout;
+- the team studies rewetting;
+- it modifies mesh;
+- it understands capillary limit.
+
+Those capabilities now have strong independent China comparators.
+
+### Residual Pavlenko/Kutateladze signal
+
+The strongest current Russia-specific combination is:
+
+**dielectric-fluid boiling-crisis diagnostics**
++
+**reversible→irreversible dry-spot transition**
++
+**dry-spot propagation / contact-line statistics**
++
+**layer-height crisis-mode transition**
++
+**structured-surface drying-front dynamics**.
+
+Key 2026 primary:
+https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855
+
+This paper uses:
+- HFE-7100 and Novec 649;
+- high-speed IR;
+- reflected-light/internal-reflection-style phase visualization;
+- ML-assisted dry-spot segmentation;
+- dry-spot density / contact-line / size-distribution analysis;
+- irreversible dry-spot propagation measurements.
+
+### Current state
+
+**Stage-0 Priority #1 / NARROW DIFFERENTIATION.**
+
+Reason #1 is retained:
+- diagnostic/failure-mechanism depth remains unusual;
+- it is directly testable against domestic ultrathin-wick baselines.
+
+Reason no promotion to final Primary Bet:
+- China is already strong in dryout/rewetting and ultrathin wick engineering;
+- Russian public evidence remains millimeter-scale/open compared with phone internal geometry;
+- product-fluid / copper / vacuum / sealed-device transfer remains unproven.
