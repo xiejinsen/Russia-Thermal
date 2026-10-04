@@ -22,6 +22,28 @@ Status vocabulary:
 
 This file covers the **current decision-grade bibliography**, not every historical/foundational source in the repository.
 
+## 10Q migration status
+
+The project now uses:
+[Mobile Thermal Insight — Paper & Patent 10Q Method](mobile_thermal_insight_10q_method.md)
+
+Existing briefs already contain much of:
+- Q1 problem;
+- Q5 method;
+- Q9 contribution/insight;
+- Q10 next implication.
+
+They are being progressively backfilled with the additional decision fields:
+- Q2 novelty vs strong current baseline;
+- Q3 falsifiable hypothesis;
+- Q4 research/partner lineage;
+- Q6 normalized experiment design;
+- Q7 reproducibility/process openness;
+- Q8 adversarial evidence check;
+- explicit partner action / smallest PoC / kill gate.
+
+Until a brief contains those fields, treat it as **v1 summary + decision interpretation**, not a complete 10Q record.
+
 ---
 
 # A. Pavlenko / Kutateladze — phase-change surfaces
