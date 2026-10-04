@@ -21,7 +21,7 @@ Final version should answer, in one page:
 ## 2. Current provisional message
 
 ### Leading hypothesis
-Working-fluid-transferable sub-mm dryout / rewetting / wetting-state control.
+Phone-scale **irreversible-dryout boundary control**, using Kutateladze's dielectric boiling-crisis diagnostics/process know-how rather than generic dryout/rewetting expertise.
 
 Current lead:
 Pavlenko / Kutateladze.
@@ -65,7 +65,7 @@ Current evidence no longer supports broad claims that Russia is uniquely strong 
 - thermal materials.
 
 Current residual Russia differentiation candidates:
-1. Pavlenko/Kutateladze — modified-mesh dryout/rewetting/failure-boundary control;
+1. Pavlenko/Kutateladze — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
 2. MPEI/Ivanov — actual multi-year hierarchical-surface aging evidence, **not generic reliability**;
 3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
 4. ITP UB RAS / Maydanik — LHP routing/operating-limit/failure physics.
@@ -77,7 +77,7 @@ Aeroacoustics is currently **Watch / method reserve**, not counted in the differ
 After stronger China comparison, the active Russia-specific candidate set is now only:
 
 1. **Pavlenko / Kutateladze**
-   - dryout / rewetting / failure-boundary control.
+   - dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control.
 2. **MPEI / Ivanov**
    - actual multi-year hierarchical-surface operation / aging evidence.
 3. **Kabov / Chinnov / Kutateladze**
@@ -156,3 +156,22 @@ Canonical:
 
 Management interpretation:
 **we have enough public evidence to stop broad searching and start bounded partner/experiment closure, but not enough to select a final partner.**
+
+
+### Pavlenko China-pressure-test correction
+
+Independent China evidence now directly covers:
+- capillary-fed dryout;
+- steam-induced rewetting;
+- repeated-cycle wetting degradation;
+- modified copper-mesh boiling;
+- pore-scale dryout prediction;
+- HFE-7100 confinement.
+
+Therefore the final report must **not** say:
+> Russia uniquely understands dryout / rewetting.
+
+Allowed wording:
+> Kutateladze retains a narrower current signal in **dielectric-fluid reversible→irreversible dry-spot dynamics, crisis-mode transition and high-resolution failure diagnostics**, which must still prove phone-scale transfer.
+
+Pavlenko remains **Stage-0 Priority #1 / Candidate Primary Bet**, but only under this narrower control point.
