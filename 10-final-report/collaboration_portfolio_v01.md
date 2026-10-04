@@ -14,10 +14,10 @@ This is not a prestige ranking.
 
 | Priority | Partner | Distinctive public strength | Biggest unresolved transfer risk | Current state |
 |---:|---|---|---|---|
-| **1** | Pavlenko / Kutateladze | dielectric boiling, CHF/dryout, modified mesh | process/geometry + product-fluid scaling | Candidate lead |
-| **2** | MPEI / Ivanov | hierarchical coating + **42-month R410A two-phase stability** | high-flux + sub-mm scaling | Reserve / strong challenger |
-| **3** | TPU / Feoktistov | laser/biphilic pattern + surface durability | vacuum/sealed-fluid compatibility | Reserve / challenger |
-| — | MPEI ordered wick | ordered capillary/permeability design | no thin physical prototype | Watch / pre-device |
+| **1** | Pavlenko / Kutateladze | dielectric boiling, CHF/dryout, modified mesh | process/geometry + product-fluid scaling | **GO with prerequisite / Candidate lead** |
+| **2** | MPEI / Ivanov | hierarchical coating + **42-month R410A stability** + 0.2 mm water/CHF lineage | exact-hierarchy high-flux + sub-mm scaling | **GO with prerequisite / strong challenger** |
+| **3** | TPU / Feoktistov | laser/biphilic pattern + surface durability + claim-mapped RU2812668 | vacuum/sealed-fluid/copper compatibility | **GO with prerequisite / challenger** |
+| — | MPEI ordered wick | ordered capillary/permeability design | no thin physical prototype | **HOLD / pre-device** |
 
 ## #1 Pavlenko / Kutateladze
 
@@ -28,7 +28,7 @@ Current collaboration question:
 ../09_collaboration-roadmap/partner_brief_pavlenko_stage0_v01.md
 
 Readiness:
-**technical-discussion ready; contract/IP boundary unresolved.**
+**GO WITH PREREQUISITE for Stage-0 technical exchange; exact process/IP boundary remains unresolved.**
 
 ## #2 MPEI / Ivanov
 
@@ -41,6 +41,8 @@ New evidence materially improves this option:
 Public strengths:
 - R410A two-phase operation;
 - long-duration surface/device stability;
+- official dissertation gives ~100 μm groove-radius lineage and representative ~5 μm coating state;
+- 2017/2020 **0.2 mm water-boiling / CHF** lineage, with N.S. Ivanov on the 2020 paper;
 - current hierarchical-coating program;
 - background patent chain.
 
@@ -54,7 +56,7 @@ Brief:
 ../09_collaboration-roadmap/partner_brief_mpei_ivanov_stage0_v01.md
 
 Readiness:
-**Stage-0 technical discussion ready.**
+**GO WITH PREREQUISITE — current as-built geometry + scale-down ladder required.**
 
 ## #3 TPU / Feoktistov
 
@@ -65,6 +67,7 @@ Public strengths:
 - laser micro/nanotexture;
 - spatial wetting control;
 - superhydrophobic process durability;
+- **RU2812668 inventor + independent claim now mapped to Feoktistov/Orlova/TPU**;
 - strong optical/surface diagnostics.
 
 Critical caveat:
@@ -77,7 +80,7 @@ Brief:
 ../09_collaboration-roadmap/partner_brief_tpu_stage0_v01.md
 
 Readiness:
-**Stage-0 technical-query ready.**
+**GO WITH PREREQUISITE — first separate laser-only low-organic from hydrocarbon-biphilic copper process.**
 
 ## Why the ranking is useful
 
@@ -96,3 +99,10 @@ The final report should recommend no more than:
 - 1–2 reserve/watch targets.
 
 No current partner is final.
+
+
+## Canonical Stage-0 scorecard
+
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+No candidate above is an unconditional collaboration GO.
