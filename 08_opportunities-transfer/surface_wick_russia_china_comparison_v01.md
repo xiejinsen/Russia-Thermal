@@ -23,8 +23,9 @@ The surviving thesis is:
 > **fluid-specific control of nucleation, dryout, rewetting and wettability retention in a sub-mm sealed two-phase device.**
 
 TPU and MPEI remain valuable challengers:
-- **TPU** — surface-pattern / wettability-design challenger;
-- **MPEI** — ordered-wick architecture challenger.
+- **TPU / Feoktistov** — surface-pattern / wettability-process challenger;
+- **MPEI / Ivanov** — hierarchical coating / long-duration reliability challenger;
+- **MPEI ordered wick** — pre-device only.
 
 They do not currently replace Pavlenko as the lead.
 
@@ -394,3 +395,73 @@ Primary discriminators:
 - wetting/capillary drift after cycling.
 
 The experiment is designed to **falsify Russian value**, not to confirm it.
+
+
+---
+
+## Stage-0 blocker-closure comparison update
+
+Research date: 2026-10-04
+
+Canonical partner scorecard:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+### Pavlenko
+
+Public search did not recover the exact hydrogen-bubble electrochemical recipe, adhesion or permeability penalty.
+
+**Changed understanding:**
+this is no longer a "search harder" blocker.
+
+It is now:
+- process recipe / current-batch morphology → **PARTNER-ONLY**;
+- thin mesh / copper / water / vacuum / cycling → **EXPERIMENT-ONLY**.
+
+The surviving differentiation remains dryout/rewetting physics, not generic mesh modification.
+
+### MPEI / Ivanov
+
+New public evidence materially improves transfer credibility:
+
+1. official 2024 dissertation:
+   - ~100 μm groove-radius lineage;
+   - representative ~5 μm Al2O3 coating state;
+   - other deposition states >10–15 μm;
+   - capillary aging / contamination sensitivity.
+
+2. same-group thin-channel CHF lineage:
+   - **[2017 0.2 mm water microchannel](https://doi.org/10.1134/S0040601517040073)**;
+   - **[2020 ~0.2 mm water microchannel, including N.S. Ivanov](https://doi.org/10.1088/1742-6596/1683/2/022087)**.
+
+**Changed understanding:**
+MPEI no longer lacks any public thin/high-flux lineage.
+
+But the evidence is only **PARTIAL** because the exact long-life 2026 hierarchy has not been demonstrated at phone heat flux or sealed-VC boundary conditions.
+
+### TPU / Feoktistov
+
+RU2812668C1 is now directly linked to:
+- D.V. Feoktistov;
+- E.G. Orlova;
+- TPU.
+
+The independent laser-process claim is recovered.
+
+**Changed understanding:**
+TPU has a partner-linked, quantified **laser-only** background-IP/process route independent of its hydrocarbon hydrophobization chemistry.
+
+This supports a cleaner Stage-0 experiment:
+- laser-only copper control;
+- hydrocarbon-biphilic copper branch;
+- strong China/global patterned-UTVC reference.
+
+### China/global comparator implication
+
+The comparator did **not** weaken.
+
+Therefore none of the new Russia evidence justifies a generic claim such as:
+- "Russia has better biphilic VC";
+- "Russia has better hierarchical wick";
+- "Russia has better laser texturing."
+
+The only defensible promotion path remains a **measurable, phone-constrained mechanism advantage** against a strong UTVC reference.
