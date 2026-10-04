@@ -67,10 +67,11 @@ Current evidence no longer supports broad claims that Russia is uniquely strong 
 Current residual Russia differentiation candidates:
 1. Pavlenko/Kutateladze — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
 2. MPEI/Ivanov — actual multi-year hierarchical-surface aging evidence, **not generic reliability**;
-3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
-4. ITP UB RAS / Maydanik — LHP routing/operating-limit/failure physics.
+3. Kutateladze Kabov/Chinnov — **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
 
-Aeroacoustics is currently **Watch / method reserve**, not counted in the differentiation set.
+Watch / reserves:
+- TsAGI / PNRPU / CIAM — phone-scale aeroacoustic method reserve;
+- ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve.
 
 ### Current country-differentiation convergence
 
