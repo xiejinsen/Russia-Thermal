@@ -44,9 +44,10 @@ Every promoted card should include:
 Current partner priority/readiness is not controlled here.
 
 Use:
-- ../09_collaboration-roadmap/partner_hypothesis_map_v01.md
-- ../09_collaboration-roadmap/partner_readiness_surface_v01.md
-- ../PROGRESS.md
+- ../PROGRESS.md — global project state;
+- ../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md — current Stage-0 partner decision;
+- ../09_collaboration-roadmap/partner_readiness_surface_v01.md — readiness detail;
+- ../09_collaboration-roadmap/partner_hypothesis_map_v01.md — hypothesis mapping.
 
 ## Evidence
 
