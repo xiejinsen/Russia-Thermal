@@ -15,8 +15,8 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 04 Labs / researchers | refreshed this round | strong for top surface partners | remaining co-investigator/facility/process details | PASS-WITH-GAPS |
 | 05 Papers / patents | refreshed this round | strong first pass | family/status depth; vivo/adjacent-OEM claim gaps | PASS-WITH-GAPS |
 | 06 Active cooling | comparator-refreshed | good for generic fan acoustics; medium for phone scale | EHD/piezo + actual smartphone microfan acoustic evidence | NEEDS-WORK |
-| 07 China benchmark | **reliability + fan-acoustic mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control | PASS-WITH-GAPS |
-| 08 Opportunity / falsification | **country heatmap + Stage-0 gates current** | strong | final 3–5 differentiation convergence + physical Stage-0 evidence | PASS-WITH-GAPS |
+| 07 China benchmark | **reliability + fan + thin-film + LHP mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control; exact shear-film analog | PASS-WITH-GAPS |
+| 08 Opportunity / falsification | **country heatmap + focused pressure tests current** | strong | validate final 3 active differentiation candidates + physical Stage-0 evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner packets + unified scorecard current** | strong | partner-returned data + physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
 | Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
@@ -371,11 +371,11 @@ Broad Russia-advantage claims are explicitly rejected for:
 Current differentiation candidates remain provisional:
 - modified-mesh dryout/rewetting;
 - **actual multi-year hierarchical-surface operation/aging evidence**;
-- thin-film/interfacial-instability mechanism depth;
-- LHP routing/operating-limit physics.
+- **shear-driven microfilm / dry-spot / interfacial-instability physics**.
 
-Watch / method reserve:
-- confined phone-scale aeroacoustic source diagnosis.
+Watch / reserves:
+- confined phone-scale aeroacoustic source diagnosis;
+- Maydanik LHP knowledge/failure analysis.
 
 ### Remaining P0 comparator gaps
 
@@ -384,8 +384,8 @@ Before the management heatmap is final:
 2. actual phone-scale ~18–25 mm / ~20k rpm microfan acoustic benchmark remains open; generic electronics-fan acoustics is **closed as a gap**;
 3. EHD/piezo active-air normalization;
 4. direct thermal-aware mobile-control comparator;
-5. deeper China thin-film/interfacial diagnostics mirror;
-6. China LHP operating-limit/routing/failure comparator.
+5. exact China independent analogue for Kutateladze shear-driven free-surface film / dry-spot / extreme-slit instability remains incomplete;
+6. Maydanik LHP operating-limit/routing/failure comparator is now **closed sufficiently to downgrade country differentiation**.
 
 QA judgment:
 **STRUCTURE PASS / COUNTRY DIFFERENTIATION NOT FINAL.**
@@ -405,3 +405,25 @@ Decision-grade comparator chain now includes:
 
 QA judgment:
 **PASS — broad MPEI reliability and Russia aeroacoustic advantage claims are no longer permitted.**
+
+
+### Comparator-closure QA — thin film + LHP
+
+Decision-grade chain now includes:
+- focused pressure-test memo;
+- source register;
+- readable bibliography;
+- paper briefs;
+- paper 10Q cards;
+- China academic mirror;
+- Russia capability atlas;
+- Russia×China heatmap;
+- lab deep dives;
+- final-report gates.
+
+QA judgment:
+**PASS — broad Russia thin-film and residual LHP routing/failure advantage wording is no longer permitted.**
+
+Allowed wording:
+- Kabov/Chinnov: narrow shear-driven microfilm / dry-spot / instability mechanism candidate;
+- Maydanik: Watch / knowledge reserve.
