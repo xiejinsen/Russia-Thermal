@@ -1,6 +1,6 @@
 # Pavlenko vs TPU vs MPEI vs China UTVC — Surface/Wick Transfer Comparison v0.1
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 ## Decision question
 
@@ -35,17 +35,15 @@ They do not currently replace Pavlenko as the lead.
 ## Source facts
 
 Current HFE-7100 / dielectric-boiling evidence:
-- 2D-modulated capillary-porous coatings:
-  https://doi.org/10.1016/j.applthermaleng.2024.125344
-- electrochemically modified steel mesh:
-  https://doi.org/10.1134/S1810232825700183
-- black-silicon HFE-7100 negative evidence:
-  https://doi.org/10.1134/S1810232825700225
-- smooth vs modified HFE-7100:
-  https://doi.org/10.1134/S1810232824020024
+
+- **[Heat Transfer Enhancement during Boiling in Horizontal Layers of HFE-7100 on 2D Modulated Capillary-Porous Coatings](https://doi.org/10.1016/j.applthermaleng.2024.125344)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Applied Thermal Engineering*, 2025.
+- **[Electrochemical Modification of the Metal Mesh Surface for Heat Transfer Enhancement during Boiling of a Thin Layer of HFE-7100](https://doi.org/10.1134/S1810232825700183)** — A.E. Brester, D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Journal of Engineering Thermophysics*, 2025.
+- **[Capillary Wicking and Heat Transfer during Boiling of HFE-7100 on Black Silicon Surfaces with Different Morphologies](https://doi.org/10.1134/S1810232825700225)** — O.A. Volodin, E. Vyacheslavova, A. Baranov *et al.* — *Journal of Engineering Thermophysics*, 2025.
+- **[Heat Transfer during Boiling in Horizontal Layers of HFE-7100 on Smooth and Modified Surfaces](https://doi.org/10.1134/S1810232824020024)** — D.A. Shvetsov, A.N. Pavlenko, V.I. Zhukov — *Journal of Engineering Thermophysics*, 2024.
 
 Additive-coating technology lineage:
-https://doi.org/10.3103/S8756699019060049
+
+- **[Development of a Technology for Creating Structured Capillary-Porous Coatings by Means of 3D Printing for Intensification of Heat Transfer during Boiling](https://doi.org/10.3103/S8756699019060049)** — V.P. Bessmeltsev, A.N. Pavlenko, V.I. Zhukov — *Optoelectronics, Instrumentation and Data Processing*, 2019.
 
 The 3D-printing platform explicitly allows control of:
 - material;
@@ -110,7 +108,7 @@ Transfer uncertainty: **high but testable**
 ## Source facts
 
 2026 primary:
-https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+- **[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
 
 Official TPU:
 https://news.tpu.ru/news/novyy-podkhod-dlya-effektivnogo-okhlazhdeniya-mikrochipov-predlozhili-uchenye-tpu/
@@ -175,12 +173,10 @@ Transfer uncertainty: **very high**
 ## Source facts
 
 2025:
-**Creation and Practical Application: 3D Modeling and Calculation of Porous Ordered Structure**
-https://doi.org/10.1109/REEPE63962.2025.10970830
+- **[Creation and Practical Application: 3D Modeling and Calculation of Porous Ordered Structure](https://doi.org/10.1109/REEPE63962.2025.10970830)** — V. Bulaeva, N. Savchenkova, A. Savchenkov — *REEPE 2025*, 2025.
 
 2026:
-**Capillary transport and efficiency limitations in ordered porous heat pipes**
-https://doi.org/10.30724/1998-9903-2026-28-4-193-205
+- **[Capillary Transport and Efficiency Limitations in Ordered Porous Heat Pipes](https://doi.org/10.30724/1998-9903-2026-28-4-193-205)** — V. Bulaeva, N. Savchenkova, A. Savchenkov — *Power Engineering: Research, Equipment, Technology*, 2026.
 
 Official MPEI 2026 activity:
 https://www.mpei.ru/lang/en/main/News/Lists/NewsList/NewsDispForm.aspx?ID=1011
@@ -237,7 +233,7 @@ Transfer uncertainty: **very high**
 
 ## 0.35 mm visualized composite-wick UTVC
 
-https://doi.org/10.1016/j.applthermaleng.2024.122813
+**[High Performance Ultra-Thin Vapor Chamber by Reducing Liquid Film and Enhancing Capillary Wicking](https://doi.org/10.1016/j.applthermaleng.2024.122813)** — Shiwei Zhang, Hang Liu, Changkun Shao *et al.* — *Applied Thermal Engineering*, 2024.
 
 Reported:
 - total thickness 0.35 mm;
@@ -247,7 +243,7 @@ Reported:
 
 ## 0.39 mm sealed composite-wick UTVC
 
-https://doi.org/10.3390/mi15050627
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 
 Reported:
 - 82 × 58 × 0.39 mm;
@@ -263,7 +259,7 @@ This is important because it demonstrates:
 
 ## 0.4 mm wettability-patterned UTVC
 
-https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
+**[Experimental Research on the Heat Transfer Performance of Ultra-Thin Vapor Chambers with Composite Wicks for Electronics Cooling](https://doi.org/10.1016/j.ijheatfluidflow.2025.110148)** — Tengqing Liu, Yaokang Zhang, Shuangfeng Wang *et al.* — *International Journal of Heat and Fluid Flow*, 2026.
 
 The study directly compares:
 - SWM only;
@@ -276,7 +272,7 @@ This creates a direct competitive baseline for TPU-style wettability concepts.
 
 ## 2025 laser-ablation wick modification
 
-https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
+**[Effect of Laser Ablation Surface Modification on the Capillary Performance of the Wick Structure for Ultra-Thin Vapor Chamber](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774)** — Jiu Yu, Wenqi Fang, Guoliang Hu *et al.* — *International Journal of Heat and Mass Transfer*, 2025.
 
 The paper:
 - modifies UTVC wick surface using laser ablation;
