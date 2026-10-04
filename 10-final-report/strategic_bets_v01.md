@@ -143,3 +143,48 @@ Not final Strategic Bets yet:
 - MPEI ordered porous wick.
 
 These remain challengers or supporting mechanisms until the readiness gate is passed.
+
+
+## 2026-10-04 challenger update
+
+### MPEI / Ivanov
+
+State:
+**Reserve / Stage-0 priority #2**
+
+New primary evidence:
+- https://doi.org/10.1134/S0040601525600683
+- https://doi.org/10.1016/j.pes.2026.100314
+
+Why it matters:
+- 42-month R410A two-phase stability materially improves reliability confidence;
+- current coating/IP/project continuity is strong.
+
+Why it is still not a Strategic Bet:
+- heat flux is far below phone-hotspot regime;
+- groove geometry remains too large for direct sub-mm transfer;
+- no phone-scale sealed VC.
+
+### TPU / Feoktistov
+
+State:
+**Reserve / Stage-0 priority #3**
+
+New process evidence:
+https://doi.org/10.1016/j.surfin.2026.109390
+
+Why it matters:
+- strong surface-manufacturing durability.
+
+Why it is still not a Strategic Bet:
+- vacuum/outgassing / working-fluid contamination is unresolved;
+- sealed two-phase rewetting benefit is not publicly demonstrated.
+
+### Portfolio implication
+
+The Stage-0 challengers now intentionally test different failure modes:
+- Pavlenko: mechanism scaling;
+- MPEI: high-flux miniaturization of long-life surface;
+- TPU: manufacturing-compatible spatial wetting.
+
+Do not merge them into one generic "modified surface" direction.
