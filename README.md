@@ -83,6 +83,7 @@ Repository governance:
 - [Repository Architecture & Refresh Contract](00_scope/repository_architecture.md)
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
+- [Human-Readable Bibliography](evidence/readable_bibliography.md)
 - [Research Repository Changelog](CHANGELOG.md)
 - [Final Decision Report Framework](10-final-report/README.md)
 - [Final Report Readiness Gate](10-final-report/final_report_readiness_gate.md)
