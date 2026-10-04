@@ -66,7 +66,7 @@ Current evidence no longer supports broad claims that Russia is uniquely strong 
 
 Current residual Russia differentiation candidates:
 1. Pavlenko/Kutateladze — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
-2. MPEI/Ivanov — actual multi-year hierarchical-surface aging evidence, **not generic reliability**;
+2. MPEI/Ivanov — **actual 42-month engineered-surface aging evidence + possible early capillary-state reliability indicator**, not generic reliability;
 3. Kutateladze Kabov/Chinnov — **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
 
 Watch / reserves:
@@ -176,3 +176,31 @@ Allowed wording:
 > Kutateladze retains a narrower current signal in **dielectric-fluid reversible→irreversible dry-spot dynamics, crisis-mode transition and high-resolution failure diagnostics**, which must still prove phone-scale transfer.
 
 Pavlenko remains **Stage-0 Priority #1 / Candidate Primary Bet**, but only under this narrower control point.
+
+
+### MPEI multi-year China-pressure-test closure
+
+China is stronger in:
+- copper-water VC oxygen-driven failure analysis;
+- vacuum/oxygen process control;
+- 150–200 °C accelerated lifetime prediction;
+- wick-oxidation production QA;
+- mobile-scale two-phase hardware.
+
+Targeted searches did **not recover a matched public China analogue** for:
+- the same engineered evaporator surface;
+- actual multi-year calendar-time two-phase operation;
+- thermal + morphology + capillary-aging tracking.
+
+Therefore MPEI retains a narrow complementary distinction:
+
+> **actual multi-year engineered-surface aging evidence**, including the possibility that capillary-state degradation precedes obvious integral thermal-performance failure.
+
+Allowed management claim:
+MPEI may contribute a **surface-state / capillary early-warning indicator for future dryout-margin loss**.
+
+Not allowed:
+> Russia has better long-term reliability than China.
+
+Current state:
+**Stage-0 Priority #2 / narrow differentiation retained.**
