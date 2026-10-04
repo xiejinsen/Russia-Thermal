@@ -16,6 +16,8 @@ Each brief uses:
 
 This is a technical prior-art aid, **not legal freedom-to-operate advice**.
 
+Full core 10Q cards: [Core Patent 10Q Decision Cards](patent_10q_cards_core_v01.md)
+
 ## Patent 10Q migration status
 
 The project now uses:
