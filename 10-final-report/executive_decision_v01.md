@@ -30,7 +30,7 @@ Current state:
 **Stage-0 GO WITH PREREQUISITE; not final collaboration GO.**
 
 ### Challengers
-- MPEI Ivanov — **GO WITH PREREQUISITE**; hierarchical / tunable-wetting coating + long-life reliability
+- MPEI Ivanov — **GO WITH PREREQUISITE**; hierarchical surface + **actual 42-month operating/aging evidence**, now benchmarked against strong China copper-water VC failure/lifetime research
 - TPU — **GO WITH PREREQUISITE**; contrast-wettability / laser-process surface
 - MPEI ordered porous wick — **HOLD / pre-device**
 
@@ -39,8 +39,10 @@ Sealed adaptive film/droplet hybrid.
 
 ### Narrow retained themes
 - multi-hotspot two-phase routing
-- confined microfan aeroacoustics
 - model-light compute + cooling control
+
+### Watch / method reserve
+- confined phone-microfan aeroacoustic source diagnosis — broad China electronic-cooling fan acoustic capability is now established; only actual phone-scale method superiority remains open
 
 ### Generic theses already rejected as Russia-specific bets
 - generic VC
@@ -50,6 +52,25 @@ Sealed adaptive film/droplet hybrid.
 - generic microfan
 - generic DVFS
 - generic hydrophilic / biphilic / laser / composite-wick treatment
+
+## 2A. Current country-level differentiation message
+
+Current evidence no longer supports broad claims that Russia is uniquely strong in:
+- VC/UTVC;
+- LHP miniaturization;
+- boiling/microchannels;
+- aeroacoustics;
+- biphilic/laser surfaces;
+- DVFS;
+- thermal materials.
+
+Current residual Russia differentiation candidates:
+1. Pavlenko/Kutateladze — modified-mesh dryout/rewetting/failure-boundary control;
+2. MPEI/Ivanov — actual multi-year hierarchical-surface aging evidence, **not generic reliability**;
+3. Kutateladze Kabov/Chinnov — thin-film/interfacial-instability mechanism depth;
+4. ITP UB RAS / Maydanik — LHP routing/operating-limit/failure physics.
+
+Aeroacoustics is currently **Watch / method reserve**, not counted in the differentiation set.
 
 ## 3. Final management table — template
 
