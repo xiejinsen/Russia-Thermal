@@ -265,3 +265,44 @@ The active Russia-specific set is converging around:
 
 This cross-cutting pattern should be tested as a possible final management thesis:
 > Russia contributes failure-mechanism depth; China/our team contributes phone-scale device engineering and product integration.
+
+
+### Foundational Reserve F0 — analytical failure-boundary modeling
+
+Russia-side signal:
+- ICM SB RAS / Bekezhanova–Stepanova–Goncharova exact-solution lineage;
+- Lavrentyev microfilm mathematical modeling;
+- linkage to Kutateladze film/interfacial experiments.
+
+Broad thesis:
+**"Russia has superior mathematics" — REJECTED.**
+
+Residual thesis:
+**exact/group-invariant analytical + stability models can expose interfacial failure boundaries with fewer experiments and better mechanism interpretability.**
+
+China comparator:
+- HIT/CAS long-wave film stability;
+- Inner Mongolia nonlinear film stability;
+- XJTU experimentally validated phase-change modeling;
+- HUST electronics heat-source inversion.
+
+Current state:
+**FOUNDATIONAL RESERVE / not a Primary or device Strategic Bet.**
+
+Promotion PoC:
+blind stable/unstable boundary prediction in a heated confined film cell.
+
+Internal success target:
+- >=80% stable/unstable classification;
+- <=15–20% boundary error;
+- >=50% experiment-grid reduction;
+- clearer mechanism attribution than the domestic numerical baseline.
+
+Kill:
+- no experiment reduction;
+- heavy empirical calibration;
+- invalid assumptions in phone-relevant regime;
+- domestic method equal/better at similar cost.
+
+IP:
+protect phone-specific model-guided geometry/control/diagnostic chain, not generic mathematical equations.
