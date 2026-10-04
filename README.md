@@ -84,6 +84,8 @@ Repository governance:
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
 - [Human-Readable Bibliography](evidence/readable_bibliography.md)
+- [Core Paper 10Q Decision Cards](evidence/paper_10q_cards_core_v01.md)
+- [Core Patent 10Q Decision Cards](evidence/patent_10q_cards_core_v01.md)
 - [Research Repository Changelog](CHANGELOG.md)
 - [Final Decision Report Framework](10-final-report/README.md)
 - [Final Report Readiness Gate](10-final-report/final_report_readiness_gate.md)
