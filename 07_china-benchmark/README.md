@@ -54,3 +54,23 @@ A Russian capability advances only if it offers:
 
 These gaps are tracked in:
 ../evidence/repository_completeness_matrix.md
+
+
+## Stage-0 comparator freeze
+
+Research date: 2026-10-04
+
+The new Russian blocker-closure evidence does **not** lower the China/global benchmark.
+
+For Stage-0 partner scoring, continue to use:
+- ~0.39–0.4 mm sealed UTVC;
+- ~0.2 mm internal channel;
+- ~60 μm mesh-class reference;
+- DI-water copper-VC product path;
+- wettability-patterned/composite/laser-modified UTVC as strong comparators.
+
+Canonical cross-country decision:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+Therefore:
+a Russia candidate can advance only by demonstrating a **specific mechanism gap** (dryout/rewet, long-life scaled hierarchy, or sealed-process-stable wetting control), not by reproducing generic modern UTVC technology.
