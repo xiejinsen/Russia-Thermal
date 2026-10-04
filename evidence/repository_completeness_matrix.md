@@ -19,7 +19,7 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 08 Opportunity / falsification | current | strong | physical Stage-0 transfer evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner briefs current** | strong | physical coupons + background IP | PASS-WITH-GAPS |
 | 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
-| Evidence governance | current | strong | source register may need thematic split later | PASS-WITH-GAPS |
+| Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
 
 ## Russia university coverage
 
@@ -185,3 +185,49 @@ The repository is decision-ready only when:
 - major unknowns stay visible;
 - Stage-0 physical evidence closes the current transfer gaps;
 - README / PROGRESS / workstream indexes agree.
+
+
+## 10Q evidence-readability QA
+
+Current core decision-grade evidence now has a three-layer human reading path:
+
+1. `readable_bibliography.md` — what the source is;
+2. `paper_briefs_decision_grade.md` / `patent_briefs_decision_grade.md` — what it means;
+3. `paper_10q_cards_core_v01.md` / `patent_10q_cards_core_v01.md` — whether the evidence is sufficient for technology, partner, PoC and IP decisions.
+
+### Core paper 10Q coverage
+
+Completed for:
+- Pavlenko/Kutateladze phase-change surface core set;
+- MPEI/Ivanov capillary-transport, thermosyphon and 42-month reliability chain;
+- TPU/Feoktistov biphilic, diagnostics and hydrophobization chain;
+- strong China/global 0.35–0.4 mm UTVC comparators.
+
+### Core patent 10Q coverage
+
+Completed for:
+- Kutateladze/Pavlenko background IP;
+- MPEI coating/wettability background IP;
+- TPU institutional patent signal;
+- direct China/OEM VC prior art from Guangdong University of Technology, Guangzhou Maritime University, Huawei, Xiaomi, Honor and OPPO.
+
+### Evidence-boundary improvements
+
+The 10Q layer now explicitly distinguishes:
+- Source fact;
+- Analyst inference;
+- Unknown / partner request;
+- non-comparable mobile-transfer evidence;
+- public evidence vs claim-level evidence.
+
+### Remaining gaps
+
+Not all historical/foundational long-tail sources have 10Q cards.
+They are only required when promoted into:
+- a Strategic Bet;
+- a partner decision;
+- a PoC;
+- a final-report conclusion.
+
+State:
+**CORE 10Q PASS / LONG-TAIL ON-DEMAND.**
