@@ -9,12 +9,15 @@ Last updated: 2026-10-04
 Detailed frozen Stage-0 matrix:
 [poc01_stage0_coupon_matrix_v01.md](poc01_stage0_coupon_matrix_v01.md)
 
+Canonical partner decision:
+[Stage-0 Partner × Technology Decision Scorecard](stage0_partner_technology_decision_scorecard_v01.md)
+
 ## Strong reference
 
 Modern 0.39–0.4 mm-class sealed UTVC.
 
 Primary:
-https://doi.org/10.3390/mi15050627
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 
 Reference facts:
 - 0.39 mm finished UTVC;
@@ -24,15 +27,15 @@ Reference facts:
 - composite wick + wettability treatment.
 
 Additional modern references:
-https://doi.org/10.1016/j.ijheatfluidflow.2025.110148
-https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
+- **[Experimental Research on the Heat Transfer Performance of Ultra-Thin Vapor Chambers with Composite Wicks for Electronics Cooling](https://doi.org/10.1016/j.ijheatfluidflow.2025.110148)** — Tengqing Liu, Yaokang Zhang, Shuangfeng Wang *et al.* — *International Journal of Heat and Fluid Flow*, 2026.
+- **[Effect of Laser Ablation Surface Modification on the Capillary Performance of the Wick Structure for Ultra-Thin Vapor Chamber](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774)** — Jiu Yu, Wenqi Fang, Guoliang Hu *et al.* — *International Journal of Heat and Mass Transfer*, 2025.
 
 ## Important transfer correction
 
 Published Russian structures must not be copied blindly into the 0.4 mm device.
 
 Pavlenko mesh-geometry paper:
-https://doi.org/10.1134/S0040601525700454
+**[Effect of Layer Height on Heat Transfer during Boiling of Dielectric Liquid on Mesh Coatings](https://doi.org/10.1134/S0040601525700454)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Thermal Engineering*, 2025.
 
 Reported wire sizes include:
 - 100 um;
@@ -48,8 +51,8 @@ Therefore Stage 0 tests **mechanism transfer to thinner phone-relevant structure
 
 Pavlenko literature uses HFE-7100.
 
-3M:
-https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+3M official supply context:
+**[PFAS Stewardship — Operations & Innovation](https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/)** — 3M — current.
 
 3M completed its PFAS manufacturing exit at end-2025.
 
@@ -71,12 +74,15 @@ Thin copper mesh + modern wettability treatment.
 - characterize modification thickness, pore morphology and permeability.
 
 ### C — TPU
-- spatial biphilic / contrast-wetting pattern;
-- must retain function in W1/W3 and through processing/cycling.
+- C1: laser-only / low-organic copper branch;
+- C2: hydrocarbon-functionalized biphilic copper branch;
+- first gate is vacuum/fluid/process compatibility;
+- only survivors enter confined rewetting testing.
 
 ### D — MPEI Ivanov
-- hierarchical / tunable-wetting coating;
-- must quantify actual total coating thickness and target-fluid stability.
+- current / half-scale / phone-target hierarchical-coating ladder;
+- public lineage already includes representative ~5 μm coating state and ~0.2 mm water-boiling/CHF work;
+- key question is high-flux transfer of the **exact long-life hierarchy**, not whether any thin/high-flux capability exists.
 
 ### E — MPEI ordered wick
 Pre-device only until a physical thin coupon exists.
