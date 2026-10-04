@@ -269,3 +269,59 @@ Before formal collaboration, explicitly separate:
 Current readiness:
 **technical discussion ready; IP boundary not yet contract-ready.**
 
+## Phone-transfer geometry / fluid correction — 2026-10-04
+
+### Mesh geometry now partially resolved
+
+2025 primary:
+https://doi.org/10.1134/S0040601525700454
+
+Reported HFE-7100 tests use stainless meshes with:
+- 100 um wire / 230 um cell side;
+- 220 um wire / 401 um cell side.
+
+Related single-layer analysis also reports a 160 um wire / 315 um aperture case.
+
+Strong UTVC comparator:
+https://doi.org/10.3390/mi15050627
+
+Reference geometry includes:
+- ~0.2 mm internal steam-channel/support height;
+- 0.06 mm copper mesh.
+
+### Decision correction
+
+A 220 um Pavlenko mesh is already comparable to or larger than the entire ~200 um reference channel.
+
+Therefore the collaboration thesis is **not**:
+> put the demonstrated mesh 40 directly into a 0.4 mm phone VC.
+
+It is:
+> transfer Pavlenko's surface-modification / nucleation / dryout / rewetting mechanism onto a thinner ~60–100 um-class wick or a tens-of-microns functional surface.
+
+RU2793671C2 remains useful thin-process evidence:
+https://patents.google.com/patent/RU2793671C2/en
+
+### Working-fluid correction
+
+3M official:
+https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+
+3M completed PFAS manufacturing exit at end-2025.
+
+Therefore:
+- HFE-7100 remains valuable for reproducing the published mechanism if available;
+- HFE-7100 is **not** treated as the assumed future product fluid;
+- Stage 0 must test transfer to water and/or a separately screened future product fluid.
+
+### Updated data request
+
+Highest-priority partner questions now include:
+1. can the hydrogen-bubble modification be applied to 60–100 um wire/mesh?
+2. what added modification thickness and permeability penalty result?
+3. has the team tested water or other currently available fluids on the same modified mesh?
+4. what changes after vacuum/degassing and thermal cycling?
+5. can the thin-coating IP/process be transferred to copper VC materials?
+
+Current status:
+**Tier-A mechanism lead; demonstrated mesh geometry itself is not phone-ready.**
