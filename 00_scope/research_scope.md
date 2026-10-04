@@ -29,6 +29,53 @@ The project must end with an evidence-backed chain:
 
 If a research activity cannot eventually contribute to this chain, it is secondary.
 
+## Management-facing final deliverable hard requirement
+
+The final domestic-leadership report must contain an evidence-backed **country capability view**, not only partner deep dives.
+
+Mandatory management outputs:
+
+1. **Russia Thermal Capability Atlas**
+   - capability domain;
+   - institution / lab / key researchers;
+   - representative recent evidence;
+   - current mobile/chip transfer state.
+
+2. **China Academic Capability Mirror**
+   - representative domestic academic institutions/labs mapped with the same taxonomy;
+   - strongest current public technical baseline;
+   - explicit non-comparability where conditions differ.
+
+3. **Russia × China Differentiation Heatmap / Funnel**
+   - which generic Russia-advantage claims are killed by Chinese capability;
+   - which Russian capabilities remain complementary;
+   - which 3–5 narrow capabilities are credible differentiation candidates;
+   - what evidence would strengthen or kill each candidate.
+
+4. **Collaboration conversion**
+   - named partner;
+   - smallest PoC;
+   - success/kill criteria;
+   - background/foreground IP;
+   - 0–36 month roadmap.
+
+### Non-university requirement
+
+The Russia capability map must include high-signal non-university institutions where relevant, including RAS institutes and national research organizations.
+
+University coverage alone is **not** accepted as country-capability coverage.
+
+### Leadership-credibility rule
+
+Do not present:
+- "Russia is strong in boiling";
+- "Russia is strong in LHP";
+- "Russia is strong in aeroacoustics";
+
+as final strategic conclusions.
+
+A final Russia advantage must survive a strong Chinese academic/product comparator and be expressed as a **specific mechanism, method, reliability capability, experimental capability or control point**.
+
 ## Platform boundary
 
 ### Included
