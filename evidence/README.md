@@ -8,11 +8,16 @@ Cross-workstream evidence governance and indexes.
 
 Technical conclusions should live in workstreams 03–09, not here.
 
+## Insight methodology
+
+- [Mobile Thermal Insight — Paper & Patent 10Q Method](mobile_thermal_insight_10q_method.md) — adapted from the classic paper 10-question framework for mobile/chip thermal technology and collaboration decisions.
+
 ## Standards
 
 - [Evidence Standard](EVIDENCE_STANDARD.md)
 - [Ranking Metadata Standard](ranking_metadata_standard.md)
 - [Paper Metadata Template](paper_metadata_template.md)
+- [Patent Metadata Template](patent_metadata_template.md)
 
 ## Human-readable entry point
 
