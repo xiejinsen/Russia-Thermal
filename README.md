@@ -50,7 +50,7 @@ The project is complete only when it can answer:
 
 ## Repository architecture
 
-The top-level 00–09 structure follows the research decision chain.
+The 00–09 structure follows the research decision chain; 10-final-report is the gated decision/report layer.
 
 ```
 Russia-Thermal/
@@ -63,7 +63,8 @@ Russia-Thermal/
 ├── 06_active-cooling/          # active-cooling mechanism track
 ├── 07_china-benchmark/         # China/global comparison baseline
 ├── 08_opportunities-transfer/  # constraints, comparisons, decision gates
-├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap
+├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap research
+├── 10-final-report/             # gated final decision/report layer
 ├── evidence/                   # standards, source/ranking registers, QA
 ├── CHANGELOG.md                # decision-relevant corrections/refreshes
 ├── PROGRESS.md                 # live project status
@@ -75,6 +76,8 @@ Repository governance:
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
 - [Research Repository Changelog](CHANGELOG.md)
+- [Final Decision Report Framework](10-final-report/README.md)
+- [Final Report Readiness Gate](10-final-report/final_report_readiness_gate.md)
 
 ## Current status — 2026-10-04
 
@@ -184,3 +187,20 @@ A substantive research round is not archived until the relevant:
 have been refreshed.
 
 See [PROGRESS.md](PROGRESS.md) for live next steps.
+
+
+## Final report architecture
+
+The final report is now scaffolded in `10-final-report/`.
+
+It is intentionally **not final** at the current ~52% research state.
+
+The report will ultimately contain:
+- executive decision;
+- full technical report;
+- strategic bets;
+- collaboration portfolio;
+- 3-year roadmap;
+- evidence appendix.
+
+A direction may enter a final Strategic Bet only after passing the Final Report Readiness Gate. Workstream 10 summarizes approved research; it never becomes the source of truth for evidence.
