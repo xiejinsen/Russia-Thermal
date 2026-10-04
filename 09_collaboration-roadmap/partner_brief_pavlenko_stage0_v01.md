@@ -19,16 +19,12 @@ Current strongest differentiators:
 - current lab and researchers verified.
 
 Primary evidence:
-- modified mesh:
-  https://doi.org/10.1134/S1810232825700183
-- mesh geometry / liquid-layer effect:
-  https://doi.org/10.1134/S0040601525700454
-- 2D porous surface:
-  https://doi.org/10.1016/j.applthermaleng.2024.125344
-- black-silicon negative evidence:
-  https://doi.org/10.1134/S1810232825700225
-- thin surface patent:
-  https://patents.google.com/patent/RU2793671C2/en
+
+- **[Electrochemical Modification of the Metal Mesh Surface for Heat Transfer Enhancement during Boiling of a Thin Layer of HFE-7100](https://doi.org/10.1134/S1810232825700183)** — A.E. Brester, D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Journal of Engineering Thermophysics*, 2025.
+- **[Effect of Layer Height on Heat Transfer during Boiling of Dielectric Liquid on Mesh Coatings](https://doi.org/10.1134/S0040601525700454)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Thermal Engineering*, 2025.
+- **[Heat Transfer Enhancement during Boiling in Horizontal Layers of HFE-7100 on 2D Modulated Capillary-Porous Coatings](https://doi.org/10.1016/j.applthermaleng.2024.125344)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Applied Thermal Engineering*, 2025.
+- **[Capillary Wicking and Heat Transfer during Boiling of HFE-7100 on Black Silicon Surfaces with Different Morphologies](https://doi.org/10.1134/S1810232825700225)** — O.A. Volodin, E. Vyacheslavova, A. Baranov *et al.* — *Journal of Engineering Thermophysics*, 2025.
+- **[Heat Transfer Wall of a Heat Exchanger and Method for Forming a Coating to Intensify Heat Transfer](https://patents.google.com/patent/RU2793671C2/en)** — A.A. Nikiforov, A.N. Pavlenko, M.Yu. Kuprikov *et al.* — RU2793671C2 — Kutateladze Institute of Thermophysics SB RAS / A.A. Nikiforov — 2023.
 
 ## Known transfer problem
 
@@ -41,7 +37,7 @@ while the strong 0.39 mm UTVC reference has about:
 - 0.06 mm mesh
 
 Reference:
-https://doi.org/10.3390/mi15050627
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 
 Therefore the published mesh hardware is not the target product geometry.
 
