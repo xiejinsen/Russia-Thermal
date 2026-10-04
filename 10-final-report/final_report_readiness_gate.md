@@ -46,8 +46,8 @@ Search/evidence is incomplete. Do not convert uncertainty into a positive or neg
 | Direction | G1 | G2 | G3 | G4 | G5 | G6 | G7 | G8 | Current final-report state |
 |---|---|---|---|---|---|---|---|---|---|
 | Pavlenko fluid-transferable dryout/rewetting | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS | **Candidate Primary Bet** |
-| TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | PARTIAL | PASS-PARTIAL | PASS-Stage0 | Reserve/Challenger |
-| MPEI Ivanov coating | PASS | PASS | PASS | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 challenger** |
+| TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | **PARTIAL+** | **PASS** | PASS-Stage0 | Reserve/Challenger — GO w/prerequisite |
+| MPEI Ivanov coating | PASS | PASS | PASS | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 — GO w/prerequisite** |
 | MPEI ordered wick | PASS | PASS | PASS | LOW | PARTIAL | PARTIAL | PARTIAL | PRE-PoC | Watch/Pre-device |
 | Film/droplet hybrid | PASS | PASS | PASS | LOW | PASS | PARTIAL | PARTIAL | Feasibility only | Reserve high-risk |
 | Generic LHP miniaturization | PASS | PASS | PASS | FAIL differentiation | PASS | crowded | n/a | n/a | Killed as Russia-specific thesis |
@@ -90,3 +90,56 @@ It does **not** convert G4 Phone Transfer to PASS because:
 - no sealed phone-scale device is demonstrated.
 
 Therefore MPEI remains a Reserve/Challenger, not a Primary Bet.
+
+
+## 2026-10-04 blocker-closure readiness update
+
+Canonical decision:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+### Pavlenko
+
+Public search has reached a reasonable limit for:
+- electrochemical recipe;
+- added morphology;
+- permeability/adhesion.
+
+These are now routed to partner/experiment.
+
+**Gate consequence:**
+no promotion of G4/G6. Candidate Primary Bet remains provisional.
+
+### MPEI / Ivanov
+
+New public closure:
+- official dissertation: ~100 μm groove-radius lineage; representative ~5 μm coating state;
+- 2017/2020 ~0.2 mm water-boiling/CHF lineage;
+- 2020 paper includes N.S. Ivanov.
+
+**Gate consequence:**
+G4 remains **PARTIAL+**, not PASS. The exact long-life hierarchy still lacks phone-scale/high-flux sealed validation.
+
+### TPU / Feoktistov
+
+RU2812668C1:
+- named inventors include Feoktistov and Orlova;
+- one independent laser-process claim is mapped.
+
+**Gate consequence:**
+G6 IP clarity improves to **PARTIAL+** and G7 partner linkage/readiness to **PASS**.
+
+No promotion to Primary Bet because vacuum/copper/sealed-fluid compatibility is still unresolved.
+
+### Ordered wick
+
+No physical thin coupon.
+
+**Gate consequence:**
+remains HOLD / pre-device.
+
+### Current Stage-0 decisions
+
+- Pavlenko — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
