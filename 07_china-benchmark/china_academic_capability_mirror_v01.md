@@ -28,9 +28,9 @@ Existing institution-centric map:
 |---|---|---|---|
 | **VC reliability / surface aging** | **South China University of Technology** + Guangdong/industry collaborators | 2025 oxygen-driven copper-water VC failure mechanism; 2026 150–200°C accelerated life prediction; wick oxidation grading/QA | MPEI cannot claim generic reliability advantage; residual difference is actual 42-month operation of one hierarchical surface with capillary-aging evidence |
 | **Ultra-thin VC / thermal ground plane** | **South China University of Technology**; **Huazhong University of Science and Technology**; Xi'an Jiaotong adjacent VC work | SCUT 0.35–0.39 mm-class UTVC line; HUST 2026 reports **0.25 mm** UTTGP with 17,213 W/(m·K) equivalent conductivity and dynamic/cyclic stability | China already has a strong sub-0.4 mm device frontier; Russian generic VC/wick claims face a very high bar |
-| **Mobile LHP / flexible two-phase routing** | **Xi'an Jiaotong University**; HUST | XJTU 2025 mLHP: **0.7 mm**, 3.95 g, 30-day 90°C aging; flexible 0.7 mm line; HUST 0.71 mm ultra-thin LHP | Generic Russian LHP miniaturization is not differentiated |
+| **Mobile LHP / flexible two-phase routing** | **Xi'an Jiaotong University**; **South China University of Technology**; **Qingdao University of Science and Technology / Shandong University**; Beihang; HUST | XJTU 0.7 mm mobile LHP; 1 mm dual-evaporator laptop LHP; dual/multi-evaporator chip cooling; explicit capillary/pressure-drop failure studies; Beihang NCG/startup/elevation lineage | China now covers miniaturization **and** multi-source/startup/failure physics; Maydanik is no longer retained as a country-level differentiation candidate |
 | **Flow boiling / CHF / structured surfaces** | **Xi'an Jiaotong University**; North China Electric Power University; other strong heat-transfer groups | XJTU 2025 HFE-7100 semi-open microchannel with structured/nanotube chip surface; reported CHF/HTC enhancement; NCEPU 2024 thin-film boiling >2000 W/cm² | China also has deep high-flux boiling capability; Russia must differentiate on a narrower mechanism/failure-control axis |
-| **Thin film / droplet / spray** | **North China Electric Power University**; **Beihang University** | NCEPU thin-film boiling >2000 W/cm²; Beihang 2025 controlled droplet-train cooling reported CHF up to 1037 W/cm² | Russia's Kabov/TPU film/droplet work is not unique at the category level |
+| **Thin film / droplet / spray** | **North China Electric Power University**; **Chinese Academy of Sciences / UCAS**; **Beihang University**; SCUT | NCEPU thin-film boiling **2074 W/cm²**; CAS/NCEPU gradient-mesh capillary thin-film boiling **202.8 W/cm²**; Beihang droplet-train cooling; SCUT current mesh-film work | China is very strong in thin-film boiling/high-flux device physics; Russia can only differentiate on **shear-driven free-surface film / dry-spot / instability under extreme confinement** |
 | **Embedded microfluidic / extreme chip cooling** | **Peking University** | 2025 Nature Electronics: embedded manifold + microjet + sawtooth microchannels, **3000 W/cm²**, ~0.9 W/cm² pumping at extreme condition | China has world-class embedded-chip cooling; generic Russian microchannel competence is not a strategic advantage |
 | **Aeroacoustics / fan noise** | **Beihang University**; **Peking University / HKUST**; **Shanghai Jiao Tong University** | Beihang aeroacoustics; PKU/HKUST CPU cooling-fan POD + wavelet beamforming; SJTU electronic cooling-fan inlet-asymmetry, duct-mode and narrow-space studies | China already has electronic-cooling fan source imaging and installed-condition aeroacoustics; Russia can only differentiate at actual phone-microfan scale or via clearly better diagnostics |
 | **Piezo / compact active air** | **North China Electric Power University** and other electronics-cooling groups | 2025 piezoelectric-fan + heat-sink work for confined microelectronics | Russia's current public active-air evidence is too thin for a country-level advantage |
@@ -196,6 +196,57 @@ Therefore Russian aeroacoustic collaboration, if pursued, should be framed as:
 > phone-scale method transfer / benchmark competition,
 not:
 > Russia has an aeroacoustic capability China lacks.
+
+### I. China thin-film mechanism benchmark
+
+Capillary-driven thin film:
+**[Enhanced capillary-driven thin film boiling on cost-effective gradient wire meshes for high-heat-flux applications](https://doi.org/10.1016/j.expthermflusci.2023.111018)** — CAS/NCEPU line — 2023.
+- DI water;
+- gradient wire-mesh wick;
+- CHF 202.8 W/cm²;
+- explicit capillary-pressure / permeability trade-off.
+
+Ultrahigh-flux thin film:
+**[Manipulating thin film boiling to achieve record-breaking high heat flux](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125308)** — NCEPU-led — 2024.
+- pressure-controlled thin-film-boiling architecture;
+- reported CHF 2074 W/cm².
+
+Decision:
+China is not weak in thin-film cooling or interfacial heat-transfer mechanisms.
+
+Residual Russia question:
+whether Kutateladze's **shear-driven free-surface film, dry-spot/rupture and extreme-slit instability** knowledge supplies a control point that strong Chinese capillary/pressure-fed thin-film systems do not.
+
+### J. China LHP routing / failure benchmark
+
+Direct small-electronics multi-source:
+**[Study on heat transfer characteristics of a dual-evaporator ultra-thin loop heat pipe for laptop cooling](https://doi.org/10.1016/j.applthermaleng.2024.122395)** — 2024.
+- 1 mm thickness;
+- dual evaporators for separated laptop heat sources;
+- equal/unequal heat-load and orientation tests.
+
+Chip-level dynamics:
+**[Performance and energy consumption study of a dual-evaporator loop heat pipe for chip-level cooling](https://doi.org/10.1016/j.applthermaleng.2024.124757)** — QUST / SDU — 2025.
+- startup under single/dual loads;
+- variable-power operation;
+- max total load 300 W;
+- fluid-distribution analysis.
+
+Explicit failure boundary:
+**[Experimental Study on a Dual Compensation Chamber Multi-Evaporator Loop Heat Pipe System](https://doi.org/10.3390/eng7020084)** — Shandong University — 2026.
+- multiple evaporators / dual compensation chambers;
+- charge ratio and startup sequencing;
+- stable total load ~270 W;
+- per-stage failure around 70 W;
+- failure linked to cumulative pressure drop versus capillary pumping ability.
+
+Additional lineage:
+Beihang has direct primary work on NCG, startup, tilt/elevation and compensation-chamber behavior.
+
+Decision:
+China already spans **mobile miniaturization + multi-source routing + startup/operating-limit/failure physics**.
+
+Therefore Maydanik's value is expertise/heritage, not a current Russia-specific country advantage.
 
 ## 3. Current domestic strengths that materially raise the Russia bar
 
