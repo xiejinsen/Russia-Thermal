@@ -95,20 +95,22 @@ Do not use publication count as bubble size.
 
 ---
 
-## Visual 3 — Russia Thermal Research Map
+## Visual 3 — Russia Thermal Capability Atlas
 
 ### Decision question
 Where does relevant Russian capability actually sit?
 
 ### Recommended form
-Network / structured hierarchy:
+Capability-first structured hierarchy:
 
-Institution
-→ Lab
+Capability domain
+→ Institution / lab
 → Researcher
-→ Capability
-→ Recent evidence
-→ Current status
+→ Representative evidence
+→ Mobile/chip transfer state
+→ Current Russia status
+
+The diagram must include both universities and non-university institutes such as RAS institutes / TsAGI where relevant.
 
 For each promoted node show small metadata:
 - current activity 2023–2026
@@ -117,6 +119,7 @@ For each promoted node show small metadata:
 - partner readiness
 
 ### Data source
+- ../03_russia-institutions/russia_thermal_capability_atlas_v01.md
 - ../03_russia-institutions/
 - ../04_researchers-labs/
 - ../evidence/russia_domestic_ranking_register.md
@@ -127,39 +130,28 @@ Do not imply university rank = technology rank.
 
 ---
 
-## Visual 4 — Russia × China Complementarity Matrix
+## Visual 4 — Russia × China Academic Capability Heatmap
 
 ### Decision question
 Why collaborate with a Russian team instead of solving the problem using existing China/global capability?
 
 ### Recommended form
 Rows:
-technical control points, e.g.
-- sub-mm VC manufacturing
-- wick/capillary architecture
-- boiling/dryout physics
-- wettability retention
-- active airflow
-- aeroacoustics
-- adaptive control
-- package integration
+the same capability taxonomy used in the Russia atlas.
 
 Columns:
-- Russia capability
-- China/global capability
-- our/team capability
-- complementarity value
-- remaining gap
+- Russia representative institutions / capability;
+- China representative academic institutions / capability;
+- strongest current public comparator;
+- Russia residual differentiation;
+- verdict: differentiated candidate / complementary / China-baseline dominant / unresolved / kill generic thesis.
 
 ### Highlight
-Only cells where the combination could create:
-- new IP;
-- measurable frontier shift;
-- unique PoC.
+Only after this comparison add an "our/team capability" overlay and collaboration opportunity.
 
 ### Data source
-- ../07_china-benchmark/
-- ../08_opportunities-transfer/russia_china_gap_v01.md
+- ../07_china-benchmark/china_academic_capability_mirror_v01.md
+- ../08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md
 - ../08_opportunities-transfer/direct_comparisons_v01.md
 
 ### Avoid
@@ -323,14 +315,15 @@ Do not show a smooth linear timeline if continuation is conditional.
 ## Presentation hierarchy
 
 Management version:
-1. Executive decision
-2. Problem stack
-3. Opportunity funnel
-4. Complementarity map
-5. 2–4 Strategic Bet cards
-6. Collaboration portfolio
-7. Roadmap
-8. Key risks / asks
+1. Executive decision — what Russia is and is not strategically good at
+2. Russia thermal capability atlas
+3. Russia × China academic capability heatmap
+4. Smartphone problem / product boundary
+5. Opportunity funnel / killed broad theses
+6. 2–4 Strategic Bet cards
+7. Collaboration portfolio + Stage-0
+8. 0–36 month roadmap
+9. Key risks / asks
 
 Full technical report:
 adds evidence detail, comparator tables, patent maps and limitations.
