@@ -1,3 +1,8 @@
+> **AUDIT SNAPSHOT / NON-AUTHORITATIVE**
+>
+> This file records evidence-traceability conditions found on 2026-10-03. It is not the live QA status source.
+> Current QA authority: [Repository Completeness Matrix](repository_completeness_matrix.md); current project status: [PROGRESS](../PROGRESS.md).
+>
 # Evidence Traceability Audit — 2026-10-03
 
 ## Executive finding
