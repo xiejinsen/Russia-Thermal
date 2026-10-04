@@ -185,3 +185,16 @@ The full report must be **claim-driven**, not folder-driven.
 Every major conclusion should be readable as:
 
 > Claim -> Evidence -> Comparator -> Caveat -> Decision implication.
+
+
+## Stage-0 partner decision source
+
+The chapter on collaboration targets must distinguish:
+- **publicly closed evidence**;
+- **partner-only requests**;
+- **experiment-only blockers**.
+
+The canonical current decision is:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
+
+No final report text may convert **GO WITH PREREQUISITE** into an unconditional partner recommendation.
