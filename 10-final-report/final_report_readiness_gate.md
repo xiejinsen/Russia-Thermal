@@ -143,3 +143,44 @@ remains HOLD / pre-device.
 - MPEI / Ivanov — **GO WITH PREREQUISITE**
 - TPU / Feoktistov — **GO WITH PREREQUISITE**
 - MPEI ordered wick — **HOLD**
+
+
+## 2026-10-04 China reliability + electronics-fan comparator update
+
+### MPEI / Ivanov
+
+New China decision-grade comparators:
+- copper-water VC oxygen-driven failure mechanism;
+- 150–200 °C accelerated service-life prediction;
+- production-oriented wick oxidation grading.
+
+**Gate consequence:**
+G3 Strong Comparator becomes materially stronger.
+
+MPEI's differentiation is narrowed from:
+> long-duration reliability
+
+to:
+> **actual 42-month operation and aging of a specific hierarchical evaporator surface**.
+
+No G4 promotion:
+phone geometry/high-flux transfer remains open.
+
+MPEI remains:
+**Reserve / Stage-0 priority #2 — GO WITH PREREQUISITE.**
+
+### Aeroacoustics
+
+New China evidence:
+- cooling-fan acoustic source imaging;
+- inlet-asymmetry / tonal-noise mechanisms;
+- short-duct acoustic control;
+- narrow-space installed electronic-cooling fan studies.
+
+**Gate consequence:**
+the broad Russia aeroacoustic differentiation thesis fails G3.
+
+Current state:
+**WATCH / METHOD RESERVE**, pending an equal-envelope smartphone-class (~18–25 mm / ~20k rpm centrifugal fan) benchmark.
+
+Do not present TsAGI/PNRPU/CIAM as a proven Russia advantage in the final report.
