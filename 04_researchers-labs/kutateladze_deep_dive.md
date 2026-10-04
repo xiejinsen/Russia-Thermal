@@ -199,3 +199,41 @@ Use droplet/film flow only where local heat flux peaks, with active airflow prov
 Co-design a synthetic-jet actuator with VC/spreader geometry and compare with rotary microblower at equal volume/power/noise constraints.
 
 None of these is yet a recommended direction; each requires a mobile-transfer experiment.
+
+
+## China pressure-test update — thin-film / interfacial line — 2026-10-04
+
+Strong China comparators now include:
+
+- **[Enhanced capillary-driven thin film boiling on cost-effective gradient wire meshes for high-heat-flux applications](https://doi.org/10.1016/j.expthermflusci.2023.111018)** — CAS/NCEPU line — CHF 202.8 W/cm².
+- **[Manipulating thin film boiling to achieve record-breaking high heat flux](https://doi.org/10.1016/j.ijheatmasstransfer.2024.125308)** — NCEPU-led — reported CHF 2074 W/cm².
+
+Decision correction:
+**do not describe Kutateladze as differentiated because it has thin-film cooling or high heat flux.**
+
+Residual Kabov/Chinnov signal:
+- shear-driven free-surface liquid film;
+- dry-spot / breakdown / CHF mechanism;
+- wave / thermocapillary / interfacial-instability knowledge;
+- extreme-confinement experimental access, including **12.5 μm-high × 10 mm slit two-phase flow**.
+
+Important exclusivity caveat:
+the 2022 shear-driven film paper includes Beijing University of Technology coauthors. The public mechanism is therefore not Russia-exclusive.
+
+Current country state:
+**NARROW DIFFERENTIATION / HIGH-RISK MECHANISM RESERVE.**
+
+The value proposition is:
+> current Kutateladze experimental platform + long-running tacit mechanism knowledge,
+
+not:
+> China does not study thin films.
+
+Smallest useful PoC before partner promotion:
+- heated microgap/shear-film cell;
+- phone-like hotspot footprint;
+- fixed parasitic-power/volume budget;
+- strongest passive VC/thin-film control;
+- dry-spot onset + transient hotspot + Rth + pumping/gas-flow power.
+
+Kill if system-level benefit disappears after gas-flow/pump/loop overhead.
