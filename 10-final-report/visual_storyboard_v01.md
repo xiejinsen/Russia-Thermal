@@ -224,7 +224,7 @@ Examples:
 - generic LHP miniaturization -> killed as Russia-specific thesis
 - generic synthetic jet -> killed
 - generic biphilic / laser surface -> reframed
-- Pavlenko surface -> narrowed to fluid-transferable dryout/rewetting
+- Pavlenko surface -> generic dryout/rewetting killed -> narrowed to dielectric reversible→irreversible dry-spot / crisis diagnostics
 
 ### Data source
 - ../CHANGELOG.md
@@ -262,7 +262,7 @@ Bubble label:
 - partner + technical hypothesis
 
 Current provisional examples:
-- Pavlenko / dryout-rewetting
+- Pavlenko / irreversible-dryout boundary control
 - TPU / biphilic pattern
 - MPEI Ivanov / hierarchical coating
 - MPEI ordered wick
