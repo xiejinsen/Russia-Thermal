@@ -9,6 +9,7 @@ Convert surviving hypotheses into actionable partner discussions, discriminating
 ## CURRENT outputs
 
 ### Portfolio / readiness
+- [Unified Stage-0 Partner × Technology Decision Scorecard](stage0_partner_technology_decision_scorecard_v01.md)
 - [Partner-to-hypothesis matching](partner_hypothesis_map_v01.md)
 - [Surface/Wick partner readiness](partner_readiness_surface_v01.md)
 
@@ -103,8 +104,8 @@ TPU:
 - vacuum/outgassing;
 - organic layer contamination;
 - copper transfer;
-- RU2812668 inventor/claim closure;
 - sealed rewetting evidence.
+- RU2812668 inventor/claim closure is **complete**; mobile/copper relevance remains partial.
 
 No team is contract-ready.
 
@@ -116,3 +117,21 @@ After that:
 - score actual Stage-0 feasibility;
 - select physical coupon routes;
 - only then invest in sealed Stage-1.
+
+
+## Current decision status — blocker-closure round
+
+- Pavlenko: **GO WITH PREREQUISITE**
+- MPEI / Ivanov: **GO WITH PREREQUISITE**
+- TPU / Feoktistov: **GO WITH PREREQUISITE**
+- MPEI ordered wick: **HOLD**
+
+Important:
+this authorizes only bounded Stage-0 information exchange / coupon falsification.
+
+It does not authorize:
+- final partner nomination;
+- sealed-device Stage-1;
+- product commitment.
+
+Public-search diminishing-return exits are recorded in the unified scorecard.
