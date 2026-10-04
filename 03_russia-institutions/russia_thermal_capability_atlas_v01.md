@@ -27,7 +27,7 @@ Partner/lab deep dives:
 
 ## 1. Capability taxonomy for management view
 
-The Russia map is organized into ten capability domains:
+The Russia map is organized into ten direct/cross-cutting capability domains plus one foundational enabling layer:
 
 1. phase-change boiling / CHF / dryout / rewetting;
 2. ultra-thin VC / wick / surface engineering;
@@ -38,7 +38,10 @@ The Russia map is organized into ten capability domains:
 7. aeroacoustics / fan-noise methods;
 8. thermal materials / TIM / spreaders;
 9. software thermal control / DVFS / adaptive management;
-10. cross-cutting experimental diagnostics / reliability / manufacturing know-how.
+10. cross-cutting experimental diagnostics / reliability / manufacturing know-how;
+11. **foundational mathematical physics / nonlinear stability / reduced-order thermal-fluid modeling**.
+
+The eleventh domain is an **enabling layer**, not a claim of device leadership. It is included because foundational methods can create value by exposing failure boundaries, dominant mechanisms and controllable variables before product-scale experimentation.
 
 These domains are selected for smartphone/chip thermal relevance, not for completeness of all Russian heat-transfer science.
 
@@ -57,6 +60,7 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 | **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | China already has electronic-cooling fan source imaging and narrow-space/duct acoustics; Russian value is now a **watch-level method hypothesis**, not a country advantage |
 | **Thermal materials / interfaces** | Skoltech; NUST MISIS; MSU; SPbU carbon/graphite line | BN/graphene/CNT composites, graphite/carbon thermal structures, materials infrastructure | **Supporting** | No current evidence of a Russia-specific smartphone material advantage versus China/global ecosystem |
 | **Software thermal control / DVFS** | **SPbU smartphone DVFS / stochastic optimization** | direct Android/smartphone DVFS and optimization lineage | **Direct mobile relevance, differentiation unresolved** | Interesting direct mobile signal, but generic adaptive DVFS is crowded; only uncertainty-aware/system-level control may remain differentiated |
+| **Foundational mathematical physics / nonlinear stability** | **Institute of Computational Modelling SB RAS**; Altai State University; Siberian Federal University links; **Lavrentyev Institute of Hydrodynamics SB RAS**; Kutateladze-adjacent modeling line | current exact-solution / stability / evaporation-convection / thermocapillary-film models; coupled gas–liquid interface models; 3D evaporating-film microchannel modeling | **Foundational enabling relevance; device transfer indirect** | **PROMISING FOUNDATIONAL CAPABILITY CANDIDATE**: may strengthen dryout/instability/control insight, but China/global applied-math comparator is not yet normalized |
 | **Diagnostics / reliability / process know-how** | Kutateladze optical/multiphase diagnostics; **MPEI 42-month hierarchy**; TPU optical/PIV/PLIF/surface process; TsAGI/PNRPU acoustics | long-duration two-phase stability, optical flow/surface diagnostics, aeroacoustic test facilities | **Cross-cutting** | This may be more strategically important than individual components: Russia often shows depth in mechanism diagnosis, failure regimes and long experimental lineages |
 
 ---
@@ -201,6 +205,44 @@ Direct mobile relevance is useful, but the world/China control baseline is advan
 - generic fan;
 - generic DVFS;
 - generic microchannel cooling.
+
+---
+
+### Foundational layer — mathematical physics / applied mathematics
+
+This layer was added after project-scope review and is intentionally separated from device categories.
+
+Representative current evidence:
+
+- **[Application of a Partially Invariant Exact Solution of the Thermosolutal Convection Equations for Studying the Instability of an Evaporative Flow in a Channel Heated from Above](https://doi.org/10.3390/sym15071447)** — Institute of Computational Modelling SB RAS line — 2023.
+  - exact solution;
+  - linear stability threshold;
+  - thermocapillary / gas-pumping competition;
+  - oscillatory cellular instability.
+
+- **[Study of the gas flow rate effect on the parameters of evaporative convection regimes using an exact solution](https://doi.org/10.1016/j.ijthermalsci.2024.109179)** — Bekezhanova, Goncharova, Laskovets — *International Journal of Thermal Sciences*, 2024.
+  - exact thermosolutal-convection solution;
+  - experiment-informed evaporation-rate comparison;
+  - three instability-wave modes predicted.
+
+- **[On one exact solution of an evaporative convection problem with the Dirichlet boundary conditions](https://geodesic.mathdoc.fr/item/JSFU_2024_17_2_a6/)** — Bekezhanova, Goncharova — *Journal of Siberian Federal University: Mathematics & Physics*, 2024.
+  - HFE-7100 / nitrogen;
+  - external thermal-load effect on velocity, temperature, evaporation and vapor concentration.
+
+- **[Dependence of Heat Exchange in an Evaporating Liquid Film in a Microchannel on Heater Size](https://doi.org/10.1134/S0021894424050092)** — V.V. Kuznetsov, Lavrentyev Institute of Hydrodynamics SB RAS — 2024.
+  - 3D model coupling heat/mass transfer, temperature-dependent properties, thermocapillarity, free-surface deformation, evaporation and condensation.
+
+Current interpretation:
+**there is a real project-relevant signal that Russian applied mathematics / mathematical physics can contribute to thermal failure-mechanism understanding.**
+
+But the final claim must be narrower than:
+> "Russia is good at mathematics."
+
+The decision question is:
+> can this foundation generate a better/faster model, instability boundary, reduced-order design rule or experiment than our domestic baseline?
+
+Current state:
+**FOUNDATIONAL CAPABILITY CANDIDATE — systematic China comparison pending.**
 
 ---
 
