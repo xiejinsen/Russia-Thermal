@@ -14,7 +14,7 @@ The structure must make it obvious:
 
 ## Top-level architecture
 
-The existing 00–09 workstream structure is retained because it matches the research decision chain.
+The 00–09 research workstreams are retained because they match the research decision chain. Workstream 10 is a separate final decision/report layer.
 
 | Folder | Role | Authoritative content |
 |---|---|---|
@@ -27,7 +27,8 @@ The existing 00–09 workstream structure is retained because it matches the res
 | 06_active-cooling | active-cooling mechanism track | active-cooling portfolio/index |
 | 07_china-benchmark | China/global comparison baseline | China mobile baseline + institution map |
 | 08_opportunities-transfer | decision-analysis layer | constraints, comparisons, gates, engineering feasibility |
-| 09_collaboration-roadmap | partner/PoC/roadmap layer | readiness, PoC specs, collaboration roadmap |
+| 09_collaboration-roadmap | partner/PoC/roadmap research layer | readiness, PoC specs, collaboration roadmap |
+| 10-final-report | final decision/report layer | executive decision, strategic bets, collaboration portfolio, roadmap, evidence appendix |
 | evidence | evidence governance + cross-workstream registers | source register, QA, rankings, standards |
 
 ## Current-vs-history rule
@@ -54,6 +55,8 @@ When files disagree, use this order:
 3. current matrix / decision file inside the workstream
 4. supporting deep-dive file
 5. historical scan/snapshot
+
+`10-final-report/` is **not** part of the research-authority hierarchy. It summarizes only gated results from 00–09. If it disagrees with the research authority, Workstream 10 must be corrected.
 
 If inconsistency is found, fix the lower-level stale file or clearly mark it historical.
 
@@ -84,6 +87,7 @@ Update all that apply:
 9. top-level portfolio materially changed → root `README.md`
 10. decision-relevant correction → `CHANGELOG.md`
 11. evidence-quality gap changed → `evidence/repository_completeness_matrix.md`
+12. Primary/Reserve/Kill/roadmap changed materially → relevant `10-final-report/` file
 
 A research round is not considered archived until the required updates are complete.
 
@@ -139,3 +143,26 @@ Instead:
 - future files follow this architecture.
 
 A later physical migration is only justified if a folder becomes too large to navigate.
+
+
+## Final-report layer rule
+
+`10-final-report/` is a decision-presentation layer, not another evidence repository.
+
+It may:
+- summarize;
+- rank decisions;
+- visualize the funnel;
+- present Strategic Bets;
+- present partner/roadmap recommendations.
+
+It must not:
+- introduce uncited facts;
+- hold the only copy of primary evidence;
+- override current workstream status;
+- promote an immature direction merely for narrative completeness.
+
+Promotion into the final report is controlled by:
+`../10-final-report/final_report_readiness_gate.md`.
+
+The final report should be refreshed only for material decision changes, not after every minor source addition.
