@@ -143,7 +143,7 @@ same substrate + same target fluid + same thickness envelope as Pavlenko/China r
 
 ## Next data request
 
-- actual coating thickness;
+- current as-built coating-thickness distribution / yield (public lineage now gives a representative ~5 μm state, with >10–15 μm possible under other deposition conditions);
 - substrate compatibility (Cu / SS);
 - HFE / low-boiling dielectric compatibility;
 - contact angle in working fluid context;
