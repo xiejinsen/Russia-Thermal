@@ -262,3 +262,55 @@ Do not promote:
 
 Next gate:
 matched China foundational comparator.
+
+
+## 9. Siberian network verification update — 2026-10-04
+
+The earlier "Siberian cluster" hypothesis has now been pressure-tested.
+
+### Verified current core
+
+**Kutateladze ↔ Lavrentyev**
+- current Kabov + V.V. Kuznetsov publication on shear-driven liquid-film cooling of microelectronics;
+- direct model/mechanism collaboration;
+- older joint work confirms continuity.
+
+**Kutateladze ↔ NSU**
+- current dual affiliations;
+- NSU laboratories explicitly cover boiling, evaporation, 10–100 μm films, advanced optical diagnostics and electronics/mobile cooling;
+- NSU functions as a talent / execution / experiment bridge.
+
+### Verified historical theory–experiment bridge
+
+**ICM/Altai exact-solution line ↔ Kutateladze**
+- Goncharova/Kabov direct coauthorship;
+- Bekezhanova/Kabov stability work;
+- exact-solution papers explicitly linked to Institute of Thermophysics experiments;
+- current 2024/2026 exact-solution papers still use/cite the Lyulin/Kabov experimental lineage.
+
+### Still unverified
+
+No decision-grade public proof was recovered for:
+- a 2023–2026 formal ICM–Kutateladze joint grant/lab on this thermal problem;
+- current direct ICM ↔ Lavrentyev collaboration.
+
+### Updated interpretation
+
+Do not call this one integrated consortium.
+
+Use:
+**Siberian modular capability network**
+
+Current architecture:
+- analytical stability: ICM/Altai — optional theory module;
+- detailed fluid model: Lavrentyev — verified current technical link;
+- experiment/diagnostics: Kutateladze — anchor;
+- talent/execution: NSU — verified current bridge.
+
+Canonical network memo:
+[Siberian Theory–Fluid–Experiment Capability Network](siberian_theory_fluid_experiment_network_v01.md).
+
+### Collaboration consequence
+
+Preferred outreach hypothesis:
+**Kutateladze-anchored modular team**, with Lavrentyev/NSU included where relevant and ICM/Altai added only after current relationship/ownership is confirmed.
