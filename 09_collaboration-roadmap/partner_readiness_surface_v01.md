@@ -156,7 +156,7 @@ Main unresolved:
 - hydrocarbon-layer contamination;
 - copper transfer;
 - sealed two-phase durability;
-- RU2812668 inventor / claim mapping.
+- RU2812668 inventor / claim mapping — **CLOSED publicly**.
 
 TPU remains valuable because its optical/surface-control capability can create a highly discriminating patterning experiment.
 
@@ -199,3 +199,34 @@ Need:
 No team is contract-ready.
 
 Current order is based on the smallest evidence gap to a discriminating Stage-0 experiment, not prestige.
+
+
+## Unified Stage-0 decision status
+
+Canonical scorecard:
+[Stage-0 Partner × Technology Decision Scorecard](stage0_partner_technology_decision_scorecard_v01.md)
+
+| Priority | Partner | Current Stage-0 decision | Main prerequisite |
+|---:|---|---|---|
+| 1 | Pavlenko / Kutateladze | **GO WITH PREREQUISITE** | shareable electrochemical process window + thin-mesh feasibility |
+| 2 | MPEI / Ivanov | **GO WITH PREREQUISITE** | current as-built dataset + geometry scale-down ladder |
+| 3 | TPU / Feoktistov | **GO WITH PREREQUISITE** | laser-only vs hydrocarbon branch + copper/vacuum first gate |
+| — | MPEI ordered wick | **HOLD** | physical thin coupon |
+
+### Readiness changes from this research round
+
+**Pavlenko**
+- no key recipe values were recovered after targeted public follow-up;
+- this is now intentionally routed to **partner-only**, not left as an endless search item.
+
+**MPEI**
+- representative ~5 μm coating state and ~100 μm groove-radius lineage recovered from the dissertation;
+- same-team 0.2 mm water-boiling CHF lineage recovered;
+- exact-current hierarchy high-flux phone transfer remains experiment-only.
+
+**TPU**
+- RU2812668 inventor and independent-claim mapping closed;
+- Feoktistov/Orlova direct patent linkage verified;
+- remaining risk is process/material compatibility, not patent identity.
+
+No team is contract-ready.
