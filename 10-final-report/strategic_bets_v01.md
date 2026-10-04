@@ -138,10 +138,12 @@ Must prove:
 
 Not final Strategic Bets yet:
 - multi-hotspot two-phase routing;
-- confined microfan tonal/aeroacoustic control;
 - TPU target-fluid biphilic surface;
 - MPEI hierarchical coating;
 - MPEI ordered porous wick.
+
+Watch / method reserve:
+- phone-scale confined microfan tonal/aeroacoustic diagnosis — broad domestic electronic-cooling fan aeroacoustic capability is already strong; Russian differentiation is unproven.
 
 These remain challengers or supporting mechanisms until the readiness gate is passed.
 
@@ -159,6 +161,8 @@ New primary evidence:
 
 Why it matters:
 - 42-month R410A two-phase stability materially improves reliability confidence;
+- **China reliability comparator correction:** SCUT-led work now demonstrates copper-water VC oxygen-failure mechanisms, oxidation grading and accelerated service-life prediction, so MPEI is not differentiated by reliability in general;
+- the residual MPEI signal is **actual multi-year operation of one engineered hierarchical evaporator surface**;
 - 2024 dissertation closes part of the as-built coating-thickness uncertainty;
 - 2017/2020 0.2 mm water-boiling/CHF lineage, including Ivanov, upgrades high-flux capability evidence to PARTIAL;
 - current coating/IP/project continuity is strong.
