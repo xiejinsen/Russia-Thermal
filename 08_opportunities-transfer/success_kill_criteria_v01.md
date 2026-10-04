@@ -54,14 +54,15 @@ Can the mechanism be **closed and self-contained**, rather than a laboratory flo
 # H2. Sub-mm phase-change surface / capillary physics
 
 ## Technical hypothesis
-Russian boiling / porous-surface / wettability expertise can improve an ultra-thin VC or evaporator beyond what current Chinese product-oriented designs achieve.
+Kutateladze's dielectric boiling-crisis diagnostics/process know-how can shift the **irreversible-dryout boundary** of an ultra-thin VC/evaporator beyond strong current Chinese dryout/rewetting and wick baselines.
 
 ## Russia signal
 Pavlenko / Kutateladze:
-- dielectric-fluid boiling;
-- capillary-porous coatings;
-- modified micro/nano surfaces;
-- CHF / dryout physics.
+- HFE-7100 / Novec reversible→irreversible dry-spot dynamics;
+- high-speed IR / reflected-light / ML-assisted crisis diagnostics;
+- liquid-layer-height crisis-mode transition;
+- structured-surface drying-front dynamics;
+- modified surface/process know-how.
 
 ## Minimum PoC
 Use an existing sub-mm VC-style envelope.
@@ -79,6 +80,13 @@ At the same thickness and fluid inventory:
 - >=20% higher dryout/CHF limit; or
 - >=15% lower evaporator thermal resistance; or
 - >=20% faster recovery after transient dryout;
+
+and at least one mechanism-level benefit:
+- later reversible→irreversible dryout transition;
+- lower dry-spot growth/propagation at matched heat flux;
+- better post-cycle wetting/capillary retention.
+
+Also require:
 - no loss in startup reliability;
 - manufacturable coating over relevant phone-scale area.
 
@@ -90,7 +98,7 @@ At the same thickness and fluid inventory:
 - benefit is already matched by Chinese wick/surface literature and patents.
 
 ## Key unanswered question
-Does Russian mechanism depth translate into a **sub-mm manufacturable structure**, not just a better boiling curve in a test cell?
+Does Russian **dielectric irreversible-dryout diagnostic/control depth** change the failure boundary of a sub-mm manufacturable device beyond strong domestic controls, rather than merely reproducing known dryout/rewetting behavior?
 
 ---
 
