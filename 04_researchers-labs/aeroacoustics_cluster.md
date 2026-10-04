@@ -88,3 +88,63 @@ Measure:
 
 ### Important strategic point
 The likely collaboration value is **method + experimental science**, not importing an aircraft fan design.
+
+
+## China electronics-cooling fan comparator — 2026-10-04
+
+New comparators materially narrow the Russia thesis:
+
+1. **[Experimental Analysis of Cooling Fan Noise by Wavelet-Based Beamforming and Proper Orthogonal Decomposition](https://doi.org/10.1109/ACCESS.2020.3006483)** — PKU/HKUST-linked team — *IEEE Access*, 2020.
+   - practical CPU cooling fan;
+   - acoustic source imaging;
+   - BPF / harmonics / subharmonic / broadband decomposition.
+
+2. **[Study on the Influence of Inlet Asymmetry on Aerodynamic Noise of Cooling Fan](https://doi.org/10.1115/1.4048449)** — SJTU — 2020.
+   - electronic cooling-fan inlet non-uniformity;
+   - tonal-noise mechanism.
+
+3. **[Aerodynamic Noise Characteristics of Axial Flow Fan in Narrow Space and Noise Reduction Based on Flow Control](https://doi.org/10.1115/1.4063127)** — SJTU — 2023.
+   - installed narrow-space electronics cooling;
+   - obstacle/recirculation/noise coupling.
+
+4. **[Experimental Study on Aerodynamic Noise Reduction of In-series Axial Cooling Fans for Electronic Devices](https://doi.org/10.3901/JME.2022.22.406)** — SJTU — 2022.
+   - tonal and broadband analysis;
+   - short-duct noise reduction.
+
+### Decision correction
+
+The following Russia thesis is **killed**:
+
+> Russia is attractive because China lacks electronic-cooling fan aeroacoustics.
+
+China clearly has:
+- source imaging;
+- modal/tonal analysis;
+- inlet distortion;
+- duct control;
+- narrow-space installed-condition research.
+
+The remaining joint hypothesis is much narrower:
+
+> Can Russian aeroacoustic facilities/methods provide better actionable source diagnosis on an **actual phone-class centrifugal microfan (~18–25 mm, ~20k rpm) in a production-like confined duct**?
+
+No strong public academic proof at that exact scale was recovered for China **or** Russia in this pass.
+
+Current country-level state:
+**WATCH / METHOD RESERVE — not a Russia advantage.**
+
+### Smallest fair benchmark
+
+Use the same phone-class microfan / duct / mesh / inlet / outlet:
+- same cooling target;
+- same rpm points;
+- same device envelope.
+
+Compare:
+- BPF/tonal-source attribution;
+- broadband decomposition;
+- source localization confidence;
+- actionable geometry recommendation;
+- test time / instrumentation burden.
+
+Promote only if the Russian method gives a materially better design decision than the domestic baseline.
