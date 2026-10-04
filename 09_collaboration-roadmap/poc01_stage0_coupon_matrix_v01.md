@@ -20,7 +20,7 @@ Stage 0 must answer, before expensive VC builds:
 ## Engineering anchor
 
 Strong reference:
-https://doi.org/10.3390/mi15050627
+**[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 
 Reference facts:
 - 0.39 mm finished UTVC;
@@ -99,7 +99,7 @@ Purpose:
 
 Important supply context:
 3M completed PFAS manufacturing exit at end-2025:
-https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/
+**[PFAS Stewardship — Operations & Innovation](https://www.3m.com/3M/en_US/pfas-stewardship/operations-innovation/)** — 3M — current.
 
 ### Fluid W3 — future low-boiling dielectric candidate
 
@@ -139,8 +139,8 @@ Reference features:
 - same fluid and substrate as challenger.
 
 Evidence:
-https://doi.org/10.3390/mi15050627
-https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774
+- **[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
+- **[Effect of Laser Ablation Surface Modification on the Capillary Performance of the Wick Structure for Ultra-Thin Vapor Chamber](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774)** — Jiu Yu, Wenqi Fang, Guoliang Hu *et al.* — *International Journal of Heat and Mass Transfer*, 2025.
 
 Measurements:
 - capillary uptake;
@@ -156,10 +156,10 @@ Measurements:
 ### Published evidence
 
 HFE-7100 modified mesh:
-https://doi.org/10.1134/S1810232825700183
+**[Electrochemical Modification of the Metal Mesh Surface for Heat Transfer Enhancement during Boiling of a Thin Layer of HFE-7100](https://doi.org/10.1134/S1810232825700183)** — A.E. Brester, D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Journal of Engineering Thermophysics*, 2025.
 
 Mesh-geometry evidence:
-https://doi.org/10.1134/S0040601525700454
+**[Effect of Layer Height on Heat Transfer during Boiling of Dielectric Liquid on Mesh Coatings](https://doi.org/10.1134/S0040601525700454)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Thermal Engineering*, 2025.
 
 Published mesh family includes:
 - 100 um wire / 230 um aperture;
@@ -185,7 +185,7 @@ B3:
 - optional thin capillary/coating route based on RU2793671-style tens-of-microns functional layer, recognizing it is a different process family.
 
 Patent:
-https://patents.google.com/patent/RU2793671C2/en
+**[Heat Transfer Wall of a Heat Exchanger and Method for Forming a Coating to Intensify Heat Transfer](https://patents.google.com/patent/RU2793671C2/en)** — A.A. Nikiforov, A.N. Pavlenko, M.Yu. Kuprikov *et al.* — RU2793671C2 — Kutateladze Institute of Thermophysics SB RAS / A.A. Nikiforov — 2023.
 
 ### Required outcomes
 
@@ -210,105 +210,146 @@ Kill/reframe if:
 
 ---
 
-## 5. Arm C — TPU biphilic / contrast-wetting coupon
+## 5. Arm C — TPU laser / wettability-contrast coupon
 
-Primary:
-https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413
+Primary evidence:
+- **[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
+- **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
+- **[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — TPU — 2024.
 
 ### Stage-0 strategy
 
-Use the **pattern principle**, not a blind copy of the original open-droplet experiment.
+Do **not** treat TPU as one coupon family.
 
-C1:
+C1 — **laser-only / low-organic control**
 - copper substrate / thin mesh;
+- transfer the Feoktistov/Orlova laser-texture capability without the hydrocarbon-derived hydrophobic layer;
+- purpose: isolate topology/roughness benefit with lower contamination risk.
+
+C2 — **hydrocarbon-functionalized biphilic branch**
+- copper substrate;
 - spatial wetting contrast;
-- minimal added vertical thickness.
+- same geometry envelope as C1;
+- purpose: test whether wetting contrast adds confined liquid-routing / rewetting value beyond laser topology alone.
 
-C2:
-- same pattern pitch/fraction sweep under W1.
+C3 — matched strong generic control
+- standard oxidation / hydrophilic laser-treated reference;
+- same copper, thickness and test sequence.
 
-C3:
-- W3 test only after fluid selection.
+W3 is tested only after a future dielectric candidate is selected.
 
 ### Required outcomes
 
-- initial wetting contrast;
-- contrast after working-fluid soak;
-- contrast after vacuum/thermal processing;
-- capillary directionality / redistribution;
-- boiling/rewetting behavior;
-- pattern durability.
+Before two-phase thermal ranking:
+- actual profile / feature height;
+- initial wetting state and spatial contrast;
+- vacuum/process mass-loss or contamination proxy;
+- W1 water soak;
+- contact/wetting retention after vacuum/thermal exposure;
+- capillary directionality / redistribution.
 
-### Current evidence gap
+Then:
+- boiling / dryout / rewetting behavior;
+- pattern durability;
+- comparison C1 vs C2 vs Arm A.
 
-No direct public evidence found in this research round for:
-- HFE-7100 operation;
+### Current evidence state
+
+Publicly closed:
+- RU2812668 inventor/team linkage;
+- independent laser-process claim;
+- quantitative laser window;
+- steel roughness range.
+
+Still not publicly demonstrated:
+- copper transfer;
+- vacuum/outgassing;
 - sealed sub-mm VC;
-- long vacuum/cycling stability.
+- long sealed two-phase cycling.
 
-This is recorded as **NOT PUBLICLY EVIDENCED**, not proof of absence.
+This is **EXPERIMENT-ONLY** for Stage-0.
 
 ### Kill gate
 
-Kill before Stage 1 if:
-- wetting contrast collapses in W1/W3;
-- process adds unacceptable coating thickness;
-- only generic prior-art biphilic behavior remains;
-- no rewetting/capillary benefit beyond Arm A.
+Kill / reframe before Stage 1 if:
+- hydrocarbon branch shows unacceptable contamination/outgassing;
+- wetting contrast collapses in W1/W3 or after processing;
+- laser-only / standard reference matches C2;
+- no confined rewetting/capillary benefit beyond Arm A;
+- feature height/process consumes unacceptable vertical budget.
 
 ---
 
 ## 6. Arm D — MPEI Ivanov hierarchical/coating coupon
 
 Evidence:
-https://patents.google.com/patent/RU2727406C1/en
-https://patents.google.com/patent/RU2860061C1/en
-https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
+- **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
+- **[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
+- **[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
+- **[Method of Forming a Porous Coating of Nanoparticles](https://patents.google.com/patent/RU2727406C1/en)** — Yu.A. Kuzma-Kichta, N.S. Ivanov, D.S. Kiselev, A.V. Lavrikov — RU2727406C1 — MPEI — 2020.
+- **[Method for Forming Heat Transfer Surface with Adjustable Wettability Properties](https://patents.google.com/patent/RU2860061C1/en)** — N.S. Ivanov, M.M. Alyautdinova — RU2860061C1 — MPEI — 2026.
+
+Public process lineage:
+- ~100 μm groove-radius hierarchy;
+- representative ~5 μm Al2O3 coating state;
+- thicker >10–15 μm deposition states under other conditions;
+- ~0.2 mm water-boiling/CHF capability in the same MPEI/Ivanov lineage;
+- 42-month R410A durability for the later hierarchy.
 
 ### Stage-0 strategy
 
-D1:
-- reproduce current hierarchical/tunable-wetting coating on reference substrate.
+D1 — current/as-built hierarchy control
+- obtain or reproduce the current partner geometry;
+- measure actual groove depth / width / pitch / tolerance;
+- measure current coating-thickness distribution and sample variation.
 
-D2:
-- quantify actual **total functional coating thickness**, not only micro/nanoparticle feature scale.
+D2 — half-scale hierarchy
+- reduce groove geometry while preserving the coating process.
 
-D3:
-- test W1 first; W3 after selection.
+D3 — phone-target shallow hierarchy
+- fit the <=120–150 μm functional-element budget where possible.
+
+For D1–D3:
+- W1 water first;
+- copper primary transfer substrate;
+- high-flux step-up before sealed-VC build.
 
 ### Required outcomes
 
-- total layer thickness;
+- true surface profile / total functional height;
+- coating thickness distribution;
 - adhesion;
-- porosity / morphology;
 - capillary uptake;
-- permeability impact where applicable;
-- wetting state after soak/vacuum/cycling;
-- thermal response.
+- measured permeability or robust proxy;
+- wetting/capillary state after soak/vacuum/cycling;
+- high-flux dryout/CHF/rewetting trend;
+- comparison versus Arm A.
 
-### Current evidence gap
+### Current evidence state
 
-No direct current public evidence found in this round for:
-- HFE-7100 / product dielectric fluid;
-- <0.5 mm sealed VC;
-- phone manufacturing cycle.
+The old questions:
+- "is any thin-channel/high-flux capability present?"
+- "is coating thickness completely unknown?"
 
-Again:
-**not publicly evidenced**, not proof of absence.
+are now partly closed by public lineage.
+
+The decisive unknown is narrower:
+> does the **exact long-life hierarchical surface** keep its liquid-supply / dryout advantage when geometry is aggressively scaled and heat flux is raised toward the phone/UTVC regime?
 
 ### Kill gate
 
-- functional layer cannot fit <=150 um total surface/wick budget;
-- wetting behavior fails in W1/W3;
-- adhesion/cycling unstable;
+- hierarchy cannot scale below the Stage-0 geometry ceiling;
+- permeability/liquid supply collapses during scale-down;
+- high-flux advantage disappears;
+- copper/process/cycling is unstable;
 - thermal benefit is generic and matched by Arm A.
 
 ---
 
 ## 7. Arm E — MPEI ordered-wick pre-screen
 
-Primary:
-https://doi.org/10.30724/1998-9903-2026-28-4-193-205
+Primary evidence:
+[MPEI ordered-wick capillary/permeability model](https://doi.org/10.30724/1998-9903-2026-28-4-193-205) — primary paper, 2026; full readable citation remains a P1 bibliography backfill item.
 
 Status:
 **not yet a full thermal coupon arm.**
@@ -441,11 +482,12 @@ These thresholds are **internal screening criteria**, not literature claims.
 
 ## 11. Current predicted sequence
 
-Most ready:
-1. **Pavlenko mechanism transfer** — 60–100 um-class mesh / thin functional surface.
-2. **TPU biphilic pattern** and **MPEI Ivanov coating** — parallel small coupons.
+Stage-0 priority:
+1. **Pavlenko mechanism transfer** — 60–100 μm-class mesh / thin functional surface.
+2. **MPEI Ivanov hierarchy** — current / half-scale / phone-target geometry ladder with water high-flux step-up.
+3. **TPU** — laser-only low-organic vs hydrocarbon-biphilic copper screen.
 
 Pre-device:
-3. MPEI ordered wick.
+4. MPEI ordered wick.
 
 The purpose is to **kill weak transfer paths quickly**, not guarantee a Russian arm wins.
