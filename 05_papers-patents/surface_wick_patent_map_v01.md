@@ -443,3 +443,43 @@ Direct claim extraction remains pending before using them for a blocking-IP conc
 - TPU RU2812668 inventor/team mapping: **low / pending**
 - Patent overlap/FTO conclusions: **not assessed legally**
 - System-level whitespace: **analyst inference / hypothesis**
+
+## 12. OPPO / vivo adjacent OEM claim update — 2026-10-04
+
+### OPPO CN118368852A / WO2024152684A1
+
+PCT family:
+https://patents.google.com/patent/WO2024152684A1/en
+
+Priority:
+2023-01-18.
+
+Public abstract/claim-level architecture recovered in this round:
+- first and second shell form sealed cavity;
+- multiple first support strips partition the cavity into sub-cavities;
+- support strips are microporous so working fluid can pass;
+- support strips combine mechanical support and fluid circulation;
+- architecture aims to increase vapor-flow space / reduce vapor resistance.
+
+Interpretation:
+this further crowds generic claims around:
+- support structure + fluid-return function;
+- coplanar vapor/liquid organization;
+- reducing vapor resistance inside thin VC.
+
+Do not treat the PCT application's ceased status as equivalent to no Chinese-family rights; CN family status must be evaluated separately before legal conclusions.
+
+### vivo CN118076072A
+
+Patent record:
+https://patents.google.com/patent/CN118076072A/en
+
+Current round verified:
+- vivo assignee;
+- 2024 priority/publication timeframe;
+- vapor-chamber / electronic-device relevance;
+- cited by later Honor VC art.
+
+Exact independent-claim extraction remains **PENDING**.
+
+No blocking-IP conclusion is made from this record yet.
