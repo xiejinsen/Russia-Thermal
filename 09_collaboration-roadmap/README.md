@@ -32,10 +32,14 @@ Convert surviving hypotheses into actionable partner discussions, discriminating
 
 ### #1 Pavlenko / Kutateladze — Tier A lead
 Question:
-can strong boiling/dryout physics be transferred to ~60–100 μm-class phone wick and product-path fluid?
+can Kutateladze's **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostic and control know-how** shift the phone-scale irreversible-dryout boundary beyond strong domestic wick controls?
 
-Main risk:
-manufacturing/process scaling.
+Independent China already covers generic dryout/rewetting, repeated-cycle wetting degradation, treated mesh and dryout modeling.
+
+Main risks:
+- phone geometry / fluid / process transfer;
+- whether the diagnostic/control depth changes a real phone design;
+- manufacturing/process scaling.
 
 ### #2 MPEI / Ivanov — Tier B+ reliability/process challenger
 New evidence:
@@ -73,7 +77,7 @@ It ranks:
 > the current evidence-to-Stage-0 path.
 
 Each team attacks a different uncertainty:
-- Pavlenko: high-flux mechanism;
+- Pavlenko: **irreversible-dryout boundary / crisis diagnostics**;
 - MPEI: long-duration stability;
 - TPU: controllable spatial surface engineering.
 
