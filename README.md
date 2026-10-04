@@ -96,8 +96,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~71%**
-**Estimated remaining: ~29%**
+**Estimated research completion: ~73%**
+**Estimated remaining: ~27%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -198,6 +198,14 @@ Canonical map:
 Focused file:
 [Pavlenko Dryout/Rewetting China Pressure Test](08_opportunities-transfer/pavlenko_dryout_rewetting_china_pressure_test_v01.md)
 
+**MPEI China-pressure-test result**
+- China already has strong copper-water VC failure physics, 150–200 °C accelerated lifetime prediction, oxidation QA and mobile two-phase hardware.
+- Targeted searches did not recover a matched public China analogue for **the same engineered evaporator surface under actual multi-year two-phase operation with thermal + morphology + capillary-aging tracking**.
+- MPEI therefore retains a narrow distinction in **actual multi-year engineered-surface aging evidence**, not generic reliability.
+
+Focused file:
+[MPEI Multi-Year Aging China Pressure Test](08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md)
+
 **Current management structure: 3 mechanism candidates + 1 foundational reserve.**
 
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
@@ -239,7 +247,7 @@ No current partner is contract-ready.
 This is an experiment-readiness order, not a final partner ranking:
 
 1. **Pavlenko / Kutateladze** — dielectric irreversible-dryout / boiling-crisis diagnostics; main gap is whether this depth shifts the failure boundary in phone-scale thin wick / product-fluid conditions beyond strong domestic controls.
-2. **MPEI / Ivanov** — 42-month R410A hierarchical-surface stability + 0.2 mm water/CHF lineage; main gap is exact-hierarchy high-flux/sub-mm scaling.
+2. **MPEI / Ivanov** — **actual 42-month engineered-surface aging evidence**; China is stronger in product VC reliability, but no matched public multi-year same-surface analogue was recovered. Main gap is whether capillary/surface aging becomes a useful phone-scale early-warning indicator after geometry/fluid/process transfer.
 3. **TPU / Feoktistov** — laser/biphilic pattern, surface durability and claim-mapped RU2812668; main gap is copper/vacuum/outgassing/sealed-fluid compatibility.
 4. **MPEI ordered wick** — pre-device until a physical thin coupon exists.
 
@@ -288,7 +296,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~71% research state.
+It is intentionally **not final** at the current ~73% research state.
 
 The report will ultimately contain:
 - executive decision;
