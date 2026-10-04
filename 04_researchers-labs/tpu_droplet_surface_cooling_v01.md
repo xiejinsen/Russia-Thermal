@@ -1,6 +1,6 @@
 # Tomsk Polytechnic University — Droplet / Wettability Surface Cooling v0.1
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Status: **HIGH-SIGNAL research line; phone transfer unproven.**
 
@@ -214,3 +214,58 @@ Promotion depends on wetting contrast surviving:
 - thermal cycling.
 
 Generic laser/biphilic processing remains too crowded to be the collaboration thesis by itself.
+
+
+## Surface-process durability update — 2026-10-04
+
+### 2024 biphilic process lineage
+
+**Biphilic heat exchange surfaces for drip irrigation cooling systems**
+https://doi.org/10.1016/j.ijheatmasstransfer.2024.125316
+
+This strengthens the continuity of TPU's laser-pattern / controlled-wettability line before the 2026 electronics-cooling work.
+
+### 2026 hydrophobization process durability
+
+**Hydrophobization of metal surfaces by laser treatment and subsequent heat treatment of hydrocarbon liquids**
+https://doi.org/10.1016/j.surfin.2026.109390
+
+Source facts from the publisher record:
+- AlMg3 alloy;
+- nanosecond-laser texture;
+- hydrocarbon-thermolysis-derived hydrophobic layer;
+- water contact angle reported up to ~169°;
+- roll-off angle <10°;
+- durability tested under humidity, saline-corrosion and sand-abrasion conditions.
+
+Process discussions describe heating around ~270 °C.
+
+### Important transfer caveat
+
+This is useful **surface-process durability** evidence, but it is not sealed-VC reliability evidence.
+
+For phone VC transfer, the hydrocarbon-derived layer creates additional questions:
+- vacuum outgassing;
+- working-fluid contamination;
+- copper compatibility;
+- post-weld / degassing thermal stability;
+- long-term two-phase wetting-state retention.
+
+Therefore sand/saline/humidity durability must not be used as proof of vacuum/sealed two-phase compatibility.
+
+## Updated decision
+
+TPU remains **Tier B+ Stage-0 challenger**, now priority #3 behind MPEI/Ivanov.
+
+Why MPEI moves ahead:
+- MPEI now has 42-month R410A two-phase device evidence;
+- TPU still lacks public sealed two-phase / vacuum-process evidence.
+
+TPU can regain priority if Stage 0 demonstrates:
+- low-outgassing patterned wetting;
+- copper/process compatibility;
+- product-fluid stability;
+- confined rewetting/liquid-routing benefit beyond a strong generic reference.
+
+Detailed collaboration brief:
+../09_collaboration-roadmap/partner_brief_tpu_stage0_v01.md
