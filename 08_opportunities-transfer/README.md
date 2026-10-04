@@ -52,7 +52,7 @@ Use:
 ## Current challengers
 
 - TPU: biphilic / contrast-wetting Stage-0 challenger
-- MPEI Ivanov: hierarchical/tunable coating Stage-0 challenger
+- MPEI Ivanov: hierarchical/tunable coating + long-life reliability Stage-0 challenger
 - MPEI ordered wick: pre-device challenger
 
 ## Completed this round
@@ -66,12 +66,16 @@ Use:
 
 ## Next gate
 
-1. close remaining Stage-0 process evidence;
-2. verify physical manufacturability of ~60–100 um Pavlenko transfer;
-3. close TPU patent inventor/claim mapping;
-4. quantify MPEI coating thickness;
-5. complete promoted patent family/status review;
-6. then produce partner-specific 3–6 month collaboration briefs.
+The public blocker-closure round is now complete enough to stop generic search.
+
+1. Pavlenko — request partner-only electrochemical process window; then verify ~60–100 μm transfer experimentally.
+2. MPEI — request current as-built groove/coating dataset; run geometry scale-down + high-flux water ladder.
+3. TPU — inventor/claim mapping is closed; run copper **laser-only vs hydrocarbon-biphilic** vacuum/fluid screen.
+4. MPEI ordered wick — HOLD until physical thin coupon.
+5. complete promoted patent family/status review only for candidates that survive Stage-0.
+
+Canonical decision:
+../09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md
 
 ## Update rule
 
@@ -82,3 +86,14 @@ When Tier, transfer gate, fluid/geometry assumption or PoC changes, refresh:
 - PROGRESS;
 - QA matrix;
 - CHANGELOG.
+
+
+## Stage-0 blocker-closure result
+
+Current decisions:
+- Pavlenko / Kutateladze — **GO WITH PREREQUISITE**
+- MPEI / Ivanov — **GO WITH PREREQUISITE**
+- TPU / Feoktistov — **GO WITH PREREQUISITE**
+- MPEI ordered wick — **HOLD**
+
+This is permission for bounded falsification only, not final collaboration selection.
