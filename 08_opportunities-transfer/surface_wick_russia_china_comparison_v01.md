@@ -18,9 +18,11 @@ The surviving whitespace is **not**:
 
 Those capabilities are already strongly represented in modern Chinese/global UTVC work.
 
-The surviving thesis is:
+The surviving thesis is now narrower:
 
-> **fluid-specific control of nucleation, dryout, rewetting and wettability retention in a sub-mm sealed two-phase device.**
+> **dielectric-fluid boiling-crisis diagnostics and control of the reversible→irreversible dryout transition, transferred into a sub-mm sealed two-phase device.**
+
+Independent China evidence now directly covers capillary-fed dryout, steam-induced rewetting, cycle-driven wettability degradation, modified copper-mesh boiling and pore-scale dryout prediction. Therefore generic "dryout/rewetting expertise" is no longer a Russia-specific thesis.
 
 TPU and MPEI remain valuable challengers:
 - **TPU / Feoktistov** — surface-pattern / wettability-process challenger;
@@ -417,7 +419,7 @@ It is now:
 - process recipe / current-batch morphology → **PARTNER-ONLY**;
 - thin mesh / copper / water / vacuum / cycling → **EXPERIMENT-ONLY**.
 
-The surviving differentiation remains dryout/rewetting physics, not generic mesh modification.
+The surviving differentiation is **dielectric boiling-crisis / irreversible-dryout diagnostic depth**, not dryout/rewetting in general and not generic mesh modification.
 
 ### MPEI / Ivanov
 
@@ -465,3 +467,41 @@ Therefore none of the new Russia evidence justifies a generic claim such as:
 - "Russia has better laser texturing."
 
 The only defensible promotion path remains a **measurable, phone-constrained mechanism advantage** against a strong UTVC reference.
+
+
+## China dryout / rewetting comparator correction — 2026-10-04
+
+Focused memo:
+[pavlenko_dryout_rewetting_china_pressure_test_v01.md](pavlenko_dryout_rewetting_china_pressure_test_v01.md)
+
+Strong independent China evidence now includes:
+- GDUT 2024 capillary-fed boiling: repeated-cycle CHF degradation, hydrophilicity loss and **steam-induced rewetting**;
+- GDUT 2024 grooved-porous composite wick: <=0.4 mm wick structure, capillary-fed CHF ~154.9 W/cm2;
+- SCUT 2025 superhydrophilic copper mesh: improved wicking, volumetric flow, CHF and HTC;
+- SJTU 2025 pore-scale thin-film evaporation: dynamic meniscus recession and capillary dryout-flux prediction;
+- Changsha UST 2026: HFE-7100 structured-surface confinement down to 1 mm.
+
+### Decision correction
+
+Killed:
+- generic Russia dryout advantage;
+- generic Russia rewetting advantage;
+- modified mesh as Russia-specific whitespace;
+- capillary-limit modeling as Russia-specific whitespace.
+
+Residual Russia signal:
+- HFE-7100 / Novec 649 **reversible→irreversible dry-spot statistics**;
+- high-speed IR + reflected-light/internal-reflection diagnostics;
+- ML-assisted dry-spot/contact-line analysis;
+- layer-height-driven **surface-drying ↔ hydrodynamic-crisis** transition;
+- directional drying-front propagation on structured HFE surfaces.
+
+### Pavlenko current state
+
+**Stage-0 Priority #1 / NARROW DIFFERENTIATION.**
+
+The strong test is no longer:
+> does the Russian mesh raise CHF?
+
+It is:
+> does Russia-derived failure-diagnostic/process know-how delay the **irreversible-dryout boundary** beyond strong domestic wick controls at phone-relevant geometry and fluid/process conditions?
