@@ -19,16 +19,20 @@ Not sufficient as Russia-specific collaboration reasons:
 
 ### Surviving Tier-A thesis
 
-> **working-fluid-transferable control of dryout / rewetting / wetting-state retention inside a sealed <0.5 mm-class device, proven beyond a strong modern UTVC reference.**
+> **phone-scale control of the irreversible-dryout boundary, using dielectric-fluid boiling-crisis diagnostics/process know-how inside a sealed <0.5 mm-class device, proven beyond strong domestic dryout/rewetting and UTVC references.**
 
 Lead:
 Pavlenko/Kutateladze.
 
 Why:
-- deep HFE-7100 boiling/CHF/dryout evidence;
-- negative wettability-retention evidence;
-- thin surface IP;
-- current active team.
+- direct HFE-7100 / Novec reversible→irreversible dry-spot evidence;
+- high-speed IR + reflected-light / ML-assisted crisis diagnostics;
+- liquid-inventory / crisis-mode-transition evidence;
+- structured-surface drying-front evidence;
+- current surface/process line and active team.
+
+China correction:
+independent China work already covers capillary-fed dryout, steam-induced rewetting, repeated-cycle wetting degradation, treated copper mesh, pore-scale dryout modeling and HFE-7100 confinement. Therefore **dryout/rewetting in general is no longer the differentiation claim**.
 
 ### New geometry gate
 
@@ -91,10 +95,10 @@ Advance only if:
 5. narrow IP thesis remains.
 
 Preferred foreground space:
-- fluid-transferable wetting retention;
-- <0.5 mm dryout/rewetting topology;
+- phone-scale irreversible-dryout onset control;
+- diagnostic criteria for reversible→irreversible dry-spot transition;
+- product-fluid / process-state retention of that boundary;
 - moving-hotspot liquid routing;
-- manufacturing-state retention;
 - package/VC/system co-design.
 
 ### H2 kill/downgrade gate
@@ -124,7 +128,7 @@ Downgrade if:
 ## Current portfolio
 
 Tier A:
-- target-fluid-transferable sub-mm dryout/rewetting control — Pavlenko lead
+- phone-scale irreversible-dryout boundary control — Pavlenko lead
 
 Tier A-:
 - sealed adaptive film/droplet hybrid
