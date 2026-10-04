@@ -176,6 +176,54 @@ Full 10Q: [B0 in Core Paper 10Q Decision Cards](paper_10q_cards_core_v01.md#b0--
 ---
 
 
+## B0a. 0.2 mm water-boiling microchannel / CHF precursor
+
+**[Nanoparticle Coating of a Microchannel Surface is an Effective Method for Increasing the Critical Heat Flux](https://doi.org/10.1134/S0040601517040073)** — M.V. Shustov, Yu.A. Kuzma-Kichta, A.V. Lavrikov — *Thermal Engineering*, 2017.
+
+**Review status:** FULL-TEXT / PUBLIC AUTHOR-COPY TECHNICAL REVIEW.
+
+**Background / problem**  
+Microchannels are attractive for compact electronics cooling, but boiling crisis/CHF limits heat removal. The paper asks whether an Al2O3 nanoparticle coating can shift that limit in a very thin water-boiling channel.
+
+**Technical method**  
+Water boils in a single microchannel about 0.2 mm high, 3 mm wide and 13.7 mm long. Smooth and Al2O3-coated heating surfaces are compared, with high-speed optical observation and thermal measurements.
+
+**Main conclusion**  
+The coating does not simply raise HTC everywhere. The important result is that boiling crisis occurs at a materially higher heat flux; the public full text reports roughly **15–50% higher CHF** than the uncoated channel over the tested cases, with improved transition-boiling behavior.
+
+**What we learn for our insight**  
+This is strong evidence that the MPEI/Kuzma-Kichta coating lineage is not limited to low-flux permafrost thermosyphons. It has prior **0.2 mm water-boiling / CHF** experience directly relevant to compact thermal hardware. It still does not prove the later hierarchical groove geometry can fit a 0.4 mm sealed smartphone VC.
+
+**Mobile relevance:** HIGH as supporting transfer evidence; not direct phone-device proof.
+
+Full 10Q: [B0a in Core Paper 10Q Decision Cards](paper_10q_cards_core_v01.md#b0a--02-mm-water-boiling-microchannel--chf-precursor).
+
+---
+
+## B0b. Ivanov-linked 0.2 mm water-boiling CHF study
+
+**[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
+
+**Review status:** FULL-TEXT / OPEN-ACCESS TECHNICAL REVIEW.
+
+**Background / problem**  
+The earlier microchannel result needed a more explicit CHF model/experiment comparison and sensitivity to coating geometry.
+
+**Technical method**  
+Water boiling is tested in a horizontal microchannel approximately 12.5 × 3 × 0.2 mm with and without an Al2O3 nanoparticle coating. The paper explicitly studies heat-transfer crisis/CHF and compares experiment with crisis correlations.
+
+**Main conclusion**  
+The paper confirms that a nanoparticle-coated **0.2 mm-class water-boiling channel** can shift the heat-transfer-crisis boundary. It also exposes that CHF depends on coating thickness/particle scale and that the available dataset is limited.
+
+**What we learn for our insight**  
+This paper is especially important because **N.S. Ivanov is a co-author**, linking the current hierarchical-coating partner line to earlier thin-channel/high-flux water work. It upgrades MPEI's high-flux evidence from UNKNOWN to **PARTIAL**, not PASS, because the exact 2026 long-life hierarchical surface was not tested in this geometry.
+
+**Mobile relevance:** HIGH as partner capability lineage; exact surface/device transfer remains unproven.
+
+Full 10Q: [B0b in Core Paper 10Q Decision Cards](paper_10q_cards_core_v01.md#b0b--ivanov-linked-02-mm-water-boiling-chf-study).
+
+---
+
 ## B1. Microgroove + nanoparticle thermosyphon
 
 **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
