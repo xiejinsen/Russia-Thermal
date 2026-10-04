@@ -1,6 +1,6 @@
 # Pavlenko Phase-Change Surface Collaboration Card v0.1
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 
 Status: partner-specific technical card. This is a **GO for a discriminating lab PoC**, not yet a final collaboration recommendation.
 
@@ -325,3 +325,32 @@ Highest-priority partner questions now include:
 
 Current status:
 **Tier-A mechanism lead; demonstrated mesh geometry itself is not phone-ready.**
+
+
+## Manufacturability-closure status — 2026-10-04
+
+The public evidence is now sufficient to define the **questions**, but not to reproduce the phone-scale process.
+
+For the dynamic-hydrogen-bubble modified-mesh route, this round did not recover a complete public process window for:
+- electrolyte chemistry;
+- current density / voltage;
+- modification duration;
+- added feature/layer thickness;
+- permeability before/after treatment;
+- adhesion;
+- transfer to ~60–100 μm-class copper/phone wick.
+
+These are now explicit partner data requests rather than hidden assumptions.
+
+### Current partner priority
+
+**Stage-0 priority #1.**
+
+Pavlenko remains ahead because:
+- direct dielectric-fluid boiling / dryout evidence is strongest;
+- the failure mechanism is closest to the phone two-phase problem.
+
+MPEI/Ivanov is now priority #2 because of stronger long-duration two-phase reliability evidence, but still lacks phone heat-flux/sub-mm proof.
+
+Detailed 3–6 month brief:
+../09_collaboration-roadmap/partner_brief_pavlenko_stage0_v01.md
