@@ -49,7 +49,7 @@ The 2025/2026 modified-mesh paper states:
 - steel mesh 40;
 - dynamic hydrogen-bubble matrix modification;
 - three process regimes;
-- up to ~81% HTC improvement in the reported HFE-7100 experiment.
+- up to ~81% HTC improvement versus the surface without mesh coating as stated in the public abstract; do not treat this automatically as an 81% gain over an otherwise identical unmodified mesh.
 
 The exact transferable manufacturing recipe needed for a 60–100 μm-class wick was **not recovered from the public abstract/index evidence in this round**.
 
@@ -200,3 +200,45 @@ published geometry/process may not scale to the phone wick budget.
 - product-fluid transfer: LOW
 - long-cycle evidence: LOW
 - IP clarity: MEDIUM-LOW
+
+
+## Public-research exit — Stage-0 blocker routing
+
+Research date: 2026-10-04
+
+Targeted follow-up did **not** recover decision-grade public values for:
+- electrolyte chemistry;
+- current density / voltage;
+- treatment time;
+- resulting added layer / feature thickness;
+- permeability/open-area penalty;
+- adhesion / handling;
+- copper / 60–100 μm mesh recipe.
+
+This is now a formal **diminishing-returns exit**, not an unfinished generic search.
+
+### Reclassified actions
+
+**PARTNER-ONLY**
+1. exact process window;
+2. current-batch SEM/profile;
+3. adhesion/handling;
+4. existing copper or thin-mesh attempts;
+5. shareable background-IP / Huawei field-boundary information.
+
+**EXPERIMENT-ONLY**
+1. ~100 μm and ~60–80 μm transfer;
+2. permeability/open-area penalty;
+3. DI-water product-path transfer;
+4. vacuum / degassing;
+5. 100/500-cycle stability;
+6. dryout/rewetting comparison vs strong UTVC reference.
+
+### Stage-0 decision
+
+**GO WITH PREREQUISITE.**
+
+Prerequisite before meaningful coupon spend:
+> obtain a shareable process window sufficient to judge that modification is not intrinsically incompatible with <=100 μm-class mesh / phone metal.
+
+This remains priority #1 because the mechanism evidence is strongest, not because manufacturability is already solved.
