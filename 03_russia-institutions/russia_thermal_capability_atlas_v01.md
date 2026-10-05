@@ -55,13 +55,13 @@ These domains are selected for smartphone/chip thermal relevance, not for comple
 | **Ultra-thin VC / wick / surface** | Kutateladze/Pavlenko; **MPEI/Ivanov**; TPU/Feoktistov; MPEI ordered-wick line | modified mesh, hierarchical Al2O3 coating, adjustable wettability, ordered porous modeling, laser/wetting surfaces | **Partial**; no Russian public 0.25–0.4 mm phone-class VC frontier demonstrated | Russia is a **mechanism/process contributor**, not currently a device-level UTVC leader |
 | **Thin film / droplet / spray / interfacial transport** | **Kutateladze — Kabov/Kochkin/Chinnov**; TPU/Feoktistov | shear-driven film/dry-spot/CHF lineage; **12.5 μm-high × 10 mm slit** two-phase instability mapping; microdroplet generation | **Mechanism strong / system transfer low** | broad thin-film advantage is killed by strong China evidence; residual Russia value is **shear-driven free-surface instability/dry-spot physics under extreme confinement** |
 | **LHP / passive routing** | **Institute of Thermal Physics UB RAS — Maydanik/Chernysheva/Vershinin** | foundational/deep LHP lineage; current serviceability theory; flat/flexible devices | **Partial** | China now covers mobile miniaturization, multi-source routing and operating/failure physics; Maydanik is **Watch / knowledge reserve**, not an active country-differentiation candidate |
-| **Microchannel / embedded liquid cooling** | Kutateladze microchannels; MPEI thin-channel boiling; Bauman narrow-channel work | micro/slit-channel two-phase and thermal-hydraulic work | **Mechanism only / integration weak** | Useful source of physics; no evidence that Russia owns the current electronics integration frontier |
+| **Microchannel / embedded liquid cooling** | Kutateladze microchannels; **MPEI + JIHT RAS current microchannel-boiling collaboration**; Bauman narrow-channel work | micro/slit-channel two-phase and thermal-hydraulic work; current MPEI/JIHT boiling experiments | **Mechanism only / integration weak** | JIHT is a useful supporting node in the Moscow two-phase ecosystem; no evidence that Russia owns the current electronics integration frontier |
 | **Active airflow / synthetic jet / EHD** | Kutateladze synthetic-jet line; SPbU electrophysics/EHD | synthetic-jet heat transfer; ionic-wind modeling/adjacent work | **Exploratory** | Current Russian public evidence is too thin for a country-level advantage claim |
 | **Aeroacoustics / fan-noise methods** | **TsAGI**, **PNRPU**, CIAM | aeroacoustic facilities, fan/rotor noise, aerodynamic-noise testing, source/noise-control methods | **Method transfer plausible / phone scale unproven** | China already has electronic-cooling fan source imaging and narrow-space/duct acoustics; Russian value is now a **watch-level method hypothesis**, not a country advantage |
 | **Thermal materials / interfaces** | Skoltech; NUST MISIS; MSU; SPbU carbon/graphite line | BN/graphene/CNT composites, graphite/carbon thermal structures, materials infrastructure | **Supporting** | No current evidence of a Russia-specific smartphone material advantage versus China/global ecosystem |
 | **Software thermal control / DVFS** | **SPbU smartphone DVFS / stochastic optimization** | direct Android/smartphone DVFS and optimization lineage | **Direct mobile relevance, differentiation unresolved** | Interesting direct mobile signal, but generic adaptive DVFS is crowded; only uncertainty-aware/system-level control may remain differentiated |
 | **Foundational mathematical physics / nonlinear stability** | **Institute of Computational Modelling SB RAS**; Altai State University; **Lavrentyev Institute of Hydrodynamics SB RAS**; Kutateladze-adjacent experimental line | continuous 2023–2026 exact/group-invariant evaporative-convection solutions; stability thresholds; experiment-informed closure; 3D evaporating-film microchannel modeling | **Foundational enabling relevance; strongest direct link to film-instability route** | **NARROW FOUNDATIONAL DIFFERENTIATION CANDIDATE**: China is strong in nonlinear stability, phase-change numerics and inverse thermal methods; residual Russian value is analytical interpretability / exact-solution lineage, not broad math superiority |
-| **Diagnostics / reliability / process know-how** | Kutateladze optical/multiphase diagnostics; **MPEI 42-month hierarchy**; TPU optical/PIV/PLIF/surface process; TsAGI/PNRPU acoustics | long-duration two-phase stability, optical flow/surface diagnostics, aeroacoustic test facilities | **Cross-cutting** | This may be more strategically important than individual components: Russia often shows depth in mechanism diagnosis, failure regimes and long experimental lineages |
+| **Diagnostics / reliability / process know-how** | Kutateladze optical/multiphase diagnostics; **MPEI 42-month hierarchy**; TPU optical/PIV/PLIF/surface process; **SPbPU gradient heatmetry / two-phase immersion diagnostics**; TsAGI/PNRPU acoustics | long-duration two-phase stability, optical flow/surface diagnostics, direct local/transient heat-flux sensing, aeroacoustic test facilities | **Cross-cutting** | SPbPU strengthens the diagnostic-method panorama but is not a phone-specific Russia advantage; partner-specific diagnostics may shorten failure-learning cycles |
 
 ---
 
@@ -281,6 +281,40 @@ analytical stability
 
 Detailed map:
 [siberian_theory_fluid_experiment_network_v01.md](siberian_theory_fluid_experiment_network_v01.md)
+
+---
+
+### H. Joint Institute for High Temperatures RAS — supporting node
+
+Current 2023 evidence:
+- Kuzma-Kichta / Kovalev / Kiselev microchannel-boiling collaboration between MPEI and JIHT.
+
+Interpretation:
+JIHT adds experimental/microchannel heat-transfer depth to the Moscow two-phase ecosystem.
+
+Current state:
+**SUPPORTING NODE / no independent country-level mobile advantage.**
+
+### I. Peter the Great St. Petersburg Polytechnic University — gradient heatmetry / immersion diagnostics
+
+Current 2026 evidence:
+- P.G. Bobylev dissertation directly targets two-phase immersion cooling of advanced power electronics;
+- heterogeneous gradient heat-flux sensors provide direct local heat-flux measurement;
+- passive flow-management concepts are experimentally evaluated;
+- current institutional IP/activity continues the gradient-heatmetry line.
+
+Potential project role:
+- high-bandwidth local heat-flux measurement;
+- boiling/crisis Stage-0 diagnostics;
+- independent thermal-boundary validation.
+
+Current state:
+**COMPLEMENTARY DIAGNOSTICS / TEST SUPPORT.**
+
+Do not promote to a Russia country-level smartphone advantage without phone-scale proof.
+
+Detailed audit:
+[Capability Map Completeness Audit](capability_map_completeness_audit_v01.md)
 
 ---
 
