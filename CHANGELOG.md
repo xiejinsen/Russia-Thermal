@@ -9,15 +9,16 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Round 8 internal architecture / 3-year roadmap synthesis
+### 2026-10-05 — Round 9 dryout / thermal-health observability
 
 Completed without outreach or experiment:
-- mapped Russian capabilities into phone thermal-stack layers;
-- separated internal product-platform control from partner-specific mechanism value;
-- converged on the **Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture** hypothesis;
-- created gate-based 0–12 / 12–24 / 24–36 month roadmap;
-- created scenario paths for continued execution constraints;
-- marked the older leadership roadmap as non-current execution authority.
+- verified transient dryout temperature/history signatures;
+- added wick-saturation latent-state model evidence;
+- added transient thermal-impedance and adaptive-observer comparators;
+- separated phone thermal-headroom APIs from internal VC-state observability;
+- narrowed absolute dryout-margin wording to an **estimated dryout-risk / thermal-health state**;
+- created an opportunistic thermal-system-identification hypothesis;
+- defined Round-10 identifiability / controller falsification.
 
 Stage-0 scientific order unchanged.
 
@@ -26,10 +27,13 @@ Completion percentages intentionally unchanged:
 - overall research + validation: **~94%**.
 
 Reason:
-architecture / roadmap maturity improved, but no external or physical validation dependency closed.
+observability logic improved, but no partner data or physical phone-scale state correlation was closed.
 
 Current architecture:
 [Round 8 Internal Phone Thermal Architecture](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
+
+Current observability authority:
+[Round 9 Dryout / Thermal-Health Observability](08_opportunities-transfer/dryout_thermal_health_observability_round9_v01.md)
 
 Current roadmap:
 [Round 8 Internal 3-Year Technology Roadmap](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
