@@ -1,0 +1,7 @@
+DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
+
+# Direction Portfolio
+
+| Direction | Role | Lane | Differentiation | Phone maturity |
+|---|---|---|---|---|
+| DIR-FAILURE-AWARE-UTVC | PRIMARY_COLLABORATION_DIRECTION | STRATEGIC_CANDIDATE | MEDIUM_HIGH | LOW_MEDIUM |
