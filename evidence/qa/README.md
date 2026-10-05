@@ -31,3 +31,4 @@ Rules:
 - [Repository modularity QA — 2026-10-05](sections/15_repository_modularity_qa_2026_10_05.md)
 - [Core Evidence Deepening Round 3 QA — 2026-10-05](sections/16_core_evidence_deepening_round_3_qa_2026_10_05.md)
 - [Industry source-card architecture QA — 2026-10-05](sections/17_industry_source_card_architecture_qa_2026_10_05.md)
+- [Round 4 — Industry-Translation / Stage-0 Evidence Lock QA — 2026-10-05](sections/18_round4_industry_translation_stage0_evidence_lock_qa_2026_10_05.md)

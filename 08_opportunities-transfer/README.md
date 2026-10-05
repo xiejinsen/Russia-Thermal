@@ -1,6 +1,6 @@
 # 08 — Technology Transfer, Open Problems & Innovation Hypotheses
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Goal
 
@@ -133,6 +133,10 @@ Watch / reserves:
 - ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve.
 
 Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
+
+## Current Stage-0 evidence-lock authority
+
+- [Round 4 — Industry-Translation / Stage-0 Evidence Lock](industry_translation_stage0_evidence_lock_round4_v01.md) — current normalized translation maturity + partner-data / experiment / foreground-IP / Kill locks.
 
 ## Core Evidence Deepening
 

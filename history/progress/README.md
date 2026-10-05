@@ -4,6 +4,7 @@
 
 This archive was created on 2026-10-05 when the former monolithic progress log was modularized.
 
+- [00b — Round 4 — Industry-Translation / Stage-0 Evidence Lock — 2026-10-05](00b_2026_10_05_round4_industry_translation_stage0_evidence_lock.md)
 - [00 — Core Evidence Deepening Round 3 — Public-to-Partner Boundary Closure — 2026-10-05](00_2026_10_05_core_evidence_deepening_round_3_public_to_partner_boundary_closure.md)
 
 - [01 — Overall status](01_overall_status.md)

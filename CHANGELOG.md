@@ -17,36 +17,27 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Core Evidence Deepening Round 3 closed
+### 2026-10-05 — Round 4 industry translation / Stage-0 evidence lock
 
-Public-to-partner boundary closure completed.
+Closed:
+- normalized collaboration vs external fabrication vs field validation vs product evidence;
+- Pavlenko Huawei/Air Products industry-R&D context;
+- MPEI/Newfrost external physical-engineering chain;
+- TPU 60-day real-system laser-surface field validation;
+- Lab 6.6 patent-derived system-overhead constraints;
+- partner-data / experiment / foreground-IP / Kill locks.
 
-Key changes:
-- Lab 1.3 Huawei collaboration precedent and current diagnostic line hardened;
-- Lab 6.6 micron-gap execution evidence upgraded;
-- MPEI Newfrost physical-model chain strengthened;
-- separate current MPEI SiC microchannel line identified;
-- three primary partner packets frozen at the public boundary;
-- Lab 6.6 reserve feasibility packet added.
+Stage-0 order is unchanged.
+Research progress is now **~88%**.
 
-Stage-0 ranking is unchanged.
-Research progress is now **~85%**.
-
-Detailed record:
-[Round 3 memo](08_opportunities-transfer/core_evidence_deepening_round3_v01.md)
+Detailed authority:
+[Round 4 memo](08_opportunities-transfer/industry_translation_stage0_evidence_lock_round4_v01.md)
 
 ## Latest repository-governance change
 
 ### 2026-10-05 — Modular industry evidence layer
 
-Added one-source-one-card industry/vendor evidence management under `evidence/industry/`, starting with Huawei and Newfrost P0 evidence. Current partner files now reuse canonical Industry IDs instead of duplicating source facts.
-
-Research progress remains **~85%**.
-
-
-### 2026-10-05 — Repository modularization completed
-
-The evidence/source/brief/10Q/QA/history architecture is modular and the retired aggregate files were removed.
+Industry/company evidence now uses per-source Industry Cards and thin organization indexes.
 
 ## Research-state rule
 
