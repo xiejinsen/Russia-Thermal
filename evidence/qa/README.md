@@ -33,3 +33,4 @@ Rules:
 - [Industry source-card architecture QA — 2026-10-05](sections/17_industry_source_card_architecture_qa_2026_10_05.md)
 - [Round 4 — Industry-Translation / Stage-0 Evidence Lock QA — 2026-10-05](sections/18_round4_industry_translation_stage0_evidence_lock_qa_2026_10_05.md)
 - [Round 5 — Outreach Readiness / Experiment-IP Freeze QA — 2026-10-05](sections/19_round5_outreach_readiness_experiment_ip_freeze_qa_2026_10_05.md)
+- [Round 6 — Final Public-Research Convergence QA — 2026-10-05](sections/20_round6_final_public_research_convergence_qa_2026_10_05.md)
