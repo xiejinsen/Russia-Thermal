@@ -75,6 +75,7 @@ evidence/
 Canonical evidence entry points:
 
 - [Evidence & QA Index](evidence/README.md)
+- [Industry / Vendor Evidence](evidence/industry/README.md)
 - [Source Register](evidence/sources/README.md)
 - [Human-Readable Bibliography](evidence/bibliography/README.md)
 - [Paper Briefs](evidence/briefs/papers/README.md)

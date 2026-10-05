@@ -19,6 +19,11 @@ Technical conclusions should live in workstreams 03–09, not here.
 - [Paper Metadata Template](paper_metadata_template.md)
 - [Patent Metadata Template](patent_metadata_template.md)
 
+## Industry evidence
+
+- [Industry / Vendor Evidence](industry/README.md) — one original industry-relevant source per stable card; organization READMEs remain thin indexes.
+- Papers and patents are never duplicated into industry cards; industry indexes link to their existing evidence cards.
+
 ## Human-readable entry point
 
 - [Human-Readable Bibliography](bibliography/README.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
@@ -47,6 +52,9 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Canonical rules
 
+- decision-relevant vendor/company/product/collaboration evidence uses `industry/` as its canonical detailed home when it is not already a paper or patent;
+- one original industry source = one stable Industry ID/card; workstreams keep only decision interpretation and link back to the card;
+
 - `sources/README.md` is the central evidence index; source records live in `sources/sections/`;
 - decision files must also contain local original-source links;
 - QA is modular under `qa/sections/`; current overall state belongs in `PROGRESS.md`, while dated/specialized QA modules remain scoped records;
@@ -54,4 +62,4 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Future scaling
 
-The source register, bibliography, briefs, 10Q layer and QA are already modular. Keep indexes thin and place new content in the smallest matching module; do not rebuild monolithic aggregate files.
+The industry layer, source register, bibliography, briefs, 10Q layer and QA are modular. Keep indexes thin and place new content in the smallest matching module; do not rebuild monolithic aggregate files.

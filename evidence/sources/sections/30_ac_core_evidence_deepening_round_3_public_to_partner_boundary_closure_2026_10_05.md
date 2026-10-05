@@ -22,3 +22,17 @@
 Boundary note:
 - exact current Lab 1.3 dielectric stand specification, MPEI SiC module geometry/performance and Lab 6.6 integrated system overhead were not recovered to decision-grade public precision;
 - these items are intentionally routed to PARTNER-ONLY / EXPERIMENT-ONLY rather than searched indefinitely.
+
+## Canonical industry-source cards
+
+Round-3 industry/collaboration facts now have stable per-source homes:
+
+### Huawei
+- [I-HUAWEI-001 — Kutateladze Lab 1.3 collaboration record](../../industry/huawei/sources/I-HUAWEI-001_kutateladze_lab13_collaboration_record.md)
+- [I-HUAWEI-002 — Pavlenko collaboration/project record](../../industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md)
+
+### Newfrost
+- [I-NEWFROST-001 — MPEI dissertation contract/implementation chain](../../industry/newfrost/sources/I-NEWFROST-001_mpei_dissertation_contract_implementation_chain.md)
+- [I-NEWFROST-002 — current thermosyphon model fabrication](../../industry/newfrost/sources/I-NEWFROST-002_current_thermosyphon_model_fabrication.md)
+
+Use the cards above for source-level facts; this register remains the compact provenance index.

@@ -137,6 +137,25 @@ Decision-critical evidence must exist in two places:
 
 A source existing only in chat, search snippets or the central register is insufficient for a promoted decision.
 
+## Per-source industry evidence rule
+
+Decision-relevant industry/company evidence that is not already a paper or patent is stored under:
+- `evidence/industry/<organization>/sources/`.
+
+Canonical granularity:
+> **one original industry-relevant source → one stable Industry Source Card**
+
+Rules:
+- P0 decision-changing evidence gets a full card;
+- P1 decision-supporting evidence gets a shorter card;
+- P2 background evidence does not require a full card by default;
+- organization READMEs are thin indexes, not vendor reports;
+- papers/patents are linked to their existing cards rather than duplicated;
+- current workstream files keep decision interpretation and reference the Industry ID/card instead of copying source facts.
+
+Canonical index:
+[Industry / Vendor Evidence](../evidence/industry/README.md)
+
 ## Per-source 10Q storage rule
 
 Decision-grade paper/patent deep reading is stored under:
@@ -159,7 +178,7 @@ Rules:
 
 Update all that apply:
 
-1. new primary evidence → update the smallest matching module under `evidence/sources/sections/`; update `evidence/sources/README.md` only when index structure changes
+1. new primary evidence → update the smallest matching module under `evidence/sources/sections/`; if it is decision-relevant industry/company evidence not already represented by a paper/patent, also create/update its canonical Industry Source Card; update indexes only when navigation changes
 2. institution status changed → `03_russia-institutions/major_university_coverage_matrix.md` / candidate queue
 3. partner capability changed → corresponding 04 card
 4. patent/IP conclusion changed → 05 map/claim chart
@@ -192,7 +211,8 @@ Examples:
 - current Tier belongs in the decision gate / PROGRESS;
 - partner readiness belongs in the partner-readiness file;
 - detailed patent claims belong in claim charts/maps;
-- source metadata belongs in source register.
+- source metadata belongs in source register;
+- detailed industry-source facts belong in the canonical Industry Source Card, while decision files retain only the interpretation.
 
 Supporting files may summarize but must link to the canonical file.
 
@@ -200,6 +220,7 @@ Supporting files may summarize but must link to the canonical file.
 
 `evidence/` is intentionally cross-cutting and modular:
 
+- `industry/` — per-source vendor/company/product/collaboration evidence + thin organization indexes;
 - `sources/` — source-register index + topic/increment modules;
 - `bibliography/` — readable citation index + topic modules;
 - `briefs/` — one paper/patent brief per source;
