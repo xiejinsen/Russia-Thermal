@@ -6,6 +6,16 @@ Decision state: **HIGH-RISK MECHANISM/IP RESERVE — not Stage-0 top-3**
 
 Evidence maturity: **SYSTEM_VALUE mechanism evidence / phone transfer LOW**
 
+## Confidence badges
+
+- **Evidence:** MEDIUM-HIGH
+- **Phone Transfer:** LOW
+- **Partner Readiness:** MEDIUM-HIGH
+- **IP Clarity:** MEDIUM-HIGH
+
+Interpretation: current mechanism/IP capability is credible; full phone-system feasibility is the weakest dimension.
+
+
 ---
 
 # 1. Product problem
