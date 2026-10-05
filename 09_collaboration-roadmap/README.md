@@ -159,3 +159,11 @@ Public-search diminishing-return exits are recorded in the unified scorecard.
 - [Kutateladze Lab 6.6 Reserve Feasibility Packet](reserve_packet_kutateladze_lab66_v01.md)
 
 Primary packets are **OUTREACH-DRAFT READY**, not contract-ready.
+
+## Outreach-ready layer
+
+- [Outreach-Ready Partner Packet Index](outreach_ready_packet_index_v01.md)
+- [Current Public Contact Routes](outreach_contact_routes_v01.md)
+- [Round 5 Experiment / Foreground-IP Freeze](stage0_experiment_ip_freeze_round5_v01.md)
+
+Use these short packets for first contact; keep the full Stage-0 packets as technical appendices.
