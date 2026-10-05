@@ -17,32 +17,34 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Round 5 outreach readiness / experiment-IP freeze
+### 2026-10-05 — Round 6 final public-research convergence
 
 Completed:
-- verified current public professional contact routes;
-- created concise first-contact packets for Pavlenko, MPEI and TPU;
-- retained Lab 6.6 as a reduced system-feasibility reserve;
-- froze mandatory vs optional partner questions;
-- mapped partner data to Stage-0 / IP decisions;
-- minimized experiment-arm count;
-- froze broad foreground-IP territories where prior art is direct;
-- adopted trigger-based patent searching after a concrete Stage-0 winner.
+- final audit of residual open questions;
+- last targeted public search on active candidates;
+- public TPU copper-material bridge correction;
+- modular external-dependency ledger;
+- desk-research stopping rule.
 
-Stage-0 ranking is unchanged.
-Research progress is now **~91%**.
+Result:
+- **no hidden decision-relevant PUBLIC blocker remains** for the current Stage-0 ordering;
+- remaining dependencies are PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION.
 
-Current operational authority:
-[Outreach-Ready Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
+Current completion:
+- public desk research: **~98%**;
+- overall research + validation: **~94%**.
 
-Experiment/IP authority:
-[Round 5 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
+Current authority:
+[Round 6 Convergence Audit](08_opportunities-transfer/public_research_convergence_round6_v01.md)
+
+External dependencies:
+[External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
 
 ## Latest repository-governance change
 
-### 2026-10-05 — Modular industry evidence layer
+### 2026-10-05 — Modular external-dependency ledger
 
-Industry/company evidence uses per-source Industry Cards and thin organization indexes.
+Partner-returned data and experiment results are now stored in independent dependency modules so one partner update does not rewrite a large aggregate file.
 
 ## Research-state rule
 
