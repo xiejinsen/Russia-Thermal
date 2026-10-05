@@ -287,3 +287,15 @@ Historical/foundational sources remain in the central source register but are no
 - **[Detection and grading of oxidation for copper–water heat pipe wicks based on the machine learning methods](https://doi.org/10.1016/j.applthermaleng.2025.126437)** — Xiaojun Guo, Yong Li, Guangwen Huang, Rui Tang, Fan Yang, Zhifeng Xin, Bowen Wu — *Applied Thermal Engineering*, 2025.
 
 - **[A thin and lightweight miniature loop heat pipe for cooling mobile electronic devices](https://doi.org/10.1016/j.device.2025.100783)** — Qingjie Cui, Ziyi You, Xiang Ma, Xiaoping Yang, Yonghai Zhang, Jinjia Wei *et al.* — *Device*, 2025.
+
+
+# M. Capability-map completeness audit additions
+
+- **[Boiling of Various Liquids in a Microchannel](https://doi.org/10.1007/s10891-023-02772-9)** — Yu.A. Kuzma-Kichta, S.A. Kovalev, A. Kiselev — *Journal of Engineering Physics and Thermophysics*, 2023.  
+  MPEI–Joint Institute for High Temperatures current microchannel-boiling collaboration.
+
+- **[Investigation of heat transfer in cooling systems for advanced power electronics using gradient heatmetry](https://elib.spbstu.ru/dl/2/r26-56.pdf/en/info)** — P.G. Bobylev — Peter the Great St. Petersburg Polytechnic University — dissertation, 2026.  
+  Direct two-phase immersion / power-electronics cooling, local heat-flux diagnostics.
+
+- **[Device for cooling electronic equipment using gas-drop flow and liquid film](https://patents.google.com/patent/RU2860581C1/en)** — O.A. Kabov — RU2860581C1 — Kutateladze Institute of Thermophysics SB RAS — 2026.  
+  Current claim-reviewed electronics-cooling patent with gas / droplet / shear-film operating modes.
