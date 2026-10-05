@@ -1,4 +1,4 @@
-# Leadership Decision Card — Foundational Math-Physics Reserve v0.1
+# Leadership Decision Card — Foundational Math-Physics Institutional Network v0.1
 
 Last updated: 2026-10-05
 
@@ -38,9 +38,15 @@ The product question is:
 
 ---
 
-# 2. Why Russia / why this network
+# 2. Institutions / teams / why Russia
 
 The retained Russia-side signal is not “Russia is better at mathematics.”
+
+**Institutions / modules:**
+- Institute of Computational Modelling SB RAS / related Altai line — exact/stability analysis;
+- Lavrentyev Institute of Hydrodynamics SB RAS — detailed fluid modeling;
+- Kutateladze Institute of Thermophysics SB RAS — mechanism experiments;
+- Novosibirsk State University — diagnostics / talent / execution.
 
 It is a more specific tradition:
 
