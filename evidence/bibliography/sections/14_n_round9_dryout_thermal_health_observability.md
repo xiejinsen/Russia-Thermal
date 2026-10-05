@@ -1,0 +1,8 @@
+# N. Round 9 — Dryout / Thermal-Health Observability
+
+- **[Heat pipe dryout and temperature hysteresis in response to transient heat pulses exceeding the capillary limit](https://doi.org/10.1016/j.ijheatmasstransfer.2019.119135)** — K. Baraya, J.A. Weibel, S.V. Garimella — *International Journal of Heat and Mass Transfer*, 2020.
+- **[Transient recovery from heat pipe dryout by power throttling](https://doi.org/10.1016/j.ijheatmasstransfer.2023.125104)** — K. Baraya, J.A. Weibel, S.V. Garimella — *International Journal of Heat and Mass Transfer*, 2024.
+- **[A transient heat pipe model considering wick saturation effects that predicts dynamic evaporator dryout and recovery](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126837)** — K. Baraya, J.A. Weibel, S.V. Garimella — *International Journal of Heat and Mass Transfer*, 2025.
+- **[Online Condition Monitoring Methodology for Power Electronics Package Reliability Assessment](https://doi.org/10.1109/TPEL.2024.3352747)** — Henry A. Martin, Edsger C.P. Smits, René H. Poelma, W.D. van Driel, GuoQi Zhang — *IEEE Transactions on Power Electronics*, 2024.
+- **[Real-Time Monitoring of Thermal Response and Life-Time Varying Parameters in Power Modules](https://doi.org/10.1109/TIA.2020.3001524)** — Christoph H. van der Broeck, Timothy A. Polom, Robert D. Lorenz, Rik W. De Doncker — *IEEE Transactions on Industry Applications*, 2020.
+- **[Investigation of heat transfer, critical heat flux and dry spots dynamics during boiling of dielectric fluids HFE-7100 and Novec 649](https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855)** — Anton Surtaev, Ivan Malakhov, Pavel Perminov, Matvey Polovnikov, Aleksandr N. Pavlenko — *International Journal of Heat and Mass Transfer*, 2026.
