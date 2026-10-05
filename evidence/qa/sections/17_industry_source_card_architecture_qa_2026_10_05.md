@@ -50,3 +50,15 @@ Historical closed-round narrative may retain source facts for provenance, but cu
 **No research-progress increase.**
 
 This is repository/evidence governance supporting Round 4.
+
+### Final validation
+
+- industry layer files: **8**
+- P0 Industry Source Cards: **4**
+- organizations with full indexes: **2**
+- audited internal links in industry layer: **0 broken**
+- current partner authority files reuse canonical Industry IDs for Huawei/Newfrost source-level facts
+- remaining direct Kutateladze lab URL in the Pavlenko card is retained because it supports lab/person metadata, not duplicated Huawei industry evidence
+
+Result:
+**PASS — modular industry evidence layer is ready for Round 4 use.**
