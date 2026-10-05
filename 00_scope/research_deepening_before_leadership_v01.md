@@ -31,7 +31,7 @@ The next phase should reduce uncertainty, not improve slide aesthetics.
 
 ## 3. Priority research tracks
 
-### Track A — Decision-critical full-text evidence hardening
+### Track A — Decision-critical full-text evidence hardening — **IN PROGRESS / Round 1 complete**
 
 Purpose:
 replace abstract-level or partial evidence with full-text, experiment-level evidence for the most important papers.
@@ -61,7 +61,7 @@ Output:
 - corrected decision files where full text changes interpretation;
 - explicit evidence maturity upgrades/downgrades.
 
-### Track B — Core partner / lab capability audit
+### Track B — Core partner / lab capability audit — **IN PROGRESS / Round 1 complete**
 
 Purpose:
 understand what each core Russian team can actually execute today, not only what it has published.
@@ -202,3 +202,18 @@ Until this deepening phase produces materially stronger closure:
 - update the checkpoint only when new evidence changes a decision, confidence label, partner priority, PoC or IP thesis.
 
 Final leadership materials should be generated only after the next research-deepening gate is passed.
+
+---
+
+## 7. Round-1 findings
+
+Completed artifact:
+- `08_opportunities-transfer/core_evidence_deepening_round1_v01.md`
+
+Material findings:
+- Pavlenko current public platform proves strong crisis diagnostics but is further from phone geometry than a superficial reading suggests.
+- MPEI owns a broader academic fabrication/characterization chain than previously captured and has an external implementation signal through Newfrost LLC.
+- Kabov has genuine closed-loop electronics-cooling prototype history, not only mechanism papers; however its historical active-flow requirements are incompatible with smartphone constraints without radical redesign.
+
+Next:
+continue experiment-level hardening and convert gaps into partner-ready technical questions.
