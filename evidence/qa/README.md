@@ -36,3 +36,4 @@ Rules:
 - [Round 6 — Final Public-Research Convergence QA — 2026-10-05](sections/20_round6_final_public_research_convergence_qa_2026_10_05.md)
 - [Round 7 — Quantitative Transfer Feasibility QA — 2026-10-05](sections/21_round7_quantitative_transfer_feasibility_qa_2026_10_05.md)
 - [Round 8 — Internal Architecture & 3-Year Roadmap QA — 2026-10-05](sections/22_round8_internal_architecture_3year_roadmap_qa_2026_10_05.md)
+- [Repository State Audit after Round 8 — 2026-10-05](sections/23_repository_state_audit_after_round8_2026_10_05.md)
