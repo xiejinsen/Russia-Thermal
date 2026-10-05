@@ -8,6 +8,32 @@ Last updated: 2026-10-04
 **Estimated remaining research: ~22%**
 
 
+## Research-priority reset — more evidence before leadership materials — 2026-10-05
+
+User priority:
+**more complete information before leadership reporting.**
+
+Decision:
+- retain the current leadership package as a checkpoint;
+- pause final visual/PPT production;
+- resume evidence deepening;
+- keep overall progress at **~78%**.
+
+Revised remaining-work interpretation:
+- full-text / experiment-level evidence hardening: ~6%;
+- partner/lab/current-project readiness: ~5%;
+- Russia translation / industry-adoption evidence: ~3%;
+- strongest China counterpart deepening: ~3%;
+- Stage-0 execution/IP/measurement readiness: ~3%;
+- final leadership materials: ~2%.
+
+Canonical plan:
+`00_scope/research_deepening_before_leadership_v01.md`.
+
+This governance change does **not** increase research progress.
+
+---
+
 ## Evidence-to-presentation freeze — 2026-10-05
 
 ### Research-state effect
@@ -79,20 +105,37 @@ Leadership content hierarchy:
 Final investment recommendation:
 **NOT FROZEN**
 
-### Next minimum task
+### Next minimum task — UPDATED
 
-Move into actual leadership presentation production:
+Leadership visual/PPT production is intentionally **paused**.
 
-1. convert the frozen content hierarchy into a concise 10–12 slide management narrative;
-2. build the one-page capability system visual;
-3. convert each decision card into a visual Bet/Reserve card;
-4. keep detailed papers/patents in appendix/notes;
-5. preserve confidence badges, Kill gates and evidence footers.
+The current leadership package remains a checkpoint only.
 
-The presentation may now change layout and wording for clarity, but must not change the frozen research logic.
+Current priority:
+**Research Deepening Before Leadership Materials**
 
-Parallel unresolved research remains:
-partner-returned data and physical Stage-0 results.
+Canonical plan:
+`00_scope/research_deepening_before_leadership_v01.md`
+
+Immediate next task:
+**Core Evidence Deepening Round 1**
+
+For:
+1. Pavlenko / Kutateladze;
+2. MPEI / Ivanov;
+3. Kabov / Chinnov;
+
+close two questions:
+- what does the strongest full-text evidence actually prove at experiment level?
+- what can the current lab demonstrably execute today that matters for phone-relevant Stage-0?
+
+Then deepen:
+- partner/lab readiness;
+- Russia translation / industry-adoption evidence;
+- strongest China counterparts;
+- Stage-0 execution / IP readiness.
+
+Do not invest further effort in visual polish until this research-deepening gate is passed.
 
 ---
 
