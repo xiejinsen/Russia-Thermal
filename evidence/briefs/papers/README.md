@@ -8,7 +8,7 @@ Human-readable decision briefs for individual papers. One source is stored in on
 
 Use the [Paper 10Q cards](../../10q/papers/README.md) for deeper Q1–Q10 evidence analysis.
 
-Current card count: **47**.
+Current card count: **51**.
 
 ## A. Pavlenko / Kutateladze — phase-change surfaces
 
@@ -89,6 +89,13 @@ Current card count: **47**.
 - [L2. China — oxygen-driven copper-water VC failure](l2_china_oxygen_driven_copper_water_vc_failure.md)
 - [L3. China — accelerated VC lifetime prediction](l3_china_accelerated_vc_lifetime_prediction.md)
 - [L4. China — 0.7 mm mobile mLHP accelerated aging](l4_china_0_7_mm_mobile_mlhp_accelerated_aging.md)
+
+## M. Round-9 observability
+
+- [M1. Transient heat-pipe dryout temperature signature](m1_transient_heat_pipe_dryout_temperature_signature.md)
+- [M2. Transient wick-saturation dryout/recovery model](m2_transient_wick_saturation_dryout_recovery_model.md)
+- [M3. Online transient thermal-impedance condition monitoring](m3_online_transient_thermal_impedance_condition_monitoring.md)
+- [M4. Adaptive thermal observer / lifetime parameter monitoring](m4_adaptive_thermal_observer_lifetime_parameter_monitoring.md)
 
 ## Cross-paper synthesis
 
