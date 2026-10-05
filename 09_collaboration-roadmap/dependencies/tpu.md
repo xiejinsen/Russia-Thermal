@@ -41,3 +41,20 @@ Public copper bridge:
 ## Stop rule
 
 Do not search generically for copper compatibility again. The remaining question is thin sealed-process compatibility, which is partner + experiment.
+
+## Round-7 analytical envelope
+
+Authority:
+[Quantitative Transfer Feasibility Envelope](../../08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+
+- disclosed laser lineage mean feature height ~9–18 μm is favorable versus the <=35 μm preferred added-height target;
+- extreme maximum feature height up to ~120 μm consumes the full preferred functional-element ceiling;
+- public copper + laser + water-boiling bridge is already closed.
+
+Interpretation:
+**geometry is GREEN–AMBER if a low-relief copper regime is selected; sealed-process chemistry/state retention is the dominant risk.**
+
+Analytical baseline:
+**laser-only / low-organic copper first; hydrocarbon/biphilic remains optional upside.**
+
+Dependency classification is unchanged.
