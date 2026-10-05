@@ -2,7 +2,7 @@
 
 Last updated: **2026-10-05**
 
-This file is now a **short changelog index**, not an append-only history document.
+This file is a **short changelog index**, not an append-only history document.
 
 ## Current rule
 
@@ -18,20 +18,25 @@ Full archive:
 
 ## Latest repository changes
 
-### 2026-10-05 — Repository modularization
+### 2026-10-05 — Repository modularization completed
 
-In progress / completed in this maintenance round:
-- 10Q paper/patent cards split per source;
-- progress history split from current status;
-- changelog entries split into independent records;
-- high-churn evidence aggregates are being modularized;
-- legacy 10Q aggregate paths are scheduled for deletion after backlink correction.
-
-### 2026-10-05 — Core Evidence Deepening Round 2
+Completed:
+- per-source 10Q cards;
+- per-source paper/patent briefs;
+- modular source register;
+- modular bibliography;
+- modular QA;
+- current-state-only PROGRESS;
+- modular changelog/progress history;
+- backlink migration;
+- deletion of seven retired aggregate files;
+- final modularity QA.
 
 Current research state remains **~82% complete**.
 
-The research conclusion/order did not change during repository modularization.
+### 2026-10-05 — Core Evidence Deepening Round 2
+
+Research conclusion/order is unchanged by repository governance work.
 
 ## Research-state rule
 

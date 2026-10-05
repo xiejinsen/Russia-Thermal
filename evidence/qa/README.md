@@ -28,3 +28,4 @@ Rules:
 - [Stage-0 partner-packet QA](sections/12_stage_0_partner_packet_qa.md)
 - [Management capability-view QA](sections/13_management_capability_view_qa.md)
 - [Foundational mathematical-physics layer — 2026-10-04](sections/14_foundational_mathematical_physics_layer_2026_10_04.md)
+- [Repository modularity QA — 2026-10-05](sections/15_repository_modularity_qa_2026_10_05.md)

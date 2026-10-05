@@ -75,7 +75,12 @@ Russia-Thermal/
 ├── 08_opportunities-transfer/  # constraints, comparisons, decision gates
 ├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap research
 ├── 10-final-report/             # gated final decision/report layer
-├── evidence/                   # standards, source/ranking registers, QA + per-source 10Q cards
+├── evidence/                   # modular evidence governance
+│   ├── sources/                # source index + source modules
+│   ├── bibliography/           # readable citation index + topic modules
+│   ├── briefs/                 # one paper/patent brief per source
+│   ├── 10q/                    # one deep-reading card per source
+│   └── qa/                     # modular repository/evidence QA
 ├── CONTINUE_HERE.md            # canonical new-chat/session bootstrap
 ├── CHANGELOG.md                # decision-relevant corrections/refreshes
 ├── PROGRESS.md                 # live project status
