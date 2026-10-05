@@ -4,48 +4,44 @@ Last updated: **2026-10-05**
 
 This file is a **short changelog index**, not an append-only history document.
 
-## Current rule
-
-For each decision-relevant research or architecture change:
-1. create one small entry under `history/changelog/`;
-2. keep that entry immutable except for factual correction;
-3. update this root file only when the current navigation / latest-change summary changes;
-4. do not rebuild a large chronological document.
-
 Full archive:
 [Changelog History Index](history/changelog/README.md)
 
 ## Latest research change
 
-### 2026-10-05 — Round 6 final public-research convergence
+### 2026-10-05 — Round 7 quantitative transfer feasibility envelope
 
-Completed:
-- final audit of residual open questions;
-- last targeted public search on active candidates;
-- public TPU copper-material bridge correction;
-- modular external-dependency ledger;
-- desk-research stopping rule.
+Completed without outreach or experiment:
+- archived D5 2026 UTVC vapor-core / wick trade-off benchmark;
+- quantified Pavlenko mesh-transfer geometry / transport sensitivity;
+- separated MPEI coating fit from groove/shell hydraulic risk;
+- quantified TPU laser-relief geometry envelope;
+- built Lab 6.6 gas-drive v³ parasitic-power lower-bound screen;
+- froze future GREEN / AMBER / RED restart thresholds;
+- added internal no-outreach/no-experiment decision tree.
 
-Result:
-- **no hidden decision-relevant PUBLIC blocker remains** for the current Stage-0 ordering;
-- remaining dependencies are PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION.
+Stage-0 scientific order unchanged.
 
-Current completion:
+Completion percentages intentionally unchanged:
 - public desk research: **~98%**;
 - overall research + validation: **~94%**.
 
+Reason:
+analytical/design readiness improved, but no external or physical validation dependency closed.
+
 Current authority:
-[Round 6 Convergence Audit](08_opportunities-transfer/public_research_convergence_round6_v01.md)
+[Round 7 Quantitative Transfer Feasibility Envelope](08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
 
-External dependencies:
-[External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
+Future thresholds:
+[Round 7 Minimum-Win & Restart Thresholds](09_collaboration-roadmap/pre_execution_minimum_win_thresholds_round7_v01.md)
 
-## Latest repository-governance change
+## Current execution constraint
 
-### 2026-10-05 — Modular external-dependency ledger
+No direct Russian-university outreach and no physical experiments at present.
 
-Partner-returned data and experiment results are now stored in independent dependency modules so one partner update does not rewrite a large aggregate file.
+Authority:
+[Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
 
 ## Research-state rule
 
-Repository architecture cleanup does **not** increase research completion percentage.
+Repository architecture / analytical planning alone does **not** increase physical-validation completion.
