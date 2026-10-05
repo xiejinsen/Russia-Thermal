@@ -1,15 +1,19 @@
 # 04 — Russian Labs & Researchers
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Goal
 
 Build lab/PI/researcher cards for high-signal Russian teams and reconstruct collaboration/publication/IP networks.
 
+## Current institution-first partner authority
+
+- [Institution Partner Readiness Matrix](institution_partner_readiness_matrix_v01.md) — institution → lab/team → current role → execution capability → Stage-0 routing.
+
 ## CURRENT deep-dive cards
 
-- Kutateladze — Pavlenko phase-change / capillary-surface line
-- Kutateladze — Kabov/Kochkin/Chinnov film/droplet line
+- **Kutateladze Institute — Lab 1.3 / Pavlenko-led low-temperature thermophysics line** — phase change / boiling crisis / capillary surfaces
+- **Kutateladze Institute — Lab 6.6 / current acting head Kochkin; Kabov–Chinnov lineage** — film / microchannel / instability / droplet line
 - ITP Ural — Maydanik/Chernysheva/Vershinin LHP line
 - TsAGI / PNRPU aeroacoustics cluster
 - SPbU smartphone DVFS / stochastic optimization
