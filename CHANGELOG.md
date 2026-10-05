@@ -9,7 +9,30 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Round 9 dryout / thermal-health observability
+### 2026-10-05 — Phase-1 evidence-chain audit
+
+Before final insight convergence, the current evidence chain was re-audited across:
+- primary papers / patents;
+- China comparators;
+- institution attribution;
+- industry-collaboration boundaries;
+- current repository link integrity;
+- fact vs inference wording.
+
+Result:
+**PASS WITH TARGETED CORRECTIONS.**
+
+Corrections:
+- removed an incomplete Phase-1 convergence stub;
+- tightened MPEI long-duration aging wording;
+- narrowed current Kabov–Kuznetsov network attribution pending exact paper-affiliation confirmation.
+
+No correction overturns the retained Phase-1 opportunity portfolio.
+
+Audit:
+[Phase-1 Evidence-Chain Audit](00_scope/phase1_evidence_chain_audit_2026_10_05.md)
+
+### Previous — Round 9 dryout / thermal-health observability
 
 Completed without outreach or experiment:
 - verified transient dryout temperature/history signatures;
