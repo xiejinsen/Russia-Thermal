@@ -7,8 +7,8 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Public-Research Closed → External Execution
-- **Immediate stage:** **Partner Outreach / Stage-0 External Execution**
+- **Current phase:** Public-Research Closed → Pre-Execution Design Closure
+- **Immediate stage:** **Round 7 — Pre-Execution Design Closure (No Outreach / No Experiment)**
 
 This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
 
@@ -131,27 +131,29 @@ Only narrow phone-constrained hypotheses remain eligible for Stage-0 validation.
 
 ## Next minimum task
 
-**Partner Outreach / Stage-0 External Execution**
+**Round 7 — Pre-Execution Design Closure (No Outreach / No Experiment)**
 
-Recommended order:
+Current execution constraints:
+- direct university outreach is not available now;
+- physical experiments / coupon fabrication are not available now.
 
-1. initiate technical outreach to Pavlenko / Lab 1.3;
-2. initiate technical outreach to MPEI / Ivanov, with Kuzma-Kichta as senior/cross-line route;
-3. initiate technical outreach to TPU / Feoktistov;
-4. keep Lab 6.6 as a reserve system-feasibility request;
-5. in parallel prepare no-regret internal Stage-0 controls / fixtures that do not depend on partner proprietary data.
+Therefore the next useful work is:
+1. build quantitative transfer-feasibility envelopes from existing public evidence;
+2. normalize phone/product constraints and minimum-win thresholds;
+3. run sensitivity / boundary analysis for Pavlenko, MPEI, TPU and Lab 6.6 using published parameter ranges;
+4. close internal decision trees and future restart triggers;
+5. maintain outreach/experiment packets for later use without executing them.
 
-The next meaningful evidence should be:
-- partner-returned as-built/process data;
-- partner-fabricated coupons;
-- internal/partner Stage-0 measurements;
-- targeted legal/FTO after a concrete winner.
+Do **not** claim partner or experimental validation from this work.
+
+Constraint authority:
+[Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
 
 ## Current research-governance priority
 
 Final visual/PPT work remains paused.
 
-The repository is now mature enough that waiting for external evidence should not be confused with incomplete desk research.
+Current near-term work is analytical/design closure only. Waiting for partner access or experimental capability must not be confused with incomplete desk research.
 
 ## History
 
