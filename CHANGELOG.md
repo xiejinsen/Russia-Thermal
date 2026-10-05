@@ -9,16 +9,15 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Round 7 quantitative transfer feasibility envelope
+### 2026-10-05 — Round 8 internal architecture / 3-year roadmap synthesis
 
 Completed without outreach or experiment:
-- archived D5 2026 UTVC vapor-core / wick trade-off benchmark;
-- quantified Pavlenko mesh-transfer geometry / transport sensitivity;
-- separated MPEI coating fit from groove/shell hydraulic risk;
-- quantified TPU laser-relief geometry envelope;
-- built Lab 6.6 gas-drive v³ parasitic-power lower-bound screen;
-- froze future GREEN / AMBER / RED restart thresholds;
-- added internal no-outreach/no-experiment decision tree.
+- mapped Russian capabilities into phone thermal-stack layers;
+- separated internal product-platform control from partner-specific mechanism value;
+- converged on the **Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture** hypothesis;
+- created gate-based 0–12 / 12–24 / 24–36 month roadmap;
+- created scenario paths for continued execution constraints;
+- marked the older leadership roadmap as non-current execution authority.
 
 Stage-0 scientific order unchanged.
 
@@ -27,21 +26,18 @@ Completion percentages intentionally unchanged:
 - overall research + validation: **~94%**.
 
 Reason:
-analytical/design readiness improved, but no external or physical validation dependency closed.
+architecture / roadmap maturity improved, but no external or physical validation dependency closed.
 
-Current authority:
-[Round 7 Quantitative Transfer Feasibility Envelope](08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+Current architecture:
+[Round 8 Internal Phone Thermal Architecture](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
 
-Future thresholds:
-[Round 7 Minimum-Win & Restart Thresholds](09_collaboration-roadmap/pre_execution_minimum_win_thresholds_round7_v01.md)
+Current roadmap:
+[Round 8 Internal 3-Year Technology Roadmap](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
 
 ## Current execution constraint
 
 No direct Russian-university outreach and no physical experiments at present.
 
-Authority:
-[Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
-
 ## Research-state rule
 
-Repository architecture / analytical planning alone does **not** increase physical-validation completion.
+Architecture, roadmap and analytical planning alone do **not** increase physical-validation completion.
