@@ -7,8 +7,8 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Observability / Pre-Execution Controller Closure
-- **Immediate stage:** **Round 10 — Observability Identifiability & Controller Falsification (No Outreach / No Experiment)**
+- **Current phase:** Phase-1 Insight Convergence / Freeze
+- **Immediate stage:** **Phase 1 closure — insight synthesis frozen; validation deferred**
 
 This file is the single authoritative **current-state** page.
 
@@ -154,23 +154,19 @@ Therefore:
 
 ## Next minimum task
 
-**Round 10 — Observability Identifiability & Controller Falsification**
+**No further broad desk-research task is active.**
 
-Research question:
+Phase 1 is now treated as:
+**INSIGHT-COMPLETE / VALIDATION-INCOMPLETE.**
 
-> Can a practical phone telemetry vector distinguish a two-phase-specific health/dryout state from generic package/interface thermal drift strongly enough to justify a dedicated estimator?
+Next work should be triggered by one of:
+- leadership review;
+- internal thermal-expert review;
+- future university / partner discussion;
+- new evidence that materially changes a core conclusion;
+- a concrete PoC / implementation / IP decision.
 
-Target areas:
-1. minimum telemetry vector;
-2. strongest generic RC / package-aging baseline;
-3. two-phase-specific latent-state hypotheses;
-4. excitation / probing budget;
-5. ambient, orientation and unit-variation confounders;
-6. synthetic / literature-derived expected signatures;
-7. future blind Stage-0 identification protocol;
-8. Keep / collapse decision for separate C1 dryout-risk and C2 thermal-health states.
-
-Round 10 remains compatible with the no-outreach/no-experiment constraint.
+The previously planned Round 10 observability-identifiability study is deferred to a later validation / expert-review phase.
 
 ## History
 
