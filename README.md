@@ -4,7 +4,7 @@
 
 Evidence-backed research on Russian capabilities that may contribute to next-generation **smartphone thermal management**, with tablets as a secondary reference platform.
 
-Last repository review: **2026-10-04**
+Last repository review: **2026-10-05**
 
 ## Core objective
 
