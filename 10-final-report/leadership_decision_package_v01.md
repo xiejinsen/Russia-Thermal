@@ -549,6 +549,6 @@ Execution:
 - [Collaboration Portfolio](collaboration_portfolio_v01.md)
 
 Evidence:
-- [Readable Bibliography](../evidence/readable_bibliography.md)
-- [Paper 10Q Cards](../evidence/paper_10q_cards_core_v01.md)
-- [Patent 10Q Cards](../evidence/patent_10q_cards_core_v01.md)
+- [Readable Bibliography](../evidence/bibliography/README.md)
+- [Paper 10Q Cards](../evidence/10q/papers/README.md)
+- [Patent 10Q Cards](../evidence/10q/patents/README.md)

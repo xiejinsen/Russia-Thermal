@@ -88,7 +88,7 @@ Repository governance:
 - [Institution-First Entity Naming Standard](00_scope/institution_first_entity_naming_standard_v01.md)
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
-- [Human-Readable Bibliography](evidence/readable_bibliography.md)
+- [Human-Readable Bibliography](evidence/bibliography/README.md)
 - [Paper 10Q Decision Cards](evidence/10q/papers/README.md)
 - [Patent 10Q Decision Cards](evidence/10q/patents/README.md)
 - [Research Repository Changelog](CHANGELOG.md)

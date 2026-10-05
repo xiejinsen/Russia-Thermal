@@ -21,9 +21,9 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Human-readable entry point
 
-- [Human-Readable Bibliography](readable_bibliography.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
-- [Decision-Grade Paper Briefs](paper_briefs_decision_grade.md) — background, method, conclusion and mobile/chip insight for each current key paper.
-- [Decision-Grade Patent Briefs](patent_briefs_decision_grade.md) — problem, claim/control point, IP crowding and mobile/chip insight for each current key patent.
+- [Human-Readable Bibliography](bibliography/README.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
+- [Decision-Grade Paper Briefs](briefs/papers/README.md) — background, method, conclusion and mobile/chip insight for each current key paper.
+- [Decision-Grade Patent Briefs](briefs/patents/README.md) — problem, claim/control point, IP crowding and mobile/chip insight for each current key patent.
 - [Paper 10Q Decision Cards](10q/papers/README.md) — per-paper Q1–Q10 deep-reading cards; one paper per file.
 - [Patent 10Q Decision Cards](10q/patents/README.md) — per-patent P1–P10 deep-reading cards; one patent per file.
 
@@ -36,14 +36,14 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Registers
 
-- [Decision-grade Source Register](source_register.md)
+- [Decision-grade Source Register](sources/README.md)
 - [Journal Ranking Register](journal_ranking_register.md)
 - [Russia Domestic University Ranking Register](russia_domestic_ranking_register.md)
 
 ## Audits
 
 - [Traceability Audit — 2026-10-03](evidence_traceability_audit_2026-10-03.md)
-- [Repository Completeness Matrix](repository_completeness_matrix.md)
+- [Repository Completeness Matrix](qa/README.md)
 
 ## Canonical rules
 
@@ -54,4 +54,4 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Future scaling
 
-If `source_register.md` becomes difficult to navigate, split it by evidence class while retaining a single index. Do not duplicate independent source records across multiple live registries.
+If `sources/README.md` becomes difficult to navigate, split it by evidence class while retaining a single index. Do not duplicate independent source records across multiple live registries.

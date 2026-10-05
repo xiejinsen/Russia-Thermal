@@ -16,24 +16,24 @@ This file indexes evidence; it should not duplicate the entire source register.
 
 ## B. Human-readable bibliography
 
-- [Decision-Grade Papers & Patents](../evidence/readable_bibliography.md)
-- [Paper Brief Library](../evidence/paper_briefs_decision_grade.md)
-- [Patent Brief Library](../evidence/patent_briefs_decision_grade.md)
-- [Core Paper 10Q Decision Cards](../evidence/paper_10q_cards_core_v01.md)
-- [Core Patent 10Q Decision Cards](../evidence/patent_10q_cards_core_v01.md)
+- [Decision-Grade Papers & Patents](../evidence/bibliography/README.md)
+- [Paper Brief Library](../evidence/briefs/papers/README.md)
+- [Patent Brief Library](../evidence/briefs/patents/README.md)
+- [Core Paper 10Q Decision Cards](../evidence/10q/papers/README.md)
+- [Core Patent 10Q Decision Cards](../evidence/10q/patents/README.md)
 
 Use this as the default human entry point for papers and patents.
 
 ## C. Central registers
 
-- ../evidence/source_register.md
+- ../evidence/sources/README.md
 - ../evidence/journal_ranking_register.md
 - ../evidence/russia_domestic_ranking_register.md
 
 ## D. Evidence QA
 
 - ../evidence/evidence_traceability_audit_2026-10-03.md
-- ../evidence/repository_completeness_matrix.md
+- ../evidence/qa/README.md
 
 ## E. Russia institution / partner evidence
 

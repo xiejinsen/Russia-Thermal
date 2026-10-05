@@ -71,8 +71,8 @@ The scorecard is a decision file, so the core facts used here are locally tracea
 - **[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — Tomsk Polytechnic University — 2024.
 
 Detailed interpretation remains in:
-- `../evidence/paper_10q_cards_core_v01.md`;
-- `../evidence/patent_10q_cards_core_v01.md`;
+- `../evidence/10q/papers/README.md`;
+- `../evidence/10q/patents/README.md`;
 - partner-specific briefs in this folder.
 
 ---

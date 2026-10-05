@@ -111,7 +111,7 @@ A document in folders:
 
 must include **local evidence links next to or below the decision they support**.
 
-It is not enough to rely only on `evidence/source_register.md`.
+It is not enough to rely only on `evidence/sources/README.md`.
 
 Examples:
 - a GO decision for a surface PoC must link the exact Pavlenko papers plus the Chinese UTVC comparator;
@@ -233,7 +233,7 @@ If the English patent title is unavailable or uncertain:
 ### Where raw links are allowed
 
 Raw URLs may remain in:
-- `source_register.md`;
+- `sources/README.md`;
 - machine-oriented metadata fields;
 - URL/DOI columns explicitly intended for indexing.
 
@@ -285,8 +285,8 @@ Any paper or patent promoted to **decision-grade evidence** must have a human-re
 - legal/claim caveat where relevant.
 
 Canonical libraries:
-- `paper_briefs_decision_grade.md`
-- `patent_briefs_decision_grade.md`
+- `briefs/papers/README.md`
+- `briefs/patents/README.md`
 
 A decision-grade source is not fully archived until:
 1. readable citation exists;
