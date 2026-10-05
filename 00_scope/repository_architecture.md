@@ -1,6 +1,6 @@
 # Repository Architecture & Refresh Contract
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Purpose
 
@@ -136,6 +136,24 @@ Decision-critical evidence must exist in two places:
    beside the claim/decision in the relevant 03–09 file.
 
 A source existing only in chat, search snippets or the central register is insufficient for a promoted decision.
+
+## Per-source 10Q storage rule
+
+Decision-grade paper/patent deep reading is stored under:
+- `evidence/10q/papers/`;
+- `evidence/10q/patents/`.
+
+Canonical granularity:
+> **one primary source → one independently editable 10Q card file**
+
+Rules:
+- stable card IDs are preserved across revisions;
+- new evidence for an existing source updates that source's card only;
+- a new source gets a new card;
+- cross-paper / cross-patent conclusions live in the corresponding `SYNTHESIS.md` or in workstreams 03–09;
+- the former monolithic files `evidence/paper_10q_cards_core_v01.md` and `evidence/patent_10q_cards_core_v01.md` are compatibility stubs and must not accumulate new content;
+- source registry metadata remains centralized in `evidence/source_register.md`.
+
 
 ## Mandatory refresh contract after every substantive research round
 

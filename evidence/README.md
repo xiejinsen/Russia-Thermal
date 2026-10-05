@@ -1,6 +1,6 @@
 # Evidence & QA
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Role
 
@@ -24,8 +24,15 @@ Technical conclusions should live in workstreams 03–09, not here.
 - [Human-Readable Bibliography](readable_bibliography.md) — paper/patent title links with authors and journal/assignee metadata for decision-relevant evidence.
 - [Decision-Grade Paper Briefs](paper_briefs_decision_grade.md) — background, method, conclusion and mobile/chip insight for each current key paper.
 - [Decision-Grade Patent Briefs](patent_briefs_decision_grade.md) — problem, claim/control point, IP crowding and mobile/chip insight for each current key patent.
-- [Core Paper 10Q Decision Cards](paper_10q_cards_core_v01.md) — full Q1–Q10 deep-reading layer for current core papers.
-- [Core Patent 10Q Decision Cards](patent_10q_cards_core_v01.md) — full P1–P10 deep-reading layer for current core patents.
+- [Paper 10Q Decision Cards](10q/papers/README.md) — per-paper Q1–Q10 deep-reading cards; one paper per file.
+- [Patent 10Q Decision Cards](10q/patents/README.md) — per-patent P1–P10 deep-reading cards; one patent per file.
+
+## 10Q card architecture
+
+- [10Q Evidence Card Index](10q/README.md)
+- one source = one independently editable 10Q card;
+- paper/patent cross-source synthesis is stored separately from individual cards;
+- legacy monolithic 10Q paths are compatibility stubs only.
 
 ## Registers
 

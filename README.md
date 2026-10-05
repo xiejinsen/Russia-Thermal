@@ -75,7 +75,7 @@ Russia-Thermal/
 ├── 08_opportunities-transfer/  # constraints, comparisons, decision gates
 ├── 09_collaboration-roadmap/   # readiness, PoCs, roadmap research
 ├── 10-final-report/             # gated final decision/report layer
-├── evidence/                   # standards, source/ranking registers, QA
+├── evidence/                   # standards, source/ranking registers, QA + per-source 10Q cards
 ├── CONTINUE_HERE.md            # canonical new-chat/session bootstrap
 ├── CHANGELOG.md                # decision-relevant corrections/refreshes
 ├── PROGRESS.md                 # live project status
@@ -89,8 +89,8 @@ Repository governance:
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
 - [Human-Readable Bibliography](evidence/readable_bibliography.md)
-- [Core Paper 10Q Decision Cards](evidence/paper_10q_cards_core_v01.md)
-- [Core Patent 10Q Decision Cards](evidence/patent_10q_cards_core_v01.md)
+- [Paper 10Q Decision Cards](evidence/10q/papers/README.md)
+- [Patent 10Q Decision Cards](evidence/10q/patents/README.md)
 - [Research Repository Changelog](CHANGELOG.md)
 - [Final Decision Report Framework](10-final-report/README.md)
 - [Final Report Readiness Gate](10-final-report/final_report_readiness_gate.md)

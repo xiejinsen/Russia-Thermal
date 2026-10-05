@@ -1,10 +1,14 @@
 # 05 — Papers, Patents & Core Technologies
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Role
 
 Interpret decision-relevant primary papers and patent families. This folder is not the central source registry.
+
+Canonical per-source deep-reading cards live in:
+- [Paper 10Q cards](../evidence/10q/papers/README.md)
+- [Patent 10Q cards](../evidence/10q/patents/README.md)
 
 Central source metadata lives in:
 - [Source Register](../evidence/source_register.md)
@@ -108,5 +112,5 @@ These sources are now represented in:
 - `../evidence/readable_bibliography.md`;
 - `../evidence/source_register.md`;
 - `../evidence/paper_briefs_decision_grade.md`;
-- `../evidence/paper_10q_cards_core_v01.md`;
-- patent brief / patent 10Q files.
+- `../evidence/10q/papers/README.md`;
+- `../evidence/10q/patents/README.md`.
