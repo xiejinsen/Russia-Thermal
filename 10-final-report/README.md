@@ -43,6 +43,9 @@ The project should ultimately produce four reading depths:
 - [MPEI Leadership Card](leadership_card_mpei_v01.md)
 - [Kabov Leadership Card](leadership_card_kabov_v01.md)
 - [Foundational Reserve Leadership Card](leadership_card_foundational_v01.md)
+- [Leadership Claim Traceability Matrix](leadership_claim_traceability_matrix_v01.md)
+- [Leadership Confidence Matrix](leadership_confidence_matrix_v01.md)
+- [Leadership Presentation Freeze Specification](leadership_presentation_freeze_spec_v01.md)
 - [Executive Decision](executive_decision_v01.md)
 - [Management Capability System Map](management_capability_map_v01.md) — Russia foundational science → failure mechanism → institutions → China comparator → residual difference → phone PoC/IP
 - [Full Technical Report](full_technical_report_v01.md)
