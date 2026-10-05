@@ -134,6 +134,10 @@ Watch / reserves:
 
 Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
 
+## Public-research convergence authority
+
+- [Round 6 — Final Public-Research Convergence Audit](public_research_convergence_round6_v01.md) — current stopping rule for desk research + public/external dependency boundary.
+
 ## Current Stage-0 evidence-lock authority
 
 - [Round 4 — Industry-Translation / Stage-0 Evidence Lock](industry_translation_stage0_evidence_lock_round4_v01.md) — current normalized translation maturity + partner-data / experiment / foreground-IP / Kill locks.
