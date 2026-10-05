@@ -411,3 +411,37 @@ Key interpretation:
 This overlay does **not** change the Stage-0 order.
 
 No line has public T4-style phone product / production evidence.
+
+## Round-6 public-research convergence — 2026-10-05
+
+Canonical audit:
+[Round 6 — Final Public-Research Convergence Audit](../08_opportunities-transfer/public_research_convergence_round6_v01.md)
+
+External dependency authority:
+[External Dependency Ledger](dependencies/README.md)
+
+### Final public correction
+
+TPU copper material applicability is no longer UNKNOWN.
+
+Public evidence now demonstrates:
+- copper substrate;
+- nanosecond-laser micro-finned / anisotropic texture;
+- degassed-water pool boiling;
+- measured HTC/CHF effects.
+
+Therefore TPU's remaining blocker is:
+**phone-thickness copper + <=150 μm geometry + sealed-process compatibility**, not generic copper applicability.
+
+### Portfolio-level boundary
+
+For the current Stage-0 ordering:
+**no decision-relevant PUBLIC blocker remains hidden.**
+
+Further scorecard changes should come from:
+- partner-returned data;
+- Stage-0 physical evidence;
+- targeted legal/FTO review after a concrete winner;
+- a specific new public trigger.
+
+Stage-0 order remains unchanged.
