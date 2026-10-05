@@ -122,6 +122,11 @@ Decision-grade sources should use:
 - 10Q decision card;
 - local decision citation.
 
+### Institution-first naming
+- always classify current Russia capability as **Institution → Team / PI → Capability → Decision state**;
+- do not place people and institutions in the same ranking column;
+- use `00_scope/institution_first_entity_naming_standard_v01.md` as the canonical rule.
+
 ### Progress discipline
 Repository formatting or cross-link cleanup does **not** increase research-completion percentage.
 
