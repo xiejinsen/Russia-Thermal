@@ -602,3 +602,37 @@ Remaining gap:
 
 QA judgment:
 **PASS-WITH-STAGE0-TRANSFER-GAP.**
+
+
+### Management capability-map QA
+
+Canonical artifact:
+- [Russia Thermal Failure-Mechanism & Foundational Capability Map](../10-final-report/management_capability_map_v01.md)
+
+Required elements verified:
+- full Russia capability panorama;
+- 3 + 1 strategic core;
+- China strong-baseline overlay;
+- Stage-0 / Reserve / Watch / Kill separation;
+- Siberian modular-network boundary;
+- leadership resource ask;
+- explicit remaining unknowns.
+
+Critical boundary checks:
+- TPU shown as challenger, not Russia country advantage;
+- Maydanik shown as Watch / knowledge reserve;
+- TsAGI/PNRPU/CIAM shown as Watch / method reserve;
+- generic Russia VC / LHP / materials / DVFS advantage not resurrected;
+- Siberian network not described as an integrated consortium;
+- no current candidate promoted to unconditional GO.
+
+QA judgment:
+**PASS-DRAFT.**
+
+Remaining QA before final management freeze:
+- institution/capability completeness audit;
+- fresh 2023–2026 activity check for all promoted nodes;
+- final Russia–China academic counterpart completeness check.
+
+Research-progress effect:
+**+1 percentage point only for the substantive management synthesis milestone; no credit for formatting/cross-linking.**
