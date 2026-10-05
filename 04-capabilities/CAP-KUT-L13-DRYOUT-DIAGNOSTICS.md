@@ -13,6 +13,7 @@ Lab 1.3 demonstrates current dielectric boiling-crisis / dry-spot diagnostic cap
 evidence_claims:
 - CLM-PAV-001
 - CLM-PAV-002
+- CLM-PAV-008
 
 Technical scope:
 dielectric boiling crisis; dry-spot evolution; phase-change failure diagnostics.
