@@ -8,7 +8,7 @@ Human-readable decision briefs for individual papers. One source is stored in on
 
 Use the [Paper 10Q cards](../../10q/papers/README.md) for deeper Q1–Q10 evidence analysis.
 
-Current card count: **44**.
+Current card count: **45**.
 
 ## A. Pavlenko / Kutateladze — phase-change surfaces
 
@@ -30,6 +30,7 @@ Current card count: **44**.
 - [C1. Biphilic surface for controlled droplet evaporation](c1_biphilic_surface_for_controlled_droplet_evaporation.md)
 - [C2. Wettability-contrast evaporation mechanism](c2_wettability_contrast_evaporation_mechanism.md)
 - [C3. Durable laser–thermolysis superhydrophobic coating](c3_durable_laser_thermolysis_superhydrophobic_coating.md)
+- [C4. Laser-modified heat-transfer surface — 60-day field validation](c4_laser_surface_60_day_field_validation.md)
 
 ## D. China / global — strong ultra-thin VC benchmark
 
