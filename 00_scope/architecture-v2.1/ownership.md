@@ -45,6 +45,7 @@ CAPABILITY:
 - demonstrated technical ability;
 - technical scope;
 - maturity;
+- evidence confidence;
 - target fit;
 - transfer boundary.
 
@@ -139,3 +140,18 @@ Only these are mandatory at V2.1 start:
 6. Phase-1 management table.
 
 Additional generated views require a demonstrated user need.
+
+
+## Collaboration decision boundary
+
+ACTOR contact state is factual workflow only.
+
+Strategic statements such as:
+- primary collaboration candidate;
+- reserve;
+- challenger;
+- do not pursue;
+
+belong to DIRECTION / ROADMAP or a derived collaboration view.
+
+This prevents identity objects from becoming hidden strategy objects.
