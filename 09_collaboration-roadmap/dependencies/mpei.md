@@ -41,3 +41,18 @@ Decision state: **GO WITH PREREQUISITE / OUTREACH READY**
 ## Stop rule
 
 Representative geometry is already public. Do not keep searching for incremental geometry details as a substitute for current as-built partner data.
+
+## Round-7 analytical envelope
+
+Authority:
+[Quantitative Transfer Feasibility Envelope](../../08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+
+- public coating thickness ~5 μm, with thicker states ~10–15 μm, is not the dominant vertical risk;
+- the ~100 μm groove-radius lineage makes exact groove depth / shell integration the key geometry variable;
+- a uniform 0.5x hydraulic scale can raise a simple groove-resistance proxy by ~16x;
+- long-life thermosyphon heat flux (~0.02–0.17 W/cm²) is tens-to->100x below the internal 5/10/20 W/cm² sensitivity ladder.
+
+Interpretation:
+**do not default to uniform half-scale; preserve hydraulic return area and use fine hierarchy for capillary pressure.**
+
+Dependency classification is unchanged.
