@@ -211,6 +211,14 @@ Focused file:
   [Russia Thermal Failure-Mechanism & Foundational Capability Map](10-final-report/management_capability_map_v01.md)
 - It integrates the full Russia capability panorama, China comparator, 3 + 1 strategic core, Siberian modular network, Stage-0 portfolio, Watch/Kill states and leadership asks.
 
+**Research priority reset — MORE EVIDENCE BEFORE FINAL LEADERSHIP MATERIALS**
+- Final visual/PPT production is intentionally paused.
+- Current leadership materials are a **checkpoint**, not the next workstream.
+- Research now resumes around full-text evidence, current lab capability, translation/industry signals, stronger China counterparts and Stage-0 execution readiness.
+- Canonical plan:
+  [Research Deepening Before Leadership Materials](00_scope/research_deepening_before_leadership_v01.md)
+- Overall progress remains ~78%.
+
 **Evidence-to-presentation freeze — PASS**
 - [Claim Traceability Matrix](10-final-report/leadership_claim_traceability_matrix_v01.md)
 - [Confidence Matrix](10-final-report/leadership_confidence_matrix_v01.md)
