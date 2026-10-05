@@ -18,18 +18,18 @@ Scale: **HIGH / MEDIUM-HIGH / MEDIUM / LOW-MEDIUM / LOW**
 ## 2. Current matrix
 
 | Institution | Team / capability | Evidence Confidence | Phone Transfer Confidence | Partner Readiness | IP Clarity | Current decision |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** | Candidate Primary Bet / Stage-0 #1 |
 | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** | Strategic Reserve / Stage-0 #2 |
 | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | **MEDIUM-HIGH** | **LOW-MEDIUM** | **HIGH** | **MEDIUM** | Challenger / Stage-0 #3 |
 | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** | High-risk Mechanism/IP Reserve |
 | **Institutional modular network** | ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** | Foundational Reserve / blind benchmark |
-| **Maydanik / LHP** | HIGH domain-history confidence | LOW differentiation | MEDIUM | MEDIUM | Watch / knowledge reserve |
-| **Aeroacoustic methods** | HIGH method confidence | LOW phone differentiation | MEDIUM | LOW-MEDIUM | Watch / method reserve |
+| **Institute of Thermophysics UB RAS** | Maydanik lineage / LHP | HIGH domain-history confidence | LOW differentiation | MEDIUM | MEDIUM | Watch / knowledge reserve |
+| **TsAGI / PNRPU / CIAM** | respective aeroacoustic teams | HIGH method confidence | LOW phone differentiation | MEDIUM | LOW-MEDIUM | Watch / method reserve |
 
 ## 3. Rationale by direction
 
-### Pavlenko
+### Kutateladze Institute — Pavlenko team
 
 **Evidence — HIGH**
 - current 2024–2026 primary work;
@@ -56,7 +56,7 @@ Upgrade triggers:
 - copper/DI-water thin coupon;
 - repeatable irreversible-dryout advantage.
 
-### MPEI
+### MPEI — Ivanov/Kuzma-Kichta team
 
 **Evidence — HIGH**
 - current dissertation/papers/patents;
@@ -82,7 +82,7 @@ Upgrade triggers:
 - scaled copper-water coupon;
 - aging metric that predicts dryout-margin loss.
 
-### TPU
+### TPU — Feoktistov/Orlova team
 
 **Evidence — MEDIUM-HIGH**
 - current 2026 papers;
@@ -102,7 +102,7 @@ Upgrade triggers:
 - global laser/biphilic prior art is crowded;
 - foreground depends on sealed-process survival.
 
-### Kabov
+### Kutateladze Institute — Kabov/Kochkin/Chinnov team
 
 **Evidence — MEDIUM-HIGH**
 - long film-instability lineage;
