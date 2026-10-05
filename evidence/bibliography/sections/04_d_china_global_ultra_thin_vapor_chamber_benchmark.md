@@ -8,6 +8,9 @@
 
 - **[Effect of Laser Ablation Surface Modification on the Capillary Performance of the Wick Structure for Ultra-Thin Vapor Chamber](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774)** — Jiu Yu, Wenqi Fang, Guoliang Hu *et al.* — *International Journal of Heat and Mass Transfer*, 2025.
 
+- **[A semi-analytical model predicting thermal performance of ultra-thin vapor chambers](https://doi.org/10.1016/j.applthermaleng.2026.130498)** — Seokkan Ki, Duhyeon Lee, Junsang Kim *et al.*, Youngsuk Nam — *Applied Thermal Engineering*, 2026.  
+  Decision use: vapor-core / permeability / pore-radius sensitivity benchmark for Round-7 transfer-envelope screening.
+
 ---
 
 > Navigation: [Bibliography Index](../README.md)
