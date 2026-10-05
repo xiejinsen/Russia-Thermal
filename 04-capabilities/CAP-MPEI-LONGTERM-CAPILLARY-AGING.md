@@ -14,6 +14,7 @@ evidence_claims:
 - CLM-MPEI-001
 - CLM-MPEI-002
 - CLM-MPEI-006
+- CLM-MPEI-009
 
 Technical scope:
 hierarchical evaporator surface; capillary/wetting aging; thermosyphon integration; long-duration observation.
