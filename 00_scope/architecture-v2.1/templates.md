@@ -38,6 +38,7 @@ Optional:
 Required fields:
 - id
 - actor_id
+- key_people
 - capability_statement
 - evidence_claims
 - technical_scope
@@ -225,3 +226,19 @@ ACTOR may own only factual workflow state such as:
 - UNKNOWN
 
 "CANDIDATE", "PRIMARY PARTNER" or "recommended collaborator" are strategic judgments and belong to DIRECTION / ROADMAP / derived collaboration view, not ACTOR.
+
+
+## Capability key-people relation
+
+CAPABILITY owns the explicit relationship:
+`key_people`
+
+Purpose:
+identify the specific professor/researcher(s) who materially lead, execute, or represent the capability inside the institution/lab.
+
+Rules:
+- actor_id remains the institution/lab/team capability owner;
+- key_people contains PERSON IDs only;
+- key_people is not a substitute for affiliation;
+- a person may support multiple Capabilities;
+- generated institution/collaboration/leadership views must surface these people.
