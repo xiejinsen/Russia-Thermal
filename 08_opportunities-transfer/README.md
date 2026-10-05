@@ -151,3 +151,7 @@ Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
 ## Pre-execution analytical closure
 
 - [Round 7 — Quantitative Transfer Feasibility Envelope](quantitative_transfer_feasibility_envelope_round7_v01.md) — phone-geometry / scaling / active-overhead analytical screen under the current no-outreach/no-experiment constraint.
+
+## Round-8 internal architecture synthesis
+
+- [Internal Phone Thermal Architecture Synthesis](internal_phone_thermal_architecture_round8_v01.md) — current architecture-level mapping of Russian capability into package / VC / reliability / failure-diagnostic layers.
