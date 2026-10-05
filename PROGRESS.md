@@ -135,15 +135,15 @@ PARTNER and EXPERIMENT items remain deferred, not closed.
 
 ## Why progress percentages did not change
 
-Round 8 materially improved:
-- architecture clarity;
-- strategic control-point definition;
-- collaboration modularity;
-- 3-year gate structure.
+Round 9 materially improved:
+- observability evidence;
+- control-variable precision;
+- generic-baseline discipline;
+- falsification criteria for C1/C2.
 
 It did **not** close:
 - partner data;
-- physical performance;
+- physical correlation between phone telemetry and hidden two-phase state;
 - sealed-process survival;
 - legal/FTO;
 - product validation.
