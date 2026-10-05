@@ -85,6 +85,7 @@ Russia-Thermal/
 Repository governance:
 - [New Chat / Session Bootstrap](CONTINUE_HERE.md)
 - [Repository Architecture & Refresh Contract](00_scope/repository_architecture.md)
+- [Institution-First Entity Naming Standard](00_scope/institution_first_entity_naming_standard_v01.md)
 - [Evidence Standard](evidence/EVIDENCE_STANDARD.md)
 - [Evidence & QA Index](evidence/README.md)
 - [Human-Readable Bibliography](evidence/readable_bibliography.md)
@@ -105,9 +106,10 @@ Current phase:
 ### Current technical portfolio
 
 **Tier A**
-- phone-scale irreversible-dryout boundary control
-  - lead: Pavlenko/Kutateladze
-  - thesis: transfer **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostic and control know-how** into product-relevant fluids and <0.5 mm-class confinement, and beat strong independent China dryout/rewetting baselines
+- **Institution:** Kutateladze Institute of Thermophysics SB RAS
+  - **Team:** Pavlenko / Surtaev / Shvetsov / Zhukov
+  - **Capability:** phone-scale irreversible-dryout boundary control
+  - **Thesis:** transfer dielectric reversible→irreversible dry-spot / boiling-crisis diagnostic and control know-how into product-relevant fluids and <0.5 mm-class confinement, and beat strong independent China dryout/rewetting baselines
 
 **Tier A-**
 - sealed adaptive film/droplet hybrid
@@ -155,9 +157,18 @@ The final domestic-leadership report is now constrained to include three evidenc
 - [Russia × China Academic Capability Heatmap](08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md) — which broad Russia claims are killed, which capabilities are complementary, and which narrow Russia differentiation candidates survive.
 
 Current country-level differentiation candidates after stronger China comparison:
-1. Kutateladze/Pavlenko — **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**;
-2. MPEI/Ivanov — **actual 42-month hierarchical-surface operation/aging evidence**, not generic reliability;
-3. Kutateladze Kabov/Chinnov — **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
+
+1. **Kutateladze Institute of Thermophysics SB RAS**
+   - Pavlenko / Surtaev / Shvetsov / Zhukov team
+   - **dielectric reversible→irreversible dry-spot / boiling-crisis diagnostics and control**.
+
+2. **Moscow Power Engineering Institute (MPEI)**
+   - Ivanov / Kuzma-Kichta / Alyautdinova team
+   - **actual 42-month hierarchical-surface operation/aging evidence**, not generic reliability.
+
+3. **Kutateladze Institute of Thermophysics SB RAS**
+   - Kabov / Kochkin / Chinnov team
+   - **shear-driven microfilm / dry-spot / interfacial-instability physics under extreme confinement**.
 
 Watch / reserves:
 - TsAGI/PNRPU/CIAM — phone-scale aeroacoustic method reserve;
@@ -283,14 +294,28 @@ Phone packaging baseline:
 
 No current partner is contract-ready.
 
-## Current Stage-0 partner priority
+## Current Stage-0 institution / team priority
 
-This is an experiment-readiness order, not a final partner ranking:
+This is an experiment-readiness order, not a final institution ranking:
 
-1. **Pavlenko / Kutateladze** — dielectric irreversible-dryout / boiling-crisis diagnostics; main gap is whether this depth shifts the failure boundary in phone-scale thin wick / product-fluid conditions beyond strong domestic controls.
-2. **MPEI / Ivanov** — **actual 42-month engineered-surface aging evidence**; China is stronger in product VC reliability, but no matched public multi-year same-surface analogue was recovered. Main gap is whether capillary/surface aging becomes a useful phone-scale early-warning indicator after geometry/fluid/process transfer.
-3. **TPU / Feoktistov** — laser/biphilic pattern, surface durability and claim-mapped RU2812668; main gap is copper/vacuum/outgassing/sealed-fluid compatibility.
-4. **MPEI ordered wick** — pre-device until a physical thin coupon exists.
+1. **Kutateladze Institute of Thermophysics SB RAS**
+   - Team: Pavlenko / Surtaev / Shvetsov / Zhukov
+   - Capability: dielectric irreversible-dryout / boiling-crisis diagnostics.
+   - Main gap: whether this depth shifts the failure boundary in phone-scale thin wick / product-fluid conditions beyond strong domestic controls.
+
+2. **Moscow Power Engineering Institute (MPEI)**
+   - Team: Ivanov / Kuzma-Kichta / Alyautdinova
+   - Capability: **actual 42-month engineered-surface aging evidence**.
+   - Main gap: whether capillary/surface aging becomes a useful phone-scale early-warning indicator after geometry/fluid/process transfer.
+
+3. **Tomsk Polytechnic University (TPU)**
+   - Team: Feoktistov / Orlova
+   - Capability: laser/biphilic pattern and surface process.
+   - Main gap: copper/vacuum/outgassing/sealed-fluid compatibility.
+
+4. **Moscow Power Engineering Institute (MPEI)**
+   - Team: ordered-wick line
+   - State: pre-device until a physical thin coupon exists.
 
 Partner-specific 3–6 month briefs are indexed in:
 [09 Collaboration Roadmap](09_collaboration-roadmap/README.md).
@@ -302,10 +327,10 @@ Current execution packet set:
 [Stage-0 Partner Data Request + Experiment Packets](09_collaboration-roadmap/stage0_partner_packet_index_v01.md).
 
 Current decisions:
-- Pavlenko — **GO WITH PREREQUISITE**
-- MPEI / Ivanov — **GO WITH PREREQUISITE**
-- TPU / Feoktistov — **GO WITH PREREQUISITE**
-- MPEI ordered wick — **HOLD**.
+- Kutateladze Institute — Pavlenko team — **GO WITH PREREQUISITE**
+- MPEI — Ivanov/Kuzma-Kichta team — **GO WITH PREREQUISITE**
+- TPU — Feoktistov/Orlova team — **GO WITH PREREQUISITE**
+- MPEI — ordered-wick line — **HOLD**.
 
 ## Evidence language
 
