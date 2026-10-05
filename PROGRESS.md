@@ -4,9 +4,97 @@ Last updated: 2026-10-04
 
 ## Overall status
 
-**Estimated research completion: ~77%**
-**Estimated remaining research: ~23%**
+**Estimated research completion: ~78%**
+**Estimated remaining research: ~22%**
 
+
+## Evidence-to-presentation freeze — 2026-10-05
+
+### Research-state effect
+
+**Progress moves conservatively from ~77% to ~78%.**
+
+The +1 percentage point reflects closure of the required claim-traceability / confidence / presentation-freeze milestone.
+
+No new mechanism evidence is claimed.
+
+### Added
+
+- `10-final-report/leadership_claim_traceability_matrix_v01.md`
+- `10-final-report/leadership_confidence_matrix_v01.md`
+- `10-final-report/leadership_presentation_freeze_spec_v01.md`
+
+### Traceability result
+
+Every leadership claim is now explicitly controlled as one of:
+- SOURCE FACT;
+- ANALYST INFERENCE;
+- DECISION;
+- UNKNOWN / GAP;
+- INTERNAL TARGET.
+
+Key rule:
+presentation cannot turn an inference into a fact, a public-search gap into a negative fact, or an internal PoC threshold into a literature result.
+
+### Confidence result
+
+Current four-dimensional confidence:
+
+| Direction | Evidence | Phone Transfer | Partner | IP |
+|---|---|---|---|---|
+| Pavlenko | HIGH | LOW-MEDIUM | MEDIUM-HIGH | MEDIUM |
+| MPEI | HIGH | MEDIUM | HIGH | MEDIUM-HIGH |
+| TPU | MEDIUM-HIGH | LOW-MEDIUM | HIGH | MEDIUM |
+| Kabov | MEDIUM-HIGH | LOW | MEDIUM-HIGH | MEDIUM-HIGH |
+| Foundational | MEDIUM-HIGH | LOW-MEDIUM | MEDIUM | LOW-MEDIUM |
+
+Important:
+**strong scientific evidence is now visibly separated from product-transfer confidence.**
+
+### Presentation hierarchy
+
+The leadership structure is frozen as:
+
+- China / our side = device + manufacturing + reliability + system platform;
+- Russia #1 Pavlenko = Failure Onset;
+- Russia #2 MPEI = Failure Aging;
+- Kabov = Failure Instability / High-risk Reserve;
+- Foundational = Failure Prediction / blind benchmark;
+- TPU = Stage-0 Challenger sidebar, not a fifth strategic core.
+
+### Freeze state
+
+Claim traceability:
+**PASS**
+
+Confidence matrix:
+**PASS**
+
+Management map:
+**FREEZE CANDIDATE**
+
+Leadership content hierarchy:
+**FREEZE CANDIDATE**
+
+Final investment recommendation:
+**NOT FROZEN**
+
+### Next minimum task
+
+Move into actual leadership presentation production:
+
+1. convert the frozen content hierarchy into a concise 10–12 slide management narrative;
+2. build the one-page capability system visual;
+3. convert each decision card into a visual Bet/Reserve card;
+4. keep detailed papers/patents in appendix/notes;
+5. preserve confidence badges, Kill gates and evidence footers.
+
+The presentation may now change layout and wording for clarity, but must not change the frozen research logic.
+
+Parallel unresolved research remains:
+partner-returned data and physical Stage-0 results.
+
+---
 
 ## Leadership decision package convergence — 2026-10-05
 
