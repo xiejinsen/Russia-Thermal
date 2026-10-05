@@ -96,8 +96,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~73%**
-**Estimated remaining: ~27%**
+**Estimated research completion: ~74%**
+**Estimated remaining: ~26%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -206,6 +206,11 @@ Focused file:
 Focused file:
 [MPEI Multi-Year Aging China Pressure Test](08_opportunities-transfer/mpei_multiyear_aging_china_pressure_test_v01.md)
 
+**Management-facing system map draft**
+- First integrated leadership view is now available:
+  [Russia Thermal Failure-Mechanism & Foundational Capability Map](10-final-report/management_capability_map_v01.md)
+- It integrates the full Russia capability panorama, China comparator, 3 + 1 strategic core, Siberian modular network, Stage-0 portfolio, Watch/Kill states and leadership asks.
+
 **Current management structure: 3 mechanism candidates + 1 foundational reserve.**
 
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
@@ -296,7 +301,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~73% research state.
+It is intentionally **not final** at the current ~74% research state.
 
 The report will ultimately contain:
 - executive decision;
