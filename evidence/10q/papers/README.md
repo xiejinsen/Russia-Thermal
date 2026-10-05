@@ -15,7 +15,7 @@ Canonical navigation index for decision-grade paper 10Q cards.
 - New cards should start from [_TEMPLATE.md](_TEMPLATE.md).
 - Source metadata remains centralized in [source_register.md](../../sources/README.md); these files are the deep-reading / decision layer.
 
-Current migrated card count: **41**.
+Current migrated card count: **45**.
 
 ## A. Pavlenko / Kutateladze
 
@@ -87,6 +87,13 @@ Current migrated card count: **41**.
 - [J1 — MPEI 42-month hierarchical-surface operation](j1_mpei_42_month_hierarchical_surface_operation.md)
 - [J2 — China accelerated VC life prediction](j2_china_accelerated_vc_life_prediction.md)
 - [J3 — China mobile mLHP accelerated aging](j3_china_mobile_mlhp_accelerated_aging.md)
+
+## K. Round-9 observability
+
+- [K1 — Transient heat-pipe dryout temperature signature](k1_transient_heat_pipe_dryout_temperature_signature.md)
+- [K2 — Transient wick-saturation dryout/recovery model](k2_transient_wick_saturation_dryout_recovery_model.md)
+- [K3 — Online transient thermal-impedance condition monitoring](k3_online_transient_thermal_impedance_condition_monitoring.md)
+- [K4 — Adaptive thermal observer / lifetime parameter monitoring](k4_adaptive_thermal_observer_lifetime_parameter_monitoring.md)
 
 ## Cross-paper synthesis
 
