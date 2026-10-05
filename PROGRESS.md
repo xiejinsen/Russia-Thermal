@@ -106,11 +106,11 @@ Candidate outputs:
 
 ## Current control points
 
-### C1 — Dryout margin
-Distance to irreversible dryout under current geometry / surface / fluid / load state.
+### C1 — Estimated dryout-risk state
+Calibrated estimate of dryout risk / time-to-dryout under current geometry, workload and operating context; **not** a directly measured physical distance.
 
-### C2 — Thermal health state
-Capillary / wetting / process degradation before gross Rth failure.
+### C2 — Estimated thermal-health state
+Hidden capillary / wetting / process degradation inferred from dynamic thermal response before gross Rth failure, if identifiability is demonstrated.
 
 ### C3 — Process-retained surface function
 Whether the designed surface state survives product manufacturing and life.
