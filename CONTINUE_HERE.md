@@ -49,6 +49,9 @@ For the current collaboration / country-comparison phase, normally also read:
 - [08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md](08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md)
 - [08_opportunities-transfer/direction_decision_gate_v01.md](08_opportunities-transfer/direction_decision_gate_v01.md)
 - [09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md](09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
+- [00_scope/current_execution_constraints_2026_10_05.md](00_scope/current_execution_constraints_2026_10_05.md) — current no-outreach / no-experiment constraint
+- [08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md) — current internal phone-thermal architecture
+- [09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md) — current gate-based 3-year roadmap
 - [09_collaboration-roadmap/dependencies/README.md](09_collaboration-roadmap/dependencies/README.md) — external dependency ledger after public-research closure
 - [10-final-report/final_report_readiness_gate.md](10-final-report/final_report_readiness_gate.md)
 
