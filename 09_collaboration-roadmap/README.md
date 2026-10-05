@@ -195,3 +195,9 @@ Authority:
 - [No-Outreach / No-Experiment Internal Decision Tree](pre_execution_internal_decision_tree_round7_v01.md)
 
 These files convert the public evidence into future GREEN / AMBER / RED restart logic without claiming partner or experiment validation.
+
+## Round-8 internal 3-year roadmap
+
+- [Internal 3-Year Technology Roadmap](internal_3year_roadmap_round8_v01.md)
+
+This is the current gate-based roadmap under the no-outreach/no-experiment constraint.
