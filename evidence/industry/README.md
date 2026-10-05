@@ -41,6 +41,7 @@ Do not create a full card by default. Keep minimal metadata in the source regist
 
 - [Huawei](huawei/README.md)
 - [Newfrost](newfrost/README.md)
+- [Air Products](air-products/README.md)
 
 Future organization directories are created only when there is enough P0/P1 evidence to justify a stable canonical home.
 
