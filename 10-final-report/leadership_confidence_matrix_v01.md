@@ -17,13 +17,13 @@ Scale: **HIGH / MEDIUM-HIGH / MEDIUM / LOW-MEDIUM / LOW**
 
 ## 2. Current matrix
 
-| Direction | Evidence Confidence | Phone Transfer Confidence | Partner Readiness | IP Clarity | Current decision |
+| Institution | Team / capability | Evidence Confidence | Phone Transfer Confidence | Partner Readiness | IP Clarity | Current decision |
 |---|---|---|---|---|---|
-| **Pavlenko / Kutateladze** | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** | Candidate Primary Bet / Stage-0 #1 |
-| **MPEI / Ivanov** | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** | Strategic Reserve / Stage-0 #2 |
-| **TPU / Feoktistov** | **MEDIUM-HIGH** | **LOW-MEDIUM** | **HIGH** | **MEDIUM** | Challenger / Stage-0 #3 |
-| **Kabov / Chinnov** | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** | High-risk Mechanism/IP Reserve |
-| **Foundational modular network** | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** | Foundational Reserve / blind benchmark |
+| **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** | Candidate Primary Bet / Stage-0 #1 |
+| **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** | Strategic Reserve / Stage-0 #2 |
+| **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | **MEDIUM-HIGH** | **LOW-MEDIUM** | **HIGH** | **MEDIUM** | Challenger / Stage-0 #3 |
+| **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** | High-risk Mechanism/IP Reserve |
+| **Institutional modular network** | ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** | Foundational Reserve / blind benchmark |
 | **Maydanik / LHP** | HIGH domain-history confidence | LOW differentiation | MEDIUM | MEDIUM | Watch / knowledge reserve |
 | **Aeroacoustic methods** | HIGH method confidence | LOW phone differentiation | MEDIUM | LOW-MEDIUM | Watch / method reserve |
 
