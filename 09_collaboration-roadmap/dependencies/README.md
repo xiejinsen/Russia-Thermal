@@ -26,6 +26,17 @@ Each partner/module is independently editable so a returned dataset or experimen
 - **LEGAL-FTO** — technical research cannot settle rights/claim scope; legal review is triggered only by a concrete winner.
 - **INTERNAL-DECISION** — our own program choice, not an external evidence gap.
 
+## Current execution constraint
+
+At present:
+- PARTNER dependencies are **deferred**, because direct university outreach is not available;
+- EXPERIMENT dependencies are **deferred**, because physical Stage-0 testing is not available.
+
+They remain valid external dependencies and must not be converted to PUBLIC-CLOSED.
+
+Current constraint:
+[../../00_scope/current_execution_constraints_2026_10_05.md](../../00_scope/current_execution_constraints_2026_10_05.md)
+
 ## Update rule
 
 When a dependency closes:
