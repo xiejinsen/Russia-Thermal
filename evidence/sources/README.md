@@ -13,7 +13,7 @@ Rules:
 - use the [Human-Readable Bibliography](../bibliography/README.md) for reader-facing citations;
 - use 10Q/brief cards for source interpretation.
 
-Current module count: **30**.
+Current module count: **31**.
 
 ## Modules
 
@@ -47,3 +47,4 @@ Current module count: **30**.
 - [AA. Core evidence deepening round 1 — 2026-10-05](sections/28_aa_core_evidence_deepening_round_1_2026_10_05.md)
 - [AB. Institution-level execution audit round 2 — 2026-10-05](sections/29_ab_institution_level_execution_audit_round_2_2026_10_05.md)
 - [AC. Core evidence deepening round 3 — public-to-partner boundary closure — 2026-10-05](sections/30_ac_core_evidence_deepening_round_3_public_to_partner_boundary_closure_2026_10_05.md)
+- [AD. Round 4 — industry translation / Stage-0 evidence lock — 2026-10-05](sections/31_ad_round4_industry_translation_stage0_evidence_lock_2026_10_05.md)
