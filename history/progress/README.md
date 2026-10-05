@@ -4,6 +4,8 @@
 
 This archive was created on 2026-10-05 when the former monolithic progress log was modularized.
 
+- [00g — Round 9 — Dryout / Thermal-Health Observability — 2026-10-05](00g_2026_10_05_round9_dryout_thermal_health_observability.md)
+
 - [00f — Round 8 — Internal Architecture & 3-Year Roadmap — 2026-10-05](00f_2026_10_05_round8_internal_architecture_3year_roadmap.md)
 - [00e — Round 7 — Quantitative Transfer Feasibility — 2026-10-05](00e_2026_10_05_round7_quantitative_transfer_feasibility.md)
 - [00d — Round 6 — Final Public-Research Convergence — 2026-10-05](00d_2026_10_05_round6_final_public_research_convergence.md)
