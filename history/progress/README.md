@@ -4,6 +4,7 @@
 
 This archive was created on 2026-10-05 when the former monolithic progress log was modularized.
 
+- [00e — Round 7 — Quantitative Transfer Feasibility — 2026-10-05](00e_2026_10_05_round7_quantitative_transfer_feasibility.md)
 - [00d — Round 6 — Final Public-Research Convergence — 2026-10-05](00d_2026_10_05_round6_final_public_research_convergence.md)
 - [00c — Round 5 — Outreach Readiness / Experiment-IP Freeze — 2026-10-05](00c_2026_10_05_round5_outreach_readiness_experiment_ip_freeze.md)
 - [00b — Round 4 — Industry-Translation / Stage-0 Evidence Lock — 2026-10-05](00b_2026_10_05_round4_industry_translation_stage0_evidence_lock.md)
