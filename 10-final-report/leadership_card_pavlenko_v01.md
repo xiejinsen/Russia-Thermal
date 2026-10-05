@@ -6,6 +6,16 @@ Decision state: **CANDIDATE PRIMARY BET / Stage-0 Priority #1 — GO WITH PREREQ
 
 Evidence maturity: **SYSTEM_VALUE mechanism evidence / phone transfer PARTIAL**
 
+## Confidence badges
+
+- **Evidence:** HIGH
+- **Phone Transfer:** LOW-MEDIUM
+- **Partner Readiness:** MEDIUM-HIGH
+- **IP Clarity:** MEDIUM
+
+Interpretation: strong mechanism evidence; product transfer remains the main uncertainty.
+
+
 ---
 
 # 1. Product problem
