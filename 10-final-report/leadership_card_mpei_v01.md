@@ -6,6 +6,16 @@ Decision state: **STRATEGIC RESERVE / Stage-0 Priority #2 — GO WITH PREREQUISI
 
 Evidence maturity: **SYSTEM_VALUE aging evidence / phone transfer PARTIAL**
 
+## Confidence badges
+
+- **Evidence:** HIGH
+- **Phone Transfer:** MEDIUM
+- **Partner Readiness:** HIGH
+- **IP Clarity:** MEDIUM-HIGH
+
+Interpretation: unusually strong aging evidence and clear partner lineage; scaled phone transfer still requires proof.
+
+
 ---
 
 # 1. Product problem
