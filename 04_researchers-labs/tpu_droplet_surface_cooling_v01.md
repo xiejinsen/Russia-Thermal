@@ -313,3 +313,28 @@ Public research has **not** recovered decision-grade evidence for:
 These are now classified as **experiment-only**, with a partner request only for any already-existing unpublished/shareable data.
 
 **Current decision:** KEEP / GO WITH PREREQUISITE as Stage-0 priority #3.
+
+## Round-4 field-translation update — 2026-10-05
+
+Decision-grade field-validation paper:
+[C4 — laser-modified heat-transfer surface: 60-day field validation](../evidence/10q/papers/c4_laser_surface_60_day_field_validation.md)
+
+Public evidence:
+- same Feoktistov/Orlova laser-surface family;
+- AISI 310S laser-modified coupons;
+- ~60 days in an operating ~400 kW brown-coal boiler;
+- real slagging/deposition environment;
+- microchannel-textured surfaces retained useful anti-deposition behavior.
+
+Decision interpretation:
+**TPU process-translation confidence upgrades.**
+
+This does **not** upgrade phone-device readiness because it does not close:
+- copper thin-substrate transfer;
+- vacuum/outgassing;
+- sealed DI-water behavior;
+- post-seal wetting retention;
+- confined two-phase rewetting/dryout.
+
+Current decision remains:
+**Stage-0 #3 / GO WITH PREREQUISITE.**

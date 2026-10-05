@@ -158,3 +158,13 @@ Do not reopen broad searches to answer items already routed to PARTNER or EXPERI
 
 The three primary Stage-0 packets are now **OUTREACH-DRAFT READY**.
 They are not evidence of contract readiness.
+
+## Round-4 evidence-lock authority
+
+Industry-translation maturity, foreground-IP boundaries and Stage-0 hard evidence locks are frozen in:
+[Round 4 — Industry-Translation / Stage-0 Evidence Lock](../08_opportunities-transfer/industry_translation_stage0_evidence_lock_round4_v01.md)
+
+Packet usage rule:
+- do not ask partners to re-prove public translation evidence;
+- ask only for the missing process / as-built / system data identified in the evidence lock;
+- do not move to Stage-1 until the corresponding experiment lock is satisfied.

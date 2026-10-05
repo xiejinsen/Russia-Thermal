@@ -1,6 +1,6 @@
 # Stage-0 Partner × Technology Decision Scorecard v0.1
 
-Last updated: 2026-10-04
+Last updated: 2026-10-05
 
 Status: **CURRENT Stage-0 partner-decision source of truth**
 
@@ -396,3 +396,18 @@ Remaining blockers are partner/process/experiment only.
 ### Decision effect
 **Stage-0 ranking unchanged.**
 No unconditional GO.
+
+## Round-4 industry-translation overlay — 2026-10-05
+
+Canonical normalized view:
+[Round 4 — Industry-Translation / Stage-0 Evidence Lock](../08_opportunities-transfer/industry_translation_stage0_evidence_lock_round4_v01.md)
+
+Key interpretation:
+- **MPEI** has the strongest public external physical-engineering / implementation chain via Newfrost.
+- **Kutateladze Lab 1.3 / Pavlenko** has the strongest large-company R&D precedent via Huawei/Bel Huawei plus older Air Products work.
+- **TPU** now has prolonged real-system field validation for the laser-surface process family, but not electronics/phone product translation.
+- **Lab 6.6** remains strong in engineering/IP continuity but lacks a matched public external implementation chain.
+
+This overlay does **not** change the Stage-0 order.
+
+No line has public T4-style phone product / production evidence.

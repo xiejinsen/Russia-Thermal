@@ -311,3 +311,21 @@ Decisive questions are EXPERIMENT-ONLY:
 
 Packet state:
 **PUBLIC BOUNDARY FROZEN / READY FOR TWO-BRANCH COPPER SCREEN REQUEST.**
+
+## 13. Round-4 field-validation implication — 2026-10-05
+
+New public evidence:
+[C4 — 60-day field validation](../evidence/10q/papers/c4_laser_surface_60_day_field_validation.md)
+
+This closes one generic process question:
+> TPU has demonstrated that its laser-surface process family can survive prolonged real-equipment thermal exposure outside a short laboratory test.
+
+Therefore do **not** ask the partner to prove generic process durability from zero.
+
+Ask the more discriminating questions:
+- can the relevant low-organic laser process transfer to thin copper?
+- what is current throughput/repeatability?
+- does the surface survive actual VC vacuum/degassing?
+- does the winning state retain wetting and confined rewetting function after sealed-process exposure?
+
+The phone-specific process gate is unchanged.

@@ -526,3 +526,16 @@ Phone transfer remains EXPERIMENT-ONLY.
 
 Current decision:
 **Stage-0 #1 / GO WITH PREREQUISITE — ranking unchanged, partner-readiness confidence reinforced.**
+
+## Round-4 broader industrial-collaboration context — 2026-10-05
+
+Canonical supporting industry evidence:
+[I-AIRPRODUCTS-001](../evidence/industry/air-products/sources/I-AIRPRODUCTS-001_kutateladze_structured_packing_rnd_cooperation.md)
+
+The Pavlenko-led line also executed a multi-year 2017–2021 structured-packing R&D project with Air Products & Chemicals.
+
+Decision interpretation:
+the Huawei collaboration precedent is **not an isolated example** of external industrial R&D.
+
+This strengthens collaboration-readiness confidence only.
+It does not prove phone manufacturing, product deployment or the transferability of the current dryout/surface mechanism.
