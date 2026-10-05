@@ -158,7 +158,8 @@ It is:
 # 4. Strategic core — the 3 + 1 structure
 
 ## Core 1 — Kutateladze Institute of Thermophysics SB RAS
-### Team: Pavlenko / Surtaev / Shvetsov / Zhukov
+### Laboratory 1.3 — Low-Temperature Thermophysics
+Current head: Pavlenko; relevant line includes Surtaev / Shvetsov / Zhukov
 
 ### Failure question
 When does a recoverable dry region become an **irreversible dryout / thermal runaway**?
@@ -268,7 +269,8 @@ Must show:
 ---
 
 ## Core 3 — Kutateladze Institute of Thermophysics SB RAS
-### Team: Kabov / Kochkin / Chinnov
+### Laboratory 6.6 — Heat Transfer Intensification Processes
+Current acting head: Kochkin; Kabov–Chinnov scientific lineage
 
 ### Failure question
 Under extreme confinement and gas shear, when does a stable liquid film become:
