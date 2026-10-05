@@ -353,3 +353,34 @@ The atlas is not final until the following are strengthened:
 
 The final management version should show:
 **capability -> institution -> representative PI/lab -> evidence -> mobile-transfer state -> China comparator -> differentiation verdict.**
+
+## Round-3 capability-atlas correction — 2026-10-05
+
+### Kutateladze Institute
+
+Lab 1.3:
+- official Huawei collaboration precedent strengthens execution/collaboration-readiness evidence;
+- current diagnostic line includes ML-assisted dry-spot analysis;
+- exact phone-scale stand/sample boundary remains partner-only.
+
+Lab 6.6:
+- post-2017 miniaturized experimental capability is no longer an open question;
+- current public line includes 10–12.5 μm extreme-gap two-phase flow and 40 μm HFE-7100 boiling evidence;
+- integrated system overhead remains the limiting phone-transfer question.
+
+### MPEI
+
+MPEI current capability must be shown as at least two relevant sub-lines:
+
+1. **Ivanov / Kuzma-Kichta / Alyautdinova**
+   - hierarchical surface;
+   - controlled wettability;
+   - 42-month aging;
+   - Newfrost thermosyphon translation.
+
+2. **Kuzma-Kichta / Kiselev / Strashnikova / Yastrebov**
+   - modular microchannel cooling;
+   - SiC nanoparticle/agglomerate coating;
+   - current electronics-cooling execution signal.
+
+The second line improves institutional breadth but is **not** evidence of a new Russia-specific country advantage; generic coated microchannel cooling is globally crowded.

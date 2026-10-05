@@ -318,3 +318,62 @@ Before external outreach, close:
 6. which person should receive each technical question.
 
 Then generate institution-specific Partner Request Packs.
+
+## Round-3 public-to-partner boundary update — 2026-10-05
+
+### Kutateladze Institute — Lab 1.3
+
+New official execution/collaboration signal:
+- institute pages publicly list 2021–2023 R&D cooperation with Huawei Tech Company / Huawei Technologies;
+- later Bel Huawei consulting/cooperation is also listed, with an end-year discrepancy between the lab page (2025) and Pavlenko page (2026).
+
+Interpretation:
+**Partner Readiness remains HIGH, reinforced by a public collaboration precedent.**
+Do not infer confidential scope or current contractual status.
+
+Public boundary now includes:
+- current spray/jet and dielectric-crisis platform;
+- current ML-assisted dry-spot diagnostics;
+- same-lab diagnostic lineage around ~30 μm/pixel visible and ~120 μm/pixel IR imaging.
+
+Still PARTNER-ONLY:
+- exact present dielectric stand geometry/resolution;
+- smallest repeatable phone-like sample;
+- sample throughput/yield;
+- copper / fine-mesh process experience.
+
+### Kutateladze Institute — Lab 6.6
+
+Correction:
+the previous post-2017 miniaturization uncertainty is **closed at experimental-platform level**.
+
+Public evidence now includes:
+- 10 μm extreme-gap two-phase microchannel work (2023);
+- 12.5 μm × 10 mm slit two-phase work including HFE-7100 (2024);
+- 2026 official conference evidence for HFE-7100 boiling in a 40 μm flat microchannel;
+- current localized-heating / shear-film work with Kochkin/Kabov/Chinnov-linked authorship.
+
+Partner readiness:
+**MEDIUM-HIGH — execution confidence upgraded.**
+
+Phone system readiness:
+**remains LOW** because pump/compressor power, integrated pressure drop, loop volume and acoustics are not publicly closed.
+
+### MPEI
+
+Use two current sub-lines:
+
+1. **Ivanov / Kuzma-Kichta / Alyautdinova — hierarchy / controlled-wettability / aging**
+   - 42-month engineered-surface aging;
+   - current controlled-wettability thermosyphon;
+   - current Newfrost physical-model fabrication evidence.
+
+2. **Kuzma-Kichta / Kiselev / Strashnikova / Yastrebov — modular microchannel cooling**
+   - current 2024–2026 project;
+   - SiC nanoparticle/agglomerate coating;
+   - electronics/IT project framing;
+   - coated-microchannel diagnostic lineage.
+
+Do not assume the two sub-lines share the same process/equipment until partner evidence confirms it.
+
+MPEI institution-level Partner Readiness remains **HIGH**, with broader current execution evidence than previously captured.

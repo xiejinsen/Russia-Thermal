@@ -491,3 +491,41 @@ Partner request must now ask explicitly for:
 - sample throughput/yield;
 - copper/DI-water experience;
 - whether their diagnostic pipeline can be applied to externally fabricated phone-like coupons.
+
+## Round-3 collaboration and diagnostic boundary update — 2026-10-05
+
+### Official collaboration precedent
+
+Kutateladze official pages publicly list:
+- 2021–2023 technical R&D cooperation with Huawei;
+- later Bel Huawei consulting/cooperation.
+
+This is decision-relevant because it demonstrates an existing large-company collaboration path.
+
+Boundary:
+- use it as **collaboration-readiness evidence**;
+- do not infer private Huawei technical content, contractual terms or phone-specific field rights;
+- the later agreement end year is inconsistent across two official pages and should be confirmed directly.
+
+### Diagnostic public boundary
+
+Current public evidence now supports:
+- 2026 water spray study using a 1.2 mm nozzle and 10 g/s flow with IR + internal-reflection visualization + ML dry-spot analysis;
+- same-lab transparent-heater diagnostic lineage of ~30 μm/pixel visible and ~120 μm/pixel IR imaging;
+- current HFE-7100 / Novec 649 irreversible-dryout work with CNN-assisted dry-spot analysis.
+
+These values are **platform-lineage evidence**, not the exact resolution/specification of the current dielectric spray/jet stand.
+
+### Search exit
+
+Do not continue open-ended public searching for:
+- exact current dielectric stand nozzle/jet arrangement;
+- minimum repeatable phone-like mesh/surface;
+- current copper/fine-mesh process yield.
+
+Route those to PARTNER-ONLY.
+
+Phone transfer remains EXPERIMENT-ONLY.
+
+Current decision:
+**Stage-0 #1 / GO WITH PREREQUISITE — ranking unchanged, partner-readiness confidence reinforced.**

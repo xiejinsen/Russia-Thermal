@@ -344,3 +344,42 @@ The final collaboration thesis may therefore converge toward:
 ×
 **our system/product boundary**
 -> **phone thermal robustness at failure limits, not generic cooling components.**
+
+## Round-3 execution update — post-2017 miniaturization blocker closed
+
+New public evidence materially changes one execution uncertainty without changing the strategic reserve decision.
+
+### Extreme-gap experimental capability
+
+- 2023: two-phase gas-liquid flow in a **10 μm-high × 10 mm-wide** microchannel.
+  - DOI: https://doi.org/10.1615/InterfacPhenomHeatTransfer.2023047135
+- 2024: adiabatic two-phase flow in a **12.5 μm × 10 mm** slit; HFE-7100 included among working liquids.
+  - https://www.sciencedirect.com/science/article/pii/S0894177724000220
+- 2026: official Kutateladze conference report records **HFE-7100 boiling in a 40 μm-high flat microchannel**.
+
+This closes:
+> "Does the current scientific line retain genuinely miniaturized experimental capability?"
+
+Answer:
+**YES — at mechanism / microfabricated-channel level.**
+
+### Current execution lineage
+
+Current Kochkin/Kabov/Chinnov-related work also includes:
+- gas-driven liquid films in flat minichannels;
+- wave/entrainment transitions;
+- localized 3×3 mm heating;
+- flow boiling with porous coatings.
+
+### Still not closed
+
+No decision-grade public integrated-system data were recovered for:
+- actuator/compressor electrical power;
+- complete system pressure drop;
+- condenser/separator/loop volume;
+- phone-enclosure acoustics.
+
+Therefore:
+**HIGH-RISK MECHANISM / IP RESERVE remains correct.**
+
+The next useful evidence is a fixed-power/fixed-volume feasibility comparison, not more generic microchannel searching.

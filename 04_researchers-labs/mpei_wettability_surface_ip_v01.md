@@ -432,3 +432,60 @@ New partner-request items:
 - current coating yield and minimum geometry;
 - raw 42-month monthly dataset;
 - copper-substrate compatibility.
+
+## Round-3 MPEI two-line execution correction — 2026-10-05
+
+### Newfrost physical-model closure
+
+Official MPEI 2025 proceedings describe a current thermosyphon model **manufactured by Newfrost LLC** for the controlled-wettability project line.
+
+This materially strengthens the external-engineering chain:
+- not only contracts/coauthorship/implementation wording;
+- a current test model is physically fabricated by the industrial partner.
+
+Do not transfer its R22 thermosyphon performance directly to smartphone cooling.
+
+### Distinct current microchannel line
+
+MPEI official 2024–2025 material lists a separate current project led by **Yuri A. Kuzma-Kichta**:
+
+> Development of a modular microchannel cooling system with coating of silicon-carbide nanoparticles and their agglomerates.
+
+2025 team:
+- Alexander Kiselev;
+- Olga Strashnikova;
+- Ivan Yastrebov.
+
+The project is placed in the MPEI section covering electronics / radio engineering / space / IT.
+
+Related current conference work continues nanoparticle-coated microchannel boiling / vapor-fraction analysis.
+
+### Entity correction
+
+Do not collapse all MPEI evidence into one "Ivanov/Kuzma-Kichta team".
+
+Current representation:
+
+**MPEI → Ivanov / Kuzma-Kichta / Alyautdinova line**
+→ long-life hierarchical surface / controlled wettability / Newfrost thermosyphon.
+
+**MPEI → Kuzma-Kichta / Kiselev / Strashnikova / Yastrebov line**
+→ modular SiC-coated microchannel cooling / active current electronics-cooling execution.
+
+Public evidence does not prove these two lines share:
+- exact coating process;
+- current equipment;
+- datasets;
+- module geometry.
+
+### Partner request correction
+
+Add:
+- current SiC module dimensions;
+- coating/agglomerate morphology;
+- present CHF/HTC/pressure-drop data;
+- physical prototype state;
+- whether the microchannel and long-life hierarchy lines can share fabrication/metrology and jointly build a phone-scale coupon.
+
+Decision:
+**MPEI institution capability breadth UPGRADED; Stage-0 #2 ranking unchanged.**
