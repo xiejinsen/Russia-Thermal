@@ -17,7 +17,7 @@ Every management claim is one of:
 
 Never convert ANALYST INFERENCE to SOURCE FACT, UNKNOWN to a negative fact, or INTERNAL TARGET to a literature result.
 
-## 2. Pavlenko / Kutateladze
+## 2. Kutateladze Institute of Thermophysics SB RAS — Pavlenko team
 
 | Leadership claim | Claim type | Primary evidence anchor | Current authority | Confidence | Presentation-safe wording |
 |---|---|---|---|---|---|
@@ -27,12 +27,12 @@ Never convert ANALYST INFERENCE to SOURCE FACT, UNKNOWN to a negative fact, or I
 | Broad Russia dryout/rewetting superiority is unsupported | ANALYST INFERENCE / DECISION | RU-DRY-001 + CN-DRY set | Pavlenko China pressure test | **HIGH** | The broad country-level dryout/rewetting advantage is rejected. |
 | Residual Russia value is the transition boundary into irreversible crisis | ANALYST INFERENCE | RU-DRY-001 + comparator set | pressure test / management map | **MEDIUM-HIGH** | A narrower partner-specific signal remains in irreversible-crisis diagnostics. |
 | Phone-scale copper/DI-water/vacuum transfer is unproven | UNKNOWN / GAP | Stage-0 scorecard | Pavlenko Stage-0 packet | **HIGH** that the gap exists | Phone transfer remains to be demonstrated. |
-| Pavlenko is Stage-0 #1 | DECISION | unified scorecard + final gate | workstream 09 | **HIGH** | Current first Stage-0 priority, not final partner selection. |
+| Kutateladze Institute / Pavlenko team is Stage-0 #1 | DECISION | unified scorecard + final gate | workstream 09 | **HIGH** | Current first Stage-0 priority, not final partner selection. |
 | >=15% Rth / >=20% dryout or rewetting criteria | INTERNAL TARGET | project-defined | Stage-0 packet | N/A | Always label internal Stage-0 screening target. |
 
 **Do not say:** Russia leads dryout; Pavlenko has a phone-ready VC surface; Russian modified mesh beats China; HFE-7100 is the intended product fluid.
 
-## 3. MPEI / Ivanov
+## 3. Moscow Power Engineering Institute (MPEI) — Ivanov/Kuzma-Kichta team
 
 | Leadership claim | Claim type | Primary evidence anchor | Current authority | Confidence | Presentation-safe wording |
 |---|---|---|---|---|---|
@@ -42,12 +42,12 @@ Never convert ANALYST INFERENCE to SOURCE FACT, UNKNOWN to a negative fact, or I
 | No matched public Chinese analogue was recovered for the exact evidence type | SEARCH RESULT / GAP STATEMENT | targeted comparator search + CN-AGE set | MPEI pressure test | **MEDIUM-HIGH** | We did not recover a matched public analogue. |
 | MPEI may offer an early capillary/surface health indicator for future dryout-margin loss | ANALYST HYPOTHESIS | RU-AGE-001 + China reliability comparison | pressure test / Stage-0 packet | **MEDIUM** | A testable hypothesis is that capillary-state drift could provide an earlier reliability indicator. |
 | Current hierarchy is not phone geometry / heat flux | SOURCE FACT + GAP | RU-MPEI-008/009/011/012 | MPEI card / Stage-0 packet | **HIGH** | The long-life surface still requires aggressive geometry/high-flux transfer. |
-| MPEI is Stage-0 #2 / Strategic Reserve | DECISION | unified scorecard / final gate | workstream 09 | **HIGH** | Current second Stage-0 priority and strategic reserve. |
+| MPEI / Ivanov-Kuzma-Kichta team is Stage-0 #2 / Strategic Reserve | DECISION | unified scorecard / final gate | workstream 09 | **HIGH** | Current second Stage-0 priority and strategic reserve. |
 | <=150 μm transfer ceiling and >=15/20% thresholds | INTERNAL TARGET | project-defined | MPEI Stage-0 packet | N/A | Always label internal screening target. |
 
 **Do not say:** Russia has better VC reliability; 42 months proves smartphone life; China has no multi-year data; MPEI hierarchy is already suitable for a 0.4 mm VC.
 
-## 4. Kabov / Chinnov / Kutateladze
+## 4. Kutateladze Institute of Thermophysics SB RAS — Kabov/Chinnov team
 
 | Leadership claim | Claim type | Primary evidence anchor | Current authority | Confidence | Presentation-safe wording |
 |---|---|---|---|---|---|
@@ -75,14 +75,14 @@ Never convert ANALYST INFERENCE to SOURCE FACT, UNKNOWN to a negative fact, or I
 
 **Do not say:** Russian mathematics is better; the network is an integrated consortium; analytical theory can already predict phone dryout; experiment reduction is already proven.
 
-## 6. TPU Challenger — presentation control
+## 6. Tomsk Polytechnic University — Feoktistov/Orlova Challenger
 
 | Leadership claim | Claim type | Evidence / authority | Confidence | Presentation-safe wording |
 |---|---|---|---|---|
 | TPU has current Feoktistov/Orlova laser/wetting process + claim-mapped patent | SOURCE FACT | RU2812668C1 + TPU partner card | **HIGH** | Current partner/process capability is real. |
 | Generic laser/biphilic differentiation is crowded | ANALYST INFERENCE | China/global patent/paper map | **HIGH** | TPU is a process challenger, not a country-level Russian advantage. |
 | Copper + vacuum + fluid compatibility remain open | GAP | Stage-0 TPU packet | **HIGH** | First gate is sealed-process compatibility. |
-| Stage-0 #3 | DECISION | unified scorecard | **HIGH** | Third low-cost Stage-0 challenger. |
+| TPU / Feoktistov-Orlova team is Stage-0 #3 | DECISION | unified scorecard | **HIGH** | Third low-cost Stage-0 challenger. |
 
 ## 7. Leadership claim-control rule
 
