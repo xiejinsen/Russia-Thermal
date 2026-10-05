@@ -1,0 +1,38 @@
+# Progress History Index
+
+> Historical research-state records. The authoritative current status is [PROGRESS.md](../../PROGRESS.md).
+
+This archive was created on 2026-10-05 when the former monolithic progress log was modularized.
+
+- [01 — Overall status](01_overall_status.md)
+- [02 — Core Evidence Deepening Round 2 — Institution-Level Execution Audit — 2026-10-05](02_core_evidence_deepening_round_2_institution_level_execution_audit_2026.md)
+- [03 — Core Evidence Deepening Round 1 — 2026-10-05](03_core_evidence_deepening_round_1_2026_10_05.md)
+- [04 — Research-priority reset — more evidence before leadership materials — 2026-10-05](04_research_priority_reset_more_evidence_before_leadership_materials_2026.md)
+- [05 — Evidence-to-presentation freeze — 2026-10-05](05_evidence_to_presentation_freeze_2026_10_05.md)
+- [06 — Leadership decision package convergence — 2026-10-05](06_leadership_decision_package_convergence_2026_10_05.md)
+- [07 — Capability-map completeness pressure test — 2026-10-05](07_capability_map_completeness_pressure_test_2026_10_05.md)
+- [08 — Management synthesis milestone — Russia Thermal Capability System Map — 2026-10-05](08_management_synthesis_milestone_russia_thermal_capability_system_map_20.md)
+- [09 — Comparator closure — MPEI actual multi-year engineered-surface aging — 2026-10-04](09_comparator_closure_mpei_actual_multi_year_engineered_surface_aging_202.md)
+- [10 — Comparator closure — Pavlenko dryout / rewetting — 2026-10-04](10_comparator_closure_pavlenko_dryout_rewetting_2026_10_04.md)
+- [11 — Siberian theory–fluid–experiment network verification — 2026-10-04](11_siberian_theory_fluid_experiment_network_verification_2026_10_04.md)
+- [12 — Comparator closure — foundational math-physics layer — 2026-10-04](12_comparator_closure_foundational_math_physics_layer_2026_10_04.md)
+- [13 — Comparator closure — Kabov thin-film + Maydanik LHP — 2026-10-04](13_comparator_closure_kabov_thin_film_maydanik_lhp_2026_10_04.md)
+- [14 — Comparator closure — MPEI reliability + electronics-fan aeroacoustics — 2026-10-04](14_comparator_closure_mpei_reliability_electronics_fan_aeroacoustics_2026.md)
+- [15 — Country capability atlas + China academic mirror — 2026-10-04](15_country_capability_atlas_china_academic_mirror_2026_10_04.md)
+- [16 — Stage-0 partner packets completed — 2026-10-04](16_stage_0_partner_packets_completed_2026_10_04.md)
+- [17 — Stage-0 blocker closure + unified partner decision — 2026-10-04](17_stage_0_blocker_closure_unified_partner_decision_2026_10_04.md)
+- [18 — Scope guard reaffirmed — mobile terminal / chip thermal only](18_scope_guard_reaffirmed_mobile_terminal_chip_thermal_only.md)
+- [19 — Citation readability refresh — 2026-10-04](19_citation_readability_refresh_2026_10_04.md)
+- [20 — Paper / patent brief library — 2026-10-04](20_paper_patent_brief_library_2026_10_04.md)
+- [21 — Paper / patent 10Q methodology — 2026-10-04](21_paper_patent_10q_methodology_2026_10_04.md)
+- [22 — Core 10Q backfill completed — 2026-10-04](22_core_10q_backfill_completed_2026_10_04.md)
+- [23 — Current phase](23_current_phase.md)
+- [24 — This round — Stage-0 Manufacturability & Partner Briefs](24_this_round_stage_0_manufacturability_partner_briefs.md)
+- [25 — New finding 1 — MPEI becomes a stronger challenger](25_new_finding_1_mpei_becomes_a_stronger_challenger.md)
+- [26 — New finding 2 — TPU process evidence strengthens, but exposes a new risk](26_new_finding_2_tpu_process_evidence_strengthens_but_exposes_a_new_risk.md)
+- [27 — Stage-0 execution order](27_stage_0_execution_order.md)
+- [28 — Current partner experiment logic](28_current_partner_experiment_logic.md)
+- [29 — Current portfolio](29_current_portfolio.md)
+- [30 — Workstream maturity](30_workstream_maturity.md)
+- [31 — Highest-priority blockers](31_highest_priority_blockers.md)
+- [32 — Next smallest useful stage](32_next_smallest_useful_stage.md)
