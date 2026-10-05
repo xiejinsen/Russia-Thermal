@@ -6,11 +6,11 @@ Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the
 
 | Hypothesis | Institution | Team / PI | Role | Immediate action | State |
 |---|---|---|---|---|---|
-| Phone-scale irreversible-dryout boundary control | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
+| Phone-scale irreversible-dryout boundary control | **Kutateladze Institute of Thermophysics SB RAS** | **Lab 1.3 — Pavlenko-led line; Surtaev / Shvetsov / Zhukov** | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
 | Multi-year engineered-surface aging / early dryout-margin indicator | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | aging/reliability mechanism challenger | historical aging data + geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2 / narrow differentiation** |
 | Target-fluid biphilic / contrast-wetting | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | pattern/process challenger | vacuum-compatible copper-pattern Stage 0 | **Tier B+ / priority #3** |
 | Ordered porous wick | **Moscow Power Engineering Institute (MPEI)** | Bulaeva / Savchenkov / Savchenkova | pre-device challenger | manufacture and measure thin coupon | **Pre-device** |
-| Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
+| Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze Institute of Thermophysics SB RAS** | **Lab 6.6 — acting head Kochkin; Kabov / Chinnov lineage** | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
 | Compute + cooling adaptive control | **Saint Petersburg State University (SPbU)** | relevant thermal-control / systems researchers | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
 | Multi-hotspot heat routing | **Institute of Thermophysics UB RAS** | Maydanik lineage | routing physics | normalize vs Chinese UTLHP | **Tier B / Watch** |
 | Confined microfan aeroacoustics | **TsAGI / PNRPU / CIAM** | respective aeroacoustic teams | acoustic methods | phone-scale tonal/source test | **Tier B / Watch** |
@@ -57,7 +57,7 @@ does not establish:
 
 ## Current outreach posture
 
-### #1 Kutateladze Institute — Pavlenko team
+### #1 Kutateladze Institute — Lab 1.3 / Pavlenko-led line
 **GO WITH PREREQUISITE.**
 Ask for thin-mesh process-transfer window and background-IP boundary.
 
