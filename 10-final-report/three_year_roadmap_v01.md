@@ -1,5 +1,17 @@
 # Three-Year R&D Roadmap v0.1
 
+## Current-authority note — 2026-10-05
+
+This file is retained as an earlier leadership/checkpoint roadmap.
+
+Current research/execution authority has moved to:
+[Round 8 — Internal 3-Year Technology Roadmap](../09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
+
+Reason:
+current project constraints do not allow direct university outreach or physical Stage-0 experiments, so the active roadmap now uses separate calendar and validation clocks.
+
+Do not use the older "Stage-0 Partner Data Acquisition + Coupon Falsification" line below as the current execution state.
+
 Last reviewed: 2026-10-04
 
 > **DRAFT ROADMAP FRAME — TIMING IS NOT FINAL**
