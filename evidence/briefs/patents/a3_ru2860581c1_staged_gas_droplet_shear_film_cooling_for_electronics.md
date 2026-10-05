@@ -57,3 +57,11 @@ Potential joint foreground space must be narrower than the existing patent:
 - lower-power/self-driven assistance;
 - hotspot-aware control under phone workload;
 - hybrid use only at the local highest-heat-flux zone.
+
+**Round-4 system implication**  
+The patent description itself notes that earlier shear-film implementations can require gas velocities above ~50 m/s, while developed spray formation from ~100–300 μm nozzles may need ~5–7 mm travel distance. This makes the key phone question a **system power / pressure-drop / volume / noise** question, not simply a microchannel-fabrication question.
+
+The 2026 claim narrows channel height to ~100–2000 μm with ~3–7 mm local expansion and staged gas/film/droplet operation, but it does not publish a measured phone-like parasitic-power or acoustic result.
+
+So current decision remains:
+**HIGH-RISK MECHANISM / IP RESERVE; SYSTEM-OVERHEAD DATA REQUIRED.**

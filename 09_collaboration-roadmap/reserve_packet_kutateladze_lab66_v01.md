@@ -86,3 +86,22 @@ Kill phone-system promotion if:
 
 Current state:
 **READY FOR SYSTEM-OVERHEAD DATA REQUEST; NOT READY FOR PHONE PROTOTYPE.**
+
+## 6. Public patent constraints to use in partner discussion
+
+RU2860581C1 already identifies several engineering tensions:
+- legacy/effective shear-film operation may need gas velocity >50 m/s;
+- mature spray formation from ~100–300 μm nozzles may need ~5–7 mm development distance;
+- film channels are generally discussed in ~1–2 mm and sub-mm regimes;
+- the new claim uses ~100–2000 μm channels plus ~3–7 mm local expansion.
+
+Therefore partner discussion should not spend time proving that the team can fabricate small channels.
+
+Ask instead:
+1. What gas velocity is required at the useful operating point?
+2. What full-system pressure drop corresponds to that point?
+3. What electrical actuator power is required?
+4. What is the smallest complete expansion/nozzle/condenser/separator package?
+5. Is there measured acoustic data?
+
+These are now **hard evidence locks** for any phone-system promotion.

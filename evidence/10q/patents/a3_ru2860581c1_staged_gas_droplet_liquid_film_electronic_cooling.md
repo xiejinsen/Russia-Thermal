@@ -109,3 +109,33 @@ Decision impact: Kabov current-activity and G6/G7 confidence up modestly; strate
 Claim-review completeness: independent claim reviewed; legal family review not complete  
 Open questions: parasitic power, acoustic cost, sealed phone volume, exact prototype maturity  
 Primary patent source: Google Patents RU2860581C1
+
+### Round-4 system-overhead evidence lock
+
+The patent description itself supplies useful negative feasibility evidence.
+
+It states that prior gas-sheared film systems may require gas-phase velocities **often above 50 m/s** for effective operation.
+
+It also explains:
+- film systems commonly operate in flat micro/mini-channels around **1–2 mm** high;
+- a liquid jet through a ~100–300 μm nozzle typically needs about **5–7 mm** distance to develop a mature microdroplet stream;
+- very small channels therefore create a spray-development / focusing conflict.
+
+The claimed 2026 architecture responds with:
+- channel height ~**100–2000 μm**;
+- local expansion ~**3–7 mm**;
+- gas-liquid nozzle diameter ~**50–300 μm**;
+- load-staged gas / film / droplet modes.
+
+Decision implication:
+the miniaturization problem is not merely channel thickness.
+The public patent itself confirms a **system-level gas-flow / spray-development / volume trade-off**.
+
+Therefore Stage-0 promotion now requires measured:
+- gas and liquid flow;
+- channel + loop pressure drop;
+- actuator/compressor electrical power;
+- full module volume;
+- acoustic behavior.
+
+Do not accept "100 μm-class channel" as evidence of phone readiness without these system-budget measurements.
