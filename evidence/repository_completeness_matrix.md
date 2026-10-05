@@ -18,7 +18,7 @@ This file contains the **current QA snapshot only**. Historical changes are reco
 | 07 China benchmark | **device + reliability + fan + thin-film + LHP + foundational mirror refreshed** | strong | exact multi-year engineered-surface analog; phone-scale microfan; EHD/control; exact analytical evaporative-solution analogue | PASS-WITH-GAPS |
 | 08 Opportunity / falsification | **country heatmap + mechanism + foundational pressure tests current** | strong | validate 3 mechanism candidates + foundational blind-boundary PoC + physical Stage-0 evidence | PASS-WITH-GAPS |
 | 09 Collaboration / PoC | **partner packets + unified scorecard current** | strong | partner-returned data + physical coupons + background IP | PASS-WITH-GAPS |
-| 10 Final report | framework current | inherits 00–09 | conclusions provisional until readiness gates pass | STRUCTURE-PASS / CONTENT-NOT-FINAL |
+| 10 Final report | **leadership package + 4 normalized cards current** | inherits 00–09 | final investment conclusion still awaits partner/Stage-0 evidence | **DECISION-SYNTHESIS-PASS / INVESTMENT-NOT-FINAL** |
 | Evidence governance | current | **strong + core 10Q deep-reading layer** | source register may need thematic split later | PASS-WITH-GAPS |
 
 ## Russia university coverage
@@ -681,3 +681,41 @@ QA judgment:
 
 Public-disclosure caveat:
 absence of a promoted public control point does not prove an institution lacks internal capability.
+
+
+### Leadership decision-package QA — 2026-10-05
+
+Canonical:
+- [Russia Thermal — Leadership Decision Package](../10-final-report/leadership_decision_package_v01.md)
+
+Normalized decision cards:
+- [Pavlenko](../10-final-report/leadership_card_pavlenko_v01.md)
+- [MPEI](../10-final-report/leadership_card_mpei_v01.md)
+- [Kabov](../10-final-report/leadership_card_kabov_v01.md)
+- [Foundational Reserve](../10-final-report/leadership_card_foundational_v01.md)
+
+Every card now uses the same 10 decision fields:
+1. product problem;
+2. Why Russia;
+3. strongest China baseline;
+4. residual differentiation;
+5. evidence;
+6. phone-transfer gap;
+7. smallest PoC;
+8. success / Kill;
+9. IP/control point;
+10. leadership ask.
+
+QA:
+- broad Russia-superiority theses remain explicitly rejected;
+- internal thresholds are labeled as internal targets, not source facts;
+- TPU remains visible as Stage-0 Challenger without being promoted into the 3 + 1 country-level core;
+- Kabov remains High-risk Reserve despite stronger current IP evidence;
+- foundational math remains a blind-benchmark reserve, not prestige-based promotion;
+- management map remains a Freeze Candidate.
+
+Judgment:
+**PASS — leadership strategic-framing package is structurally complete.**
+
+Still not final:
+partner willingness, physical Stage-0 evidence, IP negotiation and sealed-device transfer remain open.
