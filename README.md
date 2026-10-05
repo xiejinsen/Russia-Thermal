@@ -96,8 +96,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~74%**
-**Estimated remaining: ~26%**
+**Estimated research completion: ~76%**
+**Estimated remaining: ~24%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -211,6 +211,15 @@ Focused file:
   [Russia Thermal Failure-Mechanism & Foundational Capability Map](10-final-report/management_capability_map_v01.md)
 - It integrates the full Russia capability panorama, China comparator, 3 + 1 strategic core, Siberian modular network, Stage-0 portfolio, Watch/Kill states and leadership asks.
 
+**Capability-map completeness audit — PASS**
+- Focused audit:
+  [Russia Thermal Capability Map Completeness Audit](03_russia-institutions/capability_map_completeness_audit_v01.md)
+- No omitted fourth strategic Russia core was found.
+- **JIHT RAS** was added as a supporting MPEI-adjacent microchannel/boiling node.
+- **SPbPU** was added as a complementary gradient-heatmetry / two-phase immersion diagnostics node.
+- **RU2860581C1** strengthens current Kabov electronics-cooling IP/activity evidence without improving phone-transfer readiness.
+- Management map state: **FREEZE CANDIDATE**.
+
 **Current management structure: 3 mechanism candidates + 1 foundational reserve.**
 
 These are **not final advantages** until the remaining comparator and mobile-transfer gaps close.
@@ -301,7 +310,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~74% research state.
+It is intentionally **not final** at the current ~76% research state.
 
 The report will ultimately contain:
 - executive decision;
