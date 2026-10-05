@@ -8,7 +8,7 @@ Last updated: **2026-10-05**
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
 - **Current phase:** Phase-1 Insight Convergence / Freeze
-- **Immediate stage:** **Phase 1 closure — insight synthesis frozen; validation deferred**
+- **Immediate stage:** **Phase-1 final differentiation / collaboration summary table — evidence-chain audit passed**
 
 This file is the single authoritative **current-state** page.
 
@@ -152,21 +152,25 @@ Therefore:
 - public desk research remains ~98%;
 - overall research + validation remains ~94%.
 
+## Evidence-chain audit
+
+[Phase-1 Evidence-Chain Audit — 2026-10-05](00_scope/phase1_evidence_chain_audit_2026_10_05.md)
+
+Result:
+**PASS WITH TARGETED CORRECTIONS.**
+
+No core evidence error was found that overturns the retained opportunity portfolio.
+
 ## Next minimum task
 
-**No further broad desk-research task is active.**
+Create the final Phase-1 differentiation / collaboration summary table using only audit-safe claims.
 
-Phase 1 is now treated as:
+Broad desk research remains frozen.
+
+After that table is frozen, Phase 1 is treated as:
 **INSIGHT-COMPLETE / VALIDATION-INCOMPLETE.**
 
-Next work should be triggered by one of:
-- leadership review;
-- internal thermal-expert review;
-- future university / partner discussion;
-- new evidence that materially changes a core conclusion;
-- a concrete PoC / implementation / IP decision.
-
-The previously planned Round 10 observability-identifiability study is deferred to a later validation / expert-review phase.
+The previously planned Round 10 observability-identifiability study remains deferred to a later validation / expert-review phase.
 
 ## History
 
