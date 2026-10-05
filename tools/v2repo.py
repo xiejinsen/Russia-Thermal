@@ -29,6 +29,7 @@ REF_FIELDS = {
     "evidence_claims": "claim",
     "related_claims": "claim",
     "candidate_capabilities": "capability",
+    "key_people": "actor",
     "trigger_claims": "claim",
     "trigger_experiments": "experiment",
 }
@@ -149,7 +150,7 @@ def generate(db, check=False):
         for o in db["actor"]
     )
     caps = "\n".join(
-        f"- {o['id']} | actor={field(o,'actor_id')} | maturity={field(o,'maturity')} | evidence={field(o,'evidence_confidence')} | fit={field(o,'target_fit')}"
+        f"- {o['id']} | actor={field(o,'actor_id')} | key_people={field(o,'key_people')} | maturity={field(o,'maturity')} | evidence={field(o,'evidence_confidence')} | fit={field(o,'target_fit')}"
         for o in db["capability"]
     )
     write("03-actors/index.md", "# Actor / Capability Index\n\n## Actors\n" + actors + "\n\n## Capabilities\n" + caps, check, stale)
@@ -187,13 +188,13 @@ def generate(db, check=False):
         cap = next((c for c in db["capability"] if c["id"] in caps_ids), None)
         actor = next((a for a in db["actor"] if cap and a["id"] == cap.get("actor_id")), None)
         rows.append(
-            f"| {d['id']} | {actor['id'] if actor else '-'} | {cap['id'] if cap else '-'} | "
+            f"| {d['id']} | {actor['id'] if actor else '-'} | {field(cap,'key_people') if cap else '-'} | {cap['id'] if cap else '-'} | "
             f"{field(d,'differentiation_confidence')} | {field(d,'phone_transfer_maturity')} | {field(d,'investment_lane')} |"
         )
     body = (
         "# Phase-1 Management Table\n\n"
-        "| Direction | Actor | Capability | Differentiation confidence | Phone maturity | Lane |\n"
-        "|---|---|---|---|---|---|\n" + "\n".join(rows)
+        "| Direction | Institution/Lab | Key people | Capability | Differentiation confidence | Phone maturity | Lane |\n"
+        "|---|---|---|---|---|---|---|\n" + "\n".join(rows)
     )
     write("views/russia-vs-china/phase1-management.md", body, check, stale)
 
