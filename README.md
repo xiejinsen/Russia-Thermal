@@ -96,8 +96,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~78%**
-**Estimated remaining: ~22%**
+**Estimated research completion: ~80%**
+**Estimated remaining: ~20%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -210,6 +210,13 @@ Focused file:
 - First integrated leadership view is now available:
   [Russia Thermal Failure-Mechanism & Foundational Capability Map](10-final-report/management_capability_map_v01.md)
 - It integrates the full Russia capability panorama, China comparator, 3 + 1 strategic core, Siberian modular network, Stage-0 portfolio, Watch/Kill states and leadership asks.
+
+**Core Evidence Deepening Round 1 — COMPLETE**
+- [Core Evidence Deepening Round 1](08_opportunities-transfer/core_evidence_deepening_round1_v01.md)
+- Pavlenko: current diagnostics/test-platform capability hardened.
+- MPEI: process chain + Newfrost external implementation signal hardened.
+- Kabov: closed-loop electronics-cooling prototype history hardened.
+- Strategic ranking unchanged; execution/Partner Request precision improved.
 
 **Research priority reset — MORE EVIDENCE BEFORE FINAL LEADERSHIP MATERIALS**
 - Final visual/PPT production is intentionally paused.
@@ -330,7 +337,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~78% research state.
+It is intentionally **not final** at the current ~80% research state.
 
 The report will ultimately contain:
 - executive decision;
