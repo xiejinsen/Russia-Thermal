@@ -1,5 +1,18 @@
 # Stage-0 Partner × Technology Decision Scorecard v0.1
 
+## Maintenance rule — freeze historical overlays
+
+This scorecard remains the **current Stage-0 decision matrix**, but its historical round-overlay pattern is now frozen.
+
+Future work must:
+- edit core decision cells only when a real Stage-0 state changes;
+- place new analytical rounds in independent files under 08/09;
+- place partner/experiment residuals in the modular dependency ledger;
+- avoid appending Round 7+ narrative sections here.
+
+Reason:
+the scorecard is already a large coherent decision object; continuing append-only research history would turn it into a monolith.
+
 Last updated: 2026-10-05
 
 Status: **CURRENT Stage-0 partner-decision source of truth**
