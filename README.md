@@ -97,6 +97,10 @@ Use these instead of duplicating their conclusions in this README:
 - [Direction Decision Gate](08_opportunities-transfer/direction_decision_gate_v01.md)
 - [Stage-0 Partner × Technology Scorecard](09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
 - [Stage-0 Partner Packet Index](09_collaboration-roadmap/stage0_partner_packet_index_v01.md)
+- [Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
+- [Internal Phone Thermal Architecture](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
+- [Internal 3-Year Technology Roadmap](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
+- [External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
 - [Final Report Readiness Gate](10-final-report/final_report_readiness_gate.md)
 
 ## Evidence language
