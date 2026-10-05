@@ -42,3 +42,18 @@ Only after partner plausibility passes:
 ## Stop rule
 
 No further generic microchannel / thin-film search. The public scientific capability is already proven; only system overhead can change the phone decision.
+
+## Round-7 analytical envelope
+
+Authority:
+[Quantitative Transfer Feasibility Envelope](../../08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+
+- public local expansion ~3–7 mm is ~7.7–18x a 0.39 mm passive-VC thickness;
+- gas-drive lower-bound power scales approximately with v³;
+- at 50 m/s, rho=1.2 kg/m³ and 2 mm² cross-section, ideal fluid power is ~0.15 W; ~0.5 W electrical at 30% actuator efficiency before real losses;
+- at 70 m/s the same illustrative cross-section rises to ~1.37 W electrical.
+
+Interpretation:
+**phone feasibility is dominated by gas velocity / full ΔP / packaging, not microchannel fabrication.**
+
+Keep as reserve.
