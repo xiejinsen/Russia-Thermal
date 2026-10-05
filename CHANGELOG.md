@@ -7,7 +7,6 @@ This file is a **short changelog index**, not an append-only history document.
 ## Current rule
 
 For each decision-relevant research or architecture change:
-
 1. create one small entry under `history/changelog/`;
 2. keep that entry immutable except for factual correction;
 3. update this root file only when the current navigation / latest-change summary changes;
@@ -16,27 +15,31 @@ For each decision-relevant research or architecture change:
 Full archive:
 [Changelog History Index](history/changelog/README.md)
 
-## Latest repository changes
+## Latest research change
+
+### 2026-10-05 — Core Evidence Deepening Round 3 closed
+
+Public-to-partner boundary closure completed.
+
+Key changes:
+- Lab 1.3 Huawei collaboration precedent and current diagnostic line hardened;
+- Lab 6.6 micron-gap execution evidence upgraded;
+- MPEI Newfrost physical-model chain strengthened;
+- separate current MPEI SiC microchannel line identified;
+- three primary partner packets frozen at the public boundary;
+- Lab 6.6 reserve feasibility packet added.
+
+Stage-0 ranking is unchanged.
+Research progress is now **~85%**.
+
+Detailed record:
+[Round 3 memo](08_opportunities-transfer/core_evidence_deepening_round3_v01.md)
+
+## Latest repository-governance change
 
 ### 2026-10-05 — Repository modularization completed
 
-Completed:
-- per-source 10Q cards;
-- per-source paper/patent briefs;
-- modular source register;
-- modular bibliography;
-- modular QA;
-- current-state-only PROGRESS;
-- modular changelog/progress history;
-- backlink migration;
-- deletion of seven retired aggregate files;
-- final modularity QA.
-
-Current research state remains **~82% complete**.
-
-### 2026-10-05 — Core Evidence Deepening Round 2
-
-Research conclusion/order is unchanged by repository governance work.
+The evidence/source/brief/10Q/QA/history architecture is modular and the retired aggregate files were removed.
 
 ## Research-state rule
 

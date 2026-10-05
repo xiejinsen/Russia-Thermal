@@ -37,3 +37,4 @@ This archive was created on 2026-10-05 from the former root changelog.
 - [2026-10-03 — Russia major-university coverage](31_2026_10_03_russia_major_university_coverage.md)
 - [2026-10-03 — Evidence traceability audit](32_2026_10_03_evidence_traceability_audit.md)
 - [2026-10-05 — Repository modularization completed](33_2026_10_05_repository_modularization_completed.md)
+- [2026-10-05 — Core Evidence Deepening Round 3 closed](34_2026_10_05_core_evidence_deepening_round_3_closed.md)

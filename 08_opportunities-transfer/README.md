@@ -133,3 +133,9 @@ Watch / reserves:
 - ITP UB RAS / Maydanik — LHP knowledge/failure-analysis reserve.
 
 Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
+
+## Core Evidence Deepening
+
+- [Round 3 — Public-to-Partner Boundary Closure](core_evidence_deepening_round3_v01.md) — current closed public-evidence boundary; partner/experiment routing.
+- [Round 2 — Institution-Level Execution Audit](core_evidence_deepening_round2_v01.md)
+- [Round 1 — Experiment-Level Evidence](core_evidence_deepening_round1_v01.md)

@@ -149,3 +149,13 @@ It does not authorize:
 - product commitment.
 
 Public-search diminishing-return exits are recorded in the unified scorecard.
+
+## Round-3 frozen partner-request boundary
+
+- [Stage-0 Partner Packet Index](stage0_partner_packet_index_v01.md)
+- [Pavlenko / Kutateladze Packet](stage0_packet_pavlenko_v01.md)
+- [MPEI / Ivanov Packet](stage0_packet_mpei_ivanov_v01.md)
+- [TPU / Feoktistov Packet](stage0_packet_tpu_feoktistov_v01.md)
+- [Kutateladze Lab 6.6 Reserve Feasibility Packet](reserve_packet_kutateladze_lab66_v01.md)
+
+Primary packets are **OUTREACH-DRAFT READY**, not contract-ready.
