@@ -66,7 +66,7 @@ Three blocks:
 3. Stage-1 architecture option.
 
 ### Bottom — portfolio action strip
-- **Fund Stage-0:** Kutateladze/Pavlenko team; MPEI/Ivanov team; TPU/Feoktistov team
+- **Fund Stage-0:** Kutateladze Institute — Pavlenko team; MPEI — Ivanov/Kuzma-Kichta team; TPU — Feoktistov/Orlova team
 - **Feasibility only:** Kutateladze/Kabov-Chinnov team
 - **Blind benchmark:** Foundational network
 - **Watch:** Maydanik / aeroacoustics / SPbU
@@ -167,7 +167,7 @@ Appendix contains full readable citations, 10Q, claim matrix, patent notes and c
 2. **Russia Thermal Capability System Map** — China platform + Russia 3+1 + joint output.
 3. **Why the portfolio is narrow** — Kill Map / credibility slide.
 4. **Kutateladze Institute / Pavlenko-team Card** — Stage-0 #1.
-5. **MPEI / Ivanov-team Card** — Stage-0 #2.
+5. **MPEI — Ivanov/Kuzma-Kichta-team Card** — Stage-0 #2.
 6. **TPU / Feoktistov-team Challenger** — why test but not strategic core.
 7. **Kutateladze Institute / Kabov-team High-risk Reserve** — why scientifically interesting but system-risk heavy.
 8. **Foundational Reserve** — blind benchmark.
