@@ -31,3 +31,30 @@ For several critical unknowns, public search is near diminishing returns:
 
 These should increasingly become:
 **partner data request or Stage-0 experiment**, not endless literature search.
+
+
+### 6. Round 9 changes the control variable
+
+The evidence supports a dynamic thermal-health observer more strongly than a directly measured physical "distance to dryout".
+
+Current wording:
+**estimated dryout-risk / thermal-health state from power + temperature history + calibrated model.**
+
+Baraya/Weibel/Garimella shows that:
+- transient dryout has identifiable thermal signatures;
+- time-to-dryout / time-to-rewet are meaningful dynamic quantities;
+- wick liquid saturation is a useful hidden physical state.
+
+The remaining question is **observability**, not existence of the state.
+
+### 7. A strong generic baseline is mandatory
+
+Power-electronics condition-monitoring literature shows that transient thermal impedance can detect generic package/interface degradation.
+
+Therefore a future phone PoC must prove that a dedicated two-phase state provides predictive value **beyond**:
+- temperature;
+- workload/power history;
+- a calibrated generic RC model;
+- generic thermal-path aging.
+
+Otherwise collapse C1/C2 into a generic thermal-health index rather than claiming a unique dryout-margin estimator.
