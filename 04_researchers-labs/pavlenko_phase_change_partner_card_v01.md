@@ -465,3 +465,29 @@ Reason no promotion to final Primary Bet:
 - China is already strong in dryout/rewetting and ultrathin wick engineering;
 - Russian public evidence remains millimeter-scale/open compared with phone internal geometry;
 - product-fluid / copper / vacuum / sealed-device transfer remains unproven.
+
+
+## Experiment-level execution update — 2026-10-05
+
+Current public platform evidence now supports:
+- vacuum-capable HFE-7100 boiling rig;
+- 50/100/150 kPa operation;
+- liquid-layer sweep ~1.5–35 mm;
+- degassing by reduced-pressure boiling;
+- high-speed video / thermography;
+- current capillary-porous samples including additively manufactured stainless/bronze structures;
+- current RSF-supported crisis/surface work.
+
+Interpretation:
+Pavlenko should be treated primarily as a **crisis-diagnostics / failure-mechanism partner** in Stage-0.
+
+The public setup is still far from a phone VC:
+- 120 mm-class chamber;
+- mm–cm liquid layers;
+- pool/thin-layer boiling rather than sealed wick-fed circulation.
+
+Partner request must now ask explicitly for:
+- minimum reproducible structured-surface/mesh thickness;
+- sample throughput/yield;
+- copper/DI-water experience;
+- whether their diagnostic pipeline can be applied to externally fabricated phone-like coupons.
