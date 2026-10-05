@@ -152,3 +152,22 @@ Current portfolio state:
 **Foundational Reserve / architecture hypothesis.**
 
 This does not change the current Stage-0 surface ranking.
+
+
+### Kabov current-IP freshness update
+
+Direct claim-reviewed patent:
+**RU2860581C1 — Device for cooling electronic equipment using gas-drop flow and liquid film** — O.A. Kabov — Kutateladze Institute — 2026.
+
+What changes:
+- current activity: **stronger**;
+- electronics-targeting: **explicit**;
+- background-IP continuity: **stronger**;
+- partner/IP readiness: **upgrade modestly**.
+
+What does not change:
+- phone-transfer readiness remains LOW;
+- active gas/liquid supply, nozzle architecture, 3–7 mm local expansion, parasitic power, acoustic and packaging burden remain open.
+
+Current state:
+**High-risk mechanism/IP Reserve — not promoted into Stage-0 top 3.**
