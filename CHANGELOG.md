@@ -37,6 +37,13 @@ Detailed record:
 
 ## Latest repository-governance change
 
+### 2026-10-05 — Modular industry evidence layer
+
+Added one-source-one-card industry/vendor evidence management under `evidence/industry/`, starting with Huawei and Newfrost P0 evidence. Current partner files now reuse canonical Industry IDs instead of duplicating source facts.
+
+Research progress remains **~85%**.
+
+
 ### 2026-10-05 — Repository modularization completed
 
 The evidence/source/brief/10Q/QA/history architecture is modular and the retired aggregate files were removed.

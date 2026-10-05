@@ -78,6 +78,16 @@ Historical record:
 4. freeze the exact Stage-0 experiment + foreground-IP evidence required before any Stage-1 sealed VC;
 5. do not resume broad public discovery unless a specific primary-source lead appears.
 
+## Industry evidence governance
+
+Round 4 uses the new [Industry / Vendor Evidence](evidence/industry/README.md) layer:
+- one original P0/P1 industry source → one stable card;
+- organization indexes remain thin;
+- papers/patents are not duplicated;
+- decision files reuse Industry IDs.
+
+This governance change does **not** change research completion.
+
 ## Current research-governance priority
 
 Final visual/PPT work remains paused.

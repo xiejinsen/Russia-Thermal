@@ -114,6 +114,13 @@ Every promoted Russia claim must be pressure-tested against the strongest curren
 ### Kill broad theses when evidence requires it
 Do not protect a Russia hypothesis because earlier work favored it.
 
+### Industry / vendor evidence
+- decision-relevant company/product/collaboration sources use `evidence/industry/`;
+- one original industry source → one stable Industry Source Card;
+- organization README files stay thin;
+- do not duplicate papers or patents into industry cards;
+- current decision files cite Industry IDs and keep only decision interpretation.
+
 ### Paper / patent management
 Decision-grade sources should use:
 - readable citation;
@@ -137,6 +144,7 @@ Repository formatting or cross-link cleanup does **not** increase research-compl
 After a substantive research round, update all affected layers:
 
 - new primary evidence → the smallest matching file under `evidence/sources/sections/` (index only if navigation changes)
+- decision-relevant vendor/company/product/collaboration evidence → canonical Industry Source Card under `evidence/industry/` when it is not already a paper/patent
 - institution capability → 03_russia-institutions/
 - partner/researcher capability → 04_researchers-labs/
 - paper/patent/IP conclusion → 05_papers-patents/ and evidence cards

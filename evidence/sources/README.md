@@ -7,6 +7,7 @@ Last reviewed: 2026-10-05
 Canonical evidence-source index. The source register is modular: each topic / evidence increment is stored in its own file under `sections/`.
 
 Rules:
+- source register remains the compact provenance index; detailed P0/P1 industry/company facts live in [Industry / Vendor Evidence](../industry/README.md);
 - add or correct the smallest relevant module;
 - do not append unrelated evidence to a monolithic registry;
 - use the [Human-Readable Bibliography](../bibliography/README.md) for reader-facing citations;
