@@ -1,10 +1,24 @@
 # Executive Decision v0.1
 
-Last reviewed: 2026-10-04
+## 0. Current leadership package
 
-> **DRAFT SHELL — NOT FINAL**
+Canonical management synthesis:
+- [Leadership Decision Package](leadership_decision_package_v01.md)
+- [Management Capability System Map](management_capability_map_v01.md)
+- [Pavlenko Card](leadership_card_pavlenko_v01.md)
+- [MPEI Card](leadership_card_mpei_v01.md)
+- [Kabov Card](leadership_card_kabov_v01.md)
+- [Foundational Reserve Card](leadership_card_foundational_v01.md)
+
+
+Last reviewed: 2026-10-05
+
+> **CURRENT PROVISIONAL EXECUTIVE DECISION — NOT FINAL INVESTMENT AUTHORIZATION**
 >
-> This file defines the final management-level decision format. Current entries are placeholders or current-state summaries, not final recommendations.
+> The full current leadership synthesis is maintained in:
+> [Russia Thermal — Leadership Decision Package](leadership_decision_package_v01.md).
+>
+> Final partner/investment authorization remains gated by Stage-0 partner-returned data and physical results.
 
 ## 1. One-page decision
 
@@ -108,14 +122,17 @@ Current state:
 Smallest proof:
 blind prediction of a phone-relevant film-instability boundary versus a strong domestic high-fidelity model and physical experiment.
 
-## 3. Final management table — template
+## 3. Current management table
 
 | Decision | Direction | Why now | Russia-specific contribution | China/global baseline | Next proof | Kill condition |
 |---|---|---|---|---|---|---|
-| Primary Bet | TBD | TBD | TBD | TBD | TBD | TBD |
-| Reserve Bet | TBD | TBD | TBD | TBD | TBD | TBD |
-| Watch | TBD | TBD | TBD | TBD | TBD | TBD |
-| Do not pursue | TBD | TBD | TBD | TBD | none | already killed |
+| Candidate Primary Bet | Pavlenko / Kutateladze | irreversible-dryout boundary is phone-relevant and falsifiable | reversible→irreversible dielectric crisis diagnostics | China strong in dryout/rewetting + UTVC | <=100 μm thin coupon + DI water + strong control | no failure-boundary advantage after phone transfer |
+| Strategic Reserve | MPEI / Ivanov | rare actual 42-month same-surface aging dataset | capillary/surface aging as possible early warning | China stronger in product copper-water reliability | scale-down + aging→dryout-margin correlation | geometry fails or no predictive value |
+| Challenger | TPU / Feoktistov | cheap process falsification | partner-linked laser/wetting process | China/global laser/biphilic art crowded | copper/vacuum/DI-water coupon screen | no value beyond strong generic control |
+| High-risk Reserve | Kabov / Chinnov | current electronics IP + deep film-instability physics | shear-film failure boundary | China/global device routes stronger | reduced full-loop feasibility cell | power/noise/volume erase benefit |
+| Foundational Reserve | ICM/Lavrentyev/Kutateladze/NSU | potentially reduces experimental search | exact/stability analytical interpretability | China strong in numerical/inverse methods | blind boundary benchmark | no experiment reduction / domestic method equal-better |
+| Watch | Maydanik / aeroacoustics / SPbU | useful expertise only if specific need emerges | specialist knowledge/method | China already strong | specific trigger only | no differentiated phone-scale value |
+| Do not pursue | broad generic Russia superiority theses | already pressure-tested | none retained | China/global equal/stronger | none | already killed |
 
 ## 4. Final 6-month asks — template
 
