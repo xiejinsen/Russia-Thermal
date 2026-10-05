@@ -18,6 +18,7 @@ related_claims:
 - CLM-PAV-004
 - CLM-PAV-005
 - CLM-PAV-007
+- CLM-PAV-008
 
 candidate_capabilities:
 - CAP-KUT-L13-DRYOUT-DIAGNOSTICS
