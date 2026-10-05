@@ -411,3 +411,41 @@ Still gated by:
 - Stage-0 physical evidence;
 - IP/legal boundary;
 - sealed-device/system validation.
+
+## 2026-10-05 Round-6 public-research convergence update
+
+Canonical audit:
+../08_opportunities-transfer/public_research_convergence_round6_v01.md
+
+External dependencies:
+../09_collaboration-roadmap/dependencies/README.md
+
+### Desk-research gate
+
+**PASS for the current Stage-0 portfolio.**
+
+The final convergence audit found no hidden decision-relevant PUBLIC blocker after one material correction:
+TPU already has public copper + nanosecond-laser + degassed-water pool-boiling evidence.
+
+### What remains open
+
+The main finalization gates are now external:
+
+- **G4 Phone Transfer:** remains PARTIAL for Pavlenko/MPEI/TPU and LOW for Lab 6.6 until physical evidence exists.
+- **G6 IP / prior art:** technical broad-claim pruning is mature enough for Stage-0; final legal/FTO remains trigger-based after a concrete winner.
+- **G7 Partner readiness:** current roles/contact routes and first-contact packets are ready for the three primary candidates.
+- **G8 PoC:** smallest discriminating experiments are frozen but not executed.
+- **G10 Unknowns:** residuals are classified in the modular dependency ledger.
+
+### Final-report consequence
+
+Public-research incompleteness is **no longer a reason to continue broad desk research**.
+
+However final investment recommendation remains **NOT FROZEN** because it still depends on:
+- partner-returned process/as-built data;
+- Stage-0 physical evidence;
+- legal/FTO for any surviving winner;
+- internal investment decision.
+
+This distinction must remain visible in leadership material:
+**desk research can be mature while technology validation is still incomplete.**
