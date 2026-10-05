@@ -38,3 +38,5 @@ Patent:
 - [K. Pavlenko dryout / rewetting China pressure-test](sections/11_k_pavlenko_dryout_rewetting_china_pressure_test.md)
 - [L. MPEI multi-year aging pressure-test set](sections/12_l_mpei_multi_year_aging_pressure_test_set.md)
 - [M. Capability-map completeness audit additions](sections/13_m_capability_map_completeness_audit_additions.md)
+
+- [N. Round 9 — dryout / thermal-health observability](sections/14_n_round9_dryout_thermal_health_observability.md)
