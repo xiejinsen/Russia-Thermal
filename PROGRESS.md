@@ -7,8 +7,8 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Internal Architecture / Pre-Execution Design Closure
-- **Immediate stage:** **Round 9 — Dryout-Margin / Thermal-Health Observability Study (No Outreach / No Experiment)**
+- **Current phase:** Observability / Pre-Execution Controller Closure
+- **Immediate stage:** **Round 10 — Observability Identifiability & Controller Falsification (No Outreach / No Experiment)**
 
 This file is the single authoritative **current-state** page.
 
@@ -49,17 +49,20 @@ Therefore analytical/design work may advance readiness but does not count as par
 
 ## Last closed round
 
-**Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis**
+**Round 9 — Dryout-Margin / Thermal-Health Observability Study**
 
 Closed:
-- phone-stack mapping of Russian capability;
-- internal vs external strategic control points;
-- modular collaboration model;
-- Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture hypothesis;
-- gate-based 0–12 / 12–24 / 24–36 month roadmap;
-- separate calendar and validation clocks;
-- scenario branches for continued access constraints;
-- legacy roadmap authority correction.
+- confirmed that transient dryout has measurable temperature/history signatures;
+- added a latent wick-saturation model baseline for time-to-dryout / time-to-rewet;
+- added transient thermal-impedance and adaptive-observer method comparators;
+- separated Android/device thermal headroom from internal two-phase dryout margin;
+- defined an O0–O5 observability ladder;
+- narrowed "absolute dryout margin" to a calibrated **estimated dryout-risk / thermal-health state**;
+- created the opportunistic thermal-system-identification hypothesis;
+- defined Keep / Narrow / Kill observability gates.
+
+Current observability authority:
+[Round 9 Dryout / Thermal-Health Observability](08_opportunities-transfer/dryout_thermal_health_observability_round9_v01.md)
 
 Current architecture authority:
 [Round 8 Internal Phone Thermal Architecture](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
@@ -68,7 +71,7 @@ Current roadmap authority:
 [Round 8 Internal 3-Year Technology Roadmap](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
 
 Historical record:
-[Round 8 progress record](history/progress/00f_2026_10_05_round8_internal_architecture_3year_roadmap.md)
+[Round 9 progress record](history/progress/00g_2026_10_05_round9_dryout_thermal_health_observability.md)
 
 ## Current strategic architecture
 
@@ -84,6 +87,22 @@ Interpretation:
   - TPU → surface-process challenger;
   - Lab 6.6 → radical active-flow reserve;
   - Siberian theory/model network → optional failure-boundary interpretation.
+
+## Round-9 observability decision
+
+The product control variable is now intentionally narrower than the Round-8 wording.
+
+Do not claim:
+> a directly measured physical distance to dryout.
+
+Current hypothesis:
+> **Estimated Thermal Risk / Health State = observer(power history, temperature history, operating context, calibrated device model).**
+
+Candidate outputs:
+- thermal-path health index;
+- dryout-risk / time-to-dryout estimate;
+- recovery / rewetting confidence;
+- estimator confidence with fallback to conventional limits.
 
 ## Current control points
 
@@ -135,22 +154,23 @@ Therefore:
 
 ## Next minimum task
 
-**Round 9 — Dryout-Margin / Thermal-Health Observability Study**
+**Round 10 — Observability Identifiability & Controller Falsification**
 
 Research question:
 
-> Can a phone-relevant thermal system infer the approach to irreversible dryout or surface-health degradation from practical observables strongly enough to make "remaining thermal margin" a useful architecture/control variable?
+> Can a practical phone telemetry vector distinguish a two-phase-specific health/dryout state from generic package/interface thermal drift strongly enough to justify a dedicated estimator?
 
 Target areas:
-1. vapor-chamber / heat-pipe dryout detection and precursor signatures;
-2. transient thermal impedance / temperature-response observability;
-3. capillary / wetting degradation indicators;
-4. fault-detection / thermal-health estimation methods;
-5. what can be sensed in a phone without exotic lab imaging;
-6. whether Russian diagnostic depth can be converted into a reduced set of product observables;
-7. Keep / Kill test for the central Failure-Aware / Health-Aware architecture hypothesis.
+1. minimum telemetry vector;
+2. strongest generic RC / package-aging baseline;
+3. two-phase-specific latent-state hypotheses;
+4. excitation / probing budget;
+5. ambient, orientation and unit-variation confounders;
+6. synthetic / literature-derived expected signatures;
+7. future blind Stage-0 identification protocol;
+8. Keep / collapse decision for separate C1 dryout-risk and C2 thermal-health states.
 
-Round 9 remains compatible with the no-outreach/no-experiment constraint.
+Round 10 remains compatible with the no-outreach/no-experiment constraint.
 
 ## History
 
