@@ -188,3 +188,10 @@ Near-term work should use:
 
 Authority:
 [Current Execution Constraints](../00_scope/current_execution_constraints_2026_10_05.md)
+
+## Round-7 pre-execution design closure
+
+- [Minimum-Win & Restart Thresholds](pre_execution_minimum_win_thresholds_round7_v01.md)
+- [No-Outreach / No-Experiment Internal Decision Tree](pre_execution_internal_decision_tree_round7_v01.md)
+
+These files convert the public evidence into future GREEN / AMBER / RED restart logic without claiming partner or experiment validation.
