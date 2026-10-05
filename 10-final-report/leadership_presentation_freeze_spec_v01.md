@@ -2,9 +2,20 @@
 
 Last updated: 2026-10-05
 
-Status: **CONTENT HIERARCHY FREEZE CANDIDATE**
+Status: **CHECKPOINT / FREEZE CANDIDATE — VISUAL PRODUCTION PAUSED PENDING RESEARCH DEEPENING**
 
 Purpose: freeze the information architecture for the eventual domestic-leadership presentation before visual design starts.
+
+## 0. Current priority override
+
+Final leadership visual/PPT production is **paused** while the project deepens:
+- full-text decision evidence;
+- current lab/partner capability;
+- translation/industry signals;
+- stronger China comparator evidence;
+- Stage-0 execution readiness.
+
+The hierarchy below remains a checkpoint and may be revised if new evidence changes the research logic.
 
 This is not the PPT itself.
 
