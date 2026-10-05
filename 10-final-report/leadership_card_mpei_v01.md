@@ -1,8 +1,8 @@
-# Leadership Decision Card — MPEI / Ivanov v0.1
+# Leadership Decision Card — MPEI / Ivanov–Kuzma-Kichta Team v0.1
 
 Last updated: 2026-10-05
 
-Decision state: **STRATEGIC RESERVE / Stage-0 Priority #2 — GO WITH PREREQUISITE**
+Decision state: **Moscow Power Engineering Institute (MPEI) — Ivanov/Kuzma-Kichta/Alyautdinova team / STRATEGIC RESERVE / Stage-0 Priority #2 — GO WITH PREREQUISITE**
 
 Evidence maturity: **SYSTEM_VALUE aging evidence / phone transfer PARTIAL**
 
@@ -34,9 +34,13 @@ The product question is:
 
 ---
 
-# 2. Why Russia / why this team
+# 2. Institution / team / why Russia
 
-MPEI / Ivanov–Kuzma-Kichta–Alyautdinova has an unusual combination of:
+**Institution:** National Research University Moscow Power Engineering Institute (MPEI)
+
+**Team:** Ivanov / Kuzma-Kichta / Alyautdinova
+
+This team has an unusual combination of:
 
 - hierarchical microgroove + Al2O3 engineered evaporator surfaces;
 - quantified process/IP continuity;
