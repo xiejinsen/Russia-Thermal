@@ -43,3 +43,4 @@ This archive was created on 2026-10-05 from the former root changelog.
 - [2026-10-05 — Round 5 outreach readiness / experiment-IP freeze](37_2026_10_05_round5_outreach_readiness_experiment_ip_freeze.md)
 - [2026-10-05 — Round 6 final public-research convergence](38_2026_10_05_round6_final_public_research_convergence.md)
 - [2026-10-05 — Round 7 quantitative transfer feasibility envelope](39_2026_10_05_round7_quantitative_transfer_feasibility.md)
+- [2026-10-05 — Round 8 internal architecture / 3-year roadmap synthesis](40_2026_10_05_round8_internal_architecture_3year_roadmap.md)
