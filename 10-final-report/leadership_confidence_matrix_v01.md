@@ -19,10 +19,10 @@ Scale: **HIGH / MEDIUM-HIGH / MEDIUM / LOW-MEDIUM / LOW**
 
 | Institution | Team / capability | Evidence Confidence | Phone Transfer Confidence | Partner Readiness | IP Clarity | Current decision |
 |---|---|---|---|---|---|---|
-| **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** | Candidate Primary Bet / Stage-0 #1 |
+| **Kutateladze Institute of Thermophysics SB RAS** | Lab 1.3 / Pavlenko–Surtaev–Shvetsov–Zhukov line | **HIGH** | **LOW-MEDIUM** | **HIGH** | **MEDIUM** | Candidate Primary Bet / Stage-0 #1 |
 | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** | Strategic Reserve / Stage-0 #2 |
 | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | **MEDIUM-HIGH** | **LOW-MEDIUM** | **HIGH** | **MEDIUM** | Challenger / Stage-0 #3 |
-| **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** | High-risk Mechanism/IP Reserve |
+| **Kutateladze Institute of Thermophysics SB RAS** | Lab 6.6 / current acting head Kochkin; Kabov–Chinnov lineage | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** | High-risk Mechanism/IP Reserve |
 | **Institutional modular network** | ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** | Foundational Reserve / blind benchmark |
 | **Institute of Thermophysics UB RAS** | Maydanik lineage / LHP | HIGH domain-history confidence | LOW differentiation | MEDIUM | MEDIUM | Watch / knowledge reserve |
 | **TsAGI / PNRPU / CIAM** | respective aeroacoustic teams | HIGH method confidence | LOW phone differentiation | MEDIUM | LOW-MEDIUM | Watch / method reserve |
@@ -42,8 +42,8 @@ Scale: **HIGH / MEDIUM-HIGH / MEDIUM / LOW-MEDIUM / LOW**
 - fine 60–100 μm-class transfer not demonstrated;
 - DI water/copper/vacuum/cycle path open.
 
-**Partner readiness — MEDIUM-HIGH**
-- current team/contact verified;
+**Partner readiness — HIGH**
+- current Lab 1.3 structure and Pavlenko's head role verified;
 - technical discussion ready;
 - exact process window remains partner-only.
 
@@ -102,7 +102,7 @@ Upgrade triggers:
 - global laser/biphilic prior art is crowded;
 - foreground depends on sealed-process survival.
 
-### Kutateladze Institute — Kabov/Kochkin/Chinnov team
+### Kutateladze Institute — Lab 6.6 / Kabov–Chinnov lineage
 
 **Evidence — MEDIUM-HIGH**
 - long film-instability lineage;
@@ -191,3 +191,10 @@ New experiment/translation evidence changes interpretation, not ranking:
 - **Pavlenko:** execution/diagnostic confidence strengthened; Phone Transfer remains LOW-MEDIUM because public rigs are mm–cm liquid-layer / open boiling systems.
 - **MPEI:** Partner Readiness HIGH is further supported by a 2024 dissertation implementation act referencing Newfrost LLC; Phone Transfer remains MEDIUM because the current hierarchy paper operates at only ~200–1700 W/m².
 - **Kabov:** prototype/execution history is stronger than previously represented (closed-loop electronic cooling up to reported ~1000 W/cm²), but Phone Transfer remains LOW because historical gas/liquid flow rates and loop hardware are far outside phone constraints.
+
+
+### 2026-10-05 institution-structure update
+
+- **Kutateladze Lab 1.3:** Pavlenko is current lab head; active staff and new experimental stand are publicly verified. Partner Readiness for a technical Stage-0 discussion moves **MEDIUM-HIGH -> HIGH**.
+- **Kutateladze Lab 6.6:** current acting head is Dmitry Kochkin; Kabov is chief researcher and Chinnov remains current staff. Use “Lab 6.6 / Kabov–Chinnov lineage,” not “Kabov-led lab.”
+- **MPEI:** current 2025 wettability-controlled thermosyphon work and repeated Newfrost contracts/coauthorship reinforce Partner Readiness HIGH.
