@@ -61,7 +61,7 @@ Output:
 - corrected decision files where full text changes interpretation;
 - explicit evidence maturity upgrades/downgrades.
 
-### Track B — Core partner / lab capability audit — **IN PROGRESS / Round 1 complete**
+### Track B — Core partner / lab capability audit — **ADVANCED / Rounds 1–2 complete**
 
 Purpose:
 understand what each core Russian team can actually execute today, not only what it has published.
@@ -217,3 +217,22 @@ Material findings:
 
 Next:
 continue experiment-level hardening and convert gaps into partner-ready technical questions.
+
+
+---
+
+## 8. Round-2 findings
+
+Completed:
+- `04_researchers-labs/institution_partner_readiness_matrix_v01.md`
+- `08_opportunities-transfer/core_evidence_deepening_round2_v01.md`
+
+Key findings:
+- Kutateladze should be approached institution-first but routed internally by lab.
+- Lab 1.3 is the current Pavlenko-led boiling/crisis unit.
+- Lab 6.6 is currently led operationally by acting head Kochkin; Kabov/Chinnov represent the scientific lineage/current senior expertise.
+- MPEI surface/thermosyphon line remains active and has a repeated Newfrost external-engineering collaboration chain.
+- institution-owned equipment must not be automatically attributed to a specific team.
+
+Next:
+close public-to-partner boundary and then freeze institution-specific Partner Request Packs.
