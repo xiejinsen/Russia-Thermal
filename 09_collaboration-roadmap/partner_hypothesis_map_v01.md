@@ -4,17 +4,17 @@ Last updated: 2026-10-04
 
 Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the [unified scorecard](stage0_partner_technology_decision_scorecard_v01.md).
 
-| Hypothesis | Russian partner signal | Role | Immediate action | State |
-|---|---|---|---|---|
-| Phone-scale irreversible-dryout boundary control | **Kutateladze — Pavlenko / Surtaev / Shvetsov / Zhukov** | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
+| Hypothesis | Institution | Team / PI | Role | Immediate action | State |
+|---|---|---|---|---|---|
+| Phone-scale irreversible-dryout boundary control | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
 | Multi-year engineered-surface aging / early dryout-margin indicator | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | aging/reliability mechanism challenger | historical aging data + geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2 / narrow differentiation** |
-| Target-fluid biphilic / contrast-wetting | TPU — Feoktistov | pattern/process challenger | vacuum-compatible copper-pattern Stage 0 | **Tier B+ / priority #3** |
-| Ordered porous wick | MPEI — Bulaeva / Savchenkov / Savchenkova | pre-device challenger | manufacture and measure thin coupon | **Pre-device** |
+| Target-fluid biphilic / contrast-wetting | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | pattern/process challenger | vacuum-compatible copper-pattern Stage 0 | **Tier B+ / priority #3** |
+| Ordered porous wick | **Moscow Power Engineering Institute (MPEI)** | Bulaeva / Savchenkov / Savchenkova | pre-device challenger | manufacture and measure thin coupon | **Pre-device** |
 | Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
-| Compute + cooling adaptive control | SPbU | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
-| Multi-hotspot heat routing | ITP UB RAS | routing physics | normalize vs Chinese UTLHP | **Tier B** |
-| Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale tonal/source test | **Tier B** |
-| Analytical failure-boundary + shear-film mechanism | **Kutateladze anchor + Lavrentyev + NSU; optional ICM/Altai theory module** | modular theory–model–experiment team | verify current ownership, then blind instability-boundary PoC | **Foundational Reserve / network partially verified** |
+| Compute + cooling adaptive control | **Saint Petersburg State University (SPbU)** | relevant thermal-control / systems researchers | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
+| Multi-hotspot heat routing | **Institute of Thermophysics UB RAS** | Maydanik lineage | routing physics | normalize vs Chinese UTLHP | **Tier B / Watch** |
+| Confined microfan aeroacoustics | **TsAGI / PNRPU / CIAM** | respective aeroacoustic teams | acoustic methods | phone-scale tonal/source test | **Tier B / Watch** |
+| Analytical failure-boundary + shear-film mechanism | **Modular network: ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU** | respective analytical/model/experiment teams | modular theory–model–experiment capability | verify current ownership, then blind instability-boundary PoC | **Foundational Reserve / network partially verified** |
 
 ## Why MPEI moved ahead of TPU for Stage 0
 
@@ -57,15 +57,15 @@ does not establish:
 
 ## Current outreach posture
 
-### #1 Pavlenko
+### #1 Kutateladze Institute — Pavlenko team
 **GO WITH PREREQUISITE.**
 Ask for thin-mesh process-transfer window and background-IP boundary.
 
-### #2 MPEI Ivanov
+### #2 MPEI — Ivanov/Kuzma-Kichta team
 **GO WITH PREREQUISITE.**
 Ask for exact current as-built groove/coating distribution, aged-vs-fresh capillary data and agreement on the scale-down/high-flux ladder.
 
-### #3 TPU Feoktistov
+### #3 TPU — Feoktistov/Orlova team
 **GO WITH PREREQUISITE.**
 Separate laser-only low-organic and hydrocarbon-biphilic branches; ask for copper/vacuum/sealed-fluid data if any.
 
