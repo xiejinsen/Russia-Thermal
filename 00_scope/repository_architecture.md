@@ -151,7 +151,7 @@ Rules:
 - new evidence for an existing source updates that source's card only;
 - a new source gets a new card;
 - cross-paper / cross-patent conclusions live in the corresponding `SYNTHESIS.md` or in workstreams 03–09;
-- the former monolithic files `evidence/10q/papers/README.md` and `evidence/10q/patents/README.md` are compatibility stubs and must not accumulate new content;
+- the former monolithic 10Q files were retired; `evidence/10q/papers/README.md` and `evidence/10q/patents/README.md` are canonical indexes over per-source cards;
 - source registry metadata remains centralized in `evidence/sources/README.md`.
 
 
@@ -159,7 +159,7 @@ Rules:
 
 Update all that apply:
 
-1. new primary evidence → `evidence/sources/README.md`
+1. new primary evidence → update the smallest matching module under `evidence/sources/sections/`; update `evidence/sources/README.md` only when index structure changes
 2. institution status changed → `03_russia-institutions/major_university_coverage_matrix.md` / candidate queue
 3. partner capability changed → corresponding 04 card
 4. patent/IP conclusion changed → 05 map/claim chart
@@ -169,7 +169,7 @@ Update all that apply:
 8. overall maturity / next tasks changed → `PROGRESS.md`
 9. top-level portfolio materially changed → root `README.md`
 10. decision-relevant correction → `CHANGELOG.md`
-11. evidence-quality gap changed → `evidence/qa/README.md`
+11. evidence-quality gap changed → update the smallest matching module under `evidence/qa/sections/`; update `evidence/qa/README.md` only when QA navigation changes
 12. Primary/Reserve/Kill/roadmap changed materially → relevant `10-final-report/` file
 
 A research round is not considered archived until the required updates are complete.
@@ -178,7 +178,7 @@ A research round is not considered archived until the required updates are compl
 
 Use:
 - `*_v01.md`, `*_v02.md` for evolving analytical artifacts when preserving versions is useful;
-- stable names for live registries/matrices (`sources/README.md`, `PROGRESS.md`);
+- stable index/current-state paths for live registries and status (`evidence/sources/README.md`, `evidence/qa/README.md`, `PROGRESS.md`);
 - explicit `round1` / `first_scan` only for historical snapshots.
 
 Do not create another file if an existing canonical file should be updated instead.

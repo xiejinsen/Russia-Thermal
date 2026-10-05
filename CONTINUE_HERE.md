@@ -136,7 +136,7 @@ Repository formatting or cross-link cleanup does **not** increase research-compl
 
 After a substantive research round, update all affected layers:
 
-- new primary evidence → evidence/sources/README.md
+- new primary evidence → the smallest matching file under `evidence/sources/sections/` (index only if navigation changes)
 - institution capability → 03_russia-institutions/
 - partner/researcher capability → 04_researchers-labs/
 - paper/patent/IP conclusion → 05_papers-patents/ and evidence cards
@@ -147,7 +147,7 @@ After a substantive research round, update all affected layers:
 - overall status / next task → PROGRESS.md
 - material portfolio change → README.md
 - decision-relevant correction → CHANGELOG.md
-- QA/evidence gap change → evidence/qa/README.md
+- QA/evidence gap change → the smallest matching file under `evidence/qa/sections/` (index only if navigation changes)
 
 A research round is not considered archived until required updates are complete.
 

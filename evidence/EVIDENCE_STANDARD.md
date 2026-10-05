@@ -111,7 +111,7 @@ A document in folders:
 
 must include **local evidence links next to or below the decision they support**.
 
-It is not enough to rely only on `evidence/sources/README.md`.
+It is not enough to rely only on the central source index or registry modules.
 
 Examples:
 - a GO decision for a surface PoC must link the exact Pavlenko papers plus the Chinese UTVC comparator;
@@ -233,7 +233,7 @@ If the English patent title is unavailable or uncertain:
 ### Where raw links are allowed
 
 Raw URLs may remain in:
-- `sources/README.md`;
+- `sources/README.md` + the relevant `sources/sections/` module;
 - machine-oriented metadata fields;
 - URL/DOI columns explicitly intended for indexing.
 

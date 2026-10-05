@@ -1,7 +1,7 @@
 > **AUDIT SNAPSHOT / NON-AUTHORITATIVE**
 >
 > This file records evidence-traceability conditions found on 2026-10-03. It is not the live QA status source.
-> Current QA authority: [Repository Completeness Matrix](repository_completeness_matrix.md); current project status: [PROGRESS](../PROGRESS.md).
+> Current QA authority: [Repository Completeness Matrix](qa/README.md); current project status: [PROGRESS](../PROGRESS.md).
 >
 # Evidence Traceability Audit — 2026-10-03
 
@@ -13,7 +13,7 @@ The repository contains many original links in deep-dive files, but **decision-g
 
 The main problems found:
 
-1. `evidence/source_register.md` lagged behind the actual research and contained only a fraction of the sources already used.
+1. `evidence/sources/README.md` lagged behind the actual research and contained only a fraction of the sources already used.
 2. Several decision/convergence files summarized evidence without carrying the original links locally.
 3. `09_collaboration-roadmap/poc01_surface_utvc_v01.md` had **zero external evidence links** even though it directly supported a GO decision.
 4. Some prior analysis relied on secondary discovery pages during research; these should not be the stored evidence when a DOI/publisher/official page is available.

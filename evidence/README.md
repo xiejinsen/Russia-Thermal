@@ -32,7 +32,7 @@ Technical conclusions should live in workstreams 03–09, not here.
 - [10Q Evidence Card Index](10q/README.md)
 - one source = one independently editable 10Q card;
 - paper/patent cross-source synthesis is stored separately from individual cards;
-- legacy monolithic 10Q paths are compatibility stubs only.
+- legacy monolithic 10Q files are retired; only per-source cards + indexes are live.
 
 ## Registers
 
@@ -47,11 +47,11 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 ## Canonical rules
 
-- source register is the central evidence index;
+- `sources/README.md` is the central evidence index; source records live in `sources/sections/`;
 - decision files must also contain local original-source links;
 - repository completeness matrix must contain **one current QA snapshot**; historical QA changes belong in root `CHANGELOG.md`, not appended as contradictory current states;
 - rankings are metadata, never substitutes for technical evidence.
 
 ## Future scaling
 
-If `sources/README.md` becomes difficult to navigate, split it by evidence class while retaining a single index. Do not duplicate independent source records across multiple live registries.
+The source register, bibliography, briefs, 10Q layer and QA are already modular. Keep indexes thin and place new content in the smallest matching module; do not rebuild monolithic aggregate files.
