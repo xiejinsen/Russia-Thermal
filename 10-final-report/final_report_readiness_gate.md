@@ -1,6 +1,6 @@
 # Final Report Readiness Gate
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
 ## Purpose
 
@@ -449,3 +449,49 @@ However final investment recommendation remains **NOT FROZEN** because it still 
 
 This distinction must remain visible in leadership material:
 **desk research can be mature while technology validation is still incomplete.**
+
+## 2026-10-05 Round-8 architecture / roadmap update
+
+Current research authority:
+- ../PROGRESS.md
+- ../08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md
+- ../09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md
+- ../00_scope/current_execution_constraints_2026_10_05.md
+
+### Architecture consequence
+
+The current strategic framing is no longer:
+> choose a Russian cooling device.
+
+It is:
+> **retain internal ownership of the phone package / UTVC / frame / controller platform, and use selected Russian capabilities as modular failure / aging / process / instability inputs.**
+
+Current architecture hypothesis:
+**Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture.**
+
+### Gate consequence
+
+- G0–G3 remain mature enough for the current candidate set.
+- G4 Phone Transfer remains PARTIAL / LOW because no physical phone-scale validation exists.
+- G5 Falsification remains PASS at design level; execution is deferred.
+- G6 technical prior-art narrowing is mature enough for pre-execution work; legal/FTO remains winner-triggered.
+- G7 partner readiness is informationally ready but **outreach execution is currently deferred**.
+- G8 PoC design is ready enough to restart later, but **physical PoC execution is currently deferred**.
+- G10 unknowns remain explicitly classified in the dependency ledger.
+
+### Roadmap consequence
+
+The active roadmap now uses two clocks:
+- calendar / design-preparation time;
+- validation time, which starts only when outreach and/or physical experimentation becomes available.
+
+Therefore the earlier 0–6 / 6–18 / 18–36 leadership roadmap is retained only as a checkpoint.
+The current execution roadmap is the Round-8 gate-based roadmap.
+
+### Final-report consequence
+
+The management content hierarchy may continue to be refined, but:
+**final investment recommendation remains NOT FROZEN.**
+
+Reason:
+Round 8 improved system architecture and control-point clarity, not external or physical validation.
