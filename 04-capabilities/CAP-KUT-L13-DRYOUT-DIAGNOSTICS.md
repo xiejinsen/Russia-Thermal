@@ -2,6 +2,8 @@
 
 record_state: CURRENT
 actor_id: ACT-KUT-LAB13
+key_people:
+- PERSON-PAVLENKO
 maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
