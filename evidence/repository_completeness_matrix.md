@@ -629,10 +629,55 @@ Critical boundary checks:
 QA judgment:
 **PASS-DRAFT.**
 
-Remaining QA before final management freeze:
-- institution/capability completeness audit;
-- fresh 2023–2026 activity check for all promoted nodes;
-- final Russia–China academic counterpart completeness check.
+Management-map completeness audit completed 2026-10-05:
+- institution/capability sweep completed;
+- 2023–2026 freshness confirmed for promoted nodes;
+- strong China comparator boundary rechecked;
+- JIHT and SPbPU added only as supporting nodes;
+- no new fourth strategic Russia core found.
+
+Remaining before **final investment recommendation**, not map freeze:
+- partner-returned evidence;
+- Stage-0 physical results;
+- exact IP/background/foreground negotiation where needed.
 
 Research-progress effect:
 **+1 percentage point only for the substantive management synthesis milestone; no credit for formatting/cross-linking.**
+
+
+### Capability-map completeness pressure-test QA — 2026-10-05
+
+Canonical research artifact:
+- [Russia Thermal Capability Map Completeness Audit](../03_russia-institutions/capability_map_completeness_audit_v01.md)
+
+Audit included:
+- JIHT RAS;
+- SPbPU;
+- MSU;
+- MIPT;
+- Skoltech;
+- MISIS;
+- ITMO;
+- MAI;
+- Samara University;
+- Bauman;
+- Kazan-region candidates;
+plus freshness revalidation of all promoted nodes.
+
+Changes:
+- **ADD JIHT** — supporting MPEI-adjacent microchannel/boiling node;
+- **ADD SPbPU** — complementary direct heat-flux / immersion-cooling diagnostics node;
+- **ADD RU2860581C1** — Kabov current electronics-cooling IP/activity evidence;
+- strategic 3+1 core unchanged.
+
+Not promoted:
+MSU / MIPT / Skoltech / MISIS / ITMO / MAI / Samara / Bauman / Kazan-region nodes.
+
+Reason:
+current evidence does not establish a residual smartphone/chip control point beyond the stronger China/global baseline.
+
+QA judgment:
+**PASS — management capability map is a FREEZE CANDIDATE.**
+
+Public-disclosure caveat:
+absence of a promoted public control point does not prove an institution lacks internal capability.
