@@ -49,7 +49,7 @@ Search/evidence is incomplete. Do not convert uncertainty into a positive or neg
 | TPU biphilic surface | PASS | PASS | PASS | PARTIAL | PASS | **PARTIAL+** | **PASS** | PASS-Stage0 | Reserve/Challenger — GO w/prerequisite |
 | MPEI Ivanov coating | PASS | PASS | **PASS+ comparator** | **PARTIAL+** | PASS | PARTIAL | **PASS** | PASS-Stage0 | **Reserve / priority #2 — narrow differentiation retained** |
 | MPEI ordered wick | PASS | PASS | PASS | LOW | PARTIAL | PARTIAL | PARTIAL | PRE-PoC | Watch/Pre-device |
-| Film/droplet hybrid | PASS | PASS | PASS | LOW | PASS | PARTIAL | PARTIAL | Feasibility only | Reserve high-risk |
+| Film/droplet hybrid | PASS | PASS | PASS | LOW | PASS | **PARTIAL+** | **PASS-PARTIAL** | Feasibility only | **High-risk mechanism/IP Reserve** |
 | Generic LHP miniaturization | PASS | PASS | PASS | FAIL differentiation | PASS | crowded | n/a | n/a | Killed as Russia-specific thesis |
 | Generic synthetic jet | PASS | PASS | PASS | FAIL differentiation | PASS | crowded | n/a | n/a | Killed as Russia-specific thesis |
 
@@ -334,3 +334,33 @@ Current final-report state:
 **Reserve / Stage-0 #2 / NARROW DIFFERENTIATION.**
 
 Promotion requires a phone-scale early-aging indicator with predictive value beyond domestic oxidation/vacuum-process metrics.
+
+
+## 2026-10-05 completeness-audit + Kabov current-IP update
+
+Institution/capability audit result:
+- no new fourth strategic Russia core was found;
+- all promoted strategic nodes have current 2023–2026 activity evidence;
+- JIHT RAS is added as a supporting MPEI-adjacent microchannel/boiling node;
+- SPbPU is added as a supporting local heat-flux / two-phase immersion diagnostics node;
+- MSU, MIPT, Skoltech, MISIS, ITMO, MAI, Samara, Bauman and Kazan-region candidates do not currently pass the full mobile/chip + China-comparator gate for core promotion.
+
+Kabov IP update:
+**RU2860581C1** — 2026 — O.A. Kabov / Kutateladze Institute.
+
+Direct claim review confirms:
+- explicit electronic heat-source target;
+- ~100–2000 μm channel;
+- ~3–7 mm local expansion;
+- staged gas / droplet / gas-driven liquid-film operation under rising heat load.
+
+Gate consequence:
+- G6 IP clarity: PARTIAL -> **PARTIAL+**;
+- G7 partner/current-activity confidence: PARTIAL -> **PASS-PARTIAL**;
+- G4 Phone Transfer remains **LOW** because active-fluid supply, millimeter-scale expansion, parasitic power, acoustics and package volume remain unresolved.
+
+Current state:
+**High-risk mechanism/IP Reserve — no strategic-rank promotion.**
+
+Management-map state after audit:
+**FREEZE CANDIDATE.**
