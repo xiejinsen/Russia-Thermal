@@ -39,6 +39,7 @@ The project should ultimately produce four reading depths:
 ## Current files
 
 - [Executive Decision](executive_decision_v01.md)
+- [Management Capability System Map](management_capability_map_v01.md) — Russia foundational science → failure mechanism → institutions → China comparator → residual difference → phone PoC/IP
 - [Full Technical Report](full_technical_report_v01.md)
 - [Strategic Bets](strategic_bets_v01.md)
 - [Collaboration Portfolio](collaboration_portfolio_v01.md)
