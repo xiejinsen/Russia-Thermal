@@ -740,3 +740,29 @@ Judgment:
 **PASS — evidence-to-presentation traceability is frozen enough for leadership visual production.**
 
 Investment recommendation remains unfrozen pending partner/physical evidence.
+
+
+### Institution-first entity-taxonomy QA — 2026-10-05
+
+Canonical rule:
+- [Institution-First Entity Naming Standard](../00_scope/institution_first_entity_naming_standard_v01.md)
+
+Required hierarchy:
+**Institution → Team / PI → Capability / mechanism → Decision state.**
+
+QA changes:
+- Russia Capability Atlas now separates Institution and Team/line columns;
+- Stage-0 decision scorecard now separates Institution and Team/line in decision output;
+- leadership confidence matrix separates Institution and Team/capability;
+- leadership decision package and presentation hierarchy are institution-first;
+- Kutateladze Institute is represented as **one institution with multiple relevant teams**, not as separate peer entities named Pavlenko and Kabov;
+- MPEI and TPU remain institution-level entities with teams nested underneath.
+
+File-name rule:
+existing filenames with researcher names may remain for link stability.
+
+Research-progress effect:
+**NONE — taxonomy/governance correction only.**
+
+QA judgment:
+**PASS.**
