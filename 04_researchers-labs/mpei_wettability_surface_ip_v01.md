@@ -394,3 +394,41 @@ Potential transferable control point:
 **Stage-0 Priority #2 / NARROW DIFFERENTIATION RETAINED.**
 
 The next evidence must be partner/coupon data, not more generic public reliability searching.
+
+
+## Experiment and implementation update — 2026-10-05
+
+Ivanov's 2024 MPEI dissertation shows an owned academic process chain:
+- Al2O3 nanoparticle preparation;
+- micro/nanoporous coating formation;
+- hydrophilic/hydrophobic treatment;
+- wetting/capillary characterization;
+- thermosyphon thermal-resistance measurement;
+- uncertainty analysis.
+
+Current hierarchy/test scale:
+- longitudinal groove radius ~0.1 mm;
+- Al2O3 particles ~100–200 nm;
+- ~100 mm test section;
+- ~38×3 mm stainless tube;
+- ~200–1700 W/m² heat flux;
+- 2.4–3.0× Rth reduction in that thermosyphon system.
+
+Important:
+that heat flux is far below phone hotspot conditions. The 42-month result is therefore an aging/surface-state asset, not high-flux phone proof.
+
+### New external implementation signal
+
+The dissertation states that results were used to improve thermosyphons manufactured by:
+**ООО «Ньюфрост» (Newfrost LLC)**
+
+and cites an implementation act in Appendix A.
+
+This increases translation/partner-readiness confidence, but does not prove mass production or phone-scale use.
+
+New partner-request items:
+- Newfrost implementation scope;
+- exact transferred process/design elements;
+- current coating yield and minimum geometry;
+- raw 42-month monthly dataset;
+- copper-substrate compatibility.
