@@ -56,9 +56,9 @@ flowchart LR
     end
 
     subgraph RU["RUSSIA — RETAINED CONTROL POINTS"]
-      P["#1 Pavlenko<br/><b>Failure Onset</b><br/>irreversible dryout"]
-      M["#2 MPEI<br/><b>Failure Aging</b><br/>surface/capillary health"]
-      K["Reserve Kabov<br/><b>Failure Instability</b><br/>film rupture"]
+      P["Kutateladze Institute<br/>Pavlenko team<br/><b>Failure Onset</b><br/>irreversible dryout"]
+      M["MPEI<br/>Ivanov/Kuzma-Kichta team<br/><b>Failure Aging</b><br/>surface/capillary health"]
+      K["Kutateladze Institute<br/>Kabov/Chinnov team<br/><b>Failure Instability</b><br/>film rupture"]
       F["Foundational Reserve<br/><b>Failure Prediction</b><br/>exact/stability model"]
     end
 
@@ -99,12 +99,12 @@ Russia only needs one of its retained control points to:
 
 ### Four-dimensional confidence snapshot
 
-| Direction | Evidence | Phone Transfer | Partner Readiness | IP Clarity |
-|---|---|---|---|---|
-| Pavlenko | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** |
-| MPEI | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** |
-| Kabov | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** |
-| Foundational | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** |
+| Institution | Team / capability | Evidence | Phone Transfer | Partner Readiness | IP Clarity |
+|---|---|---|---|---|---|
+| **Kutateladze Institute** | Pavlenko team | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** |
+| **MPEI** | Ivanov/Kuzma-Kichta team | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** |
+| **Kutateladze Institute** | Kabov/Chinnov team | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** |
+| **Institutional modular network** | ICM/Lavrentyev/Kutateladze/NSU | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** |
 
 The purpose is to prevent strong scientific evidence from being misread as strong phone-product readiness.
 
@@ -118,9 +118,9 @@ The purpose is to prevent strong scientific evidence from being misread as stron
 | **Foundational** | **Modular network: ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU** | respective analytical/model/experiment teams | Can theory locate the boundary before experiments? | exact/stability analytical interpretability | LOW–PARTIAL | **Foundational Reserve** |
 
 Decision cards:
-- [Pavlenko / Kutateladze](leadership_card_pavlenko_v01.md)
-- [MPEI / Ivanov](leadership_card_mpei_v01.md)
-- [Kabov / Chinnov](leadership_card_kabov_v01.md)
+- [Kutateladze Institute — Pavlenko team](leadership_card_pavlenko_v01.md)
+- [MPEI — Ivanov/Kuzma-Kichta team](leadership_card_mpei_v01.md)
+- [Kutateladze Institute — Kabov/Chinnov team](leadership_card_kabov_v01.md)
 - [Foundational Math-Physics Reserve](leadership_card_foundational_v01.md)
 
 ---
@@ -151,7 +151,7 @@ The portfolio now contains only claims that survived:
 
 ---
 
-# 5. Leadership card A — Pavlenko summary
+# 5. Leadership card A — Kutateladze Institute / Pavlenko team
 
 ## Product question
 Can Russian irreversible-crisis diagnostics shift the phone dryout boundary beyond strong modern domestic wick/control baselines?
@@ -185,7 +185,7 @@ sealed VC co-development yet.
 
 ---
 
-# 6. Leadership card B — MPEI summary
+# 6. Leadership card B — MPEI / Ivanov-Kuzma-Kichta team
 
 ## Product question
 Can a surface/capillary-state metric predict future dryout-margin loss before conventional Rth/oxidation metrics?
@@ -219,7 +219,7 @@ claim Russia reliability leadership.
 
 ---
 
-# 7. Leadership card C — Kabov summary
+# 7. Leadership card C — Kutateladze Institute / Kabov-Chinnov team
 
 ## Product question
 Can a shear-film / gas-drop architecture ever beat simpler passive/active phone cooling after full-loop costs are counted?
@@ -276,9 +276,9 @@ fund a broad “Russian mathematics” program.
 
 ---
 
-# 9. TPU — Stage-0 Challenger sidebar
+# 9. Tomsk Polytechnic University — Feoktistov/Orlova Challenger sidebar
 
-TPU / Feoktistov remains important but is **not one of the 3 + 1 Russia strategic differentiation cores**.
+Tomsk Polytechnic University (TPU) — Feoktistov/Orlova team remains important but is **not one of the 3 + 1 Russia strategic differentiation cores**.
 
 Why it remains Stage-0 #3:
 - current laser/wettability process;
@@ -325,7 +325,7 @@ Do not mistake institutional prestige for a product Bet.
 
 # 11. Normalized leadership comparison
 
-| Dimension | Pavlenko | MPEI | Kabov | Foundational |
+| Dimension | Kutateladze / Pavlenko team | MPEI / Ivanov team | Kutateladze / Kabov team | Foundational network |
 |---|---:|---:|---:|---:|
 | Direct phone failure relevance | **High** | Medium | Medium | Medium |
 | Russia-specific residual after China comparison | **Medium-High** | Medium | Medium | Medium |
@@ -459,17 +459,17 @@ The project should not seek generic claims.
 
 More credible joint foreground spaces:
 
-### Pavlenko
+### Kutateladze Institute — Pavlenko team
 - irreversible-dryout transition criterion;
 - product-fluid thin-wick process state;
 - moving-hotspot rewetting topology.
 
-### MPEI
+### MPEI — Ivanov/Kuzma-Kichta team
 - dryout-health indicator;
 - age-resistant capillary state;
 - phone-scale geometry/process/aging correlation.
 
-### Kabov
+### Kutateladze Institute — Kabov/Chinnov team
 - phone-constrained instability-control geometry;
 - low-power staged film/gas control;
 - hybrid local cell + passive spreader.
@@ -489,16 +489,16 @@ More credible joint foreground spaces:
 
 ## Recommended portfolio state
 
-**Pavlenko**
+**Kutateladze Institute — Pavlenko team**
 → **KEEP / Candidate Primary Bet / spend Stage-0**
 
-**MPEI**
+**MPEI — Ivanov/Kuzma-Kichta team**
 → **KEEP / Strategic Reserve / spend Stage-0**
 
-**TPU**
+**TPU — Feoktistov/Orlova team**
 → **KEEP as Challenger / spend Stage-0**
 
-**Kabov**
+**Kutateladze Institute — Kabov/Chinnov team**
 → **KEEP as High-risk Mechanism/IP Reserve / feasibility only**
 
 **Foundational network**
