@@ -41,3 +41,19 @@ Decision state: **GO WITH PREREQUISITE / OUTREACH READY**
 ## Stop rule
 
 No further broad public search. Reopen targeted search only if a partner answer identifies a specific process, patent, material or geometry needing verification.
+
+## Round-7 analytical envelope
+
+Authority:
+[Quantitative Transfer Feasibility Envelope](../../08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+
+- published 100 μm wire = ~50% of the 200 μm internal-channel anchor;
+- published 220 μm wire = ~110% → direct drop-in RED;
+- 60–100 μm remains the phone-transfer envelope;
+- simplified homothetic scaling from 100→80 μm gives ~0.8x liquid-supply proxy;
+- 100→60 μm gives ~0.6x.
+
+Interpretation:
+**80–100 μm is analytically lower transport-risk; 60 μm is the aggressive packaging branch and needs explicit permeability/open-area compensation.**
+
+Dependency classification is unchanged.
