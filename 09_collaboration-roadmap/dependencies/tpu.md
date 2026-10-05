@@ -11,7 +11,7 @@ Decision state: **GO WITH PREREQUISITE / OUTREACH READY**
 - generic biphilic VC and generic laser-wick foreground territory is crowded.
 
 Public copper bridge:
-../..//evidence/10q/papers/c5_copper_pool_boiling_laser_textured_surfaces.md
+../../evidence/10q/papers/c5_copper_pool_boiling_laser_textured_surfaces.md
 
 ## PARTNER
 
