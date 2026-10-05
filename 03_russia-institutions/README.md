@@ -21,12 +21,17 @@ Institution-level coverage database used to avoid survivorship bias.
    - verifies which theory/model/experiment links are real;
    - distinguishes current direct links from historical lineage and unverified consortium assumptions.
 
-4. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
+4. [Capability Map Completeness Audit](capability_map_completeness_audit_v01.md)
+   - checks omitted institutions/capabilities;
+   - verifies 2023–2026 freshness;
+   - records supporting-node additions and non-promotions before leadership-map freeze.
+
+5. [Major Russian University Coverage Matrix](major_university_coverage_matrix.md)
    - minimum university set;
    - current HIGH-SIGNAL / KEEP / NO CURRENT SIGNAL state;
    - global + Russian domestic ranking context.
 
-5. [Candidate Queue](candidate_queue.md)
+6. [Candidate Queue](candidate_queue.md)
    - institutions/teams retained for deeper investigation.
 
 ## HISTORICAL SNAPSHOTS
