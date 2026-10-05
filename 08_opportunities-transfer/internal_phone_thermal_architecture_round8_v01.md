@@ -2,7 +2,12 @@
 
 Last updated: 2026-10-05
 
-Status: **CURRENT INTERNAL ARCHITECTURE SYNTHESIS — NO OUTREACH / NO EXPERIMENT**
+Status: **CURRENT INTERNAL ARCHITECTURE BASE — NO OUTREACH / NO EXPERIMENT**
+
+Round-9 observability refinement:
+[Dryout / Thermal-Health Observability](dryout_thermal_health_observability_round9_v01.md)
+
+**Interpretation rule:** where this Round-8 file says "dryout margin" or "distance from dryout", the current product-level meaning is a **calibrated estimated dryout-risk / time-to-dryout state**, not a directly sensed physical distance.
 
 Constraint authority:
 [Current Execution Constraints](../00_scope/current_execution_constraints_2026_10_05.md)
@@ -138,7 +143,7 @@ Do not position as:
 - direct drop-in hierarchy.
 
 Strategic question:
-> can a measurable capillary/surface state predict **remaining dryout margin** before conventional thermal metrics visibly degrade?
+> can a measurable capillary/surface state predict **future dryout-risk / health loss** before conventional thermal metrics visibly degrade?
 
 ## 5.3 TPU / Feoktistov–Orlova
 
@@ -238,7 +243,7 @@ Candidate source:
 MPEI long-duration capillary aging.
 
 Function:
-- estimate remaining capillary / dryout margin;
+- estimate a calibrated capillary-health / dryout-risk state from dynamic thermal behavior;
 - detect functional degradation earlier than gross thermal-resistance failure.
 
 ### Layer E — Failure-margin model
@@ -247,8 +252,8 @@ Candidate source:
 Pavlenko diagnostics + optional Siberian theory/model modules.
 
 Function:
-- map observable temperature/thermal-state history to distance from irreversible dryout;
-- provide interpretable failure margin rather than a single temperature threshold.
+- map observable power/temperature/operating history to estimated dryout-risk / time-to-dryout;
+- expose estimator confidence and fall back to conventional limits when identifiability is weak.
 
 ### Layer F — System controller
 
@@ -257,8 +262,9 @@ Internal/OEM core.
 Possible future inputs:
 - junction / skin temperature;
 - workload state;
-- estimated dryout margin;
-- estimated thermal-health state.
+- estimated dryout-risk / time-to-dryout state;
+- estimated thermal-health state;
+- estimator confidence.
 
 Possible outputs:
 - DVFS;
@@ -291,7 +297,9 @@ toward:
 ### Strategic control point
 
 Instead of one component metric, control:
-**remaining thermal margin = function(geometry, surface state, fluid/process state, aging state, workload).**
+**estimated thermal risk / health state = observer(power history, temperature history, operating context, calibrated device model).**
+
+The underlying physical margin still depends on geometry, surface/fluid/process state, aging and workload, but Round 9 shows that the product architecture must not claim direct observability until phone-scale identifiability is demonstrated.
 
 This is the strongest cross-partner architecture hypothesis emerging from the project.
 
