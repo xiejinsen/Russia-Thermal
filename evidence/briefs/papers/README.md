@@ -8,7 +8,7 @@ Human-readable decision briefs for individual papers. One source is stored in on
 
 Use the [Paper 10Q cards](../../10q/papers/README.md) for deeper Q1–Q10 evidence analysis.
 
-Current card count: **46**.
+Current card count: **47**.
 
 ## A. Pavlenko / Kutateladze — phase-change surfaces
 
@@ -39,6 +39,7 @@ Current card count: **46**.
 - [D2. 0.39 mm composite-wick UTVC](d2_0_39_mm_composite_wick_utvc.md)
 - [D3. 0.4 mm composite and wettability-patterned UTVCs](d3_0_4_mm_composite_and_wettability_patterned_utvcs.md)
 - [D4. Laser-ablation wick modification in a real UTVC](d4_laser_ablation_wick_modification_in_a_real_utvc.md)
+- [D5. 2026 UTVC semi-analytical vapor-core / wick trade-off model](d5_2026_utvc_semi_analytical_vapor_core_model.md)
 
 ## E. China — VC reliability / life
 
