@@ -87,3 +87,15 @@ If this requires more than five unrelated files, usability fails.
 ## Cutover
 
 No V2 authority cutover unless migration fidelity, referential integrity, generated-view, fresh-reader and operational anti-shotgun tests all pass and the user approves.
+
+
+## Institution / key-person presentation QA
+
+Fail human-facing management view if:
+- a researcher name is used as the top-level capability owner when a verified institution/lab owner exists;
+- institution and person are mixed at the same hierarchy level without explicit entity-type context;
+- a promoted institution/capability omits the key researcher(s) needed to understand who actually leads or executes the work;
+- a key researcher profile loses verified affiliation, role, representative work, or outreach relevance during migration.
+
+Preferred display:
+Institution -> Lab/Team -> Key People -> Capability -> Direction.
