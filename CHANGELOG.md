@@ -41,3 +41,14 @@ No direct Russian-university outreach and no physical experiments at present.
 ## Research-state rule
 
 Architecture, roadmap and analytical planning alone do **not** increase physical-validation completion.
+
+## Latest repository-governance change
+
+### 2026-10-05 — Post-Round-8 repository state audit
+
+Corrected stale authority wording, synchronized current Round-8 entry points, and froze append-only growth in the large Stage-0 scorecard.
+
+QA result:
+**PASS — current repository authority / navigation is consistent.**
+
+Research completion percentages are unchanged.
