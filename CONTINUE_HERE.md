@@ -135,6 +135,11 @@ Decision-grade sources should use:
 - do not place people and institutions in the same ranking column;
 - use `00_scope/institution_first_entity_naming_standard_v01.md` as the canonical rule.
 
+### Current execution constraints
+- before resuming outreach or physical Stage-0 work, read [00_scope/current_execution_constraints_2026_10_05.md](00_scope/current_execution_constraints_2026_10_05.md);
+- current state: no direct Russian-university outreach and no physical experiment execution;
+- use analytical / virtual / decision-closure work only until this constraint changes.
+
 ### External dependency ledger
 - once a residual is classified PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION, do not keep reopening broad public search;
 - returned partner data updates only the corresponding file under `09_collaboration-roadmap/dependencies/` plus affected current decision authorities;
