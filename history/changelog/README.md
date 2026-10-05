@@ -44,3 +44,4 @@ This archive was created on 2026-10-05 from the former root changelog.
 - [2026-10-05 — Round 6 final public-research convergence](38_2026_10_05_round6_final_public_research_convergence.md)
 - [2026-10-05 — Round 7 quantitative transfer feasibility envelope](39_2026_10_05_round7_quantitative_transfer_feasibility.md)
 - [2026-10-05 — Round 8 internal architecture / 3-year roadmap synthesis](40_2026_10_05_round8_internal_architecture_3year_roadmap.md)
+- [2026-10-05 — Repository state audit after Round 8](41_2026_10_05_repository_state_audit_after_round8.md)
