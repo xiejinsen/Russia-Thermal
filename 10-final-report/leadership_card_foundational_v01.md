@@ -101,7 +101,7 @@ This is valuable only if it changes engineering cost or decisions.
 
 Representative sources:
 
-- **[Exact thermosolutal / stability analysis of an evaporating two-layer system](https://doi.org/10.3390/sym15071447)** — ICM SB RAS line — 2023.
+- **[Application of a Partially Invariant Exact Solution of the Thermosolutal Convection Equations for Studying the Instability of an Evaporative Flow in a Channel Heated from Above](https://doi.org/10.3390/sym15071447)** — Victoria B. Bekezhanova, Olga N. Goncharova — *Symmetry*, 2023.
 - **[Mathematical modeling of concentration influence on evaporative convection in a bilayer system of binary mixtures](https://doi.org/10.1016/j.ijheatfluidflow.2024.109385)** — V.B. Bekezhanova, I.V. Stepanova — 2024.
 - **[Dependence of Heat Exchange in an Evaporating Liquid Film in a Microchannel on Heater Size](https://doi.org/10.1134/S0021894424050092)** — V.V. Kuznetsov — Lavrentyev Institute — 2024.
 - current 2026 exact analytical work and theory–experiment lineage are recorded in:
