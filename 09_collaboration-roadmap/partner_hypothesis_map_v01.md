@@ -7,10 +7,10 @@ Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the
 | Hypothesis | Russian partner signal | Role | Immediate action | State |
 |---|---|---|---|---|
 | Phone-scale irreversible-dryout boundary control | **Kutateladze — Pavlenko / Surtaev / Shvetsov / Zhukov** | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
-| Multi-year engineered-surface aging / early dryout-margin indicator | **MPEI — Ivanov / Alyautdinova / Kuzma-Kichta** | aging/reliability mechanism challenger | historical aging data + geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2 / narrow differentiation** |
+| Multi-year engineered-surface aging / early dryout-margin indicator | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | aging/reliability mechanism challenger | historical aging data + geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2 / narrow differentiation** |
 | Target-fluid biphilic / contrast-wetting | TPU — Feoktistov | pattern/process challenger | vacuum-compatible copper-pattern Stage 0 | **Tier B+ / priority #3** |
 | Ordered porous wick | MPEI — Bulaeva / Savchenkov / Savchenkova | pre-device challenger | manufacture and measure thin coupon | **Pre-device** |
-| Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze — Kabov/Kochkin/Chinnov** | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
+| Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
 | Compute + cooling adaptive control | SPbU | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
 | Multi-hotspot heat routing | ITP UB RAS | routing physics | normalize vs Chinese UTLHP | **Tier B** |
 | Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale tonal/source test | **Tier B** |
