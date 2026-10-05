@@ -7,8 +7,8 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Phase-1 Insight Convergence / Freeze
-- **Immediate stage:** **Phase-1 final differentiation / collaboration summary table — evidence-chain audit passed**
+- **Current phase:** Phase-1 Insight Convergence + Repository Architecture V2.1
+- **Immediate stage:** **V2.1 isolated migration pilot preparation — Design Review 2 passed**
 
 This file is the single authoritative **current-state** page.
 
@@ -163,7 +163,7 @@ No core evidence error was found that overturns the retained opportunity portfol
 
 ## Next minimum task
 
-Create the final Phase-1 differentiation / collaboration summary table using only audit-safe claims.
+Prepare the isolated V2.1 Pavlenko vertical-slice pilot. The final Phase-1 differentiation / collaboration summary table should be generated from V2.1 canonical objects after the pilot proves fidelity.
 
 Broad desk research remains frozen.
 
