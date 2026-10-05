@@ -63,5 +63,7 @@ Review them by **change locality**, not by byte size alone.
 
 **No research-progress increase.**
 
+Root README was also reduced from a dynamic project-status duplicate to a stable project/navigation entry point; the previous content is archived under `history/readme/`.
+
 Repository governance state: **MODULARITY PASS**.
 Research progress remains ~82%.
