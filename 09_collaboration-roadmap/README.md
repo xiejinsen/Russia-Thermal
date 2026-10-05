@@ -113,24 +113,26 @@ MPEI:
 TPU:
 - vacuum/outgassing;
 - organic layer contamination;
-- copper transfer;
+- phone-thickness copper / <=150 μm geometry transfer;
 - sealed rewetting evidence;
 - RU2812668 inventor/claim closure is **complete**; mobile/copper relevance remains partial.
 
 No team is contract-ready.
 
-## Next gate
+## Deferred execution gate
 
-The three **Partner Data Request + Stage-0 Experiment Packets are now complete**.
+The three Partner Data Request + Stage-0 Experiment Packets remain complete, but **their execution is currently deferred**.
 
-Next:
-1. use the packets to obtain shareable partner data;
-2. classify every request as RECEIVED / NOT SHAREABLE / NOT AVAILABLE / EXPERIMENT REQUIRED;
-3. fabricate the smallest discriminating coupons for unresolved experiment-only items;
-4. update the scorecard only when partner data or physical evidence changes a cell;
-5. select at most two Stage-1 sealed-device arms only after Stage-0 physical evidence.
+Current next work is defined by [PROGRESS.md](../PROGRESS.md), not by the packet sequence below.
 
-Do not re-score based on repository cleanup alone.
+When execution access eventually returns:
+1. refresh partner/contact status;
+2. request only the highest-value missing data;
+3. apply the frozen Green / Amber / Red thresholds;
+4. fabricate/test only surviving minimum experiment arms;
+5. select at most two Stage-1 sealed-device arms after Stage-0 physical evidence.
+
+Do not re-score based on repository cleanup or analytical planning alone.
 
 
 ## Current decision status — blocker-closure round
