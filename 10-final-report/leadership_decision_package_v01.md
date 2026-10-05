@@ -23,6 +23,14 @@ Research authority remains in:
 - `evidence`;
 - `PROGRESS.md`.
 
+## Evidence-to-presentation freeze controls
+
+- [Leadership Claim Traceability Matrix](leadership_claim_traceability_matrix_v01.md)
+- [Leadership Confidence Matrix](leadership_confidence_matrix_v01.md)
+- [Leadership Presentation Freeze Specification](leadership_presentation_freeze_spec_v01.md)
+
+These three files control what may appear as a leadership headline, how confidence is displayed, and which claims must stay visibly hypothetical or unresolved.
+
 ---
 
 # 1. Leadership headline
@@ -88,6 +96,17 @@ Russia only needs one of its retained control points to:
 > **move, predict or diagnose a phone-relevant thermal failure boundary better than a strong China-only baseline.**
 
 ---
+
+### Four-dimensional confidence snapshot
+
+| Direction | Evidence | Phone Transfer | Partner Readiness | IP Clarity |
+|---|---|---|---|---|
+| Pavlenko | **HIGH** | **LOW-MEDIUM** | **MEDIUM-HIGH** | **MEDIUM** |
+| MPEI | **HIGH** | **MEDIUM** | **HIGH** | **MEDIUM-HIGH** |
+| Kabov | **MEDIUM-HIGH** | **LOW** | **MEDIUM-HIGH** | **MEDIUM-HIGH** |
+| Foundational | **MEDIUM-HIGH** | **LOW-MEDIUM** | **MEDIUM** | **LOW-MEDIUM** |
+
+The purpose is to prevent strong scientific evidence from being misread as strong phone-product readiness.
 
 # 3. The 3 + 1 leadership portfolio
 
