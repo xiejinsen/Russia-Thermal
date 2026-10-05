@@ -15,7 +15,7 @@ Canonical navigation index for decision-grade paper 10Q cards.
 - New cards should start from [_TEMPLATE.md](_TEMPLATE.md).
 - Source metadata remains centralized in [source_register.md](../../sources/README.md); these files are the deep-reading / decision layer.
 
-Current migrated card count: **40**.
+Current migrated card count: **41**.
 
 ## A. Pavlenko / Kutateladze
 
@@ -46,6 +46,7 @@ Current migrated card count: **40**.
 - [D2 — 0.39 mm composite-wick UTVC](d2_0_39_mm_composite_wick_utvc.md)
 - [D3 — 0.4 mm wettability-patterned/composite-wick UTVC](d3_0_4_mm_wettability_patterned_composite_wick_utvc.md)
 - [D4 — Laser-ablation modification of UTVC wick](d4_laser_ablation_modification_of_utvc_wick.md)
+- [D5 — 2026 UTVC semi-analytical vapor-core / wick trade-off model](d5_2026_utvc_semi_analytical_vapor_core_model.md)
 
 ## E. China VC reliability comparators
 
