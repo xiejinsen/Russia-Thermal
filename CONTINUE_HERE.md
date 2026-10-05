@@ -49,6 +49,7 @@ For the current collaboration / country-comparison phase, normally also read:
 - [08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md](08_opportunities-transfer/russia_china_academic_capability_heatmap_v01.md)
 - [08_opportunities-transfer/direction_decision_gate_v01.md](08_opportunities-transfer/direction_decision_gate_v01.md)
 - [09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md](09_collaboration-roadmap/stage0_partner_technology_decision_scorecard_v01.md)
+- [09_collaboration-roadmap/dependencies/README.md](09_collaboration-roadmap/dependencies/README.md) — external dependency ledger after public-research closure
 - [10-final-report/final_report_readiness_gate.md](10-final-report/final_report_readiness_gate.md)
 
 If the task concerns a specific partner, paper, patent or technical direction, follow links from the corresponding current workstream file instead of relying on chat memory.
@@ -133,6 +134,11 @@ Decision-grade sources should use:
 - always classify current Russia capability as **Institution → Team / PI → Capability → Decision state**;
 - do not place people and institutions in the same ranking column;
 - use `00_scope/institution_first_entity_naming_standard_v01.md` as the canonical rule.
+
+### External dependency ledger
+- once a residual is classified PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION, do not keep reopening broad public search;
+- returned partner data updates only the corresponding file under `09_collaboration-roadmap/dependencies/` plus affected current decision authorities;
+- do not reopen old research rounds merely because new external evidence arrives.
 
 ### Progress discipline
 Repository formatting or cross-link cleanup does **not** increase research-completion percentage.
