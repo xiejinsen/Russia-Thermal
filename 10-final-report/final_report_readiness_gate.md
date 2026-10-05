@@ -364,3 +364,50 @@ Current state:
 
 Management-map state after audit:
 **FREEZE CANDIDATE.**
+
+
+## 2026-10-05 evidence-to-presentation freeze
+
+New control files:
+- `leadership_claim_traceability_matrix_v01.md`;
+- `leadership_confidence_matrix_v01.md`;
+- `leadership_presentation_freeze_spec_v01.md`.
+
+### Claim-control result
+
+All positive Russia leadership claims are now classified as:
+- SOURCE FACT;
+- ANALYST INFERENCE;
+- DECISION;
+- UNKNOWN/GAP;
+- INTERNAL TARGET.
+
+Presentation rules:
+- SOURCE FACT may be stated directly;
+- ANALYST INFERENCE must retain hypothesis/interpretation wording;
+- UNKNOWN may not be converted into a negative fact;
+- INTERNAL TARGET may not be presented as literature evidence.
+
+### Confidence result
+
+No current direction has uniformly high confidence across all dimensions.
+
+Most important split:
+- Pavlenko/MPEI evidence confidence is HIGH;
+- phone-transfer confidence is still LOW-MEDIUM / MEDIUM;
+- Kabov phone-transfer confidence remains LOW;
+- foundational phone/IP confidence remains LOW-MEDIUM.
+
+### Presentation state
+
+Management structure:
+**CONTENT HIERARCHY FREEZE CANDIDATE.**
+
+Final investment recommendation:
+**NOT FROZEN.**
+
+Still gated by:
+- partner-returned data;
+- Stage-0 physical evidence;
+- IP/legal boundary;
+- sealed-device/system validation.
