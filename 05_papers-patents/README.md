@@ -25,7 +25,7 @@ This workstream is now in **claim-level prior-art / whitespace analysis**, not s
 First-pass coverage includes:
 
 Russia:
-- Kutateladze film/droplet lineage;
+- Kutateladze film/droplet lineage, including **RU2860581C1 (2026)** current staged gas/drop/film electronics-cooling IP;
 - Pavlenko/Kutateladze boiling-surface IP;
 - TPU/Feoktistov heat-transfer-surface patent with inventor + independent-claim mapping;
 - MPEI micro/nano coating / wettability lineage.
