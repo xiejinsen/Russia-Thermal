@@ -173,3 +173,18 @@ Use these short packets for first contact; keep the full Stage-0 packets as tech
 - [External Dependency Ledger](dependencies/README.md)
 
 Partner-returned data and experiment results should update the relevant dependency module rather than reopening old research rounds.
+
+## Current execution constraint — deferred
+
+The outreach-ready packets remain valid and current, but **direct outreach and physical experiments are not executable at present**.
+
+Do not interpret "OUTREACH READY" as "outreach currently authorized".
+
+Near-term work should use:
+- literature-grounded transfer modeling;
+- quantitative feasibility envelopes;
+- internal decision closure;
+- future restart triggers.
+
+Authority:
+[Current Execution Constraints](../00_scope/current_execution_constraints_2026_10_05.md)
