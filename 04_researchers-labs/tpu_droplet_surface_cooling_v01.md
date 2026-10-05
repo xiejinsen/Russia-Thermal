@@ -338,3 +338,30 @@ This does **not** upgrade phone-device readiness because it does not close:
 
 Current decision remains:
 **Stage-0 #3 / GO WITH PREREQUISITE.**
+
+## Round-6 public copper-bridge closure — 2026-10-05
+
+New decision-grade public evidence:
+[C5 — copper pool boiling on TPU laser-textured surfaces](../evidence/10q/papers/c5_copper_pool_boiling_laser_textured_surfaces.md)
+
+The Feoktistov/Orlova line has publicly demonstrated:
+- copper substrate;
+- nanosecond-laser micro-finned / anisotropic texturing;
+- distilled degassed-water pool boiling;
+- measured HTC/CHF improvement.
+
+Therefore the previous broad statement:
+> "copper-substrate transfer is not publicly evidenced"
+
+is no longer correct at the **material applicability** level.
+
+The remaining blocker is narrower:
+- phone-thickness copper;
+- <=150 μm total functional-height budget;
+- process throughput/repeatability;
+- vacuum/outgassing;
+- sealed-process wetting retention;
+- confined rewetting/dryout advantage.
+
+Current decision remains:
+**Stage-0 #3 / GO WITH PREREQUISITE.**
