@@ -34,20 +34,20 @@ Show four blocks only:
 
 Message: **China / our side = device + manufacturing + system platform.**
 
-### Center — Russia 3 + 1
-Use four vertically aligned cards:
+### Center — Russia institutional capability structure
+Use institution-first cards. Kutateladze Institute appears once as an institution with two distinct teams; MPEI appears as a separate institution; foundational work is a modular institutional network:
 
-**Pavlenko**
+**Kutateladze Institute — Pavlenko team**
 - Failure Onset
 - irreversible dryout
 - Stage-0 #1
 
-**MPEI**
+**MPEI — Ivanov/Kuzma-Kichta team**
 - Failure Aging
 - surface/capillary health
 - Stage-0 #2
 
-**Kabov**
+**Kutateladze Institute — Kabov/Chinnov team**
 - Failure Instability
 - film rupture
 - High-risk Reserve
@@ -57,7 +57,7 @@ Use four vertically aligned cards:
 - exact/stability model
 - Foundational Reserve
 
-Do not place TPU as a fifth equal strategic core.
+Do not place TPU as a fifth equal strategic core. Show it separately as **TPU — Feoktistov/Orlova Challenger**.
 
 ### Right — Joint output
 Three blocks:
@@ -66,8 +66,8 @@ Three blocks:
 3. Stage-1 architecture option.
 
 ### Bottom — portfolio action strip
-- **Fund Stage-0:** Pavlenko / MPEI / TPU
-- **Feasibility only:** Kabov
+- **Fund Stage-0:** Kutateladze/Pavlenko team; MPEI/Ivanov team; TPU/Feoktistov team
+- **Feasibility only:** Kutateladze/Kabov-Chinnov team
 - **Blind benchmark:** Foundational network
 - **Watch:** Maydanik / aeroacoustics / SPbU
 - **Kill broad theses:** generic VC / LHP / laser-biphilic / materials / fan / DVFS superiority
@@ -84,15 +84,15 @@ No composite score.
 
 Current labels:
 
-**Pavlenko** — HIGH / LOW-MEDIUM / MEDIUM-HIGH / MEDIUM
+**Kutateladze Institute — Pavlenko team** — HIGH / LOW-MEDIUM / MEDIUM-HIGH / MEDIUM
 
-**MPEI** — HIGH / MEDIUM / HIGH / MEDIUM-HIGH
+**MPEI — Ivanov/Kuzma-Kichta team** — HIGH / MEDIUM / HIGH / MEDIUM-HIGH
 
-**Kabov** — MEDIUM-HIGH / LOW / MEDIUM-HIGH / MEDIUM-HIGH
+**Kutateladze Institute — Kabov/Chinnov team** — MEDIUM-HIGH / LOW / MEDIUM-HIGH / MEDIUM-HIGH
 
 **Foundational** — MEDIUM-HIGH / LOW-MEDIUM / MEDIUM / LOW-MEDIUM
 
-TPU sidebar — MEDIUM-HIGH / LOW-MEDIUM / HIGH / MEDIUM
+TPU — Feoktistov/Orlova sidebar — MEDIUM-HIGH / LOW-MEDIUM / HIGH / MEDIUM
 
 ## 3. Decision-card visual hierarchy
 
@@ -110,21 +110,21 @@ Evidence lists, patents, exact paper titles and detailed dimensions move to spea
 
 ## 4. Card-specific visual sentence
 
-### Pavlenko
+### Kutateladze Institute — Pavlenko team
 **Can we shift the point where recoverable dryout becomes irreversible?**
 
 Visual motif: reversible dry spot → transition boundary → irreversible dryout.
 
 Do not visually center modified mesh itself.
 
-### MPEI
+### MPEI — Ivanov/Kuzma-Kichta team
 **Can surface/capillary health warn us before thermal resistance visibly fails?**
 
 Visual motif: calendar aging → capillary health declines → Rth still stable → later dryout risk.
 
 Do not visually center 42 months as a lifetime-superiority badge.
 
-### Kabov
+### Kutateladze Institute — Kabov/Chinnov team
 **Can shear-film cooling survive full system penalties?**
 
 Visual motif: thermal gain versus power + noise + volume + sealing.
@@ -166,10 +166,10 @@ Appendix contains full readable citations, 10Q, claim matrix, patent notes and c
 1. **Executive answer** — one sentence + what to approve / not approve.
 2. **Russia Thermal Capability System Map** — China platform + Russia 3+1 + joint output.
 3. **Why the portfolio is narrow** — Kill Map / credibility slide.
-4. **Pavlenko Card** — Stage-0 #1.
-5. **MPEI Card** — Stage-0 #2.
-6. **TPU Challenger** — why test but not strategic core.
-7. **Kabov High-risk Reserve** — why scientifically interesting but system-risk heavy.
+4. **Kutateladze Institute / Pavlenko-team Card** — Stage-0 #1.
+5. **MPEI / Ivanov-team Card** — Stage-0 #2.
+6. **TPU / Feoktistov-team Challenger** — why test but not strategic core.
+7. **Kutateladze Institute / Kabov-team High-risk Reserve** — why scientifically interesting but system-risk heavy.
 8. **Foundational Reserve** — blind benchmark.
 9. **Collaboration architecture** — partner/module map including Siberian modular network and supporting nodes.
 10. **0–36 month roadmap** — Stage 0 → Stage 1 → product/IP.
