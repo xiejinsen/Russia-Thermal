@@ -13,7 +13,7 @@ Rules:
 - use the [Human-Readable Bibliography](../bibliography/README.md) for reader-facing citations;
 - use 10Q/brief cards for source interpretation.
 
-Current module count: **33**.
+Current module count: **34**.
 
 ## Modules
 
@@ -50,3 +50,4 @@ Current module count: **33**.
 - [AD. Round 4 — industry translation / Stage-0 evidence lock — 2026-10-05](sections/31_ad_round4_industry_translation_stage0_evidence_lock_2026_10_05.md)
 - [AE. Round 5 — outreach readiness / experiment-IP freeze — 2026-10-05](sections/32_ae_round5_outreach_readiness_experiment_ip_freeze_2026_10_05.md)
 - [AF. Round 6 — final public-research convergence audit — 2026-10-05](sections/33_af_round6_final_public_research_convergence_audit_2026_10_05.md)
+- [AG. Round 7 — quantitative transfer feasibility envelope — 2026-10-05](sections/34_ag_round7_quantitative_transfer_feasibility_envelope_2026_10_05.md)
