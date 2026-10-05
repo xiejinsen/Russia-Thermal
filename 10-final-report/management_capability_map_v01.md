@@ -42,20 +42,22 @@ China/global public evidence is already stronger or at least equally strong in t
 
 ## Where Russia still has a plausible differentiated control point
 
-1. **Kutateladze / Pavlenko**
+1. **Kutateladze Institute of Thermophysics SB RAS — Pavlenko / Surtaev / Shvetsov / Zhukov team**
    - dielectric reversible → irreversible dry-spot / boiling-crisis diagnostics;
    - current Stage-0 priority #1.
 
-2. **MPEI / Ivanov**
+2. **Moscow Power Engineering Institute (MPEI) — Ivanov / Kuzma-Kichta / Alyautdinova team**
    - actual 42-month engineered-surface aging evidence;
    - current Stage-0 priority #2 / Strategic Reserve.
 
-3. **Kutateladze / Kabov–Kochkin–Chinnov**
+3. **Kutateladze Institute of Thermophysics SB RAS — Kabov / Kochkin / Chinnov team**
    - shear-driven microfilm / dry-spot / rupture / interfacial-instability physics under extreme confinement;
    - high-risk mechanism reserve.
 
-4. **ICM / Altai + Lavrentyev + Kutateladze/NSU**
-   - exact / stability / interpretable mathematical-physics layer;
+4. **Foundational modular network**
+   - ICM SB RAS / related Altai line — exact/stability analysis;
+   - Lavrentyev Institute — detailed fluid modeling;
+   - Kutateladze Institute + NSU — experiment/diagnostics;
    - Foundational Reserve, not a product bet by itself.
 
 Cross-cutting:
@@ -155,7 +157,8 @@ It is:
 
 # 4. Strategic core — the 3 + 1 structure
 
-## Core 1 — Pavlenko / Kutateladze
+## Core 1 — Kutateladze Institute of Thermophysics SB RAS
+### Team: Pavlenko / Surtaev / Shvetsov / Zhukov
 
 ### Failure question
 When does a recoverable dry region become an **irreversible dryout / thermal runaway**?
@@ -210,7 +213,8 @@ while surviving copper / DI water / vacuum / process constraints.
 
 ---
 
-## Core 2 — MPEI / Ivanov
+## Core 2 — Moscow Power Engineering Institute (MPEI)
+### Team: Ivanov / Kuzma-Kichta / Alyautdinova
 
 ### Failure question
 Can an engineered evaporator surface **age functionally before nominal thermal resistance visibly fails**?
@@ -263,7 +267,8 @@ Must show:
 
 ---
 
-## Core 3 — Kabov / Chinnov / Kutateladze
+## Core 3 — Kutateladze Institute of Thermophysics SB RAS
+### Team: Kabov / Kochkin / Chinnov
 
 ### Failure question
 Under extreme confinement and gas shear, when does a stable liquid film become:
@@ -406,15 +411,15 @@ The potential value chain is:
 
 # 7. Collaboration portfolio — leadership view
 
-| Rank / layer | Partner / network | Management question | Current state | Next spend |
+| Rank / layer | Institution | Team / PI | Management question | Current state | Next spend |
 |---|---|---|---|---|
-| **#1** | Kutateladze / Pavlenko | Can irreversible dryout be shifted beyond strong China wick controls? | Candidate Primary Bet / narrow | Stage-0 data exchange + thin coupon |
-| **#2** | MPEI / Ivanov | Can capillary/surface aging predict future loss of dryout margin earlier than Rth? | Strategic Reserve / narrow | aging dataset + scaled coupon |
-| **#3** | TPU / Feoktistov | Can a low-outgassing patterned surface survive sealed-VC manufacturing and outperform generic laser control? | Challenger | copper laser-only vs biphilic Stage-0 |
-| **Reserve** | Kabov / Chinnov | Does shear-driven film control create a system-level advantage after parasitic power/volume? | High-risk mechanism reserve | reduced feasibility + stability-boundary test |
-| **Foundational** | Kutateladze + Lavrentyev + NSU + optional ICM/Altai | Can analytical/stability modeling reduce experiments and predict failure? | Foundational Reserve | blind boundary benchmark |
-| **Watch** | TsAGI / PNRPU / CIAM | Better source diagnosis on real phone microfan? | Method reserve | only if equal-envelope fan becomes strategic |
-| **Watch** | ITP UB RAS / Maydanik | Useful expert/failure review beyond China LHP baseline? | Knowledge reserve | no dedicated device bet now |
+| **#1** | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | Can irreversible dryout be shifted beyond strong China wick controls? | Candidate Primary Bet / narrow | Stage-0 data exchange + thin coupon |
+| **#2** | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | Can capillary/surface aging predict future loss of dryout margin earlier than Rth? | Strategic Reserve / narrow | aging dataset + scaled coupon |
+| **#3** | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | Can a low-outgassing patterned surface survive sealed-VC manufacturing and outperform generic laser control? | Challenger | copper laser-only vs biphilic Stage-0 |
+| **Reserve** | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | Does shear-driven film control create a system-level advantage after parasitic power/volume? | High-risk mechanism reserve | reduced feasibility + stability-boundary test |
+| **Foundational** | **Modular network: ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU** | Bekezhanova/Stepanova line + Kuznetsov + linked Kutateladze/NSU researchers | Can analytical/stability modeling reduce experiments and predict failure? | Foundational Reserve | blind boundary benchmark |
+| **Watch** | **TsAGI / PNRPU / CIAM** | respective aeroacoustic teams | Better source diagnosis on real phone microfan? | Method reserve | only if equal-envelope fan becomes strategic |
+| **Watch** | **Institute of Thermophysics UB RAS** | Maydanik lineage | Useful expert/failure review beyond China LHP baseline? | Knowledge reserve | no dedicated device bet now |
 
 ---
 
