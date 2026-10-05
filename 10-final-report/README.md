@@ -1,8 +1,8 @@
 # 10 — Final Decision Report
 
-Last reviewed: 2026-10-04
+Last reviewed: 2026-10-05
 
-Status: **REPORT SKELETON — NOT A FINAL CONCLUSION**
+Status: **LEADERSHIP DECISION SYNTHESIS ACTIVE — NOT FINAL INVESTMENT AUTHORIZATION**
 
 ## Role
 
@@ -38,6 +38,11 @@ The project should ultimately produce four reading depths:
 
 ## Current files
 
+- [Leadership Decision Package](leadership_decision_package_v01.md) — current management-facing decision synthesis
+- [Pavlenko Leadership Card](leadership_card_pavlenko_v01.md)
+- [MPEI Leadership Card](leadership_card_mpei_v01.md)
+- [Kabov Leadership Card](leadership_card_kabov_v01.md)
+- [Foundational Reserve Leadership Card](leadership_card_foundational_v01.md)
 - [Executive Decision](executive_decision_v01.md)
 - [Management Capability System Map](management_capability_map_v01.md) — Russia foundational science → failure mechanism → institutions → China comparator → residual difference → phone PoC/IP
 - [Full Technical Report](full_technical_report_v01.md)
