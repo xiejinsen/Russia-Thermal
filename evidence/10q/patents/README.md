@@ -13,7 +13,7 @@ Canonical navigation index for decision-grade patent 10Q cards.
 - Update the individual card when a source interpretation changes; do not rebuild a monolithic 10Q document.
 - Cross-source conclusions belong in [SYNTHESIS.md](SYNTHESIS.md), not inside an unrelated single-source card.
 - New cards should start from [_TEMPLATE.md](_TEMPLATE.md).
-- Source metadata remains centralized in [source_register.md](../../source_register.md); these files are the deep-reading / decision layer.
+- Source metadata remains centralized in [source_register.md](../../sources/README.md); these files are the deep-reading / decision layer.
 
 Current migrated card count: **14**.
 

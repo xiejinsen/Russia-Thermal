@@ -67,3 +67,17 @@ Root README was also reduced from a dynamic project-status duplicate to a stable
 
 Repository governance state: **MODULARITY PASS**.
 Research progress remains ~82%.
+
+### Final entry-point integrity audit
+
+Validated **27** core repository entry/index files:
+- root README / CONTINUE_HERE / PROGRESS / CHANGELOG;
+- repository architecture;
+- workstream READMEs;
+- evidence indexes;
+- history indexes.
+
+Two migrated 10Q index links still pointed to the retired source-register path. They were corrected to `evidence/sources/README.md`.
+
+Final result:
+**27/27 entry points pass; 0 known current internal dead links in the audited entry layer.**
