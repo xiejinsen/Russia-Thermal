@@ -24,9 +24,9 @@ For this project it is also an **institution-network signal**.
 
 ### Q4 — research lineage / competing route
 Kabov has a long shear-driven-film experimental/mechanism lineage.
-Kuznetsov represents Lavrentyev Institute fluid-mechanics modeling.
+V.V. Kuznetsov has a documented Lavrentyev Institute modeling lineage in related work. The current Kabov–Kuznetsov coauthorship is verified; the exact affiliation on this specific 2025/2026 paper should still be checked from the article metadata/full text before treating it as a high-certainty current cross-institute link.
 
-This paper renews a collaboration pattern already visible in earlier joint work.
+This paper is therefore a current coauthorship signal consistent with the earlier collaboration lineage, not by itself proof of a formal current inter-institute project.
 
 ### Q5 — key control point
 - gas pressure / velocity;
@@ -43,9 +43,12 @@ Equations/model assumptions are public enough for method review.
 No phone-scale experimental artifact is provided.
 
 ### Q8 — what it proves / does not prove
-Proves:
-- current cross-institute technical collaboration between the Kabov thermophysics line and Lavrentyev modeling line;
+Supports:
+- current Kabov–Kuznetsov technical coauthorship in the same mechanism/model family;
 - a real mechanism/model bridge exists.
+
+Still to verify:
+- the exact current institutional affiliation on this specific paper before labeling the paper itself as direct current Kutateladze–Lavrentyev collaboration evidence.
 
 Does not prove:
 - Kutateladze + Lavrentyev + ICM + NSU operate as one consortium;
@@ -63,6 +66,6 @@ Do not contact all institutions as if a formal consortium already exists.
 **Decision:** PROMOTE AS PARTNER-ARCHITECTURE EVIDENCE.
 
 Evidence maturity: STRUCTURAL_SIGNAL  
-Decision impact: current partner topology upgraded  
+Decision impact: mechanism/model linkage retained; current cross-institute topology remains confirmation-gated  
 Open questions: current project ownership; ICM formal linkage; contracting structure  
 Primary source: DOI above
