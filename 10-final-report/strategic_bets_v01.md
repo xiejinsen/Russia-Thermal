@@ -350,3 +350,26 @@ Kill if:
 - aging behavior is R410A / large-groove thermosyphon specific;
 - domestic oxygen/oxidation metrics explain all relevant degradation;
 - capillary drift provides no useful early-warning value.
+
+
+### Kabov current-IP audit update
+
+Current claim-reviewed background IP:
+**RU2860581C1 — Device for Cooling Electronic Equipment Using Gas-Drop Flow and Liquid Film** — O.A. Kabov — Kutateladze Institute — 2026.
+
+It materially strengthens:
+- current activity;
+- explicit electronics-cooling intent;
+- partner/IP continuity.
+
+It does not strengthen phone transfer:
+- channel height ~100–2000 μm;
+- local expansion ~3–7 mm;
+- gas/liquid nozzles;
+- active gas and liquid delivery.
+
+Therefore Bet B remains:
+**High-risk mechanism/IP Reserve.**
+
+The relevant question is not whether the film/drop concept exists.
+It is whether a phone-constrained architecture can produce a superior **thermal / power / noise / volume / failure-boundary** trade-off.
