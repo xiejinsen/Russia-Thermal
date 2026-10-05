@@ -17,27 +17,32 @@ Full archive:
 
 ## Latest research change
 
-### 2026-10-05 — Round 4 industry translation / Stage-0 evidence lock
+### 2026-10-05 — Round 5 outreach readiness / experiment-IP freeze
 
-Closed:
-- normalized collaboration vs external fabrication vs field validation vs product evidence;
-- Pavlenko Huawei/Air Products industry-R&D context;
-- MPEI/Newfrost external physical-engineering chain;
-- TPU 60-day real-system laser-surface field validation;
-- Lab 6.6 patent-derived system-overhead constraints;
-- partner-data / experiment / foreground-IP / Kill locks.
+Completed:
+- verified current public professional contact routes;
+- created concise first-contact packets for Pavlenko, MPEI and TPU;
+- retained Lab 6.6 as a reduced system-feasibility reserve;
+- froze mandatory vs optional partner questions;
+- mapped partner data to Stage-0 / IP decisions;
+- minimized experiment-arm count;
+- froze broad foreground-IP territories where prior art is direct;
+- adopted trigger-based patent searching after a concrete Stage-0 winner.
 
-Stage-0 order is unchanged.
-Research progress is now **~88%**.
+Stage-0 ranking is unchanged.
+Research progress is now **~91%**.
 
-Detailed authority:
-[Round 4 memo](08_opportunities-transfer/industry_translation_stage0_evidence_lock_round4_v01.md)
+Current operational authority:
+[Outreach-Ready Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
+
+Experiment/IP authority:
+[Round 5 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
 
 ## Latest repository-governance change
 
 ### 2026-10-05 — Modular industry evidence layer
 
-Industry/company evidence now uses per-source Industry Cards and thin organization indexes.
+Industry/company evidence uses per-source Industry Cards and thin organization indexes.
 
 ## Research-state rule
 
