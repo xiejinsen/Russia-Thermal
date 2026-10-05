@@ -87,6 +87,19 @@ If chat memory and repository current authority disagree, repository current aut
 
 Any decision-critical information that exists only in chat is considered not safely archived until written into the repository.
 
+## Institution-first entity naming
+
+Canonical rule:
+[Institution-First Entity Naming Standard](institution_first_entity_naming_standard_v01.md)
+
+All current maps, rankings and collaboration tables must use:
+
+> **Institution → Team / PI → Capability / mechanism → Decision state**
+
+People and institutions must not be displayed at the same hierarchy level.
+
+Existing filenames may retain researcher names for link stability.
+
 ## Canonical status hierarchy
 
 When files disagree, use this order:
