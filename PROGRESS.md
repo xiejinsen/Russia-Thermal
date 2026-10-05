@@ -7,153 +7,151 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Public-Research Closed → Pre-Execution Design Closure
-- **Immediate stage:** **Round 7 — Pre-Execution Design Closure (No Outreach / No Experiment)**
+- **Current phase:** Pre-Execution Design Closure
+- **Immediate stage:** **Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis (No Outreach / No Experiment)**
 
 This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
 
-## Current naming rule
+## Current execution constraint
 
-All current portfolio statements use:
+At present:
+- no direct Russian-university outreach;
+- no physical Stage-0 coupon / thermal experiment.
 
-> **Institution → Team / PI → Capability / mechanism → Decision state**
+Authority:
+[Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
 
-Canonical rule:
-[Institution-First Entity Naming Standard](00_scope/institution_first_entity_naming_standard_v01.md)
+Therefore current work may improve analytical/design readiness but must not be reported as partner or experimental validation.
 
 ## Current Stage-0 order
 
 1. **Kutateladze Institute of Thermophysics SB RAS**
    - Lab 1.3 / Pavlenko-led line
-   - dielectric irreversible-dryout / boiling-crisis diagnostics
+   - irreversible-dryout / boiling-crisis diagnostics
    - **GO WITH PREREQUISITE**
-   - outreach-ready.
+   - future execution deferred.
 
 2. **Moscow Power Engineering Institute (MPEI)**
    - Ivanov / Kuzma-Kichta / Alyautdinova long-life hierarchy line
-   - multi-year engineered-surface aging + Newfrost external physical-engineering chain
+   - engineered-surface aging + Newfrost external physical-engineering chain
    - **GO WITH PREREQUISITE**
-   - outreach-ready.
+   - future execution deferred.
 
 3. **Tomsk Polytechnic University (TPU)**
    - Feoktistov / Orlova line
    - laser / wettability-contrast process challenger
    - **GO WITH PREREQUISITE**
-   - outreach-ready;
-   - public copper-material bridge is now closed; thin sealed-process transfer remains open.
+   - public copper-material bridge closed; thin sealed-process transfer remains open.
 
 4. **Kutateladze Institute — Lab 6.6**
    - Kabov–Chinnov scientific lineage; current acting head Kochkin
    - shear-driven microfilm / dry-spot / instability
    - **HIGH-RISK MECHANISM / IP RESERVE**
-   - reduced system-feasibility outreach packet only.
 
 5. **MPEI ordered-wick line**
    - **HOLD / PRE-DEVICE**
-   - requires a repeatable physical thin coupon before promotion.
 
 ## Last closed research round
 
-**Round 6 — Final Public-Research Convergence Audit**
+**Round 7 — Quantitative Transfer Feasibility Envelope**
 
-Closed:
-- final residual audit across active candidates;
-- last targeted public search on Pavlenko/MPEI/TPU/Lab 6.6;
-- TPU copper-material applicability correction;
-- PUBLIC / PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION classification;
-- modular external-dependency ledger;
-- public-search stopping rule.
+Closed analytically:
+- common phone / UTVC geometry anchor;
+- vapor-space guard bands;
+- mesh / porous miniaturization sensitivity;
+- groove hydraulic scale sensitivity;
+- gas-drive parasitic-power lower-bound sensitivity;
+- Pavlenko / MPEI / TPU / Lab 6.6 quantitative transfer envelopes;
+- future GREEN / AMBER / RED restart thresholds;
+- internal no-outreach / no-experiment decision tree.
 
-Detailed authority:
-[Round 6 — Final Public-Research Convergence Audit](08_opportunities-transfer/public_research_convergence_round6_v01.md)
-
-External dependency authority:
-[External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
+Authorities:
+- [Round 7 Quantitative Transfer Feasibility Envelope](08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
+- [Round 7 Minimum-Win & Restart Thresholds](09_collaboration-roadmap/pre_execution_minimum_win_thresholds_round7_v01.md)
+- [Round 7 Internal Decision Tree](09_collaboration-roadmap/pre_execution_internal_decision_tree_round7_v01.md)
 
 Historical record:
-[Round 6 progress record](history/progress/00d_2026_10_05_round6_final_public_research_convergence.md)
+[Round 7 progress record](history/progress/00e_2026_10_05_round7_quantitative_transfer_feasibility.md)
+
+## Round-7 key technical conclusions
+
+### Pavlenko
+- published 220 μm wire is RED as a direct phone-UTVC geometry;
+- 60–100 μm remains the transfer envelope;
+- ~80–100 μm is analytically lower transport-risk;
+- ~60 μm is the aggressive branch and needs permeability/open-area compensation.
+
+### MPEI
+- 5–15 μm coating thickness itself is not the main vertical bottleneck;
+- groove depth / shell integration is the key unknown;
+- uniform half-scale miniaturization is analytically unattractive;
+- prefer non-homothetic hierarchy: preserve hydraulic return path, use fine capillary structure for pressure.
+
+### TPU
+- low-relief laser-only copper has the easiest analytical geometry transfer;
+- public copper + laser + water-boiling bridge is already closed;
+- sealed-process chemistry/state retention remains the key blocker.
+
+### Lab 6.6
+- public 3–7 mm local expansion is RED for a simple additive internal-phone interpretation;
+- gas-drive lower-bound power scales approximately with v³;
+- gas velocity + full pressure drop dominate future feasibility.
 
 ## Current execution state
 
 ### Public research
 
-For the current Stage-0 portfolio:
-**broad public discovery is closed.**
+Broad public discovery remains closed.
 
-No decision-relevant PUBLIC blocker remains hidden after the Round-6 audit.
+Use targeted lookup only for a specific trigger.
 
-Reopen targeted public research only when:
-- a partner answer names a specific source/process/patent/material;
-- a Stage-0 winner creates a focused prior-art question;
-- legal/FTO raises a specific claim family;
-- contact freshness must be rechecked;
-- a material new public development appears before final decision.
+### External dependencies
 
-### Partner readiness
+[External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
 
-- Pavlenko packet: **OUTREACH READY**
-- MPEI packet: **OUTREACH READY**
-- TPU packet: **OUTREACH READY**
-- Lab 6.6: **RESERVE / SYSTEM-FEASIBILITY ONLY**
+PARTNER and EXPERIMENT items remain deferred, not closed.
 
-Operational index:
-[Outreach-Ready Partner Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
-
-### Stage-0 experiment readiness
-
-Experiment logic is frozen but physical testing is **not executed**.
+### Validation state
 
 No route is Stage-1 ready.
 
-Experiment/IP authority:
-[Stage-0 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
+No partner or experimental evidence was added in Round 7.
 
-## External dependency rule
+## Why progress percentages did not change
 
-Remaining work is no longer primarily a desk-research backlog.
+Round 7 materially improved:
+- design-space clarity;
+- future data triage;
+- scaling-risk understanding;
+- execution restart logic.
 
-Use the modular ledger:
-[09_collaboration-roadmap/dependencies/](09_collaboration-roadmap/dependencies/README.md)
+It did **not** close:
+- partner data;
+- sealed-process survival;
+- physical performance;
+- FTO;
+- product validation.
 
-Returned partner data or experiment results should update only the corresponding dependency module and current decision authority.
-
-Do not reopen old research rounds.
-
-## Current foreground-IP guard
-
-Do not target broad claims on:
-- modified mesh / hydrophilic coating;
-- nanoparticle + microgroove hierarchy;
-- biphilic VC / hydrophilic-hydrophobic routing;
-- gas + film + droplets electronics cooling.
-
-Only narrow phone-constrained hypotheses remain eligible for Stage-0 validation.
+Therefore:
+- public desk research remains ~98%;
+- overall research + validation remains ~94%.
 
 ## Next minimum task
 
-**Round 7 — Pre-Execution Design Closure (No Outreach / No Experiment)**
+**Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis (No Outreach / No Experiment)**
 
-Current execution constraints:
-- direct university outreach is not available now;
-- physical experiments / coupon fabrication are not available now.
+Goal:
+convert the surviving mechanisms and Round-7 transfer envelopes into an internal architecture/roadmap view:
 
-Therefore the next useful work is:
-1. build quantitative transfer-feasibility envelopes from existing public evidence;
-2. normalize phone/product constraints and minimum-win thresholds;
-3. run sensitivity / boundary analysis for Pavlenko, MPEI, TPU and Lab 6.6 using published parameter ranges;
-4. close internal decision trees and future restart triggers;
-5. maintain outreach/experiment packets for later use without executing them.
-
-Do **not** claim partner or experimental validation from this work.
-
-Constraint authority:
-[Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
-
-## Current research-governance priority
+1. map each mechanism into the phone thermal stack:
+   package → interface → wick/VC → frame/skin → optional active layer;
+2. separate what can be done internally from what genuinely needs Russian partner capability;
+3. define 0–12 / 12–24 / 24–36 month technical branches;
+4. identify which Russian capability is a mechanism source, diagnostic source, reliability source or manufacturing/process source;
+5. generate narrow internal technical hypotheses without pretending they are experimentally validated;
+6. preserve exact restart triggers for later partner/experiment access.
 
 Final visual/PPT work remains paused.
-
-Current near-term work is analytical/design closure only. Waiting for partner access or experimental capability must not be confused with incomplete desk research.
 
 ## History
 
