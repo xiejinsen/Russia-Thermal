@@ -96,8 +96,8 @@ Repository governance:
 
 ## Current status — 2026-10-04
 
-**Estimated research completion: ~76%**
-**Estimated remaining: ~24%**
+**Estimated research completion: ~77%**
+**Estimated remaining: ~23%**
 
 Current phase:
 **Stage-0 Partner Data Acquisition + Country Capability Convergence**
@@ -211,6 +211,12 @@ Focused file:
   [Russia Thermal Failure-Mechanism & Foundational Capability Map](10-final-report/management_capability_map_v01.md)
 - It integrates the full Russia capability panorama, China comparator, 3 + 1 strategic core, Siberian modular network, Stage-0 portfolio, Watch/Kill states and leadership asks.
 
+**Leadership decision package — CURRENT**
+- [Russia Thermal — Leadership Decision Package](10-final-report/leadership_decision_package_v01.md)
+- Equal-format cards now exist for Pavlenko, MPEI, Kabov and the Foundational Reserve.
+- TPU remains visible as a Stage-0 Challenger sidebar.
+- This package is leadership-ready for strategic framing, but not final investment authorization.
+
 **Capability-map completeness audit — PASS**
 - Focused audit:
   [Russia Thermal Capability Map Completeness Audit](03_russia-institutions/capability_map_completeness_audit_v01.md)
@@ -310,7 +316,7 @@ See [PROGRESS.md](PROGRESS.md) for live next steps.
 
 The final report is now scaffolded in `10-final-report/`.
 
-It is intentionally **not final** at the current ~76% research state.
+It is intentionally **not final** at the current ~77% research state.
 
 The report will ultimately contain:
 - executive decision;
