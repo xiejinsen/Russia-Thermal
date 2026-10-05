@@ -43,6 +43,7 @@ Required fields:
 - technical_scope
 - target_scope
 - maturity
+- evidence_confidence
 - target_fit
 - transfer_boundary
 - assessed_at
@@ -196,3 +197,31 @@ Preferred scope:
 - public-evidence-specific.
 
 Generated views must preserve that scope.
+
+
+## Capability confidence
+
+CAPABILITY must separate:
+- `maturity`: how developed the demonstrated capability is;
+- `evidence_confidence`: how confident we are in the public-evidence assessment.
+
+Suggested evidence_confidence:
+- LOW
+- MEDIUM
+- MEDIUM_HIGH
+- HIGH
+
+Example:
+a capability may be RESEARCH_ASSET + HIGH evidence confidence + ADJACENT target fit.
+
+## Actor contact-state boundary
+
+ACTOR may own only factual workflow state such as:
+- NOT_CONTACTED
+- CONTACT_PREPARED
+- CONTACTED
+- IN_DISCUSSION
+- CLOSED
+- UNKNOWN
+
+"CANDIDATE", "PRIMARY PARTNER" or "recommended collaborator" are strategic judgments and belong to DIRECTION / ROADMAP / derived collaboration view, not ACTOR.
