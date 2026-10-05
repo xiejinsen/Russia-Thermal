@@ -88,10 +88,14 @@ Operational automation is not yet fully proven; generator implementation remains
 SEMANTIC FIDELITY: PASS
 OBJECT BOUNDARY: PASS
 FRESH-READER READABILITY: PASS
-AUTOMATED GENERATION: PARTIAL — derived view exists, full deterministic generator not yet implemented.
+AUTOMATED GENERATION: PASS FOR MINIMAL GENERATOR LOGIC — deterministic generator/health checker implemented and fixture-tested for normal generation, unresolved-reference failure, and stale-view failure.
 
 Pilot decision:
-PASS WITH ONE ENGINEERING FOLLOW-UP.
+PASS TO NEXT SLICE PREPARATION.
 
-Follow-up:
-implement deterministic minimal view/index generation before broad migration.
+Generator verification:
+- normal generate/check: PASS;
+- unresolved canonical reference: correctly FAILS CLOSED;
+- stale generated view: correctly FAILS CLOSED.
+
+Repository-side GitHub Actions workflow is present on dev but no workflow run was observed immediately after creation; treat CI execution as an operational follow-up, not as a passed check.
