@@ -1,0 +1,38 @@
+# Changelog History Index
+
+> Decision-relevant repository history. New changes should normally be recorded as one small entry file, not appended to a monolithic log.
+
+This archive was created on 2026-10-05 from the former root changelog.
+
+- [2026-10-05 — Per-source 10Q evidence architecture](01_2026_10_05_per_source_10q_evidence_architecture.md)
+- [2026-10-05 — Core Evidence Deepening Round 2](02_2026_10_05_core_evidence_deepening_round_2.md)
+- [2026-10-05 — Institution-first entity taxonomy correction](03_2026_10_05_institution_first_entity_taxonomy_correction.md)
+- [2026-10-05 — Core Evidence Deepening Round 1](04_2026_10_05_core_evidence_deepening_round_1.md)
+- [2026-10-05 — Evidence-to-presentation freeze](05_2026_10_05_evidence_to_presentation_freeze.md)
+- [2026-10-05 — Leadership decision package convergence](06_2026_10_05_leadership_decision_package_convergence.md)
+- [2026-10-05 — Capability-map completeness pressure test](07_2026_10_05_capability_map_completeness_pressure_test.md)
+- [2026-10-05 — First management-facing Russia thermal capability system map](08_2026_10_05_first_management_facing_russia_thermal_capability_system_map.md)
+- [2026-10-04 — MPEI actual multi-year engineered-surface aging pressure test](09_2026_10_04_mpei_actual_multi_year_engineered_surface_aging_pressure_test.md)
+- [2026-10-04 — New-chat continuity / GitHub handoff protocol](10_2026_10_04_new_chat_continuity_github_handoff_protocol.md)
+- [2026-10-04 — Pavlenko independent-China dryout / rewetting pressure test](11_2026_10_04_pavlenko_independent_china_dryout_rewetting_pressure_test.md)
+- [2026-10-04 — Siberian theory–fluid–experiment network verification](12_2026_10_04_siberian_theory_fluid_experiment_network_verification.md)
+- [2026-10-04 — Foundational math-physics Russia–China pressure test](13_2026_10_04_foundational_math_physics_russia_china_pressure_test.md)
+- [2026-10-04 — Method correction: joint authorship + foundational mathematical physics](14_2026_10_04_method_correction_joint_authorship_foundational_mathematical_phy.md)
+- [2026-10-04 — Comparator closure: Kabov thin-film + Maydanik LHP](15_2026_10_04_comparator_closure_kabov_thin_film_maydanik_lhp.md)
+- [2026-10-04 — Comparator closure: MPEI reliability + electronics-fan aeroacoustics](16_2026_10_04_comparator_closure_mpei_reliability_electronics_fan_aeroacoustic.md)
+- [2026-10-04 — Russia capability atlas + China academic mirror](17_2026_10_04_russia_capability_atlas_china_academic_mirror.md)
+- [2026-10-04 — Stage-0 partner data-request + experiment packets](18_2026_10_04_stage_0_partner_data_request_experiment_packets.md)
+- [2026-10-04 — Repository governance second-pass audit](19_2026_10_04_repository_governance_second_pass_audit.md)
+- [2026-10-04 — Stage-0 blocker closure + unified partner decision](20_2026_10_04_stage_0_blocker_closure_unified_partner_decision.md)
+- [2026-10-04 — Core paper / patent 10Q backfill](21_2026_10_04_core_paper_patent_10q_backfill.md)
+- [2026-10-04 — Paper / patent 10Q methodology](22_2026_10_04_paper_patent_10q_methodology.md)
+- [2026-10-04 — Paper and patent brief library](23_2026_10_04_paper_and_patent_brief_library.md)
+- [2026-10-04 — Human-readable citation format](24_2026_10_04_human_readable_citation_format.md)
+- [2026-10-04 — Mobile-terminal relevance hard gate](25_2026_10_04_mobile_terminal_relevance_hard_gate.md)
+- [2026-10-04 — Stage-0 partner briefs and MPEI durability](26_2026_10_04_stage_0_partner_briefs_and_mpei_durability.md)
+- [2026-10-04 — Final report architecture](27_2026_10_04_final_report_architecture.md)
+- [2026-10-04 — Phone packaging + Stage-0 calibration](28_2026_10_04_phone_packaging_stage_0_calibration.md)
+- [2026-10-04 — Repository architecture / freshness audit](29_2026_10_04_repository_architecture_freshness_audit.md)
+- [2026-10-03 — Surface/wick IP + partner readiness](30_2026_10_03_surface_wick_ip_partner_readiness.md)
+- [2026-10-03 — Russia major-university coverage](31_2026_10_03_russia_major_university_coverage.md)
+- [2026-10-03 — Evidence traceability audit](32_2026_10_03_evidence_traceability_audit.md)
