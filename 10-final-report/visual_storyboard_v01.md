@@ -404,3 +404,31 @@ Final visuals should be:
 - explicit about evidence vs inference;
 - explicit about killed paths;
 - free of unsupported precision.
+
+
+### Leadership decision cards now available
+
+The content structure for the leadership presentation is now frozen enough to visualize.
+
+Canonical:
+- [Leadership Decision Package](leadership_decision_package_v01.md)
+
+Four equal-format cards:
+- [Pavlenko](leadership_card_pavlenko_v01.md)
+- [MPEI](leadership_card_mpei_v01.md)
+- [Kabov](leadership_card_kabov_v01.md)
+- [Foundational Reserve](leadership_card_foundational_v01.md)
+
+Visual rule:
+do not turn each card into a dense academic slide.
+
+Each presentation card should visually foreground only:
+1. product failure question;
+2. Why Russia;
+3. China already strong where;
+4. residual Russia control point;
+5. PoC;
+6. Kill gate;
+7. decision ask.
+
+Detailed evidence remains in notes/appendix.
