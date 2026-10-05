@@ -185,7 +185,7 @@ sealed VC co-development yet.
 
 ---
 
-# 6. Leadership card B — MPEI / Ivanov-Kuzma-Kichta team
+# 6. Leadership card B — MPEI — Ivanov/Kuzma-Kichta team
 
 ## Product question
 Can a surface/capillary-state metric predict future dryout-margin loss before conventional Rth/oxidation metrics?
@@ -325,7 +325,7 @@ Do not mistake institutional prestige for a product Bet.
 
 # 11. Normalized leadership comparison
 
-| Dimension | Kutateladze / Pavlenko team | MPEI / Ivanov team | Kutateladze / Kabov team | Foundational network |
+| Dimension | Kutateladze Institute — Pavlenko team | MPEI — Ivanov/Kuzma-Kichta team | Kutateladze Institute — Kabov/Chinnov team | Foundational network |
 |---|---:|---:|---:|---:|
 | Direct phone failure relevance | **High** | Medium | Medium | Medium |
 | Russia-specific residual after China comparison | **Medium-High** | Medium | Medium | Medium |
