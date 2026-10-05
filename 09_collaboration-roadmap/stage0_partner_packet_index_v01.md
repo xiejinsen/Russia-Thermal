@@ -168,3 +168,17 @@ Packet usage rule:
 - do not ask partners to re-prove public translation evidence;
 - ask only for the missing process / as-built / system data identified in the evidence lock;
 - do not move to Stage-1 until the corresponding experiment lock is satisfied.
+
+## Round-5 outreach-ready layer
+
+First-contact packets:
+- [Pavlenko](outreach_ready_pavlenko_v01.md)
+- [MPEI](outreach_ready_mpei_v01.md)
+- [TPU](outreach_ready_tpu_v01.md)
+- [Lab 6.6 reserve](outreach_ready_lab66_reserve_v01.md)
+
+Contact routes:
+[Outreach Contact Routes](outreach_contact_routes_v01.md)
+
+Experiment/IP freeze:
+[Round 5 Stage-0 Experiment / Foreground-IP Freeze](stage0_experiment_ip_freeze_round5_v01.md)
