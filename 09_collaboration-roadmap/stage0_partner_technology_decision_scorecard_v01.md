@@ -81,7 +81,7 @@ Detailed interpretation remains in:
 
 | Dimension | **Kutateladze Institute — Pavlenko team** | **MPEI — Ivanov/Kuzma-Kichta team** | **TPU — Feoktistov/Orlova team** | **MPEI — ordered-wick team** |
 |---|---|---|---|---|
-| **Mobile/chip relevance** | **PASS [PUBLIC]** — dielectric boiling / electronics-cooling physics; phone transfer explicitly defined | **PARTIAL [PUBLIC]** — current long-life device is a thermosyphon, but same MPEI/Ivanov lineage includes 0.2 mm water-boiling microchannel work | **PARTIAL [PUBLIC]** — microchip-cooling framing + water droplet/surface physics, no sealed phone device | **PARTIAL [PUBLIC]** — heat-pipe/wick mechanism relevant, no phone-scale specimen |
+| **Mobile/chip relevance** | **PASS [PUBLIC]** — dielectric boiling / electronics-cooling physics; phone transfer explicitly defined | **PARTIAL [PUBLIC]** — current long-life device is a thermosyphon, but same MPEI Ivanov/Kuzma-Kichta team lineage includes 0.2 mm water-boiling microchannel work | **PARTIAL [PUBLIC]** — microchip-cooling framing + water droplet/surface physics, no sealed phone device | **PARTIAL [PUBLIC]** — heat-pipe/wick mechanism relevant, no phone-scale specimen |
 | **High heat-flux evidence** | **PASS [PUBLIC]** — CHF/dryout/boiling evidence is a core capability | **PARTIAL [PUBLIC][EXPERIMENT]** — 2017/2020 0.2 mm water microchannel CHF lineage; not the exact 2026 hierarchical long-life surface | **PARTIAL [PUBLIC][EXPERIMENT]** — high-temperature droplet/evaporation evidence, no normalized sealed-VC hotspot proof | **UNKNOWN [EXPERIMENT]** |
 | **Sub-mm geometry** | **PARTIAL [EXPERIMENT]** — published 100/220 μm wires are not a drop-in ~60 μm phone wick; boiling layer is mm-scale | **PARTIAL [PUBLIC][EXPERIMENT]** — 0.2 mm microchannel lineage exists, but current hierarchy uses ~100 μm-radius grooves | **PARTIAL [PUBLIC][EXPERIMENT]** — laser roughness can be micron-scale; disclosed max features reach ~120 μm and substrate is steel/AlMg3 | **UNKNOWN [PARTNER][EXPERIMENT]** |
 | **Product-fluid transfer** | **UNKNOWN [EXPERIMENT]** — exact modified-mesh benefit not shown in DI water/product-path fluid | **PARTIAL [PUBLIC][EXPERIMENT]** — water thin-channel lineage + R410A long-life device; exact sealed DI-water hierarchy unproven | **PARTIAL [PUBLIC][EXPERIMENT]** — water surface data exist; sealed working-fluid compatibility unknown | **UNKNOWN [EXPERIMENT]** |
@@ -117,8 +117,8 @@ Generic surface theses remain killed/reframed:
 ## Execution packets
 
 The current decisions are operationalized in:
-- [Pavlenko / Kutateladze Partner Data Request + Experiment Packet](stage0_packet_pavlenko_v01.md)
-- [MPEI / Ivanov Partner Data Request + Experiment Packet](stage0_packet_mpei_ivanov_v01.md)
+- [Kutateladze Institute — Pavlenko-team Data Request + Experiment Packet](stage0_packet_pavlenko_v01.md)
+- [MPEI — Ivanov/Kuzma-Kichta-team Data Request + Experiment Packet](stage0_packet_mpei_ivanov_v01.md)
 - [TPU / Feoktistov Partner Data Request + Experiment Packet](stage0_packet_tpu_feoktistov_v01.md)
 
 Common packet protocol:
@@ -157,7 +157,7 @@ The scorecard changes only when partner-returned data or physical evidence chang
 
 **Search exit:** do not continue open-ended recipe hunting unless a new primary source is specifically identified.
 
-### MPEI / Ivanov
+### MPEI — Ivanov/Kuzma-Kichta team
 
 **Public research can resolve / now resolved**
 - ~100 μm groove-radius lineage;
