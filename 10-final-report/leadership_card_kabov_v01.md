@@ -1,8 +1,8 @@
-# Leadership Decision Card — Kabov / Chinnov / Kutateladze v0.1
+# Leadership Decision Card — Kutateladze Institute / Kabov–Chinnov Team v0.1
 
 Last updated: 2026-10-05
 
-Decision state: **HIGH-RISK MECHANISM/IP RESERVE — not Stage-0 top-3**
+Decision state: **Kutateladze Institute — Kabov/Kochkin/Chinnov team / HIGH-RISK MECHANISM/IP RESERVE — not Stage-0 top-3**
 
 Evidence maturity: **SYSTEM_VALUE mechanism evidence / phone transfer LOW**
 
@@ -37,9 +37,13 @@ The product question is:
 
 ---
 
-# 2. Why Russia / why this team
+# 2. Institution / team / why Russia
 
-Kutateladze's Kabov–Kochkin–Chinnov line has a long, coherent mechanism platform around:
+**Institution:** Kutateladze Institute of Thermophysics SB RAS
+
+**Team:** Kabov / Kochkin / Chinnov
+
+This team has a long, coherent mechanism platform around:
 
 - shear-driven liquid films;
 - local heating;
