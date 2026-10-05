@@ -766,3 +766,25 @@ Research-progress effect:
 
 QA judgment:
 **PASS.**
+
+
+### Institution partner-readiness QA — Round 2 — 2026-10-05
+
+Canonical:
+- [Institution Partner Readiness Matrix](../04_researchers-labs/institution_partner_readiness_matrix_v01.md)
+- [Core Evidence Deepening Round 2](../08_opportunities-transfer/core_evidence_deepening_round2_v01.md)
+
+Verified:
+- Kutateladze Lab 1.3 current head and staff;
+- Kutateladze Lab 6.6 current acting head and Kabov/Chinnov current roles;
+- MPEI Kuzma-Kichta current role;
+- Ivanov current academic/project activity;
+- current 2025 controlled-wettability thermosyphon continuation;
+- repeated Newfrost commercial-contract / coauthorship chain;
+- institution-vs-team equipment ownership caveat.
+
+QA judgment:
+**PASS — institution-level partner routing is decision-grade for the next public-evidence stage.**
+
+Remaining:
+team-specific fabrication limits, shared-equipment access and several system parameters remain PARTNER/PUBLIC-CLOSURE items.
