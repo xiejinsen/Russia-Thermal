@@ -4,10 +4,11 @@ Last updated: **2026-10-05**
 
 ## Overall status
 
-- **Estimated research completion:** ~91%
-- **Estimated remaining research:** ~9%
-- **Current phase:** Outreach Readiness → External-Dependency Convergence
-- **Immediate stage:** **Round 6 — Final Public-Research Convergence Audit + External-Dependency Ledger**
+- **Overall research + validation completion:** ~94%
+- **Public desk-research completion:** ~98%
+- **Estimated remaining overall program:** ~6%
+- **Current phase:** Public-Research Closed → External Execution
+- **Immediate stage:** **Partner Outreach / Stage-0 External Execution**
 
 This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
 
@@ -38,7 +39,8 @@ Canonical rule:
    - Feoktistov / Orlova line
    - laser / wettability-contrast process challenger
    - **GO WITH PREREQUISITE**
-   - outreach-ready.
+   - outreach-ready;
+   - public copper-material bridge is now closed; thin sealed-process transfer remains open.
 
 4. **Kutateladze Institute — Lab 6.6**
    - Kabov–Chinnov scientific lineage; current acting head Kochkin
@@ -52,36 +54,40 @@ Canonical rule:
 
 ## Last closed research round
 
-**Round 5 — Outreach-Ready Partner Pack Finalization + Experiment/IP Freeze Review**
+**Round 6 — Final Public-Research Convergence Audit**
 
 Closed:
-- current public professional contact routes;
-- concise first-contact packets for Pavlenko, MPEI and TPU;
-- reduced Lab 6.6 reserve packet;
-- mandatory vs optional partner questions;
-- data-request → decision crosswalk;
-- minimum Stage-0 experiment-arm set;
-- narrow foreground-IP boundaries;
-- trigger-based patent-search exit rule.
+- final residual audit across active candidates;
+- last targeted public search on Pavlenko/MPEI/TPU/Lab 6.6;
+- TPU copper-material applicability correction;
+- PUBLIC / PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION classification;
+- modular external-dependency ledger;
+- public-search stopping rule.
 
-Operational authority:
-- [Outreach-Ready Partner Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
-- [Stage-0 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
+Detailed authority:
+[Round 6 — Final Public-Research Convergence Audit](08_opportunities-transfer/public_research_convergence_round6_v01.md)
+
+External dependency authority:
+[External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
 
 Historical record:
-[Round 5 progress record](history/progress/00c_2026_10_05_round5_outreach_readiness_experiment_ip_freeze.md)
+[Round 6 progress record](history/progress/00d_2026_10_05_round6_final_public_research_convergence.md)
 
 ## Current execution state
 
 ### Public research
 
-For the three primary partners:
-**broad public discovery is effectively frozen.**
+For the current Stage-0 portfolio:
+**broad public discovery is closed.**
 
-Do not reopen generic searches unless:
-- a partner answer creates a specific question;
-- a Stage-0 coupon produces a specific winning geometry/process;
-- a targeted IP/FTO trigger appears.
+No decision-relevant PUBLIC blocker remains hidden after the Round-6 audit.
+
+Reopen targeted public research only when:
+- a partner answer names a specific source/process/patent/material;
+- a Stage-0 winner creates a focused prior-art question;
+- legal/FTO raises a specific claim family;
+- contact freshness must be rechecked;
+- a material new public development appears before final decision.
 
 ### Partner readiness
 
@@ -90,11 +96,28 @@ Do not reopen generic searches unless:
 - TPU packet: **OUTREACH READY**
 - Lab 6.6: **RESERVE / SYSTEM-FEASIBILITY ONLY**
 
+Operational index:
+[Outreach-Ready Partner Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
+
 ### Stage-0 experiment readiness
 
-Experiment logic is frozen, but physical testing is **not executed**.
+Experiment logic is frozen but physical testing is **not executed**.
 
 No route is Stage-1 ready.
+
+Experiment/IP authority:
+[Stage-0 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
+
+## External dependency rule
+
+Remaining work is no longer primarily a desk-research backlog.
+
+Use the modular ledger:
+[09_collaboration-roadmap/dependencies/](09_collaboration-roadmap/dependencies/README.md)
+
+Returned partner data or experiment results should update only the corresponding dependency module and current decision authority.
+
+Do not reopen old research rounds.
 
 ## Current foreground-IP guard
 
@@ -104,35 +127,31 @@ Do not target broad claims on:
 - biphilic VC / hydrophilic-hydrophobic routing;
 - gas + film + droplets electronics cooling.
 
-Only narrow, phone-constrained hypotheses remain eligible for Stage-0 validation.
+Only narrow phone-constrained hypotheses remain eligible for Stage-0 validation.
 
 ## Next minimum task
 
-**Round 6 — Final Public-Research Convergence Audit + External-Dependency Ledger**
+**Partner Outreach / Stage-0 External Execution**
 
-1. audit remaining open items across current authorities;
-2. classify every residual as PUBLIC / PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION;
-3. verify that no decision-relevant PUBLIC blocker remains hidden;
-4. freeze what can be concluded now versus what requires external evidence;
-5. define the exact stopping point for independent desk research;
-6. prepare the repository so later partner responses / coupon data can be inserted without reopening old research rounds.
+Recommended order:
 
-## Industry evidence governance
+1. initiate technical outreach to Pavlenko / Lab 1.3;
+2. initiate technical outreach to MPEI / Ivanov, with Kuzma-Kichta as senior/cross-line route;
+3. initiate technical outreach to TPU / Feoktistov;
+4. keep Lab 6.6 as a reserve system-feasibility request;
+5. in parallel prepare no-regret internal Stage-0 controls / fixtures that do not depend on partner proprietary data.
 
-Use [Industry / Vendor Evidence](evidence/industry/README.md):
-- one original P0/P1 industry source → one stable card;
-- organization indexes remain thin;
-- papers/patents are not duplicated;
-- decision files reuse Industry IDs.
+The next meaningful evidence should be:
+- partner-returned as-built/process data;
+- partner-fabricated coupons;
+- internal/partner Stage-0 measurements;
+- targeted legal/FTO after a concrete winner.
 
 ## Current research-governance priority
 
 Final visual/PPT work remains paused.
 
-The next task is convergence and dependency classification, not presentation production.
-
-Canonical plan:
-[Research Deepening Before Leadership Materials](00_scope/research_deepening_before_leadership_v01.md)
+The repository is now mature enough that waiting for external evidence should not be confused with incomplete desk research.
 
 ## History
 
