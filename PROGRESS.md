@@ -1,12 +1,24 @@
 # Research Progress
 
-Last updated: 2026-10-04
+Last updated: 2026-10-05
 
 ## Overall status
 
 **Estimated research completion: ~80%**
 **Estimated remaining research: ~20%**
 
+
+### Current naming rule
+
+All current portfolio statements follow:
+**Institution → Team / PI → Capability → Decision state**.
+
+Canonical:
+`00_scope/institution_first_entity_naming_standard_v01.md`.
+
+Historical sections below may retain old shorthand as snapshots, but current authority must not place people and institutions at the same hierarchy level.
+
+---
 
 ## Core Evidence Deepening Round 1 — 2026-10-05
 
@@ -16,7 +28,7 @@ Last updated: 2026-10-04
 
 This +2 percentage points comes from new experiment-level and execution/translation evidence for the three most important Russian mechanism lines.
 
-### Pavlenko / Kutateladze
+### Kutateladze Institute of Thermophysics SB RAS — Pavlenko team
 
 Newly hardened evidence:
 - current vacuum-capable HFE-7100 boiling setup;
@@ -28,11 +40,11 @@ Newly hardened evidence:
 - current RSF-supported crisis/surface work.
 
 Interpretation:
-Pavlenko is even more clearly a **failure-diagnostics / crisis-mechanism partner**.
+The **Pavlenko team at Kutateladze Institute** is even more clearly a **failure-diagnostics / crisis-mechanism partner**.
 
 Phone-transfer confidence does not rise because the public platform remains mm–cm scale and open/thin-layer rather than sealed wick-fed VC.
 
-### MPEI / Ivanov
+### Moscow Power Engineering Institute (MPEI) — Ivanov/Kuzma-Kichta team
 
 Newly hardened evidence:
 - 2024 dissertation confirms owned process chain:
@@ -47,9 +59,9 @@ Newly hardened evidence:
 - dissertation explicitly states use of results to improve thermosyphons produced by **Newfrost LLC**, supported by an implementation act.
 
 Interpretation:
-MPEI translation/partner-readiness evidence improves, while high-flux phone-transfer uncertainty becomes more explicit.
+**MPEI / Ivanov-Kuzma-Kichta team** translation/partner-readiness evidence improves, while high-flux phone-transfer uncertainty becomes more explicit.
 
-### Kabov / Chinnov
+### Kutateladze Institute of Thermophysics SB RAS — Kabov/Kochkin/Chinnov team
 
 Newly hardened evidence:
 historical experimental-industrial electronic-cooling prototype with:
@@ -69,7 +81,7 @@ historical experimental-industrial electronic-cooling prototype with:
 - gas-sheared film CHF up to ~1.5× falling-film comparison.
 
 Interpretation:
-Kabov has stronger **prototype/system execution history** than previously represented.
+The **Kabov/Kochkin/Chinnov team at Kutateladze Institute** has stronger **prototype/system execution history** than previously represented.
 
 But the historic flow rates and loop hardware reinforce why phone transfer remains LOW.
 
@@ -77,24 +89,39 @@ But the historic flow rates and loop hardware reinforce why phone transfer remai
 
 - `08_opportunities-transfer/core_evidence_deepening_round1_v01.md`
 
-### Strategic ranking
+### Current institution / team ranking
 
-Unchanged:
-1. Pavlenko — Stage-0 #1;
-2. MPEI — Stage-0 #2;
-3. TPU — Stage-0 Challenger;
-4. Kabov — High-risk Mechanism/IP Reserve;
-5. Foundational — blind-benchmark reserve.
+Unchanged in decision order:
+
+1. **Kutateladze Institute of Thermophysics SB RAS**
+   - Pavlenko / Surtaev / Shvetsov / Zhukov team
+   - Stage-0 #1.
+
+2. **Moscow Power Engineering Institute (MPEI)**
+   - Ivanov / Kuzma-Kichta / Alyautdinova team
+   - Stage-0 #2.
+
+3. **Tomsk Polytechnic University (TPU)**
+   - Feoktistov / Orlova team
+   - Stage-0 Challenger.
+
+4. **Kutateladze Institute of Thermophysics SB RAS**
+   - Kabov / Kochkin / Chinnov team
+   - High-risk Mechanism/IP Reserve.
+
+5. **Foundational institutional network**
+   - ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU
+   - blind-benchmark reserve.
 
 ### Next minimum task
 
 **Core Evidence Deepening Round 2**
 
 Priority:
-1. strengthen full-text experiment details for Pavlenko and MPEI;
+1. strengthen full-text experiment details for the **Kutateladze Institute / Pavlenko team** and **MPEI / Ivanov-Kuzma-Kichta team**;
 2. close current lab/fabrication/diagnostic capability fields that affect Stage-0 execution;
-3. convert public-known vs partner-only gaps into direct Partner Request questions;
-4. deepen translation/industry evidence around Newfrost / Kutateladze prototype lines;
+3. convert public-known vs partner-only gaps into direct institution/team-specific Partner Request questions;
+4. deepen translation/industry evidence around Newfrost and Kutateladze Institute prototype lines;
 5. only after that return to strongest China counterpart deepening.
 
 ---
