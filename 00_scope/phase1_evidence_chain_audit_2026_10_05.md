@@ -96,6 +96,13 @@ Therefore the current Russia differentiation logic is appropriately narrow.
 
 ## Repository integrity
 
+Index/file-count cross-check:
+- source modules: 35 / 35;
+- paper 10Q cards: 45 / 45;
+- patent 10Q cards: 14 / 14;
+- paper briefs: 51 source cards plus README/SYNTHESIS;
+- patent briefs: 14 source cards plus README/SYNTHESIS.
+
 Current 00–10 decision/workstream Markdown relative-link scan:
 **no material broken internal links found.**
 
