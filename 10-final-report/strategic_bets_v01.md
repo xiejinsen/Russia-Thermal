@@ -373,3 +373,25 @@ Therefore Bet B remains:
 
 The relevant question is not whether the film/drop concept exists.
 It is whether a phone-constrained architecture can produce a superior **thermal / power / noise / volume / failure-boundary** trade-off.
+
+
+### Kabov prototype-history deepening
+
+Newly hardened public evidence shows the Kabov line previously built and operated a closed-loop experimental-industrial electronic-cooling prototype with:
+- 1 mm-class slot channel;
+- 10×10 mm local heater;
+- distilled water + purified air;
+- ~100–120 ml/min liquid flow;
+- ~45–50 l/min gas flow;
+- reported ~1000 W/cm² maximum heat flux;
+- ~50 min continuous operation at maximum load.
+
+This materially strengthens the statement:
+> Kabov has real active-loop prototype execution history.
+
+It does **not** strengthen phone transfer.
+
+The historical flow rates, pumps, condenser/separator hardware and loop volume demonstrate why radical system redesign is mandatory.
+
+Current decision remains:
+**High-risk Mechanism/IP Reserve.**
