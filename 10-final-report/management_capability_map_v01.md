@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-05
 
-Status: **CURRENT management-facing synthesis draft**
+Status: **FREEZE CANDIDATE — management-facing structure pressure-tested**
 
 Purpose:
 provide a leadership-ready system view of:
@@ -14,6 +14,9 @@ provide a leadership-ready system view of:
 
 This file is a **presentation / synthesis layer**.
 Research authority remains in 00–09 and `PROGRESS.md`.
+
+Leadership decision package:
+[Russia Thermal — Leadership Decision Package](leadership_decision_package_v01.md)
 
 ---
 
