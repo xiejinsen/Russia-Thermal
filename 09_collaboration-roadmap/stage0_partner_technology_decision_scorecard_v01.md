@@ -328,3 +328,21 @@ Stage-0 reporting must therefore include:
 - rewetting delay;
 - post-cycle wetting state;
 in addition to CHF/thermal resistance.
+
+
+### Core evidence deepening — execution implications
+
+**Pavlenko**
+- public execution stack now clearly includes pressure-controlled/degassed dielectric boiling, high-speed optical/IR diagnostics and structured-surface testing;
+- Stage-0 role should emphasize crisis diagnostics and analysis;
+- fine phone-wick fabrication remains partner-only/unproven.
+
+**MPEI**
+- current academic process chain includes nanoparticle preparation, coating formation, wetting/capillary characterization and thermosyphon testing;
+- 2024 dissertation records implementation of results at Newfrost LLC;
+- current hierarchy heat flux (~200–1700 W/m²) is far below phone hotspots, so Stage-0 must aggressively separate aging knowledge from high-flux transfer.
+
+**Kabov**
+- historical electronic-cooling prototype shows real system execution, not only theory;
+- historical gas/liquid flow (~45–50 l/min gas; ~100–120 ml/min liquid) is incompatible with phone scale;
+- retain feasibility-only status until a low-flow architecture exists.
