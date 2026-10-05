@@ -6,11 +6,11 @@ Status: current hypothesis-to-partner map. Stage-0 GO/HOLD authority remains the
 
 | Hypothesis | Russian partner signal | Role | Immediate action | State |
 |---|---|---|---|---|
-| Working-fluid-transferable dryout/rewetting under sub-mm confinement | **Kutateladze — Pavlenko / Shvetsov** | mechanism lead | thin-mesh process-transfer Stage 0 + IP boundary | **Tier A / priority #1** |
-| Hierarchical coating with long-term two-phase stability | **MPEI — Ivanov / Alyautdinova** | reliability/process challenger | geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2** |
+| Phone-scale irreversible-dryout boundary control | **Kutateladze — Pavlenko / Surtaev / Shvetsov / Zhukov** | dielectric crisis-diagnostic / mechanism lead | thin-wick Stage 0 + irreversible-dryout metrics + IP boundary | **Tier A / priority #1 / narrow differentiation** |
+| Multi-year engineered-surface aging / early dryout-margin indicator | **MPEI — Ivanov / Alyautdinova / Kuzma-Kichta** | aging/reliability mechanism challenger | historical aging data + geometry-scaled high-flux Stage 0 | **Tier B+ / priority #2 / narrow differentiation** |
 | Target-fluid biphilic / contrast-wetting | TPU — Feoktistov | pattern/process challenger | vacuum-compatible copper-pattern Stage 0 | **Tier B+ / priority #3** |
 | Ordered porous wick | MPEI — Bulaeva / Savchenkov / Savchenkova | pre-device challenger | manufacture and measure thin coupon | **Pre-device** |
-| Sealed film/droplet hybrid | Kutateladze — Kabov/Kochkin/Chinnov | radical architecture | reduced feasibility bench | **Tier A-** |
+| Shear-driven film / gas-drop hybrid under extreme confinement | **Kutateladze — Kabov/Kochkin/Chinnov** | radical mechanism/IP architecture | system-level power-volume-noise feasibility + boundary bench | **High-risk mechanism/IP reserve** |
 | Compute + cooling adaptive control | SPbU | control hypothesis | compare with modern calibrated MPC/RL | **Tier B+** |
 | Multi-hotspot heat routing | ITP UB RAS | routing physics | normalize vs Chinese UTLHP | **Tier B** |
 | Confined microfan aeroacoustics | TsAGI / PNRPU / CIAM | acoustic methods | phone-scale tonal/source test | **Tier B** |
@@ -100,3 +100,22 @@ Preferred architecture:
 4. add ICM/Altai only after current relationship and model ownership are confirmed.
 
 This network opportunity does **not** change the current Stage-0 surface partner order.
+
+
+### Completeness-audit supporting nodes
+
+**JIHT RAS**
+- MPEI-adjacent current microchannel-boiling collaboration;
+- useful supporting experimental node;
+- no independent strategic-core promotion.
+
+**SPbPU**
+- current direct local heat-flux / gradient-heatmetry capability;
+- 2026 power-electronics two-phase immersion work;
+- potential Stage-0 measurement/diagnostics partner;
+- not a Russia phone-thermal country advantage.
+
+**Kabov current IP**
+- RU2860581C1 confirms current electronics-cooling IP activity;
+- improves partner/IP confidence;
+- does not remove phone power/volume/acoustic integration risk.
