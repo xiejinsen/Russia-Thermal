@@ -159,6 +159,20 @@ Label this:
 rather than:
 **integrated consortium**.
 
+### Completeness-audit freeze status
+
+Institution/capability completeness audit:
+../03_russia-institutions/capability_map_completeness_audit_v01.md
+
+Result:
+**Visual 3 / management capability structure is now a FREEZE CANDIDATE.**
+
+Add supporting nodes without elevating them:
+- JIHT RAS — MPEI-adjacent microchannel/boiling;
+- SPbPU — gradient heatmetry / two-phase immersion diagnostics.
+
+Keep the strategic core visually dominant.
+
 ### Current first-draft artifact
 
 The first management synthesis now exists:
