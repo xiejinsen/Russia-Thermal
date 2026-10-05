@@ -23,6 +23,7 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 - [Pavlenko dryout / rewetting China pressure test](pavlenko_dryout_rewetting_china_pressure_test_v01.md) — independent-China pressure test that narrows Pavlenko to dielectric irreversible-dryout/crisis diagnostics
 - [MPEI multi-year aging China pressure test](mpei_multiyear_aging_china_pressure_test_v01.md) — separates actual 42-month engineered-surface operation from accelerated lifetime / failure-analysis evidence
 - [Film/droplet full-loop budget](film_droplet_full_loop_budget_v01.md)
+- [Round 9 — Dryout / Thermal-Health Observability](dryout_thermal_health_observability_round9_v01.md) — current focused Keep/Kill study for practical phone observability of dryout-risk / health state
 
 ## CURRENT / AUTHORITATIVE
 
@@ -32,7 +33,8 @@ Translate evidence into smartphone-relevant open problems and falsifiable innova
 1. `direction_decision_gate_v01.md` — current technology/Tier/kill disposition;
 2. `smartphone_constraint_model_v01.md` — current phone-transfer constraints;
 3. `russia_china_academic_capability_heatmap_v01.md` — current management-level Russia×China differentiation map;
-4. `surface_wick_russia_china_comparison_v01.md` — detailed current surface/wick comparator analysis.
+4. `surface_wick_russia_china_comparison_v01.md` — detailed current surface/wick comparator analysis;
+5. `dryout_thermal_health_observability_round9_v01.md` — current observability / hidden-state interpretation.
 
 The local ordering above does not override the repository-wide authority hierarchy.
 
@@ -155,3 +157,8 @@ Only Pavlenko and MPEI currently have direct Stage-0 partner execution packets.
 ## Round-8 internal architecture synthesis
 
 - [Internal Phone Thermal Architecture Synthesis](internal_phone_thermal_architecture_round8_v01.md) — current architecture-level mapping of Russian capability into package / VC / reliability / failure-diagnostic layers.
+
+
+## Round-9 observability synthesis
+
+- [Dryout / Thermal-Health Observability Study](dryout_thermal_health_observability_round9_v01.md) — narrows absolute dryout-margin language to a calibrated estimated risk/health state and defines the next identifiability falsification gate.
