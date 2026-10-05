@@ -28,10 +28,11 @@ Publicly closed:
 - Feoktistov/Orlova inventor linkage;
 - one independent laser-process claim;
 - representative 1064 nm nanosecond-laser process window;
-- steel roughness/feature-height range.
+- steel roughness/feature-height range;
+- **copper + nanosecond-laser texture + degassed-water pool-boiling bridge** (2025).
 
 Experiment-only:
-- copper transfer;
+- phone-thickness copper / <=150 μm geometry transfer;
 - vacuum/outgassing;
 - working-fluid contamination;
 - post-degassing/welding wetting retention;
@@ -44,7 +45,7 @@ Experiment-only:
 | T-DR1 | Laser-only process window | shareable pulse energy/frequency/duration/scan/overlap ranges actually used for relevant texture | reproducibility and copper transfer | PARTNER |
 | T-DR2 | Biphilic/hydrophobic process window | shareable chemistry family + thermal/time range + pattern dimensions | contamination/process analysis | PARTNER |
 | T-DR3 | Actual feature height/profile | 3D profile/roughness distribution, not only contact angle | vertical budget | PARTNER |
-| T-DR4 | Copper experience | any copper coupons, process changes and outcomes | product path | PARTNER |
+| T-DR4 | Thin-copper transfer from the public copper route | minimum copper thickness / feature-height range / required process changes | phone geometry path | PARTNER |
 | T-DR5 | Vacuum/outgassing data | any mass-loss/vacuum/wetness-retention evidence | first-gate risk | PARTNER |
 | T-DR6 | Water/refrigerant exposure | wetting/contact-angle drift after long soak if available | fluid stability | PARTNER |
 | T-DR7 | Thermal-process retention | post-heating / joining / welding-like exposure behavior | manufacturing stability | PARTNER |
@@ -218,7 +219,7 @@ Kill hydrocarbon branch if contamination/process stability fails.
 
 Kill generic TPU phone thesis if:
 - T1 and T2 are matched by T0;
-- copper transfer fails;
+- phone-thickness copper / geometry transfer fails;
 - useful pattern state cannot survive vacuum/thermal process;
 - foreground IP collapses to generic laser/biphilic prior art.
 
@@ -293,17 +294,18 @@ Already public:
 - RU2812668 independent laser-process control point;
 - representative laser-process window;
 - steel/AlMg3 surface lineage;
+- **laser-textured copper + degassed-water pool boiling**;
 - wettability-contrast / evaporation mechanism.
 
 Remaining useful questions are PARTNER-ONLY:
-- copper process experience;
+- **phone-thickness copper** process window / feature-height budget;
 - exact laser-only low-organic process range;
 - current biphilic chemistry/process envelope;
 - vacuum/outgassing evidence if any;
 - background-IP relationship between current process and RU2812668.
 
 Decisive questions are EXPERIMENT-ONLY:
-- copper transfer;
+- thin-copper + VC-process transfer;
 - DI-water/vacuum/process survival;
 - sealed-system contamination;
 - post-process wetting retention;
@@ -323,9 +325,23 @@ This closes one generic process question:
 Therefore do **not** ask the partner to prove generic process durability from zero.
 
 Ask the more discriminating questions:
-- can the relevant low-organic laser process transfer to thin copper?
+- can the demonstrated copper laser route transfer to phone-thickness copper within the VC height budget?
 - what is current throughput/repeatability?
 - does the surface survive actual VC vacuum/degassing?
 - does the winning state retain wetting and confined rewetting function after sealed-process exposure?
 
 The phone-specific process gate is unchanged.
+
+## 14. Round-6 copper-material public closure — 2026-10-05
+
+New public authority:
+[C5 — copper pool boiling on TPU laser-textured surfaces](../evidence/10q/papers/c5_copper_pool_boiling_laser_textured_surfaces.md)
+
+This paper demonstrates copper + nanosecond-laser texture + degassed-water pool boiling in the Feoktistov/Orlova line.
+
+Therefore:
+- **copper material applicability = PUBLICLY CLOSED**;
+- **phone-thickness copper / <=150 μm functional-height transfer = PARTNER + EXPERIMENT**;
+- vacuum/outgassing / sealed-process retention remains EXPERIMENT.
+
+The Stage-0 design does not change; only the dependency label becomes more precise.
