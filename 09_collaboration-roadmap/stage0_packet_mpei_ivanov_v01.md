@@ -265,3 +265,52 @@ Stage 1:
 
 Current state:
 **READY TO REQUEST CURRENT AS-BUILT DATA + SCALE-DOWN COMMITMENT; NOT READY FOR SEALED VC.**
+
+## 11. Round-3 public-boundary freeze — 2026-10-05
+
+Public search is now **CLOSED** for the main MPEI Stage-0 blockers unless a specific new primary source appears.
+
+### New public closure — Newfrost
+
+Current official MPEI proceedings describe a thermosyphon model **manufactured by Newfrost LLC** in the controlled-wettability project line.
+
+Therefore do not ask whether any physical Newfrost engineering interaction exists.
+
+Ask instead:
+- which geometry/process/design elements Newfrost fabricated from MPEI specifications;
+- which elements were standard Newfrost hardware;
+- what shareable acceptance/test data exist;
+- whether the hierarchy/coating itself was part of the industrially fabricated model.
+
+### New public closure — separate current microchannel line
+
+MPEI has a distinct current Kuzma-Kichta-led project:
+**modular microchannel cooling with SiC nanoparticle/agglomerate coating**.
+
+Current public project team includes:
+- Alexander Kiselev;
+- Olga Strashnikova;
+- Ivan Yastrebov.
+
+This must not be silently merged with the Ivanov 42-month hierarchy line.
+
+### Add partner questions
+
+- Are the Ivanov long-life surface line and Kuzma-Kichta SiC microchannel line executed in the same lab/infrastructure?
+- Can the current long-life hierarchy be evaluated in the current microchannel platform?
+- Current SiC module: channel height/width/length, coated area and total module envelope.
+- Current SiC coating: particle/agglomerate scale, thickness/morphology and substrate.
+- Current results: HTC/CHF, pressure drop, flow rate, pump power and repeatability if shareable.
+- Which team can fabricate a copper phone-scale coupon?
+- Which characterization tools are directly team-accessible versus central MPEI shared equipment?
+
+### Frozen boundary
+
+Still EXPERIMENT-ONLY:
+- scaled copper hierarchy;
+- sealed DI-water/vacuum process;
+- phone heat-flux/dryout behavior;
+- normalized comparison versus modern coated-microchannel / UTVC references.
+
+Packet state:
+**PUBLIC BOUNDARY FROZEN / READY FOR AS-BUILT DATA + CROSS-LINE EXECUTION QUESTION.**

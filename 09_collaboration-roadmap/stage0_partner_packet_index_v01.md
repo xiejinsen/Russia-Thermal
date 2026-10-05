@@ -1,6 +1,6 @@
 # Stage-0 Partner Data Request + Experiment Packets v0.1
 
-Last updated: 2026-10-04
+Last updated: 2026-10-05
 
 Status: **CURRENT execution package index**
 
@@ -19,6 +19,9 @@ Common experiment anchor:
 1. [Pavlenko / Kutateladze Packet](stage0_packet_pavlenko_v01.md) — priority #1; modified-mesh dryout/rewetting transfer.
 2. [MPEI / Ivanov Packet](stage0_packet_mpei_ivanov_v01.md) — priority #2; long-life hierarchy scale-down/high-flux transfer.
 3. [TPU / Feoktistov Packet](stage0_packet_tpu_feoktistov_v01.md) — priority #3; low-organic laser vs hydrocarbon-biphilic process screen.
+
+Reserve feasibility:
+- [Kutateladze Institute — Lab 6.6 Reserve Feasibility Packet](reserve_packet_kutateladze_lab66_v01.md) — mechanism/IP reserve; ask system-overhead questions only.
 
 MPEI ordered wick remains **HOLD / pre-device** and does not receive a full Stage-0 packet until a repeatable thin physical specimen exists.
 
@@ -142,3 +145,16 @@ A packet closes only when each mandatory data-request item is classified:
 - EXPERIMENT REQUIRED.
 
 Unanswered items must not silently become assumptions.
+
+## Round-3 packet freeze
+
+Public research boundaries are now frozen for:
+- Pavlenko / Lab 1.3;
+- MPEI Ivanov hierarchy line;
+- TPU Feoktistov/Orlova;
+- Lab 6.6 reserve feasibility.
+
+Do not reopen broad searches to answer items already routed to PARTNER or EXPERIMENT.
+
+The three primary Stage-0 packets are now **OUTREACH-DRAFT READY**.
+They are not evidence of contract readiness.

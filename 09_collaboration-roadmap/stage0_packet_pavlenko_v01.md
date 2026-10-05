@@ -266,3 +266,40 @@ Stage 1:
 
 Current state after packet creation:
 **READY TO REQUEST DATA; NOT READY TO BUILD SEALED DEVICE.**
+
+## 12. Round-3 public-boundary freeze — 2026-10-05
+
+Public search is now **CLOSED** for this packet unless a specific new primary source is identified.
+
+### Do not ask again — already public
+
+- Lab 1.3 has current spray/jet + dielectric-boiling crisis capability.
+- Current dry-spot analysis uses synchronized optical/IR diagnostics and ML/CNN processing.
+- Same-lab diagnostic lineage reaches ~30 μm/pixel visible and ~120 μm/pixel IR in a transparent-heater spray setup.
+- 2026 spray work uses a 1.2 mm nozzle / 10 g/s water setup.
+- HFE-7100 / Novec 649 irreversible-dryout dynamics are public.
+- Official institute pages show a Huawei cooperation precedent.
+
+### Ask partner now
+
+Add to the mandatory request:
+- exact current **dielectric** stand nozzle/jet configuration and usable flow/pressure envelope;
+- diagnostic spatial/temporal resolution on that current stand;
+- minimum repeatable structured/mesh sample and required active area;
+- sample throughput / batch repeatability;
+- whether the diagnostic pipeline can accept externally fabricated copper phone-like coupons;
+- whether any existing background agreement creates a shareable field restriction for proposed phone/VC work.
+
+Do **not** request confidential Huawei/customer contract text.
+
+### Frozen boundary
+
+Anything below now requires experiment, not literature search:
+- 60–100 μm copper mesh transfer;
+- DI-water/product-fluid behavior;
+- vacuum/degassing;
+- cycling;
+- irreversible-dryout improvement versus strong UTVC control.
+
+Packet state:
+**PUBLIC BOUNDARY FROZEN / READY FOR PARTNER DATA REQUEST.**

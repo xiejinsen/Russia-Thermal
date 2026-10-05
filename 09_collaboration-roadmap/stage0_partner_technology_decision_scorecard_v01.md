@@ -360,3 +360,39 @@ in addition to CHF/thermal resistance.
 - repeated Newfrost commercial-contract / coauthorship chain strengthens external-engineering readiness.
 
 Decision order unchanged.
+
+## Round-3 public-to-partner boundary correction — 2026-10-05
+
+This section supersedes earlier uncertainty where Round-3 evidence is stronger.
+
+### Kutateladze Lab 1.3
+- Partner readiness remains **PASS / HIGH**, reinforced by an official Huawei collaboration precedent.
+- Current diagnostics are publicly active and ML-assisted.
+- Exact current dielectric-stand geometry/resolution and minimum phone-like sample are now **PARTNER**, not broad-search items.
+
+### MPEI
+The Stage-0 #2 bet remains the **Ivanov long-life hierarchy / aging line**.
+
+Separate supporting execution line:
+- Kuzma-Kichta / Kiselev / Strashnikova / Yastrebov;
+- current modular microchannel cooling with SiC nanoparticle/agglomerate coating.
+
+Do not interpret the separate line as a new Stage-0 bet until cross-line process/equipment overlap and phone transfer are demonstrated.
+
+Newfrost evidence upgrades from generic implementation signal to **current physical-model fabrication evidence**.
+
+### Lab 6.6
+Sub-mm/micron-gap capability is no longer UNKNOWN:
+- 10 μm and 12.5 μm two-phase channel evidence is public;
+- 40 μm HFE-7100 boiling evidence is public.
+
+The decisive blocker has moved upward to:
+**system pressure drop + actuator power + loop volume + acoustics.**
+
+### TPU
+Public discovery is frozen.
+Remaining blockers are partner/process/experiment only.
+
+### Decision effect
+**Stage-0 ranking unchanged.**
+No unconditional GO.

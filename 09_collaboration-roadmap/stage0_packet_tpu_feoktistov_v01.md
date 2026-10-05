@@ -283,3 +283,31 @@ Stage 1:
 
 Current state:
 **READY FOR TWO-BRANCH DATA REQUEST + COPPER SCREEN; NOT READY FOR SEALED VC.**
+
+## 12. Round-3 public-search exit — 2026-10-05
+
+No further open-ended TPU public search is justified before partner/coupon evidence.
+
+Already public:
+- Feoktistov/Orlova inventor linkage;
+- RU2812668 independent laser-process control point;
+- representative laser-process window;
+- steel/AlMg3 surface lineage;
+- wettability-contrast / evaporation mechanism.
+
+Remaining useful questions are PARTNER-ONLY:
+- copper process experience;
+- exact laser-only low-organic process range;
+- current biphilic chemistry/process envelope;
+- vacuum/outgassing evidence if any;
+- background-IP relationship between current process and RU2812668.
+
+Decisive questions are EXPERIMENT-ONLY:
+- copper transfer;
+- DI-water/vacuum/process survival;
+- sealed-system contamination;
+- post-process wetting retention;
+- confined rewetting/dryout benefit.
+
+Packet state:
+**PUBLIC BOUNDARY FROZEN / READY FOR TWO-BRANCH COPPER SCREEN REQUEST.**
