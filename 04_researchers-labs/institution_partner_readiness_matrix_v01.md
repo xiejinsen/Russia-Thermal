@@ -189,14 +189,11 @@ Strongest current translation chain:
 
 ### Newfrost LLC
 
-Public evidence now includes:
-- MPEI dissertation states work under commercial contracts with Newfrost:
-  - No. 2138220;
-  - No. 2145210;
-  - No. 2159200;
-- dissertation states results were used to improve thermosyphons manufactured by Newfrost and cites an implementation act;
-- 2020 publication on nanoparticle coatings includes Newfrost coauthors;
-- earlier MPEI–Newfrost joint work exists on thermostabilizer / thermosyphon thermal resistance.
+Canonical industry evidence:
+- [I-NEWFROST-001 — commercial-contract / implementation chain](../evidence/industry/newfrost/sources/I-NEWFROST-001_mpei_dissertation_contract_implementation_chain.md)
+- [I-NEWFROST-002 — current Newfrost-manufactured thermosyphon model](../evidence/industry/newfrost/sources/I-NEWFROST-002_current_thermosyphon_model_fabrication.md)
+
+Paper coauthorship remains in the paper-evidence layer rather than being duplicated here.
 
 ### Interpretation
 
@@ -323,9 +320,11 @@ Then generate institution-specific Partner Request Packs.
 
 ### Kutateladze Institute — Lab 1.3
 
-New official execution/collaboration signal:
-- institute pages publicly list 2021–2023 R&D cooperation with Huawei Tech Company / Huawei Technologies;
-- later Bel Huawei consulting/cooperation is also listed, with an end-year discrepancy between the lab page (2025) and Pavlenko page (2026).
+Canonical Huawei collaboration evidence:
+- [I-HUAWEI-001](../evidence/industry/huawei/sources/I-HUAWEI-001_kutateladze_lab13_collaboration_record.md)
+- [I-HUAWEI-002](../evidence/industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md)
+
+The two official sources disagree on the later cooperation end year (2025 vs 2026), so current status requires direct confirmation.
 
 Interpretation:
 **Partner Readiness remains HIGH, reinforced by a public collaboration precedent.**

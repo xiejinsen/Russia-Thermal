@@ -272,9 +272,10 @@ Public search is now **CLOSED** for the main MPEI Stage-0 blockers unless a spec
 
 ### New public closure — Newfrost
 
-Current official MPEI proceedings describe a thermosyphon model **manufactured by Newfrost LLC** in the controlled-wettability project line.
+Canonical industry source:
+[I-NEWFROST-002](../evidence/industry/newfrost/sources/I-NEWFROST-002_current_thermosyphon_model_fabrication.md).
 
-Therefore do not ask whether any physical Newfrost engineering interaction exists.
+It closes the generic question of whether a current physical Newfrost engineering interaction exists.
 
 Ask instead:
 - which geometry/process/design elements Newfrost fabricated from MPEI specifications;

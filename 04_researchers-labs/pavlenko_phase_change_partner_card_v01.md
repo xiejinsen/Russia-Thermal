@@ -22,7 +22,7 @@ RSF 23-19-00245, 2023–2025:
 Official:
 https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
 
-The same official page also records Huawei-related boiling heat-transfer work and a 2024–2026 consulting agreement with Bel Huawei Technologies.
+Huawei collaboration evidence is maintained canonically as [I-HUAWEI-002](../evidence/industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md).
 
 ---
 
@@ -253,8 +253,9 @@ the patent does not demonstrate an HFE-filled 0.3–0.5 mm phone VC.
 
 ### Background-IP risk
 
-The official Pavlenko project page records Huawei-related boiling work in 2021–2023 and a Bel Huawei Technologies consulting agreement in 2024–2026:
-https://www.itp.nsc.ru/lmpt/?lang=en&page_id=1257
+Canonical collaboration evidence:
+- [I-HUAWEI-001](../evidence/industry/huawei/sources/I-HUAWEI-001_kutateladze_lab13_collaboration_record.md)
+- [I-HUAWEI-002](../evidence/industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md)
 
 No inference is made about:
 - exclusivity;
@@ -496,16 +497,12 @@ Partner request must now ask explicitly for:
 
 ### Official collaboration precedent
 
-Kutateladze official pages publicly list:
-- 2021–2023 technical R&D cooperation with Huawei;
-- later Bel Huawei consulting/cooperation.
+Canonical source cards:
+- [I-HUAWEI-001](../evidence/industry/huawei/sources/I-HUAWEI-001_kutateladze_lab13_collaboration_record.md)
+- [I-HUAWEI-002](../evidence/industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md)
 
-This is decision-relevant because it demonstrates an existing large-company collaboration path.
-
-Boundary:
-- use it as **collaboration-readiness evidence**;
-- do not infer private Huawei technical content, contractual terms or phone-specific field rights;
-- the later agreement end year is inconsistent across two official pages and should be confirmed directly.
+Decision interpretation:
+the collaboration precedent reinforces technical-discussion readiness, but confidential scope, current status and mobile-field rights remain unproven; the 2025/2026 end-year discrepancy requires direct confirmation.
 
 ### Diagnostic public boundary
 

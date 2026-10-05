@@ -278,7 +278,7 @@ Public search is now **CLOSED** for this packet unless a specific new primary so
 - Same-lab diagnostic lineage reaches ~30 μm/pixel visible and ~120 μm/pixel IR in a transparent-heater spray setup.
 - 2026 spray work uses a 1.2 mm nozzle / 10 g/s water setup.
 - HFE-7100 / Novec 649 irreversible-dryout dynamics are public.
-- Official institute pages show a Huawei cooperation precedent.
+- Huawei cooperation precedent: [I-HUAWEI-001](../evidence/industry/huawei/sources/I-HUAWEI-001_kutateladze_lab13_collaboration_record.md) + [I-HUAWEI-002](../evidence/industry/huawei/sources/I-HUAWEI-002_pavlenko_collaboration_record.md).
 
 ### Ask partner now
 

@@ -419,12 +419,11 @@ that heat flux is far below phone hotspot conditions. The 42-month result is the
 
 ### New external implementation signal
 
-The dissertation states that results were used to improve thermosyphons manufactured by:
-**ООО «Ньюфрост» (Newfrost LLC)**
+Canonical industry evidence:
+[I-NEWFROST-001 — MPEI dissertation contract/implementation chain](../evidence/industry/newfrost/sources/I-NEWFROST-001_mpei_dissertation_contract_implementation_chain.md).
 
-and cites an implementation act in Appendix A.
-
-This increases translation/partner-readiness confidence, but does not prove mass production or phone-scale use.
+Decision interpretation:
+translation/partner-readiness confidence increases, but mass production and phone-scale use remain unproven.
 
 New partner-request items:
 - Newfrost implementation scope;
@@ -437,13 +436,11 @@ New partner-request items:
 
 ### Newfrost physical-model closure
 
-Official MPEI 2025 proceedings describe a current thermosyphon model **manufactured by Newfrost LLC** for the controlled-wettability project line.
+Canonical source:
+[I-NEWFROST-002 — current Newfrost-manufactured thermosyphon model](../evidence/industry/newfrost/sources/I-NEWFROST-002_current_thermosyphon_model_fabrication.md).
 
-This materially strengthens the external-engineering chain:
-- not only contracts/coauthorship/implementation wording;
-- a current test model is physically fabricated by the industrial partner.
-
-Do not transfer its R22 thermosyphon performance directly to smartphone cooling.
+Decision interpretation:
+external-engineering confidence is strengthened by current physical-model fabrication; do not transfer that thermosyphon result to smartphone performance.
 
 ### Distinct current microchannel line
 
