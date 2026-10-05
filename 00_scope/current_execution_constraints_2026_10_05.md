@@ -38,13 +38,20 @@ Overall completion remains separated into:
 - public desk-research maturity;
 - overall research + validation maturity.
 
-## Current recommended workstream
+## Workstream rule
 
-**Round 7 — Pre-Execution Design Closure (No Outreach / No Experiment)**
+This file defines **execution constraints only** and must not become a second current-status page.
 
-Focus:
-1. quantitative phone-transfer feasibility envelopes for the surviving Russian mechanisms;
-2. common product constraints and normalized target metrics;
-3. parameter sensitivity / minimum-win thresholds;
-4. internal roadmap and decision-tree closure;
-5. exact trigger conditions for future outreach / experiment restart.
+The current analytical/research workstream is always defined by:
+[PROGRESS.md](../PROGRESS.md)
+
+Allowed work under this constraint remains:
+- targeted public-source verification;
+- quantitative / reduced-order modeling;
+- transfer-envelope analysis;
+- internal architecture / roadmap synthesis;
+- observability / control-variable studies;
+- decision-tree / Kill-gate refinement;
+- trigger-based prior-art work.
+
+When the constraint changes, update this file explicitly; do not infer access from the age of the roadmap.
