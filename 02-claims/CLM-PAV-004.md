@@ -1,0 +1,15 @@
+# CLM-PAV-004
+
+record_state: CURRENT
+status: REFUTED
+confidence: HIGH
+
+Proposition:
+Russia has a broad differentiated advantage over China in generic dryout / rewetting know-how.
+
+supporting_sources:
+- PAPER-CN-DRY-001
+- PAPER-CN-DRY-002
+
+Boundary:
+the refutation applies to the broad thesis; a narrower actor-specific diagnostic residual may remain.
