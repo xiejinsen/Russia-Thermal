@@ -140,13 +140,13 @@ It is:
 | Laser / biphilic surface | **TPU — Feoktistov, Orlova** | laser roughness / wettability processing; claim-mapped patent | China/global prior art crowded | **STAGE-0 #3 CHALLENGER** |
 | Ordered porous wick | **MPEI ordered-wick line** | modeling / porous concept | no physical phone-scale specimen | **HOLD / PRE-DEVICE** |
 | LHP / passive routing | **ITP UB RAS — Maydanik lineage** | deep LHP knowledge / serviceability / failure history | China covers mobile LHP, multi-evaporator and failure boundaries | **WATCH / KNOWLEDGE RESERVE** |
-| Microchannel / embedded liquid | Kutateladze; MPEI; Bauman | two-phase micro/slit-channel physics | China integration frontier stronger | **MECHANISM SOURCE ONLY** |
+| Microchannel / embedded liquid | Kutateladze; **MPEI + JIHT RAS**; Bauman | two-phase micro/slit-channel physics; current MPEI–JIHT boiling collaboration | China integration frontier stronger | **MECHANISM / SUPPORTING SOURCE ONLY** |
 | Aeroacoustics | **TsAGI / PNRPU / CIAM** | world-class aeroacoustic methods/facilities | China already strong in electronic cooling fan acoustics | **WATCH / METHOD RESERVE** |
 | Active air / synthetic jet / EHD | Kutateladze / SPbU adjacency | fragmented public signal | China/global evidence stronger | **UNRESOLVED / LOW PRIORITY** |
 | Thermal materials | Skoltech / MISIS / MSU / SPbU | materials science depth | no phone-specific Russia edge | **KILL GENERIC THESIS** |
 | Mobile thermal control | **SPbU** | smartphone stochastic DVFS lineage | generic DVFS/RL crowded | **COMPLEMENTARY / TEST** |
 | Foundational math physics | **ICM SB RAS / Altai / Lavrentyev** | exact/group-invariant solutions, stability thresholds, model–experiment lineage | China broader in numerics/inverse/modeling | **FOUNDATIONAL RESERVE** |
-| Diagnostics / reliability methods | Kutateladze / MPEI / TPU / TsAGI | long experimental lineages, mechanism diagnosis | China also strong; partner-specific value only | **CROSS-CUTTING ENABLER** |
+| Diagnostics / reliability methods | Kutateladze / MPEI / TPU / **SPbPU gradient heatmetry** / TsAGI | long experimental lineages; optical diagnostics; direct local/transient heat-flux sensing; mechanism diagnosis | China also strong; partner-specific value only | **CROSS-CUTTING ENABLER** |
 
 ---
 
@@ -272,7 +272,8 @@ Under extreme confinement and gas shear, when does a stable liquid film become:
 - thermocapillary and gas-shear coupling;
 - extreme thin slit evidence including ~12.5 μm channel/slit-scale work;
 - current model bridge with Lavrentyev;
-- experimental/talent bridge through NSU.
+- experimental/talent bridge through NSU;
+- **RU2860581C1 (2026)** — current Kutateladze/Kabov electronics-cooling IP with staged gas / droplet / gas-sheared liquid-film modes under variable heat load.
 
 ### Strong China comparator
 - NCEPU high-heat-flux thin-film boiling;
@@ -294,7 +295,9 @@ Use a gas-driven / hybrid thin-film route only if:
 - system volume beats passive alternatives.
 
 ### State
-**HIGH-RISK MECHANISM RESERVE.**
+**HIGH-RISK MECHANISM/IP RESERVE.**
+
+Current IP/activity confidence is stronger after direct review of RU2860581C1, but phone-transfer readiness remains LOW because active gas/liquid supply, millimeter-scale local expansion and system overhead remain unresolved.
 
 ### Promotion gate
 Blind prediction of instability / rupture boundary plus a system-level power-volume comparison versus passive UTVC.
@@ -525,3 +528,22 @@ Still unresolved before final leadership recommendation:
 
 Therefore this map is:
 **leadership-ready for strategic framing, not yet final investment authorization.**
+
+
+# 14. Completeness-audit freeze note
+
+Focused audit:
+[Russia Thermal Capability Map Completeness Audit](../03_russia-institutions/capability_map_completeness_audit_v01.md)
+
+Result:
+- no omitted fourth strategic Russia core was found;
+- all promoted strategic nodes have current 2023–2026 activity evidence;
+- JIHT RAS is added as a supporting MPEI-adjacent microchannel/boiling node;
+- SPbPU is added as a supporting gradient-heatmetry / two-phase immersion diagnostics node;
+- RU2860581C1 strengthens Kabov current activity/IP evidence;
+- MSU, MIPT, Skoltech, MISIS, ITMO, MAI, Samara, Bauman and Kazan-region candidates do not currently justify strategic-core promotion under the mobile/chip + China-comparator gate.
+
+Current map state:
+**FREEZE CANDIDATE for leadership visual production.**
+
+Reopen institution coverage only for a specific new primary source or partner-returned evidence.
