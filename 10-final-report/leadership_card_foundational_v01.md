@@ -6,6 +6,16 @@ Decision state: **FOUNDATIONAL RESERVE — blind-benchmark candidate, not device
 
 Evidence maturity: **STRUCTURAL_SIGNAL / SYSTEM_VALUE methodology evidence**
 
+## Confidence badges
+
+- **Evidence:** MEDIUM-HIGH
+- **Phone Transfer:** LOW-MEDIUM
+- **Partner Readiness:** MEDIUM
+- **IP Clarity:** LOW-MEDIUM
+
+Interpretation: the analytical-method lineage is credible; present network ownership and phone-specific engineering value remain to be proven.
+
+
 ---
 
 # 1. Product problem
