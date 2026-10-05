@@ -15,7 +15,7 @@ Canonical navigation index for decision-grade paper 10Q cards.
 - New cards should start from [_TEMPLATE.md](_TEMPLATE.md).
 - Source metadata remains centralized in [source_register.md](../../sources/README.md); these files are the deep-reading / decision layer.
 
-Current migrated card count: **39**.
+Current migrated card count: **40**.
 
 ## A. Pavlenko / Kutateladze
 
@@ -38,6 +38,7 @@ Current migrated card count: **39**.
 - [C2 — Wettability-contrast mechanism with flow diagnostics](c2_wettability_contrast_mechanism_with_flow_diagnostics.md)
 - [C3 — Laser + hydrocarbon-thermolysis hydrophobization](c3_laser_hydrocarbon_thermolysis_hydrophobization.md)
 - [C4 — Laser-modified heat-transfer surface: 60-day field validation](c4_laser_surface_60_day_field_validation.md)
+- [C5 — Copper pool boiling on TPU laser-textured surfaces](c5_copper_pool_boiling_laser_textured_surfaces.md)
 
 ## D. China / global strong UTVC benchmarks
 
