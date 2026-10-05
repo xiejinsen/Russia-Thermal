@@ -4,6 +4,8 @@
 
 This archive was created on 2026-10-05 when the former monolithic progress log was modularized.
 
+- [00 — Core Evidence Deepening Round 3 — Public-to-Partner Boundary Closure — 2026-10-05](00_2026_10_05_core_evidence_deepening_round_3_public_to_partner_boundary_closure.md)
+
 - [01 — Overall status](01_overall_status.md)
 - [02 — Core Evidence Deepening Round 2 — Institution-Level Execution Audit — 2026-10-05](02_core_evidence_deepening_round_2_institution_level_execution_audit_2026.md)
 - [03 — Core Evidence Deepening Round 1 — 2026-10-05](03_core_evidence_deepening_round_1_2026_10_05.md)

@@ -4,10 +4,10 @@ Last updated: **2026-10-05**
 
 ## Overall status
 
-- **Estimated research completion:** ~82%
-- **Estimated remaining research:** ~18%
-- **Current phase:** Core Evidence Deepening
-- **Immediate stage:** **Round 3 — Public-to-Partner Boundary Closure**
+- **Estimated research completion:** ~85%
+- **Estimated remaining research:** ~15%
+- **Current phase:** Core Evidence Deepening → Stage-0 Evidence Lock
+- **Immediate stage:** **Round 4 — Partner Request Pack Freeze + Industry-Translation / Stage-0 Evidence Lock**
 
 This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
 
@@ -26,11 +26,13 @@ Canonical rule:
    - Lab 1.3 / Pavlenko-led line
    - dielectric irreversible-dryout / boiling-crisis diagnostics
    - **GO WITH PREREQUISITE**
+   - collaboration-readiness confidence reinforced by official Huawei cooperation precedent.
 
 2. **Moscow Power Engineering Institute (MPEI)**
-   - Ivanov / Kuzma-Kichta line
-   - actual multi-year engineered-surface aging evidence
+   - Ivanov / Kuzma-Kichta / Alyautdinova long-life hierarchy line
+   - actual multi-year engineered-surface aging + current Newfrost physical-model chain
    - **GO WITH PREREQUISITE**
+   - separate current Kuzma-Kichta modular SiC microchannel line is an institution-level execution signal, not yet a separate Stage-0 bet.
 
 3. **Tomsk Polytechnic University (TPU)**
    - Feoktistov / Orlova line
@@ -40,6 +42,7 @@ Canonical rule:
 4. **Kutateladze Institute — Lab 6.6**
    - Kabov–Chinnov scientific lineage; current acting head Kochkin
    - shear-driven microfilm / dry-spot / instability
+   - post-2017 micron-gap execution evidence is now public
    - **HIGH-RISK MECHANISM / IP RESERVE**
 
 5. **MPEI ordered-wick line**
@@ -48,49 +51,38 @@ Canonical rule:
 
 ## Last closed research round
 
-**Core Evidence Deepening Round 2 — Institution-Level Execution Audit**
+**Core Evidence Deepening Round 3 — Public-to-Partner Boundary Closure**
 
 Closed:
-- current Kutateladze Lab 1.3 / Lab 6.6 structure;
-- current Pavlenko / Kochkin / Kabov / Chinnov role routing;
-- current MPEI Ivanov / Kuzma-Kichta activity;
-- MPEI–Newfrost repeated external-engineering chain;
-- institution-level vs team-owned equipment boundary.
+- Lab 1.3 official Huawei collaboration precedent and current diagnostic lineage;
+- public diagnostic-resolution lineage versus still-partner-only current dielectric-stand details;
+- Lab 6.6 post-2017 miniaturization blocker at experimental-platform level;
+- current Lab 6.6 system-overhead gap routed to partner/experiment;
+- Newfrost current physical-model evidence;
+- MPEI current Kuzma-Kichta modular SiC microchannel line separated from Ivanov long-life thermosyphon line;
+- TPU open-ended public search exited.
 
-Detailed archive:
-[Round 2 record](history/progress/02_core_evidence_deepening_round_2_institution_level_execution_audit_2026.md)
+Detailed authority:
+[Round 3 memo](08_opportunities-transfer/core_evidence_deepening_round3_v01.md)
+
+Historical record:
+[Round 3 progress record](history/progress/00_2026_10_05_core_evidence_deepening_round_3_public_to_partner_boundary_closure.md)
 
 ## Next minimum task
 
-**Core Evidence Deepening Round 3 — Public-to-Partner Boundary Closure**
+**Round 4 — Partner Request Pack Freeze + Industry-Translation / Stage-0 Evidence Lock**
 
-Stop broad discovery. Close only public unknowns that directly affect partner requests:
-
-### Kutateladze Lab 1.3
-- exact new spray/jet stand geometry;
-- diagnostic resolution;
-- smallest reproducible current sample.
-
-### Kutateladze Lab 6.6
-- post-2017 low-flow / miniaturization evidence;
-- current project ownership;
-- pump-power / pressure-drop / acoustic evidence if public.
-
-### MPEI
-- exact Newfrost implementation/output evidence;
-- current controlled-wettability project technical content;
-- team-level equipment access where public.
-
-After this:
-- mark remaining unknowns **PARTNER-ONLY** or **EXPERIMENT-ONLY**;
-- freeze first institution-specific Partner Request Packs;
-- continue translation/industry evidence and strongest-China pressure tests.
+1. freeze Pavlenko, MPEI and TPU request packets against the Round-3 public boundary;
+2. add a reduced Lab 6.6 reserve feasibility request focused on total system overhead;
+3. normalize remaining industry/translation evidence;
+4. freeze the exact Stage-0 experiment + foreground-IP evidence required before any Stage-1 sealed VC;
+5. do not resume broad public discovery unless a specific primary-source lead appears.
 
 ## Current research-governance priority
 
 Final visual/PPT work remains paused.
 
-The project should accumulate stronger decision-grade evidence before final leadership material production.
+Research should converge the remaining partner/experiment evidence before final leadership material production.
 
 Canonical plan:
 [Research Deepening Before Leadership Materials](00_scope/research_deepening_before_leadership_v01.md)
