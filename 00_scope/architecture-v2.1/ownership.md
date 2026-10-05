@@ -86,3 +86,56 @@ Strategic transition:
 affected Claim/Capability + DIRECTION + DECISION_EVENT + transaction.
 
 Indexes, portfolio, country views, management table and restart snapshot are generated.
+
+
+## Boundary enforcement
+
+### Claim -> Capability
+Capability may summarize the conclusion in one sentence, but the evidence proposition itself remains owned by Claim.
+
+Forbidden:
+- copying long paper/result summaries into Capability;
+- maintaining separate confidence for the same proposition in both Claim and Capability.
+
+### Capability -> Direction
+Direction may reference candidate_capabilities but owns only:
+- project opportunity;
+- comparative residual;
+- strategic lane;
+- phone-transfer interpretation;
+- gates.
+
+Forbidden:
+- using Direction as a second partner dossier.
+
+## Actor hierarchy
+
+Canonical parent relation is owned by the child Actor through:
+`parent_actor_id`.
+
+Secondary affiliations are non-hierarchical references.
+
+Generated views may show:
+Organization -> Lab/Team -> Person.
+
+They must not infer that every Person capability equals the Organization's full capability.
+
+## Country aggregation safeguard
+
+Generated country views may aggregate counts or rows, but must not infer:
+"country A leads country B"
+from a single Capability or Actor.
+
+Country-level wording requires an explicit Direction/Claim whose scope states the comparison basis.
+
+## Minimal generated set
+
+Only these are mandatory at V2.1 start:
+1. evidence index;
+2. actor/capability index;
+3. Direction portfolio;
+4. kill ledger;
+5. restart snapshot;
+6. Phase-1 management table.
+
+Additional generated views require a demonstrated user need.
