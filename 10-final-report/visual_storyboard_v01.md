@@ -159,6 +159,20 @@ Label this:
 rather than:
 **integrated consortium**.
 
+### Current first-draft artifact
+
+The first management synthesis now exists:
+[Management Capability System Map](management_capability_map_v01.md)
+
+It already contains:
+- full Russia capability panorama;
+- 3 + 1 strategic core;
+- Siberian modular-network overlay;
+- China strong-baseline overlay;
+- Stage-0 / Reserve / Watch / Kill states.
+
+The final visual should preserve this logic while simplifying text density.
+
 ### Avoid
 Do not imply university rank = technology rank.
 
