@@ -155,3 +155,29 @@ Strategic statements such as:
 belong to DIRECTION / ROADMAP or a derived collaboration view.
 
 This prevents identity objects from becoming hidden strategy objects.
+
+
+## Institution-first, people-preserving presentation rule
+
+Research value rule:
+- ORGANIZATION/LAB/TEAM and key PERSON objects are both first-class research entities.
+- A key researcher must not be reduced to a note under an institution when their personal lineage, publications, patents, leadership, or outreach value matters.
+
+Presentation / navigation rule:
+- human-facing views default to:
+  Institution -> Lab/Team -> Key People -> Capability / Evidence / Collaboration Role.
+- do not present a Person and an Organization as sibling categories in the same management hierarchy unless the view explicitly compares entity types.
+
+Person object may own:
+- canonical identity;
+- current affiliation/role;
+- verified profile/CV facts;
+- research lineage;
+- representative works through generated references;
+- public contact/workflow facts.
+
+Person object must not own:
+- institutional capability as a whole;
+- strategic investment priority.
+
+Institution/Lab capability views should explicitly surface the key people who materially support that capability.
