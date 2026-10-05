@@ -719,3 +719,24 @@ Judgment:
 
 Still not final:
 partner willingness, physical Stage-0 evidence, IP negotiation and sealed-device transfer remain open.
+
+### Evidence-to-presentation freeze QA — 2026-10-05
+
+Control files:
+- [Leadership Claim Traceability Matrix](../10-final-report/leadership_claim_traceability_matrix_v01.md)
+- [Leadership Confidence Matrix](../10-final-report/leadership_confidence_matrix_v01.md)
+- [Leadership Presentation Freeze Specification](../10-final-report/leadership_presentation_freeze_spec_v01.md)
+
+Verified:
+- all four core cards expose Evidence / Phone / Partner / IP confidence separately;
+- every card retains a strong China comparator;
+- every card has a Kill gate and explicit leadership ask;
+- numerical PoC thresholds are labeled internal targets;
+- MEDIUM-confidence strategic claims are rendered as hypotheses, not facts;
+- “no matched public analogue recovered” is not converted into “China has none”;
+- management hierarchy retains TPU as Challenger rather than false fifth core.
+
+Judgment:
+**PASS — evidence-to-presentation traceability is frozen enough for leadership visual production.**
+
+Investment recommendation remains unfrozen pending partner/physical evidence.
