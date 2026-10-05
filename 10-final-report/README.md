@@ -2,20 +2,22 @@
 
 Last reviewed: 2026-10-05
 
-Status: **LEADERSHIP CHECKPOINT RETAINED — FINAL PRESENTATION PRODUCTION PAUSED PENDING MORE RESEARCH**
+Status: **LEADERSHIP CHECKPOINT RETAINED — FINAL PRESENTATION PRODUCTION PAUSED**
 
 ## Current project-priority note
 
-The user has explicitly chosen to **deepen the research before producing the final leadership materials**.
+The current project is in **internal architecture / pre-execution design closure** under a no-outreach / no-experiment constraint.
 
 Therefore:
-- current decision package/cards remain valid as a checkpoint;
+- current decision package/cards remain a checkpoint, not live research authority;
 - visual/PPT production is paused;
-- new public/partner/experiment evidence may still change confidence, partner priority, PoC or IP conclusions;
-- the research-priority plan is:
-  [Research Deepening Before Leadership Materials](../00_scope/research_deepening_before_leadership_v01.md).
+- public desk research is highly mature, while partner/experiment validation remains deferred;
+- current research authority is [PROGRESS.md](../PROGRESS.md);
+- current architecture is [Round 8 Internal Phone Thermal Architecture](../08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md);
+- current roadmap is [Round 8 Internal 3-Year Roadmap](../09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md);
+- the earlier [Research Deepening Before Leadership Materials](../00_scope/research_deepening_before_leadership_v01.md) file is a superseded planning checkpoint.
 
-This folder should not be visually polished further until the next research-deepening gate is passed.
+Do not visually polish this folder until the current internal-research gate or external-validation state materially changes.
 
 ## Role
 
