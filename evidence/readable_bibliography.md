@@ -291,7 +291,7 @@ Historical/foundational sources remain in the central source register but are no
 
 # M. Capability-map completeness audit additions
 
-- **[Boiling of Various Liquids in a Microchannel](https://doi.org/10.1007/s10891-023-02772-9)** — Yu.A. Kuzma-Kichta, S.A. Kovalev, A. Kiselev — *Journal of Engineering Physics and Thermophysics*, 2023.  
+- **[Boiling of Various Liquids in a Microchannel](https://doi.org/10.1007/s10891-023-02854-2)** — Yu.A. Kuzma-Kichta, S.A. Kovalev, A. Kiselev — *Journal of Engineering Physics and Thermophysics*, 2023.  
   MPEI–Joint Institute for High Temperatures current microchannel-boiling collaboration.
 
 - **[Investigation of heat transfer in cooling systems for advanced power electronics using gradient heatmetry](https://elib.spbstu.ru/dl/2/r26-56.pdf/en/info)** — P.G. Bobylev — Peter the Great St. Petersburg Polytechnic University — dissertation, 2026.  
