@@ -251,3 +251,32 @@ A cheap answer to:
 # Management sentence
 
 > **Kabov is scientifically strong and currently IP-active, but this is our highest-risk route because the challenge is no longer heat transfer — it is whether the complete gas/liquid system can ever beat a much simpler phone architecture.**
+
+
+## Prototype-history update — 2026-10-05
+
+A 2017 experimental-industrial prototype materially strengthens the execution record.
+
+Reported prototype conditions:
+- closed gas + liquid loops;
+- slot channel ~1.0 mm high, ~11 mm wide;
+- adjustable channel height ~0.1–2.0 mm;
+- local heater 10×10 mm;
+- distilled water + purified air in the maximum-load test;
+- liquid flow ~100–120 ml/min;
+- gas flow ~45–50 l/min;
+- reported heat flux up to ~1000 W/cm²;
+- maximum-load continuous operation ~50 min;
+- local heater temperature <=~140°C;
+- no stationary dry spots visually observed in that maximum-load test.
+
+Interpretation:
+Kabov has real prototype/system history in electronics cooling, not only film-physics papers.
+
+However, the same data reinforce the phone-transfer problem:
+historical gas/liquid flow and loop hardware are orders of magnitude too large for a smartphone.
+
+Therefore:
+- execution confidence: UP;
+- system-miniaturization challenge: clearer;
+- strategic rank: unchanged High-risk Mechanism/IP Reserve.
