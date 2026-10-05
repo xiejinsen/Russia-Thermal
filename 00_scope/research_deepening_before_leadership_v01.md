@@ -1,8 +1,23 @@
 # Research Deepening Before Leadership Materials v0.1
 
+## Authority update — 2026-10-05
+
+**Status: SUPERSEDED PLANNING CHECKPOINT — NOT CURRENT PROJECT STATUS**
+
+This file documents the earlier research-deepening plan when the project was around 78% complete.
+
+Current authority is now:
+- [PROGRESS.md](../PROGRESS.md) — current phase / progress / next task;
+- [Round 8 Internal Phone Thermal Architecture](../08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md);
+- [Round 8 Internal 3-Year Roadmap](../09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md);
+- [Current Execution Constraints](current_execution_constraints_2026_10_05.md).
+
+Do **not** use the percentages, immediate-next-task text or outreach/experiment assumptions below as current state.
+The body is retained as provenance for how the project evolved.
+
 Last updated: 2026-10-05
 
-Status: **CURRENT research-priority plan**
+Status: **HISTORICAL / SUPERSEDED research-priority plan**
 
 ## 1. Decision
 
