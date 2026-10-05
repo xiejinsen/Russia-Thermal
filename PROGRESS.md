@@ -7,10 +7,10 @@ Last updated: **2026-10-05**
 - **Overall research + validation completion:** ~94%
 - **Public desk-research completion:** ~98%
 - **Estimated remaining overall program:** ~6%
-- **Current phase:** Pre-Execution Design Closure
-- **Immediate stage:** **Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis (No Outreach / No Experiment)**
+- **Current phase:** Internal Architecture / Pre-Execution Design Closure
+- **Immediate stage:** **Round 9 — Dryout-Margin / Thermal-Health Observability Study (No Outreach / No Experiment)**
 
-This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
+This file is the single authoritative **current-state** page.
 
 ## Current execution constraint
 
@@ -21,115 +21,112 @@ At present:
 Authority:
 [Current Execution Constraints](00_scope/current_execution_constraints_2026_10_05.md)
 
-Therefore current work may improve analytical/design readiness but must not be reported as partner or experimental validation.
+Therefore analytical/design work may advance readiness but does not count as partner or experimental validation.
 
 ## Current Stage-0 order
 
-1. **Kutateladze Institute of Thermophysics SB RAS**
-   - Lab 1.3 / Pavlenko-led line
+1. **Kutateladze Institute of Thermophysics SB RAS — Lab 1.3 / Pavlenko**
    - irreversible-dryout / boiling-crisis diagnostics
    - **GO WITH PREREQUISITE**
    - future execution deferred.
 
-2. **Moscow Power Engineering Institute (MPEI)**
-   - Ivanov / Kuzma-Kichta / Alyautdinova long-life hierarchy line
-   - engineered-surface aging + Newfrost external physical-engineering chain
+2. **Moscow Power Engineering Institute — Ivanov / Kuzma-Kichta / Alyautdinova**
+   - engineered-surface aging / capillary-state reliability
    - **GO WITH PREREQUISITE**
    - future execution deferred.
 
-3. **Tomsk Polytechnic University (TPU)**
-   - Feoktistov / Orlova line
-   - laser / wettability-contrast process challenger
+3. **Tomsk Polytechnic University — Feoktistov / Orlova**
+   - laser / wettability process challenger
    - **GO WITH PREREQUISITE**
-   - public copper-material bridge closed; thin sealed-process transfer remains open.
+   - future execution deferred.
 
-4. **Kutateladze Institute — Lab 6.6**
-   - Kabov–Chinnov scientific lineage; current acting head Kochkin
+4. **Kutateladze Institute — Lab 6.6 / Kochkin / Kabov / Chinnov**
    - shear-driven microfilm / dry-spot / instability
    - **HIGH-RISK MECHANISM / IP RESERVE**
 
 5. **MPEI ordered-wick line**
    - **HOLD / PRE-DEVICE**
 
-## Last closed research round
+## Last closed round
 
-**Round 7 — Quantitative Transfer Feasibility Envelope**
+**Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis**
 
-Closed analytically:
-- common phone / UTVC geometry anchor;
-- vapor-space guard bands;
-- mesh / porous miniaturization sensitivity;
-- groove hydraulic scale sensitivity;
-- gas-drive parasitic-power lower-bound sensitivity;
-- Pavlenko / MPEI / TPU / Lab 6.6 quantitative transfer envelopes;
-- future GREEN / AMBER / RED restart thresholds;
-- internal no-outreach / no-experiment decision tree.
+Closed:
+- phone-stack mapping of Russian capability;
+- internal vs external strategic control points;
+- modular collaboration model;
+- Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture hypothesis;
+- gate-based 0–12 / 12–24 / 24–36 month roadmap;
+- separate calendar and validation clocks;
+- scenario branches for continued access constraints;
+- legacy roadmap authority correction.
 
-Authorities:
-- [Round 7 Quantitative Transfer Feasibility Envelope](08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
-- [Round 7 Minimum-Win & Restart Thresholds](09_collaboration-roadmap/pre_execution_minimum_win_thresholds_round7_v01.md)
-- [Round 7 Internal Decision Tree](09_collaboration-roadmap/pre_execution_internal_decision_tree_round7_v01.md)
+Current architecture authority:
+[Round 8 Internal Phone Thermal Architecture](08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
+
+Current roadmap authority:
+[Round 8 Internal 3-Year Technology Roadmap](09_collaboration-roadmap/internal_3year_roadmap_round8_v01.md)
 
 Historical record:
-[Round 7 progress record](history/progress/00e_2026_10_05_round7_quantitative_transfer_feasibility.md)
+[Round 8 progress record](history/progress/00f_2026_10_05_round8_internal_architecture_3year_roadmap.md)
 
-## Round-7 key technical conclusions
+## Current strategic architecture
 
-### Pavlenko
-- published 220 μm wire is RED as a direct phone-UTVC geometry;
-- 60–100 μm remains the transfer envelope;
-- ~80–100 μm is analytically lower transport-risk;
-- ~60 μm is the aggressive branch and needs permeability/open-area compensation.
+Primary theme:
 
-### MPEI
-- 5–15 μm coating thickness itself is not the main vertical bottleneck;
-- groove depth / shell integration is the key unknown;
-- uniform half-scale miniaturization is analytically unattractive;
-- prefer non-homothetic hierarchy: preserve hydraulic return path, use fine capillary structure for pressure.
+> **Failure-Aware / Health-Aware Ultra-Thin Two-Phase Thermal Architecture**
 
-### TPU
-- low-relief laser-only copper has the easiest analytical geometry transfer;
-- public copper + laser + water-boiling bridge is already closed;
-- sealed-process chemistry/state retention remains the key blocker.
+Interpretation:
+- strong phone-scale package / UTVC / frame platform remains internally controlled;
+- Russian capability is inserted only where differentiated:
+  - Pavlenko → irreversible-dryout boundary / diagnostics;
+  - MPEI → aging / capillary-health state;
+  - TPU → surface-process challenger;
+  - Lab 6.6 → radical active-flow reserve;
+  - Siberian theory/model network → optional failure-boundary interpretation.
 
-### Lab 6.6
-- public 3–7 mm local expansion is RED for a simple additive internal-phone interpretation;
-- gas-drive lower-bound power scales approximately with v³;
-- gas velocity + full pressure drop dominate future feasibility.
+## Current control points
 
-## Current execution state
+### C1 — Dryout margin
+Distance to irreversible dryout under current geometry / surface / fluid / load state.
 
-### Public research
+### C2 — Thermal health state
+Capillary / wetting / process degradation before gross Rth failure.
 
-Broad public discovery remains closed.
+### C3 — Process-retained surface function
+Whether the designed surface state survives product manufacturing and life.
 
-Use targeted lookup only for a specific trigger.
+### C4 — Active-flow frontier
+Only a reserve if fixed power / volume / acoustic budget is credible.
 
-### External dependencies
+## Current roadmap state
+
+- **G1 Architecture readiness:** ADVANCED / near closure.
+- **G2 Stage-0 selection:** DEFERRED.
+- **G3 sealed-device transfer:** NOT STARTED.
+- **G4 repeatable product capability:** NOT STARTED.
+
+No route is Stage-1 ready.
+
+## External dependencies
 
 [External Dependency Ledger](09_collaboration-roadmap/dependencies/README.md)
 
 PARTNER and EXPERIMENT items remain deferred, not closed.
 
-### Validation state
-
-No route is Stage-1 ready.
-
-No partner or experimental evidence was added in Round 7.
-
 ## Why progress percentages did not change
 
-Round 7 materially improved:
-- design-space clarity;
-- future data triage;
-- scaling-risk understanding;
-- execution restart logic.
+Round 8 materially improved:
+- architecture clarity;
+- strategic control-point definition;
+- collaboration modularity;
+- 3-year gate structure.
 
 It did **not** close:
 - partner data;
-- sealed-process survival;
 - physical performance;
-- FTO;
+- sealed-process survival;
+- legal/FTO;
 - product validation.
 
 Therefore:
@@ -138,20 +135,22 @@ Therefore:
 
 ## Next minimum task
 
-**Round 8 — Internal Technology Architecture & 3-Year Roadmap Synthesis (No Outreach / No Experiment)**
+**Round 9 — Dryout-Margin / Thermal-Health Observability Study**
 
-Goal:
-convert the surviving mechanisms and Round-7 transfer envelopes into an internal architecture/roadmap view:
+Research question:
 
-1. map each mechanism into the phone thermal stack:
-   package → interface → wick/VC → frame/skin → optional active layer;
-2. separate what can be done internally from what genuinely needs Russian partner capability;
-3. define 0–12 / 12–24 / 24–36 month technical branches;
-4. identify which Russian capability is a mechanism source, diagnostic source, reliability source or manufacturing/process source;
-5. generate narrow internal technical hypotheses without pretending they are experimentally validated;
-6. preserve exact restart triggers for later partner/experiment access.
+> Can a phone-relevant thermal system infer the approach to irreversible dryout or surface-health degradation from practical observables strongly enough to make "remaining thermal margin" a useful architecture/control variable?
 
-Final visual/PPT work remains paused.
+Target areas:
+1. vapor-chamber / heat-pipe dryout detection and precursor signatures;
+2. transient thermal impedance / temperature-response observability;
+3. capillary / wetting degradation indicators;
+4. fault-detection / thermal-health estimation methods;
+5. what can be sensed in a phone without exotic lab imaging;
+6. whether Russian diagnostic depth can be converted into a reduced set of product observables;
+7. Keep / Kill test for the central Failure-Aware / Health-Aware architecture hypothesis.
+
+Round 9 remains compatible with the no-outreach/no-experiment constraint.
 
 ## History
 
