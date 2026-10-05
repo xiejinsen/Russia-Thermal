@@ -2,7 +2,20 @@
 
 Last reviewed: 2026-10-05
 
-Status: **LEADERSHIP DECISION SYNTHESIS ACTIVE — NOT FINAL INVESTMENT AUTHORIZATION**
+Status: **LEADERSHIP CHECKPOINT RETAINED — FINAL PRESENTATION PRODUCTION PAUSED PENDING MORE RESEARCH**
+
+## Current project-priority note
+
+The user has explicitly chosen to **deepen the research before producing the final leadership materials**.
+
+Therefore:
+- current decision package/cards remain valid as a checkpoint;
+- visual/PPT production is paused;
+- new public/partner/experiment evidence may still change confidence, partner priority, PoC or IP conclusions;
+- the research-priority plan is:
+  [Research Deepening Before Leadership Materials](../00_scope/research_deepening_before_leadership_v01.md).
+
+This folder should not be visually polished further until the next research-deepening gate is passed.
 
 ## Role
 
