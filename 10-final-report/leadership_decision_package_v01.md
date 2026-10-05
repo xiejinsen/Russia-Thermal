@@ -110,12 +110,12 @@ The purpose is to prevent strong scientific evidence from being misread as stron
 
 # 3. The 3 + 1 leadership portfolio
 
-| Layer | Partner / capability | Failure question | Residual Russia value | Phone readiness | Current decision |
+| Layer | Institution | Team / PI | Failure question | Residual Russia value | Phone readiness | Current decision |
 |---|---|---|---|---|---|
-| **#1** | **Kutateladze / Pavlenko** | When does local dryout become irreversible? | dielectric reversible→irreversible crisis diagnostics | PARTIAL | **Candidate Primary Bet / Stage-0 #1** |
-| **#2** | **MPEI / Ivanov** | Can surface/capillary aging predict later dryout-margin loss? | actual 42-month engineered-surface aging evidence | PARTIAL | **Strategic Reserve / Stage-0 #2** |
-| **Reserve** | **Kutateladze / Kabov–Chinnov** | When does a gas-sheared film become unstable and rupture? | shear-film failure-boundary physics + current electronics IP | LOW | **High-risk Mechanism/IP Reserve** |
-| **Foundational** | **ICM/Altai + Lavrentyev + Kutateladze/NSU** | Can theory locate the boundary before experiments? | exact/stability analytical interpretability | LOW–PARTIAL | **Foundational Reserve** |
+| **#1** | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | When does local dryout become irreversible? | dielectric reversible→irreversible crisis diagnostics | PARTIAL | **Candidate Primary Bet / Stage-0 #1** |
+| **#2** | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | Can surface/capillary aging predict later dryout-margin loss? | actual 42-month engineered-surface aging evidence | PARTIAL | **Strategic Reserve / Stage-0 #2** |
+| **Reserve** | **Kutateladze Institute of Thermophysics SB RAS** | Kabov / Kochkin / Chinnov | When does a gas-sheared film become unstable and rupture? | shear-film failure-boundary physics + current electronics IP | LOW | **High-risk Mechanism/IP Reserve** |
+| **Foundational** | **Modular network: ICM SB RAS + Lavrentyev Institute + Kutateladze Institute + NSU** | respective analytical/model/experiment teams | Can theory locate the boundary before experiments? | exact/stability analytical interpretability | LOW–PARTIAL | **Foundational Reserve** |
 
 Decision cards:
 - [Pavlenko / Kutateladze](leadership_card_pavlenko_v01.md)
@@ -348,19 +348,19 @@ This table is a decision normalization, not a universal scientific ranking.
 
 ### A. Three bounded Stage-0 surface/coupon interactions
 
-1. **Pavlenko / Kutateladze**
+1. **Kutateladze Institute — Pavlenko team**
    - highest priority;
    - thin-wick irreversible-dryout transfer.
 
-2. **MPEI / Ivanov**
+2. **MPEI — Ivanov/Kuzma-Kichta team**
    - geometry scale-down + aging-health indicator.
 
-3. **TPU / Feoktistov**
+3. **TPU — Feoktistov/Orlova team**
    - low-outgassing process challenger.
 
 ### B. One reduced high-risk feasibility track
 
-**Kabov / Chinnov**
+**Kutateladze Institute — Kabov/Chinnov team**
 - model + reduced cell;
 - full-loop power/volume/noise accounted.
 
