@@ -7,6 +7,9 @@ Status: **CURRENT INTERNAL ROADMAP — GATE-BASED / NO OUTREACH / NO EXPERIMENT 
 Architecture authority:
 [Internal Phone Thermal Architecture Synthesis](../08_opportunities-transfer/internal_phone_thermal_architecture_round8_v01.md)
 
+Observability refinement authority:
+[Round 9 Dryout / Thermal-Health Observability](../08_opportunities-transfer/dryout_thermal_health_observability_round9_v01.md)
+
 Quantitative authority:
 - [Round 7 Transfer Feasibility Envelope](../08_opportunities-transfer/quantitative_transfer_feasibility_envelope_round7_v01.md)
 - [Round 7 Minimum-Win Thresholds](pre_execution_minimum_win_thresholds_round7_v01.md)
@@ -35,15 +38,15 @@ Primary technical theme:
 Product-platform objective:
 - retain internal ownership of package / UTVC / frame / control integration;
 - use Russian capability only where it contributes differentiated failure, aging, process or instability knowledge;
-- convert thermal design from nominal performance optimization toward **remaining failure-margin management**.
+- convert thermal design from nominal performance optimization toward **estimated failure-risk / health management**, while keeping conventional temperature limits as the safety fallback.
 
 ### Three strategic control points
 
-**C1 — Dryout margin**
-How far is the current operating state from irreversible dryout?
+**C1 — Estimated dryout-risk state**
+Can practical telemetry + a calibrated model estimate dryout risk / time-to-dryout with useful confidence?
 
-**C2 — Health state**
-How much capillary / wetting / process margin has been lost over life?
+**C2 — Estimated thermal-health state**
+Can dynamic thermal response reveal capillary / wetting / process degradation before gross Rth failure?
 
 **C3 — Process-retained function**
 Does the functional surface state survive actual product manufacturing and aging?
@@ -64,7 +67,7 @@ Internal/product ownership:
 - UTVC base;
 - product fluid;
 - package/frame integration;
-- dryout-margin estimator / control integration.
+- dryout-risk / time-to-dryout estimator and confidence-aware control integration.
 
 Success concept:
 measureably increase irreversible-dryout margin or recovery at phone geometry without consuming vapor/transport margin.
@@ -78,7 +81,7 @@ Internal/product ownership:
 - reliability state model;
 - product telemetry / test metric;
 - accelerated-life correlation;
-- final remaining-life / dryout-margin estimator.
+- final thermal-health / future-dryout-risk estimator.
 
 Success concept:
 a surface/capillary health metric provides earlier warning of future dryout-margin loss than nominal Rth alone.
@@ -135,7 +138,7 @@ Define model variables without claiming calibrated accuracy:
 
 Target output:
 an interpretable state vector:
-**{thermal load, transport state, surface health, estimated dryout margin}**.
+**{thermal load, transport state, estimated surface health, estimated dryout risk, estimator confidence}**.
 
 Deliverable:
 model specification + input/output contract.
