@@ -1,8 +1,8 @@
-# Leadership Decision Card — Pavlenko / Kutateladze v0.1
+# Leadership Decision Card — Kutateladze Institute / Pavlenko Team v0.1
 
 Last updated: 2026-10-05
 
-Decision state: **CANDIDATE PRIMARY BET / Stage-0 Priority #1 — GO WITH PREREQUISITE**
+Decision state: **Kutateladze Institute — Pavlenko team / CANDIDATE PRIMARY BET / Stage-0 Priority #1 — GO WITH PREREQUISITE**
 
 Evidence maturity: **SYSTEM_VALUE mechanism evidence / phone transfer PARTIAL**
 
@@ -35,9 +35,13 @@ This matters under:
 
 ---
 
-# 2. Why Russia / why this team
+# 2. Institution / team / why Russia
 
-Kutateladze / Pavlenko–Surtaev–Shvetsov–Zhukov has an unusually coherent current line around:
+**Institution:** Kutateladze Institute of Thermophysics SB RAS
+
+**Team:** Pavlenko / Surtaev / Shvetsov / Zhukov
+
+This team has an unusually coherent current line around:
 
 - dielectric-liquid boiling crisis;
 - reversible → irreversible dry-spot transition;
