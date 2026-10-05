@@ -30,11 +30,14 @@ Determine whether TPU can fabricate a **thin-copper, low-outgassing, process-sta
 
 The 60-day boiler field test already demonstrates that the laser-process family can survive prolonged real-equipment exposure in another domain; the first meeting should focus on mobile-process transfer, not generic durability.
 
+Public copper bridge:
+[C5 — copper pool boiling on laser-textured surfaces](../evidence/10q/papers/c5_copper_pool_boiling_laser_textured_surfaces.md) already demonstrates copper + nanosecond-laser texture + degassed-water pool boiling. Therefore copper material applicability itself is no longer a partner question.
+
 ## 3. Mandatory questions
 
 | ID | Ask | Minimum useful answer | Decision unlocked |
 |---|---|---|---|
-| T-M1 | Can the relevant laser-only texture be applied to thin copper? | yes/no + existing copper result or process change | product-path feasibility |
+| T-M1 | Can the **demonstrated copper laser route** be fabricated on phone-thickness copper within the <=150 μm total functional-height budget? | feasible thickness/feature range + required process change | thin-geometry product-path feasibility |
 | T-M2 | What feature-height/profile range is achievable on the intended copper route? | 3D range + active-area capability | vertical-budget feasibility |
 | T-M3 | What is the practical laser throughput/repeatability for ~10×10 mm functional zones? | order-of-magnitude throughput + repeatability | manufacturability |
 | T-M4 | Can the hydrocarbon/biphilic branch be made with a shareable chemistry/process boundary? | chemistry family + temperature/time/pattern range | contamination review |
@@ -43,7 +46,6 @@ The 60-day boiler field test already demonstrates that the laser-process family 
 
 ## 4. Optional questions
 
-- Any existing copper boiling data?
 - Any DI-water long-soak / wetting-drift data?
 - Ability to provide matched laser-only and biphilic coupons from the same base material?
 - Current metrology access for 3D profile / surface chemistry?
@@ -57,7 +59,7 @@ The 60-day boiler field test already demonstrates that the laser-process family 
 ## 6. Continue / stop rule
 
 **Continue if:**
-- laser-only copper path is feasible;
+- the public copper route can be transferred to phone-thickness copper within the geometry budget;
 - total functional height can fit <=150 μm;
 - matched laser-only and biphilic coupons can be fabricated;
 - process boundary is sufficient for contamination screening.
@@ -100,7 +102,7 @@ Dear Dr. Feoktistov,
 
 We are evaluating thin two-phase thermal-management concepts for mobile electronics and have been following your group's work on laser-structured and wettability-controlled heat-transfer surfaces.
 
-We are especially interested in a narrow transfer question: whether the laser process can be applied to thin copper and retain a stable liquid-routing / rewetting function after water exposure, vacuum/degassing and thermal processing used in sealed two-phase devices.
+We are especially interested in a narrow transfer question: whether the demonstrated copper laser process can be transferred to phone-thickness copper and retain a stable liquid-routing / rewetting function after water exposure, vacuum/degassing and thermal processing used in sealed two-phase devices.
 
 For the first step, we would like to compare a low-organic laser-only copper surface with a wettability-contrast variant and a strong generic control. We are not looking for proprietary chemistry details; shareable process boundaries and partner-fabricated coupons would be sufficient.
 
