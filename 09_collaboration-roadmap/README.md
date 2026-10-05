@@ -167,3 +167,9 @@ Primary packets are **OUTREACH-DRAFT READY**, not contract-ready.
 - [Round 5 Experiment / Foreground-IP Freeze](stage0_experiment_ip_freeze_round5_v01.md)
 
 Use these short packets for first contact; keep the full Stage-0 packets as technical appendices.
+
+## External dependency ledger
+
+- [External Dependency Ledger](dependencies/README.md)
+
+Partner-returned data and experiment results should update the relevant dependency module rather than reopening old research rounds.
