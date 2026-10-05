@@ -4,10 +4,10 @@ Last updated: **2026-10-05**
 
 ## Overall status
 
-- **Estimated research completion:** ~88%
-- **Estimated remaining research:** ~12%
-- **Current phase:** Stage-0 Evidence Lock → Outreach Readiness
-- **Immediate stage:** **Round 5 — Outreach-Ready Partner Pack Finalization + Experiment/IP Freeze Review**
+- **Estimated research completion:** ~91%
+- **Estimated remaining research:** ~9%
+- **Current phase:** Outreach Readiness → External-Dependency Convergence
+- **Immediate stage:** **Round 6 — Final Public-Research Convergence Audit + External-Dependency Ledger**
 
 This file is the single authoritative **current-state** page. Historical round-by-round records live in [history/progress/](history/progress/README.md).
 
@@ -26,25 +26,25 @@ Canonical rule:
    - Lab 1.3 / Pavlenko-led line
    - dielectric irreversible-dryout / boiling-crisis diagnostics
    - **GO WITH PREREQUISITE**
-   - strongest public large-company R&D precedent among current candidates.
+   - outreach-ready.
 
 2. **Moscow Power Engineering Institute (MPEI)**
    - Ivanov / Kuzma-Kichta / Alyautdinova long-life hierarchy line
-   - actual multi-year engineered-surface aging + Newfrost external physical-engineering chain
+   - multi-year engineered-surface aging + Newfrost external physical-engineering chain
    - **GO WITH PREREQUISITE**
-   - strongest public external hardware/implementation evidence among current surface candidates.
+   - outreach-ready.
 
 3. **Tomsk Polytechnic University (TPU)**
    - Feoktistov / Orlova line
    - laser / wettability-contrast process challenger
    - **GO WITH PREREQUISITE**
-   - process-translation confidence upgraded by 60-day real-boiler field validation.
+   - outreach-ready.
 
 4. **Kutateladze Institute — Lab 6.6**
    - Kabov–Chinnov scientific lineage; current acting head Kochkin
    - shear-driven microfilm / dry-spot / instability
    - **HIGH-RISK MECHANISM / IP RESERVE**
-   - decisive gate is now system power / pressure-drop / volume / acoustics.
+   - reduced system-feasibility outreach packet only.
 
 5. **MPEI ordered-wick line**
    - **HOLD / PRE-DEVICE**
@@ -52,41 +52,70 @@ Canonical rule:
 
 ## Last closed research round
 
-**Round 4 — Industry-Translation / Stage-0 Evidence Lock**
+**Round 5 — Outreach-Ready Partner Pack Finalization + Experiment/IP Freeze Review**
 
 Closed:
-- normalized company collaboration vs external fabrication vs field validation vs product evidence;
-- Pavlenko Huawei/Air Products industrial-R&D context;
-- MPEI/Newfrost contract + implementation + prototype-fabrication chain;
-- TPU 60-day operating-boiler laser-surface field validation;
-- Lab 6.6 patent-derived system-overhead constraints;
-- exact Stage-0 partner-data, experiment, foreground-IP and Kill locks for the three main candidates plus Lab 6.6 reserve.
+- current public professional contact routes;
+- concise first-contact packets for Pavlenko, MPEI and TPU;
+- reduced Lab 6.6 reserve packet;
+- mandatory vs optional partner questions;
+- data-request → decision crosswalk;
+- minimum Stage-0 experiment-arm set;
+- narrow foreground-IP boundaries;
+- trigger-based patent-search exit rule.
 
-Detailed authority:
-[Round 4 memo](08_opportunities-transfer/industry_translation_stage0_evidence_lock_round4_v01.md)
+Operational authority:
+- [Outreach-Ready Partner Packet Index](09_collaboration-roadmap/outreach_ready_packet_index_v01.md)
+- [Stage-0 Experiment / Foreground-IP Freeze](09_collaboration-roadmap/stage0_experiment_ip_freeze_round5_v01.md)
 
 Historical record:
-[Round 4 progress record](history/progress/00b_2026_10_05_round4_industry_translation_stage0_evidence_lock.md)
+[Round 5 progress record](history/progress/00c_2026_10_05_round5_outreach_readiness_experiment_ip_freeze.md)
 
-## Current translation interpretation
+## Current execution state
 
-- **Pavlenko/Lab 1.3:** strongest large-company R&D precedent; no public phone-product implementation.
-- **MPEI/Ivanov line:** strongest external physical-engineering chain; phone-scale transfer still unproven.
-- **TPU:** strongest process field-validation signal in another thermal domain; sealed-device transfer still unproven.
-- **Lab 6.6:** strong current engineering/IP continuity; no matched public external implementation chain.
+### Public research
 
-No candidate has decision-grade public **phone product / production** evidence.
+For the three primary partners:
+**broad public discovery is effectively frozen.**
+
+Do not reopen generic searches unless:
+- a partner answer creates a specific question;
+- a Stage-0 coupon produces a specific winning geometry/process;
+- a targeted IP/FTO trigger appears.
+
+### Partner readiness
+
+- Pavlenko packet: **OUTREACH READY**
+- MPEI packet: **OUTREACH READY**
+- TPU packet: **OUTREACH READY**
+- Lab 6.6: **RESERVE / SYSTEM-FEASIBILITY ONLY**
+
+### Stage-0 experiment readiness
+
+Experiment logic is frozen, but physical testing is **not executed**.
+
+No route is Stage-1 ready.
+
+## Current foreground-IP guard
+
+Do not target broad claims on:
+- modified mesh / hydrophilic coating;
+- nanoparticle + microgroove hierarchy;
+- biphilic VC / hydrophilic-hydrophobic routing;
+- gas + film + droplets electronics cooling.
+
+Only narrow, phone-constrained hypotheses remain eligible for Stage-0 validation.
 
 ## Next minimum task
 
-**Round 5 — Outreach-Ready Partner Pack Finalization + Experiment/IP Freeze Review**
+**Round 6 — Final Public-Research Convergence Audit + External-Dependency Ledger**
 
-1. convert the three primary packets into concise outreach-ready request sets;
-2. freeze mandatory vs optional questions;
-3. check that each requested datum maps to a Stage-0 experiment or IP decision;
-4. freeze the smallest experiment set that can promote or kill each route;
-5. ensure no foreground-IP thesis overlaps broad known Russian/China/OEM prior art;
-6. keep Lab 6.6 as a reduced reserve packet unless system-overhead data justify promotion.
+1. audit remaining open items across current authorities;
+2. classify every residual as PUBLIC / PARTNER / EXPERIMENT / LEGAL-FTO / INTERNAL-DECISION;
+3. verify that no decision-relevant PUBLIC blocker remains hidden;
+4. freeze what can be concluded now versus what requires external evidence;
+5. define the exact stopping point for independent desk research;
+6. prepare the repository so later partner responses / coupon data can be inserted without reopening old research rounds.
 
 ## Industry evidence governance
 
@@ -100,7 +129,7 @@ Use [Industry / Vendor Evidence](evidence/industry/README.md):
 
 Final visual/PPT work remains paused.
 
-Research should finish the outreach/experiment/IP freeze before final leadership material production.
+The next task is convergence and dependency classification, not presentation production.
 
 Canonical plan:
 [Research Deepening Before Leadership Materials](00_scope/research_deepening_before_leadership_v01.md)
