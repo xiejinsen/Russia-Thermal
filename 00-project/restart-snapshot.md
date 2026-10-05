@@ -4,8 +4,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: NON_AUTHORITATIVE_MIGRATION_TARGET
 - mode: MIGRATION_FREEZE
-- phase: Pavlenko vertical-slice pilot migrated / fidelity pass
-- next: implement deterministic minimal generator, then decide whether to proceed to MPEI slice
+- phase: MPEI vertical-slice migrated / fidelity review
+- next: run MPEI semantic-fidelity review and refresh generated views
 
 ## Directions
 - DIR-FAILURE-AWARE-UTVC: STRATEGIC_CANDIDATE / phone=LOW_MEDIUM
+- DIR-HEALTH-AWARE-UTVC: STRATEGIC_CANDIDATE / phone=LOW_MEDIUM
