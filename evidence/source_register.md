@@ -531,7 +531,7 @@ Absence rule:
 
 | ID | Source | Type | Year | Use | Status |
 |---|---|---|---:|---|---|
-| RU-COMP-001 | https://doi.org/10.1007/s10891-023-02772-9 | primary paper | 2023 | MPEI–JIHT current microchannel boiling collaboration: Kuzma-Kichta / Kovalev / Kiselev | VERIFIED-PRIMARY |
+| RU-COMP-001 | https://doi.org/10.1007/s10891-023-02854-2 | primary paper | 2023 | MPEI–JIHT current microchannel boiling collaboration: Kuzma-Kichta / Kovalev / Kiselev | VERIFIED-PRIMARY |
 | RU-COMP-002 | https://elib.spbstu.ru/dl/2/r26-56.pdf/en/info | official dissertation | 2026 | SPbPU direct gradient-heatmetry study for two-phase immersion cooling of advanced power electronics | VERIFIED-OFFICIAL |
 | RU-COMP-003 | https://science.spbstu.ru/news/sposob_upravleniya_temperaturnym_rezghimom_silovoy_elektroniki/ | official institution page | 2026 | SPbPU current passive two-phase immersion / power-electronics thermal-control IP activity | VERIFIED-OFFICIAL |
 | RU-COMP-004 | https://patents.google.com/patent/RU2860581C1/en | patent | 2026 | Kabov / Kutateladze current electronics cooling patent; gas + spray/drop + shear-driven film modes under variable heat load | VERIFIED-CLAIM |
