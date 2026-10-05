@@ -48,11 +48,17 @@ Architecture, roadmap and analytical planning alone do **not** increase physical
 
 ## Latest repository-governance change
 
-### 2026-10-05 — Post-Round-8 repository state audit
+### 2026-10-05 — Round-9 authority / semantics alignment
 
-Corrected stale authority wording, synchronized current Round-8 entry points, and froze append-only growth in the large Stage-0 scorecard.
+Synchronized the current state, architecture base, roadmap and final-report gate after the Round-9 observability study.
+
+Governance consequence:
+- Round 8 remains the architecture / 3-year-roadmap base;
+- Round 9 is the current observability refinement;
+- C1/C2 now use estimated risk/health semantics rather than implying direct physical observability;
+- evidence remains modular: source module + bibliography module + independent brief/10Q cards.
 
 QA result:
-**PASS — current repository authority / navigation is consistent.**
+**PASS — current repository authority / navigation / decision semantics are consistent.**
 
 Research completion percentages are unchanged.
