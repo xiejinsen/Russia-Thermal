@@ -54,18 +54,18 @@ The scorecard is a decision file, so the core facts used here are locally tracea
 - **[Experimental Investigation on Ultra-Thin Vapor Chamber with Composite Wick for Electronics Thermal Management](https://doi.org/10.3390/mi15050627)** — Shiwei Zhang, Hao-Yi Huang, Jingjing Bai *et al.* — *Micromachines*, 2024.
 - **[Effect of Laser Ablation Surface Modification on the Capillary Performance of the Wick Structure for Ultra-Thin Vapor Chamber](https://doi.org/10.1016/j.ijheatmasstransfer.2025.126774)** — Jiu Yu, Wenqi Fang, Guoliang Hu *et al.* — *International Journal of Heat and Mass Transfer*, 2025.
 
-### Pavlenko / Kutateladze
+### Kutateladze Institute — Pavlenko team
 - **[Electrochemical Modification of the Metal Mesh Surface for Heat Transfer Enhancement during Boiling of a Thin Layer of HFE-7100](https://doi.org/10.1134/S1810232825700183)** — A.E. Brester, D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Journal of Engineering Thermophysics*, 2025.
 - **[Effect of Layer Height on Heat Transfer during Boiling of Dielectric Liquid on Mesh Coatings](https://doi.org/10.1134/S0040601525700454)** — D.A. Shvetsov, V.I. Zhukov, A.N. Pavlenko — *Thermal Engineering*, 2025.
 - **[Heat Transfer Wall of a Heat Exchanger and Method for Forming a Coating to Intensify Heat Transfer](https://patents.google.com/patent/RU2793671C2/en)** — A.A. Nikiforov, A.N. Pavlenko, M.Yu. Kuprikov *et al.* — RU2793671C2 — Kutateladze Institute of Thermophysics SB RAS / A.A. Nikiforov — 2023.
 
-### MPEI / Ivanov
+### MPEI — Ivanov/Kuzma-Kichta team
 - **[Use of Micro- and Nanocoating in the Evaporator to Enhance Heat Transfer in a Thermosiphon](https://doi.org/10.1134/S0040601525600683)** — N.S. Ivanov, Yu.A. Kuzma-Kichta, M.M. Alyautdinova — *Thermal Engineering*, 2026.
 - **[Long-term Operational Stability of a Hierarchical Evaporator Surface in a Two-Phase Thermosyphon](https://doi.org/10.1016/j.pes.2026.100314)** — N.S. Ivanov — *Progress in Engineering Science*, 2026.
 - **[Heat Transfer Crisis Investigation in a Microchannel with and without Nanoparticles Coating](https://doi.org/10.1088/1742-6596/1683/2/022087)** — Yu.A. Kuzma-Kichta, A.V. Lavrikov, M. Shustov, E.A. Kustova, N.S. Ivanov *et al.* — *Journal of Physics: Conference Series*, 2020.
 - **[Ivanov 2024 dissertation — heat-transfer enhancement in a thermosyphon using micro/nanoparticle coatings](https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf)** — N.S. Ivanov — MPEI, 2024.
 
-### TPU / Feoktistov
+### TPU — Feoktistov/Orlova team
 - **[Heat-Transfer Enhancement and Evaporation Mechanisms on Roughness-Controlled Wettability-Contrast Surfaces](https://doi.org/10.1016/j.ijheatmasstransfer.2026.128413)** — D.V. Feoktistov, E.G. Orlova, E.Yu. Laga *et al.* — *International Journal of Heat and Mass Transfer*, 2026.
 - **[Hydrophobization of Metal Surfaces by Laser Treatment and Subsequent Heat Treatment of Hydrocarbon Liquids](https://doi.org/10.1016/j.surfin.2026.109390)** — D.V. Feoktistov, E.G. Orlova, G.E. Kotelnikov *et al.* — *Surfaces and Interfaces*, 2026.
 - **[Method for Forming Micro- and Nanostructures on the Heat-Exchange Surface of a Steel Product](https://patents.google.com/patent/RU2812668C1/en)** — Darya A. Kuznechenkova, Evgeniya G. Orlova, Dmitry V. Feoktistov — RU2812668C1 — Tomsk Polytechnic University — 2024.
@@ -79,7 +79,7 @@ Detailed interpretation remains in:
 
 ## Unified scorecard
 
-| Dimension | Pavlenko / Kutateladze | MPEI / Ivanov | TPU / Feoktistov | MPEI ordered wick |
+| Dimension | **Kutateladze Institute — Pavlenko team** | **MPEI — Ivanov/Kuzma-Kichta team** | **TPU — Feoktistov/Orlova team** | **MPEI — ordered-wick team** |
 |---|---|---|---|---|
 | **Mobile/chip relevance** | **PASS [PUBLIC]** — dielectric boiling / electronics-cooling physics; phone transfer explicitly defined | **PARTIAL [PUBLIC]** — current long-life device is a thermosyphon, but same MPEI/Ivanov lineage includes 0.2 mm water-boiling microchannel work | **PARTIAL [PUBLIC]** — microchip-cooling framing + water droplet/surface physics, no sealed phone device | **PARTIAL [PUBLIC]** — heat-pipe/wick mechanism relevant, no phone-scale specimen |
 | **High heat-flux evidence** | **PASS [PUBLIC]** — CHF/dryout/boiling evidence is a core capability | **PARTIAL [PUBLIC][EXPERIMENT]** — 2017/2020 0.2 mm water microchannel CHF lineage; not the exact 2026 hierarchical long-life surface | **PARTIAL [PUBLIC][EXPERIMENT]** — high-temperature droplet/evaporation evidence, no normalized sealed-VC hotspot proof | **UNKNOWN [EXPERIMENT]** |
@@ -98,12 +98,12 @@ Detailed interpretation remains in:
 
 ## Decision output
 
-| Priority | Partner / line | Stage-0 decision | Required prerequisite before meaningful Stage-0 spend | Why |
-|---:|---|---|---|---|
-| **1** | Pavlenko / Kutateladze | **GO WITH PREREQUISITE** | partner-shareable process window + phone-scale dry-spot diagnostic/control transfer path | strongest current Russian dielectric irreversible-dryout diagnostic signal; broad dryout/rewetting advantage is now killed by independent China evidence |
-| **2** | MPEI / Ivanov | **GO WITH PREREQUISITE** | exact current groove/as-built dataset + 42-month aging dataset + geometry-scaled coupon plan | narrow multi-year engineered-surface aging evidence survives China pressure test; phone-scale/high-flux transfer remains open |
-| **3** | TPU / Feoktistov | **GO WITH PREREQUISITE** | separate **laser-only low-organic control** from hydrocarbon-wetting branch; copper + vacuum/fluid screen must be first | patent/team linkage now clear; main risk has shifted from IP identity to sealed-process compatibility |
-| — | MPEI ordered wick | **HOLD** | physical thin coupon with thickness/permeability/capillary/repeatability data | no decision-grade physical phone-scale specimen yet |
+| Priority | Institution | Team / line | Stage-0 decision | Required prerequisite before meaningful Stage-0 spend | Why |
+|---:|---|---|---|---|---|
+| **1** | **Kutateladze Institute of Thermophysics SB RAS** | Pavlenko / Surtaev / Shvetsov / Zhukov | **GO WITH PREREQUISITE** | partner-shareable process window + phone-scale dry-spot diagnostic/control transfer path | strongest current Russian dielectric irreversible-dryout diagnostic signal; broad dryout/rewetting advantage is killed by independent China evidence |
+| **2** | **Moscow Power Engineering Institute (MPEI)** | Ivanov / Kuzma-Kichta / Alyautdinova | **GO WITH PREREQUISITE** | exact current groove/as-built dataset + 42-month aging dataset + geometry-scaled coupon plan | narrow multi-year engineered-surface aging evidence survives China pressure test; phone-scale/high-flux transfer remains open |
+| **3** | **Tomsk Polytechnic University (TPU)** | Feoktistov / Orlova | **GO WITH PREREQUISITE** | separate laser-only low-organic control from hydrocarbon-wetting branch; copper + vacuum/fluid screen must be first | patent/team linkage is clear; main risk is sealed-process compatibility |
+| — | **Moscow Power Engineering Institute (MPEI)** | Bulaeva / Savchenkov / Savchenkova ordered-wick line | **HOLD** | physical thin coupon with thickness/permeability/capillary/repeatability data | no decision-grade physical phone-scale specimen yet |
 
 No current line is **unconditional GO** and none of the three main Stage-0 candidates is currently **KILL-mechanism-only**.
 
@@ -306,7 +306,7 @@ It supports a narrower collaboration hypothesis:
 This is the decision logic to carry into partner outreach and PoC design.
 
 
-### Pavlenko comparator correction — independent China dryout/rewetting
+### Kutateladze Institute / Pavlenko-team comparator correction — independent China dryout/rewetting
 
 New China comparators:
 - GDUT repeated dryout / steam-induced rewetting / cycle degradation;
