@@ -1,7 +1,7 @@
 > **AUDIT SNAPSHOT / NON-AUTHORITATIVE**
 >
 > This file records repository conditions found during the 2026-10-04 architecture audit. It is **not** the live project-status source.
-> Current authority: [PROGRESS](../PROGRESS.md), [Repository Completeness Matrix](../evidence/repository_completeness_matrix.md), and the relevant workstream README/current decision file.
+> Current authority: [PROGRESS](../PROGRESS.md), [Repository Completeness Matrix](../evidence/qa/README.md), and the relevant workstream README/current decision file.
 >
 # Repository Architecture & Content Audit — 2026-10-04
 
@@ -65,7 +65,7 @@ Current institution authority:
 Current patent/IP authority:
 - 05_papers-patents/surface_wick_patent_map_v01.md
 - 05_papers-patents/surface_wick_claim_chart_v01.md
-- evidence/source_register.md
+- evidence/sources/README.md
 
 ## Current status inconsistencies corrected
 
@@ -131,8 +131,8 @@ Remaining weak spots:
 
 A new research round is incomplete until the relevant:
 - local canonical workstream file;
-- evidence/source_register.md;
-- evidence/repository_completeness_matrix.md;
+- evidence/sources/README.md;
+- evidence/qa/README.md;
 - PROGRESS.md;
 - root README when portfolio changes;
 - CHANGELOG.md for material corrections

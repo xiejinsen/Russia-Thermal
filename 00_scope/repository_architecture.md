@@ -120,7 +120,7 @@ Files named as dated audits (for example `repository_audit_YYYY-MM-DD.md` or `ev
 
 They must:
 - begin with a **SNAPSHOT / NON-AUTHORITATIVE** banner;
-- point to the current live file (`PROGRESS.md`, workstream README, or `repository_completeness_matrix.md`);
+- point to the current live file (`PROGRESS.md`, workstream README, or `qa/README.md`);
 - never be silently updated into a competing current-status dashboard.
 
 If a later pass on the same day finds new issues, append an audit follow-up section but preserve the snapshot nature.
@@ -130,7 +130,7 @@ If a later pass on the same day finds new issues, append an audit follow-up sect
 Decision-critical evidence must exist in two places:
 
 1. central index:
-   `evidence/source_register.md`
+   `evidence/sources/README.md`
 
 2. local decision context:
    beside the claim/decision in the relevant 03–09 file.
@@ -151,15 +151,15 @@ Rules:
 - new evidence for an existing source updates that source's card only;
 - a new source gets a new card;
 - cross-paper / cross-patent conclusions live in the corresponding `SYNTHESIS.md` or in workstreams 03–09;
-- the former monolithic files `evidence/paper_10q_cards_core_v01.md` and `evidence/patent_10q_cards_core_v01.md` are compatibility stubs and must not accumulate new content;
-- source registry metadata remains centralized in `evidence/source_register.md`.
+- the former monolithic files `evidence/10q/papers/README.md` and `evidence/10q/patents/README.md` are compatibility stubs and must not accumulate new content;
+- source registry metadata remains centralized in `evidence/sources/README.md`.
 
 
 ## Mandatory refresh contract after every substantive research round
 
 Update all that apply:
 
-1. new primary evidence → `evidence/source_register.md`
+1. new primary evidence → `evidence/sources/README.md`
 2. institution status changed → `03_russia-institutions/major_university_coverage_matrix.md` / candidate queue
 3. partner capability changed → corresponding 04 card
 4. patent/IP conclusion changed → 05 map/claim chart
@@ -169,7 +169,7 @@ Update all that apply:
 8. overall maturity / next tasks changed → `PROGRESS.md`
 9. top-level portfolio materially changed → root `README.md`
 10. decision-relevant correction → `CHANGELOG.md`
-11. evidence-quality gap changed → `evidence/repository_completeness_matrix.md`
+11. evidence-quality gap changed → `evidence/qa/README.md`
 12. Primary/Reserve/Kill/roadmap changed materially → relevant `10-final-report/` file
 
 A research round is not considered archived until the required updates are complete.
@@ -178,7 +178,7 @@ A research round is not considered archived until the required updates are compl
 
 Use:
 - `*_v01.md`, `*_v02.md` for evolving analytical artifacts when preserving versions is useful;
-- stable names for live registries/matrices (`source_register.md`, `PROGRESS.md`);
+- stable names for live registries/matrices (`sources/README.md`, `PROGRESS.md`);
 - explicit `round1` / `first_scan` only for historical snapshots.
 
 Do not create another file if an existing canonical file should be updated instead.

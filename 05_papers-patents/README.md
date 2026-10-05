@@ -11,8 +11,8 @@ Canonical per-source deep-reading cards live in:
 - [Patent 10Q cards](../evidence/10q/patents/README.md)
 
 Central source metadata lives in:
-- [Source Register](../evidence/source_register.md)
-- [Human-Readable Bibliography](../evidence/readable_bibliography.md) — preferred entry point for browsing papers/patents.
+- [Source Register](../evidence/sources/README.md)
+- [Human-Readable Bibliography](../evidence/bibliography/README.md) — preferred entry point for browsing papers/patents.
 
 ## Current outputs
 
@@ -109,8 +109,8 @@ New decision-grade MPEI high-flux lineage:
 - 2020 ~0.2 mm water-boiling/CHF study including N.S. Ivanov.
 
 These sources are now represented in:
-- `../evidence/readable_bibliography.md`;
-- `../evidence/source_register.md`;
-- `../evidence/paper_briefs_decision_grade.md`;
+- `../evidence/bibliography/README.md`;
+- `../evidence/sources/README.md`;
+- `../evidence/briefs/papers/README.md`;
 - `../evidence/10q/papers/README.md`;
 - `../evidence/10q/patents/README.md`.

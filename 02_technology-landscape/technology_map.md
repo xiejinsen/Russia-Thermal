@@ -49,7 +49,7 @@ For Tier / KEEP / downgrade / rejection decisions, use:
 For evidence:
 - `../05_papers-patents/`
 - `../07_china-benchmark/`
-- `../evidence/source_register.md`
+- `../evidence/sources/README.md`
 
 ## Refresh trigger
 

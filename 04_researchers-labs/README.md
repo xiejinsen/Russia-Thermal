@@ -55,5 +55,5 @@ Use:
 
 ## Evidence
 
-- ../evidence/source_register.md
+- ../evidence/sources/README.md
 - ../evidence/evidence_traceability_audit_2026-10-03.md

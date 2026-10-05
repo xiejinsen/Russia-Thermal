@@ -15,7 +15,7 @@ Compare Russian capabilities with Chinese academic, industrial, manufacturing an
 
 Patent evidence is indexed in:
 - ../05_papers-patents/surface_wick_patent_map_v01.md
-- ../evidence/source_register.md
+- ../evidence/sources/README.md
 
 ## Current benchmark state
 
@@ -62,7 +62,7 @@ A Russian capability advances only if it offers:
 4. installed active-cooling power/noise/reliability measurements.
 
 These gaps are tracked in:
-../evidence/repository_completeness_matrix.md
+../evidence/qa/README.md
 
 
 ## Stage-0 comparator freeze
