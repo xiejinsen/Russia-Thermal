@@ -1,6 +1,8 @@
 # Repository QA module
 
 > Modular QA section. Navigation: [Repository QA Index](../README.md).
+>
+> **Historical note:** the 2026-10-04 decision not to split the source register was superseded by the 2026-10-05 modularity pass. See [Repository modularity QA](15_repository_modularity_qa_2026_10_05.md).
 
 ## Repository-governance follow-up — 2026-10-04
 
@@ -44,12 +46,13 @@ Historical snapshots / seed files may retain old formatting if clearly marked no
 Do **not**:
 - create another global status file;
 - migrate the 00–10 folder structure;
-- split `source_register.md` yet.
+- split the source register yet.
 
 Current structure remains navigable.
 
-Future trigger:
-- if the source register or a workstream becomes materially hard to navigate, split by evidence class/subtrack while preserving one index and stable links.
+Superseded on 2026-10-05:
+- the source register did become materially costly to maintain;
+- it was split into `sources/sections/` while preserving `sources/README.md` as the stable canonical index.
 
 ### Progress effect
 

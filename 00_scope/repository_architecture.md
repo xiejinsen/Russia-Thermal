@@ -198,14 +198,16 @@ Supporting files may summarize but must link to the canonical file.
 
 ## Evidence folder role
 
-`evidence/` is intentionally cross-cutting and contains four types:
+`evidence/` is intentionally cross-cutting and modular:
 
-- standards: how evidence/ranking metadata is recorded;
-- registers: source/ranking indexes;
-- audits: traceability/completeness;
-- templates: metadata templates.
+- `sources/` — source-register index + topic/increment modules;
+- `bibliography/` — readable citation index + topic modules;
+- `briefs/` — one paper/patent brief per source;
+- `10q/` — one paper/patent deep-reading card per source;
+- `qa/` — independent QA/readiness modules;
+- standards / templates / ranking registers — shared governance metadata.
 
-Do not put technical conclusions in `evidence/`; put them in the relevant 03–09 workstream.
+Do not put portfolio-level technical conclusions in `evidence/`; put them in the relevant 03–09 workstream.
 
 ## Freshness policy
 
@@ -217,15 +219,17 @@ Do not put technical conclusions in `evidence/`; put them in the relevant 03–0
 
 ## Current architecture decision
 
-No broad file migration is performed in this audit because existing cross-links are valuable.
+The 2026-10-05 modularity pass physically migrated high-churn aggregate files after they became costly to maintain.
 
-Instead:
-- missing workstream READMEs are added;
-- historical files are explicitly marked;
-- stale current-status files are corrected;
-- future files follow this architecture.
+Current rule:
+- preserve stable **index paths**, not monolithic content files;
+- store independently changing records in independent modules;
+- store append-only history under `history/`;
+- keep coherent decision objects intact even when comparatively large;
+- migrate references before deleting retired aggregate paths.
 
-A later physical migration is only justified if a folder becomes too large to navigate.
+See:
+[Repository Modularity QA](../evidence/qa/sections/15_repository_modularity_qa_2026_10_05.md).
 
 
 ## Final-report layer rule

@@ -49,7 +49,7 @@ Technical conclusions should live in workstreams 03–09, not here.
 
 - `sources/README.md` is the central evidence index; source records live in `sources/sections/`;
 - decision files must also contain local original-source links;
-- repository completeness matrix must contain **one current QA snapshot**; historical QA changes belong in root `CHANGELOG.md`, not appended as contradictory current states;
+- QA is modular under `qa/sections/`; current overall state belongs in `PROGRESS.md`, while dated/specialized QA modules remain scoped records;
 - rankings are metadata, never substitutes for technical evidence.
 
 ## Future scaling

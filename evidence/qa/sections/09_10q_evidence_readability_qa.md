@@ -6,9 +6,9 @@
 
 Current core decision-grade evidence now has a three-layer human reading path:
 
-1. `readable_bibliography.md` — what the source is;
-2. `paper_briefs_decision_grade.md` / `patent_briefs_decision_grade.md` — what it means;
-3. `10q/papers/README.md` / `10q/patents/README.md` — whether the evidence is sufficient for technology, partner, PoC and IP decisions.
+1. `bibliography/README.md` → topic modules — what the source is;
+2. `briefs/papers/README.md` / `briefs/patents/README.md` → per-source brief cards — what it means;
+3. `10q/papers/README.md` / `10q/patents/README.md` → per-source 10Q cards — whether the evidence is sufficient for technology, partner, PoC and IP decisions.
 
 ### Core paper 10Q coverage
 

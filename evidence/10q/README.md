@@ -34,8 +34,8 @@ evidence/10q/
 - [Paper 10Q cards](papers/README.md)
 - [Patent 10Q cards](patents/README.md)
 - [10Q methodology](../mobile_thermal_insight_10q_method.md)
-- [Human-readable bibliography](../readable_bibliography.md)
-- [Decision-grade source register](../source_register.md)
+- [Human-readable bibliography](../bibliography/README.md)
+- [Decision-grade source register](../sources/README.md)
 
 ## Editing rules
 
@@ -44,13 +44,15 @@ evidence/10q/
 3. Add a new card for a genuinely new source; do not append it to another source's file.
 4. Keep source-specific interpretation in the card.
 5. Put cross-source / portfolio conclusions in `SYNTHESIS.md` or the relevant 03–09 decision file.
-6. Do not duplicate registry metadata that already belongs in `source_register.md`.
+6. Do not duplicate registry metadata that already belongs in the relevant `../sources/sections/` module.
 7. When a card becomes decision-critical, keep its original-source links and Source Fact / Inference / Unknown boundaries explicit.
 
-## Compatibility
+## Legacy aggregate status
 
-Legacy paths:
-- `evidence/paper_10q_cards_core_v01.md`
-- `evidence/patent_10q_cards_core_v01.md`
+The former monolithic 10Q aggregate files were **deleted on 2026-10-05** after backlink migration.
 
-are retained as short redirect/index stubs so old repository links do not break. They are no longer storage locations for 10Q content.
+Only these live structures remain:
+- per-source cards;
+- paper/patent indexes;
+- paper/patent synthesis files;
+- the shared 10Q method.
