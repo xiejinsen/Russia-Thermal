@@ -495,3 +495,38 @@ The management content hierarchy may continue to be refined, but:
 
 Reason:
 Round 8 improved system architecture and control-point clarity, not external or physical validation.
+
+
+## 2026-10-05 Round-9 observability update
+
+Current observability authority:
+- ../08_opportunities-transfer/dryout_thermal_health_observability_round9_v01.md
+
+### Decision consequence
+
+Round 9 **does not promote any candidate through G4 Phone Transfer**.
+
+It changes the architecture wording:
+- do not claim a directly measured physical "distance to dryout";
+- use **estimated dryout-risk / time-to-dryout** and **estimated thermal-health state** under a calibrated model;
+- transient thermal impedance / dynamic response is promoted as a leading observability candidate;
+- a strong generic RC / package-aging model is now a mandatory comparator.
+
+### Falsification consequence
+
+The Failure-Aware / Health-Aware architecture remains **KEEP / NARROW** only if future phone-scale work shows that practical power/temperature telemetry provides predictive value beyond:
+- absolute temperature;
+- workload history;
+- a generic thermal RC baseline;
+- generic package/interface degradation.
+
+If two-phase-specific state is not separately identifiable, C1/C2 must collapse into a generic thermal-health index and the stronger dryout-margin claim is killed.
+
+### Gate consequence
+
+- G4 remains PARTIAL / LOW.
+- G5 remains PASS at design level, now with a stronger identifiability falsifier.
+- G8 remains designed but unexecuted.
+- Final investment recommendation remains **NOT FROZEN**.
+
+Completion percentages remain unchanged because no external or physical validation dependency was closed.
