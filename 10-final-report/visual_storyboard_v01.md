@@ -432,3 +432,26 @@ Each presentation card should visually foreground only:
 7. decision ask.
 
 Detailed evidence remains in notes/appendix.
+
+
+### Evidence-to-presentation freeze
+
+Canonical visual hierarchy:
+[Leadership Presentation Freeze Specification](leadership_presentation_freeze_spec_v01.md)
+
+Claim control:
+[Leadership Claim Traceability Matrix](leadership_claim_traceability_matrix_v01.md)
+
+Confidence control:
+[Leadership Confidence Matrix](leadership_confidence_matrix_v01.md)
+
+Current storyboard state:
+**CONTENT HIERARCHY FREEZE CANDIDATE.**
+
+Visual design may simplify wording, but must not:
+- change decision rank;
+- hide low phone-transfer confidence;
+- convert hypotheses into source facts;
+- remove Kill gates;
+- promote TPU into the 3+1 core;
+- present supporting/watch institutions as strategic bets.
