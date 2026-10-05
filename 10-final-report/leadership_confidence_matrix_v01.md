@@ -183,3 +183,11 @@ Stage-1 spend should require:
 The confidence matrix is sufficiently stable for leadership presentation.
 
 Change labels only after new primary evidence, partner data, physical PoC, legal/IP review or system-level validation.
+
+### 2026-10-05 deepening note
+
+New experiment/translation evidence changes interpretation, not ranking:
+
+- **Pavlenko:** execution/diagnostic confidence strengthened; Phone Transfer remains LOW-MEDIUM because public rigs are mm–cm liquid-layer / open boiling systems.
+- **MPEI:** Partner Readiness HIGH is further supported by a 2024 dissertation implementation act referencing Newfrost LLC; Phone Transfer remains MEDIUM because the current hierarchy paper operates at only ~200–1700 W/m².
+- **Kabov:** prototype/execution history is stronger than previously represented (closed-loop electronic cooling up to reported ~1000 W/cm²), but Phone Transfer remains LOW because historical gas/liquid flow rates and loop hardware are far outside phone constraints.
