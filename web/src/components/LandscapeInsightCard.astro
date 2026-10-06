@@ -1,0 +1,18 @@
+---
+import DecisionBadge from './domain/DecisionBadge.astro';
+import type { LandscapeRowVM } from '../types/view-models';
+interface Props { model: LandscapeRowVM; }
+const { model } = Astro.props;
+---
+<article class="insight">
+  <header><div><p class="eyebrow">{model.direction.role}</p><h3>{model.direction.title}</h3></div><DecisionBadge label={model.direction.lane.label} tone={model.direction.lane.tone} /></header>
+  <div class="contrast">
+    <div><span>Baseline pressure</span><p>{model.chinaBaseline}</p></div>
+    <div><span>Residual value</span><p>{model.russiaResidual}</p></div>
+  </div>
+  <footer><span>Phone maturity: <strong>{model.direction.phoneTransferMaturity}</strong></span><span>Differentiation: <strong>{model.direction.differentiationConfidence}</strong></span></footer>
+</article>
+<style>
+.insight{display:grid;gap:var(--space-4);padding:var(--space-6);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md)}
+header{display:flex;justify-content:space-between;gap:var(--space-4);align-items:flex-start}h3,p{margin:0}h3{font-size:1.15rem;letter-spacing:-.02em}.contrast{display:grid;gap:var(--space-3)}.contrast>div{padding:var(--space-4);background:var(--surface-muted);border-radius:var(--radius-sm)}.contrast span{display:block;margin-bottom:var(--space-1);color:var(--text-muted);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.contrast p{font-size:.92rem;color:var(--text-muted)}footer{display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6);padding-top:var(--space-3);border-top:1px solid var(--line);color:var(--text-muted);font-size:.78rem}
+</style>
