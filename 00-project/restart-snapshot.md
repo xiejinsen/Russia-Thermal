@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: NON_AUTHORITATIVE_MIGRATION_TARGET
 - mode: MIGRATION_FREEZE
-- phase: core active/reserve slices + foundational modeling network migrated / fidelity review
-- next: close foundational-modeling fidelity review, then migrate remaining Watch/Hold/background slices
+- phase: core active/reserve slices + foundational modeling network migrated / fidelity pass
+- next: migrate remaining Watch/Hold/background slices, then run migration convergence review
 
 ## Directions
 - DIR-EXTREME-FILM-RESERVE: RESERVE / phone=LOW
