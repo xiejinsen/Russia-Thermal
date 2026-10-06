@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import DecisionBadge from '../components/domain/DecisionBadge.astro';
+import { buildLandscapeVM } from '../view-models/builders';
+
+const vm = buildLandscapeVM();
+---
+
+<BaseLayout title="Russia-Thermal — Russia vs China" description={vm.summary}>
+  <SiteHeader slot="header" />
+
+  <section class="hero">
+    <p class="eyebrow">{vm.eyebrow}</p>
+    <h1>{vm.title}</h1>
+    <p>{vm.summary}</p>
+  </section>
+
+  <section class="landscape" aria-label="Russia versus China comparison">
+    {vm.rows.map((row) => (
+      <article class="row">
+        <header>
+          <div>
+            <p class="eyebrow">{row.direction.role}</p>
+            <h2>{row.direction.title}</h2>
+          </div>
+          <DecisionBadge label={row.direction.lane.label} tone={row.direction.lane.tone} />
+        </header>
+
+        <div class="compare">
+          <div>
+            <h3>Strongest China / global baseline</h3>
+            <p>{row.chinaBaseline}</p>
+          </div>
+          <div>
+            <h3>Residual Russian differentiation</h3>
+            <p>{row.russiaResidual}</p>
+          </div>
+        </div>
+
+        <dl>
+          <div><dt>Decision</dt><dd>{row.decision}</dd></div>
+          <div><dt>Phone maturity</dt><dd>{row.direction.phoneTransferMaturity}</dd></div>
+          <div><dt>Differentiation</dt><dd>{row.direction.differentiationConfidence}</dd></div>
+          <div><dt>Related claims</dt><dd>{row.supportingClaimCount} supported · {row.contradictingClaimCount} pressured</dd></div>
+        </dl>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .landscape { display: grid; gap: var(--space-6); margin-top: var(--space-12); }
+  .row { display: grid; gap: var(--space-6); padding: var(--space-8); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+  header { display: flex; justify-content: space-between; gap: var(--space-4); align-items: flex-start; }
+  h2, h3, p { margin: 0; }
+  h2 { font-size: 1.4rem; letter-spacing: -.025em; }
+  .compare { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-6); }
+  .compare > div { padding: var(--space-5, 1.25rem); border-radius: var(--radius-md); background: var(--surface-muted); }
+  .compare h3 { margin-bottom: var(--space-2); font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); }
+  .compare p { color: var(--text-muted); }
+  dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); gap: var(--space-4); margin: 0; padding-top: var(--space-4); border-top: 1px solid var(--line); }
+  dt { color: var(--text-muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+  dd { margin: var(--space-1) 0 0; font-weight: 700; }
+  @media (max-width: 760px) { .compare { grid-template-columns: 1fr; } }
+</style>

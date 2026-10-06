@@ -125,3 +125,55 @@ export interface ScholarPageVM {
     directions: DirectionCardVM[];
   }>;
 }
+
+export interface EvidenceCardVM {
+  id: string;
+  title: string;
+  sourceType: string;
+  year?: number;
+  venue?: string;
+  authors: string[];
+  primaryUrl: string;
+  countryContext?: string;
+  findings: string[];
+  boundary?: string;
+  supportingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+  }>;
+  contradictingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+  }>;
+  linkedCapabilities: CapabilityDetailVM[];
+  linkedDirections: DirectionCardVM[];
+}
+
+export interface EvidenceExplorerVM {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  totalEvidence: number;
+  totalClaims: number;
+  records: EvidenceCardVM[];
+}
+
+export interface LandscapeRowVM {
+  direction: DirectionCardVM;
+  chinaBaseline: string;
+  russiaResidual: string;
+  decision: string;
+  supportingClaimCount: number;
+  contradictingClaimCount: number;
+}
+
+export interface LandscapePageVM {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  rows: LandscapeRowVM[];
+}

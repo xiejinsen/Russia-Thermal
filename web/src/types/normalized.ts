@@ -58,3 +58,28 @@ export interface PartnerPriorityRecord {
   rationale: string | null;
   sourcePath: string;
 }
+
+export interface EvidenceRecord {
+  id: string;
+  sourceType: string;
+  title: string;
+  primaryUrl: string;
+  year: number | null;
+  authors: string[];
+  venue: string | null;
+  countryContext: string | null;
+  directFindings: string[];
+  boundary: string | null;
+  sourcePath: string;
+}
+
+export interface ClaimRecord {
+  id: string;
+  proposition: string;
+  status: string;
+  confidence: string;
+  supportingSourceIds: string[];
+  contradictingSourceIds: string[];
+  boundary: string | null;
+  sourcePath: string;
+}

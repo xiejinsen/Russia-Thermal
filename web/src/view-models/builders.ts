@@ -1,5 +1,5 @@
-import { actors, capabilities, directions, priorities } from '../data/load-normalized';
-import type { ActorRecord, CapabilityRecord, DirectionRecord } from '../types/normalized';
+import { actors, capabilities, directions, priorities, evidence, claims } from '../data/load-normalized';
+import type { ActorRecord, CapabilityRecord, DirectionRecord, EvidenceRecord, ClaimRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
   DirectionCardVM,
@@ -10,7 +10,10 @@ import type {
   PartnerPortfolioVM,
   PartnerPriorityVM,
   ScholarCardVM,
-  ScholarPageVM
+  ScholarPageVM,
+  EvidenceCardVM,
+  EvidenceExplorerVM,
+  LandscapePageVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -377,5 +380,89 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
         ? institutionCard(affiliation, capabilities.filter((capability) => capability.actorId === affiliation.id))
         : undefined,
     capabilityContexts
+  };
+}
+
+
+const claimById = new Map(claims.map((claim) => [claim.id, claim]));
+const evidenceById = new Map(evidence.map((item) => [item.id, item]));
+
+function claimSummary(claim: ClaimRecord) {
+  return {
+    id: claim.id,
+    proposition: claim.proposition,
+    confidence: humanize(claim.confidence),
+    status: humanize(claim.status)
+  };
+}
+
+function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
+  const supportingClaims = claims.filter((claim) => claim.supportingSourceIds.includes(item.id));
+  const contradictingClaims = claims.filter((claim) => claim.contradictingSourceIds.includes(item.id));
+  const allClaimIds = new Set([...supportingClaims, ...contradictingClaims].map((claim) => claim.id));
+
+  const linkedCaps = capabilities.filter((capability) =>
+    capability.claimIds.some((id) => allClaimIds.has(id))
+  );
+
+  const linkedDirs = sortedDirections.filter((direction) =>
+    direction.claimIds.some((id) => allClaimIds.has(id)) ||
+    direction.capabilityIds.some((id) => linkedCaps.some((capability) => capability.id === id))
+  );
+
+  return {
+    id: item.id,
+    title: item.title,
+    sourceType: humanize(item.sourceType),
+    year: item.year ?? undefined,
+    venue: item.venue ?? undefined,
+    authors: item.authors,
+    primaryUrl: item.primaryUrl,
+    countryContext: item.countryContext ?? undefined,
+    findings: item.directFindings,
+    boundary: item.boundary ?? undefined,
+    supportingClaims: supportingClaims.map(claimSummary),
+    contradictingClaims: contradictingClaims.map(claimSummary),
+    linkedCapabilities: linkedCaps.map(capabilityDetail),
+    linkedDirections: linkedDirs.map(directionCard)
+  };
+}
+
+export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
+  return {
+    eyebrow: 'Evidence graph',
+    title: 'Evidence Explorer',
+    summary:
+      'Primary sources are shown with the Claims they support or contradict, then connected onward to Capabilities and Directions. This preserves the distinction between source facts and analyst conclusions.',
+    totalEvidence: evidence.length,
+    totalClaims: claims.length,
+    records: [...evidence]
+      .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title))
+      .map(evidenceCard)
+  };
+}
+
+export function buildLandscapeVM(): LandscapePageVM {
+  const rows = sortedDirections.map((direction) => {
+    const relatedClaims = direction.claimIds
+      .map((id) => claimById.get(id))
+      .filter((item): item is ClaimRecord => Boolean(item));
+
+    return {
+      direction: directionCard(direction),
+      chinaBaseline: direction.strongestBaseline ?? 'No explicit comparator baseline recorded.',
+      russiaResidual: direction.residualDifferentiation ?? 'No residual differentiation recorded.',
+      decision: humanize(direction.investmentLane),
+      supportingClaimCount: relatedClaims.filter((claim) => claim.supportingSourceIds.length > 0).length,
+      contradictingClaimCount: relatedClaims.filter((claim) => claim.contradictingSourceIds.length > 0).length
+    };
+  });
+
+  return {
+    eyebrow: 'Comparator pressure',
+    title: 'Russia vs China thermal-management landscape',
+    summary:
+      'This landscape does not score countries by publication counts. Each row starts from a canonical Direction and shows the strongest comparator baseline, the residual Russian differentiation that survived pressure testing, maturity, and decision lane.',
+    rows
   };
 }
