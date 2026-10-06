@@ -46,6 +46,8 @@ Recommended decision:
    - MPEI–Skoltech additive two-phase line;
    - Frumkin Institute;
    - Kutateladze Lab 6.6;
+   - NovSU / Yuri Kiliba electroosmotic orientation-tolerance research;
+   - UUST / Olga Solnyshkina structured microchannel research;
    - modeling network.
 
 ## 1.3 Recommended collaboration model
@@ -71,8 +73,8 @@ The strategy is **complementary, not substitutive**.
 | Long-term two-phase reliability | Strong product/process QA | unusual multi-year capillary-aging evidence | meaningful complement |
 | Laser / biphilic surfaces | Strong | TPU process execution | challenger only |
 | Thin-film instability | Strong global competition | Kutateladze mechanism lineage | reserve |
-| Microchannel cooling | Strong | supporting Russian nodes | China stronger |
-| LHP | Strong current miniaturization | foundational Russian knowledge | watch |
+| Microchannel cooling | Very strong current embedded / near-junction / flow-boiling programs | UUST and other supporting Russian research nodes, but no distinct system edge | China stronger; support only |
+| LHP / active capillary assistance | Strong current miniaturization + established global electroosmotic prior art | foundational Russian knowledge; NovSU current electroosmotic orientation-tolerance execution | watch / support |
 | Aeroacoustics | Strong electronics-specific stack | Russian methods | watch |
 | Materials / TIM / graphite | Strong | no clear Russian edge | do not invest |
 | Thermal control / DVFS | Strong / crowded | no clear Russian edge | do not invest |
@@ -260,6 +262,35 @@ New value:
 Decision:
 **Supporting surface-chemistry node.**
 
+## NovSU / Yuri Kiliba
+
+New value:
+- current electroosmotic pump + heat-pipe work aimed at orientation-tolerant electronics cooling;
+- physical pump prototype and continuing 2023-2025 research line;
+- useful active-capillary / orientation-sensitivity research capability.
+
+Comparator pressure:
+- electroosmotic electronics cooling was experimentally demonstrated globally decades earlier;
+- electroosmotic enhancement of micro heat pipes is also established prior art;
+- phone-scale voltage, parasitic power, volume, EMI and lifetime are unresolved.
+
+Decision:
+**Supporting / frontier-watch node. Do not create a new strategic direction.**
+
+## UUST / Olga Solnyshkina
+
+New value:
+- active 2024-2026 structured microchannel program;
+- experimental micro/mini-channel heat exchangers, silicon/glass process work and thermal-field diagnostics;
+- explicit electronics-cooling motivation.
+
+Comparator pressure:
+- PKU has current embedded near-junction microfluidic cooling with explicit pumping-power accounting;
+- SJTU and SEU have current near-junction / 3D / flow-boiling microchannel programs closer to chip/device integration.
+
+Decision:
+**Supporting microchannel research node. China comparator remains stronger; no priority promotion.**
+
 ## Other reserves
 
 - Kutateladze Lab 6.6 — thin-film / rupture / instability reserve;
@@ -281,6 +312,7 @@ The project should **not** recommend investment based on the following broad cla
 - Russia is broadly ahead in laser / biphilic surfaces;
 - Russia is broadly ahead in LHP;
 - Russia is broadly ahead in microchannels;
+- Russia has a unique electroosmotic-cooling principle for electronics / micro heat pipes;
 - Russia has a clear smartphone thermal-material / TIM / graphite advantage;
 - generic Russian smartphone DVFS is differentiated;
 - Russia has a broad aeroacoustic advantage;
@@ -341,6 +373,8 @@ Primary Russia discovery surfaces:
 - Russian National Heat Transfer Conference (RNKT);
 - Thermophysics and Aeromechanics;
 - High Temperature.
+
+NovSU and UUST are examples of the intended frontier-watch discipline: both are real current capabilities, but neither is promoted simply because it was newly discovered.
 
 Promote a new node only when at least two are true:
 1. direct electronics/mobile transfer;
