@@ -2,32 +2,52 @@
 interface Props {
   label: string;
   value: string | number;
+  href?: string;
 }
-
-const { label, value } = Astro.props;
+const { label, value, href } = Astro.props;
 ---
 
-<div class="metric">
-  <dt>{label}</dt>
-  <dd>{value}</dd>
-</div>
+{href ? (
+  <a class="metric metric-link" href={href}>
+    <span class="label">{label}</span>
+    <span class="value">{value}<span class="arrow" aria-hidden="true">→</span></span>
+  </a>
+) : (
+  <div class="metric">
+    <dt>{label}</dt>
+    <dd>{value}</dd>
+  </div>
+)}
 
 <style>
-  .metric {
-    display: grid;
-    gap: var(--space-1);
+  .metric { display:grid; gap:var(--space-1); min-width:0; }
+  .metric-link {
+    padding:var(--space-4);
+    border-radius:var(--radius-md);
+    background:linear-gradient(135deg, rgb(255 255 255 / .92), rgb(232 243 255 / .72));
+    border:1px solid rgb(102 153 204 / .18);
+    text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
-
-  dt {
-    color: var(--text-muted);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+  .metric-link:hover,.metric-link:focus-visible {
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgb(51 102 153 / .12);
+    border-color:rgb(51 112 180 / .34);
   }
-
-  dd {
-    margin: 0;
-    font-weight: 700;
+  dt,.label {
+    color:var(--text-muted);
+    font-size:.72rem;
+    font-weight:750;
+    letter-spacing:.07em;
+    text-transform:uppercase;
   }
+  dd,.value {
+    margin:0;
+    color:var(--text);
+    font-size:clamp(1.35rem,2.5vw,2.1rem);
+    font-weight:850;
+    line-height:1;
+    letter-spacing:-.04em;
+  }
+  .arrow { margin-left:.35rem; color:var(--accent-vivid); font-size:.9em; }
 </style>
