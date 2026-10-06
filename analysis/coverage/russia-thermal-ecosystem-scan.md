@@ -43,7 +43,7 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 | Tomsk Polytechnic University | University | CANONICAL_ONBOARDED | Laser/wettability process capability. |
 | Novosibirsk State University | University | CANONICAL_ONBOARDED | Two-phase diagnostics bridge into the Novosibirsk thermophysics ecosystem. |
 | Tomsk State University | University | CANONICAL_ONBOARDED | Active/passive electronics cooling, porous/channel structures and PCM thermal control with explicit phone applicability. |
-| HSE University / MIEM | University | EVIDENCE_QUALIFIED | Current 2026 electrothermal modeling of high-power electronic circuits/PCB overheating and cooling conditions; useful thermal-reliability/modeling enabler, not a cooling-device lab. |
+| HSE University / MIEM | University | CANONICAL_ONBOARDED | Current 2026 electrothermal modeling of high-power electronic circuits/PCB overheating and cooling conditions; represented as thermal-reliability/modeling enabler rather than a cooling-device lab. |
 | ITMO University | University | CANDIDATE_FOUND | Thermal-physics education and historical/current electronics-cooling / microprocessor cooling work. Need current PI / lab continuity. |
 | MEPhI | University | CANDIDATE_FOUND | Boiling-onset diagnostics, transient pool boiling and channel heat-transfer regime prediction; mechanism/diagnostics relevance rather than phone hardware. |
 | MISIS University | University | CANDIDATE_FOUND | 2025 thermoelectric material for electronic temperature-control systems plus high-thermal-conductivity alloys/materials; primarily materials-side comparator. |
