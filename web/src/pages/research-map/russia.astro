@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
 import { buildResearchMapVM } from '../../view-models/builders';
 
 const vm = buildResearchMapVM('RU');
@@ -15,6 +16,7 @@ const directions = [...new Map(
 ).values()];
 ---
 <BaseLayout title="Russia-Thermal — Russia Research Map" description={vm.summary}>
+  <SiteHeader slot="header" />
   <Fragment slot="head">
     <link
       rel="stylesheet"
@@ -25,24 +27,6 @@ const directions = [...new Map(
   </Fragment>
 
   <div class="research-shell">
-    <header class="research-topbar">
-      <a class="brand" href={href('/')}>
-        <span class="brand-mark">RT</span>
-        <span>
-          <b>Russia-Thermal Intelligence</b>
-          <small>research geography navigator</small>
-        </span>
-      </a>
-      <nav aria-label="Research map navigation">
-        <a href={href('/')}>Overview</a>
-        <a class="active" href={href('/research-map/russia')}>Russia Map</a>
-        <a href={href('/research-map/china')}>China Map</a>
-        <a href={href('/institutions')}>Institutions</a>
-        <a href={href('/scholars')}>Scholars</a>
-        <a href={href('/evidence')}>Evidence</a>
-      </nav>
-    </header>
-
     <main class="map-main">
       <section class="map-hero">
         <div>
@@ -322,28 +306,6 @@ const directions = [...new Map(
     }
     body > main { width:auto; margin:0; padding:0; }
     .research-shell { min-height:100vh; }
-    .research-topbar {
-      position:sticky; top:0; z-index:1000;
-      min-height:70px; padding:10px 28px;
-      display:flex; align-items:center; justify-content:space-between; gap:24px;
-      background:rgba(250,253,255,.95); backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--map-line);
-    }
-    .brand { display:flex; align-items:center; gap:11px; text-decoration:none; min-width:260px; }
-    .brand-mark {
-      width:42px; height:42px; display:grid; place-items:center;
-      border-radius:11px; background:linear-gradient(145deg,#0b67b2,#0a5598);
-      color:#fff; font-size:13px; font-weight:900;
-    }
-    .brand > span:last-child { display:grid; gap:1px; }
-    .brand b { font-size:15px; }
-    .brand small { color:#647d90; font-size:10px; text-transform:uppercase; letter-spacing:.07em; }
-    .research-topbar nav { display:flex; gap:3px; flex-wrap:wrap; justify-content:flex-end; }
-    .research-topbar nav a {
-      padding:8px 10px; border-radius:8px; text-decoration:none;
-      color:#42627b; font-size:12px; font-weight:750;
-    }
-    .research-topbar nav a:hover,.research-topbar nav a.active { background:#e7f3fb; color:var(--map-blue); }
     .map-main { width:min(calc(100% - 40px), 1620px); margin:0 auto; padding:26px 0 70px; }
     .map-hero {
       display:grid; grid-template-columns:minmax(0,1.55fr) minmax(430px,.85fr); gap:24px;
@@ -434,9 +396,6 @@ const directions = [...new Map(
       .node-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
     @media (max-width: 720px) {
-      .research-topbar { align-items:flex-start; flex-direction:column; padding:10px 14px; }
-      .research-topbar nav { overflow-x:auto; width:100%; flex-wrap:nowrap; justify-content:flex-start; }
-      .research-topbar nav a { white-space:nowrap; }
       .map-main { width:min(calc(100% - 24px),1620px); }
       .map-hero { padding:20px; }
       .map-hero h1 { font-size:27px; }
