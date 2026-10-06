@@ -1,307 +1,332 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import StatStrip from '../components/StatStrip.astro';
-import SectionHeader from '../components/SectionHeader.astro';
-import InstitutionCard from '../components/cards/InstitutionCard.astro';
-import ExecutivePriorityCard from '../components/ExecutivePriorityCard.astro';
-import LandscapeInsightCard from '../components/LandscapeInsightCard.astro';
-import KillDecisionCard from '../components/KillDecisionCard.astro';
-import CollaborationModel from '../components/CollaborationModel.astro';
 import { buildOverviewVM } from '../view-models/builders';
 
 const vm = buildOverviewVM();
 const base = import.meta.env.BASE_URL;
-const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
 ---
 
-<BaseLayout title="Russia-Thermal — Leadership Overview" description={vm.summary}>
+<BaseLayout title="Russia-Thermal — Research Intelligence" description={vm.summary}>
   <SiteHeader slot="header" />
 
-  <section class="executive-hero">
-    <div class="hero-copy">
-      <p class="eyebrow">{vm.eyebrow}</p>
+  <section class="signal">
+    <div class="signal-copy">
+      <span class="tag">PORTFOLIO SIGNAL</span>
       <h1>{vm.title}</h1>
-      <p class="summary">{vm.summary}</p>
-      <p class="thesis">{vm.thesis}</p>
-      <div class="hero-actions">
-        <a class="primary-link" href={href('/partners')}>Open partner portfolio →</a>
+      <p>{vm.summary}</p>
+      <div class="signal-links">
+        <a class="primary" href={href('/partners')}>Open partner portfolio →</a>
+        <a href={href('/research-map/russia')}>Explore Russia research map →</a>
         <a href={href('/landscape')}>Review Russia vs China →</a>
-        <a href={href('/decisions')}>Audit decisions →</a>
       </div>
     </div>
-
-    <aside class="executive-signal">
-      <p class="eyebrow">Current posture</p>
-      <strong>{vm.priorities.length}</strong>
-      <span>priority collaboration packages</span>
-      <div class="signal-rule"></div>
-      <strong>{vm.stats.activeDirections}</strong>
-      <span>active / reserve technical directions</span>
-    </aside>
-  </section>
-
-  <StatStrip items={[
-    { label: 'Directions', value: vm.stats.directions, href: href('/landscape') },
-    { label: 'Capabilities', value: vm.stats.capabilities, href: href('/capabilities') },
-    { label: 'Institutions / labs', value: vm.stats.institutions, href: href('/institutions') },
-    { label: 'Key people', value: vm.stats.people, href: href('/scholars') }
-  ]} />
-
-  <section class="page-section priority-section">
-    <SectionHeader
-      eyebrow="01 · Act"
-      title="Priority collaboration packages"
-      description="P1/P2/P3 are management-priority objects. They are intentionally separate from technical Direction lanes."
-    />
-    <div class="priority-grid">
-      {vm.priorities.map((model) => <ExecutivePriorityCard model={model} />)}
+    <div class="scoreboard">
+      <a href={href('/partners')}><b>{vm.priorities.length}</b><span>PRIORITY PACKAGES</span></a>
+      <a href={href('/directions')}><b>{vm.stats.activeDirections}</b><span>ACTIVE / RESERVE</span></a>
+      <a href={href('/capabilities')}><b>{vm.stats.capabilities}</b><span>CAPABILITIES</span></a>
     </div>
   </section>
 
-  <section class="page-section">
-    <SectionHeader
-      eyebrow="02 · Compare"
-      title="Where Russian value survives comparator pressure"
-      description="The strongest China/global baseline is shown next to the residual Russian differentiation that remains worth retaining."
-    />
-    <CollaborationModel rows={vm.landscape} priorities={vm.priorities} />
-    <div class="landscape-grid">
-      {vm.landscape.map((model) => <LandscapeInsightCard model={model} />)}
+  <section class="basis">
+    <div class="bar-title"><span>WHY THIS CONCLUSION</span><span>{vm.thesisAssessedAt ?? 'CURRENT'}</span></div>
+    <div class="basis-grid">
+      {vm.theoryBasis.slice(0,3).map((item, index) => (
+        <div><b>0{index + 1}</b><p>{item}</p></div>
+      ))}
     </div>
-    <a class="section-link" href={href('/landscape')}>Open full Russia vs China landscape →</a>
   </section>
 
-  <section class="page-section split-section">
+  <section class="management-strip">
+    <a href={href('/partners')}>
+      <span>DO NOW</span>
+      <b>Validate the three priority collaboration packages</b>
+      <p>Advance only where Russian residual capability adds decision-relevant value beyond the China/global baseline.</p>
+    </a>
+    <a href={href('/decisions')}>
+      <span>DO NOT</span>
+      <b>Do not fund broad Russia-over-China superiority theses</b>
+      <p>Country-level narratives already killed by comparator pressure stay out of the investment case.</p>
+    </a>
+    <a href={href('/frontier')}>
+      <span>KEEP WATCH</span>
+      <b>Maintain frontier coverage without treating it as partner evidence</b>
+      <p>Discovery can trigger reassessment, but it does not promote a Direction by itself.</p>
+    </a>
+  </section>
+
+  <section class="explore-strip">
     <div>
-      <SectionHeader
-        eyebrow="03 · Reject"
-        title="Broad theses we should not invest in"
-        description="A narrow shortlist is a result of pressure testing. These country-level narratives were explicitly killed or downgraded."
-      />
-      <div class="kill-stack">
-        {vm.killDecisions.map((model) => <KillDecisionCard model={model} />)}
-      </div>
-      <a class="section-link" href={href('/decisions')}>See full decision history →</a>
+      <span>EXPLORE THE GRAPH</span>
+      <b>Move from conclusion to geography, people, papers and claims.</b>
     </div>
-
-    <aside class="frontier-panel">
-      <p class="eyebrow">04 · Watch</p>
-      <h2>Frontier coverage</h2>
-      <p>Venue monitoring is a discovery mechanism, not partner evidence.</p>
-      <div class="frontier-metrics">
-        <div><strong>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</strong><span>venues currently represented in normalized evidence</span></div>
-        <div><strong>{vm.frontier.matchedEvidence}</strong><span>matched evidence records</span></div>
-        {vm.frontier.latestYear && <div><strong>{vm.frontier.latestYear}</strong><span>latest represented evidence year</span></div>}
-      </div>
-      <a class="primary-link" href={href('/frontier')}>Open Frontier Watch →</a>
-    </aside>
+    <nav aria-label="Deep research entry points">
+      <a href={href('/research-map/russia')}>Russia Map</a>
+      <a href={href('/institutions')}>Institutions</a>
+      <a href={href('/scholars')}>Scholars</a>
+      <a href={href('/directions')}>Directions</a>
+      <a href={href('/claims')}>Claims</a>
+      <a href={href('/papers')}>Papers</a>
+      <a href={href('/evidence')}>Evidence</a>
+    </nav>
   </section>
 
-  <section class="page-section supporting">
-    <SectionHeader
-      eyebrow="05 · Drill down"
-      title="Supporting institutions and labs"
-      description="Detailed actor pages remain available for technical review, but they no longer dominate the leadership landing page."
-    />
-    <div class="content-grid">
-      {vm.institutions.map((model) => <InstitutionCard model={model} />)}
+  <section id="act" class="panel">
+    <div class="panel-head">
+      <div><span>01 · ACT</span><h2>Advance three bounded collaboration packages</h2></div>
+      <p><b>Question answered:</b> who should we engage first, what should we work on, and what must be proven before promotion?</p>
+    </div>
+    <div class="priority-stack">
+      {vm.priorities.map((priority) => {
+        const direction = priority.directions[0];
+        const institution = priority.institutions[0];
+        return (
+          <article class="priority-row">
+            <div class="priority-rank">
+              <b>{priority.rank}</b>
+              {institution?.href ? <a href={href(institution.href)}>{institution.name}</a> : <span>{institution?.name ?? priority.id}</span>}
+            </div>
+            <div class="priority-decision">
+              <span>DECISION</span>
+              {direction ? <a href={href(`/directions/${direction.id}`)}><strong>{direction.recommendation}</strong></a> : <strong>{priority.recommendedAction}</strong>}
+              <p>{direction?.collaborationFocus ?? priority.rationale}</p>
+            </div>
+            <div class="priority-why">
+              <span>WHY RUSSIA STILL ADDS VALUE</span>
+              <p>{direction?.residualDifferentiation ?? priority.rationale}</p>
+            </div>
+            <div class="priority-gate">
+              <span>NEXT GATE</span>
+              <p>{direction?.nextQuestion ?? direction?.nextGate ?? priority.recommendedAction}</p>
+            </div>
+          </article>
+        );
+      })}
     </div>
   </section>
+
+  <section id="compare" class="panel">
+    <div class="panel-head">
+      <div><span>02 · COMPARE</span><h2>China leads the product stack; Russia retains selective specialist value</h2></div>
+      <p><b>Question answered:</b> after comparator pressure, where does a Russian capability still change a smartphone decision?</p>
+    </div>
+
+    <div class="compare-summary">
+      <b>Portfolio conclusion</b>
+      <p>Do not compare countries in the abstract. Retain only direction-level residuals that survive a stronger China/global baseline and still clear a phone-relevant validation gate.</p>
+      <a href={href('/landscape')}>Open full comparison →</a>
+    </div>
+
+    <div class="matrix">
+      {vm.landscape.map((row) => (
+        <article class="compare-row">
+          <div class="compare-top">
+            <div class="dir">
+              <a href={href(`/directions/${row.direction.id}`)}><b>{row.direction.title}</b></a>
+              <span>{row.direction.phoneTransferMaturity} phone maturity</span>
+            </div>
+            <div class="decision">
+              <small>DECISION</small>
+              <strong>{row.direction.recommendation}</strong>
+            </div>
+            <div class="focus">
+              <small>COLLABORATION FOCUS</small>
+              <p>{row.direction.collaborationFocus ?? row.direction.residualDifferentiation}</p>
+            </div>
+          </div>
+          <div class="compare-detail">
+            <a class="baseline" href={href('/research-map/china')}>
+              <small>{row.chinaLabel}</small>
+              <p>{row.chinaBaseline}</p>
+            </a>
+            <a class="residual" href={href('/research-map/russia')}>
+              <small>{row.russiaLabel}</small>
+              <p>{row.russiaResidual}</p>
+            </a>
+            <a class="next" href={href(`/directions/${row.direction.id}`)}>
+              <small>NEXT VALIDATION QUESTION</small>
+              <p>{row.direction.nextQuestion ?? row.direction.nextGate}</p>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="lower">
+    <div class="panel reject">
+      <div class="panel-head">
+        <div><span>03 · REJECT</span><h2>Broad theses we should not invest in</h2></div>
+        <p>Rejection is part of the portfolio conclusion, not an appendix.</p>
+      </div>
+      {vm.killDecisions.slice(0,4).map((decision) => (
+        <a class="kill" href={href(`/decisions#${decision.id}`)}>
+          <b>×</b>
+          <div><strong>{decision.subject}</strong><p>{decision.rationale}</p></div>
+        </a>
+      ))}
+      <a class="panel-link" href={href('/decisions')}>Open full decision history →</a>
+    </div>
+
+    <div class="panel frontier">
+      <div class="panel-head">
+        <div><span>04 · WATCH</span><h2>Frontier coverage</h2></div>
+        <p>Discovery coverage only. Not evidence of partner readiness.</p>
+      </div>
+      <div class="numbers">
+        <b>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</b><span>venues represented</span>
+        <b>{vm.frontier.matchedEvidence}</b><span>matched evidence records</span>
+        <b>{vm.frontier.latestYear ?? '—'}</b><span>latest evidence year</span>
+      </div>
+      <a class="panel-link" href={href('/frontier')}>Open Frontier Watch →</a>
+    </div>
+  </section>
+
+  <style>
+    :global(body){
+      background:
+        radial-gradient(circle at 78% 0%, rgba(110,185,255,.20), transparent 34rem),
+        linear-gradient(180deg,#f7fbff 0%,#eef6fc 100%);
+      color:#17324d;
+    }
+
+    .signal{
+      display:grid;
+      grid-template-columns:minmax(0,1.8fr) minmax(380px,.8fr);
+      border:1px solid #cfe1ee;
+      border-radius:18px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 14px 38px rgba(42,96,140,.08);
+    }
+
+    .signal-copy{padding:34px}
+    .tag,.panel-head span,.bar-title,.explore-strip>div>span{
+      font-size:12px;color:#0a6bb7;font-weight:850;letter-spacing:.09em;text-transform:uppercase;
+    }
+
+    .signal h1{
+      font-size:36px;line-height:1.1;max-width:980px;margin:10px 0 16px;letter-spacing:-.035em;color:#153955;
+    }
+
+    .signal-copy>p{max-width:930px;color:#4d6477;margin:0;font-size:16px;line-height:1.65}
+
+    .signal-links{display:flex;gap:14px 22px;flex-wrap:wrap;margin-top:22px}
+    .signal-links a{font-size:12px;font-weight:800;color:#0b67b2;text-decoration:none}
+    .signal-links .primary{padding:9px 12px;border-radius:9px;background:#0b67b2;color:#fff}
+
+    .scoreboard{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      align-content:center;
+      gap:1px;
+      background:#d8e8f4;
+      border-left:1px solid #d8e8f4;
+    }
+
+    .scoreboard a{
+      display:grid;align-content:center;gap:7px;padding:20px;background:linear-gradient(145deg,#e8f4ff,#f4faff);
+      text-decoration:none;
+    }
+
+    .scoreboard b{font-size:34px;color:#0b5fa9}
+    .scoreboard span{font-size:11px;color:#5f7587;font-weight:800;line-height:1.35}
+
+    .basis,.panel,.explore-strip{
+      margin-top:18px;border:1px solid #cfe1ee;background:#fff;border-radius:16px;overflow:hidden;
+      box-shadow:0 10px 28px rgba(42,96,140,.05);
+    }
+
+    .bar-title{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #dbe8f1}
+    .bar-title span:last-child{color:#708697;font-weight:700}
+    .basis-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .basis-grid>div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:20px;border-right:1px solid #e0ebf3}
+    .basis-grid>div:last-child{border-right:0}
+    .basis-grid b{color:#0a6bb7;font-size:13px}
+    .basis-grid p{margin:0;font-size:14px;line-height:1.6;color:#435d70}
+
+    .management-strip{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:18px;border:1px solid #cfe1ee;
+      border-radius:16px;overflow:hidden;background:#d7e6f2;box-shadow:0 10px 28px rgba(42,96,140,.05)
+    }
+
+    .management-strip>a{display:grid;gap:8px;padding:20px;background:#fff;text-decoration:none;color:inherit}
+    .management-strip>a:hover{background:#f8fcff}
+    .management-strip span{font-size:11px;font-weight:850;letter-spacing:.08em;color:#0a6bb7}
+    .management-strip b{font-size:15px;line-height:1.35;color:#173f5e}
+    .management-strip p{margin:0;font-size:13px;line-height:1.55;color:#5a7183}
+
+    .explore-strip{display:flex;justify-content:space-between;gap:28px;padding:18px 20px;align-items:center}
+    .explore-strip>div{display:grid;gap:5px}
+    .explore-strip>div>b{font-size:14px;color:#294f6b}
+    .explore-strip nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+    .explore-strip nav a{padding:7px 9px;border-radius:8px;background:#eef6fb;color:#315f80;font-size:11px;font-weight:800;text-decoration:none}
+
+    .panel-head{
+      display:flex;justify-content:space-between;gap:30px;padding:19px 20px;border-bottom:1px solid #dbe8f1;
+      background:linear-gradient(180deg,#fbfdff,#f6faff);
+    }
+
+    .panel-head h2{font-size:20px;margin:4px 0 0;color:#183c59;letter-spacing:-.02em}
+    .panel-head p{font-size:13px;line-height:1.55;color:#5e7485;max-width:540px;margin:0}
+
+    .priority-stack{display:grid}
+    .priority-row{display:grid;grid-template-columns:150px minmax(270px,1.05fr) minmax(260px,1fr) minmax(280px,1.05fr);border-bottom:1px solid #dfeaf2}
+    .priority-row>div{padding:20px;border-right:1px solid #e4edf4}
+    .priority-rank{display:grid;align-content:start;gap:8px;background:#f7fbfe}
+    .priority-rank b{font-size:25px;color:#0b67b2}
+    .priority-rank a,.priority-rank span{font-size:13px;font-weight:750;color:#36566e;text-decoration:none}
+    .priority-decision{background:#f1fbf7}
+    .priority-decision>a{text-decoration:none}
+    .priority-row div>span{display:block;margin-bottom:7px;font-size:10px;font-weight:850;letter-spacing:.07em;color:#607c90}
+    .priority-decision strong{font-size:15px;color:#087a66}
+    .priority-row p{margin:8px 0 0;font-size:13px;line-height:1.6;color:#405c70}
+    .priority-gate{background:#f7fbff}
+
+    .compare-summary{display:grid;grid-template-columns:170px 1fr auto;gap:18px;padding:15px 20px;background:#eaf5fd;border-bottom:1px solid #d7e6f2;align-items:start}
+    .compare-summary b{font-size:12px;color:#0a67b0;text-transform:uppercase;letter-spacing:.06em}
+    .compare-summary p{margin:0;font-size:13px;line-height:1.55;color:#405c70}
+    .compare-summary a{font-size:11px;font-weight:800;color:#0b67b2;text-decoration:none;white-space:nowrap}
+
+    .matrix{display:grid;gap:18px;padding:18px;background:#f6fafd}
+    .compare-row{border:1px solid #cfe1ee;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(38,89,130,.05)}
+    .compare-top{display:grid;grid-template-columns:230px 190px minmax(0,1fr);border-bottom:1px solid #dce8f1;background:linear-gradient(180deg,#fbfdff,#f7fbfe)}
+    .compare-top>div,.compare-detail>a{padding:18px;border-right:1px solid #e4edf4}
+    .dir{display:grid;gap:7px;border-left:4px solid #4c9fe0}
+    .dir a{text-decoration:none}.dir b{font-size:15px;color:#254a66}
+    .dir span,small{font-size:10px;color:#617b8f;text-transform:uppercase;letter-spacing:.05em}
+    .decision strong{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:#0878c4}
+    .focus p,.matrix p{font-size:13px;line-height:1.62;color:#3e596c;margin:.45rem 0 0}
+    .compare-detail{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:4px solid #f1f6fa}
+    .compare-detail>a{display:block;text-decoration:none;color:inherit}
+    .baseline{background:#edf6ff}.residual{background:#eef9f6}.next{background:#f8fbfd}
+    .compare-detail>a:hover{filter:brightness(.985)}
+
+    .lower{display:grid;grid-template-columns:1.5fr .7fr;gap:18px}
+    .kill{display:grid;grid-template-columns:34px 1fr;padding:16px 20px;border-bottom:1px solid #e0ebf3;font-size:13px;color:#344f63;text-decoration:none}
+    .kill:hover{background:#fffafa}
+    .kill>b{color:#c65454;font-size:16px}.kill strong{font-size:13px;color:#36536a}.kill p{margin:5px 0 0;color:#607688;line-height:1.5}
+    .numbers{display:grid;grid-template-columns:auto 1fr;gap:14px 16px;padding:22px}
+    .numbers b{font-size:28px;color:#0b64aa}.numbers span{font-size:12px;color:#5e7486;align-self:center;line-height:1.35}
+    .panel-link{display:block;width:fit-content;margin:0 20px 18px;color:#0b67b2;font-size:11px;font-weight:850;text-decoration:none}
+
+    @media(max-width:900px){
+      .signal,.lower{grid-template-columns:1fr}
+      .scoreboard{grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid #d8e8f4}
+      .basis-grid,.management-strip{grid-template-columns:1fr}
+      .basis-grid>div{border-right:0;border-bottom:1px solid #e0ebf3}
+      .priority-row,.compare-top,.compare-detail,.compare-summary{grid-template-columns:1fr}
+      .priority-row>div,.compare-top>div,.compare-detail>a{border-right:0;border-bottom:1px solid #e4edf4}
+      .explore-strip{align-items:flex-start;flex-direction:column}
+      .explore-strip nav{justify-content:flex-start}
+    }
+
+    @media(max-width:640px){
+      .signal h1{font-size:29px}
+      .scoreboard{grid-template-columns:1fr}
+      .signal-copy{padding:22px}
+      .scoreboard a{padding:15px 20px}
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  .executive-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 2.35fr) minmax(13rem, .65fr);
-    overflow: hidden;
-    background: linear-gradient(135deg, rgb(255 255 255 / .94), rgb(235 246 255 / .82));
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-1);
-  }
-
-  .hero-copy {
-    display: grid;
-    gap: var(--space-6);
-    padding: clamp(1.75rem, 3.2vw, 3rem);
-  }
-
-  .hero-copy h1 {
-    max-width: 34ch;
-    margin: 0;
-    font-size: clamp(1.45rem, 2.15vw, 2.2rem);
-    line-height: 1.06;
-    letter-spacing: -.045em;
-  }
-
-  .summary {
-    max-width: 68ch;
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 1.08rem;
-  }
-
-  .thesis {
-    max-width: 72ch;
-    margin: 0;
-    padding-left: var(--space-4);
-    border-left: 3px solid var(--accent);
-    font-weight: 700;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3) var(--space-6);
-    align-items: center;
-  }
-
-  .hero-actions a,
-  .section-link {
-    font-weight: 750;
-    text-underline-offset: .2em;
-  }
-
-  .primary-link {
-    display: inline-flex;
-    width: fit-content;
-    padding: .7rem 1rem;
-    border-radius: var(--radius-sm);
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-  }
-
-  .executive-signal {
-    display: grid;
-    align-content: center;
-    gap: var(--space-2);
-    padding: var(--space-8);
-    background:
-      radial-gradient(circle at 75% 15%, rgb(116 188 245 / .35), transparent 14rem),
-      linear-gradient(145deg, #e9f5fd, #f4faff);
-    border-left: 1px solid var(--line);
-  }
-
-  .executive-signal strong {
-    margin-top: var(--space-4);
-    font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-    line-height: .9;
-    letter-spacing: -.06em;
-  }
-
-  .executive-signal span {
-    max-width: 16rem;
-    color: var(--text-muted);
-    font-size: .9rem;
-  }
-
-  .signal-rule {
-    height: 1px;
-    margin: var(--space-4) 0;
-    background: var(--line);
-  }
-
-  .page-section {
-    display: grid;
-    gap: var(--space-6);
-    margin-top: var(--space-16);
-  }
-
-  .priority-grid {
-    display: grid;
-    gap: var(--space-4);
-  }
-
-  .landscape-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-4);
-  }
-
-  .split-section {
-    grid-template-columns: minmax(0, 1.55fr) minmax(17rem, .7fr);
-    align-items: start;
-  }
-
-  .split-section > div {
-    display: grid;
-    gap: var(--space-6);
-  }
-
-  .kill-stack {
-    display: grid;
-    gap: var(--space-3);
-  }
-
-  .frontier-panel {
-    position: sticky;
-    top: 6rem;
-    display: grid;
-    gap: var(--space-5, 1.25rem);
-    padding: var(--space-8);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-  }
-
-  .frontier-panel h2,
-  .frontier-panel p {
-    margin: 0;
-  }
-
-  .frontier-panel > p:not(.eyebrow) {
-    color: var(--text-muted);
-  }
-
-  .frontier-metrics {
-    display: grid;
-    gap: var(--space-4);
-    padding-block: var(--space-4);
-    border-block: 1px solid var(--line);
-  }
-
-  .frontier-metrics div {
-    display: grid;
-    gap: var(--space-1);
-  }
-
-  .frontier-metrics strong {
-    font-size: 1.35rem;
-    letter-spacing: -.04em;
-  }
-
-  .frontier-metrics span {
-    color: var(--text-muted);
-    font-size: .82rem;
-  }
-
-  .content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-    gap: var(--space-4);
-  }
-
-  .section-link {
-    width: fit-content;
-  }
-
-  @media (max-width: 860px) {
-    .executive-hero,
-    .split-section,
-    .landscape-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .executive-signal {
-      border-left: 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .frontier-panel {
-      position: static;
-    }
-  }
-</style>
