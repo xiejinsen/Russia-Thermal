@@ -5,13 +5,15 @@ import type { DirectionCardVM } from '../../types/view-models';
 
 interface Props { model: DirectionCardVM; }
 const { model } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const detailHref = `${base}directions/${model.id}`;
 ---
 
 <article class="direction-card" aria-label={`${model.title}: ${model.recommendation}`}>
   <div class="heading">
     <div>
       <p class="recommendation">{model.recommendation}</p>
-      <h3>{model.title}</h3>
+      <h3><a href={detailHref}>{model.title}</a></h3>
     </div>
     <DecisionBadge label={model.lane.label} tone={model.lane.tone} />
   </div>
@@ -63,13 +65,14 @@ const { model } = Astro.props;
       <p>{model.nextGate}</p>
     </div>
   )}
+  <a class="drilldown" href={detailHref}>Open direction →</a>
 </article>
 
 <style>
 .direction-card{display:grid;gap:var(--space-5,1.25rem);padding:var(--space-6);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md)}
 .heading{display:flex;align-items:start;justify-content:space-between;gap:var(--space-4)}
 .recommendation{margin:0 0 var(--space-1);color:var(--accent-vivid);font-size:.78rem;font-weight:850;letter-spacing:.035em;text-transform:uppercase}
-h3,p{margin:0}h3{font-size:1.25rem;letter-spacing:-.025em}
+h3,p{margin:0}h3{font-size:1.25rem;letter-spacing:-.025em}h3 a{text-decoration:none;color:inherit}h3 a:hover{text-decoration:underline;text-underline-offset:.18em}
 .conclusion{display:grid;gap:var(--space-2);padding:var(--space-5,1.25rem);border-left:4px solid var(--accent-vivid);border-radius:0 var(--radius-sm) var(--radius-sm) 0;background:linear-gradient(90deg,#e8f4ff,#f7fbff)}
 .conclusion span{color:#21496d;font-size:.72rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
 .conclusion p{color:#172b40;font-weight:700;line-height:1.55}
@@ -80,5 +83,6 @@ h3,p{margin:0}h3{font-size:1.25rem;letter-spacing:-.025em}
 .block{display:grid;gap:var(--space-2)}
 .next-question{padding:var(--space-4);border:1px solid #d3e2ef;border-radius:var(--radius-sm);background:#f8fbfe}
 .gate{padding:var(--space-4);background:#edf7f3;border-radius:var(--radius-sm)}
+.drilldown{width:fit-content;color:var(--accent-vivid);font-size:.82rem;font-weight:800;text-decoration:none}.drilldown:hover{text-decoration:underline}
 @media(max-width:720px){.logic-grid{grid-template-columns:1fr}}
 </style>
