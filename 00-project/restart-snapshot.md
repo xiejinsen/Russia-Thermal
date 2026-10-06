@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: collaboration readiness & industrial translation review completed / partner priority converged
-- next: converge leadership-facing institution + key-person dossiers for Tier A/B candidates; keep observer/dataset work frozen as future validation
+- phase: Tier A/B institution + key-person leadership dossiers converged
+- next: run Phase-1 leadership-package gap audit; decide whether any remaining evidence gaps justify more desk research before final management synthesis
 
 ## Directions
 
