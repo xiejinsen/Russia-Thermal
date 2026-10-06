@@ -46,4 +46,4 @@ Broad country-superiority narratives are rejected unless directly supported.
 
 Always read [STATUS.md](STATUS.md).
 
-V1 main remains authoritative until an explicit V2.1 cutover decision is recorded.
+V2.1 on main is authoritative. Legacy V1 material is retained only for provenance and migration-fidelity history.
