@@ -32,7 +32,7 @@ Russia uses:
 | 3 | Moscow Institute of Physics and Technology | PENDING_SCAN | Mandatory systematic scan required. |
 | 4 | Saint Petersburg State University | CANONICAL_ONBOARDED | Mobile DVFS/software thermal background represented; hardware thermal scan still worth bounding. |
 | 5 | National Research Nuclear University MEPhI | CANDIDATE_FOUND | Current evidence shows pool-boiling / transient heat-transfer diagnostics, boiling-onset prediction and channel heat-transfer research. Relevance is mechanism/diagnostics rather than mobile hardware. | Qualify current thermal-physics team and transfer boundary before onboarding. |
-| 6 | HSE University | PENDING_SCAN | Bounded scan; expected low hardware-thermal prior probability. |
+| 6 | HSE University | CANONICAL_ONBOARDED | HSE MIEM 2026 electrothermal modeling of high-power electronic circuits/PCB overheating; Igor Kharitonov current professor. Modeled as thermal-reliability / EDA enabler rather than cooling-device hardware. |
 | 7 | MGIMO University | PENDING_SCAN | Bounded scan; likely negative for technical scope, but must be recorded. |
 | 8 | RANEPA | PENDING_SCAN | Bounded scan; likely negative for technical scope, but must be recorded. |
 | 9 | Peter the Great St. Petersburg Polytechnic University | CANONICAL_ONBOARDED | Gradient heat-flux measurement capability represented. |
