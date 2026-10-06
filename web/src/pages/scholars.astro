@@ -2,24 +2,160 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import ScholarCard from '../components/cards/ScholarCard.astro';
+import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import { actors, capabilities, directions, priorities } from '../data/load-normalized';
 import { buildScholarsCollectionVM } from '../view-models/builders';
+import { directionTitle, humanize } from '../view-models/helpers';
 
 const vm = buildScholarsCollectionVM();
+const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+
+function isUnder(actorId: string | null | undefined, rootId: string) {
+  let current = actorId ? actorById.get(actorId) : undefined;
+  const seen = new Set<string>();
+  while (current && !seen.has(current.id)) {
+    if (current.id === rootId) return true;
+    seen.add(current.id);
+    current = current.parentId ? actorById.get(current.parentId) : undefined;
+  }
+  return false;
+}
+
+const records = vm.records.map((model) => {
+  const person = actorById.get(model.id);
+  const relatedCapabilities = capabilities.filter((capability) => capability.keyPeopleIds.includes(model.id));
+  const linkedCapabilityIds = new Set(relatedCapabilities.map((capability) => capability.id));
+  const linkedDirections = directions.filter((direction) =>
+    direction.capabilityIds.some((id) => linkedCapabilityIds.has(id))
+  );
+  const dispositions = [...new Set(relatedCapabilities.map((capability) => capability.portfolioDisposition))];
+  const priorityRanks = priorities
+    .filter((priority) =>
+      priority.targetActorIds.some((targetId) =>
+        isUnder(person?.parentId, targetId) ||
+        relatedCapabilities.some((capability) => isUnder(capability.actorId, targetId))
+      )
+    )
+    .map((priority) => priority.rank);
+  const relations = [
+    ...(priorityRanks.length ? ['PRIORITY'] : []),
+    ...dispositions,
+    ...(!relatedCapabilities.length ? ['NO_CAPABILITY'] : [])
+  ];
+  const affiliation = person?.parentId ? actorById.get(person.parentId) : undefined;
+
+  return {
+    model,
+    person,
+    affiliation,
+    priorityRanks,
+    dispositions,
+    relations,
+    directionIds: linkedDirections.map((direction) => direction.id),
+    search: [
+      model.name,
+      model.affiliation,
+      model.role ?? '',
+      model.relevance,
+      affiliation?.name ?? '',
+      ...relatedCapabilities.map((capability) => capability.statement),
+      ...linkedDirections.map((direction) => directionTitle(direction.id))
+    ].join(' ')
+  };
+}).sort((a, b) =>
+  (a.person?.country ?? '').localeCompare(b.person?.country ?? '') ||
+  (a.affiliation?.name ?? '').localeCompare(b.affiliation?.name ?? '') ||
+  a.model.name.localeCompare(b.model.name)
+);
+
+const countryValues = [...new Set(records.map((record) => record.person?.country).filter((value): value is string => Boolean(value)))].sort();
+const affiliationValues = [...new Map(records
+  .filter((record) => record.affiliation)
+  .map((record) => [record.affiliation!.id, record.affiliation!.name])).entries()]
+  .map(([value, label]) => ({ value, label }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const relationOptions = [
+  { value: 'PRIORITY', label: 'P1 / P2 / P3 related' },
+  { value: 'DIRECTION_LINKED', label: 'Direction-linked' },
+  { value: 'SUPPORT_ONLY', label: 'Russia support-only' },
+  { value: 'COMPARATOR_ONLY', label: 'China comparator-only' },
+  { value: 'BACKGROUND_KILLED_THESIS', label: 'Background / killed thesis' },
+  { value: 'NO_CAPABILITY', label: 'Profile only / no capability' }
+];
+const directionOptions = directions
+  .map((direction) => ({ value: direction.id, label: directionTitle(direction.id) }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <BaseLayout title="Russia-Thermal — Key People" description={vm.summary}>
   <SiteHeader slot="header" />
-  <section class="collection-hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>{vm.title}</h1>
-    <p>{vm.summary}</p>
-    <div class="count">{vm.records.length} records</div>
-  </section>
-  <section class="collection-grid">
-    {vm.records.map((model) => <ScholarCard model={model} />)}
-  </section>
+
+  <div data-explorer-root>
+    <section class="collection-hero">
+      <p class="eyebrow">People explorer</p>
+      <h1>Scholars & key people</h1>
+      <p>
+        Browse people across the full Russia / China research graph. Strategic partners, support-only researchers,
+        comparator scholars and profile-only contacts remain visible without implying equal portfolio priority.
+      </p>
+      <div class="count">{records.length} records</div>
+    </section>
+
+    <ExplorerToolbar
+      total={records.length}
+      searchPlaceholder="Search person, affiliation, role, capability or direction…"
+      filters={[
+        {
+          key: 'country',
+          label: 'Country',
+          options: countryValues.map((value) => ({ value, label: value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value }))
+        },
+        { key: 'affiliation', label: 'Affiliation', options: affiliationValues },
+        { key: 'relation', label: 'Research role', options: relationOptions },
+        { key: 'direction', label: 'Direction', options: directionOptions }
+      ]}
+    />
+
+    <section class="collection-grid" aria-label="Scholar and key-person records">
+      {records.map((record) => (
+        <div
+          class="record"
+          data-explorer-record
+          data-country={record.person?.country ?? ''}
+          data-affiliation={record.affiliation?.id ?? ''}
+          data-relation={record.relations.join('|')}
+          data-direction={record.directionIds.join('|')}
+          data-search={record.search}
+        >
+          <div class="record-context">
+            <div>
+              <span>{record.affiliation?.name ?? 'Affiliation unresolved'}</span>
+              {record.model.role && <small>{record.model.role}</small>}
+            </div>
+            <div class="tags">
+              {record.priorityRanks.map((rank) => <b>{rank}</b>)}
+              {record.dispositions.map((value) => <em>{humanize(value)}</em>)}
+              {!record.dispositions.length && <em>Profile only</em>}
+            </div>
+          </div>
+          <ScholarCard model={record.model} />
+        </div>
+      ))}
+    </section>
+  </div>
 </BaseLayout>
 
 <style>
-  .collection-hero{display:grid;gap:var(--space-4);max-width:60rem}.collection-hero h1{margin:0;font-size:clamp(1.55rem,2.4vw,2.15rem);letter-spacing:-.05em;line-height:1.08}.collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:68ch}.count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}.collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--space-4);margin-top:2.5rem}
+  .collection-hero{display:grid;gap:var(--space-4);max-width:68rem}
+  .collection-hero h1{margin:0;font-size:clamp(1.7rem,2.7vw,2.35rem);letter-spacing:-.05em;line-height:1.08}
+  .collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:78ch;line-height:1.65}
+  .count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
+  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--space-4);margin-top:var(--space-6)}
+  .record{display:grid;grid-template-rows:auto 1fr;min-width:0}
+  .record-context{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0;background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
+  .record-context>div:first-child{display:grid;gap:2px}.record-context span{color:var(--accent-vivid);font-size:9px;font-weight:900;letter-spacing:.04em}.record-context small{color:var(--text-muted);font-size:10px}
+  .tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-content:flex-start}.tags b,.tags em{padding:3px 6px;border-radius:999px;font-size:8px;font-style:normal;font-weight:850}.tags b{background:#e6f5ee;color:#087a66}.tags em{background:white;color:#506d82;border:1px solid #dbe7ef}
+  .record :global(.scholar-card){border-top-left-radius:0;border-top-right-radius:0;min-height:100%}
+  [hidden]{display:none!important}
 </style>
