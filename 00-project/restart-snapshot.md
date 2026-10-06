@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: China comparator closure / shared Research Map completion
-- next: resolve remaining China EVIDENCE_QUALIFIED positive nodes, especially Fudan and Beijing Institute of Technology, complete the shared China Research Map, then freeze the leadership synthesis package
+- phase: leadership package freeze / final evidence consistency audit
+- next: run final evidence-chain, generated-view and web consistency audit; fix only decision-relevant defects, then freeze the Phase-1 leadership synthesis package
 
 ## Directions
 
