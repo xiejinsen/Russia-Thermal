@@ -69,6 +69,8 @@ Authoritative current state lives in:
 - [Phase-1 Management View](views/russia-vs-china/phase1-management.md)
 - [Kill / Downgrade Ledger](07-decisions/kill-ledger.md)
 - [Leadership Dossiers](reports/leadership-dossiers/README.md)
+- [Final Management Synthesis](reports/final-management-synthesis.md)
+- [Web Report Architecture](reports/web-report-architecture.md)
 
 ## Repository health
 
