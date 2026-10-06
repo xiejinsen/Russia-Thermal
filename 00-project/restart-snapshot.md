@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: extend the Web results-conversion layer with Capability detail graph drill-down and actor-centric Institution / Scholar filtering; then normalize Paper Deep Read / 10Q presentation and finish portfolio/design consolidation
+- next: normalize and expose Paper Deep Read / 10Q research content where canonical depth exists; then deduplicate Partner Portfolio and consolidate reusable design primitives before the final web-content consistency audit
 
 ## Directions
 
