@@ -294,11 +294,25 @@ Comparator pressure:
 Decision:
 **Supporting microchannel research node. China comparator remains stronger; no priority promotion.**
 
+## MISIS / Vladimir Khovaylo
+
+New value:
+- current thermoelectric / solid-state thermal-control materials research relevant to compact temperature-control concepts;
+- credible materials-side capability with a current responsible-person anchor.
+
+Comparator pressure:
+- the evidence is materials-led rather than a complete electronics cooling-device program;
+- package integration, COP, thickness and smartphone power overhead remain unproven;
+- strong China/global solid-state and conventional mobile thermal baselines remain.
+
+Decision:
+**Supporting materials comparator only. Do not reopen the broad Russia thermal-material advantage thesis.**
+
 ## Other reserves
 
 - Kutateladze Lab 6.6 — thin-film / rupture / instability reserve;
 - ICM / Lavrentyev / NSU — modeling / stability enabler;
-- ITP UB RAS / Maydanik — LHP knowledge reserve;
+- ITP UB RAS / Maydanik + NovSU / Kiliba — LHP / active-capillary knowledge and orientation-tolerance watch;
 - TsAGI / PNRPU — aeroacoustic method reserve.
 
 See:
