@@ -1,0 +1,47 @@
+---
+import DesignLabLayout from '../../layouts/DesignLabLayout.astro';
+import { buildOverviewVM } from '../../view-models/builders';
+const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:string)=>`${base}${p.replace(/^\//,'')}`;
+---
+<DesignLabLayout title="Russia-Thermal — Intelligence prototype" description={vm.summary} theme="intelligence">
+<div class="app">
+<aside class="rail"><div class="logo">RT</div><a class="active" href="#">OV</a><a href="#act">P1</a><a href="#compare">C×R</a><a href={href('/evidence')}>EV</a><a href={href('/decisions')}>DC</a></aside>
+<div class="workspace">
+<header><div><b>Russia-Thermal Intelligence</b><span>smartphone thermal collaboration landscape</span></div><div class="updated">SYNTHESIS · {vm.thesisAssessedAt ?? 'CURRENT'}</div></header>
+<main>
+<section class="signal">
+  <div><span class="tag">PORTFOLIO SIGNAL</span><h1>{vm.title}</h1><p>{vm.summary}</p></div>
+  <div class="scoreboard"><div><b>{vm.priorities.length}</b><span>PRIORITY PACKAGES</span></div><div><b>{vm.stats.activeDirections}</b><span>ACTIVE / RESERVE</span></div><div><b>{vm.stats.capabilities}</b><span>CAPABILITIES</span></div></div>
+</section>
+<section class="basis">
+  <div class="bar-title"><span>THESIS BASIS</span><span>3 strongest reasons</span></div>
+  <div class="basis-grid">{vm.theoryBasis.slice(0,3).map((x,i)=><div><b>0{i+1}</b><p>{x}</p></div>)}</div>
+</section>
+<section id="act" class="panel">
+  <div class="panel-head"><div><span>ACTION QUEUE</span><h2>Priority collaboration packages</h2></div><p>Only packages with a bounded technical proposition and an explicit next gate appear here.</p></div>
+  <div class="table">
+    <div class="tr head"><span>Rank</span><span>Partner</span><span>Technical focus</span><span>Decision</span><span>Next gate</span></div>
+    {vm.priorities.map((p)=>{const d=p.directions[0];return <div class="tr"><b>{p.rank}</b><span>{p.institutions[0]?.name}</span><span>{d?.title}</span><span class="status">{d?.recommendation}</span><span>{d?.nextQuestion ?? d?.nextGate}</span></div>})}
+  </div>
+</section>
+<section id="compare" class="panel">
+  <div class="panel-head"><div><span>COMPARATOR</span><h2>Where residual value survives</h2></div><p>China/global baseline on the left. Russian residual on the right. Decision in the middle.</p></div>
+  <div class="matrix">
+    {vm.landscape.map((row)=><article>
+      <div class="dir"><b>{row.direction.title}</b><span>{row.direction.phoneTransferMaturity} phone maturity</span></div>
+      <div class="baseline"><small>{row.chinaLabel}</small><p>{row.chinaBaseline}</p></div>
+      <div class="decision"><span>{row.direction.recommendation}</span></div>
+      <div class="residual"><small>{row.russiaLabel}</small><p>{row.russiaResidual}</p></div>
+    </article>)}
+  </div>
+</section>
+<section class="lower">
+ <div class="panel reject"><div class="panel-head"><div><span>REJECTION LOG</span><h2>Killed theses</h2></div></div>{vm.killDecisions.slice(0,4).map(d=><div class="kill"><b>×</b><span>{d.subject}</span></div>)}</div>
+ <div class="panel frontier"><div class="panel-head"><div><span>FRONTIER WATCH</span><h2>Coverage</h2></div></div><div class="numbers"><b>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</b><span>venues represented</span><b>{vm.frontier.matchedEvidence}</b><span>matched evidence records</span><b>{vm.frontier.latestYear}</b><span>latest evidence year</span></div></div>
+</section>
+</main></div></div>
+</DesignLabLayout>
+<style>
+:global(body){background:#0e151b;color:#dce5ec}.app{display:grid;grid-template-columns:64px 1fr;min-height:100vh}.rail{position:sticky;top:0;height:100vh;background:#081016;border-right:1px solid #25313a;display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 0}.rail .logo{width:36px;height:36px;display:grid;place-items:center;background:#3e90ce;color:white;font-weight:900;margin-bottom:18px}.rail a{font-size:10px;text-decoration:none;color:#81909d;width:42px;height:35px;display:grid;place-items:center}.rail a.active,.rail a:hover{background:#192630;color:#fff}.workspace header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid #25313a;background:#111b22}.workspace header div:first-child{display:flex;gap:14px;align-items:baseline}.workspace header span,.updated{font-size:10px;color:#778894;text-transform:uppercase;letter-spacing:.08em}.updated{color:#63b4ec}main{padding:22px;max-width:1600px}.signal{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(360px,.8fr);gap:1px;background:#293741;border:1px solid #293741}.signal>div{background:#111b22;padding:30px}.tag,.panel-head span,.bar-title{font-size:10px;color:#62afe3;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.signal h1{font-size:34px;line-height:1.08;max-width:900px;margin:8px 0 14px}.signal p{max-width:900px;color:#9eafbb;margin:0}.scoreboard{display:grid!important;grid-template-columns:repeat(3,1fr)!important;align-content:center;gap:16px!important}.scoreboard div{display:grid;gap:4px}.scoreboard b{font-size:30px}.scoreboard span{font-size:9px;color:#82939e}.basis{margin-top:14px;border:1px solid #293741;background:#111b22}.bar-title{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #293741}.basis-grid{display:grid;grid-template-columns:repeat(3,1fr)}.basis-grid>div{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:17px;border-right:1px solid #293741}.basis-grid>div:last-child{border-right:0}.basis-grid b{color:#62afe3}.basis-grid p{margin:0;font-size:12px;line-height:1.5;color:#a8b6c0}.panel{margin-top:14px;background:#111b22;border:1px solid #293741}.panel-head{display:flex;justify-content:space-between;gap:30px;padding:16px 18px;border-bottom:1px solid #293741}.panel-head h2{font-size:17px;margin:3px 0 0}.panel-head p{font-size:11px;color:#81919d;max-width:500px;margin:0}.table{overflow-x:auto}.tr{display:grid;grid-template-columns:70px 180px 210px 190px minmax(300px,1fr);min-width:980px;border-bottom:1px solid #23313a}.tr>*{padding:14px 12px;border-right:1px solid #23313a;font-size:11px}.tr.head{color:#728591;text-transform:uppercase;letter-spacing:.05em}.status{color:#76c7a0}.matrix article{display:grid;grid-template-columns:190px 1fr 160px 1fr;border-bottom:1px solid #26343d}.matrix article>div{padding:16px;border-right:1px solid #26343d}.dir{display:grid;gap:5px}.dir span,small{font-size:9px;color:#71828d;text-transform:uppercase}.baseline{background:#122433}.residual{background:#142821}.matrix p{font-size:11px;line-height:1.5;color:#b6c2ca}.decision{display:grid;place-items:center;text-align:center}.decision span{font-size:10px;font-weight:800;color:#6cc1f0}.lower{display:grid;grid-template-columns:1.5fr .7fr;gap:14px}.kill{display:grid;grid-template-columns:32px 1fr;padding:14px 18px;border-bottom:1px solid #293741;font-size:12px}.kill b{color:#ed8f85}.numbers{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:20px}.numbers b{font-size:24px}.numbers span{font-size:10px;color:#81919d}
+@media(max-width:900px){.app{grid-template-columns:1fr}.rail{display:none}.workspace header span{display:none}.signal,.lower{grid-template-columns:1fr}.scoreboard{grid-template-columns:repeat(3,1fr)!important}.basis-grid{grid-template-columns:1fr}.basis-grid>div{border-right:0;border-bottom:1px solid #293741}.matrix article{grid-template-columns:1fr}.matrix article>div{border-right:0}}
+</style>
