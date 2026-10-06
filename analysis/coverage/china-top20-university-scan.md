@@ -29,20 +29,20 @@ Ranking source:
 | 3 | Zhejiang University | CANDIDATE_FOUND | Zan Wu: chip cooling, device/package thermal management, phase-change heat transfer, microchannels; current official lab/recruitment evidence. | Qualify Actor/Capability. |
 | 4 | Shanghai Jiao Tong University | CANONICAL_ONBOARDED | Micro/nano phase change, dielectric-fluid ultra-thin composite wick, dryout-mitigation microchannels, chip thermal management. | Continue evidence enrichment only. |
 | 5 | Fudan University | PENDING_SCAN | — | Full scan. |
-| 6 | Nanjing University | PENDING_SCAN | — | Full scan. |
+| 6 | Nanjing University | CANDIDATE_FOUND | Current official research highlights thin-film electrocaloric cooling explicitly framed for chip thermal management. | Qualify team/device relevance and mobile-transfer boundary. |
 | 7 | University of Science and Technology of China | CANDIDATE_FOUND | Bin Xu: electronics thermal management, vacuum-chamber heat spreader, microchannel evaporation/condensation phase change. | Qualify Actor/Capability. |
 | 8 | Wuhan University | PENDING_SCAN | — | Full scan. |
 | 9 | Huazhong University of Science and Technology | CANDIDATE_FOUND | Ronggui Yang / X-thermal: chip thermal transport, phase-change thermal management, thin-film boiling and ultra-thin vapor-spreader devices; direct Huawei technical exchange. | Qualify key Actor/Capability and phone relevance. |
-| 10 | Xi'an Jiaotong University | CANDIDATE_FOUND | Siyu Qin: ultra-thin vapor chamber two-phase transport/wettability; Xiaoping Yang: 0.6 mm flexible LHP for AR/VR/laptop/foldable phones plus chip microchannels. | High-priority qualification and onboarding. |
-| 11 | Beihang University | PENDING_SCAN | First search surfaced thermal-management activity in affiliated Ningbo institute, but main-university evidence is not yet sufficiently qualified. | Deeper main-campus scan. |
+| 10 | Xi'an Jiaotong University | CANONICAL_ONBOARDED | Siyu Qin: ultra-thin vapor chamber two-phase transport/wettability; Xiaoping Yang: 0.6 mm flexible LHP for AR/VR/laptop/foldable phones plus chip microchannels. | Continue evidence enrichment only. |
+| 11 | Beihang University | CANDIDATE_FOUND | Main-campus faculty evidence includes micro/nanoscale heat transfer and advanced-process chip interconnect thermal resistance; also solid-state thermal-control work aimed at special chips. | Qualify strongest group and direct mobile relevance. |
 | 12 | Harbin Institute of Technology | CANDIDATE_FOUND | Ultra-high-heat-flux electronic cooling research and miniaturized thermoelectric cooler demonstrated on a processor. | Qualify relevant group/person. |
-| 13 | Sun Yat-sen University | PENDING_SCAN | — | Full scan. |
+| 13 | Sun Yat-sen University | CANDIDATE_FOUND | University research evidence shows pool-boiling / phase-change work explicitly motivated by electronic-chip high-heat-flux thermal management. | Identify current lead group/person and recent continuity. |
 | 14 | Beijing Institute of Technology | PENDING_SCAN | — | Full scan. |
 | 15 | Southeast University | CANDIDATE_FOUND | Wenming Li: micro-scale flow/heat transfer, high-heat-flux electronics cooling, microchannel flow boiling and advanced two-phase cooling. | Qualify Actor/Capability. |
-| 16 | Sichuan University | PENDING_SCAN | — | Full scan. |
-| 17 | Renmin University of China | PENDING_SCAN | Low prior probability for this technical slice but still mandatory under Top-20 coverage rule. | Bounded scan, record negative if no signal. |
-| 18 | Tongji University | PENDING_SCAN | — | Full scan. |
-| 19 | Beijing Normal University | PENDING_SCAN | Low prior probability for this technical slice but still mandatory under Top-20 coverage rule. | Bounded scan, record negative if no signal. |
+| 16 | Sichuan University | WEAK_SIGNAL | Microchannel heat-sink work for electronic equipment exists, but first pass surfaced older evidence rather than a clearly current mobile-thermal program. | Deeper recent lab/person scan before closeout. |
+| 17 | Renmin University of China | SCANNED_NO_STRONG_SIGNAL | Bounded first-pass search found no strong engineering thermal-management group relevant to this slice. | Reopen only if later cross-source evidence appears. |
+| 18 | Tongji University | CANDIDATE_FOUND | Current phononics work targets thermal transport and device-level heat dissipation in high-power GaN micro/nano devices. | Qualify whether it affects phone-scale package/device decisions. |
+| 19 | Beijing Normal University | WEAK_SIGNAL | Current smart thermal-management materials work explicitly includes integrated-circuit/electronic-device use, but evidence is materials-oriented rather than a device cooling stack. | Keep as materials-side comparator unless stronger device evidence appears. |
 | 20 | Tianjin University | CANDIDATE_FOUND | Current official pages list chip thermal-management direction and an industry-linked chip thermal-management team. | Qualify person/team and technical evidence. |
 
 ## Non-Top-20 high-relevance exception
@@ -58,10 +58,15 @@ Ranking source:
 - Zhejiang University official profile for Zan Wu: chip cooling; power-electronics/device thermal management; phase-change and microchannel focus.
 - USTC official profile for Bin Xu: electronics thermal management; vapor-chamber heat spreader; microchannel evaporation/condensation.
 - HUST X-thermal official page: chip thermal transport, phase-change thermal management, ultra-thin vapor-spreader devices, Huawei exchange.
-- XJTU official profiles for Siyu Qin and Xiaoping Yang: ultra-thin VC, flexible LHP, two-phase transport and high-heat-flux chip cooling.
+- XJTU official profiles for Siyu Qin and Xiaoping Yang: ultra-thin VC, flexible LHP, two-phase transport and high-heat-flux chip cooling. Canonical onboarding complete.
 - Southeast University official profile for Wenming Li: microchannel flow boiling and high-heat-flux electronics cooling.
 - HIT official pages: high-heat-flux electronics cooling and miniaturized thermoelectric cooling.
 - Tianjin University official pages: chip thermal-management faculty/team.
+- Nanjing University official research news: electrocaloric thin-film cooling framed for chip thermal management.
+- Beihang official faculty/news: chip interconnect thermal resistance and advanced solid-state chip thermal control.
+- Sun Yat-sen University research page: pool-boiling heat transfer explicitly motivated by chip high-heat-flux cooling.
+- Tongji University phononics center: current GaN micro/nano-device thermal transport and heat dissipation.
+- Beijing Normal University faculty page: smart thermal-management materials for integrated circuits/electronic devices.
 
 ## Completion rule
 
