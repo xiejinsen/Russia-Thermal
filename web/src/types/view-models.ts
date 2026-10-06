@@ -71,6 +71,9 @@ export interface OverviewPageVM {
   title: string;
   summary: string;
   thesis: string;
+  theoryBasis: string[];
+  thesisBoundary?: string;
+  thesisAssessedAt?: string;
   stats: OverviewStatsVM;
   priorities: PartnerPriorityVM[];
   landscape: LandscapeRowVM[];
