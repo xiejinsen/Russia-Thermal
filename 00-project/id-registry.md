@@ -299,3 +299,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - PRI-01-KUT-LAB13 — 07-decisions/priorities/PRI-01-KUT-LAB13.md
 - PRI-02-MPEI — 07-decisions/priorities/PRI-02-MPEI.md
 - PRI-03-TPU — 07-decisions/priorities/PRI-03-TPU.md
+
+## SYNTHESIS
+
+- SYN-CURRENT-PORTFOLIO — 07-decisions/syntheses/SYN-CURRENT-PORTFOLIO.md
