@@ -31,10 +31,15 @@ export interface DirectionCardVM {
   id: string;
   title: string;
   role: string;
+  recommendation: string;
+  problem?: string;
+  collaborationFocus?: string;
   lane: StatusVM;
   differentiationConfidence: string;
   phoneTransferMaturity: string;
   residualDifferentiation?: string;
+  ourControlBoundary?: string;
+  nextQuestion?: string;
   nextGate?: string;
 }
 
