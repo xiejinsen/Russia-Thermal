@@ -374,3 +374,50 @@ export interface ClaimPageVM {
     rationale?: string;
   }>;
 }
+
+
+export interface PaperExplorerVM {
+  title: string;
+  summary: string;
+  records: Array<{
+    id: string;
+    title: string;
+    year?: number;
+    venue?: string;
+    authors: string[];
+    countryContext?: string;
+    claimCount: number;
+    directionCount: number;
+    href: string;
+  }>;
+}
+
+export interface PaperPageVM {
+  id: string;
+  title: string;
+  year?: number;
+  venue?: string;
+  authors: string[];
+  countryContext?: string;
+  primaryUrl: string;
+  findings: string[];
+  boundary?: string;
+  supportingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  contradictingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  capabilities: CapabilityDetailVM[];
+  institutions: InstitutionCardVM[];
+  scholars: ScholarCardVM[];
+  directions: DirectionCardVM[];
+}
