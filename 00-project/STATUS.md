@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: presentation-readiness architecture hardening / conclusion-first Synthesis contract
-next_action: canonicalize current portfolio thesis as Synthesis, wire web overview to canonical thesis, then begin Figma information-architecture redesign
+current_phase: light-blue intelligence visual baseline frozen / pyramid-content refinement
+next_action: refine module-by-module information hierarchy under the frozen intelligence visual style, then promote the selected design into the production Astro site
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
