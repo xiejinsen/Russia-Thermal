@@ -4,6 +4,9 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
 
 const items = [
   { label: 'Overview', path: '/' },
+  { label: 'Capabilities', path: '/capabilities' },
+  { label: 'Labs', path: '/institutions' },
+  { label: 'Key People', path: '/scholars' },
   { label: 'Partners', path: '/partners' },
   { label: 'Russia vs China', path: '/landscape' },
   { label: 'Evidence', path: '/evidence' },
@@ -28,8 +31,8 @@ const items = [
     top: 0;
     z-index: 10;
     border-bottom: 1px solid var(--line);
-    background: rgb(247 248 250 / 0.92);
-    backdrop-filter: blur(12px);
+    background: rgb(248 252 255 / 0.82);
+    backdrop-filter: blur(18px);
   }
 
   .inner {
