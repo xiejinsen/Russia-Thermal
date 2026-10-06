@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: China comparator closure / shared Research Map completion
-next_action: resolve remaining China EVIDENCE_QUALIFIED positive nodes, especially Fudan and Beijing Institute of Technology, complete the shared China Research Map, then freeze the leadership synthesis package
+current_phase: leadership package freeze / final evidence consistency audit
+next_action: run final evidence-chain, generated-view and web consistency audit; fix only decision-relevant defects, then freeze the Phase-1 leadership synthesis package
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
