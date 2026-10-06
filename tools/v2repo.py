@@ -237,7 +237,8 @@ def generate(db, check=False):
 
     registry_lines = []
     for kind in ("source", "claim", "actor", "capability", "direction", "experiment", "decision"):
-        registry_lines.append(f"## {kind.upper()}\n")
+        registry_lines.append(f"## {kind.upper()}")
+        registry_lines.append("")
         registry_lines.extend(f"- {o['id']} — {o['_path']}" for o in db[kind])
         registry_lines.append("")
     write("00-project/id-registry.md", "# V2.1 ID Registry\n\n" + "\n".join(registry_lines), check, stale)
