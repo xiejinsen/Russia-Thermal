@@ -18,12 +18,13 @@ related_claims:
 - CLM-TPU-006
 - CLM-TPU-007
 - CLM-TPU-008
+- CLM-CN-BIT-001
 
 candidate_capabilities:
 - CAP-TPU-LASER-WETTABILITY-PROCESS
 
 strongest_baseline:
-China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art.
+China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
 
 Residual differentiation:
 not generic laser processing; the retained opportunity is TPU-specific process execution plus a possible vacuum-stable confined routing/rewetting function after strong process gates.
