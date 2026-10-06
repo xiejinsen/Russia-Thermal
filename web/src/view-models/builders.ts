@@ -622,10 +622,38 @@ export function buildDecisionsVM(): DecisionsPageVM {
 }
 
 const frontierVenueDefinitions = [
-  { id: 'avtfg', name: 'AVTFG', purpose: 'Multiphase, phase-transition and micro/nanosystem discovery surface.', aliases: ['AVTFG'] },
-  { id: 'rnkt', name: 'Russian National Heat Transfer Conference (RNKT)', purpose: 'Broad Russian heat-transfer discovery surface for institutions, teams and emerging topics.', aliases: ['RNKT', 'Russian National Heat Transfer Conference'] },
-  { id: 'thermophysics-aeromechanics', name: 'Thermophysics and Aeromechanics', purpose: 'Thermophysical mechanisms, transport and diagnostics discovery surface.', aliases: ['Thermophysics and Aeromechanics'] },
-  { id: 'high-temperature', name: 'High Temperature', purpose: 'Thermophysics / high-temperature research discovery surface; useful for mechanism and lineage scans.', aliases: ['High Temperature', 'Teplofizika Vysokikh Temperatur'] }
+  {
+    id: 'avtfg',
+    name: 'AVTiFG / АВТиФГ',
+    kind: 'CONFERENCE',
+    officialUrl: 'https://www.itp.nsc.ru/conferences/avtfg25/',
+    purpose: 'All-Russian school-conference for thermophysics and physical fluid/gas dynamics; useful for emerging researchers, mechanisms and new topic discovery.',
+    aliases: ['AVTFG', 'AVTiFG', 'АВТиФГ']
+  },
+  {
+    id: 'rnkt',
+    name: 'Russian National Heat Transfer Conference (RNKT)',
+    kind: 'CONFERENCE',
+    officialUrl: 'https://rnkt.ru/',
+    purpose: 'Broad Russian heat-transfer discovery surface for institutions, teams and emerging topics.',
+    aliases: ['RNKT', 'Russian National Heat Transfer Conference', 'РНКТ']
+  },
+  {
+    id: 'thermophysics-aeromechanics',
+    name: 'Thermophysics and Aeromechanics',
+    kind: 'JOURNAL',
+    officialUrl: 'https://journals.rcsi.science/0869-8635/index',
+    purpose: 'Russian journal covering thermophysical mechanisms, heat/mass transfer, transport, fluid dynamics and diagnostics.',
+    aliases: ['Thermophysics and Aeromechanics']
+  },
+  {
+    id: 'high-temperature',
+    name: 'High Temperature',
+    kind: 'JOURNAL',
+    officialUrl: 'https://energy.ihed.ras.ru/en/main',
+    purpose: 'Russian thermal-physics journal covering heat/mass transfer, boiling, condensation, thermophysical properties and related experimental methods.',
+    aliases: ['High Temperature', 'Teplofizika Vysokikh Temperatur']
+  }
 ] as const;
 
 function venueMatches(item: EvidenceRecord, aliases: readonly string[]): boolean {
@@ -659,6 +687,8 @@ export function buildFrontierWatchVM(): FrontierWatchVM {
     return {
       id: definition.id,
       name: definition.name,
+      kind: definition.kind,
+      officialUrl: definition.officialUrl,
       purpose: definition.purpose,
       evidenceCount: matchedEvidence.length,
       latestYear: years.length ? Math.max(...years) : undefined,
