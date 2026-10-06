@@ -69,7 +69,7 @@ Canonical collaboration evidence:
 
 ## China / global baseline
 
-China/global capability is already strong in:
+China/global capability is already strong in, including an active SJTU cluster spanning dielectric-fluid phase change, dryout-mitigation microchannels and chip thermal management:
 - capillary-fed dryout and rewetting;
 - treated-mesh boiling;
 - transient time-to-dryout / time-to-rewet;
@@ -80,7 +80,7 @@ Therefore:
 **do not position Lab 1.3 as uniquely able to detect dryout.**
 
 Residual:
-mechanism-specific irreversible-transition interpretation.
+mechanism-specific irreversible-transition interpretation. SJTU strengthens the baseline but does not publicly demonstrate the same reversible-to-irreversible dry-spot diagnostic depth.
 
 ## Best collaboration question
 
