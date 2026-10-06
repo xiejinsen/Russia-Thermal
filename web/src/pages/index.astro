@@ -7,6 +7,7 @@ import InstitutionCard from '../components/cards/InstitutionCard.astro';
 import ExecutivePriorityCard from '../components/ExecutivePriorityCard.astro';
 import LandscapeInsightCard from '../components/LandscapeInsightCard.astro';
 import KillDecisionCard from '../components/KillDecisionCard.astro';
+import CollaborationModel from '../components/CollaborationModel.astro';
 import { buildOverviewVM } from '../view-models/builders';
 
 const vm = buildOverviewVM();
@@ -64,6 +65,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       title="Where Russian value survives comparator pressure"
       description="The strongest China/global baseline is shown next to the residual Russian differentiation that remains worth retaining."
     />
+    <CollaborationModel rows={vm.landscape} priorities={vm.priorities} />
     <div class="landscape-grid">
       {vm.landscape.map((model) => <LandscapeInsightCard model={model} />)}
     </div>
