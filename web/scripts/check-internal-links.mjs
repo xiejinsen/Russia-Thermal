@@ -40,9 +40,14 @@ const files = walk(root).filter((file) => file.endsWith('.html'));
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   const sourceRoute = routeForFile(file);
-  const localIds = idsIn(html);
+  if (sourceRoute.startsWith(base + 'fixtures/')) continue;
 
-  for (const match of html.matchAll(/\shref=["']([^"']+)["']/g)) {
+  const auditableHtml = html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
+  const localIds = idsIn(auditableHtml);
+
+  for (const match of auditableHtml.matchAll(/\shref=["']([^"']+)["']/g)) {
     const raw = match[1].trim();
     if (!raw || /^(https?:|mailto:|tel:|javascript:)/i.test(raw)) continue;
 
@@ -74,7 +79,9 @@ for (const file of files) {
     }
 
     if (url.hash && target.endsWith('.html')) {
-      const targetHtml = fs.readFileSync(target, 'utf8');
+      const targetHtml = fs.readFileSync(target, 'utf8')
+        .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+        .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
       const fragment = decodeURIComponent(url.hash.slice(1));
       if (fragment && !idsIn(targetHtml).has(fragment)) {
         errors.push(sourceRoute + ': missing target anchor ' + raw);
