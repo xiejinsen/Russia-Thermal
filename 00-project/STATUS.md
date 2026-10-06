@@ -9,7 +9,7 @@ research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
 current_phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-next_action: implement disposition-aware web research-coverage surfaces so support-only, comparator-only, context, evidence-gap, and investigated-but-not-promoted assets remain discoverable; then fix stale China-map/comparator/homepage presentation before final leadership packaging
+next_action: extend the Web results-conversion layer with Capability detail graph drill-down and actor-centric Institution / Scholar filtering; then normalize Paper Deep Read / 10Q presentation and finish portfolio/design consolidation
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
