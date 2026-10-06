@@ -1,0 +1,73 @@
+---
+import type { LandscapeRowVM, PartnerPriorityVM } from '../types/view-models';
+interface Props { rows: LandscapeRowVM[]; priorities: PartnerPriorityVM[]; }
+const { rows, priorities } = Astro.props;
+
+const retained = rows.filter((row) =>
+  ['Strategic Candidate', 'Stage0 Challenger', 'Reserve'].includes(row.decision)
+).slice(0, 3);
+---
+
+<section class="collab-model" aria-labelledby="collab-title">
+  <div class="collab-head">
+    <div>
+      <p class="eyebrow">Collaboration model</p>
+      <h2 id="collab-title">Combine complementary strengths, not country-level superiority</h2>
+    </div>
+    <p>The retained opportunity is a three-part system: Russian mechanism / reliability depth, China's device / manufacturing baseline, and our smartphone integration and validation control.</p>
+  </div>
+
+  <div class="flow">
+    <article class="node russia">
+      <span class="node-index">01</span>
+      <h3>Russia</h3>
+      <p class="node-sub">Residual specialist value</p>
+      <ul>
+        {retained.map((row) => <li>{row.russiaResidual}</li>)}
+      </ul>
+    </article>
+
+    <div class="operator" aria-hidden="true">×</div>
+
+    <article class="node china">
+      <span class="node-index">02</span>
+      <h3>China / global baseline</h3>
+      <p class="node-sub">Device, process and scale pressure</p>
+      <ul>
+        {retained.map((row) => <li>{row.chinaBaseline}</li>)}
+      </ul>
+    </article>
+
+    <div class="operator" aria-hidden="true">×</div>
+
+    <article class="node us">
+      <span class="node-index">03</span>
+      <h3>Our team</h3>
+      <p class="node-sub">Smartphone architecture & validation</p>
+      <ul>
+        <li>Define phone-class constraints, observables and system trade-offs.</li>
+        <li>Own integration, experiment design and product-transfer validation.</li>
+        <li>Protect foreground IP around smartphone-specific implementation.</li>
+      </ul>
+    </article>
+
+    <div class="equals" aria-hidden="true">→</div>
+
+    <article class="outcome">
+      <p class="eyebrow">Outcome</p>
+      <h3>{priorities.length} bounded collaboration packages</h3>
+      <p>Advance only where residual differentiation survives comparator pressure and clears a phone-relevant validation gate.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+.collab-model{display:grid;gap:var(--space-6);padding:var(--space-8);border:1px solid rgb(105 157 203 / .2);border-radius:calc(var(--radius-lg) + .2rem);background:linear-gradient(135deg,rgb(255 255 255 / .96),rgb(231 244 255 / .78));box-shadow:0 20px 60px rgb(35 75 102 / .08)}
+.collab-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);gap:var(--space-8);align-items:end}.collab-head h2,.collab-head p{margin:0}.collab-head h2{font-size:clamp(1.75rem,3vw,2.7rem);line-height:1.02;letter-spacing:-.04em}.collab-head>p{color:var(--text-muted)}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto minmax(15rem,.8fr);gap:var(--space-3);align-items:stretch}
+.node,.outcome{padding:var(--space-5,1.25rem);border:1px solid var(--line);border-radius:var(--radius-md);background:rgb(255 255 255 / .86)}
+.node-index{display:inline-grid;place-items:center;min-width:2.2rem;height:2.2rem;border-radius:.75rem;background:var(--accent-soft);color:var(--accent-vivid);font-weight:900}
+.node h3,.outcome h3{margin:var(--space-3) 0 var(--space-1);font-size:1.15rem}.node-sub,.outcome p{margin:0;color:var(--text-muted);font-size:.88rem}.node ul{margin:var(--space-4) 0 0;padding-left:1.1rem;color:var(--text-muted);font-size:.86rem}.node li+li{margin-top:var(--space-2)}
+.operator,.equals{display:grid;place-items:center;color:var(--accent-vivid);font-size:1.7rem;font-weight:900}.outcome{align-content:center;background:linear-gradient(145deg,#17324b,#24597b);color:white}.outcome .eyebrow{color:#9ed2ff}.outcome p{color:rgb(255 255 255 / .74)}
+@media(max-width:1050px){.flow{grid-template-columns:1fr}.operator,.equals{height:1.5rem}.collab-head{grid-template-columns:1fr}}
+</style>
