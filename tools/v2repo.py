@@ -171,14 +171,32 @@ def generate(db, check=False):
     write("07-decisions/kill-ledger.md", "# Kill / Downgrade Ledger\n\n" + ("\n".join(killed) or "- none"), check, stale)
 
     status = parse(ROOT / "00-project/STATUS.md")
+    direction_lines = []
+    for o in db["direction"]:
+        residual = field(o, "residual_differentiation", field(o, "strategic_use", "-"))
+        baseline = field(o, "strongest_baseline", "-")
+        next_q = field(o, "next_question", field(o, "promotion_gate", "-"))
+        direction_lines.append(
+            f"### {o['id']}\n"
+            f"- lane: {field(o,'investment_lane')}\n"
+            f"- phone_maturity: {field(o,'phone_transfer_maturity')}\n"
+            f"- residual_or_use: {residual}\n"
+            f"- strongest_baseline: {baseline}\n"
+            f"- next_question_or_gate: {next_q}"
+        )
     body = (
         "# Restart Snapshot\n\n"
         f"- authority: {field(status,'authority')}\n"
         f"- mode: {field(status,'research_mode')}\n"
         f"- phase: {field(status,'current_phase')}\n"
         f"- next: {field(status,'next_action')}\n\n"
-        "## Directions\n" +
-        "\n".join(f"- {o['id']}: {field(o,'investment_lane')} / phone={field(o,'phone_transfer_maturity')}" for o in db["direction"])
+        "## Directions\n\n" +
+        "\n\n".join(direction_lines) +
+        "\n\n## Mandatory guardrails\n"
+        "- Broad Russia superiority claims remain killed unless explicitly reopened by a Decision Event.\n"
+        "- Evidence confidence and phone/product maturity are separate.\n"
+        "- Read 07-decisions/kill-ledger.md before reopening a killed thesis.\n"
+        "- Historical V1 round files are provenance, not required current truth."
     )
     write("00-project/restart-snapshot.md", body, check, stale)
 
@@ -216,6 +234,13 @@ def generate(db, check=False):
         "\n\n## Watch / Hold\n\n" + header + ("\n".join(watch_rows) if watch_rows else "| - | - | - | - | - | - | - |")
     )
     write("views/russia-vs-china/phase1-management.md", body, check, stale)
+
+    registry_lines = []
+    for kind in ("source", "claim", "actor", "capability", "direction", "experiment", "decision"):
+        registry_lines.append(f"## {kind.upper()}\n")
+        registry_lines.extend(f"- {o['id']} — {o['_path']}" for o in db[kind])
+        registry_lines.append("")
+    write("00-project/id-registry.md", "# V2.1 ID Registry\n\n" + "\n".join(registry_lines), check, stale)
 
     return stale
 
