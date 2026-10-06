@@ -295,10 +295,10 @@ const directions = [...new Map(
       const dirs = document.getElementById('detail-direction-list');
       dirs.innerHTML = node.directions.length
         ? node.directions.map((direction) => `
-          <div class="direction-item">
+          <a class="direction-item" href="${base}directions/${direction.id}">
             <b>${direction.title}</b>
             <span>${direction.recommendation}</span>
-          </div>`).join('')
+          </a>`).join('')
         : '<span class="empty-inline">No strategic Direction currently linked.</span>';
 
       cards.forEach((card) => card.classList.toggle('selected', card.dataset.nodeId === id));
@@ -395,7 +395,7 @@ const directions = [...new Map(
     .people-links { display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
     .people-links a { padding:6px 8px; border-radius:8px; background:#eef6fc; color:#255c84; font-size:11px; text-decoration:none; font-weight:700; }
     .direction-list { display:grid; gap:8px; margin-top:10px; }
-    .direction-item { display:grid; gap:3px; padding:10px; background:#f6fafd; border-left:3px solid #5ba4dd; }
+    .direction-item { display:grid; gap:3px; padding:10px; background:#f6fafd; border-left:3px solid #5ba4dd; text-decoration:none; color:inherit; }
     .direction-item b { font-size:12px; }
     .direction-item span { color:#087a66; font-size:10px; font-weight:800; }
     .empty-inline { color:#788b99; font-size:11px; }
