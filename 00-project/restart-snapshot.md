@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: production Intelligence homepage live / full-site drill-down hardening
-- next: finish link/dead-end audit, then enrich China comparator Actor graph and build the shared China Research Map
+- phase: web V1 production complete / research-data enrichment
+- next: enrich China comparator Actor graph and complete the shared China Research Map without changing the frozen Web V1 presentation architecture
 
 ## Directions
 
