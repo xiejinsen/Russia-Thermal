@@ -648,3 +648,41 @@ export function buildFrontierWatchVM(): FrontierWatchVM {
       'A new node should only be promoted when evidence shows current continuity plus direct or transferable mobile relevance, device/process evidence, or a distinct control point not already represented.'
   };
 }
+
+
+export function buildCapabilitiesCollectionVM(): import('../types/view-models').CollectionPageVM<CapabilityDetailVM> {
+  return {
+    eyebrow: 'Collection',
+    title: 'Capabilities',
+    summary: 'Browse all normalized technical capabilities. Each record remains owned by its canonical actor and linked onward to claims and strategic directions.',
+    records: [...capabilities]
+      .sort((a, b) => a.id.localeCompare(b.id))
+      .map(capabilityDetail)
+  };
+}
+
+export function buildInstitutionsCollectionVM(): import('../types/view-models').CollectionPageVM<InstitutionCardVM> {
+  const records = actors
+    .filter((actor) => actor.type === 'ORGANIZATION' || actor.type === 'LAB')
+    .map((actor) => institutionCard(actor, capabilities.filter((capability) => capability.actorId === actor.id)))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  return {
+    eyebrow: 'Collection',
+    title: 'Institutions & labs',
+    summary: 'Browse the organizations and laboratories represented in the canonical Actor graph.',
+    records
+  };
+}
+
+export function buildScholarsCollectionVM(): import('../types/view-models').CollectionPageVM<ScholarCardVM> {
+  const records = actors
+    .filter((actor) => actor.type === 'PERSON')
+    .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  return {
+    eyebrow: 'Collection',
+    title: 'Key people',
+    summary: 'Browse researchers and collaborators linked to institutions, capabilities and directions.',
+    records
+  };
+}
