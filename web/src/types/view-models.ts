@@ -123,6 +123,7 @@ export interface CapabilityDetailVM {
   technicalScope: string[];
   transferBoundary?: string;
   strategicUse?: string;
+  portfolioDisposition: string;
 }
 
 export interface InstitutionPageVM {
@@ -166,6 +167,7 @@ export interface EvidenceCardVM {
   countryContext?: string;
   findings: string[];
   boundary?: string;
+  usageRole?: string;
   supportingClaims: Array<{
     id: string;
     proposition: string;
@@ -349,6 +351,7 @@ export interface ClaimExplorerVM {
     proposition: string;
     status: string;
     confidence: string;
+    decisionRole?: string;
     supportingCount: number;
     contradictingCount: number;
     directionCount: number;
@@ -361,6 +364,7 @@ export interface ClaimPageVM {
   proposition: string;
   status: string;
   confidence: string;
+  decisionRole?: string;
   boundary?: string;
   supportingEvidence: EvidenceCardVM[];
   contradictingEvidence: EvidenceCardVM[];
