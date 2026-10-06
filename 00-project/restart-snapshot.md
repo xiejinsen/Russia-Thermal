@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W1 exporter + schemas completed / normalized data validation PASS
-- next: begin web W2 design-system skeleton: Astro shell, tokens, primitives, navigation and fixture pages; keep frontend free of canonical parsing
+- phase: web W2 design-system skeleton implemented on main / Astro build gate added
+- next: stabilize W2 primitives, card contracts, layout/navigation and fixture states; then build real Overview and Partner Portfolio view models/pages
 
 ## Directions
 
