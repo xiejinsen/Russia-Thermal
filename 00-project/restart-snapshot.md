@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: Russian heat-transfer venue ecosystem supplemental scan completed / new supporting nodes added / primary portfolio unchanged
-- next: prepare final management synthesis; include BMSTU/Zubkov, MPEI-Skoltech additive thermosyphon and Frumkin surface-chemistry nodes as supplemental capabilities
+- phase: final management synthesis V1 completed / leadership-reader review pending
+- next: review reports/final-management-synthesis.md for leadership readability, balance and omissions; revise to V2 before web/PPT implementation
 
 ## Directions
 
