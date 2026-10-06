@@ -18,7 +18,9 @@ import type {
   DecisionsPageVM,
   DecisionEventVM,
   FrontierWatchVM,
-  FrontierVenueVM
+  FrontierVenueVM,
+  ResearchMapVM,
+  ResearchMapNodeVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -713,5 +715,115 @@ export function buildScholarsCollectionVM(): import('../types/view-models').Coll
     title: 'Key people',
     summary: 'Browse researchers and collaborators linked to institutions, capabilities and directions.',
     records
+  };
+}
+
+
+function actorDescendantIds(rootId: string): Set<string> {
+  const ids = new Set<string>([rootId]);
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const actor of actors) {
+      if (actor.parentId && ids.has(actor.parentId) && !ids.has(actor.id)) {
+        ids.add(actor.id);
+        changed = true;
+      }
+    }
+  }
+  return ids;
+}
+
+export function buildResearchMapVM(country = 'RU'): ResearchMapVM {
+  const countryActors = actors.filter((actor) => actor.country === country);
+  const roots = countryActors.filter(
+    (actor) => actor.type !== 'PERSON' && (!actor.parentId || actorById.get(actor.parentId)?.country !== country)
+  );
+
+  const nodes: ResearchMapNodeVM[] = [];
+  const unmappedActors: Array<{ id: string; name: string; href: string }> = [];
+  const allScholarIds = new Set<string>();
+  const allCapabilityIds = new Set<string>();
+  const allDirectionIds = new Set<string>();
+
+  for (const root of roots) {
+    const descendantIds = actorDescendantIds(root.id);
+    const scopedCapabilities = capabilities.filter((cap) => descendantIds.has(cap.actorId));
+    const scopedCapabilityIds = new Set(scopedCapabilities.map((cap) => cap.id));
+    const scopedPeopleIds = new Set<string>();
+
+    for (const cap of scopedCapabilities) {
+      allCapabilityIds.add(cap.id);
+      cap.keyPeopleIds.forEach((id) => scopedPeopleIds.add(id));
+    }
+    for (const actor of countryActors) {
+      if (actor.type === 'PERSON' && actor.parentId && descendantIds.has(actor.parentId)) {
+        scopedPeopleIds.add(actor.id);
+      }
+    }
+    scopedPeopleIds.forEach((id) => allScholarIds.add(id));
+
+    const linkedDirections = sortedDirections.filter((direction) =>
+      direction.capabilityIds.some((id) => scopedCapabilityIds.has(id))
+    );
+    linkedDirections.forEach((direction) => allDirectionIds.add(direction.id));
+
+    const priority = [...priorities]
+      .sort((a, b) => Number(a.rank.slice(1)) - Number(b.rank.slice(1)))
+      .find((item) => item.targetActorIds.some((id) => descendantIds.has(id)));
+
+    const href = actorHref(root.id, root.type);
+    if (typeof root.latitude !== 'number' || typeof root.longitude !== 'number' || !root.city) {
+      unmappedActors.push({ id: root.id, name: root.name, href });
+      continue;
+    }
+
+    nodes.push({
+      actorId: root.id,
+      name: root.name,
+      actorType: actorKind(root.type),
+      city: root.city,
+      region: root.region ?? undefined,
+      latitude: root.latitude,
+      longitude: root.longitude,
+      href,
+      scholarCount: scopedPeopleIds.size,
+      capabilityCount: scopedCapabilities.length,
+      keyPeople: [...scopedPeopleIds]
+        .map((id) => actorById.get(id))
+        .filter((person): person is ActorRecord => Boolean(person))
+        .slice(0, 6)
+        .map((person) => ({
+          id: person.id,
+          name: person.name,
+          href: actorHref(person.id, person.type)
+        })),
+      directions: linkedDirections.map((direction) => ({
+        id: direction.id,
+        title: directionTitle(direction.id),
+        recommendation: recommendationFromLane(direction.investmentLane)
+      })),
+      priorityRank: priority?.rank
+    });
+  }
+
+  nodes.sort((a, b) => {
+    const ar = a.priorityRank ? Number(a.priorityRank.slice(1)) : 99;
+    const br = b.priorityRank ? Number(b.priorityRank.slice(1)) : 99;
+    return ar - br || a.city.localeCompare(b.city) || a.name.localeCompare(b.name);
+  });
+
+  return {
+    country,
+    title: country === 'RU' ? 'Russia research map' : `${country} research map`,
+    summary:
+      'Geographic navigator for institutions, labs, scholars, capabilities and strategic directions. Marker density is not a country capability score.',
+    nodes,
+    mappedActorCount: nodes.length,
+    unmappedActorCount: unmappedActors.length,
+    scholarCount: allScholarIds.size,
+    capabilityCount: allCapabilityIds.size,
+    directionCount: allDirectionIds.size,
+    unmappedActors: unmappedActors.sort((a, b) => a.name.localeCompare(b.name))
   };
 }
