@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { buildPaperPageVM, paperIds } from '../../view-models/builders';
+
+export function getStaticPaths() {
+  return paperIds().map((id) => ({ params: { id } }));
+}
+
+const id = Astro.params.id!;
+const vm = buildPaperPageVM(id);
+if (!vm) throw new Error(`Unknown paper: ${id}`);
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout title={`Russia-Thermal — ${vm.title}`} description={vm.findings[0] ?? vm.title}>
+  <SiteHeader slot="header" />
+
+  <section class="paper-hero">
+    <p class="eyebrow">Paper detail · {vm.id}</p>
+    <h1>{vm.title}</h1>
+    <div class="metadata">
+      {vm.year && <span>{vm.year}</span>}
+      {vm.countryContext && <span>{vm.countryContext}</span>}
+      {vm.venue && <span>{vm.venue}</span>}
+    </div>
+    {vm.authors.length > 0 && <p class="authors">{vm.authors.join(', ')}</p>}
+    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">Open original source ↗</a>
+  </section>
+
+  <section class="read-grid">
+    <article class="main-read">
+      <span>WHAT THIS PAPER ESTABLISHES</span>
+      <h2>Direct reported findings</h2>
+      {vm.findings.length ? (
+        <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
+      ) : (
+        <p>No direct findings have been normalized yet.</p>
+      )}
+    </article>
+
+    <article class="boundary-card">
+      <span>BOUNDARY</span>
+      <h2>What this paper does not prove</h2>
+      <p>{vm.boundary ?? 'No explicit boundary has been normalized yet.'}</p>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>CLAIMS</span><h2>How this paper enters the evidence graph</h2></div>
+      <p>Claims separate the paper's reported facts from project-level interpretation.</p>
+    </div>
+    <div class="claims-grid">
+      <div>
+        <h3>Supporting</h3>
+        {vm.supportingClaims.length ? vm.supportingClaims.map((claim) => (
+          <a href={href(claim.href)}>
+            <span>{claim.status} · {claim.confidence}</span>
+            <b>{claim.proposition}</b>
+          </a>
+        )) : <p class="empty">No supporting Claim currently links this paper.</p>}
+      </div>
+      <div>
+        <h3>Contradicting / pressure</h3>
+        {vm.contradictingClaims.length ? vm.contradictingClaims.map((claim) => (
+          <a href={href(claim.href)}>
+            <span>{claim.status} · {claim.confidence}</span>
+            <b>{claim.proposition}</b>
+          </a>
+        )) : <p class="empty">No contradicting Claim currently links this paper.</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>STRATEGIC IMPACT</span><h2>Capabilities and Directions connected to this paper</h2></div>
+    </div>
+
+    <div class="impact-grid">
+      <div>
+        <h3>Directions</h3>
+        {vm.directions.map((direction) => (
+          <a href={href(`/directions/${direction.id}`)}>
+            <b>{direction.title}</b>
+            <span>{direction.recommendation}</span>
+          </a>
+        ))}
+      </div>
+
+      <div>
+        <h3>Capabilities</h3>
+        {vm.capabilities.map((capability) => (
+          <article>
+            <b>{capability.statement}</b>
+            <span>{capability.maturity} · {capability.evidenceConfidence}</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>PEOPLE & ORGS</span><h2>Institutions and scholars connected through capability ownership</h2></div>
+    </div>
+
+    <div class="impact-grid">
+      <div>
+        <h3>Institutions / labs</h3>
+        {vm.institutions.map((institution) => (
+          <a href={href(institution.href ?? `/institutions/${institution.id}`)}>
+            <b>{institution.name}</b>
+            <span>{institution.summary}</span>
+          </a>
+        ))}
+      </div>
+
+      <div>
+        <h3>Scholars</h3>
+        {vm.scholars.map((scholar) => (
+          <a href={href(scholar.href ?? `/scholars/${scholar.id}`)}>
+            <b>{scholar.name}</b>
+            <span>{scholar.affiliation}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .paper-hero{padding:28px;border:1px solid #cfe1ee;border-radius:17px;background:#fff;box-shadow:0 10px 30px rgba(42,96,140,.06)}
+    .paper-hero h1{max-width:1100px;margin:6px 0 12px;font-size:32px;line-height:1.15;letter-spacing:-.03em}
+    .metadata{display:flex;gap:7px;flex-wrap:wrap}.metadata span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:10px;font-weight:800}
+    .authors{margin:14px 0 0;color:#60788b;font-size:13px}.source-link{display:inline-block;margin-top:17px;color:#0b67b2;font-size:12px;font-weight:850}
+    .read-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:15px;margin-top:18px}.read-grid article{padding:20px;border:1px solid #d3e3ee;border-radius:14px;background:#fff}
+    .read-grid article>span,.section-head span{font-size:10px;color:#0b67b2;font-weight:850;letter-spacing:.08em}.read-grid h2{font-size:18px;margin:5px 0 10px}
+    .main-read ul{margin:0;padding-left:20px;color:#466276;font-size:13px;line-height:1.7}.boundary-card{background:#fffaf4!important}.boundary-card p{color:#6c5c48;font-size:13px;line-height:1.65}
+    .section{margin-top:18px;border:1px solid #d3e3ee;border-radius:14px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:25px;padding:16px 18px;border-bottom:1px solid #e0ebf3;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:18px}.section-head p{max-width:500px;margin:0;color:#60788b;font-size:12px}
+    .claims-grid,.impact-grid{display:grid;grid-template-columns:1fr 1fr}.claims-grid>div,.impact-grid>div{padding:16px}.claims-grid>div+div,.impact-grid>div+div{border-left:1px solid #e5edf3}
+    .claims-grid h3,.impact-grid h3{font-size:12px;color:#587084}.claims-grid a,.impact-grid a{display:grid;gap:4px;padding:10px 0;border-top:1px solid #edf2f6;text-decoration:none;color:inherit}
+    .claims-grid a span,.impact-grid a span,.impact-grid article span{font-size:10px;color:#6c8293}.claims-grid a b,.impact-grid a b,.impact-grid article b{font-size:12px;line-height:1.45}
+    .impact-grid article{display:grid;gap:4px;padding:10px 0;border-top:1px solid #edf2f6}.empty{color:#718697;font-size:12px}
+    @media(max-width:800px){.read-grid,.claims-grid,.impact-grid{grid-template-columns:1fr}.claims-grid>div+div,.impact-grid>div+div{border-left:0;border-top:1px solid #e5edf3}}
+  </style>
+</BaseLayout>
