@@ -22,6 +22,37 @@ ROOT = Path(__file__).resolve().parents[2]
 V2REPO_PATH = ROOT / "tools" / "v2repo.py"
 DEFAULT_OUT = ROOT / "web" / "data" / "generated"
 SCHEMA_VERSION = "1.0"
+VISIBILITY_DIR = ROOT / "00-project" / "visibility-dispositions"
+
+
+def markdown_role_map(path: Path) -> dict[str, str]:
+    """Read a two-column role mapping from the project's markdown disposition tables."""
+    out: dict[str, str] = {}
+    if not path.exists():
+        return out
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        if len(cells) < 2:
+            continue
+        key, role = cells[0], cells[1]
+        if key in {"Source", "Claim", "Capability"} or not role:
+            continue
+        if set(key) <= {"-", ":", " "}:
+            continue
+        if re.match(r"^(?:OFFICIAL|PAPER|PATENT|CLM|CAP)-", key):
+            out[key] = role
+    return out
+
+
+def load_visibility_dispositions() -> dict[str, dict[str, str]]:
+    return {
+        "sources": markdown_role_map(VISIBILITY_DIR / "sources.md"),
+        "claims": markdown_role_map(VISIBILITY_DIR / "claims.md"),
+        "capabilities": markdown_role_map(VISIBILITY_DIR / "capabilities.md"),
+    }
 
 
 def load_v2repo():
@@ -145,7 +176,7 @@ def actor_record(o: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def evidence_record(o: dict[str, Any]) -> dict[str, Any]:
+def evidence_record(o: dict[str, Any], usage_role: str | None = None) -> dict[str, Any]:
     return {
         "id": o["id"],
         "sourceType": nullable(o.get("source_type")) or "",
@@ -157,11 +188,12 @@ def evidence_record(o: dict[str, Any]) -> dict[str, Any]:
         "countryContext": nullable(o.get("country_context")),
         "directFindings": findings(o),
         "boundary": nullable(o.get("boundary")),
+        "usageRole": usage_role,
         "sourcePath": o["_path"],
     }
 
 
-def claim_record(o: dict[str, Any]) -> dict[str, Any]:
+def claim_record(o: dict[str, Any], decision_role: str | None = None) -> dict[str, Any]:
     return {
         "id": o["id"],
         "proposition": nullable(o.get("proposition")) or "",
@@ -170,11 +202,12 @@ def claim_record(o: dict[str, Any]) -> dict[str, Any]:
         "supportingSourceIds": as_list(o.get("supporting_sources")),
         "contradictingSourceIds": as_list(o.get("contradicting_sources")),
         "boundary": nullable(o.get("boundary")),
+        "decisionRole": decision_role,
         "sourcePath": o["_path"],
     }
 
 
-def capability_record(o: dict[str, Any]) -> dict[str, Any]:
+def capability_record(o: dict[str, Any], portfolio_disposition: str | None = None) -> dict[str, Any]:
     return {
         "id": o["id"],
         "actorId": nullable(o.get("actor_id")) or "",
@@ -187,6 +220,7 @@ def capability_record(o: dict[str, Any]) -> dict[str, Any]:
         "technicalScope": as_list(o.get("technical_scope")),
         "transferBoundary": nullable(o.get("transfer_boundary")),
         "strategicUse": nullable(o.get("strategic_use")),
+        "portfolioDisposition": portfolio_disposition,
         "sourcePath": o["_path"],
     }
 
@@ -382,6 +416,53 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             if did not in direction_ids:
                 errors.append(f"{r['id']}: unresolved relatedDirectionId {did}")
 
+    allowed_source_roles = {"CONTEXT_PROFILE", "RANKING_CONTEXT", "FRONTIER_DISCOVERY", "BACKGROUND_CONTEXT", "UNRESOLVED"}
+    allowed_claim_roles = {"PARTNER_READINESS", "PORTFOLIO_RATIONALE", "COMPARATOR_UMBRELLA", "FRONTIER_DISCOVERY", "EVIDENCE_GAP", "BACKGROUND", "UNRESOLVED"}
+    allowed_capability_dispositions = {"DIRECTION_LINKED", "COMPARATOR_ONLY", "SUPPORT_ONLY", "BACKGROUND_KILLED_THESIS", "UNRESOLVED"}
+
+    claimed_source_ids = {
+        sid
+        for claim in datasets["claims"]
+        for sid in claim["supportingSourceIds"] + claim["contradictingSourceIds"]
+    }
+    for r in datasets["evidence"]:
+        role = r.get("usageRole")
+        if role and role not in allowed_source_roles:
+            errors.append(f"{r['id']}: invalid usageRole {role}")
+        if r["id"] not in claimed_source_ids and not role:
+            errors.append(f"{r['id']}: semantic orphan source; add Claim linkage or usageRole")
+
+    downstream_claim_ids = {
+        cid for cap in datasets["capabilities"] for cid in cap["claimIds"]
+    } | {
+        cid for direction in datasets["directions"] for cid in direction["claimIds"]
+    } | {
+        cid for event in datasets["decisions"] for cid in event["triggerClaimIds"]
+    } | {
+        cid for synthesis in datasets["syntheses"] for cid in synthesis["supportingClaimIds"]
+    }
+    for r in datasets["claims"]:
+        role = r.get("decisionRole")
+        if role and role not in allowed_claim_roles:
+            errors.append(f"{r['id']}: invalid decisionRole {role}")
+        if r["id"] not in downstream_claim_ids and not role:
+            errors.append(f"{r['id']}: claim has no downstream consumer or decisionRole")
+        if not r["supportingSourceIds"] and not r["contradictingSourceIds"] and role != "EVIDENCE_GAP":
+            errors.append(f"{r['id']}: source-less Claim must be explicitly classified as EVIDENCE_GAP")
+
+    direction_capability_ids = {
+        cid for direction in datasets["directions"] for cid in direction["capabilityIds"]
+    }
+    for r in datasets["capabilities"]:
+        disposition = r.get("portfolioDisposition")
+        if disposition not in allowed_capability_dispositions:
+            errors.append(f"{r['id']}: missing or invalid portfolioDisposition {disposition}")
+            continue
+        if r["id"] in direction_capability_ids and disposition != "DIRECTION_LINKED":
+            errors.append(f"{r['id']}: Direction-linked capability must use DIRECTION_LINKED disposition")
+        if r["id"] not in direction_capability_ids and disposition == "DIRECTION_LINKED":
+            errors.append(f"{r['id']}: DIRECTION_LINKED disposition has no Direction consumer")
+
     return errors
 
 
@@ -392,11 +473,12 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
     if canonical_errors:
         raise RuntimeError("canonical validation failed:\n" + "\n".join(canonical_errors))
 
+    roles = load_visibility_dispositions()
     return {
         "actors": [actor_record(o) for o in db["actor"]],
-        "evidence": [evidence_record(o) for o in db["source"]],
-        "claims": [claim_record(o) for o in db["claim"]],
-        "capabilities": [capability_record(o) for o in db["capability"]],
+        "evidence": [evidence_record(o, roles["sources"].get(o["id"])) for o in db["source"]],
+        "claims": [claim_record(o, roles["claims"].get(o["id"])) for o in db["claim"]],
+        "capabilities": [capability_record(o, roles["capabilities"].get(o["id"])) for o in db["capability"]],
         "directions": [direction_record(o) for o in db["direction"]],
         "decisions": [decision_record(o) for o in db["decision"]],
         "priorities": [priority_record(o) for o in db["priority"]],
