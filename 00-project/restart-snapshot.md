@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: mechanism-specific thermal-health observability matrix completed / controlled-excitation path retained
-- next: specify the minimum falsifying dataset for controlled-excitation crisis/recovery discrimination and lab-first aging-state separation
+- phase: collaboration readiness & industrial translation review completed / partner priority converged
+- next: converge leadership-facing institution + key-person dossiers for Tier A/B candidates; keep observer/dataset work frozen as future validation
 
 ## Directions
 
