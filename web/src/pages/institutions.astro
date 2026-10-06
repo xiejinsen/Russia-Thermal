@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import { buildInstitutionsCollectionVM } from '../view-models/builders';
+
+const vm = buildInstitutionsCollectionVM();
+---
+
+<BaseLayout title="Russia-Thermal — Institutions & Labs" description={vm.summary}>
+  <SiteHeader slot="header" />
+  <section class="collection-hero">
+    <p class="eyebrow">{vm.eyebrow}</p>
+    <h1>{vm.title}</h1>
+    <p>{vm.summary}</p>
+    <div class="count">{vm.records.length} records</div>
+  </section>
+  <section class="collection-grid">
+    {vm.records.map((model) => <InstitutionCard model={model} />)}
+  </section>
+</BaseLayout>
+
+<style>
+  .collection-hero{display:grid;gap:var(--space-4);max-width:60rem}.collection-hero h1{margin:0;font-size:clamp(2.2rem,5vw,4.3rem);letter-spacing:-.05em;line-height:1}.collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:68ch}.count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}.collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--space-4);margin-top:2.5rem}
+</style>
