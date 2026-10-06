@@ -72,6 +72,30 @@
     "sourcePath": {
       "type": "string",
       "minLength": 1
+    },
+    "problem": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "strategicHypothesis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "internalControlBoundary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nextQuestion": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": false
