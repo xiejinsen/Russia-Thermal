@@ -312,6 +312,7 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     claim_ids = {r["id"] for r in datasets["claims"]}
     capability_ids = {r["id"] for r in datasets["capabilities"]}
     direction_ids = {r["id"] for r in datasets["directions"]}
+    priority_ids = {r["id"] for r in datasets["priorities"]}
 
     for r in datasets["actors"]:
         if r["parentId"] and r["parentId"] not in actor_ids:
@@ -347,6 +348,9 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for did in r["supportingDirectionIds"]:
             if did not in direction_ids:
                 errors.append(f"{r['id']}: unresolved supportingDirectionId {did}")
+        for pid in r["supportingPriorityIds"]:
+            if pid not in priority_ids:
+                errors.append(f"{r['id']}: unresolved supportingPriorityId {pid}")
         for sid in r["keyEvidenceIds"]:
             if sid not in evidence_ids:
                 errors.append(f"{r['id']}: unresolved keyEvidenceId {sid}")
