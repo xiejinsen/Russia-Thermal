@@ -14,12 +14,13 @@ const paperHref = model.id.startsWith('PAPER-') ? href(`/papers/${model.id}`) : 
 <article class="evidence-card">
   <div class="meta">
     <Badge tone="accent">{model.sourceType}</Badge>
+    {model.usageRole && <Badge tone="neutral">{model.usageRole}</Badge>}
     {model.year && <span>{model.year}</span>}
     {model.venue && <span>{model.venue}</span>}
   </div>
 
-  <h2>{paperHref ? <a href={paperHref}>{model.title}</a> : <a href={model.primaryUrl} rel="noreferrer">{model.title} ↗</a>}</h2>
-  {paperHref && <div class="source-actions"><a href={paperHref}>Open paper →</a><a href={model.primaryUrl} rel="noreferrer">Original source ↗</a></div>}
+  <h2>{paperHref ? <a href={paperHref}>{model.title}</a> : <a href={model.primaryUrl} target="_blank" rel="noopener noreferrer">{model.title} ↗</a>}</h2>
+  {paperHref && <div class="source-actions"><a href={paperHref}>Open paper →</a><a href={model.primaryUrl} target="_blank" rel="noopener noreferrer">Original source ↗</a></div>}
 
   {model.authors.length > 0 && <p class="authors">{model.authors.join('; ')}</p>}
   {model.countryContext && <p class="country">{model.countryContext}</p>}
