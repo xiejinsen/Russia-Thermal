@@ -174,3 +174,23 @@ Do not reopen broad research unless:
 - leadership asks a new decision-relevant question;
 - a major new public source contradicts the current portfolio;
 - direct partner feedback changes a capability or collaboration assumption.
+
+
+## Post-audit comparator correction — SJTU
+
+User review identified that Shanghai Jiao Tong University had not been explicitly represented in the China comparator package.
+
+Correction:
+- SJTU is now canonicalized as a cross-cutting China baseline for:
+  - micro-/nanoscale liquid-vapor phase change;
+  - dielectric-fluid evaporation in ultra-thin composite wick structures;
+  - near-junction / 3D-chip thermal management;
+  - dryout-mitigation and high-heat-flux microchannel boiling.
+
+Decision impact:
+- China baseline becomes stronger and more complete.
+- Phase-1 readiness remains READY.
+- Tier A/B Russian partner priority does not change.
+- Russia claims are narrowed to complementary residuals, not broad superiority.
+
+This is a comparator-baseline correction, not a reopening of broad Phase-1 research.
