@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: PHASE1_FROZEN / leadership presentation packaging
-- next: preserve the frozen research thesis; polish leadership-facing web/report presentation, verify newly added actors render correctly, and use lightweight frontier watch rather than broad discovery
+- phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
+- next: implement disposition-aware web research-coverage surfaces so support-only, comparator-only, context, evidence-gap, and investigated-but-not-promoted assets remain discoverable; then fix stale China-map/comparator/homepage presentation before final leadership packaging
 
 ## Directions
 
