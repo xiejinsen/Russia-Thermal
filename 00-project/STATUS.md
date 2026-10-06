@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: light-blue intelligence visual baseline frozen / pyramid-content refinement
-next_action: refine module-by-module information hierarchy under the frozen intelligence visual style, then promote the selected design into the production Astro site
+current_phase: production Intelligence homepage live / full-site drill-down hardening
+next_action: finish link/dead-end audit, then enrich China comparator Actor graph and build the shared China Research Map
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
