@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: implement disposition-aware web research-coverage surfaces so support-only, comparator-only, context, evidence-gap, and investigated-but-not-promoted assets remain discoverable; then fix stale China-map/comparator/homepage presentation before final leadership packaging
+- next: extend the Web results-conversion layer with Capability detail graph drill-down and actor-centric Institution / Scholar filtering; then normalize Paper Deep Read / 10Q presentation and finish portfolio/design consolidation
 
 ## Directions
 
