@@ -1,0 +1,21 @@
+---
+import DecisionBadge from './domain/DecisionBadge.astro';
+import EvidenceCard from './EvidenceCard.astro';
+import type { DecisionEventVM } from '../types/view-models';
+interface Props { model: DecisionEventVM; }
+const { model } = Astro.props;
+---
+<article class="decision">
+  <header><div><p class="eyebrow">{model.date ?? model.id}</p><h2>{model.subject}</h2></div><DecisionBadge label={model.eventType.label} tone={model.eventType.tone} /></header>
+  <div class="transition">
+    {model.previousState && <div><span>Previous</span><p>{model.previousState}</p></div>}
+    <div><span>New state</span><p>{model.newState}</p></div>
+  </div>
+  {model.rationale && <div class="rationale"><strong>Rationale</strong><p>{model.rationale}</p></div>}
+  {model.triggerClaims.length > 0 && <details><summary>Trigger claims ({model.triggerClaims.length})</summary><div class="claims">{model.triggerClaims.map((claim) => <div><span>{claim.id}</span><p>{claim.proposition}</p><small>{claim.confidence} · {claim.status}</small></div>)}</div></details>}
+  {model.triggerEvidence.length > 0 && <details><summary>Trigger evidence ({model.triggerEvidence.length})</summary><div class="evidence-grid">{model.triggerEvidence.map((item) => <EvidenceCard model={item} />)}</div></details>}
+  {model.reopenCondition && <div class="reopen"><strong>Reopen condition</strong><p>{model.reopenCondition}</p></div>}
+</article>
+<style>
+.decision{display:grid;gap:var(--space-5,1.25rem);padding:var(--space-8);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg)}header{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-4)}h2,p{margin:0}h2{font-size:1.3rem;letter-spacing:-.025em}.transition{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:var(--space-4)}.transition>div,.reopen{padding:var(--space-4);background:var(--surface-muted);border-radius:var(--radius-sm)}.transition span{display:block;color:var(--text-muted);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:var(--space-1)}.rationale{display:grid;gap:var(--space-2)}.rationale p,.reopen p{color:var(--text-muted)}details{border-top:1px solid var(--line);padding-top:var(--space-4)}summary{cursor:pointer;font-weight:700}.claims{display:grid;gap:var(--space-3);margin-top:var(--space-4)}.claims>div{padding-left:var(--space-3);border-left:2px solid var(--line)}.claims span,.claims small{color:var(--text-muted);font-size:.75rem}.claims p{margin:var(--space-1) 0}.evidence-grid{display:grid;gap:var(--space-4);margin-top:var(--space-4)}
+</style>
