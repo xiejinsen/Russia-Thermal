@@ -41,10 +41,10 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <StatStrip items={[
-    { label: 'Evidence-linked directions', value: vm.stats.directions },
-    { label: 'Capabilities', value: vm.stats.capabilities },
-    { label: 'Institutions / labs', value: vm.stats.institutions },
-    { label: 'Key people', value: vm.stats.people }
+    { label: 'Directions', value: vm.stats.directions, href: href('/landscape') },
+    { label: 'Capabilities', value: vm.stats.capabilities, href: href('/capabilities') },
+    { label: 'Institutions / labs', value: vm.stats.institutions, href: href('/institutions') },
+    { label: 'Key people', value: vm.stats.people, href: href('/scholars') }
   ]} />
 
   <section class="page-section priority-section">
@@ -113,7 +113,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     display: grid;
     grid-template-columns: minmax(0, 1.8fr) minmax(15rem, .6fr);
     overflow: hidden;
-    background: var(--surface);
+    background: linear-gradient(135deg, rgb(255 255 255 / .94), rgb(235 246 255 / .82));
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-1);
@@ -128,9 +128,9 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   .hero-copy h1 {
     max-width: 17ch;
     margin: 0;
-    font-size: clamp(2.5rem, 5.8vw, 5.6rem);
-    line-height: .95;
-    letter-spacing: -.055em;
+    font-size: clamp(1.75rem, 3.1vw, 3.15rem);
+    line-height: 1.02;
+    letter-spacing: -.045em;
   }
 
   .summary {
@@ -177,7 +177,9 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     align-content: center;
     gap: var(--space-2);
     padding: var(--space-8);
-    background: var(--accent-soft);
+    background:
+      radial-gradient(circle at 75% 15%, rgb(116 188 245 / .35), transparent 14rem),
+      linear-gradient(145deg, #e9f5fd, #f4faff);
     border-left: 1px solid var(--line);
   }
 
