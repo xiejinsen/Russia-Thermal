@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SynthesisRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "scope",
+    "conclusion",
+    "implication",
+    "theoryBasis",
+    "supportingClaimIds",
+    "supportingDirectionIds",
+    "supportingPriorityIds",
+    "keyEvidenceIds",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conclusion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "implication": {
+      "type": "string",
+      "minLength": 1
+    },
+    "theoryBasis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supportingClaimIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supportingDirectionIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supportingPriorityIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "keyEvidenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "boundary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reopenCondition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assessedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
