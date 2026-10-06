@@ -27,7 +27,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
-- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; strong domestic UTVC controls.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
 - next_question_or_gate: Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
@@ -47,9 +47,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-LHP-KNOWLEDGE-RESERVE
 - lane: WATCH
 - phone_maturity: LOW
-- residual_or_use: expert/model/failure-analysis reserve only.
-- strongest_baseline: -
-- next_question_or_gate: specific non-public control point materially improves phone-scale topology beyond domestic capability.
+- residual_or_use: expert/model/failure-analysis reserve plus active-capillary / orientation-tolerance watch; not a standalone device-investment thesis.
+- strongest_baseline: China/current global miniaturized heat-pipe and LHP engineering plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
+- next_question_or_gate: a specific non-public control point from the Russian knowledge / active-capillary stack materially improves phone-scale topology or orientation robustness beyond strong domestic/global capability.
 
 ### DIR-MPEI-ORDERED-WICK-HOLD
 - lane: HOLD
@@ -62,7 +62,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STAGE0_CHALLENGER
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: not generic laser processing; the retained opportunity is TPU-specific process execution plus a possible vacuum-stable confined routing/rewetting function after strong process gates.
-- strongest_baseline: China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art.
+- strongest_baseline: China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
 - next_question_or_gate: Can TPU's laser-only or wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond a strong generic reference?
 
 ## Mandatory guardrails
