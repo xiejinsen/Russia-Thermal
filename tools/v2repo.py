@@ -7,6 +7,7 @@ It does not perform research inference.
 
 from __future__ import annotations
 import argparse
+import difflib
 import re
 from pathlib import Path
 
@@ -154,8 +155,18 @@ def write(path: str, body: str, check: bool, stale):
     p = ROOT / path
     content = GEN_HEADER + body.rstrip() + "\n"
     if check:
-        if not p.exists() or p.read_text(encoding="utf-8") != content:
+        actual = p.read_text(encoding="utf-8") if p.exists() else ""
+        if actual != content:
             stale.append(path)
+            diff = difflib.unified_diff(
+                actual.splitlines(),
+                content.splitlines(),
+                fromfile=f"actual/{path}",
+                tofile=f"expected/{path}",
+                lineterm=""
+            )
+            for line in diff:
+                print(line)
         return
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content, encoding="utf-8")
