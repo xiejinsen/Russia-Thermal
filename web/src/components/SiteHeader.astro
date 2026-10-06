@@ -58,7 +58,7 @@ const groups = [
   const desktop = window.matchMedia('(hover: hover) and (pointer: fine)');
 
   navGroups.forEach((group) => {
-    let closeTimer;
+    let closeTimer: number | undefined;
 
     const openGroup = () => {
       if (!desktop.matches) return;
@@ -88,7 +88,8 @@ const groups = [
   document.addEventListener('click', (event) => {
     if (!desktop.matches) return;
     navGroups.forEach((group) => {
-      if (!group.contains(event.target)) group.removeAttribute('open');
+      const target = event.target;
+      if (!(target instanceof Node) || !group.contains(target)) group.removeAttribute('open');
     });
   });
 </script>
