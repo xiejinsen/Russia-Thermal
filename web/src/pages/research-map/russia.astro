@@ -1,0 +1,447 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { buildResearchMapVM } from '../../view-models/builders';
+
+const vm = buildResearchMapVM('RU');
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+const nodes = vm.nodes.map((node) => ({
+  ...node,
+  href: href(node.href),
+  keyPeople: node.keyPeople.map((person) => ({ ...person, href: href(person.href) }))
+}));
+const directions = [...new Map(
+  vm.nodes.flatMap((node) => node.directions).map((direction) => [direction.id, direction])
+).values()];
+---
+<BaseLayout title="Russia-Thermal — Russia Research Map" description={vm.summary}>
+  <Fragment slot="head">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  </Fragment>
+
+  <div class="research-shell">
+    <header class="research-topbar">
+      <a class="brand" href={href('/')}>
+        <span class="brand-mark">RT</span>
+        <span>
+          <b>Russia-Thermal Intelligence</b>
+          <small>research geography navigator</small>
+        </span>
+      </a>
+      <nav aria-label="Research map navigation">
+        <a href={href('/')}>Overview</a>
+        <a class="active" href={href('/research-map/russia')}>Russia Map</a>
+        <a href={href('/research-map/china')}>China Map</a>
+        <a href={href('/institutions')}>Institutions</a>
+        <a href={href('/scholars')}>Scholars</a>
+        <a href={href('/evidence')}>Evidence</a>
+      </nav>
+    </header>
+
+    <main class="map-main">
+      <section class="map-hero">
+        <div>
+          <p class="eyebrow">Research Maps · Russia</p>
+          <h1>Where Russia's relevant thermal-research capability clusters are located</h1>
+          <p>
+            This is a navigation map for institutions, labs, scholars, capabilities and strategic directions.
+            Marker density is not a country capability score.
+          </p>
+        </div>
+        <div class="map-stats">
+          <div><strong>{vm.mappedActorCount}</strong><span>mapped root organizations</span></div>
+          <div><strong>{vm.scholarCount}</strong><span>linked scholars</span></div>
+          <div><strong>{vm.capabilityCount}</strong><span>linked capabilities</span></div>
+          <div><strong>{vm.directionCount}</strong><span>linked directions</span></div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <label>
+          <span>Search</span>
+          <input id="map-search" type="search" placeholder="Institution, city, scholar…" />
+        </label>
+        <label>
+          <span>Direction</span>
+          <select id="direction-filter">
+            <option value="">All directions</option>
+            {directions.map((direction) => <option value={direction.id}>{direction.title}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Priority</span>
+          <select id="priority-filter">
+            <option value="">All nodes</option>
+            <option value="P1">P1</option>
+            <option value="P2">P2</option>
+            <option value="P3">P3</option>
+            <option value="NONE">No P1/P2/P3 priority</option>
+          </select>
+        </label>
+        <div class="coverage-note">
+          <b>{vm.unmappedActorCount}</b>
+          <span>root actors remain location coverage gaps</span>
+        </div>
+      </section>
+
+      <section class="map-workspace">
+        <div class="map-column">
+          <div id="research-map" class="map-canvas" aria-label="Map of Russian research institutions"></div>
+          <p class="attribution-note">
+            Map tiles © OpenStreetMap contributors. Geography is used for navigation only.
+          </p>
+        </div>
+
+        <aside class="detail-panel" id="detail-panel">
+          <div class="detail-empty" id="detail-empty">
+            <span>SELECT A NODE</span>
+            <h2>Click a marker or institution row</h2>
+            <p>Inspect the institution, linked scholars, capabilities and strategic directions without leaving the map.</p>
+          </div>
+          <div class="detail-content" id="detail-content" hidden>
+            <div class="detail-head">
+              <div>
+                <span id="detail-priority" class="priority-chip" hidden></span>
+                <p id="detail-location" class="detail-location"></p>
+                <h2 id="detail-name"></h2>
+              </div>
+              <a id="detail-institution-link" class="primary-action">Open institution →</a>
+            </div>
+
+            <div class="detail-metrics">
+              <div><strong id="detail-scholars">0</strong><span>scholars</span></div>
+              <div><strong id="detail-capabilities">0</strong><span>capabilities</span></div>
+              <div><strong id="detail-directions">0</strong><span>directions</span></div>
+            </div>
+
+            <div class="detail-section">
+              <span>KEY PEOPLE</span>
+              <div id="detail-people" class="people-links"></div>
+            </div>
+
+            <div class="detail-section">
+              <span>STRATEGIC DIRECTIONS</span>
+              <div id="detail-direction-list" class="direction-list"></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="node-section">
+        <div class="section-heading">
+          <div>
+            <span>MAP NODES</span>
+            <h2>Institutions and research clusters</h2>
+          </div>
+          <p>Use this list when you want a scan-friendly alternative to the map.</p>
+        </div>
+        <div id="node-list" class="node-list">
+          {nodes.map((node) => (
+            <button
+              class="node-card"
+              type="button"
+              data-node-id={node.actorId}
+              data-name={node.name.toLowerCase()}
+              data-city={node.city.toLowerCase()}
+              data-people={node.keyPeople.map((person) => person.name.toLowerCase()).join(' ')}
+              data-directions={node.directions.map((direction) => direction.id).join(' ')}
+              data-priority={node.priorityRank ?? 'NONE'}
+            >
+              <div class="node-card-top">
+                <span>{node.priorityRank ?? node.actorType}</span>
+                <b>{node.city}</b>
+              </div>
+              <h3>{node.name}</h3>
+              <p>{node.scholarCount} scholars · {node.capabilityCount} capabilities · {node.directions.length} directions</p>
+              <div class="node-tags">
+                {node.directions.slice(0, 3).map((direction) => <span>{direction.title}</span>)}
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {vm.unmappedActors.length > 0 && (
+        <section class="coverage-gaps">
+          <div>
+            <span>LOCATION COVERAGE GAP</span>
+            <h2>Known actors not yet plotted</h2>
+            <p>These are research nodes with valid Actor records but no verified map coordinates yet.</p>
+          </div>
+          <div class="gap-links">
+            {vm.unmappedActors.map((actor) => <a href={href(actor.href)}>{actor.name}</a>)}
+          </div>
+        </section>
+      )}
+    </main>
+  </div>
+
+  <script define:vars={{ nodes }}>
+    const map = L.map('research-map', { zoomControl: true, scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markerById = new Map();
+    const blueIcon = (priority) => L.divIcon({
+      className: 'research-marker-wrap',
+      html: `<span class="research-marker ${priority ? 'is-priority' : ''}">${priority || '•'}</span>`,
+      iconSize: [34, 34],
+      iconAnchor: [17, 17]
+    });
+
+    for (const node of nodes) {
+      const marker = L.marker([node.latitude, node.longitude], { icon: blueIcon(node.priorityRank) })
+        .addTo(map)
+        .bindTooltip(node.name, { direction: 'top', offset: [0, -12] });
+      marker.on('click', () => selectNode(node.actorId, true));
+      markerById.set(node.actorId, marker);
+    }
+
+    if (nodes.length) {
+      const bounds = L.latLngBounds(nodes.map((node) => [node.latitude, node.longitude]));
+      map.fitBounds(bounds.pad(0.2), { maxZoom: 5 });
+    } else {
+      map.setView([61, 90], 3);
+    }
+
+    const search = document.getElementById('map-search');
+    const directionFilter = document.getElementById('direction-filter');
+    const priorityFilter = document.getElementById('priority-filter');
+    const cards = [...document.querySelectorAll('.node-card')];
+
+    function nodeMatches(node) {
+      const q = (search.value || '').trim().toLowerCase();
+      const direction = directionFilter.value;
+      const priority = priorityFilter.value;
+      const searchable = [
+        node.name,
+        node.city,
+        node.region || '',
+        ...node.keyPeople.map((p) => p.name),
+        ...node.directions.map((d) => d.title)
+      ].join(' ').toLowerCase();
+
+      if (q && !searchable.includes(q)) return false;
+      if (direction && !node.directions.some((d) => d.id === direction)) return false;
+      if (priority === 'NONE' && node.priorityRank) return false;
+      if (priority && priority !== 'NONE' && node.priorityRank !== priority) return false;
+      return true;
+    }
+
+    function applyFilters() {
+      const visible = [];
+      for (const node of nodes) {
+        const matched = nodeMatches(node);
+        const marker = markerById.get(node.actorId);
+        if (matched) {
+          if (!map.hasLayer(marker)) marker.addTo(map);
+          visible.push(node);
+        } else if (map.hasLayer(marker)) {
+          map.removeLayer(marker);
+        }
+      }
+
+      for (const card of cards) {
+        const node = nodes.find((item) => item.actorId === card.dataset.nodeId);
+        card.hidden = !node || !nodeMatches(node);
+      }
+
+      if (visible.length) {
+        map.fitBounds(L.latLngBounds(visible.map((node) => [node.latitude, node.longitude])).pad(0.2), { maxZoom: 6 });
+      }
+    }
+
+    [search, directionFilter, priorityFilter].forEach((control) => {
+      control.addEventListener('input', applyFilters);
+      control.addEventListener('change', applyFilters);
+    });
+
+    function selectNode(id, pan = false) {
+      const node = nodes.find((item) => item.actorId === id);
+      if (!node) return;
+
+      document.getElementById('detail-empty').hidden = true;
+      document.getElementById('detail-content').hidden = false;
+
+      const priority = document.getElementById('detail-priority');
+      if (node.priorityRank) {
+        priority.hidden = false;
+        priority.textContent = node.priorityRank;
+      } else {
+        priority.hidden = true;
+      }
+
+      document.getElementById('detail-location').textContent = [node.city, node.region].filter(Boolean).join(' · ');
+      document.getElementById('detail-name').textContent = node.name;
+      document.getElementById('detail-scholars').textContent = String(node.scholarCount);
+      document.getElementById('detail-capabilities').textContent = String(node.capabilityCount);
+      document.getElementById('detail-directions').textContent = String(node.directions.length);
+
+      const institutionLink = document.getElementById('detail-institution-link');
+      institutionLink.href = node.href;
+
+      const people = document.getElementById('detail-people');
+      people.innerHTML = node.keyPeople.length
+        ? node.keyPeople.map((person) => `<a href="${person.href}">${person.name}</a>`).join('')
+        : '<span class="empty-inline">No key-person relation in current normalized data.</span>';
+
+      const dirs = document.getElementById('detail-direction-list');
+      dirs.innerHTML = node.directions.length
+        ? node.directions.map((direction) => `
+          <div class="direction-item">
+            <b>${direction.title}</b>
+            <span>${direction.recommendation}</span>
+          </div>`).join('')
+        : '<span class="empty-inline">No strategic Direction currently linked.</span>';
+
+      cards.forEach((card) => card.classList.toggle('selected', card.dataset.nodeId === id));
+      if (pan) {
+        map.setView([node.latitude, node.longitude], Math.max(map.getZoom(), 5), { animate: true });
+      }
+    }
+
+    cards.forEach((card) => card.addEventListener('click', () => selectNode(card.dataset.nodeId, true)));
+    if (nodes.length) selectNode(nodes[0].actorId, false);
+  </script>
+
+  <style is:global>
+    :root { --map-blue:#0b67b2; --map-text:#17324d; --map-muted:#5b7488; --map-line:#d7e6f2; }
+    body {
+      margin:0;
+      background:
+        radial-gradient(circle at 82% 0%, rgba(102,184,249,.20), transparent 32rem),
+        linear-gradient(180deg,#f8fcff 0%,#eff7fc 100%);
+      color:var(--map-text);
+    }
+    body > main { width:auto; margin:0; padding:0; }
+    .research-shell { min-height:100vh; }
+    .research-topbar {
+      position:sticky; top:0; z-index:1000;
+      min-height:70px; padding:10px 28px;
+      display:flex; align-items:center; justify-content:space-between; gap:24px;
+      background:rgba(250,253,255,.95); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--map-line);
+    }
+    .brand { display:flex; align-items:center; gap:11px; text-decoration:none; min-width:260px; }
+    .brand-mark {
+      width:42px; height:42px; display:grid; place-items:center;
+      border-radius:11px; background:linear-gradient(145deg,#0b67b2,#0a5598);
+      color:#fff; font-size:13px; font-weight:900;
+    }
+    .brand > span:last-child { display:grid; gap:1px; }
+    .brand b { font-size:15px; }
+    .brand small { color:#647d90; font-size:10px; text-transform:uppercase; letter-spacing:.07em; }
+    .research-topbar nav { display:flex; gap:3px; flex-wrap:wrap; justify-content:flex-end; }
+    .research-topbar nav a {
+      padding:8px 10px; border-radius:8px; text-decoration:none;
+      color:#42627b; font-size:12px; font-weight:750;
+    }
+    .research-topbar nav a:hover,.research-topbar nav a.active { background:#e7f3fb; color:var(--map-blue); }
+    .map-main { width:min(calc(100% - 40px), 1620px); margin:0 auto; padding:26px 0 70px; }
+    .map-hero {
+      display:grid; grid-template-columns:minmax(0,1.55fr) minmax(430px,.85fr); gap:24px;
+      padding:30px; border:1px solid #cfe1ee; border-radius:18px;
+      background:#fff; box-shadow:0 12px 34px rgba(42,96,140,.07);
+    }
+    .eyebrow { margin:0 0 8px; font-size:11px; letter-spacing:.1em; font-weight:850; text-transform:uppercase; color:var(--map-blue); }
+    .map-hero h1 { max-width:850px; margin:0 0 14px; font-size:34px; line-height:1.08; letter-spacing:-.035em; }
+    .map-hero p:not(.eyebrow) { max-width:850px; margin:0; color:var(--map-muted); font-size:15px; line-height:1.65; }
+    .map-stats { display:grid; grid-template-columns:1fr 1fr; gap:1px; border:1px solid #dbe9f3; background:#dbe9f3; border-radius:13px; overflow:hidden; }
+    .map-stats div { display:grid; gap:4px; padding:18px; background:#f1f8fd; }
+    .map-stats strong { color:var(--map-blue); font-size:27px; }
+    .map-stats span { color:#60788b; font-size:11px; font-weight:750; text-transform:uppercase; }
+    .controls {
+      margin-top:16px; display:grid; grid-template-columns:1.15fr .9fr .75fr auto; gap:12px;
+      padding:14px; border:1px solid #d2e3ef; border-radius:14px; background:#fff;
+    }
+    .controls label { display:grid; gap:5px; }
+    .controls label span,.detail-section>span,.section-heading span,.coverage-gaps>div:first-child>span {
+      color:#607b8f; font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .controls input,.controls select {
+      width:100%; min-height:39px; padding:8px 10px; border:1px solid #cbdde9; border-radius:8px;
+      background:#fafdff; color:#26465f; font:inherit; font-size:13px;
+    }
+    .coverage-note { display:grid; grid-template-columns:auto 145px; align-items:center; gap:9px; padding:4px 9px; background:#f6f9fb; border-radius:9px; }
+    .coverage-note b { color:#b06434; font-size:21px; }
+    .coverage-note span { color:#667c8c; font-size:11px; line-height:1.3; }
+    .map-workspace { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(340px,.7fr); gap:16px; margin-top:16px; align-items:stretch; }
+    .map-column,.detail-panel { border:1px solid #cfe1ee; border-radius:16px; background:#fff; overflow:hidden; box-shadow:0 10px 28px rgba(42,96,140,.05); }
+    .map-canvas { height:590px; background:#eaf4fb; }
+    .attribution-note { margin:0; padding:8px 12px; color:#718797; font-size:10px; border-top:1px solid #e1ebf2; }
+    .detail-panel { min-height:590px; }
+    .detail-empty { display:grid; align-content:center; min-height:590px; padding:34px; background:linear-gradient(145deg,#f4faff,#fff); }
+    .detail-empty>span { color:var(--map-blue); font-size:10px; letter-spacing:.08em; font-weight:850; }
+    .detail-empty h2 { margin:7px 0 10px; font-size:23px; }
+    .detail-empty p { color:var(--map-muted); line-height:1.6; }
+    .detail-content { padding:22px; }
+    .detail-head { display:grid; gap:18px; }
+    .detail-head h2 { margin:5px 0 0; font-size:24px; line-height:1.12; }
+    .detail-location { margin:7px 0 0; color:#667f92; font-size:12px; }
+    .priority-chip { display:inline-block; width:max-content; padding:4px 8px; background:#e8f6ef; color:#087a66; border-radius:999px; font-size:11px; font-weight:900; }
+    .primary-action { width:max-content; padding:9px 12px; border-radius:9px; background:var(--map-blue); color:white; text-decoration:none; font-size:12px; font-weight:850; }
+    .detail-metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin:20px 0; border:1px solid #dce8f1; background:#dce8f1; border-radius:10px; overflow:hidden; }
+    .detail-metrics div { display:grid; gap:3px; padding:12px; background:#f7fbfe; }
+    .detail-metrics strong { color:#0a67b0; font-size:20px; }
+    .detail-metrics span { color:#6b8192; font-size:10px; text-transform:uppercase; }
+    .detail-section { padding-top:17px; margin-top:17px; border-top:1px solid #e0ebf3; }
+    .people-links { display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+    .people-links a { padding:6px 8px; border-radius:8px; background:#eef6fc; color:#255c84; font-size:11px; text-decoration:none; font-weight:700; }
+    .direction-list { display:grid; gap:8px; margin-top:10px; }
+    .direction-item { display:grid; gap:3px; padding:10px; background:#f6fafd; border-left:3px solid #5ba4dd; }
+    .direction-item b { font-size:12px; }
+    .direction-item span { color:#087a66; font-size:10px; font-weight:800; }
+    .empty-inline { color:#788b99; font-size:11px; }
+    .node-section { margin-top:18px; border:1px solid #cfe1ee; border-radius:16px; background:#fff; overflow:hidden; }
+    .section-heading { display:flex; justify-content:space-between; gap:30px; padding:18px 20px; border-bottom:1px solid #dce8f1; background:#f9fcfe; }
+    .section-heading h2 { margin:4px 0 0; font-size:19px; }
+    .section-heading p { max-width:480px; margin:0; color:#657d8f; font-size:12px; }
+    .node-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; padding:14px; background:#f6fafd; }
+    .node-card { text-align:left; border:1px solid #d4e3ee; border-radius:12px; background:#fff; padding:16px; color:inherit; cursor:pointer; font:inherit; }
+    .node-card:hover,.node-card.selected { border-color:#6caee0; box-shadow:0 8px 18px rgba(41,102,148,.09); transform:translateY(-1px); }
+    .node-card-top { display:flex; justify-content:space-between; gap:10px; color:#627b8e; font-size:10px; text-transform:uppercase; letter-spacing:.05em; }
+    .node-card-top span { color:#0b67b2; font-weight:900; }
+    .node-card h3 { margin:9px 0 7px; font-size:15px; line-height:1.3; }
+    .node-card p { margin:0; color:#647b8d; font-size:11px; }
+    .node-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; }
+    .node-tags span { padding:4px 6px; background:#edf6fb; border-radius:6px; color:#3f6785; font-size:9px; }
+    .coverage-gaps {
+      display:grid; grid-template-columns:minmax(260px,.55fr) 1.45fr; gap:25px;
+      margin-top:18px; padding:20px; border:1px dashed #c9dae6; border-radius:14px; background:rgba(255,255,255,.68);
+    }
+    .coverage-gaps h2 { margin:5px 0; font-size:18px; }
+    .coverage-gaps p { margin:0; color:#687f91; font-size:12px; }
+    .gap-links { display:flex; flex-wrap:wrap; gap:7px; align-content:start; }
+    .gap-links a { padding:6px 8px; background:#fff; border:1px solid #dae6ee; border-radius:7px; color:#496a82; text-decoration:none; font-size:11px; }
+    .research-marker-wrap { background:transparent!important; border:0!important; }
+    .research-marker {
+      display:grid; place-items:center; width:30px; height:30px; border:3px solid white; border-radius:50%;
+      background:#2d86c7; color:white; font-size:10px; font-weight:900; box-shadow:0 3px 10px rgba(22,74,113,.28);
+    }
+    .research-marker.is-priority { width:34px; height:34px; background:#087a66; }
+    .leaflet-tooltip { border:0; border-radius:7px; box-shadow:0 5px 15px rgba(30,70,100,.13); color:#27475f; font-size:11px; font-weight:700; }
+    @media (max-width: 1050px) {
+      .map-hero,.map-workspace { grid-template-columns:1fr; }
+      .controls { grid-template-columns:1fr 1fr; }
+      .detail-panel,.detail-empty { min-height:auto; }
+      .node-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 720px) {
+      .research-topbar { align-items:flex-start; flex-direction:column; padding:10px 14px; }
+      .research-topbar nav { overflow-x:auto; width:100%; flex-wrap:nowrap; justify-content:flex-start; }
+      .research-topbar nav a { white-space:nowrap; }
+      .map-main { width:min(calc(100% - 24px),1620px); }
+      .map-hero { padding:20px; }
+      .map-hero h1 { font-size:27px; }
+      .map-stats,.controls,.node-list,.coverage-gaps { grid-template-columns:1fr; }
+      .map-canvas { height:460px; }
+    }
+  </style>
+</BaseLayout>
