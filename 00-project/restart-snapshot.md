@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: canonical partner-priority model implemented / P1-P3 separated from direction lanes / repository+web-data validation PASS
-- next: build Evidence Explorer and Russia-vs-China landscape pages using normalized evidence/claim contracts; keep priority and technical-lane semantics separate
+- phase: web W2 Evidence Explorer + Russia-vs-China landscape implemented / repository health + Astro check/build PASS
+- next: add evidence filtering/search interaction and decide whether comparator categories need a dedicated canonical object before W3 visual enrichment/deployment
 
 ## Directions
 
