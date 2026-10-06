@@ -186,3 +186,47 @@ export interface LandscapePageVM {
   summary: string;
   rows: LandscapeRowVM[];
 }
+
+export interface DecisionEventVM {
+  id: string;
+  date?: string;
+  eventType: StatusVM;
+  subject: string;
+  previousState?: string;
+  newState: string;
+  rationale?: string;
+  reopenCondition?: string;
+  triggerClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+  }>;
+  triggerEvidence: EvidenceCardVM[];
+}
+
+export interface DecisionsPageVM {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  events: DecisionEventVM[];
+}
+
+export interface FrontierVenueVM {
+  id: string;
+  name: string;
+  purpose: string;
+  evidenceCount: number;
+  latestYear?: number;
+  linkedInstitutions: InstitutionCardVM[];
+  linkedDirections: DirectionCardVM[];
+  coverageNote: string;
+}
+
+export interface FrontierWatchVM {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  venues: FrontierVenueVM[];
+  policyNote: string;
+}
