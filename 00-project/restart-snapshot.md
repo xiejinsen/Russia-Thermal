@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: V2.1 cutover completed / main is authoritative SSOT
-- next: resume research natively in V2.1 from the current portfolio; update canonical objects first, then regenerate views and record material decisions
+- phase: Failure-Aware + Health-Aware UTVC global/China pressure test completed / both KEEP + NARROW
+- next: build decision-grade observability matrix for mechanism-specific two-phase health inference versus strong generic thermal baselines
 
 ## Directions
 
@@ -26,9 +26,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-FAILURE-AWARE-UTVC
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
-- residual_or_use: Actor-specific diagnostic/mechanism depth around reversible-to-irreversible dielectric dry-spot/crisis behavior.
-- strongest_baseline: Independent China capillary-fed dryout/rewetting, treated-mesh boiling, ultrathin wick/device engineering, and strong domestic UTVC controls.
-- next_question_or_gate: Does the retained mechanism/diagnostic knowledge add decision value or shift irreversible-dryout behavior under phone-relevant thin sealed conditions beyond strong domestic baselines?
+- residual_or_use: Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting and strong domestic UTVC controls.
+- next_question_or_gate: Can a phone-relevant observer or validation method distinguish approach to irreversible two-phase crisis from generic thermal drift using practical telemetry, and does that distinction improve design/control decisions?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
 - lane: RESERVE
@@ -40,9 +40,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-HEALTH-AWARE-UTVC
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
-- residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable.
-- strongest_baseline: China product-path copper-water VC failure physics, accelerated lifetime prediction, oxidation QA, and mobile-scale thin two-phase hardware.
-- next_question_or_gate: Can capillary/surface-state drift provide additional predictive or design value for future dryout-margin loss after scale-down to phone-relevant copper-water conditions?
+- residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
+- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware.
+- next_question_or_gate: After scale-down to phone-relevant copper-water conditions, does capillary/surface-state drift add predictive value beyond oxygen/oxidation/process QA plus generic thermal-state history?
 
 ### DIR-LHP-KNOWLEDGE-RESERVE
 - lane: WATCH
