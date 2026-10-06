@@ -1,0 +1,304 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { actors, capabilities, claims, evidence, directions } from '../data/load-normalized';
+import { actorHref, directionTitle, humanize } from '../view-models/helpers';
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
+const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+const directionByCapability = new Map<string, typeof directions>();
+for (const capability of capabilities) {
+  directionByCapability.set(
+    capability.id,
+    directions.filter((direction) => direction.capabilityIds.includes(capability.id))
+  );
+}
+
+const groups = [
+  {
+    id: 'direction-linked',
+    disposition: 'DIRECTION_LINKED',
+    label: 'Direction-linked',
+    title: 'Capabilities that survived into the strategic portfolio',
+    description: 'These capabilities are explicitly consumed by a canonical Direction. They form the decision path from evidence to the retained portfolio.'
+  },
+  {
+    id: 'support-only',
+    disposition: 'SUPPORT_ONLY',
+    label: 'Russia · support only',
+    title: 'Investigated Russian capabilities that were not promoted',
+    description: 'Real researched assets that remain useful for context, methods, partner awareness or future questions, but did not clear the bar for a standalone Direction.'
+  },
+  {
+    id: 'comparator-only',
+    disposition: 'COMPARATOR_ONLY',
+    label: 'China · comparator only',
+    title: 'Comparator capabilities that raise the strategic bar',
+    description: 'These China capabilities pressure-test broad Russia-advantage theses. They belong in the research-coverage path, not the Russian partner portfolio.'
+  },
+  {
+    id: 'background-killed',
+    disposition: 'BACKGROUND_KILLED_THESIS',
+    label: 'Background / killed thesis',
+    title: 'Capabilities retained as evidence for what not to invest in',
+    description: 'These records preserve negative learning and prevent killed country-level theses from silently re-entering the portfolio.'
+  }
+];
+
+const capabilityGroups = groups.map((group) => ({
+  ...group,
+  records: capabilities
+    .filter((capability) => capability.portfolioDisposition === group.disposition)
+    .map((capability) => {
+      const owner = actorById.get(capability.actorId);
+      const people = capability.keyPeopleIds
+        .map((id) => actorById.get(id))
+        .filter((item): item is NonNullable<typeof item> => Boolean(item));
+      const linkedDirections = directionByCapability.get(capability.id) ?? [];
+      return { capability, owner, people, linkedDirections };
+    })
+    .sort((a, b) =>
+      (a.owner?.country ?? '').localeCompare(b.owner?.country ?? '') ||
+      (a.owner?.name ?? '').localeCompare(b.owner?.name ?? '') ||
+      a.capability.id.localeCompare(b.capability.id)
+    )
+}));
+
+const roleClaims = claims
+  .filter((claim) => Boolean(claim.decisionRole))
+  .sort((a, b) => (a.decisionRole ?? '').localeCompare(b.decisionRole ?? '') || a.id.localeCompare(b.id));
+
+const contextSources = evidence
+  .filter((item) => Boolean(item.usageRole))
+  .sort((a, b) => (a.usageRole ?? '').localeCompare(b.usageRole ?? '') || a.title.localeCompare(b.title));
+
+const summary = {
+  sources: evidence.length,
+  claims: claims.length,
+  capabilities: capabilities.length,
+  directionLinked: capabilities.filter((item) => item.portfolioDisposition === 'DIRECTION_LINKED').length,
+  supportOnly: capabilities.filter((item) => item.portfolioDisposition === 'SUPPORT_ONLY').length,
+  comparatorOnly: capabilities.filter((item) => item.portfolioDisposition === 'COMPARATOR_ONLY').length,
+  background: capabilities.filter((item) => item.portfolioDisposition === 'BACKGROUND_KILLED_THESIS').length,
+  explicitRoleClaims: roleClaims.length,
+  contextSources: contextSources.length
+};
+---
+
+<BaseLayout title="Russia-Thermal — Research Coverage" description="See what was researched, what entered the strategic portfolio, and why other valid assets remain support, comparator, context or evidence-gap objects.">
+  <SiteHeader slot="header" />
+
+  <section class="coverage-hero">
+    <div>
+      <p class="eyebrow">Research coverage</p>
+      <h1>What we researched — including what did not become a Direction</h1>
+      <p>
+        The portfolio is intentionally selective. This page prevents the rest of the research graph from disappearing:
+        support-only Russian capabilities, China comparator baselines, killed-thesis background, evidence-gap Claims,
+        and context/profile Sources remain visible with an explicit semantic role.
+      </p>
+    </div>
+    <div class="coverage-stats">
+      <div><strong>{summary.sources}</strong><span>sources</span></div>
+      <div><strong>{summary.claims}</strong><span>claims</span></div>
+      <div><strong>{summary.capabilities}</strong><span>capabilities</span></div>
+      <div><strong>{summary.directionLinked}</strong><span>direction-linked</span></div>
+      <div><strong>{summary.supportOnly}</strong><span>Russia support-only</span></div>
+      <div><strong>{summary.comparatorOnly}</strong><span>China comparator-only</span></div>
+    </div>
+  </section>
+
+  <section class="reading-paths">
+    <a href={href('/partners')}>
+      <span>DECISION PATH</span>
+      <b>Portfolio → Direction → evidence</b>
+      <p>Use this when the question is what survived strategic pressure and who to engage first.</p>
+    </a>
+    <a href="#support-only">
+      <span>COVERAGE PATH</span>
+      <b>Research → disposition → why promoted or not</b>
+      <p>Use this when the question is what else we investigated and why it did not become a Direction.</p>
+    </a>
+    <a href={href('/evidence')}>
+      <span>SOURCE PATH</span>
+      <b>Source → Claim → Capability / Direction</b>
+      <p>Use the Evidence Explorer when you want to trace primary evidence and pressure evidence directly.</p>
+    </a>
+  </section>
+
+  {capabilityGroups.map((group) => (
+    <section class="coverage-section" id={group.id}>
+      <header>
+        <div>
+          <span>{group.label}</span>
+          <h2>{group.title}</h2>
+        </div>
+        <div class="section-count">{group.records.length}</div>
+        <p>{group.description}</p>
+      </header>
+
+      <div class="capability-list">
+        {group.records.map(({ capability, owner, people, linkedDirections }) => (
+          <article class="coverage-card">
+            <div class="card-top">
+              <span class="disposition">{humanize(capability.portfolioDisposition)}</span>
+              <span class="country">{owner?.country ?? '—'}</span>
+            </div>
+
+            <h3>{capability.statement}</h3>
+
+            <div class="owner">
+              <span>OWNER</span>
+              {owner ? <a href={href(actorHref(owner.id, owner.type))}>{owner.name}</a> : <b>{capability.actorId}</b>}
+            </div>
+
+            {people.length > 0 && (
+              <div class="people">
+                <span>KEY PEOPLE</span>
+                <div>
+                  {people.map((person) => <a href={href(actorHref(person.id, person.type))}>{person.name}</a>)}
+                </div>
+              </div>
+            )}
+
+            <div class="meta">
+              <span>{humanize(capability.maturity)} maturity</span>
+              <span>{humanize(capability.evidenceConfidence)} evidence</span>
+              <span>{humanize(capability.targetFit)} target fit</span>
+            </div>
+
+            {capability.strategicUse && <p class="use"><b>Strategic use:</b> {capability.strategicUse}</p>}
+            {capability.transferBoundary && <p class="boundary"><b>Boundary:</b> {capability.transferBoundary}</p>}
+
+            <div class="relations">
+              <div>
+                <span>CLAIMS</span>
+                <div>
+                  {capability.claimIds.map((id) => <a href={href(`/claims/${id}`)}>{id}</a>)}
+                </div>
+              </div>
+              <div>
+                <span>DIRECTIONS</span>
+                <div>
+                  {linkedDirections.length
+                    ? linkedDirections.map((direction) => <a href={href(`/directions/${direction.id}`)}>{directionTitle(direction.id)}</a>)
+                    : <em>Not promoted to a Direction</em>}
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <section class="coverage-section" id="claim-roles">
+    <header>
+      <div>
+        <span>CLAIM DISPOSITIONS</span>
+        <h2>Claims whose role is broader than a single Capability or Direction</h2>
+      </div>
+      <div class="section-count">{summary.explicitRoleClaims}</div>
+      <p>
+        These include collaboration-readiness, portfolio-rationale, comparator-umbrella, frontier-discovery and explicit evidence-gap Claims.
+        Their role is now explicit instead of being inferred from surrounding prose.
+      </p>
+    </header>
+
+    <div class="role-grid">
+      {roleClaims.map((claim) => (
+        <a class="role-card" href={href(`/claims/${claim.id}`)}>
+          <span>{claim.decisionRole ? humanize(claim.decisionRole) : '—'}</span>
+          <b>{claim.proposition}</b>
+          <small>{claim.supportingSourceIds.length} support · {claim.contradictingSourceIds.length} pressure</small>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="coverage-section" id="context-sources">
+    <header>
+      <div>
+        <span>CONTEXT SOURCES</span>
+        <h2>Valid Sources that intentionally do not create technical Claims</h2>
+      </div>
+      <div class="section-count">{summary.contextSources}</div>
+      <p>
+        Profile, ranking, frontier and background context should remain visible without inventing artificial technical Claims merely to consume a Source.
+      </p>
+    </header>
+
+    <div class="source-list">
+      {contextSources.map((item) => (
+        <article>
+          <div>
+            <span>{item.usageRole ? humanize(item.usageRole) : 'Context'} · {humanize(item.sourceType)}</span>
+            <h3>{item.title}</h3>
+            {item.boundary && <p>{item.boundary}</p>}
+          </div>
+          <a href={item.primaryUrl} target="_blank" rel="noopener noreferrer">Original source ↗</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="coverage-note">
+    <b>Interpretation rule</b>
+    <p>
+      Not appearing in P1/P2/P3 or a strategic Direction does not mean the object was missed.
+      It means the object was researched and assigned a bounded role in the evidence graph.
+    </p>
+  </section>
+
+  <style>
+    .coverage-hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) minmax(360px,.7fr);
+      gap:22px;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      background:var(--surface);
+      box-shadow:var(--shadow-1);
+    }
+    .coverage-hero h1{max-width:900px;margin:6px 0 14px;font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.08;letter-spacing:-.045em}
+    .coverage-hero>div:first-child>p:not(.eyebrow){max-width:880px;margin:0;color:var(--text-muted);line-height:1.68}
+    .coverage-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--line)}
+    .coverage-stats div{display:grid;gap:3px;padding:15px;background:var(--surface-muted)}
+    .coverage-stats strong{font-size:25px;color:var(--accent-vivid)}
+    .coverage-stats span{font-size:10px;color:var(--text-muted);font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+
+    .reading-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .reading-paths a{display:grid;gap:7px;padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface);text-decoration:none;color:inherit}
+    .reading-paths a:hover{border-color:#83b7dd;box-shadow:var(--shadow-1)}
+    .reading-paths span,.coverage-section header span,.owner>span,.people>span,.relations>div>span{font-size:10px;color:var(--accent-vivid);font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+    .reading-paths b{font-size:14px}.reading-paths p{margin:0;color:var(--text-muted);font-size:12px;line-height:1.55}
+
+    .coverage-section{margin-top:22px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden}
+    .coverage-section>header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;padding:20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbfdff,#f5faff)}
+    .coverage-section>header h2{margin:4px 0 0;font-size:20px;letter-spacing:-.025em}
+    .coverage-section>header p{grid-column:1/-1;max-width:950px;margin:0;color:var(--text-muted);font-size:13px;line-height:1.6}
+    .section-count{display:grid;place-items:center;min-width:44px;height:32px;padding:0 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:900}
+
+    .capability-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}
+    .coverage-card{display:grid;gap:13px;padding:18px;border:1px solid #d7e4ed;border-radius:12px;background:white}
+    .card-top{display:flex;justify-content:space-between;gap:10px}.disposition{padding:4px 7px;border-radius:999px;background:#e8f3fb;color:#245f88;font-size:9px;font-weight:900;text-transform:uppercase}.country{color:var(--text-muted);font-size:10px;font-weight:800}
+    .coverage-card h3{margin:0;font-size:15px;line-height:1.45;letter-spacing:-.01em}
+    .owner,.people{display:grid;gap:6px}.owner a,.owner b{width:fit-content;color:#244e6b;font-size:12px;font-weight:800;text-decoration:none}.people>div{display:flex;gap:6px;flex-wrap:wrap}.people a{padding:5px 7px;border-radius:7px;background:#eef6fb;color:#3a6583;font-size:10px;text-decoration:none;font-weight:750}
+    .meta{display:flex;gap:6px;flex-wrap:wrap}.meta span{padding:5px 7px;border-radius:7px;background:#f1f5f8;color:#587185;font-size:9px;text-transform:uppercase;font-weight:800}
+    .use,.boundary{margin:0;font-size:12px;line-height:1.58;color:#4d6679}.boundary{padding:10px;border-left:3px solid #bd8e51;background:#fffaf3}
+    .relations{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:12px;border-top:1px solid #e4edf3}
+    .relations>div{display:grid;gap:7px}.relations>div>div{display:flex;gap:5px;flex-wrap:wrap}.relations a{padding:4px 6px;border-radius:6px;background:#edf6fb;color:#315f80;font-size:9px;text-decoration:none;font-weight:750}.relations em{color:#7c8d99;font-size:10px}
+
+    .role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px;background:#f6fafd}
+    .role-card{display:grid;gap:7px;padding:15px;border:1px solid #d7e5ef;border-radius:10px;background:#fff;text-decoration:none;color:inherit}.role-card>span{font-size:9px;color:var(--accent-vivid);font-weight:900;text-transform:uppercase}.role-card b{font-size:12px;line-height:1.5}.role-card small{color:var(--text-muted)}
+
+    .source-list article{display:flex;justify-content:space-between;gap:20px;padding:15px 18px;border-bottom:1px solid #e4edf3}.source-list article>div{display:grid;gap:4px}.source-list span{font-size:9px;color:var(--accent-vivid);font-weight:850;text-transform:uppercase}.source-list h3{margin:0;font-size:13px}.source-list p{margin:0;color:var(--text-muted);font-size:11px}.source-list a{white-space:nowrap;color:var(--accent-vivid);font-size:11px;font-weight:800}
+
+    .coverage-note{display:grid;grid-template-columns:170px 1fr;gap:18px;margin-top:20px;padding:18px;border-left:4px solid var(--accent-vivid);background:var(--accent-soft);border-radius:0 var(--radius-md) var(--radius-md) 0}.coverage-note p{margin:0;color:var(--text-secondary)}
+
+    @media(max-width:900px){.coverage-hero,.reading-paths,.capability-list,.role-grid{grid-template-columns:1fr}.relations{grid-template-columns:1fr}.coverage-note{grid-template-columns:1fr}}
+    @media(max-width:640px){.coverage-hero{padding:20px}.coverage-stats{grid-template-columns:1fr 1fr}.source-list article{flex-direction:column}}
+  </style>
+</BaseLayout>
