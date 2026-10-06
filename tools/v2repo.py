@@ -23,6 +23,7 @@ OBJECT_PATTERNS = {
     "experiment": ["06-validation/DIR-*/EXP-*/README.md"],
     "decision": ["07-decisions/events/DEC-*.md"],
     "priority": ["07-decisions/priorities/PRI-*.md"],
+    "synthesis": ["07-decisions/syntheses/SYN-*.md"],
 }
 
 REF_FIELDS = {
@@ -36,6 +37,10 @@ REF_FIELDS = {
     "trigger_experiments": "experiment",
     "target_actors": "actor",
     "related_directions": "direction",
+    "supporting_claims": "claim",
+    "supporting_directions": "direction",
+    "supporting_priorities": "priority",
+    "key_evidence": "source",
 }
 
 def files_for(kind: str):
@@ -291,7 +296,7 @@ def generate(db, check=False):
     write("views/russia-vs-china/phase1-management.md", body, check, stale)
 
     registry_lines = []
-    for kind in ("source", "claim", "actor", "capability", "direction", "experiment", "decision", "priority"):
+    for kind in ("source", "claim", "actor", "capability", "direction", "experiment", "decision", "priority", "synthesis"):
         registry_lines.append(f"## {kind.upper()}")
         registry_lines.append("")
         registry_lines.extend(f"- {o['id']} — {o['_path']}" for o in db[kind])
