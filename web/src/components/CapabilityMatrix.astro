@@ -1,0 +1,51 @@
+---
+import DecisionBadge from './domain/DecisionBadge.astro';
+import type { LandscapeRowVM } from '../types/view-models';
+interface Props { rows: LandscapeRowVM[]; }
+const { rows } = Astro.props;
+---
+
+<section class="matrix-wrap" aria-labelledby="matrix-title">
+  <div class="matrix-head">
+    <div>
+      <p class="eyebrow">Capability matrix</p>
+      <h2 id="matrix-title">Comparator pressure at a glance</h2>
+    </div>
+    <p>Each row is a canonical Direction. This is not a country scorecard; it shows baseline pressure, residual value, transfer maturity and the current decision lane.</p>
+  </div>
+
+  <div class="matrix" role="table" aria-label="Russia versus China capability matrix">
+    <div class="matrix-row matrix-header" role="row">
+      <div role="columnheader">Direction</div>
+      <div role="columnheader">China / global baseline</div>
+      <div role="columnheader">Russian residual</div>
+      <div role="columnheader">Phone maturity</div>
+      <div role="columnheader">Decision</div>
+    </div>
+
+    {rows.map((row) => (
+      <div class="matrix-row" role="row">
+        <div class="direction" role="cell">
+          <strong>{row.direction.title}</strong>
+          <span>{row.direction.role}</span>
+        </div>
+        <div role="cell"><p>{row.chinaBaseline}</p></div>
+        <div class="residual" role="cell"><p>{row.russiaResidual}</p></div>
+        <div class="maturity" role="cell"><strong>{row.direction.phoneTransferMaturity}</strong><span>{row.direction.differentiationConfidence} differentiation</span></div>
+        <div role="cell"><DecisionBadge label={row.direction.lane.label} tone={row.direction.lane.tone} /></div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+.matrix-wrap{display:grid;gap:var(--space-5,1.25rem);margin-top:var(--space-10,2.5rem)}
+.matrix-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.75fr);gap:var(--space-8);align-items:end}.matrix-head h2,.matrix-head p{margin:0}.matrix-head h2{font-size:clamp(1.8rem,3.2vw,2.8rem);letter-spacing:-.045em;line-height:1}.matrix-head>p{color:var(--text-muted)}
+.matrix{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:rgb(255 255 255 / .8);box-shadow:0 16px 46px rgb(35 75 102 / .06)}
+.matrix-row{display:grid;grid-template-columns:minmax(12rem,1.05fr) minmax(16rem,1.55fr) minmax(16rem,1.55fr) minmax(9rem,.7fr) minmax(8rem,.65fr)}
+.matrix-row>div{min-width:0;padding:var(--space-4);border-bottom:1px solid var(--line)}
+.matrix-row>div+div{border-left:1px solid var(--line)}.matrix-row:last-child>div{border-bottom:0}
+.matrix-header{background:linear-gradient(90deg,#e9f5fd,#f6fbff);color:var(--text-muted);font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.direction{display:grid;gap:var(--space-1)}.direction span,.maturity span{color:var(--text-muted);font-size:.78rem}.matrix p{margin:0;color:var(--text-muted);font-size:.86rem}.residual{background:rgb(235 248 244 / .58)}.maturity{display:grid;align-content:start;gap:var(--space-1)}
+@media(max-width:980px){.matrix{overflow-x:auto}.matrix-row{min-width:62rem}.matrix-head{grid-template-columns:1fr}}
+</style>
