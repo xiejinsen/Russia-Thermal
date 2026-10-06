@@ -10,7 +10,7 @@ Implication:
 Prioritize a small number of bounded collaboration packages where Russian mechanism depth, long-duration reliability knowledge, or selected process execution adds value beyond strong China/global device, manufacturing, reliability-QA, and smartphone-integration baselines.
 
 Coverage-closure refresh:
-The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe and UUST microchannel capabilities, but neither creates a new strategic Direction or changes P1/P2/P3. NovSU faces established global electroosmotic electronics-cooling / micro-heat-pipe prior art; UUST faces stronger and more integrated current China microchannel baselines.
+The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe and UUST microchannel capabilities, but neither creates a new strategic Direction or changes P1/P2/P3. NovSU faces established global electroosmotic electronics-cooling / micro-heat-pipe prior art; UUST faces stronger and more integrated current China microchannel baselines. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
 
 Theory basis:
 - Collaboration value should come from an incremental mechanism, diagnostic, reliability, or process control point that survives comparator pressure; publication volume or historical prestige is insufficient.
@@ -33,6 +33,8 @@ supporting_claims:
 - CLM-CN-PKU-001
 - CLM-CN-SEU-001
 - CLM-CN-SJTU-001
+- CLM-CN-FUDAN-001
+- CLM-CN-BIT-001
 
 supporting_directions:
 - DIR-FAILURE-AWARE-UTVC
@@ -55,6 +57,8 @@ key_evidence:
 - OFFICIAL-PKU-MICROFLUID-001
 - OFFICIAL-RSCF-NOVSU-EO-001
 - OFFICIAL-RSCF-UUST-MICROCHANNEL-001
+- OFFICIAL-FUDAN-WAFER-MICROFLUIDIC-001
+- OFFICIAL-BIT-THERMAL-INSTITUTE-001
 
 Boundary:
 This is a public-evidence, smartphone-transfer management synthesis. It does not establish broad Russian national superiority, confirmed partner willingness, or phone-product validation.
