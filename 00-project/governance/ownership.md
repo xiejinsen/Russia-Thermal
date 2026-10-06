@@ -68,6 +68,15 @@ STATUS:
 DECISION_EVENT:
 - immutable strategic transition history.
 
+SYNTHESIS:
+- current management-level conclusion;
+- action implication / so-what;
+- concise theory basis;
+- curated references to supporting canonical objects;
+- scope boundary and reopen condition.
+
+SYNTHESIS must not own source facts, capability truth, actor identity, or Direction lane/state.
+
 ## Country comparison
 
 Russia/China comparison is derived from:
@@ -85,6 +94,11 @@ SOURCE + CLAIM + CAPABILITY.
 
 Strategic transition:
 affected Claim/Capability + DIRECTION + DECISION_EVENT + transaction.
+
+Management conclusion change:
+affected upstream objects + SYNTHESIS only after the strategic meaning actually changes.
+
+New monthly research that does not change the current management conclusion must not force edits to SYNTHESIS or frontend copy.
 
 Indexes, portfolio, country views, management table and restart snapshot are generated.
 
