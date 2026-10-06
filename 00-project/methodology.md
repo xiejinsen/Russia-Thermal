@@ -33,8 +33,16 @@ Low product-validation maturity does not erase a valid capability insight.
 
 ## Deep-reading method
 
-Decision-critical papers/patents may use the project 10Q method:
-problem / novelty / hypothesis / lineage / mechanism / experiment / data / evidence-vs-inference / decision contribution / next action.
+Decision-critical papers use the canonical Paper Deep Read contract:
+- source facts remain in the Paper `README.md`;
+- structured interpretation lives in the per-paper `deep-read.md` sidecar;
+- Tier A requires Q1-Q10 plus an explicit Source facts / Analyst inference / Unknown boundary;
+- deep-read importance and review completeness are separate fields;
+- Web presentation is derived from canonical deep-read data and must not become a second editable copy.
+
+See: [Paper Deep Read Contract](paper-deep-read-contract.md).
+
+Patents may continue to use the project 10Q method until a separate canonical patent deep-read contract is introduced.
 
 ## Governance references
 
