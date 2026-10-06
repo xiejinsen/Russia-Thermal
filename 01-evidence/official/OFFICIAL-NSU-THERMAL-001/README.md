@@ -4,6 +4,7 @@ source_type: OFFICIAL
 record_state: CURRENT
 verification: VERIFIED_PRIMARY
 source_key: NSU-ENERGY-INTENSIVE-THERMAL-PROCESSES-LAB
+primary_url: https://education.nsu.ru/department_physics_english
 verified_at: 2026-10-05
 
 Source:
