@@ -30,6 +30,7 @@ Current canonical directories:
 - `07-decisions/` — immutable Keep/Narrow/Kill/Watch/Hold transitions
 - `analysis/` — research analyses and audits
 - `history/` — research transactions and migration provenance
+- `reports/` — derived leadership-facing summaries; never canonical authority
 - `tools/` — deterministic repository generator/health checker
 - `views/` — generated human-readable management views
 
@@ -67,6 +68,7 @@ Authoritative current state lives in:
 - [Direction Portfolio](05-directions/portfolio.md)
 - [Phase-1 Management View](views/russia-vs-china/phase1-management.md)
 - [Kill / Downgrade Ledger](07-decisions/kill-ledger.md)
+- [Leadership Dossiers](reports/leadership-dossiers/README.md)
 
 ## Repository health
 
