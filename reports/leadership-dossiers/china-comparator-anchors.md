@@ -69,6 +69,29 @@ Decision impact:
 generic laser/biphilic processing is not TPU-specific whitespace.
 TPU remains relevant only if its process execution survives sealed, thin-copper, phone-relevant constraints.
 
+## Shanghai Jiao Tong University — cross-cutting strong baseline
+
+Representative evidence:
+- OFFICIAL-SJTU-GONG-001
+- OFFICIAL-SJTU-GONG-CN-001
+- OFFICIAL-SJTU-LIU-001
+- PAPER-CN-SJTU-DRY-001
+
+What SJTU adds to the baseline:
+- micro-/nanoscale liquid-vapor phase-change physics;
+- dielectric-fluid evaporation in ultra-thin composite wick structures;
+- near-junction thermal management for heterogeneous integrated chips;
+- embedded thermal management for 3D chips;
+- dryout-mitigation microchannel boiling;
+- current HFE-7100 / silicon-based jet-pin-fin microchannel work.
+
+Decision impact:
+SJTU materially raises the China baseline from isolated mechanism papers to a broader mechanism-to-chip-engineering capability cluster.
+
+It does not eliminate:
+- Kutateladze Lab 1.3's narrower reversible-to-irreversible crisis / diagnostic residual;
+- MPEI's actual multi-year engineered-surface / capillary-aging residual.
+
 ## Leadership takeaway
 
 China is not a weak comparator baseline.
