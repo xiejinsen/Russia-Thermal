@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: Failure-Aware + Health-Aware UTVC global/China pressure test completed / both KEEP + NARROW
-- next: build decision-grade observability matrix for mechanism-specific two-phase health inference versus strong generic thermal baselines
+- phase: mechanism-specific thermal-health observability matrix completed / controlled-excitation path retained
+- next: specify the minimum falsifying dataset for controlled-excitation crisis/recovery discrimination and lab-first aging-state separation
 
 ## Directions
 
@@ -28,7 +28,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
 - strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting and strong domestic UTVC controls.
-- next_question_or_gate: Can a phone-relevant observer or validation method distinguish approach to irreversible two-phase crisis from generic thermal drift using practical telemetry, and does that distinction improve design/control decisions?
+- next_question_or_gate: Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
 - lane: RESERVE
@@ -42,7 +42,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
 - strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware.
-- next_question_or_gate: After scale-down to phone-relevant copper-water conditions, does capillary/surface-state drift add predictive value beyond oxygen/oxidation/process QA plus generic thermal-state history?
+- next_question_or_gate: Can MPEI-informed aging labels/priors improve discrimination of capillary/wetting degradation from oxidation, fill-state and package/interface aging in a lab-ground-truth dataset?
 
 ### DIR-LHP-KNOWLEDGE-RESERVE
 - lane: WATCH
