@@ -432,6 +432,8 @@ export interface PaperExplorerVM {
     countryContext?: string;
     claimCount: number;
     directionCount: number;
+    deepReadLevel?: string;
+    reviewStatus?: string;
     href: string;
   }>;
 }
@@ -464,4 +466,23 @@ export interface PaperPageVM {
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
   directions: DirectionCardVM[];
+  deepRead?: {
+    level: string;
+    reviewStatus: string;
+    reviewedAt: string;
+    whyItMatters: string;
+    decisionUse: string;
+    legacyOrigin?: string;
+    sourcePath: string;
+    questions: Array<{ number: number; title: string; body: string }>;
+    evidenceBoundary: {
+      sourceFacts: string;
+      analystInference: string;
+      unknownRequests: string;
+    };
+    relatedClaimIds: string[];
+    relatedCapabilityIds: string[];
+    relatedDirectionIds: string[];
+    relatedPriorityIds: string[];
+  };
 }
