@@ -221,3 +221,17 @@ They may not:
 - rank partners;
 - create strategic claims;
 - infer country advantage.
+
+
+## SynthesisRecord
+
+Purpose:
+- expose a bounded canonical management conclusion to presentation layers;
+- keep leadership wording out of frontend hardcoded constants;
+- provide conclusion → implication → theory basis → evidence references → boundary.
+
+Synthesis is a thin overlay. It does not replace Claim, Capability, Direction, Priority, or Decision.
+
+Monthly behavior:
+- ordinary new Source/Claim ingestion does not require Synthesis changes;
+- update Synthesis only when the management conclusion or action implication materially changes.
