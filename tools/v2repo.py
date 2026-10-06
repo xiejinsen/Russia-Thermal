@@ -242,6 +242,23 @@ def generate(db, check=False):
         registry_lines.append("")
     write("00-project/id-registry.md", "# V2.1 ID Registry\n\n" + "\n".join(registry_lines), check, stale)
 
+    origin_parts = ["# Migration Origin Index", ""]
+    for receipt in sorted((ROOT / "history/migrations/receipts").glob("MIG-*.md")):
+        txt = receipt.read_text(encoding="utf-8")
+        title = next((ln[2:].strip() for ln in txt.splitlines() if ln.startswith("# ")), receipt.stem)
+        legacy_match = re.search(r"Legacy authority inputs include:\s*\n((?:- .*\n)+)", txt)
+        ids_match = re.search(r"^## Explicit V2 object IDs\s*$\n(.*?)(?=^## |\\Z)", txt, re.M | re.S)
+        origin_parts.extend([f"## {title}", "", f"- receipt: {receipt.relative_to(ROOT).as_posix()}"])
+        if legacy_match:
+            origin_parts.append("- V1 inputs:")
+            origin_parts.extend("  " + ln for ln in legacy_match.group(1).strip().splitlines())
+        if ids_match:
+            ids = re.findall(r"^- ([A-Z][A-Z0-9_-]+)\s*$", ids_match.group(1), re.M)
+            if ids:
+                origin_parts.append("- V2 IDs: " + ", ".join(ids))
+        origin_parts.append("")
+    write("history/migrations/origin-index.md", "\n".join(origin_parts), check, stale)
+
     return stale
 
 def main():
