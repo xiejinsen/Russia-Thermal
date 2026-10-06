@@ -8,7 +8,7 @@ parent_actor_id: ACT-SKOLTECH
 verified_at: 2026-10-06
 
 Research relevance:
-thermal / functional polymer-composite materials evidence line.
+thermal / functional polymer-composite materials evidence line; additive-manufacturing contributor in joint MPEI-Skoltech two-phase thermosyphon work.
 
 Contact workflow:
 NOT_CONTACTED
