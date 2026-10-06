@@ -87,11 +87,23 @@ def as_list(v):
 def validate(db):
     errors = []
     ids = {}
+    objects_by_id = {}
     for kind, objs in db.items():
         for o in objs:
             if o["id"] in ids:
                 errors.append(f"duplicate id: {o['id']}")
             ids[o["id"]] = kind
+            objects_by_id[o["id"]] = o
+
+    source_keys = {}
+    for o in db["source"]:
+        key = o.get("source_key")
+        if not key:
+            continue
+        if key in source_keys:
+            errors.append(f"duplicate source_key: {key} -> {source_keys[key]}, {o['id']}")
+        else:
+            source_keys[key] = o["id"]
 
     for kind, objs in db.items():
         for o in objs:
@@ -115,6 +127,21 @@ def validate(db):
         a = o.get("actor_id")
         if a and a not in ids:
             errors.append(f"{o['id']}: unresolved actor_id -> {a}")
+        elif a and ids.get(a) != "actor":
+            errors.append(f"{o['id']}: actor_id -> {a} is not an actor")
+        for person_id in as_list(o.get("key_people")):
+            if person_id in ("[]", "null"):
+                continue
+            person = objects_by_id.get(person_id)
+            if not person:
+                errors.append(f"{o['id']}: unresolved key_people -> {person_id}")
+            elif person.get("actor_type") != "PERSON":
+                errors.append(f"{o['id']}: key_people -> {person_id} is not PERSON")
+
+    for o in db["decision"]:
+        subject = o.get("subject")
+        if subject and re.match(r"^(DIR|CAP|CLM|EXP|ACT|PERSON)-", subject) and subject not in ids:
+            errors.append(f"{o['id']}: unresolved structured subject -> {subject}")
 
     for o in db["experiment"]:
         d = o.get("direction_id")
