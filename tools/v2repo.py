@@ -286,7 +286,7 @@ def generate(db, check=False):
         txt = receipt.read_text(encoding="utf-8")
         title = next((ln[2:].strip() for ln in txt.splitlines() if ln.startswith("# ")), receipt.stem)
         legacy_match = re.search(r"Legacy authority inputs include:\s*\n((?:- .*\n)+)", txt)
-        ids_match = re.search(r"^## Explicit V2 object IDs\s*$\n(.*?)(?=^## |\\Z)", txt, re.M | re.S)
+        ids_match = re.search(r"^## Explicit V2 object IDs\s*$\n(.*?)(?=^## |\Z)", txt, re.M | re.S)
         origin_parts.extend([f"## {title}", "", f"- receipt: {receipt.relative_to(ROOT).as_posix()}"])
         if legacy_match:
             origin_parts.append("- V1 inputs:")
