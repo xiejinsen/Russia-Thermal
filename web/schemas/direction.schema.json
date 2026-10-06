@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DirectionRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "role",
+    "investmentLane",
+    "differentiationConfidence",
+    "phoneTransferMaturity",
+    "capabilityIds",
+    "claimIds",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "investmentLane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "differentiationConfidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phoneTransferMaturity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capabilityIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claimIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strongestBaseline": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "residualDifferentiation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "promotionGate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "killGate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
