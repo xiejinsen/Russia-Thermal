@@ -31,3 +31,5 @@ For canonical truth, follow the linked IDs in 01-evidence / 02-claims / 03-actor
 - [Executive Map](executive-map.md)
 - [China Comparator Anchors](china-comparator-anchors.md)
 - [Reserve / Watch Appendix](reserve-watch-appendix.md)
+
+- [Heat-Transfer Venue Ecosystem Supplement](heat-transfer-venue-supplement.md)
