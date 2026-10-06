@@ -71,7 +71,7 @@ Canonical evidence:
 
 ## China / global baseline
 
-China already has strong:
+China already has strong, with SJTU additionally showing current ultra-thin composite-wick dielectric-fluid and chip-level phase-change programs:
 - copper-water oxidation failure physics;
 - oxygen-footprint lifetime prediction;
 - pre-encapsulation VC aging-test methods;
@@ -82,7 +82,7 @@ Therefore:
 **do not position MPEI as generally stronger at VC reliability.**
 
 Residual:
-long-duration engineered-surface / capillary-state aging knowledge.
+long-duration engineered-surface / capillary-state aging knowledge. SJTU raises the mechanism-to-system baseline, but does not replace MPEI's actual multi-year aging evidence.
 
 ## Best collaboration question
 
