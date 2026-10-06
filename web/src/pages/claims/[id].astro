@@ -25,7 +25,7 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
     </div>
     <div class="bucket pressure">
       <div class="head"><span>CONTRADICTING / PRESSURE EVIDENCE</span><b>{vm.contradictingEvidence.length}</b></div>
-      {vm.contradictingEvidence.length ? vm.contradictingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>)} : <p class="empty">No contradicting source currently linked.</p>}
+      {vm.contradictingEvidence.length ? vm.contradictingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>) : <p class="empty">No contradicting source currently linked.</p>}
     </div>
   </section>
 
