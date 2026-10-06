@@ -14,6 +14,11 @@ export interface ActorRecord {
   officialUrl: string | null;
   publicContact: string | null;
   researchRelevance: string | null;
+  city: string | null;
+  region: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  locationVerifiedAt: string | null;
   sourcePath: string;
 }
 
