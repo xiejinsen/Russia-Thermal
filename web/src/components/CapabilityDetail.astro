@@ -10,7 +10,10 @@ const { model } = Astro.props;
 ---
 
 <article class="capability">
-  <p class="eyebrow">{model.id}</p>
+  <div class="topline">
+    <p class="eyebrow">{model.id}</p>
+    <span class="disposition">{model.portfolioDisposition}</span>
+  </div>
   <h3>{model.statement}</h3>
 
   <dl class="metrics">
@@ -54,6 +57,27 @@ const { model } = Astro.props;
   }
 
   h3, p { margin: 0; }
+
+  .topline {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:var(--space-3);
+  }
+
+  .topline .eyebrow { margin:0; }
+
+  .disposition {
+    flex:0 0 auto;
+    padding:.35rem .5rem;
+    border-radius:999px;
+    background:var(--surface-muted);
+    color:var(--accent);
+    font-size:.68rem;
+    font-weight:850;
+    letter-spacing:.035em;
+    text-transform:uppercase;
+  }
 
   .metrics {
     display: grid;
