@@ -2,6 +2,7 @@ import { actors, capabilities, directions, priorities, evidence, claims, decisio
 import type { ActorRecord, CapabilityRecord, DirectionRecord, EvidenceRecord, ClaimRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
+  CapabilityPageVM,
   DirectionCardVM,
   InstitutionCardVM,
   InstitutionPageVM,
@@ -719,6 +720,56 @@ export function buildFrontierWatchVM(): FrontierWatchVM {
   };
 }
 
+
+export function capabilityIds(): string[] {
+  return capabilities.map((capability) => capability.id);
+}
+
+export function buildCapabilityPageVM(id: string): CapabilityPageVM | null {
+  const capability = capabilityById.get(id);
+  if (!capability) return null;
+
+  const ownerActor = actorById.get(capability.actorId);
+  const relatedClaims = capability.claimIds
+    .map((claimId) => claimById.get(claimId))
+    .filter((item): item is ClaimRecord => Boolean(item));
+
+  const sourceIds = new Set(
+    relatedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
+  );
+
+  const linkedEvidence = [...sourceIds]
+    .map((sourceId) => evidenceById.get(sourceId))
+    .filter((item): item is EvidenceRecord => Boolean(item))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title))
+    .map(evidenceCard);
+
+  return {
+    capability: capabilityDetail(capability),
+    owner:
+      ownerActor && ownerActor.type !== 'PERSON'
+        ? institutionCard(ownerActor, [capability])
+        : undefined,
+    people: peopleForCapability(capability)
+      .map((person) =>
+        scholarCard(
+          person,
+          person.parentId ? actorById.get(person.parentId) : ownerActor
+        )
+      )
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    claims: relatedClaims.map((claim) => ({
+      id: claim.id,
+      proposition: claim.proposition,
+      confidence: humanize(claim.confidence),
+      status: humanize(claim.status),
+      decisionRole: claim.decisionRole ? humanize(claim.decisionRole) : undefined,
+      href: `/claims/${claim.id}`
+    })),
+    evidence: linkedEvidence,
+    directions: directionsForCapability(capability.id).map(directionCard)
+  };
+}
 
 export function buildCapabilitiesCollectionVM(): import('../types/view-models').CollectionPageVM<CapabilityDetailVM> {
   return {
