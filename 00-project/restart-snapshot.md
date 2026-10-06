@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W2 Evidence Explorer filtering implemented / comparator taxonomy ADR accepted / repository health + Astro check/build PASS
-- next: begin W3 visual enrichment and deployment preparation; add Decisions/Frontier Watch pages before polishing leadership overview
+- phase: web W3 core MVP complete / Decisions + Frontier Watch implemented / repository health and page-level Astro builds PASS
+- next: begin W4 visual enrichment and leadership-overview refinement; then prepare W6 deployment checks
 
 ## Directions
 
