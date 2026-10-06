@@ -2,10 +2,10 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 # Restart Snapshot
 
-- authority: NON_AUTHORITATIVE_MIGRATION_TARGET
-- mode: MIGRATION_FREEZE
-- phase: V2.1 migration convergence review PASS / awaiting explicit user-approved cutover
-- next: user decision: approve V2.1 authority cutover or request additional fixes
+- authority: AUTHORITATIVE_V2_1_MAIN
+- mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
+- phase: V2.1 cutover completed / main is authoritative SSOT
+- next: resume research natively in V2.1 from the current portfolio; update canonical objects first, then regenerate views and record material decisions
 
 ## Directions
 
