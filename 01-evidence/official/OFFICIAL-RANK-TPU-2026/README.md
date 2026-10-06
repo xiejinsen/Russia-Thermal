@@ -13,7 +13,7 @@ Direct fact:
 National Research Tomsk Polytechnic University is ranked #741-750 in QS World University Rankings 2027; the same page records #688 for the 2026 edition.
 
 Complementary domestic context:
-RAEX-100 2026 ranks TPU #13 among Russian universities; RAEX 2026 subject ranking for Mechanical Engineering & Robotics ranks TPU #4.
+see OFFICIAL-RANK-RAEX-2026.
 
 Boundary:
 ranking is institutional context only; it does not establish thermal-management capability or collaboration quality.
