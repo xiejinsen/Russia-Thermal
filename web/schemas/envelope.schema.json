@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/russia-thermal/web/envelope.schema.json",
+  "title": "Generated dataset envelope",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^1\\."
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}
