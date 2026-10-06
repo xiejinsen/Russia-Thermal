@@ -32,11 +32,11 @@ const vm = buildLandscapeVM();
 
         <div class="compare">
           <div>
-            <h3>Strongest China / global baseline</h3>
+            <h3>{row.chinaLabel}</h3>
             <p>{row.chinaBaseline}</p>
           </div>
           <div>
-            <h3>Residual Russian differentiation</h3>
+            <h3>{row.russiaLabel}</h3>
             <p>{row.russiaResidual}</p>
           </div>
         </div>
@@ -59,9 +59,9 @@ const vm = buildLandscapeVM();
   h2, h3, p { margin: 0; }
   h2 { font-size: 1.4rem; letter-spacing: -.025em; }
   .compare { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-6); }
-  .compare > div { padding: var(--space-5, 1.25rem); border-radius: var(--radius-md); background: var(--surface-muted); }
-  .compare h3 { margin-bottom: var(--space-2); font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); }
-  .compare p { color: var(--text-muted); }
+  .compare > div { padding: var(--space-5, 1.25rem); border:1px solid rgb(77 124 164 / .16); border-radius: var(--radius-md); background: #f2f8fd; }
+  .compare h3 { margin-bottom: var(--space-3); font-size: .84rem; letter-spacing: .01em; color: #18344f; }
+  .compare p { color: #34495e; font-weight:500; line-height:1.62; }
   dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); gap: var(--space-4); margin: 0; padding-top: var(--space-4); border-top: 1px solid var(--line); }
   dt { color: var(--text-muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
   dd { margin: var(--space-1) 0 0; font-weight: 700; }
