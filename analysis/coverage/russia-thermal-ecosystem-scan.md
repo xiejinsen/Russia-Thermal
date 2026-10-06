@@ -37,6 +37,7 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 
 | Institution | Class | Status | Why it matters / boundary |
 |---|---|---|---|
+| Lomonosov Moscow State University | University | CANONICAL_ONBOARDED | Institute of Mechanics / Vladimir Levashov: current nonequilibrium two-phase heat/mass-transfer and phase-change modeling explicitly motivated by micro/nanoelectronics heat removal. |
 | Moscow Power Engineering Institute (MPEI) | University | CANONICAL_ONBOARDED | Long-duration capillary aging, thermosyphon, microchannels, ordered-wick and reliability lines. |
 | Bauman Moscow State Technical University | University | CANONICAL_ONBOARDED | Wick/heat-pipe manufacturing-related capability. |
 | Peter the Great St. Petersburg Polytechnic University | University | CANONICAL_ONBOARDED | Gradient heat-flux measurement / diagnostics. |
@@ -47,6 +48,7 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 | HSE University / MIEM | University | CANONICAL_ONBOARDED | Current 2026 electrothermal modeling of high-power electronic circuits/PCB overheating and cooling conditions; represented as thermal-reliability/modeling enabler rather than a cooling-device lab. |
 | ITMO University | University | CANONICAL_ONBOARDED | Current Vladimir Korablev line includes semiconductor-device capillary cooling, electronics thermal analysis and cooling-system engineering; 2025/2026 activity confirms continuity. |
 | MEPhI | University | CANONICAL_ONBOARDED | Pavel Struchalin: current boiling-onset diagnostics, transient pool boiling and channel heat-transfer regime prediction; represented as a failure/regime-diagnostics enabler. |
+| Kazan Federal University | University | CANDIDATE_FOUND | 2024 power-electronics cooling-radiator thermal-field work in Naberezhnye Chelny Institute; needs continuity and direct compact-electronics relevance qualification. |
 | MISIS University | University | CANDIDATE_FOUND | 2025 thermoelectric material for electronic temperature-control systems plus high-thermal-conductivity alloys/materials; primarily materials-side comparator. Current PI/device relevance still needs qualification. |
 | Siberian Federal University | University | CANDIDATE_FOUND | Flat heat pipe systems for radio-electronic equipment / spacecraft electronics; need current continuity and current PI confirmation. |
 
