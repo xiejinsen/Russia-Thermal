@@ -52,15 +52,32 @@ function directionsForCapability(capabilityId: string): DirectionRecord[] {
   return sortedDirections.filter((direction) => direction.capabilityIds.includes(capabilityId));
 }
 
+function recommendationFromLane(lane: string): string {
+  const labels: Record<string, string> = {
+    STRATEGIC_CANDIDATE: 'Advance for validation',
+    STAGE0_CHALLENGER: 'Run a bounded challenger test',
+    RESERVE: 'Keep as strategic reserve',
+    WATCH: 'Monitor only',
+    HOLD: 'Do not advance now',
+    KILL: 'Do not invest'
+  };
+  return labels[lane] ?? humanize(lane);
+}
+
 function directionCard(direction: DirectionRecord): DirectionCardVM {
   return {
     id: direction.id,
     title: directionTitle(direction.id),
     role: humanize(direction.role),
+    recommendation: recommendationFromLane(direction.investmentLane),
+    problem: direction.problem ?? undefined,
+    collaborationFocus: direction.strategicHypothesis ?? undefined,
     lane: statusFromLane(direction.investmentLane),
     differentiationConfidence: humanize(direction.differentiationConfidence),
     phoneTransferMaturity: humanize(direction.phoneTransferMaturity),
     residualDifferentiation: direction.residualDifferentiation ?? undefined,
+    ourControlBoundary: direction.internalControlBoundary ?? undefined,
+    nextQuestion: direction.nextQuestion ?? undefined,
     nextGate: direction.promotionGate ?? undefined
   };
 }
