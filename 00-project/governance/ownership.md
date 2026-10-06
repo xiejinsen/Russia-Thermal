@@ -39,7 +39,8 @@ ACTOR:
 - parent/affiliation;
 - current role;
 - official URL/contact;
-- factual collaboration workflow.
+- factual collaboration workflow;
+- factual organization/lab location metadata (city / region / coordinates when verified).
 
 CAPABILITY:
 - demonstrated technical ability;
