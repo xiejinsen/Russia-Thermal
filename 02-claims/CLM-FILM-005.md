@@ -12,7 +12,7 @@ supporting_sources:
 - PAPER-RU-FILM-002
 - PAPER-CN-FILM-001
 - PAPER-CN-FILM-002
-- PAPER-CN-FILM-003
+- PAPER-CN-MODEL-001
 
 Boundary:
 comparative synthesis; not proof of phone-level system superiority.
