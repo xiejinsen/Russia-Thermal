@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: leadership package freeze / final evidence consistency audit
-next_action: run final evidence-chain, generated-view and web consistency audit; fix only decision-relevant defects, then freeze the Phase-1 leadership synthesis package
+current_phase: PHASE1_FROZEN / leadership presentation packaging
+next_action: preserve the frozen research thesis; polish leadership-facing web/report presentation, verify newly added actors render correctly, and use lightweight frontier watch rather than broad discovery
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
