@@ -1,4 +1,4 @@
-import { actors, capabilities, directions, priorities, evidence, claims } from '../data/load-normalized';
+import { actors, capabilities, directions, priorities, evidence, claims, decisions } from '../data/load-normalized';
 import type { ActorRecord, CapabilityRecord, DirectionRecord, EvidenceRecord, ClaimRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
@@ -13,7 +13,11 @@ import type {
   ScholarPageVM,
   EvidenceCardVM,
   EvidenceExplorerVM,
-  LandscapePageVM
+  LandscapePageVM,
+  DecisionsPageVM,
+  DecisionEventVM,
+  FrontierWatchVM,
+  FrontierVenueVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -494,5 +498,114 @@ export function buildLandscapeVM(): LandscapePageVM {
     summary:
       'This landscape does not score countries by publication counts. Each row starts from a canonical Direction and shows the strongest comparator baseline, the residual Russian differentiation that survived pressure testing, maturity, and decision lane.',
     rows
+  };
+}
+
+
+function decisionTone(eventType: string): import('../types/view-models').Tone {
+  if (eventType === 'KILL') return 'critical';
+  if (eventType === 'DOWNGRADE') return 'warning';
+  if (eventType === 'KEEP') return 'positive';
+  return 'neutral';
+}
+
+export function buildDecisionsVM(): DecisionsPageVM {
+  const events: DecisionEventVM[] = [...decisions]
+    .sort((a, b) => (b.effectiveDate ?? '').localeCompare(a.effectiveDate ?? '') || b.id.localeCompare(a.id))
+    .map((event) => {
+      const triggerClaims = event.triggerClaimIds
+        .map((id) => claimById.get(id))
+        .filter((item): item is ClaimRecord => Boolean(item));
+      const evidenceIds = new Set(
+        triggerClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
+      );
+      return {
+        id: event.id,
+        date: event.effectiveDate ?? undefined,
+        eventType: { label: humanize(event.eventType), tone: decisionTone(event.eventType) },
+        subject: event.subjectId,
+        previousState: event.previousState ?? undefined,
+        newState: event.newState,
+        rationale: event.rationale ?? undefined,
+        reopenCondition: event.reopenCondition ?? undefined,
+        triggerClaims: triggerClaims.map(claimSummary),
+        triggerEvidence: [...evidenceIds]
+          .map((id) => evidenceById.get(id))
+          .filter((item): item is EvidenceRecord => Boolean(item))
+          .map(evidenceCard)
+      };
+    });
+
+  return {
+    eyebrow: 'Decision history',
+    title: 'Why the portfolio narrowed',
+    summary:
+      'Decision events preserve the transition from broad hypotheses to retained, downgraded or killed positions. Trigger claims and their primary evidence remain drillable.',
+    events
+  };
+}
+
+const frontierVenueDefinitions = [
+  { id: 'avtfg', name: 'AVTFG', purpose: 'Multiphase, phase-transition and micro/nanosystem discovery surface.', aliases: ['AVTFG'] },
+  { id: 'rnkt', name: 'Russian National Heat Transfer Conference (RNKT)', purpose: 'Broad Russian heat-transfer discovery surface for institutions, teams and emerging topics.', aliases: ['RNKT', 'Russian National Heat Transfer Conference'] },
+  { id: 'thermophysics-aeromechanics', name: 'Thermophysics and Aeromechanics', purpose: 'Thermophysical mechanisms, transport and diagnostics discovery surface.', aliases: ['Thermophysics and Aeromechanics'] },
+  { id: 'high-temperature', name: 'High Temperature', purpose: 'Thermophysics / high-temperature research discovery surface; useful for mechanism and lineage scans.', aliases: ['High Temperature', 'Teplofizika Vysokikh Temperatur'] }
+] as const;
+
+function venueMatches(item: EvidenceRecord, aliases: readonly string[]): boolean {
+  const haystack = [item.venue ?? '', item.title].join(' ').toLowerCase();
+  return aliases.some((alias) => haystack.includes(alias.toLowerCase()));
+}
+
+export function buildFrontierWatchVM(): FrontierWatchVM {
+  const venues: FrontierVenueVM[] = frontierVenueDefinitions.map((definition) => {
+    const matchedEvidence = evidence.filter((item) => venueMatches(item, definition.aliases));
+    const matchedIds = new Set(matchedEvidence.map((item) => item.id));
+    const relatedClaims = claims.filter((claim) =>
+      [...claim.supportingSourceIds, ...claim.contradictingSourceIds].some((id) => matchedIds.has(id))
+    );
+    const claimIds = new Set(relatedClaims.map((claim) => claim.id));
+    const relatedCapabilities = capabilities.filter((capability) =>
+      capability.claimIds.some((id) => claimIds.has(id))
+    );
+    const institutionMap = new Map<string, CapabilityRecord[]>();
+    for (const capability of relatedCapabilities) {
+      const list = institutionMap.get(capability.actorId) ?? [];
+      list.push(capability);
+      institutionMap.set(capability.actorId, list);
+    }
+    const relatedDirections = sortedDirections.filter((direction) =>
+      direction.claimIds.some((id) => claimIds.has(id)) ||
+      direction.capabilityIds.some((id) => relatedCapabilities.some((capability) => capability.id === id))
+    );
+    const years = matchedEvidence.map((item) => item.year).filter((year): year is number => typeof year === 'number');
+
+    return {
+      id: definition.id,
+      name: definition.name,
+      purpose: definition.purpose,
+      evidenceCount: matchedEvidence.length,
+      latestYear: years.length ? Math.max(...years) : undefined,
+      linkedInstitutions: [...institutionMap.entries()]
+        .map(([actorId, caps]) => {
+          const actor = actorById.get(actorId);
+          return actor ? institutionCard(actor, caps) : null;
+        })
+        .filter((item): item is InstitutionCardVM => Boolean(item)),
+      linkedDirections: relatedDirections.map(directionCard),
+      coverageNote: matchedEvidence.length
+        ? 'Coverage is derived from normalized evidence venue/title metadata and linked claims.'
+        : 'No normalized evidence record is currently tagged to this venue; this is a coverage gap, not evidence of inactivity.'
+    };
+  });
+
+  return {
+    eyebrow: 'Research maintenance',
+    title: 'Frontier Watch',
+    summary:
+      'These venues remain discovery surfaces for lightweight monitoring. The page reports current normalized evidence coverage; it does not infer partner quality from publication or attendance alone.',
+    venues,
+    policyNote:
+      'A new node should only be promoted when evidence shows current continuity plus direct or transferable mobile relevance, device/process evidence, or a distinct control point not already represented.'
   };
 }
