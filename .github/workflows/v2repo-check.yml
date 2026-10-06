@@ -3,6 +3,7 @@ name: V2.1 Repository Health
 on:
   push:
     branches:
+      - main
       - dev
   pull_request:
     branches:
