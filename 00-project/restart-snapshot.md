@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: presentation-readiness architecture hardening / conclusion-first Synthesis contract
-- next: canonicalize current portfolio thesis as Synthesis, wire web overview to canonical thesis, then begin Figma information-architecture redesign
+- phase: light-blue intelligence visual baseline frozen / pyramid-content refinement
+- next: refine module-by-module information hierarchy under the frozen intelligence visual style, then promote the selected design into the production Astro site
 
 ## Directions
 
