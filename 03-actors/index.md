@@ -34,8 +34,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - ACT-TONGJI | ORGANIZATION | parent=null | country=CN
 - ACT-TPU | ORGANIZATION | parent=null | country=RU
 - ACT-TSAGI | ORGANIZATION | parent=null | country=RU
-- ACT-TSU | ORGANIZATION | parent=null | country=RU
 - ACT-TSINGHUA | ORGANIZATION | parent=null | country=CN
+- ACT-TSU | ORGANIZATION | parent=null | country=RU
 - ACT-USTC | ORGANIZATION | parent=null | country=CN
 - ACT-WHU | ORGANIZATION | parent=null | country=CN
 - ACT-XJTU | ORGANIZATION | parent=null | country=CN
