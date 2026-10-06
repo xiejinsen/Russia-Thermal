@@ -15,7 +15,7 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
   </section>
   <section class="claims">
     {vm.records.map((claim)=><a href={href(claim.href)}>
-      <div><span>{claim.status} · {claim.confidence}</span><h2>{claim.proposition}</h2></div>
+      <div><span>{claim.status} · {claim.confidence}{claim.decisionRole ? ` · ${claim.decisionRole}` : ''}</span><h2>{claim.proposition}</h2></div>
       <dl>
         <div><dt>Support</dt><dd>{claim.supportingCount}</dd></div>
         <div><dt>Pressure</dt><dd>{claim.contradictingCount}</dd></div>
