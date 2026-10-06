@@ -101,3 +101,20 @@ export interface DecisionRecord {
   reopenCondition: string | null;
   sourcePath: string;
 }
+
+
+export interface SynthesisRecord {
+  id: string;
+  scope: string;
+  conclusion: string;
+  implication: string;
+  theoryBasis: string[];
+  supportingClaimIds: string[];
+  supportingDirectionIds: string[];
+  supportingPriorityIds: string[];
+  keyEvidenceIds: string[];
+  boundary: string | null;
+  reopenCondition: string | null;
+  assessedAt: string | null;
+  sourcePath: string;
+}
