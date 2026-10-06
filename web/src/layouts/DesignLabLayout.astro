@@ -1,0 +1,19 @@
+---
+interface Props { title: string; description?: string; theme?: string; }
+const { title, description = 'Russia-Thermal design lab', theme = 'strategy' } = Astro.props;
+---
+<!doctype html>
+<html lang="en" data-lab-theme={theme}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+</head>
+<body>
+  <slot />
+</body>
+</html>
+<style is:global>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}
+</style>
