@@ -8,6 +8,7 @@ const institution = model.institutions[0];
 const direction = model.directions[0];
 const base = import.meta.env.BASE_URL;
 const institutionHref = institution?.href ? `${base}${institution.href.replace(/^\//,'')}` : undefined;
+const directionHref = direction ? `${base}directions/${direction.id}` : undefined;
 ---
 
 <article class="exec-priority">
@@ -23,7 +24,7 @@ const institutionHref = institution?.href ? `${base}${institution.href.replace(/
     {model.rationale && <p class="rationale">{model.rationale}</p>}
     <dl>
       {model.readiness && <div><dt>Readiness</dt><dd>{model.readiness}</dd></div>}
-      {direction && <div><dt>Direction</dt><dd>{direction.title}</dd></div>}
+      {direction && <div><dt>Direction</dt><dd>{directionHref ? <a href={directionHref}>{direction.title}</a> : direction.title}</dd></div>}
       {model.recommendedAction && <div><dt>Action</dt><dd>{model.recommendedAction}</dd></div>}
     </dl>
   </div>
@@ -38,5 +39,5 @@ const institutionHref = institution?.href ? `${base}${institution.href.replace(/
   .rationale{color:var(--text-muted)}
   dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:var(--space-3);margin:0;padding-top:var(--space-4);border-top:1px solid var(--line)}
   dt{color:var(--text-muted);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-  dd{margin:var(--space-1) 0 0;font-size:.9rem;font-weight:650}
+  dd{margin:var(--space-1) 0 0;font-size:.9rem;font-weight:650}dd a{color:inherit;text-underline-offset:.16em}
 </style>
