@@ -1,4 +1,4 @@
-import { actors, capabilities, directions, priorities, evidence, claims, decisions } from '../data/load-normalized';
+import { actors, capabilities, directions, priorities, evidence, claims, decisions, syntheses } from '../data/load-normalized';
 import type { ActorRecord, CapabilityRecord, DirectionRecord, EvidenceRecord, ClaimRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
@@ -136,6 +136,7 @@ const sortedDirections = [...directions].sort(
 );
 
 export function buildOverviewVM(): OverviewPageVM {
+  const portfolioSynthesis = syntheses.find((item) => item.scope === 'CURRENT_PORTFOLIO_THESIS');
   const active = sortedDirections.filter((direction) =>
     ['STRATEGIC_CANDIDATE', 'STAGE0_CHALLENGER', 'RESERVE'].includes(direction.investmentLane)
   );
@@ -194,11 +195,12 @@ export function buildOverviewVM(): OverviewPageVM {
 
   return {
     eyebrow: 'Leadership view',
-    title: 'Russia is a selective complement, not a broad smartphone-thermal leader',
-    summary:
-      'The current evidence supports a narrow collaboration thesis: prioritize mechanism depth, long-duration reliability knowledge and selected process capability while keeping China as the stronger baseline in ultra-thin device engineering, manufacturing reliability and mobile integration.',
-    thesis:
-      'Prioritize a small number of Russian collaboration packages where residual differentiation survives China/global comparator pressure; do not invest in broad country-level superiority narratives.',
+    title: portfolioSynthesis?.conclusion ?? 'Current portfolio thesis unavailable',
+    summary: portfolioSynthesis?.implication ?? 'No current management implication is available.',
+    thesis: portfolioSynthesis?.implication ?? 'No current management implication is available.',
+    theoryBasis: portfolioSynthesis?.theoryBasis ?? [],
+    thesisBoundary: portfolioSynthesis?.boundary ?? undefined,
+    thesisAssessedAt: portfolioSynthesis?.assessedAt ?? undefined,
     stats: {
       institutions: actors.filter((actor) => actor.type === 'ORGANIZATION' || actor.type === 'LAB').length,
       people: actors.filter((actor) => actor.type === 'PERSON').length,
