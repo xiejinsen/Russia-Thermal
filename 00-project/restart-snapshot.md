@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web V1 production complete / research-data enrichment
-- next: enrich China comparator Actor graph and complete the shared China Research Map without changing the frozen Web V1 presentation architecture
+- phase: Russia thermal ecosystem coverage audit / comparator enrichment
+- next: finish Russia thermal ecosystem anti-omission scan, qualify remaining candidate institutions, then refresh Russia-vs-China synthesis before completing the shared China Research Map
 
 ## Directions
 
