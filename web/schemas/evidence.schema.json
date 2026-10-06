@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "sourceType",
+    "title",
+    "primaryUrl",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primaryUrl": {
+      "type": "string",
+      "minLength": 1
+    },
+    "year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "venue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "countryContext": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "directFindings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "boundary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
