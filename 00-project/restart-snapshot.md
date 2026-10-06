@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: normalize and expose Paper Deep Read / 10Q research content where canonical depth exists; then deduplicate Partner Portfolio and consolidate reusable design primitives before the final web-content consistency audit
+- next: Paper Deep Read pilot is complete; review pilot page density when convenient before broad Tier-A migration, then migrate the next bounded decision-critical P1/P2/P3/comparator set and continue Partner Portfolio/design consolidation
 
 ## Directions
 
