@@ -5,6 +5,7 @@ import prioritiesJson from '../../data/generated/priorities.json';
 import evidenceJson from '../../data/generated/evidence.json';
 import claimsJson from '../../data/generated/claims.json';
 import decisionsJson from '../../data/generated/decisions.json';
+import synthesesJson from '../../data/generated/syntheses.json';
 import type {
   ActorRecord,
   CapabilityRecord,
@@ -13,7 +14,8 @@ import type {
   PartnerPriorityRecord,
   EvidenceRecord,
   ClaimRecord,
-  DecisionRecord
+  DecisionRecord,
+  SynthesisRecord
 } from '../types/normalized';
 
 export const actors = (actorsJson as Envelope<ActorRecord>).records;
@@ -26,3 +28,5 @@ export const evidence = (evidenceJson as Envelope<EvidenceRecord>).records;
 export const claims = (claimsJson as Envelope<ClaimRecord>).records;
 
 export const decisions = (decisionsJson as Envelope<DecisionRecord>).records;
+
+export const syntheses = (synthesesJson as Envelope<SynthesisRecord>).records;
