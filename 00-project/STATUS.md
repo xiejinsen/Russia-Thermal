@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: web W2 real-data integration + institution/scholar relationship pages PASS
-next_action: model/decide durable partner-priority semantics, then add Evidence Explorer and Russia-vs-China landscape pages on normalized contracts
+current_phase: canonical partner-priority model implemented / P1-P3 separated from direction lanes / repository+web-data validation PASS
+next_action: build Evidence Explorer and Russia-vs-China landscape pages using normalized evidence/claim contracts; keep priority and technical-lane semantics separate
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
