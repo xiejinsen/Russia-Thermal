@@ -4,6 +4,7 @@ source_type: OFFICIAL
 record_state: CURRENT
 verification: VERIFIED_PRIMARY
 source_key: MPEI-REEPE-2025-NEWFROST-THERMOSYPHON
+primary_url: https://reepe.mpei.ru/abstracts/Documents/Blok_doklad_2025_fin.pdf
 published_year: 2025
 
 Source:
