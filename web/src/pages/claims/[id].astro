@@ -14,7 +14,7 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
   <section class="claim-hero">
     <p class="eyebrow">Claim detail · {vm.status}</p>
     <h1>{vm.proposition}</h1>
-    <div class="chips"><span>{vm.confidence} confidence</span><span>{vm.supportingEvidence.length} supporting sources</span><span>{vm.contradictingEvidence.length} contradicting sources</span></div>
+    <div class="chips"><span>{vm.confidence} confidence</span>{vm.decisionRole && <span>{vm.decisionRole}</span>}<span>{vm.supportingEvidence.length} supporting sources</span><span>{vm.contradictingEvidence.length} contradicting sources</span></div>
     {vm.boundary && <p class="boundary"><b>Boundary:</b> {vm.boundary}</p>}
   </section>
 
