@@ -250,3 +250,10 @@ export interface FrontierWatchVM {
   venues: FrontierVenueVM[];
   policyNote: string;
 }
+
+export interface CollectionPageVM<T> {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  records: T[];
+}
