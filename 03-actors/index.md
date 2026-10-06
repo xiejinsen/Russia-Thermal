@@ -24,6 +24,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - ACT-LAVRENTYEV | ORGANIZATION | parent=null | country=RU
 - ACT-MEPHI | ORGANIZATION | parent=null | country=RU
 - ACT-MPEI | ORGANIZATION | parent=null | country=RU
+- ACT-MSU | ORGANIZATION | parent=null | country=RU
 - ACT-NJU | ORGANIZATION | parent=null | country=CN
 - ACT-NSU | ORGANIZATION | parent=null | country=RU
 - ACT-PKU | ORGANIZATION | parent=null | country=CN
@@ -72,6 +73,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - PERSON-KOVALEV-SA | PERSON | parent=ACT-JIHT | country=RU
 - PERSON-KUZMA-KICHTA | PERSON | parent=ACT-MPEI | country=RU
 - PERSON-KUZNETSOV-VV | PERSON | parent=ACT-LAVRENTYEV | country=RU
+- PERSON-LEVASHOV-VY | PERSON | parent=ACT-MSU | country=RU
 - PERSON-LI-WENMING | PERSON | parent=ACT-SEU | country=CN
 - PERSON-LIU-ZHENYU | PERSON | parent=ACT-SJTU | country=CN
 - PERSON-LU-LONGSHENG | PERSON | parent=ACT-SCUT | country=CN
