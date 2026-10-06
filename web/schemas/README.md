@@ -13,6 +13,7 @@ This directory defines the normalized web-data contracts produced by the canonic
 - `direction.schema.json`
 - `envelope.schema.json`
 - `evidence.schema.json`
+- `priority.schema.json`
 
 ## Rules
 

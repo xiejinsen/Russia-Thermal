@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PartnerPriorityRecord",
+  "type": "object",
+  "required": ["id", "rank", "priorityClass", "targetActorIds", "relatedDirectionIds", "sourcePath"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "rank": { "type": "string", "pattern": "^P[1-9][0-9]*$" },
+    "priorityClass": { "type": "string", "minLength": 1 },
+    "targetActorIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "relatedDirectionIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "collaborationReadiness": { "type": ["string", "null"] },
+    "recommendedAction": { "type": ["string", "null"] },
+    "rationale": { "type": ["string", "null"] },
+    "sourcePath": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false
+}

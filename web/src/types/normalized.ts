@@ -46,3 +46,15 @@ export interface DirectionRecord {
   killGate: string | null;
   sourcePath: string;
 }
+
+export interface PartnerPriorityRecord {
+  id: string;
+  rank: string;
+  priorityClass: string;
+  targetActorIds: string[];
+  relatedDirectionIds: string[];
+  collaborationReadiness: string | null;
+  recommendedAction: string | null;
+  rationale: string | null;
+  sourcePath: string;
+}

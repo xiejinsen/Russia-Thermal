@@ -206,6 +206,20 @@ def decision_record(o: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+
+def priority_record(o: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": o["id"],
+        "rank": nullable(o.get("priority_rank")) or "",
+        "priorityClass": nullable(o.get("priority_class")) or "",
+        "targetActorIds": as_list(o.get("target_actors")),
+        "relatedDirectionIds": as_list(o.get("related_directions")),
+        "collaborationReadiness": nullable(o.get("collaboration_readiness")),
+        "recommendedAction": nullable(o.get("recommended_action")),
+        "rationale": nullable(o.get("rationale")),
+        "sourcePath": o["_path"],
+    }
+
 def envelope(records: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "schemaVersion": SCHEMA_VERSION,
@@ -249,10 +263,19 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for f in ("id", "eventType", "subjectId", "newState", "sourcePath"):
             require_nonempty(r, f, errors)
 
+    for r in datasets["priorities"]:
+        for f in ("id", "rank", "priorityClass", "sourcePath"):
+            require_nonempty(r, f, errors)
+        if not r["targetActorIds"]:
+            errors.append(f"{r['id']}: targetActorIds is empty")
+        if not r["relatedDirectionIds"]:
+            errors.append(f"{r['id']}: relatedDirectionIds is empty")
+
     actor_ids = {r["id"] for r in datasets["actors"]}
     evidence_ids = {r["id"] for r in datasets["evidence"]}
     claim_ids = {r["id"] for r in datasets["claims"]}
     capability_ids = {r["id"] for r in datasets["capabilities"]}
+    direction_ids = {r["id"] for r in datasets["directions"]}
 
     for r in datasets["actors"]:
         if r["parentId"] and r["parentId"] not in actor_ids:
@@ -281,6 +304,14 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             if cid not in claim_ids:
                 errors.append(f"{r['id']}: unresolved claimId {cid}")
 
+    for r in datasets["priorities"]:
+        for aid in r["targetActorIds"]:
+            if aid not in actor_ids:
+                errors.append(f"{r['id']}: unresolved targetActorId {aid}")
+        for did in r["relatedDirectionIds"]:
+            if did not in direction_ids:
+                errors.append(f"{r['id']}: unresolved relatedDirectionId {did}")
+
     return errors
 
 
@@ -298,6 +329,7 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
         "capabilities": [capability_record(o) for o in db["capability"]],
         "directions": [direction_record(o) for o in db["direction"]],
         "decisions": [decision_record(o) for o in db["decision"]],
+        "priorities": [priority_record(o) for o in db["priority"]],
     }
 
 
