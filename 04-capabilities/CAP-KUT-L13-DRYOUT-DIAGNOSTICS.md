@@ -4,6 +4,9 @@ record_state: CURRENT
 actor_id: ACT-KUT-LAB13
 key_people:
 - PERSON-PAVLENKO
+- PERSON-SURTAEV
+- PERSON-SHVETSOV
+- PERSON-ZHUKOV
 maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
