@@ -31,7 +31,7 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 | Lavrentyev Institute of Hydrodynamics SB RAS | RAS | CANONICAL_ONBOARDED | Microfilm/interfacial modeling relevant to evaporation and thin-film transport. |
 | Institute of Continuum Mechanics UB RAS | RAS | CANONICAL_ONBOARDED | Exact/interfacial stability modeling. |
 | Frumkin Institute of Physical Chemistry and Electrochemistry RAS | RAS | CANONICAL_ONBOARDED | Wettability / surface chemistry comparator. |
-| Institute of Computational Modeling SB RAS, FRC KSC SB RAS | RAS | CANDIDATE_FOUND | Mathematical models and software for two-phase flat heat pipes and thermal design of onboard electronics; direct overlap with heat-pipe thermal architecture. Need current responsible person / continuity check. |
+| Institute of Computational Modeling SB RAS, FRC KSC SB RAS | RAS | CANONICAL_ONBOARDED | Current Denis Nesterov / 2025 institute activity plus flat-heat-pipe electronics integration, two-phase thermal modeling, thermal stabilization and dryout-limit prediction; strongest application evidence is onboard electronics rather than smartphones. |
 
 ## University / academic engineering nodes outside the narrow two-phase core
 
