@@ -1,0 +1,134 @@
+---
+import type { PaperPageVM } from '../types/view-models';
+
+interface Props {
+  model: NonNullable<PaperPageVM['deepRead']>;
+}
+
+const { model } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+const canonicalUrl = `https://github.com/xiejinsen/Russia-Thermal/blob/main/${model.sourcePath}`;
+---
+
+<section class="deep-read">
+  <header class="deep-head">
+    <div>
+      <p class="eyebrow">Paper Deep Read · {model.level}</p>
+      <h2>Why this paper matters</h2>
+      <p class="why">{model.whyItMatters}</p>
+    </div>
+    <aside>
+      <div><span>Review basis</span><b>{model.reviewStatus}</b></div>
+      <div><span>Decision use</span><b>{model.decisionUse}</b></div>
+      <div><span>Reviewed</span><b>{model.reviewedAt}</b></div>
+      <a href={canonicalUrl} target="_blank" rel="noopener noreferrer">Canonical deep-read on GitHub ↗</a>
+    </aside>
+  </header>
+
+  <div class="questions">
+    {model.questions.map((question) => (
+      <article class="question" id={`q${question.number}`}>
+        <div class="qnum">Q{question.number}</div>
+        <div>
+          <h3>{question.title}</h3>
+          <div class="qbody">{question.body}</div>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <section class="boundary">
+    <div class="boundary-head">
+      <span>EVIDENCE BOUNDARY</span>
+      <h3>Keep source facts, analyst inference and unknowns separate</h3>
+    </div>
+    <div class="boundary-grid">
+      <article>
+        <span>SOURCE FACTS</span>
+        <div>{model.evidenceBoundary.sourceFacts}</div>
+      </article>
+      <article>
+        <span>ANALYST INFERENCE</span>
+        <div>{model.evidenceBoundary.analystInference}</div>
+      </article>
+      <article>
+        <span>UNKNOWN / REQUEST</span>
+        <div>{model.evidenceBoundary.unknownRequests}</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="graph-impact">
+    <div>
+      <span>CLAIMS</span>
+      <div>{model.relatedClaimIds.map((id) => <a href={href(`/claims/${id}`)}>{id}</a>)}</div>
+    </div>
+    <div>
+      <span>CAPABILITIES</span>
+      <div>{model.relatedCapabilityIds.map((id) => <a href={href(`/capabilities/${id}`)}>{id}</a>)}</div>
+    </div>
+    <div>
+      <span>DIRECTIONS</span>
+      <div>{model.relatedDirectionIds.map((id) => <a href={href(`/directions/${id}`)}>{id}</a>)}</div>
+    </div>
+    <div>
+      <span>PRIORITY CONTEXT</span>
+      <div>
+        {model.relatedPriorityIds.map((id) => <a href={href('/partners')}>{id}</a>)}
+      </div>
+    </div>
+  </section>
+</section>
+
+<style>
+  .deep-read{
+    margin-top:18px;
+    border:1px solid #c9deec;
+    border-radius:16px;
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(42,96,140,.055);
+  }
+  .deep-head{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
+    gap:24px;
+    padding:22px;
+    background:linear-gradient(135deg,#f7fcff 0%,#edf7fd 100%);
+    border-bottom:1px solid #d6e6f0;
+  }
+  .deep-head h2{margin:5px 0 9px;font-size:21px;letter-spacing:-.025em}
+  .why{max-width:900px;margin:0;color:#405f75;font-size:14px;line-height:1.68}
+  .deep-head aside{display:grid;gap:8px}
+  .deep-head aside>div{display:grid;gap:2px;padding:9px 11px;border-radius:9px;background:rgba(255,255,255,.78);border:1px solid #d8e7f1}
+  .deep-head aside span,.boundary-head>span,.boundary-grid article>span,.graph-impact>div>span{font-size:9px;color:#0b67b2;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+  .deep-head aside b{color:#365c76;font-size:11px;line-height:1.4}
+  .deep-head aside>a{width:fit-content;color:#0b67b2;font-size:10px;font-weight:850}
+
+  .questions{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#dde9f1}
+  .question{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:18px;background:#fff;min-width:0}
+  .qnum{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#eaf5fc;color:#0b67b2;font-size:11px;font-weight:900}
+  .question h3{margin:0 0 8px;font-size:14px;line-height:1.35}
+  .qbody{white-space:pre-line;color:#4e697c;font-size:12px;line-height:1.65;overflow-wrap:anywhere}
+
+  .boundary{padding:20px;border-top:1px solid #dce8f0;background:#fffaf4}
+  .boundary-head h3{margin:5px 0 14px;font-size:16px}
+  .boundary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .boundary-grid article{padding:13px;border:1px solid #eadfd1;border-radius:10px;background:#fff}
+  .boundary-grid article div{margin-top:8px;white-space:pre-line;color:#665b50;font-size:11px;line-height:1.6}
+
+  .graph-impact{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border-top:1px solid #dce8f0;background:#dce8f0}
+  .graph-impact>div{display:grid;gap:8px;padding:14px;background:#f8fbfd}
+  .graph-impact>div>div{display:flex;flex-wrap:wrap;gap:5px}
+  .graph-impact a{padding:4px 6px;border-radius:6px;background:#fff;color:#315f80;border:1px solid #d7e5ee;font-size:9px;text-decoration:none;font-weight:750}
+
+  @media(max-width:900px){
+    .deep-head,.questions{grid-template-columns:1fr}
+    .boundary-grid{grid-template-columns:1fr}
+    .graph-impact{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    .graph-impact{grid-template-columns:1fr}
+  }
+</style>
