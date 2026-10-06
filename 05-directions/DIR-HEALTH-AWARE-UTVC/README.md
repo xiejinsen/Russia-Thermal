@@ -23,6 +23,9 @@ related_claims:
 - CLM-PRESSURE-004
 - CLM-PRESSURE-006
 - CLM-PRESSURE-007
+- CLM-OBS-005
+- CLM-OBS-006
+- CLM-OBS-007
 
 candidate_capabilities:
 - CAP-MPEI-LONGTERM-CAPILLARY-AGING
@@ -37,10 +40,10 @@ Internal control boundary:
 phone geometry, copper-water process, sealed-device reliability model, product telemetry/observer, manufacturing and final foreground IP remain internally owned.
 
 Next question:
-After scale-down to phone-relevant copper-water conditions, does capillary/surface-state drift add predictive value beyond oxygen/oxidation/process QA plus generic thermal-state history?
+Can MPEI-informed aging labels/priors improve discrimination of capillary/wetting degradation from oxidation, fill-state and package/interface aging in a lab-ground-truth dataset?
 
 Promotion gate:
-phone-compatible geometry plus a repeatable aging/health feature that improves prediction or validation beyond oxygen/oxidation/process QA and generic temperature-power-RC baselines.
+a lab-ground-truth dataset shows capillary/surface-state features add prediction value beyond oxygen/process QA and generic package-aging baselines before any online observer is promoted.
 
 Kill / downgrade gate:
 downgrade if the effect is R410A/large-groove/gravity-specific, scale-down removes useful transport behavior, or domestic reliability metrics explain all relevant aging equally well.
