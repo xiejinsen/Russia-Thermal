@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: Tier A/B institution + key-person leadership dossiers converged
-- next: run Phase-1 leadership-package gap audit; decide whether any remaining evidence gaps justify more desk research before final management synthesis
+- phase: Phase-1 leadership-package gap audit PASS / ready for final management synthesis
+- next: stop broad desk research; prepare final management synthesis from executive map, Tier A/B dossiers, China comparators, reserve/watch appendix and canonical evidence
 
 ## Directions
 
