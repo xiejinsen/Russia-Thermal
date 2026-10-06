@@ -3,14 +3,17 @@ import DecisionBadge from './domain/DecisionBadge.astro';
 import type { OverviewDecisionVM } from '../types/view-models';
 interface Props { model: OverviewDecisionVM; }
 const { model } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const decisionHref = `${base}decisions#${model.id}`;
 ---
 <article class="kill-card">
 <div class="top"><DecisionBadge label={model.eventType.label} tone={model.eventType.tone} /><span>{model.id}</span></div>
 <h3>{model.subject}</h3>
 <p class="state">{model.newState}</p>
 {model.rationale && <p class="reason">{model.rationale}</p>}
+<a class="audit" href={decisionHref}>Audit decision →</a>
 </article>
 <style>
 .kill-card{display:grid;gap:var(--space-3);padding:var(--space-5,1.25rem);border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface)}
-.top{display:flex;justify-content:space-between;gap:var(--space-3);align-items:center}.top span{color:var(--text-muted);font-size:.72rem}h3,p{margin:0}h3{font-size:1rem}.state{font-weight:750}.reason{color:var(--text-muted);font-size:.88rem}
+.top{display:flex;justify-content:space-between;gap:var(--space-3);align-items:center}.top span{color:var(--text-muted);font-size:.72rem}h3,p{margin:0}h3{font-size:1rem}.state{font-weight:750}.reason{color:var(--text-muted);font-size:.88rem}.audit{width:fit-content;color:var(--accent-vivid);font-size:.78rem;font-weight:800;text-decoration:none}.audit:hover{text-decoration:underline}
 </style>
