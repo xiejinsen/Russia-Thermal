@@ -214,6 +214,24 @@ def decision_record(o: dict[str, Any]) -> dict[str, Any]:
 
 
 
+def synthesis_record(o: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": o["id"],
+        "scope": nullable(o.get("synthesis_scope")) or "",
+        "conclusion": nullable(o.get("conclusion")) or "",
+        "implication": nullable(o.get("implication")) or "",
+        "theoryBasis": as_list(o.get("theory_basis")),
+        "supportingClaimIds": as_list(o.get("supporting_claims")),
+        "supportingDirectionIds": as_list(o.get("supporting_directions")),
+        "supportingPriorityIds": as_list(o.get("supporting_priorities")),
+        "keyEvidenceIds": as_list(o.get("key_evidence")),
+        "boundary": nullable(o.get("boundary")),
+        "reopenCondition": nullable(o.get("reopen_condition")),
+        "assessedAt": nullable(o.get("assessed_at")),
+        "sourcePath": o["_path"],
+    }
+
+
 def priority_record(o: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": o["id"],
@@ -271,6 +289,10 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             require_nonempty(r, f, errors)
 
     seen_priority_ranks: dict[str, str] = {}
+    for r in datasets["syntheses"]:
+        for f in ("id", "scope", "conclusion", "implication", "sourcePath"):
+            require_nonempty(r, f, errors)
+
     for r in datasets["priorities"]:
         for f in ("id", "rank", "priorityClass", "sourcePath"):
             require_nonempty(r, f, errors)
@@ -318,6 +340,17 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             if cid not in claim_ids:
                 errors.append(f"{r['id']}: unresolved claimId {cid}")
 
+    for r in datasets["syntheses"]:
+        for cid in r["supportingClaimIds"]:
+            if cid not in claim_ids:
+                errors.append(f"{r['id']}: unresolved supportingClaimId {cid}")
+        for did in r["supportingDirectionIds"]:
+            if did not in direction_ids:
+                errors.append(f"{r['id']}: unresolved supportingDirectionId {did}")
+        for sid in r["keyEvidenceIds"]:
+            if sid not in evidence_ids:
+                errors.append(f"{r['id']}: unresolved keyEvidenceId {sid}")
+
     for r in datasets["priorities"]:
         for aid in r["targetActorIds"]:
             if aid not in actor_ids:
@@ -348,6 +381,7 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
         "directions": [direction_record(o) for o in db["direction"]],
         "decisions": [decision_record(o) for o in db["decision"]],
         "priorities": [priority_record(o) for o in db["priority"]],
+        "syntheses": [synthesis_record(o) for o in db["synthesis"]],
     }
 
 
