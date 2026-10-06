@@ -267,3 +267,33 @@ export interface CollectionPageVM<T> {
   summary: string;
   records: T[];
 }
+
+
+export interface ResearchMapNodeVM {
+  actorId: string;
+  name: string;
+  actorType: string;
+  city: string;
+  region?: string;
+  latitude: number;
+  longitude: number;
+  href: string;
+  scholarCount: number;
+  capabilityCount: number;
+  keyPeople: Array<{ id: string; name: string; href: string }>;
+  directions: Array<{ id: string; title: string; recommendation: string }>;
+  priorityRank?: string;
+}
+
+export interface ResearchMapVM {
+  country: string;
+  title: string;
+  summary: string;
+  nodes: ResearchMapNodeVM[];
+  mappedActorCount: number;
+  unmappedActorCount: number;
+  scholarCount: number;
+  capabilityCount: number;
+  directionCount: number;
+  unmappedActors: Array<{ id: string; name: string; href: string }>;
+}
