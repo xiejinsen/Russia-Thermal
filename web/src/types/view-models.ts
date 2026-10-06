@@ -297,3 +297,42 @@ export interface ResearchMapVM {
   directionCount: number;
   unmappedActors: Array<{ id: string; name: string; href: string }>;
 }
+
+
+export interface DirectionExplorerVM {
+  title: string;
+  summary: string;
+  records: Array<{
+    direction: DirectionCardVM;
+    institutionCount: number;
+    scholarCount: number;
+    claimCount: number;
+    evidenceCount: number;
+    href: string;
+  }>;
+}
+
+export interface DirectionPageVM {
+  direction: DirectionCardVM;
+  strongestBaseline?: string;
+  institutions: InstitutionCardVM[];
+  scholars: ScholarCardVM[];
+  capabilities: CapabilityDetailVM[];
+  claims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  evidence: EvidenceCardVM[];
+  decisions: Array<{
+    id: string;
+    date?: string;
+    eventType: StatusVM;
+    previousState?: string;
+    newState: string;
+    rationale?: string;
+    reopenCondition?: string;
+  }>;
+}
