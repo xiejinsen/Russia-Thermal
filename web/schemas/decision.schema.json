@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DecisionRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "eventType",
+    "subjectId",
+    "newState",
+    "triggerClaimIds",
+    "triggerExperimentIds",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subjectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "newState": {
+      "type": "string",
+      "minLength": 1
+    },
+    "triggerClaimIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "triggerExperimentIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
