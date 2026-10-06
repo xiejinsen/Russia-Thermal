@@ -31,7 +31,7 @@ Russia uses:
 | 2 | Bauman Moscow State Technical University | CANONICAL_ONBOARDED | Wick / heat-pipe manufacturing-related capability already represented. |
 | 3 | Moscow Institute of Physics and Technology | PENDING_SCAN | Mandatory systematic scan required. |
 | 4 | Saint Petersburg State University | CANONICAL_ONBOARDED | Mobile DVFS/software thermal background represented; hardware thermal scan still worth bounding. |
-| 5 | National Research Nuclear University MEPhI | CANDIDATE_FOUND | Current evidence shows pool-boiling / transient heat-transfer diagnostics, boiling-onset prediction and channel heat-transfer research. Relevance is mechanism/diagnostics rather than mobile hardware. | Qualify current thermal-physics team and transfer boundary before onboarding. |
+| 5 | National Research Nuclear University MEPhI | CANONICAL_ONBOARDED | Pavel Struchalin: transient pool boiling, boiling-onset diagnostics and channel-regime prediction; modeled as a failure/regime-diagnostics enabler rather than mobile hardware. |
 | 6 | HSE University | CANONICAL_ONBOARDED | HSE MIEM 2026 electrothermal modeling of high-power electronic circuits/PCB overheating; Igor Kharitonov current professor. Modeled as thermal-reliability / EDA enabler rather than cooling-device hardware. |
 | 7 | MGIMO University | PENDING_SCAN | Bounded scan; likely negative for technical scope, but must be recorded. |
 | 8 | RANEPA | PENDING_SCAN | Bounded scan; likely negative for technical scope, but must be recorded. |
@@ -41,7 +41,7 @@ Russia uses:
 | 12 | Ural Federal University | PENDING_SCAN | Engineering/thermal scan required. |
 | 13 | Tomsk Polytechnic University | CANONICAL_ONBOARDED | Laser/wettability process capability represented. |
 | 14 | RUDN University | PENDING_SCAN | Thermal/engineering scan required. |
-| 15 | ITMO University | CANDIDATE_FOUND | Current/very recent institutional records include computer-microprocessor cooling-system work and thermal analysis of radio-electronic devices; broader thermal-physics activity is substantial. | Identify current responsible lab/person and mobile relevance before onboarding. |
+| 15 | ITMO University | CANONICAL_ONBOARDED | Vladimir Korablev: current semiconductor-device capillary cooling, electronics thermal analysis and cooling-system engineering; 2025 microprocessor-cooling dissertation activity confirms continuity. |
 | 16 | Novosibirsk State University | CANONICAL_ONBOARDED | Two-phase diagnostics bridge represented; linked to Siberian thermal research ecosystem. |
 | 17 | MISIS University | PENDING_SCAN | Materials / thermal-interface / electronics cooling scan required. |
 | 18 | Plekhanov Russian University of Economics | PENDING_SCAN | Bounded negative-control scan required. |
