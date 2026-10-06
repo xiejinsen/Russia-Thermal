@@ -4,74 +4,300 @@ import SiteHeader from '../components/SiteHeader.astro';
 import StatStrip from '../components/StatStrip.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import InstitutionCard from '../components/cards/InstitutionCard.astro';
-import ScholarCard from '../components/cards/ScholarCard.astro';
-import DirectionCard from '../components/cards/DirectionCard.astro';
+import ExecutivePriorityCard from '../components/ExecutivePriorityCard.astro';
+import LandscapeInsightCard from '../components/LandscapeInsightCard.astro';
+import KillDecisionCard from '../components/KillDecisionCard.astro';
 import { buildOverviewVM } from '../view-models/builders';
 
 const vm = buildOverviewVM();
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 ---
 
-<BaseLayout title="Russia-Thermal — Overview" description={vm.summary}>
+<BaseLayout title="Russia-Thermal — Leadership Overview" description={vm.summary}>
   <SiteHeader slot="header" />
 
-  <section class="hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>{vm.title}</h1>
-    <p>{vm.summary}</p>
+  <section class="executive-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{vm.eyebrow}</p>
+      <h1>{vm.title}</h1>
+      <p class="summary">{vm.summary}</p>
+      <p class="thesis">{vm.thesis}</p>
+      <div class="hero-actions">
+        <a class="primary-link" href={href('/partners')}>Open partner portfolio →</a>
+        <a href={href('/landscape')}>Review Russia vs China →</a>
+        <a href={href('/decisions')}>Audit decisions →</a>
+      </div>
+    </div>
+
+    <aside class="executive-signal">
+      <p class="eyebrow">Current posture</p>
+      <strong>{vm.priorities.length}</strong>
+      <span>priority collaboration packages</span>
+      <div class="signal-rule"></div>
+      <strong>{vm.stats.activeDirections}</strong>
+      <span>active / reserve technical directions</span>
+    </aside>
   </section>
 
   <StatStrip items={[
-    { label: 'Institutions / labs', value: vm.stats.institutions },
-    { label: 'People', value: vm.stats.people },
+    { label: 'Evidence-linked directions', value: vm.stats.directions },
     { label: 'Capabilities', value: vm.stats.capabilities },
-    { label: 'Directions', value: vm.stats.directions },
-    { label: 'Active / reserve', value: vm.stats.activeDirections }
+    { label: 'Institutions / labs', value: vm.stats.institutions },
+    { label: 'Key people', value: vm.stats.people }
   ]} />
 
-  <section class="page-section">
+  <section class="page-section priority-section">
     <SectionHeader
-      eyebrow="Portfolio"
-      title="Retained directions"
-      description="Ordered by canonical investment lane; cards are built from normalized Direction records."
+      eyebrow="01 · Act"
+      title="Priority collaboration packages"
+      description="P1/P2/P3 are management-priority objects. They are intentionally separate from technical Direction lanes."
     />
-    <div class="content-grid">
-      {vm.directions.map((model) => <DirectionCard model={model} />)}
+    <div class="priority-grid">
+      {vm.priorities.map((model) => <ExecutivePriorityCard model={model} />)}
     </div>
   </section>
 
   <section class="page-section">
     <SectionHeader
-      eyebrow="Actors"
-      title="Institutions and labs connected to retained directions"
-      description="Resolved through Direction → Capability → Actor relations."
+      eyebrow="02 · Compare"
+      title="Where Russian value survives comparator pressure"
+      description="The strongest China/global baseline is shown next to the residual Russian differentiation that remains worth retaining."
+    />
+    <div class="landscape-grid">
+      {vm.landscape.map((model) => <LandscapeInsightCard model={model} />)}
+    </div>
+    <a class="section-link" href={href('/landscape')}>Open full Russia vs China landscape →</a>
+  </section>
+
+  <section class="page-section split-section">
+    <div>
+      <SectionHeader
+        eyebrow="03 · Reject"
+        title="Broad theses we should not invest in"
+        description="A narrow shortlist is a result of pressure testing. These country-level narratives were explicitly killed or downgraded."
+      />
+      <div class="kill-stack">
+        {vm.killDecisions.map((model) => <KillDecisionCard model={model} />)}
+      </div>
+      <a class="section-link" href={href('/decisions')}>See full decision history →</a>
+    </div>
+
+    <aside class="frontier-panel">
+      <p class="eyebrow">04 · Watch</p>
+      <h2>Frontier coverage</h2>
+      <p>Venue monitoring is a discovery mechanism, not partner evidence.</p>
+      <div class="frontier-metrics">
+        <div><strong>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</strong><span>venues currently represented in normalized evidence</span></div>
+        <div><strong>{vm.frontier.matchedEvidence}</strong><span>matched evidence records</span></div>
+        {vm.frontier.latestYear && <div><strong>{vm.frontier.latestYear}</strong><span>latest represented evidence year</span></div>}
+      </div>
+      <a class="primary-link" href={href('/frontier')}>Open Frontier Watch →</a>
+    </aside>
+  </section>
+
+  <section class="page-section supporting">
+    <SectionHeader
+      eyebrow="05 · Drill down"
+      title="Supporting institutions and labs"
+      description="Detailed actor pages remain available for technical review, but they no longer dominate the leadership landing page."
     />
     <div class="content-grid">
       {vm.institutions.map((model) => <InstitutionCard model={model} />)}
     </div>
   </section>
-
-  <section class="page-section">
-    <SectionHeader
-      eyebrow="People"
-      title="Key people connected through capabilities"
-      description="Affiliation and role come from normalized Actor records."
-    />
-    <div class="content-grid">
-      {vm.scholars.map((model) => <ScholarCard model={model} />)}
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
+  .executive-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(15rem, .6fr);
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+  }
+
+  .hero-copy {
+    display: grid;
+    gap: var(--space-6);
+    padding: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .hero-copy h1 {
+    max-width: 17ch;
+    margin: 0;
+    font-size: clamp(2.5rem, 5.8vw, 5.6rem);
+    line-height: .95;
+    letter-spacing: -.055em;
+  }
+
+  .summary {
+    max-width: 68ch;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.08rem;
+  }
+
+  .thesis {
+    max-width: 72ch;
+    margin: 0;
+    padding-left: var(--space-4);
+    border-left: 3px solid var(--accent);
+    font-weight: 700;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-6);
+    align-items: center;
+  }
+
+  .hero-actions a,
+  .section-link {
+    font-weight: 750;
+    text-underline-offset: .2em;
+  }
+
+  .primary-link {
+    display: inline-flex;
+    width: fit-content;
+    padding: .7rem 1rem;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .executive-signal {
+    display: grid;
+    align-content: center;
+    gap: var(--space-2);
+    padding: var(--space-8);
+    background: var(--accent-soft);
+    border-left: 1px solid var(--line);
+  }
+
+  .executive-signal strong {
+    margin-top: var(--space-4);
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
+    line-height: .9;
+    letter-spacing: -.06em;
+  }
+
+  .executive-signal span {
+    max-width: 16rem;
+    color: var(--text-muted);
+    font-size: .9rem;
+  }
+
+  .signal-rule {
+    height: 1px;
+    margin: var(--space-4) 0;
+    background: var(--line);
+  }
+
   .page-section {
     display: grid;
     gap: var(--space-6);
     margin-top: var(--space-16);
   }
 
+  .priority-grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .landscape-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .split-section {
+    grid-template-columns: minmax(0, 1.55fr) minmax(17rem, .7fr);
+    align-items: start;
+  }
+
+  .split-section > div {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .kill-stack {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .frontier-panel {
+    position: sticky;
+    top: 6rem;
+    display: grid;
+    gap: var(--space-5, 1.25rem);
+    padding: var(--space-8);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+  }
+
+  .frontier-panel h2,
+  .frontier-panel p {
+    margin: 0;
+  }
+
+  .frontier-panel > p:not(.eyebrow) {
+    color: var(--text-muted);
+  }
+
+  .frontier-metrics {
+    display: grid;
+    gap: var(--space-4);
+    padding-block: var(--space-4);
+    border-block: 1px solid var(--line);
+  }
+
+  .frontier-metrics div {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .frontier-metrics strong {
+    font-size: 1.6rem;
+    letter-spacing: -.04em;
+  }
+
+  .frontier-metrics span {
+    color: var(--text-muted);
+    font-size: .82rem;
+  }
+
   .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: var(--space-4);
+  }
+
+  .section-link {
+    width: fit-content;
+  }
+
+  @media (max-width: 860px) {
+    .executive-hero,
+    .split-section,
+    .landscape-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .executive-signal {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .frontier-panel {
+      position: static;
+    }
   }
 </style>
