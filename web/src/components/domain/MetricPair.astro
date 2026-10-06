@@ -10,7 +10,8 @@ const { label, value, href } = Astro.props;
 {href ? (
   <a class="metric metric-link" href={href}>
     <span class="label">{label}</span>
-    <span class="value">{value}<span class="arrow" aria-hidden="true">→</span></span>
+    <span class="value">{value}</span>
+    <span class="browse">Browse collection <span aria-hidden="true">→</span></span>
   </a>
 ) : (
   <div class="metric">
@@ -44,10 +45,15 @@ const { label, value, href } = Astro.props;
   dd,.value {
     margin:0;
     color:var(--text);
-    font-size:clamp(1.35rem,2.5vw,2.1rem);
+    font-size:clamp(1.2rem,2vw,1.7rem);
     font-weight:850;
     line-height:1;
-    letter-spacing:-.04em;
+    letter-spacing:-.035em;
   }
-  .arrow { margin-left:.35rem; color:var(--accent-vivid); font-size:.9em; }
+  .browse {
+    margin-top:.35rem;
+    color:var(--accent);
+    font-size:.76rem;
+    font-weight:750;
+  }
 </style>
