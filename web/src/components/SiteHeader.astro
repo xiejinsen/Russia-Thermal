@@ -49,7 +49,7 @@ const activeGroup = groups.find((item) =>
 const activeChild = activeGroup && !activeGroup.path
   ? activeGroup.children?.find((child) => isActivePath(child.path))
   : undefined;
-const locationLabel = activeChild
+const locationLabel = activeGroup && activeChild
   ? `${activeGroup.label} · ${activeChild.label}`
   : activeGroup?.label ?? 'Research Intelligence';
 ---
