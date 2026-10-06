@@ -63,6 +63,9 @@ key_evidence:
 Boundary:
 This is a public-evidence, smartphone-transfer management synthesis. It does not establish broad Russian national superiority, confirmed partner willingness, or phone-product validation.
 
+Freeze-readiness note:
+Russia Top-20, Russia ecosystem anti-omission, and China Top-20 positive-signal closure are complete for Phase 1. Reshetnev remains an intentional non-blocking evidence-qualified industry comparator outside the canonical graph. Broad discovery should remain closed unless a decision-critical contradiction appears.
+
 Reopen condition:
 Reassess if new matched phone-scale device/process evidence materially changes the China/global comparator baseline, demonstrates a new Russian control point, or invalidates one of the current residual collaboration theses. For NovSU/UUST specifically, promotion requires matched system-level advantage in phone-relevant thickness, parasitic power, reliability/integration or another demonstrably distinct control point.
 
