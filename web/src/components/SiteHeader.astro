@@ -42,7 +42,7 @@ const groups = [
       {groups.map((item) => item.path ? (
         <a class="top-link" href={href(item.path)}>{item.label}</a>
       ) : (
-        <details class="nav-group">
+        <details class="nav-group" data-nav-group>
           <summary>{item.label}<span aria-hidden="true">⌄</span></summary>
           <div class="menu">
             {item.children?.map((child) => <a href={href(child.path)}>{child.label}</a>)}
@@ -52,6 +52,46 @@ const groups = [
     </nav>
   </div>
 </header>
+
+<script>
+  const navGroups = document.querySelectorAll('[data-nav-group]');
+  const desktop = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  navGroups.forEach((group) => {
+    let closeTimer;
+
+    const openGroup = () => {
+      if (!desktop.matches) return;
+      clearTimeout(closeTimer);
+      navGroups.forEach((other) => {
+        if (other !== group) other.removeAttribute('open');
+      });
+      group.setAttribute('open', '');
+    };
+
+    const closeGroup = () => {
+      if (!desktop.matches) return;
+      clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(() => {
+        if (!group.matches(':hover') && !group.matches(':focus-within')) {
+          group.removeAttribute('open');
+        }
+      }, 120);
+    };
+
+    group.addEventListener('mouseenter', openGroup);
+    group.addEventListener('mouseleave', closeGroup);
+    group.addEventListener('focusin', openGroup);
+    group.addEventListener('focusout', closeGroup);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!desktop.matches) return;
+    navGroups.forEach((group) => {
+      if (!group.contains(event.target)) group.removeAttribute('open');
+    });
+  });
+</script>
 
 <style>
   .site-header {
