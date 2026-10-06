@@ -37,4 +37,4 @@ The organization hierarchy comes first so capability ownership stays unambiguous
 
 Historical V1 round notes can be used for provenance and fidelity checks, but they should not be required to know current V2.1 truth.
 
-Always trust [STATUS.md](STATUS.md) for the current authority state.
+V2.1 on main is now authoritative. Always trust [STATUS.md](STATUS.md) for the current authority state.
