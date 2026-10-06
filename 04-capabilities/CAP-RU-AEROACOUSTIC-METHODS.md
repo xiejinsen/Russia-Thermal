@@ -1,0 +1,23 @@
+# CAP-RU-AEROACOUSTIC-METHODS
+
+record_state: CURRENT
+actor_id: ACT-TSAGI
+key_people:
+- PERSON-KOPIEV
+- PERSON-PALCHIKOVSKIY
+maturity: RESEARCH_METHOD
+evidence_confidence: HIGH
+target_fit: ADJACENT
+assessed_at: 2026-10-06
+
+Capability statement:
+Russian TsAGI/PNRPU nodes provide strong aeroacoustic measurement, source-diagnosis and noise-control methods.
+
+evidence_claims:
+- CLM-ACOU-001
+
+Secondary institutional node:
+ACT-PNRPU
+
+Transfer boundary:
+actual phone-class microfan design superiority is unproven.
