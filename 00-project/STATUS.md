@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: web W4 leadership overview refined / decision-first homepage / Repository Health + Astro check/build PASS
-next_action: define W4 visual-asset policy and add only high-value institution/scholar/diagram visuals; then prepare W6 deployment/broken-link/accessibility checks
+current_phase: presentation-readiness architecture hardening / conclusion-first Synthesis contract
+next_action: canonicalize current portfolio thesis as Synthesis, wire web overview to canonical thesis, then begin Figma information-architecture redesign
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
