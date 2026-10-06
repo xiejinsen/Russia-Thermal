@@ -185,10 +185,20 @@ def generate(db, check=False):
     rows = []
     for d in db["direction"]:
         caps_ids = as_list(d.get("candidate_capabilities"))
-        cap = next((c for c in db["capability"] if c["id"] in caps_ids), None)
-        actor = next((a for a in db["actor"] if cap and a["id"] == cap.get("actor_id")), None)
+        caps_for_direction = [c for c in db["capability"] if c["id"] in caps_ids]
+        actor_ids = []
+        people_ids = []
+        capability_ids = []
+        for cap in caps_for_direction:
+            capability_ids.append(cap["id"])
+            actor_id = cap.get("actor_id")
+            if actor_id and actor_id not in actor_ids:
+                actor_ids.append(actor_id)
+            for person_id in as_list(cap.get("key_people")):
+                if person_id not in ("[]", "null") and person_id not in people_ids:
+                    people_ids.append(person_id)
         rows.append(
-            f"| {d['id']} | {actor['id'] if actor else '-'} | {field(cap,'key_people') if cap else '-'} | {cap['id'] if cap else '-'} | "
+            f"| {d['id']} | {', '.join(actor_ids) if actor_ids else '-'} | {', '.join(people_ids) if people_ids else '-'} | {', '.join(capability_ids) if capability_ids else '-'} | "
             f"{field(d,'differentiation_confidence')} | {field(d,'phone_transfer_maturity')} | {field(d,'investment_lane')} |"
         )
     body = (
