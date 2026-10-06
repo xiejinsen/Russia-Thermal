@@ -6,6 +6,8 @@ import CapabilityMatrix from '../components/CapabilityMatrix.astro';
 import { buildLandscapeVM } from '../view-models/builders';
 
 const vm = buildLandscapeVM();
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 ---
 
 <BaseLayout title="Russia-Thermal — Russia vs China" description={vm.summary}>
@@ -25,7 +27,7 @@ const vm = buildLandscapeVM();
         <header>
           <div>
             <p class="eyebrow">{row.direction.role}</p>
-            <h2>{row.direction.title}</h2>
+            <h2><a href={href(`/directions/${row.direction.id}`)}>{row.direction.title}</a></h2>
           </div>
           <DecisionBadge label={row.direction.lane.label} tone={row.direction.lane.tone} />
         </header>
@@ -53,12 +55,12 @@ const vm = buildLandscapeVM();
 </BaseLayout>
 
 <style>
-  .landscape { display: grid; gap: var(--space-6); margin-top: var(--space-12); }
-  .row { display: grid; gap: var(--space-6); padding: var(--space-8); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+  .landscape { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+  .row { display: grid; gap: var(--space-4); padding: var(--space-5, 1.25rem); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
   header { display: flex; justify-content: space-between; gap: var(--space-4); align-items: flex-start; }
   h2, h3, p { margin: 0; }
-  h2 { font-size: 1.4rem; letter-spacing: -.025em; }
-  .compare { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-6); }
+  h2 { font-size: 1.15rem; letter-spacing: -.02em; } h2 a{text-decoration:none;color:inherit}h2 a:hover{text-decoration:underline;text-underline-offset:.18em}
+  .compare { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-3); }
   .compare > div { padding: var(--space-5, 1.25rem); border:1px solid rgb(77 124 164 / .16); border-radius: var(--radius-md); background: #f2f8fd; }
   .compare h3 { margin-bottom: var(--space-3); font-size: .84rem; letter-spacing: .01em; color: #18344f; }
   .compare p { color: #34495e; font-weight:500; line-height:1.62; }
