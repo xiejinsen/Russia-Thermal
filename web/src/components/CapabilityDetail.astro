@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { model } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const detailHref = `${base}capabilities/${model.id}`;
 ---
 
 <article class="capability">
@@ -14,7 +16,7 @@ const { model } = Astro.props;
     <p class="eyebrow">{model.id}</p>
     <span class="disposition">{model.portfolioDisposition}</span>
   </div>
-  <h3>{model.statement}</h3>
+  <h3><a href={detailHref}>{model.statement}</a></h3>
 
   <dl class="metrics">
     <MetricPair label="Maturity" value={model.maturity} />
@@ -44,6 +46,8 @@ const { model } = Astro.props;
       <p>{model.strategicUse}</p>
     </div>
   )}
+
+  <a class="graph-link" href={detailHref}>Open capability graph →</a>
 </article>
 
 <style>
@@ -57,6 +61,8 @@ const { model } = Astro.props;
   }
 
   h3, p { margin: 0; }
+  h3 a { color:inherit; text-decoration:none; }
+  h3 a:hover, h3 a:focus-visible { text-decoration:underline; text-underline-offset:.18em; }
 
   .topline {
     display:flex;
@@ -99,4 +105,6 @@ const { model } = Astro.props;
   }
 
   .note p { color: var(--text-muted); }
+  .graph-link { width:fit-content; color:var(--accent-vivid); font-size:.8rem; font-weight:850; text-decoration:none; }
+  .graph-link:hover, .graph-link:focus-visible { text-decoration:underline; text-underline-offset:.18em; }
 </style>
