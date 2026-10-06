@@ -4,6 +4,9 @@ source_type: OFFICIAL
 record_state: CURRENT
 verification: VERIFIED_PRIMARY
 source_key: MPEI-IVANOV-CURRENT-LINE-2025-2026
+primary_url: https://mpei.ru/news/Pages/newsItem.aspx?newsID=5211
+additional_urls:
+- https://mpei.ru/AboutUniverse/OficialInfo/Orders2024/MPEI-24-1022.pdf
 verified_at: 2026-10-05
 
 Sources:
