@@ -24,7 +24,9 @@ import type {
   DirectionExplorerVM,
   DirectionPageVM,
   ClaimExplorerVM,
-  ClaimPageVM
+  ClaimPageVM,
+  PaperExplorerVM,
+  PaperPageVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -1033,5 +1035,78 @@ export function buildClaimPageVM(id: string): ClaimPageVM | null {
       .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)),
     directions: linkedDirections.map(directionCard),
     decisions: linkedDecisions
+  };
+}
+
+
+export function paperIds(): string[] {
+  return evidence.filter((item) => item.id.startsWith('PAPER-')).map((item) => item.id);
+}
+
+export function buildPaperExplorerVM(): PaperExplorerVM {
+  const papers = evidence
+    .filter((item) => item.id.startsWith('PAPER-'))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title));
+
+  return {
+    title: 'Papers',
+    summary:
+      'Peer-reviewed and scholarly paper records connected to the Claim / Capability / Direction graph. Paper pages summarize only canonical extracted findings and boundaries.',
+    records: papers.map((item) => {
+      const card = evidenceCard(item);
+      return {
+        id: item.id,
+        title: item.title,
+        year: item.year ?? undefined,
+        venue: item.venue ?? undefined,
+        authors: item.authors,
+        countryContext: item.countryContext ?? undefined,
+        claimCount: card.supportingClaims.length + card.contradictingClaims.length,
+        directionCount: card.linkedDirections.length,
+        href: `/papers/${item.id}`
+      };
+    })
+  };
+}
+
+export function buildPaperPageVM(id: string): PaperPageVM | null {
+  const item = evidenceById.get(id);
+  if (!item || !item.id.startsWith('PAPER-')) return null;
+
+  const card = evidenceCard(item);
+  const linkedCapabilityIds = new Set(card.linkedCapabilities.map((cap) => cap.id));
+  const linkedCapabilities = capabilities.filter((cap) => linkedCapabilityIds.has(cap.id));
+  const institutionMap = new Map<string, CapabilityRecord[]>();
+  const peopleMap = new Map<string, ActorRecord>();
+
+  for (const capability of linkedCapabilities) {
+    const current = institutionMap.get(capability.actorId) ?? [];
+    current.push(capability);
+    institutionMap.set(capability.actorId, current);
+    for (const person of peopleForCapability(capability)) peopleMap.set(person.id, person);
+  }
+
+  return {
+    id: item.id,
+    title: item.title,
+    year: item.year ?? undefined,
+    venue: item.venue ?? undefined,
+    authors: item.authors,
+    countryContext: item.countryContext ?? undefined,
+    primaryUrl: item.primaryUrl,
+    findings: item.directFindings,
+    boundary: item.boundary ?? undefined,
+    supportingClaims: card.supportingClaims.map((claim) => ({ ...claim, href: `/claims/${claim.id}` })),
+    contradictingClaims: card.contradictingClaims.map((claim) => ({ ...claim, href: `/claims/${claim.id}` })),
+    capabilities: linkedCapabilities.map(capabilityDetail),
+    institutions: [...institutionMap.entries()]
+      .map(([actorId, caps]) => {
+        const actor = actorById.get(actorId);
+        return actor ? institutionCard(actor, caps) : null;
+      })
+      .filter((item): item is InstitutionCardVM => Boolean(item)),
+    scholars: [...peopleMap.values()]
+      .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)),
+    directions: card.linkedDirections
   };
 }
