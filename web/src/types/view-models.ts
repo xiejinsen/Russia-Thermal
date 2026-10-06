@@ -46,11 +46,31 @@ export interface OverviewStatsVM {
   activeDirections: number;
 }
 
+export interface OverviewDecisionVM {
+  id: string;
+  subject: string;
+  eventType: StatusVM;
+  newState: string;
+  rationale?: string;
+}
+
+export interface OverviewFrontierVM {
+  venueCount: number;
+  coveredVenueCount: number;
+  matchedEvidence: number;
+  latestYear?: number;
+}
+
 export interface OverviewPageVM {
   eyebrow: string;
   title: string;
   summary: string;
+  thesis: string;
   stats: OverviewStatsVM;
+  priorities: PartnerPriorityVM[];
+  landscape: LandscapeRowVM[];
+  killDecisions: OverviewDecisionVM[];
+  frontier: OverviewFrontierVM;
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
   directions: DirectionCardVM[];
