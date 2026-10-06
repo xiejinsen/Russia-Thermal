@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web/**'
+      - '00-project/**'
       - '01-evidence/**'
       - '02-claims/**'
       - '03-actors/**'
