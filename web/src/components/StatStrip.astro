@@ -1,0 +1,26 @@
+---
+import MetricPair from './domain/MetricPair.astro';
+
+interface Props {
+  items: Array<{ label: string; value: string | number }>;
+}
+
+const { items } = Astro.props;
+---
+
+<dl class="stat-strip">
+  {items.map((item) => <MetricPair label={item.label} value={item.value} />)}
+</dl>
+
+<style>
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: var(--space-4);
+    margin: var(--space-8) 0 0;
+    padding: var(--space-6);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+  }
+</style>

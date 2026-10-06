@@ -36,11 +36,36 @@ export interface DirectionCardVM {
   nextGate?: string;
 }
 
+export interface OverviewStatsVM {
+  institutions: number;
+  people: number;
+  capabilities: number;
+  directions: number;
+  activeDirections: number;
+}
+
 export interface OverviewPageVM {
   eyebrow: string;
   title: string;
   summary: string;
+  stats: OverviewStatsVM;
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
   directions: DirectionCardVM[];
+}
+
+export interface PartnerGroupVM {
+  id: string;
+  title: string;
+  description: string;
+  directions: DirectionCardVM[];
+  institutions: InstitutionCardVM[];
+  scholars: ScholarCardVM[];
+}
+
+export interface PartnerPortfolioVM {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  groups: PartnerGroupVM[];
 }

@@ -1,49 +1,77 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import Badge from '../components/primitives/Badge.astro';
+import StatStrip from '../components/StatStrip.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import ScholarCard from '../components/cards/ScholarCard.astro';
+import DirectionCard from '../components/cards/DirectionCard.astro';
+import { buildOverviewVM } from '../view-models/builders';
 
-const fixtures = [
-  {
-    badge: 'Strategic candidate',
-    tone: 'positive',
-    title: 'Partner portfolio',
-    body: 'Fixture-only card proving hierarchy, spacing and decision emphasis.'
-  },
-  {
-    badge: 'Evidence',
-    tone: 'accent',
-    title: 'Evidence drill-down',
-    body: 'Presentation components will receive normalized view-model props, not canonical Markdown.'
-  },
-  {
-    badge: 'Guardrail',
-    tone: 'warning',
-    title: 'Decision integrity',
-    body: 'Killed or narrowed theses remain visible so the website cannot silently revive rejected narratives.'
-  }
-] as const;
+const vm = buildOverviewVM();
 ---
 
-<BaseLayout title="Russia-Thermal — Web System Fixture">
+<BaseLayout title="Russia-Thermal — Overview" description={vm.summary}>
   <SiteHeader slot="header" />
 
   <section class="hero">
-    <p class="eyebrow">W2 Design-System Fixture</p>
-    <h1>Evidence first. Presentation second.</h1>
-    <p>
-      This page validates the visual shell only. It intentionally contains no copied canonical research facts.
-      Real pages will consume normalized data through page-specific view models.
-    </p>
+    <p class="eyebrow">{vm.eyebrow}</p>
+    <h1>{vm.title}</h1>
+    <p>{vm.summary}</p>
   </section>
 
-  <section class="grid" aria-label="Design-system fixture cards">
-    {fixtures.map((item) => (
-      <article class="card">
-        <Badge tone={item.tone}>{item.badge}</Badge>
-        <h2>{item.title}</h2>
-        <p>{item.body}</p>
-      </article>
-    ))}
+  <StatStrip items={[
+    { label: 'Institutions / labs', value: vm.stats.institutions },
+    { label: 'People', value: vm.stats.people },
+    { label: 'Capabilities', value: vm.stats.capabilities },
+    { label: 'Directions', value: vm.stats.directions },
+    { label: 'Active / reserve', value: vm.stats.activeDirections }
+  ]} />
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="Portfolio"
+      title="Retained directions"
+      description="Ordered by canonical investment lane; cards are built from normalized Direction records."
+    />
+    <div class="content-grid">
+      {vm.directions.map((model) => <DirectionCard model={model} />)}
+    </div>
+  </section>
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="Actors"
+      title="Institutions and labs connected to retained directions"
+      description="Resolved through Direction → Capability → Actor relations."
+    />
+    <div class="content-grid">
+      {vm.institutions.map((model) => <InstitutionCard model={model} />)}
+    </div>
+  </section>
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="People"
+      title="Key people connected through capabilities"
+      description="Affiliation and role come from normalized Actor records."
+    />
+    <div class="content-grid">
+      {vm.scholars.map((model) => <ScholarCard model={model} />)}
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  .page-section {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-16);
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-4);
+  }
+</style>

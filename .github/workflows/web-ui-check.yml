@@ -5,12 +5,26 @@ on:
     branches:
       - main
     paths:
+      - "01-evidence/**"
+      - "02-claims/**"
+      - "03-actors/**"
+      - "04-capabilities/**"
+      - "05-directions/**"
+      - "07-decisions/**"
+      - "tools/v2repo.py"
       - "web/**"
       - ".github/workflows/web-ui-check.yml"
   pull_request:
     branches:
       - main
     paths:
+      - "01-evidence/**"
+      - "02-claims/**"
+      - "03-actors/**"
+      - "04-capabilities/**"
+      - "05-directions/**"
+      - "07-decisions/**"
+      - "tools/v2repo.py"
       - "web/**"
       - ".github/workflows/web-ui-check.yml"
 
@@ -22,6 +36,9 @@ jobs:
         working-directory: web
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

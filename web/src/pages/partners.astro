@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import ScholarCard from '../components/cards/ScholarCard.astro';
+import DirectionCard from '../components/cards/DirectionCard.astro';
+import { buildPartnerPortfolioVM } from '../view-models/builders';
+
+const vm = buildPartnerPortfolioVM();
+---
+
+<BaseLayout title="Russia-Thermal — Partner Portfolio" description={vm.summary}>
+  <SiteHeader slot="header" />
+
+  <section class="hero">
+    <p class="eyebrow">{vm.eyebrow}</p>
+    <h1>{vm.title}</h1>
+    <p>{vm.summary}</p>
+  </section>
+
+  {vm.groups.map((group) => (
+    <section class="portfolio-group" id={group.id}>
+      <SectionHeader title={group.title} description={group.description} />
+
+      <div class="subsection">
+        <h3>Directions</h3>
+        <div class="content-grid">
+          {group.directions.map((model) => <DirectionCard model={model} />)}
+        </div>
+      </div>
+
+      {group.institutions.length > 0 && (
+        <div class="subsection">
+          <h3>Institutions / labs</h3>
+          <div class="content-grid">
+            {group.institutions.map((model) => <InstitutionCard model={model} />)}
+          </div>
+        </div>
+      )}
+
+      {group.scholars.length > 0 && (
+        <div class="subsection">
+          <h3>Key people</h3>
+          <div class="content-grid">
+            {group.scholars.map((model) => <ScholarCard model={model} />)}
+          </div>
+        </div>
+      )}
+    </section>
+  ))}
+</BaseLayout>
+
+<style>
+  .portfolio-group {
+    display: grid;
+    gap: var(--space-8);
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--line);
+  }
+
+  .subsection {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .subsection h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-4);
+  }
+</style>
