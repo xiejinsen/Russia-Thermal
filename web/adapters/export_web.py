@@ -199,9 +199,12 @@ def decision_record(o: dict[str, Any]) -> dict[str, Any]:
         "eventType": nullable(o.get("event_type")) or "",
         "subjectId": nullable(o.get("subject")) or "",
         "newState": nullable(o.get("new_state")) or "",
+        "effectiveDate": nullable(o.get("effective_date")),
+        "previousState": nullable(o.get("previous_state")),
         "triggerClaimIds": as_list(o.get("trigger_claims")),
         "triggerExperimentIds": as_list(o.get("trigger_experiments")),
         "rationale": nullable(o.get("rationale")),
+        "reopenCondition": nullable(o.get("reopen_condition")),
         "sourcePath": o["_path"],
     }
 
