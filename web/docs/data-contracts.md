@@ -25,6 +25,11 @@ Optional:
 - `officialUrl`
 - `publicContact`
 - `researchRelevance`
+- `city`
+- `region`
+- `latitude`
+- `longitude`
+- `locationVerifiedAt`
 - `imageRef`
 
 ### EvidenceRecord
@@ -235,3 +240,16 @@ Synthesis is a thin overlay. It does not replace Claim, Capability, Direction, P
 Monthly behavior:
 - ordinary new Source/Claim ingestion does not require Synthesis changes;
 - update Synthesis only when the management conclusion or action implication materially changes.
+
+
+## 10. Geographic presentation contract
+
+Geographic views are derived from Actor identity/location and existing relations.
+
+Rules:
+- ORGANIZATION / LAB / COMPANY may own verified city / region / coordinates.
+- PERSON should normally inherit map position from the canonical parent Actor instead of duplicating coordinates.
+- maps must not infer strategic importance from geography, marker size, or density alone;
+- map filters may derive Capability / Direction / Priority / Person relations;
+- missing location is rendered as a coverage gap, never silently geocoded to an uncertain place;
+- Russia and China research maps use the same view-model contract even if their evidence maturity differs.
