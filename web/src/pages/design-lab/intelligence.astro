@@ -5,7 +5,14 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
 ---
 <DesignLabLayout title="Russia-Thermal — Intelligence prototype" description={vm.summary} theme="intelligence">
 <div class="app">
-<aside class="rail"><div class="logo">RT</div><a class="active" href="#">OV</a><a href="#act">P1</a><a href="#compare">C×R</a><a href={href('/evidence')}>EV</a><a href={href('/decisions')}>DC</a></aside>
+<aside class="rail">
+  <div class="logo">RT</div>
+  <a class="active" href="#">Overview</a>
+  <a href="#act">Act</a>
+  <a href="#compare">Compare</a>
+  <a href={href('/evidence')}>Evidence</a>
+  <a href={href('/decisions')}>Decisions</a>
+</aside>
 <div class="workspace">
 <header><div><b>Russia-Thermal Intelligence</b><span>smartphone thermal collaboration landscape</span></div><div class="updated">SYNTHESIS · {vm.thesisAssessedAt ?? 'CURRENT'}</div></header>
 <main>
@@ -14,30 +21,62 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
   <div class="scoreboard"><div><b>{vm.priorities.length}</b><span>PRIORITY PACKAGES</span></div><div><b>{vm.stats.activeDirections}</b><span>ACTIVE / RESERVE</span></div><div><b>{vm.stats.capabilities}</b><span>CAPABILITIES</span></div></div>
 </section>
 <section class="basis">
-  <div class="bar-title"><span>THESIS BASIS</span><span>3 strongest reasons</span></div>
+  <div class="bar-title"><span>WHY THIS CONCLUSION</span><span>3 strongest reasons</span></div>
   <div class="basis-grid">{vm.theoryBasis.slice(0,3).map((x,i)=><div><b>0{i+1}</b><p>{x}</p></div>)}</div>
 </section>
+
+<section class="management-strip">
+  <div><span>DO NOW</span><b>Validate the three priority collaboration packages</b><p>Advance only where Russian residual capability can add decision-relevant value beyond the China/global baseline.</p></div>
+  <div><span>DO NOT</span><b>Do not fund broad Russia-over-China superiority theses</b><p>Country-level narratives already killed by comparator pressure stay out of the investment case.</p></div>
+  <div><span>KEEP WATCH</span><b>Maintain frontier coverage without treating it as partner evidence</b><p>New venue evidence can trigger reassessment, but discovery alone does not promote a direction.</p></div>
+</section>
 <section id="act" class="panel">
-  <div class="panel-head"><div><span>ACTION QUEUE</span><h2>Priority collaboration packages</h2></div><p>Only packages with a bounded technical proposition and an explicit next gate appear here.</p></div>
-  <div class="table">
-    <div class="tr head"><span>Rank</span><span>Partner</span><span>Technical focus</span><span>Decision</span><span>Next gate</span></div>
-    {vm.priorities.map((p)=>{const d=p.directions[0];return <div class="tr"><b>{p.rank}</b><span>{p.institutions[0]?.name}</span><span>{d?.title}</span><span class="status">{d?.recommendation}</span><span>{d?.nextQuestion ?? d?.nextGate}</span></div>})}
+  <div class="panel-head">
+    <div><span>01 · ACT</span><h2>Advance three bounded collaboration packages</h2></div>
+    <p><b>Question answered:</b> who should we engage first, what should we work on, and what must be proven before promotion?</p>
+  </div>
+  <div class="priority-stack">
+    {vm.priorities.map((p)=>{const d=p.directions[0];return <article class="priority-row">
+      <div class="priority-rank"><b>{p.rank}</b><span>{p.institutions[0]?.name}</span></div>
+      <div class="priority-decision"><span>DECISION</span><strong>{d?.recommendation}</strong><p>{d?.collaborationFocus ?? p.rationale}</p></div>
+      <div class="priority-why"><span>WHY RUSSIA STILL ADDS VALUE</span><p>{d?.residualDifferentiation ?? p.rationale}</p></div>
+      <div class="priority-gate"><span>NEXT GATE</span><p>{d?.nextQuestion ?? d?.nextGate}</p></div>
+    </article>})}
   </div>
 </section>
 <section id="compare" class="panel">
-  <div class="panel-head"><div><span>COMPARATOR</span><h2>Where residual value survives</h2></div><p>China/global baseline on the left. Russian residual on the right. Decision in the middle.</p></div>
+  <div class="panel-head">
+    <div><span>02 · COMPARE</span><h2>China leads the product stack; Russia retains selective specialist value</h2></div>
+    <p><b>Question answered:</b> after comparator pressure, where does a Russian capability still change a smartphone decision?</p>
+  </div>
+  <div class="compare-summary">
+    <b>Portfolio conclusion</b>
+    <p>Do not compare countries in the abstract. Retain only direction-level residuals that survive a stronger China/global baseline and still clear a phone-relevant validation gate.</p>
+  </div>
   <div class="matrix">
-    {vm.landscape.map((row)=><article>
-      <div class="dir"><b>{row.direction.title}</b><span>{row.direction.phoneTransferMaturity} phone maturity</span></div>
-      <div class="baseline"><small>{row.chinaLabel}</small><p>{row.chinaBaseline}</p></div>
-      <div class="decision"><span>{row.direction.recommendation}</span></div>
-      <div class="residual"><small>{row.russiaLabel}</small><p>{row.russiaResidual}</p></div>
+    {vm.landscape.map((row)=><article class="compare-row">
+      <div class="compare-top">
+        <div class="dir"><b>{row.direction.title}</b><span>{row.direction.phoneTransferMaturity} phone maturity</span></div>
+        <div class="decision"><small>DECISION</small><strong>{row.direction.recommendation}</strong></div>
+        <div class="focus"><small>COLLABORATION FOCUS</small><p>{row.direction.collaborationFocus ?? row.direction.residualDifferentiation}</p></div>
+      </div>
+      <div class="compare-detail">
+        <div class="baseline"><small>{row.chinaLabel}</small><p>{row.chinaBaseline}</p></div>
+        <div class="residual"><small>{row.russiaLabel}</small><p>{row.russiaResidual}</p></div>
+        <div class="next"><small>NEXT VALIDATION QUESTION</small><p>{row.direction.nextQuestion ?? row.direction.nextGate}</p></div>
+      </div>
     </article>)}
   </div>
 </section>
 <section class="lower">
- <div class="panel reject"><div class="panel-head"><div><span>REJECTION LOG</span><h2>Killed theses</h2></div></div>{vm.killDecisions.slice(0,4).map(d=><div class="kill"><b>×</b><span>{d.subject}</span></div>)}</div>
- <div class="panel frontier"><div class="panel-head"><div><span>FRONTIER WATCH</span><h2>Coverage</h2></div></div><div class="numbers"><b>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</b><span>venues represented</span><b>{vm.frontier.matchedEvidence}</b><span>matched evidence records</span><b>{vm.frontier.latestYear}</b><span>latest evidence year</span></div></div>
+ <div class="panel reject">
+   <div class="panel-head"><div><span>03 · REJECT</span><h2>Broad theses we should not invest in</h2></div><p>Rejection is part of the portfolio conclusion, not an appendix.</p></div>
+   {vm.killDecisions.slice(0,4).map(d=><div class="kill"><b>×</b><div><strong>{d.subject}</strong><p>{d.rationale}</p></div></div>)}
+ </div>
+ <div class="panel frontier">
+   <div class="panel-head"><div><span>04 · WATCH</span><h2>Frontier coverage</h2></div><p>Discovery coverage only. Not evidence of partner readiness.</p></div>
+   <div class="numbers"><b>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</b><span>venues represented</span><b>{vm.frontier.matchedEvidence}</b><span>matched evidence records</span><b>{vm.frontier.latestYear}</b><span>latest evidence year</span></div>
+ </div>
 </section>
 </main></div></div>
 </DesignLabLayout>
@@ -53,7 +92,7 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
   position:fixed;
   inset:0 auto 0 0;
   z-index:20;
-  width:76px;
+  width:122px;
   height:100vh;
   background:linear-gradient(180deg,#0b5ea8 0%,#0a4f91 100%);
   border-right:1px solid rgba(6,56,102,.18);
@@ -65,17 +104,17 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
   box-shadow:8px 0 30px rgba(25,82,132,.10);
 }
 .rail .logo{
-  width:42px;height:42px;display:grid;place-items:center;
+  width:46px;height:46px;display:grid;place-items:center;
   background:#fff;color:#0b5ea8;font-weight:900;font-size:14px;
   border-radius:12px;margin-bottom:18px;
   box-shadow:0 6px 18px rgba(0,0,0,.12);
 }
 .rail a{
-  font-size:12px;font-weight:800;letter-spacing:.03em;text-decoration:none;color:#d9edff;
-  width:48px;height:42px;display:grid;place-items:center;border-radius:10px;
+  font-size:12px;font-weight:750;letter-spacing:.01em;text-decoration:none;color:#d9edff;
+  width:98px;height:42px;display:flex;align-items:center;padding:0 14px;border-radius:10px;
 }
 .rail a.active,.rail a:hover{background:rgba(255,255,255,.18);color:#fff}
-.workspace{margin-left:76px;min-width:0}
+.workspace{margin-left:122px;min-width:0}
 .workspace header{
   position:sticky;top:0;z-index:10;height:64px;display:flex;align-items:center;justify-content:space-between;
   padding:0 28px;border-bottom:1px solid #d7e6f2;background:rgba(248,252,255,.92);
@@ -121,6 +160,11 @@ main{padding:26px;max-width:1660px;margin:0 auto}
 .basis-grid>div:last-child{border-right:0}
 .basis-grid b{color:#0a6bb7;font-size:13px}
 .basis-grid p{margin:0;font-size:14px;line-height:1.6;color:#435d70}
+.management-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:18px;border:1px solid #cfe1ee;border-radius:16px;overflow:hidden;background:#d7e6f2;box-shadow:0 10px 28px rgba(42,96,140,.05)}
+.management-strip>div{display:grid;gap:8px;padding:20px;background:#fff}
+.management-strip span{font-size:11px;font-weight:850;letter-spacing:.08em;color:#0a6bb7}
+.management-strip b{font-size:15px;line-height:1.35;color:#173f5e}
+.management-strip p{margin:0;font-size:13px;line-height:1.55;color:#5a7183}
 .panel{
   margin-top:18px;background:#fff;border:1px solid #cfe1ee;border-radius:16px;overflow:hidden;
   box-shadow:0 10px 28px rgba(42,96,140,.05)
@@ -131,47 +175,52 @@ main{padding:26px;max-width:1660px;margin:0 auto}
 }
 .panel-head h2{font-size:20px;margin:4px 0 0;color:#183c59;letter-spacing:-.02em}
 .panel-head p{font-size:13px;line-height:1.55;color:#5e7485;max-width:540px;margin:0}
-.table{overflow-x:auto}
-.tr{
-  display:grid;grid-template-columns:76px 190px 230px 205px minmax(360px,1fr);
-  min-width:1060px;border-bottom:1px solid #e0ebf3
-}
-.tr>*{padding:16px 14px;border-right:1px solid #e6eef4;font-size:13px;line-height:1.55;color:#334f63}
-.tr.head{background:#f2f8fc;color:#587187;text-transform:uppercase;letter-spacing:.05em;font-weight:800}
-.tr.head>*{font-size:11px}
-.tr b{color:#0a67b0}
-.status{color:#087a66!important;font-weight:800;background:#f2fbf8}
-.matrix article{
-  display:grid;grid-template-columns:210px 1fr 175px 1fr;border-bottom:1px solid #dfeaf2
-}
-.matrix article>div{padding:18px;border-right:1px solid #e4edf4}
-.dir{display:grid;gap:7px;background:#fbfdff}
-.dir b{font-size:14px;color:#254a66}
-.dir span,small{font-size:11px;color:#617b8f;text-transform:uppercase;letter-spacing:.05em}
+.priority-stack{display:grid}
+.priority-row{display:grid;grid-template-columns:150px minmax(270px,1.05fr) minmax(260px,1fr) minmax(280px,1.05fr);border-bottom:1px solid #dfeaf2}
+.priority-row>div{padding:20px;border-right:1px solid #e4edf4}
+.priority-rank{display:grid;align-content:start;gap:8px;background:#f7fbfe}
+.priority-rank b{font-size:25px;color:#0b67b2}
+.priority-rank span{font-size:13px;font-weight:750;color:#36566e}
+.priority-decision{background:#f1fbf7}
+.priority-row div>span{display:block;margin-bottom:7px;font-size:10px;font-weight:850;letter-spacing:.07em;color:#607c90}
+.priority-decision strong{font-size:15px;color:#087a66}
+.priority-row p{margin:8px 0 0;font-size:13px;line-height:1.6;color:#405c70}
+.priority-why{background:#fff}
+.priority-gate{background:#f7fbff}
+.compare-summary{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:15px 20px;background:#eaf5fd;border-bottom:1px solid #d7e6f2}
+.compare-summary b{font-size:12px;color:#0a67b0;text-transform:uppercase;letter-spacing:.06em}
+.compare-summary p{margin:0;font-size:13px;line-height:1.55;color:#405c70}
+.compare-row{border-bottom:1px solid #dfeaf2}
+.compare-top{display:grid;grid-template-columns:230px 190px minmax(0,1fr);border-bottom:1px solid #e3edf4;background:#fbfdff}
+.compare-top>div,.compare-detail>div{padding:18px;border-right:1px solid #e4edf4}
+.dir{display:grid;gap:7px}
+.dir b{font-size:15px;color:#254a66}
+.dir span,small{font-size:10px;color:#617b8f;text-transform:uppercase;letter-spacing:.05em}
+.decision strong{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:#0878c4}
+.focus p,.matrix p{font-size:13px;line-height:1.62;color:#3e596c;margin:.45rem 0 0}
+.compare-detail{display:grid;grid-template-columns:1fr 1fr 1fr}
 .baseline{background:#edf6ff}
 .residual{background:#eef9f6}
-.matrix p{font-size:13px;line-height:1.62;color:#3e596c;margin:.55rem 0 0}
-.decision{display:grid;place-items:center;text-align:center;background:#f8fbfd}
-.decision span{font-size:12px;font-weight:850;color:#0a68b1;line-height:1.45}
+.next{background:#f8fbfd}
 .lower{display:grid;grid-template-columns:1.5fr .7fr;gap:18px}
 .kill{display:grid;grid-template-columns:34px 1fr;padding:16px 20px;border-bottom:1px solid #e0ebf3;font-size:13px;color:#344f63}
-.kill b{color:#c65454;font-size:16px}
+.kill b{color:#c65454;font-size:16px}.kill strong{font-size:13px;color:#36536a}.kill p{margin:5px 0 0;color:#607688;line-height:1.5}
 .numbers{display:grid;grid-template-columns:auto 1fr;gap:14px 16px;padding:22px}
 .numbers b{font-size:28px;color:#0b64aa}
 .numbers span{font-size:12px;color:#5e7486;align-self:center;line-height:1.35}
 
 @media(max-width:900px){
   .rail{position:static;width:100%;height:58px;flex-direction:row;justify-content:center;padding:8px}
-  .rail .logo{width:38px;height:38px;margin:0 12px 0 0}
-  .rail a{height:38px;width:46px}
+  .rail .logo{width:38px;height:38px;margin:0 8px 0 0}
+  .rail a{height:38px;width:auto;padding:0 9px;font-size:11px}
   .workspace{margin-left:0}
   .workspace header span{display:none}
   .signal,.lower{grid-template-columns:1fr}
   .scoreboard{grid-template-columns:repeat(3,1fr)!important;border-left:0;border-top:1px solid #d8e8f4}
-  .basis-grid{grid-template-columns:1fr}
+  .basis-grid,.management-strip{grid-template-columns:1fr}
   .basis-grid>div{border-right:0;border-bottom:1px solid #e0ebf3}
-  .matrix article{grid-template-columns:1fr}
-  .matrix article>div{border-right:0}
+  .priority-row,.compare-top,.compare-detail,.compare-summary{grid-template-columns:1fr}
+  .priority-row>div,.compare-top>div,.compare-detail>div{border-right:0;border-bottom:1px solid #e4edf4}
   main{padding:16px}
 }
 </style>
