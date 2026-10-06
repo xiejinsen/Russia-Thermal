@@ -1,6 +1,6 @@
 # Russia Top-20 University Thermal-Management Coverage Scan
 
-status: ACTIVE
+status: TOP20_SCAN_COMPLETE
 baseline: RAEX-100 2026
 scope: smartphone / mobile electronics thermal-management and transferable heat-transfer capability discovery
 updated_at: 2026-10-06
@@ -29,7 +29,7 @@ Russia uses:
 |---:|---|---|---|
 | 1 | Lomonosov Moscow State University | CANONICAL_ONBOARDED | Institute of Mechanics / Vladimir Levashov: current nonequilibrium two-phase heat/mass-transfer project explicitly motivated by micro/nanoelectronics heat removal via evaporation and boiling. | Continue evidence enrichment; model as foundational rather than device capability. |
 | 2 | Bauman Moscow State Technical University | CANONICAL_ONBOARDED | Wick / heat-pipe manufacturing-related capability already represented. |
-| 3 | Moscow Institute of Physics and Technology | PENDING_SCAN | Mandatory systematic scan required. |
+| 3 | Moscow Institute of Physics and Technology | SCANNED_NO_STRONG_SIGNAL | Deep school/lab/publication scan found strong aerospace heat transfer, thermal-material and plasma heat-load work but no sufficiently direct current electronics/chip-cooling program for this project slice. | Reopen only if direct electronics-thermal primary evidence appears. |
 | 4 | Saint Petersburg State University | CANONICAL_ONBOARDED | Mobile DVFS/software thermal background represented; hardware thermal scan still worth bounding. |
 | 5 | National Research Nuclear University MEPhI | CANONICAL_ONBOARDED | Pavel Struchalin: transient pool boiling, boiling-onset diagnostics and channel-regime prediction; modeled as a failure/regime-diagnostics enabler rather than mobile hardware. |
 | 6 | HSE University | CANONICAL_ONBOARDED | HSE MIEM 2026 electrothermal modeling of high-power electronic circuits/PCB overheating; Igor Kharitonov current professor. Modeled as thermal-reliability / EDA enabler rather than cooling-device hardware. |
@@ -61,7 +61,7 @@ Russia uses:
 
 ## Completion rule
 
-Russia coverage is not complete until:
+Russia RAEX Top-20 baseline coverage is complete: all 20 rows now have explicit classifications. Broader Russia ecosystem coverage is not complete until:
 - all RAEX Top 20 rows have an explicit scan result;
 - all positive signals are qualified or rejected;
 - relevant non-university RAS institutes remain included;
