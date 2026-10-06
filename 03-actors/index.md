@@ -3,20 +3,20 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 # Actor / Capability Index
 
 ## Actors
+- ACT-NEWFROST | COMPANY | parent=null | country=RU
+- ACT-ITP-LHP-LAB | LAB | parent=ACT-ITP-UBRAS | country=RU
+- ACT-KUT-LAB13 | LAB | parent=ACT-KUTATELADZE | country=RU
+- ACT-KUT-LAB66 | LAB | parent=ACT-KUTATELADZE | country=RU
+- ACT-NSU-EITP-LAB | LAB | parent=ACT-NSU | country=RU
 - ACT-BMSTU | ORGANIZATION | parent=null | country=RU
 - ACT-FRUMKIN | ORGANIZATION | parent=null | country=RU
 - ACT-ICM-SBRAS | ORGANIZATION | parent=null | country=RU
-- ACT-ITP-LHP-LAB | LAB | parent=ACT-ITP-UBRAS | country=RU
 - ACT-ITP-UBRAS | ORGANIZATION | parent=null | country=RU
 - ACT-JIHT | ORGANIZATION | parent=null | country=RU
-- ACT-KUT-LAB13 | LAB | parent=ACT-KUTATELADZE | country=RU
-- ACT-KUT-LAB66 | LAB | parent=ACT-KUTATELADZE | country=RU
 - ACT-KUTATELADZE | ORGANIZATION | parent=null | country=RU
 - ACT-LAVRENTYEV | ORGANIZATION | parent=null | country=RU
 - ACT-MPEI | ORGANIZATION | parent=null | country=RU
-- ACT-NEWFROST | COMPANY | parent=null | country=RU
 - ACT-NSU | ORGANIZATION | parent=null | country=RU
-- ACT-NSU-EITP-LAB | LAB | parent=ACT-NSU | country=RU
 - ACT-PNRPU | ORGANIZATION | parent=null | country=RU
 - ACT-SKOLTECH | ORGANIZATION | parent=null | country=RU
 - ACT-SPBPU | ORGANIZATION | parent=null | country=RU
