@@ -99,7 +99,8 @@ function capabilityDetail(capability: CapabilityRecord): CapabilityDetailVM {
     targetFit: humanize(capability.targetFit),
     technicalScope: capability.technicalScope,
     transferBoundary: capability.transferBoundary ?? undefined,
-    strategicUse: capability.strategicUse ?? undefined
+    strategicUse: capability.strategicUse ?? undefined,
+    portfolioDisposition: humanize(capability.portfolioDisposition)
   };
 }
 
@@ -492,6 +493,7 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
     countryContext: item.countryContext ?? undefined,
     findings: item.directFindings,
     boundary: item.boundary ?? undefined,
+    usageRole: item.usageRole ? humanize(item.usageRole) : undefined,
     supportingClaims: supportingClaims.map(claimSummary),
     contradictingClaims: contradictingClaims.map(claimSummary),
     linkedCapabilities: linkedCaps.map(capabilityDetail),
@@ -557,7 +559,7 @@ export function buildLandscapeVM(): LandscapePageVM {
 
     return {
       direction: directionCard(direction),
-      chinaLabel: 'China · SJTU / domestic & global baseline',
+      chinaLabel: 'China · domestic & global comparator baseline',
       russiaLabel: russianActors.length
         ? `Russia · ${russianActors.slice(0, 3).join(' / ')}`
         : 'Russia · linked capability owners',
@@ -995,6 +997,7 @@ export function buildClaimExplorerVM(): ClaimExplorerVM {
           proposition: claim.proposition,
           status: humanize(claim.status),
           confidence: humanize(claim.confidence),
+          decisionRole: claim.decisionRole ? humanize(claim.decisionRole) : undefined,
           supportingCount: claim.supportingSourceIds.length,
           contradictingCount: claim.contradictingSourceIds.length,
           directionCount: linkedDirections.length,
@@ -1052,6 +1055,7 @@ export function buildClaimPageVM(id: string): ClaimPageVM | null {
     proposition: claim.proposition,
     status: humanize(claim.status),
     confidence: humanize(claim.confidence),
+    decisionRole: claim.decisionRole ? humanize(claim.decisionRole) : undefined,
     boundary: claim.boundary ?? undefined,
     supportingEvidence,
     contradictingEvidence,
