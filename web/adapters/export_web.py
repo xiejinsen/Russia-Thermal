@@ -99,6 +99,15 @@ def year_value(v: Any) -> int | None:
     return int(m.group(0)) if m else None
 
 
+def float_value(v: Any) -> float | None:
+    if v is None:
+        return None
+    try:
+        return float(str(v).strip())
+    except (TypeError, ValueError):
+        return None
+
+
 def findings(o: dict[str, Any]) -> list[str]:
     for key in (
         "direct_reported_results",
@@ -127,6 +136,11 @@ def actor_record(o: dict[str, Any]) -> dict[str, Any]:
         "officialUrl": nullable(o.get("official_url")),
         "publicContact": nullable(o.get("public_contact")),
         "researchRelevance": nullable(o.get("research_relevance")),
+        "city": nullable(o.get("city")),
+        "region": nullable(o.get("region")),
+        "latitude": float_value(o.get("latitude")),
+        "longitude": float_value(o.get("longitude")),
+        "locationVerifiedAt": nullable(o.get("location_verified_at")),
         "sourcePath": o["_path"],
     }
 
