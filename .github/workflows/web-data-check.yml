@@ -1,0 +1,46 @@
+name: Web Data Check
+
+on:
+  push:
+    branches: [main, dev]
+    paths:
+      - "01-evidence/**"
+      - "02-claims/**"
+      - "03-actors/**"
+      - "04-capabilities/**"
+      - "05-directions/**"
+      - "07-decisions/**"
+      - "tools/v2repo.py"
+      - "web/adapters/**"
+      - "web/schemas/**"
+      - ".github/workflows/web-data-check.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "01-evidence/**"
+      - "02-claims/**"
+      - "03-actors/**"
+      - "04-capabilities/**"
+      - "05-directions/**"
+      - "07-decisions/**"
+      - "tools/v2repo.py"
+      - "web/adapters/**"
+      - "web/schemas/**"
+      - ".github/workflows/web-data-check.yml"
+
+jobs:
+  validate-web-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Canonical repository health
+        run: python tools/v2repo.py --check
+      - name: Validate normalized web export
+        run: python web/adapters/export_web.py --validate-only
+      - name: Generate normalized datasets
+        run: python web/adapters/export_web.py --out /tmp/russia-thermal-web-data
+      - name: Show manifest
+        run: cat /tmp/russia-thermal-web-data/manifest.json
