@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: NON_AUTHORITATIVE_MIGRATION_TARGET
 - mode: MIGRATION_FREEZE
-- phase: active + reserve + foundational + Watch/Hold/background migration completed / convergence review ready
-- next: run V2.1 migration convergence review: completeness, semantic fidelity, duplicate ownership, generated-view health, and cutover readiness
+- phase: V2.1 migration convergence review PASS / awaiting explicit user-approved cutover
+- next: user decision: approve V2.1 authority cutover or request additional fixes
 
 ## Directions
 
