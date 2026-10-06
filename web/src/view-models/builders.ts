@@ -521,8 +521,18 @@ export function buildLandscapeVM(): LandscapePageVM {
       .map((id) => claimById.get(id))
       .filter((item): item is ClaimRecord => Boolean(item));
 
+    const russianActors = [...new Set(
+      capabilityLinks(direction)
+        .map((capability) => actorById.get(capability.actorId)?.name)
+        .filter((name): name is string => Boolean(name))
+    )];
+
     return {
       direction: directionCard(direction),
+      chinaLabel: 'China · SJTU / domestic & global baseline',
+      russiaLabel: russianActors.length
+        ? `Russia · ${russianActors.slice(0, 3).join(' / ')}`
+        : 'Russia · linked capability owners',
       chinaBaseline: direction.strongestBaseline ?? 'No explicit comparator baseline recorded.',
       russiaResidual: direction.residualDifferentiation ?? 'No residual differentiation recorded.',
       decision: humanize(direction.investmentLane),
