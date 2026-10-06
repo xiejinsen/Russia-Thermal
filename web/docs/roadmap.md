@@ -63,6 +63,8 @@ Current state: core data-driven MVP pages implemented; visual enrichment/deploym
 
 ## Phase W4 — visual enrichment
 
+status: LEADERSHIP_OVERVIEW_IMPLEMENTED
+
 Add:
 - official institution imagery;
 - selected scholar portraits;
