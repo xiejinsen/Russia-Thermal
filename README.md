@@ -4,18 +4,20 @@ Evidence-backed research on Russian thermal-management capabilities relevant to 
 
 ## Web research intelligence
 
-**Live site:** [Russia-Thermal Research Intelligence](https://xiejinsen.github.io/Russia-Thermal/)
+**Live site:** [Open Russia-Thermal Research Intelligence ↗](https://xiejinsen.github.io/Russia-Thermal/)
+
+> GitHub README links open in the current tab by default. Use **Ctrl/Cmd+Click** or the **middle mouse button** to open the web UI in a new tab.
 
 Use the web UI for leadership review, research navigation, and evidence drill-down:
 
-- [Overview](https://xiejinsen.github.io/Russia-Thermal/) — current portfolio thesis, priorities, comparator pressure and management actions
-- [Research Maps](https://xiejinsen.github.io/Russia-Thermal/research-map/) — geographic discovery for Russia / China research capability
-- [Partner Portfolio](https://xiejinsen.github.io/Russia-Thermal/partners/) — P1/P2/P3 collaboration packages and investment lanes
-- [Russia vs China](https://xiejinsen.github.io/Russia-Thermal/landscape/) — comparator baseline and residual Russian differentiation
-- [Directions](https://xiejinsen.github.io/Russia-Thermal/directions/) — strategic directions and validation gates
-- [Institutions](https://xiejinsen.github.io/Russia-Thermal/institutions/) / [Scholars](https://xiejinsen.github.io/Russia-Thermal/scholars/) — organization and key-person drill-down
-- [Papers](https://xiejinsen.github.io/Russia-Thermal/papers/) / [Claims](https://xiejinsen.github.io/Russia-Thermal/claims/) / [Evidence](https://xiejinsen.github.io/Russia-Thermal/evidence/) — research-object and source traceability
-- [Decisions](https://xiejinsen.github.io/Russia-Thermal/decisions/) — Keep / Narrow / Kill / Watch / Hold decision history
+- [Overview ↗](https://xiejinsen.github.io/Russia-Thermal/) — current portfolio thesis, priorities, comparator pressure and management actions
+- [Research Maps ↗](https://xiejinsen.github.io/Russia-Thermal/research-map/) — geographic discovery for Russia / China research capability
+- [Partner Portfolio ↗](https://xiejinsen.github.io/Russia-Thermal/partners/) — P1/P2/P3 collaboration packages and investment lanes
+- [Russia vs China ↗](https://xiejinsen.github.io/Russia-Thermal/landscape/) — comparator baseline and residual Russian differentiation
+- [Directions ↗](https://xiejinsen.github.io/Russia-Thermal/directions/) — strategic directions and validation gates
+- [Institutions ↗](https://xiejinsen.github.io/Russia-Thermal/institutions/) / [Scholars ↗](https://xiejinsen.github.io/Russia-Thermal/scholars/) — organization and key-person drill-down
+- [Papers ↗](https://xiejinsen.github.io/Russia-Thermal/papers/) / [Claims ↗](https://xiejinsen.github.io/Russia-Thermal/claims/) / [Evidence ↗](https://xiejinsen.github.io/Russia-Thermal/evidence/) — research-object and source traceability
+- [Decisions ↗](https://xiejinsen.github.io/Russia-Thermal/decisions/) — Keep / Narrow / Kill / Watch / Hold decision history
 
 The website is a **derived presentation layer**. Canonical research truth remains in the repository objects and governance structure below.
 
