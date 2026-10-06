@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import DecisionBadge from '../components/domain/DecisionBadge.astro';
+import CapabilityMatrix from '../components/CapabilityMatrix.astro';
 import { buildLandscapeVM } from '../view-models/builders';
 
 const vm = buildLandscapeVM();
@@ -15,6 +16,8 @@ const vm = buildLandscapeVM();
     <h1>{vm.title}</h1>
     <p>{vm.summary}</p>
   </section>
+
+  <CapabilityMatrix rows={vm.rows} />
 
   <section class="landscape" aria-label="Russia versus China comparison">
     {vm.rows.map((row) => (
