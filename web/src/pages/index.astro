@@ -18,6 +18,7 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       <p>{vm.summary}</p>
       <div class="signal-links">
         <a class="primary" href={href('/partners')}>Open partner portfolio →</a>
+        <a href={href('/research-coverage')}>See full research coverage →</a>
         <a href={href('/research-map/russia')}>Explore Russia research map →</a>
         <a href={href('/landscape')}>Review Russia vs China →</a>
       </div>
@@ -41,8 +42,8 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
   <section class="management-strip">
     <a href={href('/partners')}>
       <span>DO NOW</span>
-      <b>Validate the three priority collaboration packages</b>
-      <p>Advance only where Russian residual capability adds decision-relevant value beyond the China/global baseline.</p>
+      <b>Align the three priority collaboration packages and prepare bounded engagement questions</b>
+      <p>Keep validation as a future gate: first align the mechanism question, evidence boundary and partner/data feasibility for each package.</p>
     </a>
     <a href={href('/decisions')}>
       <span>DO NOT</span>
@@ -62,6 +63,7 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       <b>Move from conclusion to geography, people, papers and claims.</b>
     </div>
     <nav aria-label="Deep research entry points">
+      <a href={href('/research-coverage')}>Research Coverage</a>
       <a href={href('/research-map/russia')}>Russia Map</a>
       <a href={href('/institutions')}>Institutions</a>
       <a href={href('/scholars')}>Scholars</a>
