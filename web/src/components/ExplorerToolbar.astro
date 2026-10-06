@@ -1,0 +1,136 @@
+---
+interface FilterOption { value: string; label: string; }
+interface FilterDef { key: string; label: string; options: FilterOption[]; }
+interface Props {
+  filters: FilterDef[];
+  searchPlaceholder?: string;
+  total: number;
+}
+const {
+  filters,
+  searchPlaceholder = 'Search records…',
+  total
+} = Astro.props;
+---
+
+<div class="explorer-toolbar" data-explorer-toolbar>
+  <label class="search-box">
+    <span>Search</span>
+    <input type="search" placeholder={searchPlaceholder} data-explorer-search />
+  </label>
+
+  {filters.map((filter) => (
+    <label>
+      <span>{filter.label}</span>
+      <select data-explorer-filter data-filter-key={filter.key}>
+        <option value="">All</option>
+        {filter.options.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+  ))}
+
+  <div class="toolbar-result">
+    <strong data-explorer-count>{total}</strong>
+    <span>visible</span>
+  </div>
+
+  <button type="button" data-explorer-reset>Reset</button>
+</div>
+
+<script>
+  const roots = document.querySelectorAll<HTMLElement>('[data-explorer-root]');
+
+  roots.forEach((root) => {
+    const toolbar = root.querySelector<HTMLElement>('[data-explorer-toolbar]');
+    if (!toolbar) return;
+
+    const search = toolbar.querySelector<HTMLInputElement>('[data-explorer-search]');
+    const filters = [...toolbar.querySelectorAll<HTMLSelectElement>('[data-explorer-filter]')];
+    const reset = toolbar.querySelector<HTMLButtonElement>('[data-explorer-reset]');
+    const count = toolbar.querySelector<HTMLElement>('[data-explorer-count]');
+    const records = [...root.querySelectorAll<HTMLElement>('[data-explorer-record]')];
+
+    const values = (record: HTMLElement, key: string) =>
+      (record.dataset[key] ?? '').split('|').map((value) => value.trim()).filter(Boolean);
+
+    const apply = () => {
+      const query = (search?.value ?? '').trim().toLowerCase();
+      let visible = 0;
+
+      for (const record of records) {
+        const searchable = (record.dataset.search ?? '').toLowerCase();
+        const searchMatch = !query || searchable.includes(query);
+
+        const filterMatch = filters.every((select) => {
+          const selected = select.value;
+          if (!selected) return true;
+          const key = select.dataset.filterKey ?? '';
+          return values(record, key).includes(selected);
+        });
+
+        const matched = searchMatch && filterMatch;
+        record.hidden = !matched;
+        if (matched) visible += 1;
+      }
+
+      if (count) count.textContent = String(visible);
+    };
+
+    search?.addEventListener('input', apply);
+    filters.forEach((select) => select.addEventListener('change', apply));
+    reset?.addEventListener('click', () => {
+      if (search) search.value = '';
+      filters.forEach((select) => { select.value = ''; });
+      apply();
+      search?.focus();
+    });
+
+    apply();
+  });
+</script>
+
+<style>
+  .explorer-toolbar{
+    display:grid;
+    grid-template-columns:minmax(16rem,1.45fr) repeat(auto-fit,minmax(10rem,.65fr)) auto auto;
+    gap:10px;
+    align-items:end;
+    margin-top:var(--space-8);
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    background:var(--surface);
+    box-shadow:var(--shadow-1);
+  }
+  label{display:grid;gap:5px;min-width:0}
+  label>span,.toolbar-result span{color:var(--text-muted);font-size:.68rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+  input,select{
+    width:100%;
+    min-height:40px;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--surface-muted);
+    color:var(--text);
+    font:inherit;
+    font-size:.82rem;
+  }
+  input:focus,select:focus{outline:2px solid color-mix(in srgb,var(--accent-vivid) 25%,transparent);border-color:var(--accent-vivid)}
+  .toolbar-result{display:grid;justify-items:center;align-content:center;min-width:70px;height:40px;padding:0 10px;border-radius:8px;background:var(--accent-soft)}
+  .toolbar-result strong{color:var(--accent);font-size:1rem}
+  button{
+    min-height:40px;
+    padding:0 12px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--surface);
+    color:var(--accent);
+    font:inherit;
+    font-size:.78rem;
+    font-weight:850;
+    cursor:pointer;
+  }
+  button:hover,button:focus-visible{background:var(--accent-soft);outline:none}
+  @media(max-width:950px){.explorer-toolbar{grid-template-columns:1fr 1fr}.search-box{grid-column:1/-1}}
+  @media(max-width:620px){.explorer-toolbar{grid-template-columns:1fr}.search-box{grid-column:auto}}
+</style>
