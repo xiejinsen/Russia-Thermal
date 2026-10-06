@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: leadership package freeze / final evidence consistency audit
-- next: run final evidence-chain, generated-view and web consistency audit; fix only decision-relevant defects, then freeze the Phase-1 leadership synthesis package
+- phase: PHASE1_FROZEN / leadership presentation packaging
+- next: preserve the frozen research thesis; polish leadership-facing web/report presentation, verify newly added actors render correctly, and use lightweight frontier watch rather than broad discovery
 
 ## Directions
 
