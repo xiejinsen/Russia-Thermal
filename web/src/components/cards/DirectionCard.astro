@@ -7,7 +7,7 @@ interface Props { model: DirectionCardVM; }
 const { model } = Astro.props;
 ---
 
-<article class="direction-card">
+<article class="direction-card" aria-label={`${model.title}: ${model.recommendation}`}>
   <div class="heading">
     <div>
       <p class="recommendation">{model.recommendation}</p>
