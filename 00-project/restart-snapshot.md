@@ -4,11 +4,12 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: NON_AUTHORITATIVE_MIGRATION_TARGET
 - mode: MIGRATION_FREEZE
-- phase: Kutateladze Lab 1.3 + MPEI + TPU + Kutateladze Lab 6.6 migrated / fidelity pass
-- next: migrate foundational analytical / stability-modeling enabler next; keep broad migration gated by per-slice fidelity
+- phase: core active/reserve slices + foundational modeling network migrated / fidelity review
+- next: close foundational-modeling fidelity review, then migrate remaining Watch/Hold/background slices
 
 ## Directions
+- DIR-EXTREME-FILM-RESERVE: RESERVE / phone=LOW
 - DIR-FAILURE-AWARE-UTVC: STRATEGIC_CANDIDATE / phone=LOW_MEDIUM
+- DIR-FOUNDATIONAL-MODELING-ENABLER: RESERVE / phone=LOW_MEDIUM
 - DIR-HEALTH-AWARE-UTVC: STRATEGIC_CANDIDATE / phone=LOW_MEDIUM
 - DIR-SURFACE-PROCESS-CHALLENGER: STAGE0_CHALLENGER / phone=LOW_MEDIUM
-- DIR-EXTREME-FILM-RESERVE: RESERVE / phone=LOW
