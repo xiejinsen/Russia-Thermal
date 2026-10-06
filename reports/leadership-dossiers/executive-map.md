@@ -39,6 +39,7 @@ See:
 [China Comparator Anchors](china-comparator-anchors.md)
 
 Leadership shorthand:
+- SJTU: cross-cutting micro/nano phase change + ultra-thin wick + near-junction/3D-chip + microchannel baseline;
 - GDUT: dryout / rewetting / wick-degradation comparator;
 - Chinese copper-water VC + Newidea / Shenzhen VC Thermal: reliability / aging / product-process comparator;
 - East China Jiaotong University: laser-modified UTVC wick/device comparator.
