@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
+import PaperDeepRead from '../../components/PaperDeepRead.astro';
 import { buildPaperPageVM, paperIds } from '../../view-models/builders';
 
 export function getStaticPaths() {
@@ -22,6 +23,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     <p class="eyebrow">Paper detail · {vm.id}</p>
     <h1>{vm.title}</h1>
     <div class="metadata">
+      {vm.deepRead && <span>{vm.deepRead.level} Deep Read</span>}
       {vm.year && <span>{vm.year}</span>}
       {vm.countryContext && <span>{vm.countryContext}</span>}
       {vm.venue && <span>{vm.venue}</span>}
@@ -47,6 +49,8 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       <p>{vm.boundary ?? 'No explicit boundary has been normalized yet.'}</p>
     </article>
   </section>
+
+  {vm.deepRead && <PaperDeepRead model={vm.deepRead} />}
 
   <section class="section">
     <div class="section-head">
