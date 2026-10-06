@@ -48,6 +48,22 @@
     "sourcePath": {
       "type": "string",
       "minLength": 1
+    },
+    "decisionRole": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "PARTNER_READINESS",
+        "PORTFOLIO_RATIONALE",
+        "COMPARATOR_UMBRELLA",
+        "FRONTIER_DISCOVERY",
+        "EVIDENCE_GAP",
+        "BACKGROUND",
+        "UNRESOLVED",
+        null
+      ]
     }
   },
   "additionalProperties": false
