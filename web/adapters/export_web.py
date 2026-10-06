@@ -23,6 +23,7 @@ V2REPO_PATH = ROOT / "tools" / "v2repo.py"
 DEFAULT_OUT = ROOT / "web" / "data" / "generated"
 SCHEMA_VERSION = "1.0"
 VISIBILITY_DIR = ROOT / "00-project" / "visibility-dispositions"
+DEEP_READ_ROOT = ROOT / "01-evidence" / "papers"
 
 
 def markdown_role_map(path: Path) -> dict[str, str]:
@@ -151,6 +152,92 @@ def findings(o: dict[str, Any]) -> list[str]:
         if vals:
             return vals
     return []
+
+
+def deep_read_metadata(text: str) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for raw in text.splitlines():
+        line = raw.strip()
+        if line.startswith("## "):
+            break
+        m = re.match(r"^([a-z][a-z0-9_]*):\s*(.*)$", line)
+        if m:
+            out[m.group(1)] = m.group(2).strip()
+    return out
+
+
+def markdown_section(text: str, heading: str) -> str:
+    pattern = re.compile(
+        rf"^##\s+{re.escape(heading)}\s*$\n(.*?)(?=^##\s+|\Z)",
+        re.MULTILINE | re.DOTALL,
+    )
+    m = pattern.search(text)
+    return m.group(1).strip() if m else ""
+
+
+def deep_read_questions(text: str) -> list[dict[str, Any]]:
+    matches = list(re.finditer(r"^##\s+Q(\d+)\s+—\s+(.+?)\s*$", text, re.MULTILINE))
+    out: list[dict[str, Any]] = []
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        tail = text[start:end]
+        boundary = re.search(r"^##\s+Evidence boundary\s*$", tail, re.MULTILINE)
+        if boundary:
+            tail = tail[: boundary.start()]
+        out.append({
+            "number": int(match.group(1)),
+            "title": match.group(2).strip(),
+            "body": tail.strip(),
+        })
+    return out
+
+
+def deep_read_boundary(text: str) -> dict[str, str]:
+    block = markdown_section(text, "Evidence boundary")
+    if not block:
+        return {"sourceFacts": "", "analystInference": "", "unknownRequests": ""}
+
+    sections: dict[str, str] = {}
+    matches = list(re.finditer(r"^###\s+(.+?)\s*$", block, re.MULTILINE))
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(block)
+        sections[match.group(1).strip().lower()] = block[start:end].strip()
+
+    return {
+        "sourceFacts": sections.get("source facts", ""),
+        "analystInference": sections.get("analyst inference", ""),
+        "unknownRequests": sections.get("unknown / request", ""),
+    }
+
+
+def load_deep_reads() -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    if not DEEP_READ_ROOT.exists():
+        return records
+
+    for path in sorted(DEEP_READ_ROOT.glob("*/deep-read.md")):
+        text = path.read_text(encoding="utf-8")
+        meta = deep_read_metadata(text)
+        paper_id = meta.get("paper_id", "").strip()
+        records.append({
+            "id": paper_id,
+            "deepReadLevel": meta.get("deep_read_level", "").strip(),
+            "reviewStatus": meta.get("review_status", "").strip(),
+            "reviewedAt": meta.get("reviewed_at", "").strip(),
+            "whyItMatters": meta.get("why_it_matters", "").strip(),
+            "decisionUse": meta.get("decision_use", "").strip(),
+            "legacyOrigin": meta.get("legacy_origin", "").strip() or None,
+            "relatedClaimIds": split_semicolon(meta.get("related_claims")),
+            "relatedCapabilityIds": split_semicolon(meta.get("related_capabilities")),
+            "relatedDirectionIds": split_semicolon(meta.get("related_directions")),
+            "relatedPriorityIds": split_semicolon(meta.get("related_priorities")),
+            "questions": deep_read_questions(text),
+            "evidenceBoundary": deep_read_boundary(text),
+            "sourcePath": str(path.relative_to(ROOT)).replace("\\", "/"),
+        })
+    return records
 
 
 def actor_record(o: dict[str, Any]) -> dict[str, Any]:
@@ -321,6 +408,25 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for f in ("id", "sourceType", "title", "primaryUrl", "sourcePath"):
             require_nonempty(r, f, errors)
 
+    seen_deep_read_ids: set[str] = set()
+    allowed_deep_read_levels = {"TIER_A", "TIER_B"}
+    for r in datasets["deepReads"]:
+        for f in ("id", "deepReadLevel", "reviewStatus", "reviewedAt", "whyItMatters", "decisionUse", "sourcePath"):
+            require_nonempty(r, f, errors)
+        if r["id"] in seen_deep_read_ids:
+            errors.append(f"{r['id']}: duplicate deep read")
+        seen_deep_read_ids.add(r["id"])
+        if r["deepReadLevel"] not in allowed_deep_read_levels:
+            errors.append(f"{r['id']}: invalid deepReadLevel {r['deepReadLevel']}")
+        if r["deepReadLevel"] == "TIER_A":
+            numbers = [q.get("number") for q in r.get("questions", [])]
+            if numbers != list(range(1, 11)):
+                errors.append(f"{r['id']}: TIER_A deep read must contain Q1-Q10 exactly once; got {numbers}")
+        boundary = r.get("evidenceBoundary") or {}
+        for f in ("sourceFacts", "analystInference", "unknownRequests"):
+            if not str(boundary.get(f, "")).strip():
+                errors.append(f"{r['id']}: evidenceBoundary.{f} is empty")
+
     for r in datasets["claims"]:
         for f in ("id", "proposition", "status", "confidence", "sourcePath"):
             require_nonempty(r, f, errors)
@@ -362,6 +468,24 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     capability_ids = {r["id"] for r in datasets["capabilities"]}
     direction_ids = {r["id"] for r in datasets["directions"]}
     priority_ids = {r["id"] for r in datasets["priorities"]}
+
+    for r in datasets["deepReads"]:
+        if r["id"] not in evidence_ids:
+            errors.append(f"{r['id']}: deep read has no matching evidence record")
+        elif not r["id"].startswith("PAPER-"):
+            errors.append(f"{r['id']}: deep read must target a PAPER source")
+        for cid in r["relatedClaimIds"]:
+            if cid not in claim_ids:
+                errors.append(f"{r['id']}: unresolved relatedClaimId {cid}")
+        for cid in r["relatedCapabilityIds"]:
+            if cid not in capability_ids:
+                errors.append(f"{r['id']}: unresolved relatedCapabilityId {cid}")
+        for did in r["relatedDirectionIds"]:
+            if did not in direction_ids:
+                errors.append(f"{r['id']}: unresolved relatedDirectionId {did}")
+        for pid in r["relatedPriorityIds"]:
+            if pid not in priority_ids:
+                errors.append(f"{r['id']}: unresolved relatedPriorityId {pid}")
 
     for r in datasets["actors"]:
         if r["parentId"] and r["parentId"] not in actor_ids:
@@ -477,6 +601,7 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
     return {
         "actors": [actor_record(o) for o in db["actor"]],
         "evidence": [evidence_record(o, roles["sources"].get(o["id"])) for o in db["source"]],
+        "deepReads": load_deep_reads(),
         "claims": [claim_record(o, roles["claims"].get(o["id"])) for o in db["claim"]],
         "capabilities": [capability_record(o, roles["capabilities"].get(o["id"])) for o in db["capability"]],
         "directions": [direction_record(o) for o in db["direction"]],
