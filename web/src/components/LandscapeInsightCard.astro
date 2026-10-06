@@ -5,7 +5,21 @@ interface Props { model: LandscapeRowVM; }
 const { model } = Astro.props;
 ---
 <article class="insight">
-  <header><div><p class="eyebrow">{model.direction.role}</p><h3>{model.direction.title}</h3></div><DecisionBadge label={model.direction.lane.label} tone={model.direction.lane.tone} /></header>
+  <header>
+    <div>
+      <p class="recommendation">{model.direction.recommendation}</p>
+      <h3>{model.direction.title}</h3>
+    </div>
+    <DecisionBadge label={model.direction.lane.label} tone={model.direction.lane.tone} />
+  </header>
+
+  {model.direction.collaborationFocus && (
+    <div class="takeaway">
+      <span>Conclusion / collaboration focus</span>
+      <p>{model.direction.collaborationFocus}</p>
+    </div>
+  )}
+
   <div class="contrast">
     <div class="china">
       <span class="country-label">{model.chinaLabel}</span>
@@ -16,17 +30,36 @@ const { model } = Astro.props;
       <p>{model.russiaResidual}</p>
     </div>
   </div>
-  <footer><span>Phone maturity: <strong>{model.direction.phoneTransferMaturity}</strong></span><span>Differentiation: <strong>{model.direction.differentiationConfidence}</strong></span></footer>
+
+  {model.direction.nextQuestion && (
+    <div class="next">
+      <strong>Next validation question</strong>
+      <p>{model.direction.nextQuestion}</p>
+    </div>
+  )}
+
+  <footer>
+    <span>Phone maturity: <strong>{model.direction.phoneTransferMaturity}</strong></span>
+    <span>Differentiation: <strong>{model.direction.differentiationConfidence}</strong></span>
+  </footer>
 </article>
+
 <style>
 .insight{display:grid;gap:var(--space-4);padding:var(--space-6);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md)}
-header{display:flex;justify-content:space-between;gap:var(--space-4);align-items:flex-start}h3,p{margin:0}h3{font-size:1.15rem;letter-spacing:-.02em}
+header{display:flex;justify-content:space-between;gap:var(--space-4);align-items:flex-start}
+h3,p{margin:0}h3{font-size:1.15rem;letter-spacing:-.02em}
+.recommendation{margin:0 0 var(--space-1);color:var(--accent-vivid);font-size:.76rem;font-weight:850;letter-spacing:.035em;text-transform:uppercase}
+.takeaway{display:grid;gap:var(--space-2);padding:var(--space-4);border-left:4px solid var(--accent-vivid);background:linear-gradient(90deg,#e8f4ff,#f8fbff);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.takeaway span{color:#21496d;font-size:.7rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase}
+.takeaway p{color:#172b40;font-weight:700;line-height:1.55}
 .contrast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
 .contrast>div{padding:var(--space-5,1.25rem);border:1px solid rgb(77 124 164 / .16);border-radius:var(--radius-sm)}
 .contrast .china{background:linear-gradient(145deg,#edf6ff,#f8fbff)}
 .contrast .russia{background:linear-gradient(145deg,#eff9f6,#f8fcfb)}
 .country-label{display:block;margin-bottom:var(--space-3);color:var(--text);font-size:.8rem;font-weight:850;letter-spacing:.01em}
 .contrast p{font-size:.94rem;line-height:1.62;color:var(--text-secondary,#34485c);font-weight:500}
+.next{display:grid;gap:var(--space-2);padding:var(--space-4);border:1px solid #d5e3ef;border-radius:var(--radius-sm);background:#f9fcfe}
+.next strong{font-size:.78rem;color:#243c53}.next p{font-size:.9rem;color:var(--text-secondary);line-height:1.55}
 footer{display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6);padding-top:var(--space-3);border-top:1px solid var(--line);color:#43586d;font-size:.8rem}
 @media(max-width:720px){.contrast{grid-template-columns:1fr}}
 </style>
