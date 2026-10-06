@@ -11,7 +11,8 @@
     "targetFit",
     "keyPeopleIds",
     "claimIds",
-    "sourcePath"
+    "sourcePath",
+    "portfolioDisposition"
   ],
   "properties": {
     "id": {
@@ -71,6 +72,16 @@
     "sourcePath": {
       "type": "string",
       "minLength": 1
+    },
+    "portfolioDisposition": {
+      "type": "string",
+      "enum": [
+        "DIRECTION_LINKED",
+        "COMPARATOR_ONLY",
+        "SUPPORT_ONLY",
+        "BACKGROUND_KILLED_THESIS",
+        "UNRESOLVED"
+      ]
     }
   },
   "additionalProperties": false
