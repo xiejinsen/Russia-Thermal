@@ -336,3 +336,41 @@ export interface DirectionPageVM {
     reopenCondition?: string;
   }>;
 }
+
+
+export interface ClaimExplorerVM {
+  title: string;
+  summary: string;
+  records: Array<{
+    id: string;
+    proposition: string;
+    status: string;
+    confidence: string;
+    supportingCount: number;
+    contradictingCount: number;
+    directionCount: number;
+    href: string;
+  }>;
+}
+
+export interface ClaimPageVM {
+  id: string;
+  proposition: string;
+  status: string;
+  confidence: string;
+  boundary?: string;
+  supportingEvidence: EvidenceCardVM[];
+  contradictingEvidence: EvidenceCardVM[];
+  capabilities: CapabilityDetailVM[];
+  institutions: InstitutionCardVM[];
+  scholars: ScholarCardVM[];
+  directions: DirectionCardVM[];
+  decisions: Array<{
+    id: string;
+    date?: string;
+    eventType: StatusVM;
+    subject: string;
+    newState: string;
+    rationale?: string;
+  }>;
+}
