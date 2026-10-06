@@ -142,6 +142,20 @@ def validate(db):
             elif person.get("actor_type") != "PERSON":
                 errors.append(f"{o['id']}: key_people -> {person_id} is not PERSON")
 
+    priority_ranks = {}
+    for o in db["priority"]:
+        rank = o.get("priority_rank")
+        if not rank or not re.match(r"^P[1-9][0-9]*$", str(rank)):
+            errors.append(f"{o['id']}: invalid priority_rank -> {rank}")
+        elif rank in priority_ranks:
+            errors.append(f"duplicate priority_rank: {rank} -> {priority_ranks[rank]}, {o['id']}")
+        else:
+            priority_ranks[rank] = o["id"]
+        for actor_id in as_list(o.get("target_actors")):
+            actor = objects_by_id.get(actor_id)
+            if actor and actor.get("actor_type") == "PERSON":
+                errors.append(f"{o['id']}: target_actors -> {actor_id} is PERSON; priority packages must target organization/lab/company actors")
+
     for o in db["decision"]:
         subject = o.get("subject")
         if subject and re.match(r"^(DIR|CAP|CLM|EXP|ACT|PERSON)-", subject) and subject not in ids:
