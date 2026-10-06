@@ -61,7 +61,7 @@ no equally strong public evidence of current smartphone/OEM industrial collabora
 
 ## China / global baseline
 
-China/global work already strongly covers:
+China/global work already strongly covers, while SJTU further strengthens the broader micro/nano phase-change and chip thermal-management ecosystem:
 - laser-modified UTVC wick;
 - biphilic/wettability patterns;
 - structured surfaces;
