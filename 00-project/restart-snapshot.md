@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: modular web information architecture designed / implementation not started
-- next: review web/ modular design contracts; after approval implement exporter + schemas before frontend components/pages
+- phase: web W1 exporter + schemas completed / normalized data validation PASS
+- next: begin web W2 design-system skeleton: Astro shell, tokens, primitives, navigation and fixture pages; keep frontend free of canonical parsing
 
 ## Directions
 
