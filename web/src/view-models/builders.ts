@@ -1,4 +1,4 @@
-import { actors, capabilities, directions, priorities, evidence, claims, decisions, syntheses } from '../data/load-normalized';
+import { actors, capabilities, directions, priorities, evidence, claims, decisions, syntheses, deepReads } from '../data/load-normalized';
 import type { ActorRecord, CapabilityRecord, DirectionRecord, EvidenceRecord, ClaimRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
@@ -459,6 +459,7 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
 
 const claimById = new Map(claims.map((claim) => [claim.id, claim]));
 const evidenceById = new Map(evidence.map((item) => [item.id, item]));
+const deepReadById = new Map(deepReads.map((item) => [item.id, item]));
 
 function claimSummary(claim: ClaimRecord) {
   return {
@@ -1149,6 +1150,12 @@ export function buildPaperExplorerVM(): PaperExplorerVM {
         countryContext: item.countryContext ?? undefined,
         claimCount: card.supportingClaims.length + card.contradictingClaims.length,
         directionCount: card.linkedDirections.length,
+        deepReadLevel: deepReadById.get(item.id)?.deepReadLevel
+          ? humanize(deepReadById.get(item.id)!.deepReadLevel)
+          : undefined,
+        reviewStatus: deepReadById.get(item.id)?.reviewStatus
+          ? humanize(deepReadById.get(item.id)!.reviewStatus)
+          : undefined,
         href: `/papers/${item.id}`
       };
     })
@@ -1160,6 +1167,7 @@ export function buildPaperPageVM(id: string): PaperPageVM | null {
   if (!item || !item.id.startsWith('PAPER-')) return null;
 
   const card = evidenceCard(item);
+  const deepRead = deepReadById.get(item.id);
   const linkedCapabilityIds = new Set(card.linkedCapabilities.map((cap) => cap.id));
   const linkedCapabilities = capabilities.filter((cap) => linkedCapabilityIds.has(cap.id));
   const institutionMap = new Map<string, CapabilityRecord[]>();
@@ -1193,6 +1201,23 @@ export function buildPaperPageVM(id: string): PaperPageVM | null {
       .filter((item): item is InstitutionCardVM => Boolean(item)),
     scholars: [...peopleMap.values()]
       .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)),
-    directions: card.linkedDirections
+    directions: card.linkedDirections,
+    deepRead: deepRead
+      ? {
+          level: humanize(deepRead.deepReadLevel),
+          reviewStatus: humanize(deepRead.reviewStatus),
+          reviewedAt: deepRead.reviewedAt,
+          whyItMatters: deepRead.whyItMatters,
+          decisionUse: humanize(deepRead.decisionUse),
+          legacyOrigin: deepRead.legacyOrigin ?? undefined,
+          sourcePath: deepRead.sourcePath,
+          questions: deepRead.questions,
+          evidenceBoundary: deepRead.evidenceBoundary,
+          relatedClaimIds: deepRead.relatedClaimIds,
+          relatedCapabilityIds: deepRead.relatedCapabilityIds,
+          relatedDirectionIds: deepRead.relatedDirectionIds,
+          relatedPriorityIds: deepRead.relatedPriorityIds
+        }
+      : undefined
   };
 }
