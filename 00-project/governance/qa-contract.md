@@ -16,7 +16,8 @@ Fail if:
 - Direction references missing Claim;
 - Experiment references missing Direction;
 - Decision references unresolved subject/trigger;
-- Roadmap references missing objects.
+- Roadmap references missing objects;
+- Synthesis references missing Claim / Direction / Priority / Source objects.
 
 ## Ownership
 
@@ -64,12 +65,22 @@ Without historical round files, a reader must recover:
 - next action;
 - authority state.
 
+## Synthesis / presentation QA
+
+Fail if:
+- leadership conclusion exists only as frontend hardcoded copy when a Synthesis object should own it;
+- Synthesis duplicates detailed evidence facts that belong to Source/Claim;
+- a monthly Source addition forces unrelated Actor/Capability/Direction/Synthesis edits without a semantic transition;
+- a visible conclusion cannot be traced from Synthesis/Direction/Priority through Claim to Source;
+- a presentation layer invents strategy not present in canonical state.
+
 ## Anti-shotgun metric
 
 Targets:
 - Source ingestion: 1–2 manual canonical edits;
 - capability update: 2–3;
-- strategic transition: usually 3–5 including Decision Event / transaction.
+- strategic transition: usually 3–5 including Decision Event / transaction;
+- management-thesis update: usually 1 Synthesis edit after upstream strategic state changes, never as a side effect of ordinary Source ingestion.
 
 ## Human readability
 
