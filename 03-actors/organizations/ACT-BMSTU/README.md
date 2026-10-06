@@ -4,6 +4,11 @@ record_state: CURRENT
 actor_type: ORGANIZATION
 canonical_name: Bauman Moscow State Technical University
 country: RU
+city: Moscow
+region: Moscow
+latitude: 55.765556
+longitude: 37.684444
+location_verified_at: 2026-10-06
 parent_actor_id: null
 verified_at: 2026-10-06
 
