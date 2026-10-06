@@ -24,15 +24,15 @@ Ranking source:
 
 | Rank | University | Status | Current signal / reason | Next action |
 |---:|---|---|---|---|
-| 1 | Tsinghua University | WEAK_SIGNAL | Search surfaced thermal-management work, but first pass did not yet identify a sufficiently direct current smartphone/electronics two-phase anchor. | Deeper school/lab scan before closeout. |
+| 1 | Tsinghua University | CANONICAL_ONBOARDED | Bo Sun: semiconductor thermal transport, integrated-circuit cooling and embedded two-phase microchannel cooling; additional ultra-thin VC work exists in the university. | Continue evidence enrichment; keep phone-product boundary explicit. |
 | 2 | Peking University | CANONICAL_ONBOARDED | Bai Song team: near-junction embedded microfluidic cooling for extreme high-heat-flux chips; active future-chip thermal program. | Continue evidence enrichment; keep smartphone transfer boundary explicit. |
 | 3 | Zhejiang University | CANONICAL_ONBOARDED | Zan Wu: chip cooling, device/package thermal management, multiphase/phase-change heat transfer and microchannels. | Continue evidence enrichment only. |
 | 4 | Shanghai Jiao Tong University | CANONICAL_ONBOARDED | Micro/nano phase change, dielectric-fluid ultra-thin composite wick, dryout-mitigation microchannels, chip thermal management. | Continue evidence enrichment only. |
 | 5 | Fudan University | PENDING_SCAN | — | Full scan. |
 | 6 | Nanjing University | CANDIDATE_FOUND | Current official research highlights thin-film electrocaloric cooling explicitly framed for chip thermal management. | Qualify team/device relevance and mobile-transfer boundary. |
 | 7 | University of Science and Technology of China | CANONICAL_ONBOARDED | Bin Xu: electronics thermal management, vapor-chamber heat spreading, microchannel evaporation/condensation and thermal interfaces. | Continue evidence enrichment only. |
-| 8 | Wuhan University | PENDING_SCAN | — | Full scan. |
-| 9 | Huazhong University of Science and Technology | CANDIDATE_FOUND | Ronggui Yang / X-thermal: chip thermal transport, phase-change thermal management, thin-film boiling and ultra-thin vapor-spreader devices; direct Huawei technical exchange. | Qualify key Actor/Capability and phone relevance. |
+| 8 | Wuhan University | CANONICAL_ONBOARDED | Chao Yuan: thermoreflectance, semiconductor thermal transport, junction-temperature measurement and chip-level thermal management. | Continue evidence enrichment only. |
+| 9 | Huazhong University of Science and Technology | CANONICAL_ONBOARDED | Xiaobing Luo team: phase-change/liquid cooling, microchannel/jet chip cooling and formal technology transfer; historical X-thermal evidence remains useful but current personnel affiliation is handled separately. | Continue evidence enrichment only. |
 | 10 | Xi'an Jiaotong University | CANONICAL_ONBOARDED | Siyu Qin: ultra-thin vapor chamber two-phase transport/wettability; Xiaoping Yang: 0.6 mm flexible LHP for AR/VR/laptop/foldable phones plus chip microchannels. | Continue evidence enrichment only. |
 | 11 | Beihang University | CANDIDATE_FOUND | Main-campus faculty evidence includes micro/nanoscale heat transfer and advanced-process chip interconnect thermal resistance; also solid-state thermal-control work aimed at special chips. | Qualify strongest group and direct mobile relevance. |
 | 12 | Harbin Institute of Technology | CANDIDATE_FOUND | Ultra-high-heat-flux electronic cooling research and miniaturized thermoelectric cooler demonstrated on a processor. | Qualify relevant group/person. |
