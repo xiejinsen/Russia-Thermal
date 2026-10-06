@@ -38,6 +38,6 @@ problem / novelty / hypothesis / lineage / mechanism / experiment / data / evide
 
 ## Governance references
 
-- [V2.1 ownership rules](../00_scope/architecture-v2.1/ownership.md)
-- [QA contract](../00_scope/architecture-v2.1/qa-contract.md)
-- [Migration fidelity contract](../00_scope/architecture-v2.1/migration-fidelity-contract.md)
+- [V2.1 ownership rules](governance/ownership.md)
+- [QA contract](governance/qa-contract.md)
+- [Migration fidelity contract](governance/migration-fidelity-contract.md)
