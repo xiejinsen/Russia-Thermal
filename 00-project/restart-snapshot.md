@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W2 real-data integration + institution/scholar relationship pages PASS
-- next: model/decide durable partner-priority semantics, then add Evidence Explorer and Russia-vs-China landscape pages on normalized contracts
+- phase: canonical partner-priority model implemented / P1-P3 separated from direction lanes / repository+web-data validation PASS
+- next: build Evidence Explorer and Russia-vs-China landscape pages using normalized evidence/claim contracts; keep priority and technical-lane semantics separate
 
 ## Directions
 
