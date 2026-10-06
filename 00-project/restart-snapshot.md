@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: Phase-1 leadership-package gap audit PASS / ready for final management synthesis
-- next: stop broad desk research; prepare final management synthesis from executive map, Tier A/B dossiers, China comparators, reserve/watch appendix and canonical evidence
+- phase: Russian heat-transfer venue ecosystem supplemental scan completed / new supporting nodes added / primary portfolio unchanged
+- next: prepare final management synthesis; include BMSTU/Zubkov, MPEI-Skoltech additive thermosyphon and Frumkin surface-chemistry nodes as supplemental capabilities
 
 ## Directions
 
