@@ -5,12 +5,12 @@ actor_id: ACT-LAVRENTYEV
 key_people:
 - PERSON-KUZNETSOV-VV
 maturity: RESEARCH_ASSET
-evidence_confidence: HIGH
+evidence_confidence: MEDIUM
 target_fit: ADJACENT
 assessed_at: 2026-10-06
 
 Capability statement:
-Lavrentyev Institute provides current mathematical-fluid modeling of shear-driven liquid-film cooling in direct technical linkage with Kutateladze's experimental/mechanism line.
+Lavrentyev-associated microfilm / fluid-modeling lineage is directly relevant to Kutateladze's shear-film mechanism line; current Kabov–Kuznetsov coauthorship is verified, while exact present institutional linkage remains confirmation-gated.
 
 evidence_claims:
 - CLM-MODEL-005
