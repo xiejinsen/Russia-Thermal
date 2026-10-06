@@ -56,6 +56,7 @@ export const directionFixtures: DirectionCardVM[] = [
     id: 'fixture-direction-standard',
     title: 'Failure-aware thermal direction fixture',
     role: 'Strategic direction',
+    recommendation: 'Advance for validation',
     lane: { label: 'Strategic candidate', tone: 'positive' },
     differentiationConfidence: 'Medium',
     phoneTransferMaturity: 'Low–Medium',
@@ -66,6 +67,7 @@ export const directionFixtures: DirectionCardVM[] = [
     id: 'fixture-direction-watch',
     title: 'Method reserve fixture',
     role: 'Reserve direction',
+    recommendation: 'Monitor only',
     lane: { label: 'Watch', tone: 'warning' },
     differentiationConfidence: 'Low',
     phoneTransferMaturity: 'Low'
