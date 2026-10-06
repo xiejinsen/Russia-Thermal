@@ -74,7 +74,10 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     <div class="evidence-list">
       {vm.evidence.map((item)=><article>
         <div><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.venue ? ` · ${item.venue}` : ''}</span><h3>{item.title}</h3>{item.findings[0] && <p>{item.findings[0]}</p>}</div>
-        <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a>
+        <div class="evidence-actions">
+          {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}
+          <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a>
+        </div>
       </article>)}
     </div>
   </section>
@@ -100,7 +103,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     .actor-grid{display:grid;grid-template-columns:1fr 1fr}.actor-column{padding:18px}.actor-column:first-child{border-right:1px solid #e0ebf3}.actor-column h3{font-size:13px;color:#526d82}.actor-column a{display:grid;gap:4px;padding:12px 0;border-top:1px solid #edf2f6;text-decoration:none}.actor-column a b{font-size:13px}.actor-column a span{color:#637c8f;font-size:11px;line-height:1.45}
     .cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}.cap-grid article{padding:16px;border:1px solid #d9e7f1;border-radius:11px;background:white}.cap-grid article>b{font-size:13px;line-height:1.5}.cap-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0 0}.cap-grid dt{font-size:9px;color:#6b8192;text-transform:uppercase}.cap-grid dd{margin:2px 0 0;font-size:11px;font-weight:800}
     .claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 20px;border-bottom:1px solid #e4edf4;text-decoration:none}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:#0b67b2;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.45}.claim-list strong{white-space:nowrap;font-size:11px;color:#0b67b2}
-    .evidence-list article{display:flex;justify-content:space-between;gap:24px;padding:17px 20px;border-bottom:1px solid #e4edf4}.evidence-list span{font-size:9px;color:#687f90}.evidence-list h3{margin:5px 0 7px;font-size:14px}.evidence-list p{max-width:900px;margin:0;color:#5b7487;font-size:12px;line-height:1.55}.evidence-list a{white-space:nowrap;font-size:11px;color:#0b67b2;font-weight:800}
+    .evidence-list article{display:flex;justify-content:space-between;gap:24px;padding:17px 20px;border-bottom:1px solid #e4edf4}.evidence-list span{font-size:9px;color:#687f90}.evidence-list h3{margin:5px 0 7px;font-size:14px}.evidence-list p{max-width:900px;margin:0;color:#5b7487;font-size:12px;line-height:1.55}.evidence-list a{white-space:nowrap;font-size:11px;color:#0b67b2;font-weight:800}.evidence-actions{display:flex;gap:12px;align-items:flex-start}
     .decision-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:22px;padding:16px 20px;border-bottom:1px solid #e4edf4}.decision-list article>div{display:grid;gap:4px}.decision-list span{font-size:9px;color:#657e91}.decision-list b{font-size:12px}.decision-list p{margin:0;color:#526d80;font-size:12px;line-height:1.55}.decision-list small{grid-column:2;color:#7a6a53}.empty{padding:18px 20px;color:#6b8191}
     @media(max-width:800px){.direction-hero,.pyramid,.actor-grid,.cap-grid{grid-template-columns:1fr}.actor-column:first-child{border-right:0;border-bottom:1px solid #e0ebf3}.section-head,.evidence-list article{flex-direction:column}.decision-list article{grid-template-columns:1fr}.decision-list small{grid-column:1}}
   </style>
