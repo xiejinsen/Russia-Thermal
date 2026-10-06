@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: Russia-vs-China synthesis refresh / residual-advantage convergence
-- next: refresh Russia-vs-China synthesis using the closed Russia coverage ledger, pressure-test the new NovSU/UUST nodes against strong China/global baselines, then converge collaboration priorities and complete the shared China Research Map
+- phase: China comparator closure / shared Research Map completion
+- next: resolve remaining China EVIDENCE_QUALIFIED positive nodes, especially Fudan and Beijing Institute of Technology, complete the shared China Research Map, then freeze the leadership synthesis package
 
 ## Directions
 
