@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import InstitutionCard from '../../components/cards/InstitutionCard.astro';
+import DirectionCard from '../../components/cards/DirectionCard.astro';
+import CapabilityDetail from '../../components/CapabilityDetail.astro';
+import { buildScholarPageVM, scholarIds } from '../../view-models/builders';
+
+export function getStaticPaths() {
+  return scholarIds().map((id) => ({ params: { id } }));
+}
+
+const vm = buildScholarPageVM(Astro.params.id!);
+if (!vm) throw new Error(`Unknown scholar actor: ${Astro.params.id}`);
+---
+
+<BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.relevance ?? vm.name}>
+  <SiteHeader slot="header" />
+
+  <section class="detail-hero">
+    <p class="eyebrow">Scholar</p>
+    <h1>{vm.name}</h1>
+    <p class="meta">{vm.country}{vm.role ? ` · ${vm.role}` : ''}</p>
+    {vm.relevance && <p class="summary">{vm.relevance}</p>}
+    {vm.officialUrl && <a class="official" href={vm.officialUrl} rel="noreferrer">Official source ↗</a>}
+  </section>
+
+  {vm.affiliation && (
+    <section class="page-section">
+      <SectionHeader eyebrow="Affiliation" title="Organization / lab" />
+      <div class="single-card"><InstitutionCard model={vm.affiliation} /></div>
+    </section>
+  )}
+
+  {vm.capabilityContexts.map((context) => (
+    <section class="page-section">
+      <SectionHeader
+        eyebrow="Capability context"
+        title={context.institution.name}
+        description="Resolved from Capability.actorId and Capability.keyPeopleIds."
+      />
+      <div class="single-card"><InstitutionCard model={context.institution} /></div>
+      <CapabilityDetail model={context.capability} />
+      {context.directions.length > 0 && (
+        <div class="content-grid">
+          {context.directions.map((model) => <DirectionCard model={model} />)}
+        </div>
+      )}
+    </section>
+  ))}
+</BaseLayout>
+
+<style>
+  .detail-hero {
+    max-width: 58rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+
+  .meta, .summary {
+    color: var(--text-muted);
+  }
+
+  .summary {
+    max-width: 70ch;
+  }
+
+  .official {
+    display: inline-block;
+    margin-top: var(--space-3);
+    font-weight: 700;
+  }
+
+  .page-section {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-16);
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-4);
+  }
+
+  .single-card {
+    max-width: 30rem;
+  }
+</style>

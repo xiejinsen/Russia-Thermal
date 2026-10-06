@@ -1,6 +1,6 @@
 # View Models
 
-status: W2_REAL_DATA_INTEGRATION
+status: W2_RELATIONSHIP_PAGES
 
 View models are the presentation boundary between normalized W1 datasets and Astro UI.
 
@@ -12,17 +12,32 @@ Real-data builders live in:
 - `web/src/view-models/builders.ts`
 - `web/src/view-models/helpers.ts`
 
-Normalized records are loaded only from:
-- `web/data/generated/actors.json`
-- `web/data/generated/capabilities.json`
-- `web/data/generated/directions.json`
-
-These files are regenerated from canonical objects before Astro check/build/dev.
+Normalized records are loaded only from generated web datasets.
 
 ## Implemented page VMs
 
 - `OverviewPageVM`
 - `PartnerPortfolioVM`
+- `InstitutionPageVM`
+- `ScholarPageVM`
+
+## Relationship navigation
+
+Institution and Scholar pages resolve only normalized ID relationships:
+
+`Direction.capabilityIds -> Capability.id`
+
+`Capability.actorId -> Actor.id`
+
+`Capability.keyPeopleIds -> Actor.id`
+
+`Actor.parentId -> Actor.id`
+
+This supports the human reading chain:
+
+`Institution -> Lab/Team -> Key People -> Capability -> Direction`
+
+without duplicating the relationship graph in page files.
 
 ## Ownership
 
@@ -46,9 +61,8 @@ They must not:
 
 `canonical objects -> W1 exporter -> normalized records -> VM builder -> component props -> Astro page`
 
-## Current policy on partner ranking
+## Partner ranking policy
 
 The current final management report uses P1/P2/P3 language, but priority rank is not yet a normalized canonical field.
-Therefore the web Partner Portfolio currently groups by canonical `investmentLane` and does **not** hardcode P1/P2/P3.
-
-If explicit priority becomes a durable research object, add it upstream and propagate it through the exporter/schema.
+The web Partner Portfolio therefore groups by canonical `investmentLane`.
+If explicit priority becomes durable project state, model it upstream before surfacing it as authoritative UI.

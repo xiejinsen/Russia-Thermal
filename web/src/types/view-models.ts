@@ -11,6 +11,7 @@ export interface InstitutionCardVM {
   country: string;
   kindLabel: string;
   summary: string;
+  href?: string;
   capabilityCount?: number;
   peopleCount?: number;
   status?: StatusVM;
@@ -22,6 +23,7 @@ export interface ScholarCardVM {
   affiliation: string;
   role?: string;
   relevance: string;
+  href?: string;
   status?: StatusVM;
 }
 
@@ -68,4 +70,45 @@ export interface PartnerPortfolioVM {
   title: string;
   summary: string;
   groups: PartnerGroupVM[];
+}
+
+export interface CapabilityDetailVM {
+  id: string;
+  statement: string;
+  maturity: string;
+  evidenceConfidence: string;
+  targetFit: string;
+  technicalScope: string[];
+  transferBoundary?: string;
+  strategicUse?: string;
+}
+
+export interface InstitutionPageVM {
+  id: string;
+  name: string;
+  country: string;
+  kindLabel: string;
+  role?: string;
+  relevance?: string;
+  officialUrl?: string;
+  parent?: InstitutionCardVM;
+  children: InstitutionCardVM[];
+  people: ScholarCardVM[];
+  capabilities: CapabilityDetailVM[];
+  directions: DirectionCardVM[];
+}
+
+export interface ScholarPageVM {
+  id: string;
+  name: string;
+  country: string;
+  role?: string;
+  relevance?: string;
+  officialUrl?: string;
+  affiliation?: InstitutionCardVM;
+  capabilityContexts: Array<{
+    institution: InstitutionCardVM;
+    capability: CapabilityDetailVM;
+    directions: DirectionCardVM[];
+  }>;
 }

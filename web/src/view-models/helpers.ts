@@ -44,3 +44,7 @@ export function laneRank(lane: string): number {
   };
   return order[lane] ?? 99;
 }
+
+export function actorHref(id: string, type: string): string {
+  return type === 'PERSON' ? `/scholars/${id}` : `/institutions/${id}`;
+}
