@@ -6,6 +6,7 @@ import type {
   InstitutionCardVM,
   InstitutionPageVM,
   OverviewPageVM,
+  OverviewDecisionVM,
   PartnerGroupVM,
   PartnerPortfolioVM,
   PartnerPriorityVM,
@@ -147,17 +148,55 @@ export function buildOverviewVM(): OverviewPageVM {
     .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined))
     .sort((a, b) => a.name.localeCompare(b.name));
 
+  const overviewPriorities = [...priorities]
+    .sort((a, b) => Number(a.rank.slice(1)) - Number(b.rank.slice(1)))
+    .slice(0, 3)
+    .map(buildPriorityVM);
+
+  const overviewLandscape = buildLandscapeVM().rows
+    .filter((row) => ['Strategic Candidate', 'Stage0 Challenger', 'Reserve'].includes(row.decision))
+    .slice(0, 4);
+
+  const killDecisions: OverviewDecisionVM[] = [...decisions]
+    .filter((event) => event.eventType === 'KILL' || event.newState.includes('DO_NOT_USE_AS_COUNTRY_ADVANTAGE'))
+    .sort((a, b) => (b.effectiveDate ?? '').localeCompare(a.effectiveDate ?? ''))
+    .slice(0, 5)
+    .map((event) => ({
+      id: event.id,
+      subject: event.subjectId,
+      eventType: { label: humanize(event.eventType), tone: decisionTone(event.eventType) },
+      newState: event.newState,
+      rationale: event.rationale ?? undefined
+    }));
+
+  const frontier = buildFrontierWatchVM();
+  const coveredVenues = frontier.venues.filter((venue) => venue.evidenceCount > 0);
+  const latestYears = frontier.venues
+    .map((venue) => venue.latestYear)
+    .filter((year): year is number => typeof year === 'number');
+
   return {
-    eyebrow: 'Evidence-backed research system',
-    title: 'Russian thermal capabilities, filtered for smartphone relevance',
+    eyebrow: 'Leadership view',
+    title: 'Russia is a selective complement, not a broad smartphone-thermal leader',
     summary:
-      'This overview is generated from normalized canonical Actors, Capabilities and Directions. It emphasizes retained strategic, challenger and reserve paths without re-authoring research facts in the frontend.',
+      'The current evidence supports a narrow collaboration thesis: prioritize mechanism depth, long-duration reliability knowledge and selected process capability while keeping China as the stronger baseline in ultra-thin device engineering, manufacturing reliability and mobile integration.',
+    thesis:
+      'Prioritize a small number of Russian collaboration packages where residual differentiation survives China/global comparator pressure; do not invest in broad country-level superiority narratives.',
     stats: {
       institutions: actors.filter((actor) => actor.type === 'ORGANIZATION' || actor.type === 'LAB').length,
       people: actors.filter((actor) => actor.type === 'PERSON').length,
       capabilities: capabilities.length,
       directions: directions.length,
       activeDirections: active.length
+    },
+    priorities: overviewPriorities,
+    landscape: overviewLandscape,
+    killDecisions,
+    frontier: {
+      venueCount: frontier.venues.length,
+      coveredVenueCount: coveredVenues.length,
+      matchedEvidence: frontier.venues.reduce((sum, venue) => sum + venue.evidenceCount, 0),
+      latestYear: latestYears.length ? Math.max(...latestYears) : undefined
     },
     institutions: institutions.slice(0, 6),
     scholars: scholars.slice(0, 8),
