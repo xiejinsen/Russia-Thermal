@@ -24,6 +24,11 @@ related_claims:
 - CLM-PRESSURE-004
 - CLM-PRESSURE-005
 - CLM-PRESSURE-007
+- CLM-OBS-001
+- CLM-OBS-002
+- CLM-OBS-003
+- CLM-OBS-004
+- CLM-OBS-007
 
 candidate_capabilities:
 - CAP-KUT-L13-DRYOUT-DIAGNOSTICS
@@ -38,10 +43,10 @@ Internal control boundary:
 phone package, UTVC geometry, product fluid, manufacturing, final controller/data model and final product foreground IP remain internally owned.
 
 Next question:
-Can a phone-relevant observer or validation method distinguish approach to irreversible two-phase crisis from generic thermal drift using practical telemetry, and does that distinction improve design/control decisions?
+Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
 
 Promotion gate:
-repeatable phone-relevant mechanism-specific signal or failure-boundary improvement that beats a baseline using temperature, power/workload history, calibrated RC/thermal impedance and hysteresis features.
+a minimum falsifying dataset shows controlled transient features classify the mechanism-specific crisis/recovery state materially better than a generic anomaly/RC baseline.
 
 Kill / downgrade gate:
 downgrade if value reduces to generic mesh/capillary treatment, is HFE/mm-scale specific, or does not change phone design/validation decisions.
