@@ -87,6 +87,9 @@ The China baseline is not weak.
 
 Key anchors include:
 - **Shanghai Jiao Tong University** — micro/nano phase change, dielectric-fluid ultra-thin composite wick, near-junction / 3D-chip thermal management, microchannel boiling;
+- **Peking University** — extreme near-junction embedded microfluidic cooling with explicit pressure-drop / pumping-power performance;
+- **Fudan University** — package-level microchannel design plus 2026 wafer-level SiC embedded microfluidic cooling;
+- **Beijing Institute of Technology** — ultra-thin high-performance VC / flat heat pipes, porous-capillary characterization and current microchannel boiling;
 - **Guangdong University of Technology** — capillary-fed dryout / rewetting / wettability degradation;
 - **East China Jiaotong University** — laser-modified UTVC wick / device path;
 - **Chinese copper-water VC ecosystem** — oxidation failure, lifetime prediction, pre-encapsulation aging, design/manufacture/test integration.
