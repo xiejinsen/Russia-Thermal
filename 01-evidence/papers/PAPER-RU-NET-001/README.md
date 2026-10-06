@@ -15,9 +15,9 @@ Authors:
 O.A. Kabov; V.V. Kuznetsov
 
 Direct project use:
-- current direct Kutateladze ↔ Lavrentyev technical link;
+- current Kabov ↔ V.V. Kuznetsov technical coauthorship;
 - shear-driven microelectronic liquid-film modeling;
 - experiment/mechanism ↔ mathematical-fluid-model bridge.
 
 Boundary:
-current cross-institute technical coauthorship does not establish a single consortium or shared IP ownership.
+V.V. Kuznetsov has relevant Lavrentyev modeling lineage, but this paper alone must not be used as high-certainty proof of his exact current affiliation or a formal current Kutateladze↔Lavrentyev institutional project.
