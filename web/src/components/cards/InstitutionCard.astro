@@ -24,6 +24,7 @@ const href = model.href ? `${base}${model.href.replace(/^\//, '')}` : undefined;
   </div>
 
   <p class="summary">{model.summary}</p>
+  {model.officialUrl && <a href={model.officialUrl} target="_blank" rel="noopener noreferrer">Official {model.kindLabel === 'Organization' ? 'organization' : 'source'} ↗</a>}
 
   {(model.capabilityCount !== undefined || model.peopleCount !== undefined) && (
     <dl class="metrics">

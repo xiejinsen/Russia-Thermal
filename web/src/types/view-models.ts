@@ -12,6 +12,7 @@ export interface InstitutionCardVM {
   kindLabel: string;
   summary: string;
   href?: string;
+  officialUrl?: string;
   capabilityCount?: number;
   peopleCount?: number;
   status?: StatusVM;

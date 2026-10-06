@@ -24,7 +24,8 @@ if (!vm) throw new Error(`Unknown institution actor: ${Astro.params.id}`);
     <h1>{vm.name}</h1>
     <p class="meta">{vm.country}{vm.role ? ` · ${vm.role}` : ''}</p>
     {vm.relevance && <p class="summary">{vm.relevance}</p>}
-    {vm.officialUrl && <a class="official" href={vm.officialUrl} rel="noreferrer">Official source ↗</a>}
+    {!vm.officialUrl && vm.parent?.officialUrl && <a class="official" href={vm.parent.officialUrl} target="_blank" rel="noopener noreferrer">Parent organization official site ↗</a>}
+    {vm.officialUrl && <a class="official" href={vm.officialUrl} target="_blank" rel="noopener noreferrer">Official source ↗</a>}
   </section>
 
   {vm.parent && (

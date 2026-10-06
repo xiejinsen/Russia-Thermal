@@ -1,6 +1,7 @@
 # ACT-FRUMKIN
 
 record_state: CURRENT
+official_url: https://www.phyche.ac.ru/
 actor_type: ORGANIZATION
 canonical_name: A.N. Frumkin Institute of Physical Chemistry and Electrochemistry RAS
 country: RU

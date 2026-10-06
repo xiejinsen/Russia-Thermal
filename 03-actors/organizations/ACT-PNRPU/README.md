@@ -1,6 +1,7 @@
 # ACT-PNRPU
 
 record_state: CURRENT
+official_url: https://pstu.ru/
 actor_type: ORGANIZATION
 canonical_name: Perm National Research Polytechnic University
 country: RU

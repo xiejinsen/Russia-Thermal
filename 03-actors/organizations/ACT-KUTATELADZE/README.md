@@ -1,6 +1,7 @@
 # ACT-KUTATELADZE
 
 record_state: CURRENT
+official_url: https://www.itp.nsc.ru/
 actor_type: ORGANIZATION
 canonical_name: Kutateladze Institute of Thermophysics SB RAS
 country: RU

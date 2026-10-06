@@ -1,6 +1,7 @@
 # ACT-SJTU
 
 record_state: CURRENT
+official_url: https://www.sjtu.edu.cn/
 actor_type: ORGANIZATION
 canonical_name: Shanghai Jiao Tong University
 country: CN

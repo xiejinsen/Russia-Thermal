@@ -1,6 +1,7 @@
 # ACT-ICM-SBRAS
 
 record_state: CURRENT
+official_url: https://icm.krasn.ru/page.php?lang=eng
 actor_type: ORGANIZATION
 canonical_name: Institute of Computational Modelling SB RAS
 country: RU

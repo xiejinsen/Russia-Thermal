@@ -1,6 +1,7 @@
 # ACT-TSAGI
 
 record_state: CURRENT
+official_url: https://www.tsagi.ru/
 actor_type: ORGANIZATION
 canonical_name: Central Aerohydrodynamic Institute (TsAGI)
 country: RU

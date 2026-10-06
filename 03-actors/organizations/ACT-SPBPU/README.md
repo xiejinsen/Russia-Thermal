@@ -1,6 +1,7 @@
 # ACT-SPBPU
 
 record_state: CURRENT
+official_url: https://english.spbstu.ru/
 actor_type: ORGANIZATION
 canonical_name: Peter the Great St. Petersburg Polytechnic University
 country: RU

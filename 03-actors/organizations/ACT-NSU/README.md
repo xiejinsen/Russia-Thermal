@@ -1,6 +1,7 @@
 # ACT-NSU
 
 record_state: CURRENT
+official_url: https://www.nsu.ru/
 actor_type: ORGANIZATION
 canonical_name: Novosibirsk State University
 country: RU

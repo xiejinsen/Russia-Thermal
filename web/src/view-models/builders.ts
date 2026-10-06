@@ -121,6 +121,7 @@ function institutionCard(
     kindLabel: actorKind(actor.type),
     summary,
     href: actorHref(actor.id, actor.type),
+    officialUrl: actor.officialUrl ?? undefined,
     capabilityCount: relevantCapabilities.length,
     peopleCount: peopleIds.size,
     status: direction ? statusFromLane(direction.investmentLane) : undefined

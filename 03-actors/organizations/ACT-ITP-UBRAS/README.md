@@ -1,6 +1,7 @@
 # ACT-ITP-UBRAS
 
 record_state: CURRENT
+official_url: https://itpuran.ru/
 actor_type: ORGANIZATION
 canonical_name: Institute of Thermal Physics, Ural Branch of RAS
 country: RU

@@ -1,6 +1,7 @@
 # ACT-KUT-LAB66
 
 record_state: CURRENT
+official_url: https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/66_laboratoriya_intensifikacii_processov_teploobme.html
 actor_type: LAB
 canonical_name: Kutateladze Institute — Laboratory 6.6
 country: RU

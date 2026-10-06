@@ -1,6 +1,7 @@
 # ACT-LAVRENTYEV
 
 record_state: CURRENT
+official_url: https://www.hydro.nsc.ru/
 actor_type: ORGANIZATION
 canonical_name: Lavrentyev Institute of Hydrodynamics SB RAS
 country: RU

@@ -1,6 +1,7 @@
 # ACT-KUT-LAB13
 
 record_state: CURRENT
+official_url: https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html
 actor_type: LAB
 canonical_name: Laboratory 1.3 — Low-Temperature Thermophysics
 country: RU

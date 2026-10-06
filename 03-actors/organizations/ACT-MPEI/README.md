@@ -1,6 +1,7 @@
 # ACT-MPEI
 
 record_state: CURRENT
+official_url: https://mpei.ru/
 actor_type: ORGANIZATION
 canonical_name: Moscow Power Engineering Institute
 country: RU

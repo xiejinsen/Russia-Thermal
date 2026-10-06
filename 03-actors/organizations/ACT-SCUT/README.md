@@ -1,6 +1,7 @@
 # ACT-SCUT
 
 record_state: CURRENT
+official_url: https://www.scut.edu.cn/
 actor_type: ORGANIZATION
 canonical_name: South China University of Technology
 country: CN

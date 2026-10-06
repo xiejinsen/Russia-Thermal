@@ -1,6 +1,7 @@
 # ACT-SKOLTECH
 
 record_state: CURRENT
+official_url: https://skoltech.ru/en/
 actor_type: ORGANIZATION
 canonical_name: Skolkovo Institute of Science and Technology
 country: RU

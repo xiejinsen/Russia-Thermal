@@ -1,6 +1,7 @@
 # ACT-BMSTU
 
 record_state: CURRENT
+official_url: https://bmstu.ru/
 actor_type: ORGANIZATION
 canonical_name: Bauman Moscow State Technical University
 country: RU

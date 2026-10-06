@@ -1,6 +1,7 @@
 # ACT-TPU
 
 record_state: CURRENT
+official_url: https://tpu.ru/
 actor_type: ORGANIZATION
 canonical_name: Tomsk Polytechnic University
 country: RU
