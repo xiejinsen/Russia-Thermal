@@ -263,9 +263,16 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for f in ("id", "eventType", "subjectId", "newState", "sourcePath"):
             require_nonempty(r, f, errors)
 
+    seen_priority_ranks: dict[str, str] = {}
     for r in datasets["priorities"]:
         for f in ("id", "rank", "priorityClass", "sourcePath"):
             require_nonempty(r, f, errors)
+        if not re.match(r"^P[1-9][0-9]*$", r["rank"]):
+            errors.append(f"{r['id']}: invalid priority rank {r['rank']}")
+        elif r["rank"] in seen_priority_ranks:
+            errors.append(f"{r['id']}: duplicate priority rank {r['rank']} also used by {seen_priority_ranks[r['rank']]}")
+        else:
+            seen_priority_ranks[r["rank"]] = r["id"]
         if not r["targetActorIds"]:
             errors.append(f"{r['id']}: targetActorIds is empty")
         if not r["relatedDirectionIds"]:
@@ -308,6 +315,10 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for aid in r["targetActorIds"]:
             if aid not in actor_ids:
                 errors.append(f"{r['id']}: unresolved targetActorId {aid}")
+            else:
+                actor = next((a for a in datasets["actors"] if a["id"] == aid), None)
+                if actor and actor["type"] == "PERSON":
+                    errors.append(f"{r['id']}: targetActorId {aid} is PERSON; priority packages must target organization/lab/company actors")
         for did in r["relatedDirectionIds"]:
             if did not in direction_ids:
                 errors.append(f"{r['id']}: unresolved relatedDirectionId {did}")
