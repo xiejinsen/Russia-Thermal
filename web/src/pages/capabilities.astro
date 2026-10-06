@@ -2,29 +2,129 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import CapabilityDetail from '../components/CapabilityDetail.astro';
+import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import { actors, capabilities, directions } from '../data/load-normalized';
 import { buildCapabilitiesCollectionVM } from '../view-models/builders';
+import { directionTitle, humanize } from '../view-models/helpers';
 
 const vm = buildCapabilitiesCollectionVM();
+const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+const capabilityById = new Map(capabilities.map((capability) => [capability.id, capability]));
+
+const records = vm.records.map((model) => {
+  const capability = capabilityById.get(model.id);
+  const owner = capability ? actorById.get(capability.actorId) : undefined;
+  const people = capability
+    ? capability.keyPeopleIds.map((id) => actorById.get(id)).filter((item): item is NonNullable<typeof item> => Boolean(item))
+    : [];
+  const linkedDirections = capability
+    ? directions.filter((direction) => direction.capabilityIds.includes(capability.id))
+    : [];
+
+  return {
+    model,
+    capability,
+    owner,
+    people,
+    directionIds: linkedDirections.map((direction) => direction.id),
+    search: [
+      model.id,
+      model.statement,
+      model.strategicUse ?? '',
+      model.transferBoundary ?? '',
+      owner?.name ?? '',
+      ...people.map((person) => person.name),
+      ...model.technicalScope,
+      ...linkedDirections.map((direction) => directionTitle(direction.id))
+    ].join(' ')
+  };
+}).sort((a, b) =>
+  (a.owner?.country ?? '').localeCompare(b.owner?.country ?? '') ||
+  (a.owner?.name ?? '').localeCompare(b.owner?.name ?? '') ||
+  a.model.id.localeCompare(b.model.id)
+);
+
+const countryValues = [...new Set(records.map((record) => record.owner?.country).filter((value): value is string => Boolean(value)))].sort();
+const ownerValues = [...new Map(records
+  .filter((record) => record.owner)
+  .map((record) => [record.owner!.id, record.owner!.name])).entries()]
+  .map(([value, label]) => ({ value, label }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+const dispositionOptions = [
+  { value: 'DIRECTION_LINKED', label: 'Direction-linked' },
+  { value: 'SUPPORT_ONLY', label: 'Russia support-only' },
+  { value: 'COMPARATOR_ONLY', label: 'China comparator-only' },
+  { value: 'BACKGROUND_KILLED_THESIS', label: 'Background / killed thesis' }
+];
+const directionOptions = directions
+  .map((direction) => ({ value: direction.id, label: directionTitle(direction.id) }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <BaseLayout title="Russia-Thermal — Capabilities" description={vm.summary}>
   <SiteHeader slot="header" />
-  <section class="collection-hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>{vm.title}</h1>
-    <p>{vm.summary}</p>
-    <div class="count">{vm.records.length} records</div>
-  </section>
 
-  <section class="collection-grid">
-    {vm.records.map((model) => <CapabilityDetail model={model} />)}
-  </section>
+  <div data-explorer-root>
+    <section class="collection-hero">
+      <p class="eyebrow">Capability explorer</p>
+      <h1>Capabilities</h1>
+      <p>
+        Browse every normalized capability with its explicit portfolio disposition. Direction-linked, support-only,
+        comparator-only and killed-thesis background capabilities remain distinct and drillable.
+      </p>
+      <div class="count">{records.length} records</div>
+    </section>
+
+    <ExplorerToolbar
+      total={records.length}
+      searchPlaceholder="Search capability, owner, person, scope or direction…"
+      filters={[
+        {
+          key: 'country',
+          label: 'Country',
+          options: countryValues.map((value) => ({ value, label: value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value }))
+        },
+        { key: 'disposition', label: 'Disposition', options: dispositionOptions },
+        { key: 'owner', label: 'Owner', options: ownerValues },
+        { key: 'direction', label: 'Direction', options: directionOptions }
+      ]}
+    />
+
+    <section class="collection-grid" aria-label="Capability records">
+      {records.map((record) => (
+        <div
+          class="record"
+          data-explorer-record
+          data-country={record.owner?.country ?? ''}
+          data-disposition={record.capability?.portfolioDisposition ?? ''}
+          data-owner={record.owner?.id ?? ''}
+          data-direction={record.directionIds.join('|')}
+          data-search={record.search}
+        >
+          <div class="record-context">
+            <div>
+              <span>{record.owner?.name ?? record.capability?.actorId ?? 'Owner unresolved'}</span>
+              <small>{record.people.map((person) => person.name).join(' · ') || 'No key-person link'}</small>
+            </div>
+            <em>{record.capability ? humanize(record.capability.portfolioDisposition) : record.model.portfolioDisposition}</em>
+          </div>
+          <CapabilityDetail model={record.model} />
+        </div>
+      ))}
+    </section>
+  </div>
 </BaseLayout>
 
 <style>
-  .collection-hero { display:grid; gap:var(--space-4); max-width:60rem; }
-  .collection-hero h1 { margin:0; font-size:clamp(1.55rem,2.4vw,2.15rem); letter-spacing:-.04em; line-height:1.08; }
-  .collection-hero > p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:68ch}
+  .collection-hero{display:grid;gap:var(--space-4);max-width:68rem}
+  .collection-hero h1{margin:0;font-size:clamp(1.7rem,2.7vw,2.35rem);letter-spacing:-.05em;line-height:1.08}
+  .collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:78ch;line-height:1.65}
   .count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
-  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--space-4);margin-top:var(--space-10,2.5rem)}
+  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,23rem),1fr));gap:var(--space-4);margin-top:var(--space-6)}
+  .record{display:grid;grid-template-rows:auto 1fr;min-width:0}
+  .record-context{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0;background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
+  .record-context>div{display:grid;gap:2px;min-width:0}.record-context span{color:var(--accent-vivid);font-size:9px;font-weight:900;letter-spacing:.04em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.record-context small{color:var(--text-muted);font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .record-context em{flex:0 0 auto;padding:3px 6px;border-radius:999px;background:white;color:#506d82;border:1px solid #dbe7ef;font-size:8px;font-style:normal;font-weight:850}
+  .record :global(.capability){border-top-left-radius:0;border-top-right-radius:0;min-height:100%}
+  [hidden]{display:none!important}
 </style>
