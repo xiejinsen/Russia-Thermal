@@ -65,6 +65,40 @@
     "sourcePath": {
       "type": "string",
       "minLength": 1
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": -180,
+      "maximum": 180
+    },
+    "locationVerifiedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": false
