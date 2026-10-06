@@ -242,3 +242,33 @@ Rules:
 - key_people is not a substitute for affiliation;
 - a person may support multiple Capabilities;
 - generated institution/collaboration/leadership views must surface these people.
+
+
+## SYNTHESIS
+
+Purpose:
+provide a stable conclusion-first contract for leadership/web/presentation outputs without duplicating the evidence graph.
+
+Required fields:
+- id
+- record_state
+- synthesis_scope
+- conclusion
+- implication
+- theory_basis
+- supporting_claims
+- supporting_directions
+- supporting_priorities
+- boundary
+- reopen_condition
+- assessed_at
+
+Optional:
+- key_evidence
+
+Rules:
+- one Synthesis must correspond to one bounded management question;
+- supporting references point to canonical objects and are not copied evidence summaries;
+- update only when the management conclusion, implication, theory basis, or boundary materially changes;
+- new Sources alone do not require a Synthesis edit;
+- frontend/Figma wording may shorten the Synthesis but must preserve its meaning.
