@@ -1,0 +1,91 @@
+---
+import DesignLabLayout from '../../layouts/DesignLabLayout.astro';
+import { buildOverviewVM } from '../../view-models/builders';
+const vm=buildOverviewVM();
+const base=import.meta.env.BASE_URL;
+const href=(p:string)=>`${base}${p.replace(/^\//,'')}`;
+const topReasons=vm.theoryBasis.slice(0,3);
+---
+<DesignLabLayout title="Russia-Thermal — Strategy prototype" description={vm.summary} theme="strategy">
+<div class="page">
+  <header class="nav">
+    <a class="brand" href={href('/design-lab')}>Russia-Thermal <span>Design Lab</span></a>
+    <nav><a href="#act">Act</a><a href="#compare">Compare</a><a href="#reject">Reject</a><a href={href('/evidence')}>Evidence</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Current portfolio thesis · {vm.thesisAssessedAt ?? 'current'}</p>
+      <h1>{vm.title}</h1>
+      <div class="hero-grid">
+        <p class="implication">{vm.summary}</p>
+        <aside>
+          <strong>{vm.priorities.length}</strong><span>priority collaboration packages</span>
+          <strong>{vm.stats.activeDirections}</strong><span>active / reserve technical directions</span>
+        </aside>
+      </div>
+      <div class="decision-line">
+        <span>Management implication</span>
+        <b>Advance only bounded packages where Russian residual value changes a smartphone decision.</b>
+      </div>
+    </section>
+
+    <section class="logic">
+      <div class="section-intro"><span>WHY</span><h2>Why this conclusion holds</h2><p>Three reasons are enough to understand the decision. Evidence comes after.</p></div>
+      <div class="reason-grid">
+        {topReasons.map((reason,i)=><article><em>0{i+1}</em><p>{reason}</p></article>)}
+      </div>
+    </section>
+
+    <section id="act" class="section">
+      <div class="section-intro"><span>01 · ACT</span><h2>Three collaboration packages deserve management attention</h2><p>Who to engage, what to test, and why the package survives comparator pressure.</p></div>
+      <div class="priority-list">
+        {vm.priorities.map((p)=>{
+          const d=p.directions[0];
+          const institution=p.institutions[0];
+          return <article class="priority">
+            <div class="rank">{p.rank}</div>
+            <div class="priority-main">
+              <div class="meta"><span>{institution?.name}</span><span>{d?.lane.label}</span></div>
+              <h3>{d?.title ?? p.id}</h3>
+              <p class="focus">{d?.collaborationFocus ?? p.rationale}</p>
+              <p class="why"><b>Why this partner:</b> {d?.residualDifferentiation ?? p.rationale}</p>
+            </div>
+            <div class="gate"><span>Next gate</span><p>{d?.nextQuestion ?? d?.nextGate ?? 'Validate phone-transfer value.'}</p></div>
+          </article>
+        })}
+      </div>
+    </section>
+
+    <section id="compare" class="section compare">
+      <div class="section-intro"><span>02 · COMPARE</span><h2>China leads the product stack; Russia retains selected specialist value</h2><p>The comparison is a decision filter, not a country scorecard.</p></div>
+      <div class="country-grid">
+        <article class="country china"><span>CHINA / GLOBAL BASELINE</span><h3>Stronger at product engineering and industrialization</h3><ul><li>Ultra-thin device engineering</li><li>Manufacturing reliability & QA</li><li>Smartphone-scale integration</li></ul></article>
+        <article class="country russia"><span>RUSSIA / RESIDUAL VALUE</span><h3>Useful only where specialist knowledge changes a decision</h3><ul><li>Mechanism-level crisis interpretation</li><li>Long-duration capillary aging knowledge</li><li>Selected process execution under bounded gates</li></ul></article>
+      </div>
+      <a class="text-link" href={href('/landscape')}>Open full Russia vs China landscape →</a>
+    </section>
+
+    <section id="reject" class="section reject">
+      <div class="section-intro"><span>03 · REJECT</span><h2>Do not invest in broad superiority narratives</h2><p>Pressure testing has already removed attractive but weak theses.</p></div>
+      <div class="reject-list">{vm.killDecisions.slice(0,4).map((d)=><div><b>×</b><span>{d.subject}</span><p>{d.rationale}</p></div>)}</div>
+    </section>
+
+    <section class="evidence-cta">
+      <div><span>04 · EVIDENCE</span><h2>Evidence is the audit trail, not the headline.</h2><p>Every conclusion should trace through Direction / Priority → Claim → Source.</p></div>
+      <a href={href('/evidence')}>Audit the evidence →</a>
+    </section>
+  </main>
+</div>
+</DesignLabLayout>
+<style>
+:global(body){background:#f5f2eb;color:#171a1f}
+.page{max-width:1440px;margin:auto}.nav{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 42px;border-bottom:1px solid #d8d2c7}.brand{text-decoration:none;font-weight:800}.brand span{font-weight:500;color:#777}.nav nav{display:flex;gap:24px;font-size:13px}.nav nav a{text-decoration:none}
+main{padding:0 42px 80px}.hero{padding:62px 0 34px;border-bottom:1px solid #bbb4a8}.kicker,.section-intro span,.country>span,.evidence-cta span{font-size:11px;letter-spacing:.12em;font-weight:800;color:#4f6e91;text-transform:uppercase}.hero h1{max-width:1200px;margin:12px 0 34px;font-family:Georgia,serif;font-weight:500;font-size:clamp(38px,5.1vw,72px);line-height:.98;letter-spacing:-.04em}.hero-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(240px,.8fr);gap:50px}.implication{max-width:900px;font-size:19px;line-height:1.55;color:#3f454c}.hero aside{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:8px 16px}.hero aside strong{font-size:34px}.hero aside span{font-size:13px;color:#60656a}.decision-line{margin-top:32px;padding:18px 0;border-top:1px solid #d0c9bd;display:grid;grid-template-columns:190px 1fr;gap:24px}.decision-line span{font-size:12px;color:#68645e}.decision-line b{font-size:17px}
+.logic,.section{padding:58px 0}.section-intro{display:grid;grid-template-columns:110px minmax(0,780px) 1fr;gap:22px;align-items:start;margin-bottom:30px}.section-intro h2{font-size:28px;line-height:1.12;margin:0;letter-spacing:-.025em}.section-intro p{margin:0;color:#666;max-width:380px}.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#c9c2b8;border:1px solid #c9c2b8}.reason-grid article{background:#f8f5ef;padding:26px}.reason-grid em{font-style:normal;color:#4f6e91;font-weight:800}.reason-grid p{font-size:16px;line-height:1.55}
+.priority-list{border-top:1px solid #ada79d}.priority{display:grid;grid-template-columns:80px minmax(0,1.6fr) minmax(260px,.7fr);gap:28px;padding:30px 0;border-bottom:1px solid #c7c0b5}.rank{font-size:28px;font-weight:900;color:#335c85}.meta{display:flex;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:#68645e}.priority h3{font-size:24px;margin:8px 0}.focus{font-size:17px;line-height:1.55;margin:0}.why{font-size:13px;color:#5f6265}.gate{padding-left:22px;border-left:1px solid #c7c0b5}.gate span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.gate p{font-size:14px;line-height:1.5;color:#52575b}
+.country-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.country{padding:34px;min-height:290px}.china{background:#dfeaf3}.russia{background:#e3eee8}.country h3{font-family:Georgia,serif;font-size:30px;line-height:1.06;max-width:580px}.country ul{padding-left:18px;line-height:1.8;color:#3f474b}.text-link{display:inline-block;margin-top:18px;font-weight:700}
+.reject-list{border-top:1px solid #bbb4a8}.reject-list>div{display:grid;grid-template-columns:44px 250px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid #d1cabf}.reject-list b{font-size:22px}.reject-list span{font-weight:800}.reject-list p{margin:0;color:#5e6265}
+.evidence-cta{display:flex;justify-content:space-between;gap:30px;align-items:end;padding:44px;background:#172a3d;color:#fff}.evidence-cta h2{font-family:Georgia,serif;font-size:35px;margin:8px 0}.evidence-cta p{color:#cbd5de}.evidence-cta a{white-space:nowrap}
+@media(max-width:850px){.nav nav{display:none}main{padding-inline:20px}.nav{padding-inline:20px}.hero-grid,.section-intro,.priority,.country-grid{grid-template-columns:1fr}.decision-line{grid-template-columns:1fr}.reason-grid{grid-template-columns:1fr}.gate{border-left:0;padding-left:0}.reject-list>div{grid-template-columns:36px 1fr}.reject-list p{grid-column:2}.evidence-cta{align-items:start;flex-direction:column}}
+</style>
