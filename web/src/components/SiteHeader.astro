@@ -2,28 +2,53 @@
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
 
-const items = [
+const groups = [
   { label: 'Overview', path: '/' },
   { label: 'Research Maps', path: '/research-map' },
-  { label: 'Capabilities', path: '/capabilities' },
-  { label: 'Labs', path: '/institutions' },
-  { label: 'Key People', path: '/scholars' },
-  { label: 'Partners', path: '/partners' },
-  { label: 'Russia vs China', path: '/landscape' },
-  { label: 'Directions', path: '/directions' },
-  { label: 'Claims', path: '/claims' },
-  { label: 'Evidence', path: '/evidence' },
-  { label: 'Decisions', path: '/decisions' },
-  { label: 'Frontier Watch', path: '/frontier' },
-  { label: 'Fixtures', path: '/fixtures' }
+  {
+    label: 'Portfolio',
+    children: [
+      { label: 'Partners', path: '/partners' },
+      { label: 'Russia vs China', path: '/landscape' },
+      { label: 'Directions', path: '/directions' }
+    ]
+  },
+  {
+    label: 'People & Orgs',
+    children: [
+      { label: 'Scholars', path: '/scholars' },
+      { label: 'Institutions', path: '/institutions' },
+      { label: 'Capabilities', path: '/capabilities' }
+    ]
+  },
+  {
+    label: 'Research Objects',
+    children: [
+      { label: 'Papers', path: '/papers' },
+      { label: 'Claims', path: '/claims' },
+      { label: 'Evidence', path: '/evidence' },
+      { label: 'Frontier Watch', path: '/frontier' }
+    ]
+  },
+  { label: 'Decisions', path: '/decisions' }
 ];
 ---
 
 <header class="site-header">
   <div class="inner">
     <a class="brand" href={href('/')}>Russia-Thermal</a>
+
     <nav aria-label="Primary navigation">
-      {items.map((item) => <a href={href(item.path)}>{item.label}</a>)}
+      {groups.map((item) => item.path ? (
+        <a class="top-link" href={href(item.path)}>{item.label}</a>
+      ) : (
+        <details class="nav-group">
+          <summary>{item.label}<span aria-hidden="true">⌄</span></summary>
+          <div class="menu">
+            {item.children?.map((child) => <a href={href(child.path)}>{child.label}</a>)}
+          </div>
+        </details>
+      ))}
     </nav>
   </div>
 </header>
@@ -32,9 +57,9 @@ const items = [
   .site-header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     border-bottom: 1px solid var(--line);
-    background: rgb(248 252 255 / 0.82);
+    background: rgb(248 252 255 / 0.94);
     backdrop-filter: blur(18px);
   }
 
@@ -49,6 +74,8 @@ const items = [
   }
 
   .brand {
+    flex: 0 0 auto;
+    color: #183b58;
     font-weight: 800;
     text-decoration: none;
     letter-spacing: -0.02em;
@@ -56,27 +83,96 @@ const items = [
 
   nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
+    align-items: center;
+    gap: .3rem;
   }
 
-  nav a {
-    color: #263b50;
-    font-size: 0.9rem;
+  .top-link,
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    min-height: 2.35rem;
+    padding: 0 .72rem;
+    border-radius: .6rem;
+    color: #35546c;
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    white-space: nowrap;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  .top-link:hover,
+  .top-link:focus-visible,
+  summary:hover,
+  summary:focus-visible,
+  details[open] > summary {
+    background: #eaf4fb;
+    color: #0b67b2;
+    outline: none;
+  }
+
+  .nav-group {
+    position: relative;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + .45rem);
+    right: 0;
+    min-width: 12.5rem;
+    padding: .45rem;
+    border: 1px solid #d4e4ef;
+    border-radius: .75rem;
+    background: #fff;
+    box-shadow: 0 14px 34px rgb(31 76 112 / 0.12);
+  }
+
+  .menu a {
+    display: block;
+    padding: .62rem .72rem;
+    border-radius: .5rem;
+    color: #35546c;
+    font-size: .8rem;
     font-weight: 650;
     text-decoration: none;
   }
 
-  nav a:hover,
-  nav a:focus-visible {
-    color: var(--text);
+  .menu a:hover,
+  .menu a:focus-visible {
+    background: #f0f7fc;
+    color: #0b67b2;
+    outline: none;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 860px) {
     .inner {
       align-items: flex-start;
       flex-direction: column;
-      padding-block: var(--space-3);
+      padding-block: .7rem;
+    }
+
+    nav {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: .15rem;
+    }
+
+    .nav-group {
+      position: static;
+    }
+
+    .menu {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      top: 7.2rem;
+      min-width: 0;
+      z-index: 120;
     }
   }
 </style>
