@@ -1,0 +1,62 @@
+---
+import DecisionBadge from '../domain/DecisionBadge.astro';
+import type { ScholarCardVM } from '../../types/view-models';
+
+interface Props {
+  model: ScholarCardVM;
+}
+
+const { model } = Astro.props;
+---
+
+<article class="scholar-card">
+  <div class="identity">
+    <div class="avatar" aria-hidden="true">{model.name.slice(0, 1)}</div>
+    <div>
+      <h3>{model.name}</h3>
+      <p>{model.affiliation}</p>
+    </div>
+  </div>
+
+  {model.status && <DecisionBadge label={model.status.label} tone={model.status.tone} />}
+
+  {model.role && <p class="role">{model.role}</p>}
+  <p class="relevance">{model.relevance}</p>
+</article>
+
+<style>
+  .scholar-card {
+    display: grid;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  .identity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .avatar {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  h3, p { margin: 0; }
+
+  .identity p, .role, .relevance {
+    color: var(--text-muted);
+  }
+
+  .role { font-size: 0.86rem; }
+}

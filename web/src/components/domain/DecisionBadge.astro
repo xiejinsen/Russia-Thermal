@@ -1,0 +1,13 @@
+---
+import Badge from '../primitives/Badge.astro';
+import type { Tone } from '../../types/view-models';
+
+interface Props {
+  label: string;
+  tone?: Tone;
+}
+
+const { label, tone = 'neutral' } = Astro.props;
+---
+
+<Badge tone={tone}>{label}</Badge>

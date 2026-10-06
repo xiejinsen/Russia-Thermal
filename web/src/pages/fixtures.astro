@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import ScholarCard from '../components/cards/ScholarCard.astro';
+import DirectionCard from '../components/cards/DirectionCard.astro';
+import {
+  institutionFixtures,
+  scholarFixtures,
+  directionFixtures
+} from '../fixtures/design-system';
+---
+
+<BaseLayout title="Russia-Thermal — Component Fixtures">
+  <SiteHeader slot="header" />
+
+  <section class="fixture-intro">
+    <p class="eyebrow">W2 Component Contract</p>
+    <h1>Component fixtures</h1>
+    <p>
+      Synthetic presentation data only. These states validate standard, long-text and sparse rendering
+      without duplicating canonical research facts.
+    </p>
+  </section>
+
+  <section class="fixture-section">
+    <div>
+      <p class="eyebrow">Tier 2</p>
+      <h2>Institution cards</h2>
+    </div>
+    <div class="fixture-grid">
+      {institutionFixtures.map((model) => <InstitutionCard model={model} />)}
+    </div>
+  </section>
+
+  <section class="fixture-section">
+    <div>
+      <p class="eyebrow">Tier 2</p>
+      <h2>Scholar cards</h2>
+    </div>
+    <div class="fixture-grid">
+      {scholarFixtures.map((model) => <ScholarCard model={model} />)}
+    </div>
+  </section>
+
+  <section class="fixture-section">
+    <div>
+      <p class="eyebrow">Tier 2</p>
+      <h2>Direction cards</h2>
+    </div>
+    <div class="fixture-grid">
+      {directionFixtures.map((model) => <DirectionCard model={model} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .fixture-intro {
+    max-width: 48rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5vw, 4rem);
+    letter-spacing: -0.04em;
+  }
+
+  .fixture-intro > p:last-child {
+    color: var(--text-muted);
+  }
+
+  .fixture-section {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-12);
+  }
+
+  .fixture-section h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: -0.025em;
+  }
+
+  .fixture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: var(--space-4);
+  }
+</style>

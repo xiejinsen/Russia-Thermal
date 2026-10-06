@@ -1,13 +1,41 @@
 # View Models
 
-Future home for page/feature-specific presentation models.
+status: W2_CONTRACTS_STARTED
 
-Purpose:
-protect components/pages from raw canonical schema changes.
+View models are the presentation boundary between normalized W1 datasets and Astro UI.
 
-Examples:
-- InstitutionPageVM
-- ScholarPageVM
-- PartnerPortfolioVM
-- CapabilityHeatmapVM
-- EvidenceExplorerVM
+## Current typed contracts
+
+Implemented in `web/src/types/view-models.ts`:
+- `StatusVM`
+- `InstitutionCardVM`
+- `ScholarCardVM`
+- `DirectionCardVM`
+- `OverviewPageVM`
+
+## Ownership
+
+View models may own:
+- presentation ordering;
+- labels;
+- grouping;
+- concise display summaries;
+- UI status tone;
+- route/display metadata.
+
+They must reference or derive from normalized canonical IDs and must not invent new research truth.
+
+## Dependency rule
+
+`canonical objects -> normalized records -> view-model builder -> component props`
+
+Components and pages must not parse canonical Markdown or reconstruct strategic logic independently.
+
+## Next contracts
+
+After card contracts stabilize:
+- `PartnerPortfolioVM`
+- `InstitutionPageVM`
+- `ScholarPageVM`
+- `CapabilityHeatmapVM`
+- `EvidenceExplorerVM`

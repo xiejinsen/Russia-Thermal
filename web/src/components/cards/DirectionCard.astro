@@ -1,0 +1,102 @@
+---
+import DecisionBadge from '../domain/DecisionBadge.astro';
+import MetricPair from '../domain/MetricPair.astro';
+import type { DirectionCardVM } from '../../types/view-models';
+
+interface Props {
+  model: DirectionCardVM;
+}
+
+const { model } = Astro.props;
+---
+
+<article class="direction-card">
+  <div class="heading">
+    <div>
+      <p class="role">{model.role}</p>
+      <h3>{model.title}</h3>
+    </div>
+    <DecisionBadge label={model.lane.label} tone={model.lane.tone} />
+  </div>
+
+  <dl class="metrics">
+    <MetricPair label="Differentiation" value={model.differentiationConfidence} />
+    <MetricPair label="Phone maturity" value={model.phoneTransferMaturity} />
+  </dl>
+
+  {model.residualDifferentiation && (
+    <div class="block">
+      <strong>Residual value</strong>
+      <p>{model.residualDifferentiation}</p>
+    </div>
+  )}
+
+  {model.nextGate && (
+    <div class="block gate">
+      <strong>Next gate</strong>
+      <p>{model.nextGate}</p>
+    </div>
+  )}
+</article>
+
+<style>
+  .direction-card {
+    display: grid;
+    gap: var(--space-5, 1.25rem);
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  .heading {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .role {
+    margin: 0 0 var(--space-1);
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  h3, p { margin: 0; }
+
+  h3 {
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+    margin: 0;
+    padding: var(--space-4) 0;
+    border-block: 1px solid var(--line);
+  }
+
+  .block {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .block strong {
+    font-size: 0.82rem;
+  }
+
+  .block p {
+    color: var(--text-muted);
+  }
+
+  .gate {
+    padding: var(--space-4);
+    background: var(--surface-muted);
+    border-radius: var(--radius-sm);
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+import DecisionBadge from '../domain/DecisionBadge.astro';
+import MetricPair from '../domain/MetricPair.astro';
+import type { InstitutionCardVM } from '../../types/view-models';
+
+interface Props {
+  model: InstitutionCardVM;
+}
+
+const { model } = Astro.props;
+---
+
+<article class="entity-card">
+  <div class="topline">
+    <span class="kind">{model.kindLabel}</span>
+    {model.status && <DecisionBadge label={model.status.label} tone={model.status.tone} />}
+  </div>
+
+  <div>
+    <h3>{model.name}</h3>
+    <p class="country">{model.country}</p>
+  </div>
+
+  <p class="summary">{model.summary}</p>
+
+  {(model.capabilityCount !== undefined || model.peopleCount !== undefined) && (
+    <dl class="metrics">
+      {model.capabilityCount !== undefined && <MetricPair label="Capabilities" value={model.capabilityCount} />}
+      {model.peopleCount !== undefined && <MetricPair label="Key people" value={model.peopleCount} />}
+    </dl>
+  )}
+</article>
+
+<style>
+  .entity-card {
+    display: grid;
+    gap: var(--space-4);
+    min-height: 100%;
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  .topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .kind, .country {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .country, .summary { margin: 0; }
+
+  .summary {
+    color: var(--text-muted);
+  }
+
+  .metrics {
+    display: flex;
+    gap: var(--space-8);
+    margin: auto 0 0;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--line);
+  }
+</style>

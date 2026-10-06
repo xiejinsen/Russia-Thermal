@@ -1,6 +1,6 @@
 # Component System
 
-status: DESIGN
+status: W2_IMPLEMENTING
 scope: reusable UI boundaries and composition
 
 ## 1. Component tiers
@@ -20,6 +20,9 @@ Examples:
 Rule:
 no domain knowledge.
 
+Current baseline:
+- `Badge`
+
 ### Tier 1 — domain atoms
 
 Examples:
@@ -33,6 +36,10 @@ Examples:
 Rule:
 one domain concept per component.
 
+Current baseline:
+- `DecisionBadge`
+- `MetricPair`
+
 ### Tier 2 — cards
 
 Examples:
@@ -45,6 +52,11 @@ Examples:
 
 Rule:
 cards accept typed view-model props and do not query data.
+
+Current baseline:
+- `InstitutionCard`
+- `ScholarCard`
+- `DirectionCard`
 
 ### Tier 3 — compound views
 
@@ -73,59 +85,43 @@ compose domain components for one page narrative.
 ## 2. Component API rule
 
 Every component:
-- receives explicit props;
+- receives explicit typed props;
 - has no repository/file access;
 - has no hidden singleton/global domain state;
-- documents required vs optional props.
+- documents required vs optional props through TypeScript interfaces.
 
-## 3. Local change examples
+## 3. View-model boundary
 
-### Add journal name to EvidenceCard
+Tier 1–4 components consume presentation view models from `src/types/view-models.ts`.
 
-Change:
-- EvidenceCard prop type;
-- EvidenceCard rendering;
-- relevant Evidence VM.
+Dependency direction:
 
-Do not change:
-- InstitutionCard;
-- PartnerComparison;
-- navigation;
-- page shell.
+`normalized W1 data -> VM builder -> typed component prop -> Astro render`
 
-### Change P1/P2 visual emphasis
+Components do not import canonical Markdown, exporter parsing helpers or strategic decision logic.
 
-Change:
-- decision/priority tokens;
-- PartnerCard / PartnerComparison.
+## 4. Fixture rule
 
-Do not change:
-- canonical direction objects;
-- evidence data.
+The `/fixtures` page uses synthetic data only.
 
-### Add portrait to ScholarPage
+Current required states:
+- standard;
+- long text;
+- sparse / missing optional metadata.
 
-Change:
-- image metadata;
-- ScholarPageVM;
-- ScholarHero component.
+Future interactive components additionally require keyboard/focus fixtures.
 
-No impact on:
-- evidence explorer;
-- institution card;
-- capability heatmap.
-
-## 4. Avoid universal mega-components
+## 5. Avoid universal mega-components
 
 Forbidden:
-- one generic `EntityCard` with 25 optional props;
-- one `DetailsPage` branching on actor/evidence/capability types;
+- one generic `EntityCard` with many optional props;
+- one `DetailsPage` branching across unrelated entity types;
 - one global dashboard component owning all filters.
 
 Prefer:
 small, purpose-specific components sharing primitives.
 
-## 5. Variant policy
+## 6. Variant policy
 
 Variants are acceptable only for genuine presentation variants:
 - compact / full;
@@ -134,7 +130,7 @@ Variants are acceptable only for genuine presentation variants:
 
 Do not use variants to hide unrelated component responsibilities.
 
-## 6. Interactive islands
+## 7. Interactive islands
 
 Candidate islands:
 - EvidenceExplorer;
@@ -142,13 +138,12 @@ Candidate islands:
 - RelationshipGraph;
 - comparison filters.
 
-Everything else should render static HTML by default.
+Everything else renders static HTML by default.
 
-## 7. Story / test fixture rule
+## 8. Next implementation gate
 
-Each Tier 1–3 component should eventually have:
-- fixture data;
-- empty state;
-- long-text state;
-- missing-image state;
-- keyboard/focus test if interactive.
+Before W3 real feature pages:
+- finish core card contracts;
+- create Overview/PartnerPortfolio VM builders;
+- prove generated-data integration without canonical parsing in `src/`;
+- keep Astro check/build green.

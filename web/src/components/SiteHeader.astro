@@ -6,7 +6,8 @@ const items = [
   { label: 'Overview', path: '/' },
   { label: 'Partners', path: '/partners' },
   { label: 'Landscape', path: '/landscape' },
-  { label: 'Evidence', path: '/evidence' }
+  { label: 'Evidence', path: '/evidence' },
+  { label: 'Fixtures', path: '/fixtures' }
 ];
 ---
 
@@ -60,5 +61,13 @@ const items = [
   nav a:hover,
   nav a:focus-visible {
     color: var(--text);
+  }
+
+  @media (max-width: 720px) {
+    .inner {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-block: var(--space-3);
+    }
   }
 </style>
