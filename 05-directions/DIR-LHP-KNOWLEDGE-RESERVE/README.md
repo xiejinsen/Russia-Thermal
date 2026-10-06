@@ -9,17 +9,23 @@ phone_transfer_maturity: LOW
 
 candidate_capabilities:
 - CAP-ITP-LHP-KNOWLEDGE
+- CAP-NOVSU-ELECTROOSMOTIC-HEATPIPE
 
 related_claims:
 - CLM-LHP-001
 - CLM-LHP-002
 - CLM-LHP-003
+- CLM-NOVSU-001
+- CLM-PRESSURE-008
 
 Strategic use:
-expert/model/failure-analysis reserve only.
+expert/model/failure-analysis reserve plus active-capillary / orientation-tolerance watch; not a standalone device-investment thesis.
+
+strongest_baseline:
+China/current global miniaturized heat-pipe and LHP engineering plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
 
 Promotion gate:
-specific non-public control point materially improves phone-scale topology beyond domestic capability.
+a specific non-public control point from the Russian knowledge / active-capillary stack materially improves phone-scale topology or orientation robustness beyond strong domestic/global capability.
 
 Do not:
 fund standalone LHP PoC solely on foundational reputation.
