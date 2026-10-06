@@ -19,6 +19,7 @@ Russia uses:
 
 - PENDING_SCAN
 - SCANNED_NO_STRONG_SIGNAL
+- WEAK_SIGNAL
 - CANDIDATE_FOUND
 - EVIDENCE_QUALIFIED
 - CANONICAL_ONBOARDED
@@ -43,10 +44,10 @@ Russia uses:
 | 14 | RUDN University | SCANNED_NO_STRONG_SIGNAL | Two-pass institution/lab scan did not identify a sustained electronics thermal-management line. A highly relevant nanosatellite processor/LHP paper found in the RUDN journal was authored by BMSTU researchers and must not be attributed to RUDN. | Reopen only on direct RUDN primary evidence. |
 | 15 | ITMO University | CANONICAL_ONBOARDED | Vladimir Korablev: current semiconductor-device capillary cooling, electronics thermal analysis and cooling-system engineering; 2025 microprocessor-cooling dissertation activity confirms continuity. |
 | 16 | Novosibirsk State University | CANONICAL_ONBOARDED | Two-phase diagnostics bridge represented; linked to Siberian thermal research ecosystem. |
-| 17 | MISIS University | CANDIDATE_FOUND | 2025 thermoelectric materials for electronics temperature-control systems and high-thermal-conductivity materials; currently materials-side rather than a cooling-device program. | Qualify current PI and device-level relevance. |
+| 17 | MISIS University | CANONICAL_ONBOARDED | Vladimir V. Khovaylo and the current MISIS thermoelectric / solid-state thermal-control materials program are represented canonically. | Keep explicitly materials-side; do not infer smartphone cooler readiness. |
 | 18 | Plekhanov Russian University of Economics | SCANNED_NO_STRONG_SIGNAL | Bounded current scan found no engineering electronics-thermal-management research program relevant to this slice. |
 | 19 | Tomsk State University | CANONICAL_ONBOARDED | Nikita Gibanov / Nadezhda Bondareva: active/passive electronics cooling, channel/porous structures, PCM thermal control; official applicability explicitly includes phones and compact electronics. | Continue evidence enrichment only. |
-| 20 | Kazan Federal University | CANDIDATE_FOUND | 2024 KFU Naberezhnye Chelny researchers studied temperature fields in power-electronics cooling radiators; broader heat-engineering capability exists. | Qualify continuity, responsible group and relevance beyond conventional radiator cooling. |
+| 20 | Kazan Federal University | WEAK_SIGNAL | A real 2024 Naberezhnye Chelny power-electronics radiator temperature-field paper was verified, but bounded follow-up did not establish a sustained current compact-electronics cooling program. | Keep outside the canonical graph unless repeat work / a dedicated current group appears. |
 
 ## Domain-relevant exceptions already in project
 
@@ -61,8 +62,4 @@ Russia uses:
 
 ## Completion rule
 
-Russia RAEX Top-20 baseline coverage is complete: all 20 rows now have explicit classifications. Broader Russia ecosystem coverage is not complete until:
-- all RAEX Top 20 rows have an explicit scan result;
-- all positive signals are qualified or rejected;
-- relevant non-university RAS institutes remain included;
-- no country-level conclusion is inferred from rank or map density alone.
+Russia RAEX Top-20 baseline coverage is complete and candidate qualification is closed for this phase: all 20 rows now have explicit final classifications. Broader Russia ecosystem anti-omission coverage is tracked in russia-thermal-ecosystem-scan.md; rank/map density is never used as a country-level capability conclusion.
