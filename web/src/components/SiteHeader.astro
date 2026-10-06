@@ -1,0 +1,61 @@
+---
+const items = [
+  { label: 'Overview', href: '/' },
+  { label: 'Partners', href: '/partners' },
+  { label: 'Landscape', href: '/landscape' },
+  { label: 'Evidence', href: '/evidence' }
+];
+---
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">Russia-Thermal</a>
+    <nav aria-label="Primary navigation">
+      {items.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--line);
+    background: rgb(247 248 250 / 0.92);
+    backdrop-filter: blur(12px);
+  }
+
+  .inner {
+    width: min(calc(100% - 2rem), var(--content-max));
+    margin: 0 auto;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .brand {
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  nav a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    color: var(--text);
+  }
+</style>

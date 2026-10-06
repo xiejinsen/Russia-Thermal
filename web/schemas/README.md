@@ -1,9 +1,22 @@
 # Schemas
 
-Future home for normalized web-data schemas.
+status: IMPLEMENTED_W1
 
-Rules:
+This directory defines the normalized web-data contracts produced by the canonical exporter.
+
+## Current schemas
+
+- `actor.schema.json`
+- `capability.schema.json`
+- `claim.schema.json`
+- `decision.schema.json`
+- `direction.schema.json`
+- `envelope.schema.json`
+- `evidence.schema.json`
+
+## Rules
+
 - schemas describe generated web data, not canonical Markdown syntax;
-- version schemas explicitly;
-- breaking changes require migration;
-- validation failure blocks build.
+- schema validation failure blocks the generated-data pipeline;
+- breaking contract changes require coordinated exporter and consumer migration;
+- frontend components do not redefine these domain contracts locally.

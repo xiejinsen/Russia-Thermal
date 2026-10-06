@@ -1,12 +1,12 @@
 # Russia-Thermal Web Report
 
-status: DESIGN_ONLY
+status: W2_DESIGN_SYSTEM_SKELETON
 authority: DERIVED_PRESENTATION_LAYER
 date: 2026-10-06
 
 ## Purpose
 
-This directory owns the future interactive web presentation system for Russia-Thermal.
+This directory owns the interactive web presentation system for Russia-Thermal.
 
 It does **not** own research truth.
 
@@ -18,64 +18,42 @@ Canonical authority remains outside `web/`:
 - `05-directions/`
 - `07-decisions/`
 
-## Design goal
+## Architecture
 
-Build a leadership-readable, evidence-drillable website that can present:
-- Russia vs China capability landscape;
-- institutions / labs / key people;
-- papers / patents / official evidence;
-- collaboration portfolio;
-- Keep / Reserve / Watch / Kill decisions;
-- frontier-watch venues.
+The web layer follows:
 
-The web layer must remain modular enough that a local content/UI change has a small, predictable blast radius.
+`Canonical objects -> adapters -> normalized generated data -> view models -> UI components -> pages`
 
-## Chosen architectural direction
+The frontend must never parse canonical Markdown directly.
 
-**Static-first Astro architecture** with:
-- generated normalized data;
-- typed content/data contracts;
-- mostly static HTML;
-- isolated interactive islands only where needed;
+## Current state
+
+### W0 — architecture and information design
+Complete.
+
+### W1 — exporter + schemas
+Complete.
+- deterministic canonical exporter: `web/adapters/export_web.py`
+- normalized data contracts: `web/schemas/*.schema.json`
+- generated-data validation workflow: `.github/workflows/web-data-check.yml`
+
+### W2 — design-system skeleton
+Started on `main`.
+The baseline includes:
+- Astro project shell;
 - design tokens;
-- reusable components;
-- page-specific view models;
-- no manually duplicated canonical research facts.
+- global styles;
+- base layout;
+- navigation/header;
+- primitive badge component;
+- fixture-only index page.
 
-Why:
-- the product is content-heavy and interaction-light;
-- static output is sufficient for Phase 1;
-- Astro content collections support structured/validated content;
-- Islands isolate interactive widgets rather than hydrating the entire site.
+No canonical research facts are manually duplicated in fixture UI.
 
-## Directory map
+## Implementation boundary
 
-```
-web/
-  README.md
-  docs/
-    architecture.md
-    information-architecture.md
-    data-contracts.md
-    component-system.md
-    design-tokens.md
-    change-isolation.md
-    content-image-policy.md
-    accessibility-performance.md
-    roadmap.md
-  schemas/
-    README.md
-  adapters/
-    README.md
-  view-models/
-    README.md
-  src/
-    README.md
-  tests/
-    README.md
-```
-
-Implementation code is intentionally deferred until the design contracts are approved.
+The W2 shell is intentionally presentation-only.
+Real feature pages must consume page-specific view models built from W1 normalized data.
 
 ## Reading order
 
@@ -102,9 +80,6 @@ Implementation code is intentionally deferred until the design contracts are app
 9. Images are references with provenance, not copied ad hoc into page code.
 10. Build must fail on broken references/schema violations.
 
-## Current state
+## W2 next gate
 
-**Design only. No web implementation has started.**
-
-Next gate:
-approve these contracts, then build exporter + data schemas before visual frontend work.
+Stabilize primitives, card contracts, layout/navigation and fixture states before building real Overview / Partner Portfolio pages.

@@ -33,6 +33,7 @@ Current canonical directories:
 - `reports/` — derived leadership-facing summaries; never canonical authority
 - `tools/` — deterministic repository generator/health checker
 - `views/` — generated human-readable management views
+- `web/` — derived modular presentation system
 
 ## Human presentation model
 
@@ -78,7 +79,12 @@ Canonical references and generated views are checked by:
 
 `python tools/v2repo.py --check`
 
-GitHub Actions runs the same health check on `main` and `dev`.
+GitHub Actions runs the health check on the authoritative `main` branch.
+
+## Branch policy
+
+`main` is the single authoritative working branch.
+Historical migration branches are not part of the reading or research workflow.
 
 ## Legacy V1
 

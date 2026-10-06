@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Badge from '../components/primitives/Badge.astro';
+
+const fixtures = [
+  {
+    badge: 'Strategic candidate',
+    tone: 'positive',
+    title: 'Partner portfolio',
+    body: 'Fixture-only card proving hierarchy, spacing and decision emphasis.'
+  },
+  {
+    badge: 'Evidence',
+    tone: 'accent',
+    title: 'Evidence drill-down',
+    body: 'Presentation components will receive normalized view-model props, not canonical Markdown.'
+  },
+  {
+    badge: 'Guardrail',
+    tone: 'warning',
+    title: 'Decision integrity',
+    body: 'Killed or narrowed theses remain visible so the website cannot silently revive rejected narratives.'
+  }
+] as const;
+---
+
+<BaseLayout title="Russia-Thermal — Web System Fixture">
+  <SiteHeader slot="header" />
+
+  <section class="hero">
+    <p class="eyebrow">W2 Design-System Fixture</p>
+    <h1>Evidence first. Presentation second.</h1>
+    <p>
+      This page validates the visual shell only. It intentionally contains no copied canonical research facts.
+      Real pages will consume normalized data through page-specific view models.
+    </p>
+  </section>
+
+  <section class="grid" aria-label="Design-system fixture cards">
+    {fixtures.map((item) => (
+      <article class="card">
+        <Badge tone={item.tone}>{item.badge}</Badge>
+        <h2>{item.title}</h2>
+        <p>{item.body}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

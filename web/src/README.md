@@ -1,20 +1,16 @@
 # Web Source
 
-Future Astro frontend implementation.
+status: W2_SKELETON
 
-Expected structure later:
+This directory now contains the Astro presentation shell.
 
-```
-src/
-  components/
-    primitives/
-    domain/
-    cards/
-    compounds/
-  features/
-  layouts/
-  pages/
-  styles/
-```
+## Boundaries
 
-Do not implement domain parsing here.
+- `pages/` composes view models and UI components.
+- `layouts/` owns page chrome.
+- `components/` owns reusable presentation components.
+- `styles/tokens.css` owns design constants.
+- `styles/global.css` owns global baseline styles.
+
+Current pages are fixture-only.
+No file in `src/` may parse canonical repository Markdown directly.
