@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W2 Evidence Explorer + Russia-vs-China landscape implemented / repository health + Astro check/build PASS
-- next: add evidence filtering/search interaction and decide whether comparator categories need a dedicated canonical object before W3 visual enrichment/deployment
+- phase: web W2 Evidence Explorer filtering implemented / comparator taxonomy ADR accepted / repository health + Astro check/build PASS
+- next: begin W3 visual enrichment and deployment preparation; add Decisions/Frontier Watch pages before polishing leadership overview
 
 ## Directions
 
