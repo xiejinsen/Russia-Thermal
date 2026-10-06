@@ -13,7 +13,7 @@ Direct fact:
 National Research University Moscow Power Engineering Institute is ranked #1401+ in QS World University Rankings 2027.
 
 Complementary domestic context:
-RAEX-100 2026 ranks MPEI #24 among Russian universities.
+see OFFICIAL-RANK-RAEX-2026.
 
 Boundary:
 ranking is institutional context only; it does not establish thermal-management capability or collaboration quality.
