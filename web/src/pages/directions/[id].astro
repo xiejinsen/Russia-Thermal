@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { buildDirectionPageVM, directionIds } from '../../view-models/builders';
+
+export function getStaticPaths() {
+  return directionIds().map((id) => ({ params: { id } }));
+}
+
+const id = Astro.params.id!;
+const vm = buildDirectionPageVM(id);
+if (!vm) throw new Error(`Unknown direction: ${id}`);
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+<BaseLayout title={`Russia-Thermal — ${vm.direction.title}`} description={vm.direction.collaborationFocus ?? vm.direction.problem}>
+  <SiteHeader slot="header" />
+
+  <section class="direction-hero">
+    <div>
+      <p class="eyebrow">Direction detail · {vm.direction.lane.label}</p>
+      <h1>{vm.direction.title}</h1>
+      <div class="recommendation">{vm.direction.recommendation}</div>
+      {vm.direction.collaborationFocus && <p class="lead">{vm.direction.collaborationFocus}</p>}
+    </div>
+    <aside class="signal">
+      <div><span>PHONE MATURITY</span><b>{vm.direction.phoneTransferMaturity}</b></div>
+      <div><span>DIFFERENTIATION</span><b>{vm.direction.differentiationConfidence}</b></div>
+      <div><span>CLAIMS</span><b>{vm.claims.length}</b></div>
+      <div><span>EVIDENCE</span><b>{vm.evidence.length}</b></div>
+    </aside>
+  </section>
+
+  <section class="pyramid">
+    {vm.direction.problem && <article><span>01 · PROBLEM</span><h2>What problem are we trying to solve?</h2><p>{vm.direction.problem}</p></article>}
+    {vm.strongestBaseline && <article class="china"><span>02 · CHINA / GLOBAL BASELINE</span><h2>What is the strongest baseline we must beat?</h2><p>{vm.strongestBaseline}</p></article>}
+    {vm.direction.residualDifferentiation && <article class="russia"><span>03 · RUSSIA RESIDUAL</span><h2>Where Russian value may still survive</h2><p>{vm.direction.residualDifferentiation}</p></article>}
+    {vm.direction.ourControlBoundary && <article><span>04 · OUR CONTROL BOUNDARY</span><h2>What remains under internal control?</h2><p>{vm.direction.ourControlBoundary}</p></article>}
+    {vm.direction.nextQuestion && <article class="gate"><span>05 · NEXT QUESTION</span><h2>What must be answered next?</h2><p>{vm.direction.nextQuestion}</p></article>}
+    {vm.direction.nextGate && <article class="gate"><span>06 · PROMOTION GATE</span><h2>What evidence would justify promotion?</h2><p>{vm.direction.nextGate}</p></article>}
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><span>ACTORS</span><h2>Institutions and scholars behind this direction</h2></div><p>These relations come from Capability ownership and key-person links.</p></div>
+    <div class="actor-grid">
+      <div class="actor-column">
+        <h3>Institutions / labs</h3>
+        {vm.institutions.map((inst)=><a href={href(inst.href ?? `/institutions/${inst.id}`)}><b>{inst.name}</b><span>{inst.summary}</span></a>)}
+      </div>
+      <div class="actor-column">
+        <h3>Key scholars</h3>
+        {vm.scholars.map((scholar)=><a href={href(scholar.href ?? `/scholars/${scholar.id}`)}><b>{scholar.name}</b><span>{scholar.affiliation}</span></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><span>CAPABILITIES</span><h2>External technical abilities linked to this direction</h2></div></div>
+    <div class="cap-grid">
+      {vm.capabilities.map((cap)=><article><b>{cap.statement}</b><dl><div><dt>Maturity</dt><dd>{cap.maturity}</dd></div><div><dt>Evidence</dt><dd>{cap.evidenceConfidence}</dd></div><div><dt>Target fit</dt><dd>{cap.targetFit}</dd></div></dl></article>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><span>CLAIMS</span><h2>Claims that support or pressure this direction</h2></div><p>Claims are the bridge between strategic judgment and primary evidence.</p></div>
+    <div class="claim-list">
+      {vm.claims.map((claim)=><a href={href(claim.href)}><div><span>{claim.status} · {claim.confidence}</span><b>{claim.proposition}</b></div><strong>Open claim →</strong></a>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><span>EVIDENCE</span><h2>Primary evidence behind the direction</h2></div><p>{vm.evidence.length} linked source records.</p></div>
+    <div class="evidence-list">
+      {vm.evidence.map((item)=><article>
+        <div><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.venue ? ` · ${item.venue}` : ''}</span><h3>{item.title}</h3>{item.findings[0] && <p>{item.findings[0]}</p>}</div>
+        <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a>
+      </article>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><span>DECISION HISTORY</span><h2>How this direction changed state</h2></div></div>
+    {vm.decisions.length ? <div class="decision-list">
+      {vm.decisions.map((event)=><article><div><span>{event.date ?? 'undated'} · {event.eventType.label}</span><b>{event.previousState ?? '—'} → {event.newState}</b></div>{event.rationale && <p>{event.rationale}</p>}{event.reopenCondition && <small>Reopen: {event.reopenCondition}</small>}</article>)}
+    </div> : <p class="empty">No Direction-specific decision event is currently recorded.</p>}
+  </section>
+
+  <style>
+    .direction-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.55fr);gap:24px;padding:30px;border:1px solid #cfe1ee;border-radius:18px;background:#fff;box-shadow:0 12px 34px rgba(42,96,140,.07)}
+    .direction-hero h1{max-width:900px;margin:7px 0 12px;font-size:38px;line-height:1.05;letter-spacing:-.04em}
+    .recommendation{display:inline-block;padding:7px 10px;border-radius:8px;background:#eef8f4;color:#087a66;font-size:12px;font-weight:850}
+    .lead{max-width:900px;color:#486478;font-size:16px;line-height:1.65}
+    .signal{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid #dbe8f1;border-radius:12px;overflow:hidden;background:#dbe8f1}
+    .signal div{display:grid;gap:4px;padding:15px;background:#f5faff}.signal span{font-size:9px;color:#657f92;font-weight:850}.signal b{font-size:15px;color:#16496d}
+    .pyramid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+    .pyramid article{padding:20px;border:1px solid #d4e4ef;border-radius:14px;background:#fff}.pyramid .china{background:#edf6ff}.pyramid .russia{background:#eef9f6}.pyramid .gate{border-left:4px solid #5ba4dd}
+    .pyramid span,.section-head span{font-size:10px;font-weight:850;letter-spacing:.08em;color:#0b67b2}.pyramid h2{font-size:17px;margin:6px 0 9px}.pyramid p{margin:0;color:#496578;line-height:1.62;font-size:13px}
+    .section{margin-top:20px;border:1px solid #cfe1ee;border-radius:16px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:30px;padding:18px 20px;border-bottom:1px solid #dce8f1;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:19px}.section-head p{max-width:480px;margin:0;color:#60798c;font-size:12px}
+    .actor-grid{display:grid;grid-template-columns:1fr 1fr}.actor-column{padding:18px}.actor-column:first-child{border-right:1px solid #e0ebf3}.actor-column h3{font-size:13px;color:#526d82}.actor-column a{display:grid;gap:4px;padding:12px 0;border-top:1px solid #edf2f6;text-decoration:none}.actor-column a b{font-size:13px}.actor-column a span{color:#637c8f;font-size:11px;line-height:1.45}
+    .cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}.cap-grid article{padding:16px;border:1px solid #d9e7f1;border-radius:11px;background:white}.cap-grid article>b{font-size:13px;line-height:1.5}.cap-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0 0}.cap-grid dt{font-size:9px;color:#6b8192;text-transform:uppercase}.cap-grid dd{margin:2px 0 0;font-size:11px;font-weight:800}
+    .claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 20px;border-bottom:1px solid #e4edf4;text-decoration:none}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:#0b67b2;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.45}.claim-list strong{white-space:nowrap;font-size:11px;color:#0b67b2}
+    .evidence-list article{display:flex;justify-content:space-between;gap:24px;padding:17px 20px;border-bottom:1px solid #e4edf4}.evidence-list span{font-size:9px;color:#687f90}.evidence-list h3{margin:5px 0 7px;font-size:14px}.evidence-list p{max-width:900px;margin:0;color:#5b7487;font-size:12px;line-height:1.55}.evidence-list a{white-space:nowrap;font-size:11px;color:#0b67b2;font-weight:800}
+    .decision-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:22px;padding:16px 20px;border-bottom:1px solid #e4edf4}.decision-list article>div{display:grid;gap:4px}.decision-list span{font-size:9px;color:#657e91}.decision-list b{font-size:12px}.decision-list p{margin:0;color:#526d80;font-size:12px;line-height:1.55}.decision-list small{grid-column:2;color:#7a6a53}.empty{padding:18px 20px;color:#6b8191}
+    @media(max-width:800px){.direction-hero,.pyramid,.actor-grid,.cap-grid{grid-template-columns:1fr}.actor-column:first-child{border-right:0;border-bottom:1px solid #e0ebf3}.section-head,.evidence-list article{flex-direction:column}.decision-list article{grid-template-columns:1fr}.decision-list small{grid-column:1}}
+  </style>
+</BaseLayout>
