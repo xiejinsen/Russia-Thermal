@@ -22,7 +22,9 @@ import type {
   ResearchMapVM,
   ResearchMapNodeVM,
   DirectionExplorerVM,
-  DirectionPageVM
+  DirectionPageVM,
+  ClaimExplorerVM,
+  ClaimPageVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -932,5 +934,104 @@ export function buildDirectionPageVM(id: string): DirectionPageVM | null {
     })),
     evidence: linkedEvidence,
     decisions: directionDecisions
+  };
+}
+
+
+export function claimIds(): string[] {
+  return claims.map((claim) => claim.id);
+}
+
+export function buildClaimExplorerVM(): ClaimExplorerVM {
+  return {
+    title: 'Claims',
+    summary:
+      'Claims are the explicit propositions connecting primary evidence to capability and strategic Direction judgments.',
+    records: [...claims]
+      .sort((a, b) => a.id.localeCompare(b.id))
+      .map((claim) => {
+        const linkedCapabilities = capabilities.filter((cap) => cap.claimIds.includes(claim.id));
+        const linkedCapabilityIds = new Set(linkedCapabilities.map((cap) => cap.id));
+        const linkedDirections = sortedDirections.filter(
+          (direction) =>
+            direction.claimIds.includes(claim.id) ||
+            direction.capabilityIds.some((id) => linkedCapabilityIds.has(id))
+        );
+        return {
+          id: claim.id,
+          proposition: claim.proposition,
+          status: humanize(claim.status),
+          confidence: humanize(claim.confidence),
+          supportingCount: claim.supportingSourceIds.length,
+          contradictingCount: claim.contradictingSourceIds.length,
+          directionCount: linkedDirections.length,
+          href: `/claims/${claim.id}`
+        };
+      })
+  };
+}
+
+export function buildClaimPageVM(id: string): ClaimPageVM | null {
+  const claim = claimById.get(id);
+  if (!claim) return null;
+
+  const linkedCapabilities = capabilities.filter((capability) => capability.claimIds.includes(claim.id));
+  const linkedCapabilityIds = new Set(linkedCapabilities.map((capability) => capability.id));
+  const linkedDirections = sortedDirections.filter(
+    (direction) =>
+      direction.claimIds.includes(claim.id) ||
+      direction.capabilityIds.some((capabilityId) => linkedCapabilityIds.has(capabilityId))
+  );
+
+  const institutionMap = new Map<string, CapabilityRecord[]>();
+  const peopleMap = new Map<string, ActorRecord>();
+  for (const capability of linkedCapabilities) {
+    const current = institutionMap.get(capability.actorId) ?? [];
+    current.push(capability);
+    institutionMap.set(capability.actorId, current);
+    for (const person of peopleForCapability(capability)) peopleMap.set(person.id, person);
+  }
+
+  const supportingEvidence = claim.supportingSourceIds
+    .map((sourceId) => evidenceById.get(sourceId))
+    .filter((item): item is EvidenceRecord => Boolean(item))
+    .map(evidenceCard);
+
+  const contradictingEvidence = claim.contradictingSourceIds
+    .map((sourceId) => evidenceById.get(sourceId))
+    .filter((item): item is EvidenceRecord => Boolean(item))
+    .map(evidenceCard);
+
+  const linkedDecisions = [...decisions]
+    .filter((event) => event.triggerClaimIds.includes(claim.id))
+    .sort((a, b) => (b.effectiveDate ?? '').localeCompare(a.effectiveDate ?? ''))
+    .map((event) => ({
+      id: event.id,
+      date: event.effectiveDate ?? undefined,
+      eventType: { label: humanize(event.eventType), tone: decisionTone(event.eventType) },
+      subject: event.subjectId,
+      newState: event.newState,
+      rationale: event.rationale ?? undefined
+    }));
+
+  return {
+    id: claim.id,
+    proposition: claim.proposition,
+    status: humanize(claim.status),
+    confidence: humanize(claim.confidence),
+    boundary: claim.boundary ?? undefined,
+    supportingEvidence,
+    contradictingEvidence,
+    capabilities: linkedCapabilities.map(capabilityDetail),
+    institutions: [...institutionMap.entries()]
+      .map(([actorId, caps]) => {
+        const actor = actorById.get(actorId);
+        return actor ? institutionCard(actor, caps) : null;
+      })
+      .filter((item): item is InstitutionCardVM => Boolean(item)),
+    scholars: [...peopleMap.values()]
+      .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)),
+    directions: linkedDirections.map(directionCard),
+    decisions: linkedDecisions
   };
 }
