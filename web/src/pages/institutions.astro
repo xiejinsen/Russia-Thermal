@@ -2,24 +2,170 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import { actors, capabilities, directions, priorities } from '../data/load-normalized';
 import { buildInstitutionsCollectionVM } from '../view-models/builders';
+import { directionTitle, humanize } from '../view-models/helpers';
 
 const vm = buildInstitutionsCollectionVM();
+const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+
+function descendantIds(rootId: string) {
+  const ids = new Set<string>([rootId]);
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const actor of actors) {
+      if (actor.parentId && ids.has(actor.parentId) && !ids.has(actor.id)) {
+        ids.add(actor.id);
+        changed = true;
+      }
+    }
+  }
+  return ids;
+}
+
+const records = vm.records.map((model) => {
+  const actor = actorById.get(model.id);
+  const scopedIds = descendantIds(model.id);
+  const scopedCapabilities = capabilities.filter((capability) => scopedIds.has(capability.actorId));
+  const capabilityIds = new Set(scopedCapabilities.map((capability) => capability.id));
+  const linkedDirections = directions.filter((direction) =>
+    direction.capabilityIds.some((id) => capabilityIds.has(id))
+  );
+  const priorityRanks = priorities
+    .filter((priority) => priority.targetActorIds.some((id) => scopedIds.has(id)))
+    .map((priority) => priority.rank);
+  const dispositions = [...new Set(scopedCapabilities.map((capability) => capability.portfolioDisposition))];
+  const relations = [
+    ...(priorityRanks.length ? ['PRIORITY'] : []),
+    ...dispositions,
+    ...(!scopedCapabilities.length ? ['NO_CAPABILITY'] : [])
+  ];
+  const parent = actor?.parentId ? actorById.get(actor.parentId) : undefined;
+  const peopleNames = [...new Set([
+    ...scopedCapabilities.flatMap((capability) => capability.keyPeopleIds),
+    ...actors.filter((person) => person.type === 'PERSON' && person.parentId && scopedIds.has(person.parentId)).map((person) => person.id)
+  ])]
+    .map((id) => actorById.get(id)?.name)
+    .filter((value): value is string => Boolean(value));
+
+  return {
+    model,
+    actor,
+    parent,
+    priorityRanks,
+    dispositions,
+    relations,
+    directionIds: linkedDirections.map((direction) => direction.id),
+    search: [
+      model.name,
+      model.summary,
+      actor?.city ?? '',
+      actor?.region ?? '',
+      parent?.name ?? '',
+      ...peopleNames,
+      ...scopedCapabilities.map((capability) => capability.statement),
+      ...linkedDirections.map((direction) => directionTitle(direction.id))
+    ].join(' ')
+  };
+}).sort((a, b) => {
+  const country = (a.actor?.country ?? '').localeCompare(b.actor?.country ?? '');
+  if (country) return country;
+  const ak = a.actor?.type === 'ORGANIZATION' ? 0 : 1;
+  const bk = b.actor?.type === 'ORGANIZATION' ? 0 : 1;
+  return ak - bk || (a.parent?.name ?? a.model.name).localeCompare(b.parent?.name ?? b.model.name) || a.model.name.localeCompare(b.model.name);
+});
+
+const countryValues = [...new Set(records.map((record) => record.actor?.country).filter((value): value is string => Boolean(value)))].sort();
+const relationOptions = [
+  { value: 'PRIORITY', label: 'P1 / P2 / P3 related' },
+  { value: 'DIRECTION_LINKED', label: 'Direction-linked' },
+  { value: 'SUPPORT_ONLY', label: 'Russia support-only' },
+  { value: 'COMPARATOR_ONLY', label: 'China comparator-only' },
+  { value: 'BACKGROUND_KILLED_THESIS', label: 'Background / killed thesis' },
+  { value: 'NO_CAPABILITY', label: 'Actor only / no capability' }
+];
+const directionOptions = directions
+  .map((direction) => ({ value: direction.id, label: directionTitle(direction.id) }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <BaseLayout title="Russia-Thermal — Institutions & Labs" description={vm.summary}>
   <SiteHeader slot="header" />
-  <section class="collection-hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>{vm.title}</h1>
-    <p>{vm.summary}</p>
-    <div class="count">{vm.records.length} records</div>
-  </section>
-  <section class="collection-grid">
-    {vm.records.map((model) => <InstitutionCard model={model} />)}
-  </section>
+
+  <div data-explorer-root>
+    <section class="collection-hero">
+      <p class="eyebrow">Actor explorer</p>
+      <h1>Institutions & labs</h1>
+      <p>
+        Browse the full canonical organization graph — not only promoted partners.
+        Filters separate strategic, support-only, comparator-only and actor-only research nodes while preserving organization → lab hierarchy.
+      </p>
+      <div class="count">{records.length} records</div>
+    </section>
+
+    <ExplorerToolbar
+      total={records.length}
+      searchPlaceholder="Search institution, lab, person, capability or direction…"
+      filters={[
+        {
+          key: 'country',
+          label: 'Country',
+          options: countryValues.map((value) => ({ value, label: value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value }))
+        },
+        {
+          key: 'kind',
+          label: 'Kind',
+          options: [
+            { value: 'ORGANIZATION', label: 'Organization' },
+            { value: 'LAB', label: 'Lab / team' }
+          ]
+        },
+        { key: 'relation', label: 'Research role', options: relationOptions },
+        { key: 'direction', label: 'Direction', options: directionOptions }
+      ]}
+    />
+
+    <section class="collection-grid" aria-label="Institution and lab records">
+      {records.map((record) => (
+        <div
+          class="record"
+          data-explorer-record
+          data-country={record.actor?.country ?? ''}
+          data-kind={record.actor?.type ?? ''}
+          data-relation={record.relations.join('|')}
+          data-direction={record.directionIds.join('|')}
+          data-search={record.search}
+        >
+          <div class="record-context">
+            <div>
+              <span>{record.actor?.type === 'LAB' ? 'LAB / TEAM' : 'ORGANIZATION'}</span>
+              {record.parent && <small>Parent: {record.parent.name}</small>}
+            </div>
+            <div class="tags">
+              {record.priorityRanks.map((rank) => <b>{rank}</b>)}
+              {record.dispositions.map((value) => <em>{humanize(value)}</em>)}
+              {!record.dispositions.length && <em>Actor only</em>}
+            </div>
+          </div>
+          <InstitutionCard model={record.model} />
+        </div>
+      ))}
+    </section>
+  </div>
 </BaseLayout>
 
 <style>
-  .collection-hero{display:grid;gap:var(--space-4);max-width:60rem}.collection-hero h1{margin:0;font-size:clamp(1.55rem,2.4vw,2.15rem);letter-spacing:-.05em;line-height:1.08}.collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:68ch}.count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}.collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--space-4);margin-top:2.5rem}
+  .collection-hero{display:grid;gap:var(--space-4);max-width:68rem}
+  .collection-hero h1{margin:0;font-size:clamp(1.7rem,2.7vw,2.35rem);letter-spacing:-.05em;line-height:1.08}
+  .collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:78ch;line-height:1.65}
+  .count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
+  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,23rem),1fr));gap:var(--space-4);margin-top:var(--space-6)}
+  .record{display:grid;grid-template-rows:auto 1fr;min-width:0}
+  .record-context{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0;background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
+  .record-context>div:first-child{display:grid;gap:2px}.record-context span{color:var(--accent-vivid);font-size:9px;font-weight:900;letter-spacing:.06em}.record-context small{color:var(--text-muted);font-size:10px}
+  .tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-content:flex-start}.tags b,.tags em{padding:3px 6px;border-radius:999px;font-size:8px;font-style:normal;font-weight:850}.tags b{background:#e6f5ee;color:#087a66}.tags em{background:white;color:#506d82;border:1px solid #dbe7ef}
+  .record :global(.entity-card){border-top-left-radius:0;border-top-right-radius:0}
+  [hidden]{display:none!important}
 </style>
