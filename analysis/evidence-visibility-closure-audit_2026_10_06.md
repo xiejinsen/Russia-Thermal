@@ -1,6 +1,6 @@
 # Evidence Visibility Closure Audit — 2026-10-06
 
-status: AUDIT_COMPLETE_REMEDIATION_REQUIRED
+status: PASSED_WAVE0_VISIBILITY_CLOSURE
 scope: SOURCE -> CLAIM -> CAPABILITY / DIRECTION / DECISION / DISPOSITION closure after Russia/China coverage expansion
 baseline_branch: main
 baseline_head_at_start: 801e6cb180cdabbd4f8362863145688cb7020f67
@@ -239,5 +239,14 @@ Wave 0 is complete only when:
 - web export carries the new role/disposition fields;
 - repository health passes.
 
+Closure update:
+- canonical visibility registry created under `00-project/visibility-dispositions/`;
+- six non-Claim Sources now inherit explicit usage roles;
+- four source-less evidence-gap Claims and eight Claim-only objects now inherit explicit decision roles;
+- all 49 Capabilities now inherit explicit portfolio dispositions;
+- web export now carries `usageRole`, `decisionRole`, and `portfolioDisposition`;
+- Web Data Check enforces semantic-orphan, downstream-Claim, and capability-disposition closure;
+- commit `84f190a7`: Web Data Check PASS, Web UI Check PASS, V2.1 Repository Health PASS.
+
 Current status:
-**AUDIT COMPLETE; CANONICAL DISPOSITION REMEDIATION IS NEXT.**
+**WAVE 0 PASSED. NEXT: implement the disposition-aware web research-coverage surfaces without changing the frozen research thesis.**
