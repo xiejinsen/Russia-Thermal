@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import FrontierVenueCard from '../components/FrontierVenueCard.astro';
+import { buildFrontierWatchVM } from '../view-models/builders';
+const vm = buildFrontierWatchVM();
+---
+<BaseLayout title="Russia-Thermal — Frontier Watch" description={vm.summary}>
+<SiteHeader slot="header" />
+<section class="hero"><p class="eyebrow">{vm.eyebrow}</p><h1>{vm.title}</h1><p>{vm.summary}</p></section>
+<aside class="policy">{vm.policyNote}</aside>
+<section class="stack">{vm.venues.map((model) => <FrontierVenueCard model={model} />)}</section>
+</BaseLayout>
+<style>.policy{margin-top:var(--space-8);padding:var(--space-5,1.25rem);border-left:3px solid var(--accent);background:var(--surface-muted);color:var(--text-muted)}.stack{display:grid;gap:var(--space-6);margin-top:var(--space-8)}</style>
