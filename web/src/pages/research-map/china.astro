@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
 const base=import.meta.env.BASE_URL;
 const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
 ---
 <BaseLayout title="Russia-Thermal — China Research Map">
-  <main class="placeholder">
+  <SiteHeader slot="header" />
+  <section class="placeholder">
     <p>RESEARCH MAPS · CHINA</p>
     <h1>China comparator map is the next bounded enrichment pass.</h1>
     <p class="summary">The repository already contains China comparator evidence, but the institution / scholar Actor graph is not yet symmetric with Russia. We will not fake that map in presentation code.</p>
@@ -18,9 +20,9 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
       </ol>
     </div>
     <a href={href('/research-map/russia')}>Open Russia Research Map →</a>
-  </main>
+  </section>
   <style>
     :global(body){background:linear-gradient(180deg,#f8fcff,#eef7fc);color:#17324d}
-    :global(body>main){width:auto;margin:0;padding:0}.placeholder{max-width:980px;margin:auto;padding:90px 24px}.placeholder>p:first-child{font-size:11px;color:#0b67b2;font-weight:850;letter-spacing:.1em}.placeholder h1{max-width:800px;font-size:45px;line-height:1.04;letter-spacing:-.04em}.summary{max-width:760px;color:#587185;font-size:17px;line-height:1.65}.next{margin:34px 0;padding:24px;border:1px solid #cfe1ee;border-radius:14px;background:white}.next ol{line-height:1.8;color:#4b667b}.placeholder>a{font-weight:800;color:#0b67b2}
+    .placeholder{max-width:980px;margin:auto;padding:30px 0 54px}.placeholder>p:first-child{font-size:11px;color:#0b67b2;font-weight:850;letter-spacing:.1em}.placeholder h1{max-width:800px;font-size:29px;line-height:1.15;letter-spacing:-.04em}.summary{max-width:760px;color:#587185;font-size:14px;line-height:1.6}.next{margin:34px 0;padding:24px;border:1px solid #cfe1ee;border-radius:14px;background:white}.next ol{line-height:1.8;color:#4b667b}.placeholder>a{font-weight:800;color:#0b67b2}
   </style>
 </BaseLayout>
