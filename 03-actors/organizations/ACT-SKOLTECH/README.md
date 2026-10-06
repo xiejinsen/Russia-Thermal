@@ -8,4 +8,7 @@ parent_actor_id: null
 verified_at: 2026-10-06
 
 Role:
-background thermal-material capability node.
+background thermal-material capability node; current joint additive-manufacturing / two-phase-device work with MPEI is also evidenced.
+
+Boundary:
+this does not establish a standalone mobile-thermal advantage.
