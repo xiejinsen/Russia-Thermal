@@ -10,13 +10,13 @@ Implication:
 Prioritize a small number of bounded collaboration packages where Russian mechanism depth, long-duration reliability knowledge, or selected process execution adds value beyond strong China/global device, manufacturing, reliability-QA, and smartphone-integration baselines.
 
 Coverage-closure refresh:
-The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe and UUST microchannel capabilities, but neither creates a new strategic Direction or changes P1/P2/P3. NovSU faces established global electroosmotic electronics-cooling / micro-heat-pipe prior art; UUST faces stronger and more integrated current China microchannel baselines. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
+The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe, UUST microchannel and MISIS solid-state thermal-material capabilities without changing P1/P2/P3. NovSU is absorbed into the existing LHP/active-capillary WATCH rather than promoted to a new Direction because established global electroosmotic electronics-cooling / micro-heat-pipe prior art removes principle-level uniqueness. UUST remains a supporting capability because stronger and more integrated current China microchannel baselines exist. MISIS confirms a real materials-side capability but does not reopen the killed broad Russian thermal-material advantage thesis. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
 
 Theory basis:
 - Collaboration value should come from an incremental mechanism, diagnostic, reliability, or process control point that survives comparator pressure; publication volume or historical prestige is insufficient.
 - Current public evidence refutes broad Russia-over-China superiority in generic dryout/rewetting, two-phase product reliability, and generic laser/biphilic phone-thermal capability.
 - Actor-specific residuals remain credible around Kutateladze mechanism-level crisis interpretation, MPEI multi-year capillary-state aging knowledge, and TPU-specific process execution after phone-relevant gates.
-- Newly discovered capability is not automatically a new opportunity: NovSU is retained for current electroosmotic/orientation-tolerance execution and UUST for current microchannel research capability, but comparator pressure blocks strategic promotion.
+- Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
 
 supporting_claims:
 - CLM-PAV-004
@@ -30,6 +30,7 @@ supporting_claims:
 - CLM-PRESSURE-008
 - CLM-NOVSU-001
 - CLM-UUST-001
+- CLM-MISIS-001
 - CLM-CN-PKU-001
 - CLM-CN-SEU-001
 - CLM-CN-SJTU-001
