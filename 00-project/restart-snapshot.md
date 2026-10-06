@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: final management synthesis V1 completed / leadership-reader review pending
-- next: review reports/final-management-synthesis.md for leadership readability, balance and omissions; revise to V2 before web/PPT implementation
+- phase: final management synthesis V2 completed / leadership decision narrative converged
+- next: user review final-management-synthesis V2; after approval freeze content master and proceed to web wireframe/MVP before deriving PPT
 
 ## Directions
 
