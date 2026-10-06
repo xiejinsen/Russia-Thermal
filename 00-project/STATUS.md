@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: Russia thermal ecosystem coverage audit / comparator enrichment
-next_action: finish Russia thermal ecosystem anti-omission scan, qualify remaining candidate institutions, then refresh Russia-vs-China synthesis before completing the shared China Research Map
+current_phase: Russia-vs-China synthesis refresh / residual-advantage convergence
+next_action: refresh Russia-vs-China synthesis using the closed Russia coverage ledger, pressure-test the new NovSU/UUST nodes against strong China/global baselines, then converge collaboration priorities and complete the shared China Research Map
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
