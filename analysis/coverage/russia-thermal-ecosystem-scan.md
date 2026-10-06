@@ -44,8 +44,8 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 | Novosibirsk State University | University | CANONICAL_ONBOARDED | Two-phase diagnostics bridge into the Novosibirsk thermophysics ecosystem. |
 | Tomsk State University | University | CANONICAL_ONBOARDED | Active/passive electronics cooling, porous/channel structures and PCM thermal control with explicit phone applicability. |
 | HSE University / MIEM | University | CANONICAL_ONBOARDED | Current 2026 electrothermal modeling of high-power electronic circuits/PCB overheating and cooling conditions; represented as thermal-reliability/modeling enabler rather than a cooling-device lab. |
-| ITMO University | University | CANDIDATE_FOUND | Thermal-physics education and historical/current electronics-cooling / microprocessor cooling work. Need current PI / lab continuity. |
-| MEPhI | University | CANDIDATE_FOUND | Boiling-onset diagnostics, transient pool boiling and channel heat-transfer regime prediction; mechanism/diagnostics relevance rather than phone hardware. |
+| ITMO University | University | CANONICAL_ONBOARDED | Current Vladimir Korablev line includes semiconductor-device capillary cooling, electronics thermal analysis and cooling-system engineering; 2025/2026 activity confirms continuity. |
+| MEPhI | University | CANONICAL_ONBOARDED | Pavel Struchalin: current boiling-onset diagnostics, transient pool boiling and channel heat-transfer regime prediction; represented as a failure/regime-diagnostics enabler. |
 | MISIS University | University | CANDIDATE_FOUND | 2025 thermoelectric material for electronic temperature-control systems plus high-thermal-conductivity alloys/materials; primarily materials-side comparator. |
 | Siberian Federal University | University | CANDIDATE_FOUND | Flat heat pipe systems for radio-electronic equipment / spacecraft electronics; need current continuity and current PI confirmation. |
 
