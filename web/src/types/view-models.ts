@@ -245,6 +245,8 @@ export interface DecisionsPageVM {
 export interface FrontierVenueVM {
   id: string;
   name: string;
+  kind: 'CONFERENCE' | 'JOURNAL';
+  officialUrl: string;
   purpose: string;
   evidenceCount: number;
   latestYear?: number;
