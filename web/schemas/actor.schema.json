@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActorRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "country",
+    "parentId",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ORGANIZATION",
+        "LAB",
+        "PERSON",
+        "COMPANY"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "country": {
+      "type": "string",
+      "minLength": 2
+    },
+    "parentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentRole": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "officialUrl": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publicContact": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "researchRelevance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
