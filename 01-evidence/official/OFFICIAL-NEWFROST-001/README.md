@@ -4,6 +4,7 @@ source_type: OFFICIAL
 record_state: CURRENT
 verification: VERIFIED_PRIMARY
 source_key: MPEI-DISSERTATION-757-2024
+primary_url: https://mpei.ru/diss/Lists/FilesDissertations/757-%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf
 published_year: 2024
 
 Source:
