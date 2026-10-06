@@ -182,7 +182,8 @@ def generate(db, check=False):
     )
     write("00-project/restart-snapshot.md", body, check, stale)
 
-    rows = []
+    active_rows = []
+    watch_rows = []
     for d in db["direction"]:
         caps_ids = as_list(d.get("candidate_capabilities"))
         caps_for_direction = [c for c in db["capability"] if c["id"] in caps_ids]
@@ -197,14 +198,22 @@ def generate(db, check=False):
             for person_id in as_list(cap.get("key_people")):
                 if person_id not in ("[]", "null") and person_id not in people_ids:
                     people_ids.append(person_id)
-        rows.append(
+        row = (
             f"| {d['id']} | {', '.join(actor_ids) if actor_ids else '-'} | {', '.join(people_ids) if people_ids else '-'} | {', '.join(capability_ids) if capability_ids else '-'} | "
             f"{field(d,'differentiation_confidence')} | {field(d,'phone_transfer_maturity')} | {field(d,'investment_lane')} |"
         )
+        if field(d, "investment_lane") in ("WATCH", "HOLD"):
+            watch_rows.append(row)
+        else:
+            active_rows.append(row)
+    header = (
+        "| Direction | Institution/Lab | Key people | Capability | Differentiation confidence | Phone maturity | Lane |\n"
+        "|---|---|---|---|---|---|---|\n"
+    )
     body = (
         "# Phase-1 Management Table\n\n"
-        "| Direction | Institution/Lab | Key people | Capability | Differentiation confidence | Phone maturity | Lane |\n"
-        "|---|---|---|---|---|---|---|\n" + "\n".join(rows)
+        "## Active / Strategic / Reserve\n\n" + header + "\n".join(active_rows) +
+        "\n\n## Watch / Hold\n\n" + header + ("\n".join(watch_rows) if watch_rows else "| - | - | - | - | - | - | - |")
     )
     write("views/russia-vs-china/phase1-management.md", body, check, stale)
 
