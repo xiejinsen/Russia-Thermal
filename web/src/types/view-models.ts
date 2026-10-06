@@ -193,6 +193,8 @@ export interface EvidenceExplorerVM {
 
 export interface LandscapeRowVM {
   direction: DirectionCardVM;
+  chinaLabel: string;
+  russiaLabel: string;
   chinaBaseline: string;
   russiaResidual: string;
   decision: string;
