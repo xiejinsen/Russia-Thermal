@@ -84,6 +84,33 @@ export interface EvidenceRecord {
   sourcePath: string;
 }
 
+export interface DeepReadQuestionRecord {
+  number: number;
+  title: string;
+  body: string;
+}
+
+export interface DeepReadRecord {
+  id: string;
+  deepReadLevel: 'TIER_A' | 'TIER_B';
+  reviewStatus: string;
+  reviewedAt: string;
+  whyItMatters: string;
+  decisionUse: string;
+  legacyOrigin: string | null;
+  relatedClaimIds: string[];
+  relatedCapabilityIds: string[];
+  relatedDirectionIds: string[];
+  relatedPriorityIds: string[];
+  questions: DeepReadQuestionRecord[];
+  evidenceBoundary: {
+    sourceFacts: string;
+    analystInference: string;
+    unknownRequests: string;
+  };
+  sourcePath: string;
+}
+
 export interface ClaimRecord {
   id: string;
   proposition: string;
