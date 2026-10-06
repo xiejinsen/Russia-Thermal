@@ -32,6 +32,11 @@ Optional:
 - current_role
 - public_contact
 - collaboration_workflow
+- city
+- region
+- latitude
+- longitude
+- location_verified_at
 
 ## CAPABILITY
 
