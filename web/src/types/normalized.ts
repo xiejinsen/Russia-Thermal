@@ -40,8 +40,12 @@ export interface DirectionRecord {
   phoneTransferMaturity: string;
   capabilityIds: string[];
   claimIds: string[];
+  problem: string | null;
+  strategicHypothesis: string | null;
   strongestBaseline: string | null;
   residualDifferentiation: string | null;
+  internalControlBoundary: string | null;
+  nextQuestion: string | null;
   promotionGate: string | null;
   killGate: string | null;
   sourcePath: string;
