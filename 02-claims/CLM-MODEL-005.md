@@ -2,13 +2,13 @@
 
 record_state: CURRENT
 status: SUPPORTED
-confidence: HIGH
+confidence: MEDIUM
 
 Proposition:
-Kutateladze and Lavrentyev have a current direct technical link on shear-driven microelectronic liquid-film modeling.
+Current Kabov–V.V. Kuznetsov coauthorship on shear-driven microelectronic liquid-film modeling is verified; V.V. Kuznetsov has relevant Lavrentyev modeling lineage, while the exact current affiliation / formal inter-institute status of this specific collaboration remains confirmation-gated.
 
 supporting_sources:
 - PAPER-RU-NET-001
 
 Boundary:
-current coauthorship/technical link does not imply one organization or shared IP ownership.
+Do not infer a high-certainty current Kutateladze↔Lavrentyev institutional project from this paper alone; current exact affiliation / formal project status requires direct confirmation.
