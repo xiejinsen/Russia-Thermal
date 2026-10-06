@@ -5,6 +5,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import InstitutionCard from '../components/cards/InstitutionCard.astro';
 import ScholarCard from '../components/cards/ScholarCard.astro';
 import DirectionCard from '../components/cards/DirectionCard.astro';
+import PartnerPriorityCard from '../components/PartnerPriorityCard.astro';
 import { buildPartnerPortfolioVM } from '../view-models/builders';
 
 const vm = buildPartnerPortfolioVM();
@@ -17,6 +18,17 @@ const vm = buildPartnerPortfolioVM();
     <p class="eyebrow">{vm.eyebrow}</p>
     <h1>{vm.title}</h1>
     <p>{vm.summary}</p>
+  </section>
+
+  <section class="priority-section">
+    <SectionHeader
+      eyebrow="Management priority"
+      title="Partner priority is separate from technical lane"
+      description="P1/P2/P3 are canonical collaboration-decision objects. Strategic Candidate / Reserve / Watch / Hold remain Direction states."
+    />
+    <div class="priority-stack">
+      {vm.priorities.map((model) => <PartnerPriorityCard model={model} />)}
+    </div>
   </section>
 
   {vm.groups.map((group) => (
@@ -52,6 +64,17 @@ const vm = buildPartnerPortfolioVM();
 </BaseLayout>
 
 <style>
+  .priority-section {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-16);
+  }
+
+  .priority-stack {
+    display: grid;
+    gap: var(--space-6);
+  }
+
   .portfolio-group {
     display: grid;
     gap: var(--space-8);

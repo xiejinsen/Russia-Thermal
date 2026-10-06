@@ -63,6 +63,10 @@ They must not:
 
 ## Partner ranking policy
 
-The current final management report uses P1/P2/P3 language, but priority rank is not yet a normalized canonical field.
-The web Partner Portfolio therefore groups by canonical `investmentLane`.
-If explicit priority becomes durable project state, model it upstream before surfacing it as authoritative UI.
+P1/P2/P3 are now modeled upstream as canonical `priority` objects under `07-decisions/priorities/`.
+
+The Partner Portfolio therefore exposes two independent views:
+- collaboration priority: P1 / P2 / P3;
+- technical direction lane: Strategic Candidate / Challenger / Reserve / Watch / Hold.
+
+Do not collapse these dimensions into one field.

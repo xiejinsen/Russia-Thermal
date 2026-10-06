@@ -65,10 +65,23 @@ export interface PartnerGroupVM {
   scholars: ScholarCardVM[];
 }
 
+export interface PartnerPriorityVM {
+  id: string;
+  rank: string;
+  priorityClass: string;
+  readiness?: string;
+  recommendedAction?: string;
+  rationale?: string;
+  institutions: InstitutionCardVM[];
+  directions: DirectionCardVM[];
+  scholars: ScholarCardVM[];
+}
+
 export interface PartnerPortfolioVM {
   eyebrow: string;
   title: string;
   summary: string;
+  priorities: PartnerPriorityVM[];
   groups: PartnerGroupVM[];
 }
 

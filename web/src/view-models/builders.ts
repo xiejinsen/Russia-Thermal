@@ -1,4 +1,4 @@
-import { actors, capabilities, directions } from '../data/load-normalized';
+import { actors, capabilities, directions, priorities } from '../data/load-normalized';
 import type { ActorRecord, CapabilityRecord, DirectionRecord } from '../types/normalized';
 import type {
   CapabilityDetailVM,
@@ -8,6 +8,7 @@ import type {
   OverviewPageVM,
   PartnerGroupVM,
   PartnerPortfolioVM,
+  PartnerPriorityVM,
   ScholarCardVM,
   ScholarPageVM
 } from '../types/view-models';
@@ -226,13 +227,66 @@ function buildPartnerGroup(lane: string): PartnerGroupVM | null {
   };
 }
 
+
+function buildPriorityVM(priority: import('../types/normalized').PartnerPriorityRecord): PartnerPriorityVM {
+  const priorityDirections = priority.relatedDirectionIds
+    .map((id) => directions.find((direction) => direction.id === id))
+    .filter((item): item is DirectionRecord => Boolean(item));
+
+  const priorityCapabilities = priorityDirections.flatMap(capabilityLinks);
+  const institutionMap = new Map<string, CapabilityRecord[]>();
+  const peopleMap = new Map<string, { person: ActorRecord; direction?: DirectionRecord; affiliation?: ActorRecord }>();
+
+  for (const actorId of priority.targetActorIds) {
+    institutionMap.set(actorId, priorityCapabilities.filter((capability) => capability.actorId === actorId));
+  }
+
+  for (const capability of priorityCapabilities) {
+    if (!institutionMap.has(capability.actorId)) {
+      institutionMap.set(capability.actorId, [capability]);
+    }
+    for (const person of peopleForCapability(capability)) {
+      peopleMap.set(person.id, {
+        person,
+        direction: priorityDirections.find((direction) => direction.capabilityIds.includes(capability.id)),
+        affiliation: person.parentId ? actorById.get(person.parentId) : actorById.get(capability.actorId)
+      });
+    }
+  }
+
+  return {
+    id: priority.id,
+    rank: priority.rank,
+    priorityClass: humanize(priority.priorityClass),
+    readiness: priority.collaborationReadiness ? humanize(priority.collaborationReadiness) : undefined,
+    recommendedAction: priority.recommendedAction ? humanize(priority.recommendedAction) : undefined,
+    rationale: priority.rationale ?? undefined,
+    institutions: [...institutionMap.entries()]
+      .map(([actorId, caps]) => {
+        const actor = actorById.get(actorId);
+        const direction = priorityDirections.find((item) =>
+          item.capabilityIds.some((id) => caps.some((capability) => capability.id === id))
+        );
+        return actor ? institutionCard(actor, caps, direction) : null;
+      })
+      .filter((item): item is InstitutionCardVM => Boolean(item)),
+    directions: priorityDirections.map(directionCard),
+    scholars: [...peopleMap.values()]
+      .map(({ person, direction, affiliation }) => scholarCard(person, affiliation, direction))
+      .sort((a, b) => a.name.localeCompare(b.name))
+  };
+}
+
 export function buildPartnerPortfolioVM(): PartnerPortfolioVM {
   const lanes = ['STRATEGIC_CANDIDATE', 'STAGE0_CHALLENGER', 'RESERVE', 'WATCH', 'HOLD'];
   return {
     eyebrow: 'Collaboration portfolio',
     title: 'Partners organized by canonical investment lane',
     summary:
-      'This page derives partner groupings from Direction → Capability → Actor relationships. It intentionally does not invent P1/P2/P3 rankings that are not represented in the normalized canonical contracts.',
+      'Partner priority and technical investment lane are separate dimensions. P1/P2/P3 come from canonical priority decision objects; lane groupings continue to come from Direction records.',
+    priorities: [...priorities]
+      .sort((a, b) => Number(a.rank.slice(1)) - Number(b.rank.slice(1)))
+      .map(buildPriorityVM),
     groups: lanes
       .map(buildPartnerGroup)
       .filter((group): group is PartnerGroupVM => Boolean(group))

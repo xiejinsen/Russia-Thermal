@@ -1,6 +1,6 @@
 # Data Contracts
 
-status: DESIGN
+status: W2_IMPLEMENTED
 scope: normalized data, schemas and ownership
 
 ## 1. Principle
@@ -92,6 +92,26 @@ Optional:
 - `residualDifferentiation`
 - `promotionGate`
 - `killGate`
+
+### PartnerPriorityRecord
+
+Required:
+- `id`
+- `rank`
+- `priorityClass`
+- `targetActorIds[]`
+- `relatedDirectionIds[]`
+
+Optional:
+- `collaborationReadiness`
+- `recommendedAction`
+- `rationale`
+
+Semantics:
+- partner priority is a management-decision dimension;
+- it is independent of `DirectionRecord.investmentLane`;
+- one priority package may reference one or more actors and directions;
+- P1/P2/P3 must not be inferred from technical-lane labels.
 
 ### DecisionRecord
 

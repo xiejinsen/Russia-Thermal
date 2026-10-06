@@ -293,3 +293,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - DEC-20261006-01 — 07-decisions/events/DEC-20261006-01.md
 - DEC-20261006-02 — 07-decisions/events/DEC-20261006-02.md
 - DEC-20261006-03 — 07-decisions/events/DEC-20261006-03.md
+
+## PRIORITY
+
+- PRI-01-KUT-LAB13 — 07-decisions/priorities/PRI-01-KUT-LAB13.md
+- PRI-02-MPEI — 07-decisions/priorities/PRI-02-MPEI.md
+- PRI-03-TPU — 07-decisions/priorities/PRI-03-TPU.md

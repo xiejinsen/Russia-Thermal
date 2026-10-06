@@ -23,6 +23,7 @@ Generated datasets:
 - capabilities.json
 - directions.json
 - decisions.json
+- priorities.json
 - manifest.json
 
 ## Repository policy
