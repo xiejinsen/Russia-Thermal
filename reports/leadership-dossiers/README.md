@@ -25,3 +25,9 @@ For canonical truth, follow the linked IDs in 01-evidence / 02-claims / 03-actor
 - [Yuri A. Kuzma-Kichta](people/kuzma-kichta.md)
 - [Dmitry V. Feoktistov](people/feoktistov.md)
 - [Evgeniya G. Orlova](people/orlova.md)
+
+
+## Leadership package
+- [Executive Map](executive-map.md)
+- [China Comparator Anchors](china-comparator-anchors.md)
+- [Reserve / Watch Appendix](reserve-watch-appendix.md)
