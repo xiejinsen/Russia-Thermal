@@ -42,20 +42,22 @@ This ledger complements the RAEX Top-20 university scan and is the mandatory ant
 | Peter the Great St. Petersburg Polytechnic University | University | CANONICAL_ONBOARDED | Gradient heat-flux measurement / diagnostics. |
 | Tomsk Polytechnic University | University | CANONICAL_ONBOARDED | Laser/wettability process capability. |
 | Novosibirsk State University | University | CANONICAL_ONBOARDED | Two-phase diagnostics bridge into the Novosibirsk thermophysics ecosystem. |
+| Ural Federal University | University | EVIDENCE_QUALIFIED | Valery Kiseev / Oleg Sazhin line spans LHP capillary structures, two-phase loops and electronics thermal management; 2022 peer-reviewed continuity exists, but current 2024-2026 PI status still needs direct verification before onboarding. |
 | Tomsk State University | University | CANONICAL_ONBOARDED | Active/passive electronics cooling, porous/channel structures and PCM thermal control with explicit phone applicability. |
 | HSE University / MIEM | University | CANONICAL_ONBOARDED | Current 2026 electrothermal modeling of high-power electronic circuits/PCB overheating and cooling conditions; represented as thermal-reliability/modeling enabler rather than a cooling-device lab. |
 | ITMO University | University | CANONICAL_ONBOARDED | Current Vladimir Korablev line includes semiconductor-device capillary cooling, electronics thermal analysis and cooling-system engineering; 2025/2026 activity confirms continuity. |
 | MEPhI | University | CANONICAL_ONBOARDED | Pavel Struchalin: current boiling-onset diagnostics, transient pool boiling and channel heat-transfer regime prediction; represented as a failure/regime-diagnostics enabler. |
-| MISIS University | University | CANDIDATE_FOUND | 2025 thermoelectric material for electronic temperature-control systems plus high-thermal-conductivity alloys/materials; primarily materials-side comparator. |
+| MISIS University | University | CANDIDATE_FOUND | 2025 thermoelectric material for electronic temperature-control systems plus high-thermal-conductivity alloys/materials; primarily materials-side comparator. Current PI/device relevance still needs qualification. |
 | Siberian Federal University | University | CANDIDATE_FOUND | Flat heat pipe systems for radio-electronic equipment / spacecraft electronics; need current continuity and current PI confirmation. |
 
 ## Electronics / microelectronics / aerospace-adjacent institutes
 
 | Institution | Class | Status | Why it matters / boundary |
 |---|---|---|---|
-| Kurchatov Institute — Division of Design Problems in Microelectronics (former IPPM RAS) | National research center | CANDIDATE_FOUND | Micro/nanoelectronics design methods; historical joint work on thermal-fault detection / thermal simulation of electronic components. Need current post-2024 organizational continuity check. |
-| Institute for Problems of Microelectronics Technology and High-Purity Materials RAS (IPTM RAS) | RAS | PENDING_SCAN | Strong microelectronics/materials relevance; thermal-management-specific evidence still needs focused scan. |
-| Reshetnev Information Satellite Systems | Industry / space | CANDIDATE_FOUND | Repeated coauthorship on flat heat-pipe systems for onboard electronics; useful aerospace heat-pipe comparator but outside academic-only map. |
+| Kurchatov Institute — Division of Design Problems in Microelectronics (former IPPM RAS) | National research center | HISTORICAL_SIGNAL_ONLY | Current post-2024 organizational continuity is verified, but first focused pass did not yet find equally current thermal-specific work comparable with its older thermal-fault / electrothermal modeling collaboration. Keep open for targeted evidence, do not onboard yet. |
+| Institute for Problems of Microelectronics Technology and High-Purity Materials RAS (IPTM RAS) | RAS | FIRST_PASS_NO_STRONG_SIGNAL | Current institute/lab activity in microelectronics and high-purity materials is verified, but first focused pass did not find a sufficiently direct current electronics-thermal-management capability. |
+| NPO Lavochkin Heat Pipe Center | Research-engineering / space | CANONICAL_ONBOARDED | Current official Heat Pipe Center retains full-cycle design, manufacturing and testing capability for axial/LHP thermal-control hardware; represented in canonical graph with spacecraft-to-mobile transfer boundary. |
+| Reshetnev Information Satellite Systems | Industry / space | EVIDENCE_QUALIFIED | Current 2024 official program develops miniature loop heat pipes and thermal-control subsystems using powder metallurgy, 3D printing and laser welding; direct engineering comparator for compact two-phase devices, but space-industry rather than academic capability. |
 | TSAGI | Research institute | CANONICAL_ONBOARDED | Aeroacoustic methods; supporting relevance to active-cooling noise rather than core two-phase hardware. |
 
 ## Search-wave findings to retain
