@@ -50,3 +50,5 @@ jobs:
         run: npm run check
       - name: Build static site
         run: npm run build
+      - name: Audit internal links
+        run: npm run check:links
