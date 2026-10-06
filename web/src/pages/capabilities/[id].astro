@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import InstitutionCard from '../../components/cards/InstitutionCard.astro';
+import ScholarCard from '../../components/cards/ScholarCard.astro';
+import DirectionCard from '../../components/cards/DirectionCard.astro';
+import EvidenceCard from '../../components/EvidenceCard.astro';
+import { buildCapabilityPageVM, capabilityIds } from '../../view-models/builders';
+
+export function getStaticPaths() {
+  return capabilityIds().map((id) => ({ params: { id } }));
+}
+
+const id = Astro.params.id!;
+const vm = buildCapabilityPageVM(id);
+if (!vm) throw new Error(`Unknown capability: ${id}`);
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout title={`Russia-Thermal — ${vm.capability.id}`} description={vm.capability.statement}>
+  <SiteHeader slot="header" />
+
+  <section class="cap-hero">
+    <div>
+      <p class="eyebrow">Capability detail · {vm.capability.portfolioDisposition}</p>
+      <h1>{vm.capability.statement}</h1>
+      <div class="chips">
+        <span>{vm.capability.maturity} maturity</span>
+        <span>{vm.capability.evidenceConfidence} evidence</span>
+        <span>{vm.capability.targetFit} target fit</span>
+      </div>
+    </div>
+    <aside>
+      <div><span>CLAIMS</span><b>{vm.claims.length}</b></div>
+      <div><span>EVIDENCE</span><b>{vm.evidence.length}</b></div>
+      <div><span>PEOPLE</span><b>{vm.people.length}</b></div>
+      <div><span>DIRECTIONS</span><b>{vm.directions.length}</b></div>
+    </aside>
+  </section>
+
+  <section class="context-grid">
+    <article>
+      <span>STRATEGIC USE</span>
+      <p>{vm.capability.strategicUse ?? 'No separate strategic-use statement is recorded.'}</p>
+    </article>
+    <article>
+      <span>TRANSFER BOUNDARY</span>
+      <p>{vm.capability.transferBoundary ?? 'No separate transfer boundary is recorded.'}</p>
+    </article>
+    <article class="scope">
+      <span>TECHNICAL SCOPE</span>
+      <div>{vm.capability.technicalScope.map((item) => <small>{item}</small>)}</div>
+    </article>
+  </section>
+
+  {vm.owner && (
+    <section class="page-section">
+      <SectionHeader eyebrow="Owner" title="Institution / lab" description="Canonical ownership from Capability.actorId." />
+      <div class="single-card"><InstitutionCard model={vm.owner} /></div>
+    </section>
+  )}
+
+  {vm.people.length > 0 && (
+    <section class="page-section">
+      <SectionHeader eyebrow="People" title="Key people" description="Canonical key-person relations for this capability." />
+      <div class="content-grid">{vm.people.map((model) => <ScholarCard model={model} />)}</div>
+    </section>
+  )}
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="Claims"
+      title="Claims that establish or bound this capability"
+      description="Claims are the semantic bridge between primary evidence and the capability judgment."
+    />
+    <div class="claim-list">
+      {vm.claims.map((claim) => (
+        <a href={href(claim.href)}>
+          <div>
+            <span>{claim.status} · {claim.confidence}{claim.decisionRole ? ` · ${claim.decisionRole}` : ''}</span>
+            <b>{claim.proposition}</b>
+          </div>
+          <strong>Open claim →</strong>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="Evidence"
+      title="Primary evidence connected through the capability's Claims"
+      description={`${vm.evidence.length} unique source records after Claim-level deduplication.`}
+    />
+    <div class="evidence-stack">{vm.evidence.map((model) => <EvidenceCard model={model} />)}</div>
+  </section>
+
+  <section class="page-section">
+    <SectionHeader
+      eyebrow="Strategic disposition"
+      title={vm.directions.length ? 'Connected Directions' : 'Not promoted to a Direction'}
+      description={vm.directions.length
+        ? 'These strategic Directions explicitly consume this capability.'
+        : 'This is an intentional research disposition, not a missing relationship. Use Research Coverage to understand its support/comparator/background role.'}
+    />
+    {vm.directions.length ? (
+      <div class="content-grid">{vm.directions.map((model) => <DirectionCard model={model} />)}</div>
+    ) : (
+      <a class="coverage-link" href={href('/research-coverage')}>Open Research Coverage →</a>
+    )}
+  </section>
+
+  <style>
+    .cap-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.55fr);gap:20px;padding:24px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--shadow-1)}
+    .cap-hero h1{max-width:950px;margin:7px 0 14px;font-size:clamp(1.7rem,2.7vw,2.45rem);line-height:1.16;letter-spacing:-.04em}
+    .chips{display:flex;gap:7px;flex-wrap:wrap}.chips span{padding:6px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:850}
+    .cap-hero aside{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--line)}
+    .cap-hero aside div{display:grid;gap:4px;padding:15px;background:var(--surface-muted)}.cap-hero aside span{font-size:9px;color:var(--text-muted);font-weight:850}.cap-hero aside b{font-size:20px;color:var(--accent-vivid)}
+    .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.context-grid article{padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface)}.context-grid article>span{font-size:9px;color:var(--accent-vivid);font-weight:850;letter-spacing:.07em}.context-grid p{margin:8px 0 0;color:var(--text-muted);line-height:1.6}.context-grid .scope{grid-column:1/-1}.scope div{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.scope small{padding:5px 7px;border-radius:7px;background:var(--surface-muted);color:var(--text-secondary)}
+    .page-section{display:grid;gap:var(--space-6);margin-top:var(--space-12)}.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--space-4)}.single-card{max-width:32rem}
+    .claim-list{display:grid;gap:10px}.claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-decoration:none;color:inherit}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:var(--accent-vivid);font-weight:850;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.5}.claim-list strong{white-space:nowrap;color:var(--accent-vivid);font-size:11px}
+    .evidence-stack{display:grid;gap:var(--space-5)}.coverage-link{width:fit-content;padding:10px 13px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-weight:850;text-decoration:none}
+    @media(max-width:800px){.cap-hero,.context-grid{grid-template-columns:1fr}.context-grid .scope{grid-column:auto}.claim-list a{flex-direction:column}}
+  </style>
+</BaseLayout>
