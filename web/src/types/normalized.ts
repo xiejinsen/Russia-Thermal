@@ -34,6 +34,7 @@ export interface CapabilityRecord {
   technicalScope: string[];
   transferBoundary: string | null;
   strategicUse: string | null;
+  portfolioDisposition: 'DIRECTION_LINKED' | 'COMPARATOR_ONLY' | 'SUPPORT_ONLY' | 'BACKGROUND_KILLED_THESIS' | 'UNRESOLVED';
   sourcePath: string;
 }
 
@@ -79,6 +80,7 @@ export interface EvidenceRecord {
   countryContext: string | null;
   directFindings: string[];
   boundary: string | null;
+  usageRole: 'CONTEXT_PROFILE' | 'RANKING_CONTEXT' | 'FRONTIER_DISCOVERY' | 'BACKGROUND_CONTEXT' | 'UNRESOLVED' | null;
   sourcePath: string;
 }
 
@@ -90,6 +92,7 @@ export interface ClaimRecord {
   supportingSourceIds: string[];
   contradictingSourceIds: string[];
   boundary: string | null;
+  decisionRole: 'PARTNER_READINESS' | 'PORTFOLIO_RATIONALE' | 'COMPARATOR_UMBRELLA' | 'FRONTIER_DISCOVERY' | 'EVIDENCE_GAP' | 'BACKGROUND' | 'UNRESOLVED' | null;
   sourcePath: string;
 }
 
