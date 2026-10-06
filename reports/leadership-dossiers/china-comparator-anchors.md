@@ -92,14 +92,55 @@ It does not eliminate:
 - Kutateladze Lab 1.3's narrower reversible-to-irreversible crisis / diagnostic residual;
 - MPEI's actual multi-year engineered-surface / capillary-aging residual.
 
+## Fudan University — package-integrated microfluidic comparator
+
+Representative evidence:
+- OFFICIAL-FUDAN-MICROSYSTEM-PACKAGING-001
+- OFFICIAL-FUDAN-WAFER-MICROFLUIDIC-001
+- OFFICIAL-FUDAN-LIUPAN-001
+
+Current anchors:
+- Pan Liu;
+- Guangyin Lei.
+
+What it demonstrates:
+- package-level microchannel design/manufacturing and multiphysics co-design;
+- current wafer-level SiC packaging with embedded microfluidic cooling;
+- a China capability that links thermal architecture directly to packaging process and reliability.
+
+Decision impact:
+UUST-style microchannel research cannot be treated as a Russian strategic edge merely because it is current; China has current device/package-integrated implementations.
+
+## Beijing Institute of Technology — ultra-thin VC / capillary / microchannel comparator
+
+Representative evidence:
+- OFFICIAL-BIT-THERMAL-INSTITUTE-001
+- OFFICIAL-BIT-JIANG-001
+- OFFICIAL-BIT-TAN-001
+
+Current anchors:
+- Yuyan Jiang;
+- Sicong Tan.
+
+What it demonstrates:
+- ultra-thin high-performance flat heat pipes / vapor chambers;
+- porous-wick permeability and capillary characterization;
+- microchannel flow boiling and thin-film phase-change diagnostics;
+- current research continuity through the Thermal Engineering Institute.
+
+Decision impact:
+BIT raises the China baseline specifically in the thin two-phase hardware / wick / microchannel region, increasing pressure on broad Russian heat-pipe, LHP, microchannel and generic wick claims.
+
 ## Leadership takeaway
 
 China is not a weak comparator baseline.
 
-Across the three primary Russia candidates, the strongest China pressure comes from:
+Across the three primary Russia candidates and newly discovered supporting nodes, the strongest China pressure comes from:
 - **GDUT** — capillary-fed dryout / rewetting mechanism;
 - **Chinese copper-water VC reliability ecosystem + Newidea / Shenzhen VC Thermal** — reliability / aging / product process;
-- **East China Jiaotong University** — laser-modified UTVC wick / device path.
+- **East China Jiaotong University** — laser-modified UTVC wick / device path;
+- **PKU / Fudan / SJTU / SEU** — embedded, package-integrated and high-heat-flux microchannel cooling;
+- **BIT / XJTU / USTC** — ultra-thin two-phase hardware, capillary/wick and vapor-chamber comparators.
 
 Therefore the Russia collaboration thesis should be framed as:
 **narrow complementary mechanism/process value, not broad country-level superiority.**
