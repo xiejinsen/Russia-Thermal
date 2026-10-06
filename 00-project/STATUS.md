@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: web W3 core MVP complete / Decisions + Frontier Watch implemented / repository health and page-level Astro builds PASS
-next_action: begin W4 visual enrichment and leadership-overview refinement; then prepare W6 deployment checks
+current_phase: web W4 leadership overview refined / decision-first homepage / Repository Health + Astro check/build PASS
+next_action: define W4 visual-asset policy and add only high-value institution/scholar/diagram visuals; then prepare W6 deployment/broken-link/accessibility checks
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
