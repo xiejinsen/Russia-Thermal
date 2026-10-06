@@ -126,6 +126,22 @@ export interface CapabilityDetailVM {
   portfolioDisposition: string;
 }
 
+export interface CapabilityPageVM {
+  capability: CapabilityDetailVM;
+  owner?: InstitutionCardVM;
+  people: ScholarCardVM[];
+  claims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    decisionRole?: string;
+    href: string;
+  }>;
+  evidence: EvidenceCardVM[];
+  directions: DirectionCardVM[];
+}
+
 export interface InstitutionPageVM {
   id: string;
   name: string;
