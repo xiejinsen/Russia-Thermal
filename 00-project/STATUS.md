@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: Tier A/B institution + key-person leadership dossiers converged
-next_action: run Phase-1 leadership-package gap audit; decide whether any remaining evidence gaps justify more desk research before final management synthesis
+current_phase: Phase-1 leadership-package gap audit PASS / ready for final management synthesis
+next_action: stop broad desk research; prepare final management synthesis from executive map, Tier A/B dossiers, China comparators, reserve/watch appendix and canonical evidence
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
