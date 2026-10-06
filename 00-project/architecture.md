@@ -37,4 +37,4 @@ GitHub Actions runs the same check on dev.
 V1 files remain present during migration for semantic comparison and history.
 They do not become V2.1 canonical merely because they remain in the repository.
 
-Until cutover, see [STATUS.md](STATUS.md) for authority.
+Cutover is complete: V2.1 canonical objects on main are authoritative. Legacy V1 files remain historical/provenance material only.
