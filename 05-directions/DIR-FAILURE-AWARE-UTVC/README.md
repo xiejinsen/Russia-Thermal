@@ -4,14 +4,14 @@ record_state: CURRENT
 role: PRIMARY_COLLABORATION_DIRECTION
 investment_lane: STRATEGIC_CANDIDATE
 evidence_maturity: MULTISOURCE_SUPPORT
-differentiation_confidence: MEDIUM_HIGH
+differentiation_confidence: MEDIUM
 phone_transfer_maturity: LOW_MEDIUM
 
 Problem:
-Ultra-thin phone two-phase systems can approach abrupt dryout/capillary failure, while conventional product control mainly observes external thermal symptoms.
+Ultra-thin phone two-phase systems can approach abrupt dryout/capillary failure. Generic external temperature/power dryout observability is already prior art, so the unresolved question is whether mechanism-specific irreversible-transition information adds product value beyond strong generic thermal-state baselines.
 
 Strategic hypothesis:
-Use selected Kutateladze Lab 1.3 failure-diagnostic / irreversible-crisis knowledge as a mechanism input to an internally controlled phone UTVC platform.
+Use selected Kutateladze Lab 1.3 reversible-to-irreversible crisis knowledge to add mechanism-specific failure-state information beyond temperature/power/thermal-impedance/hysteresis baselines in an internally controlled phone UTVC platform.
 
 related_claims:
 - CLM-PAV-003
@@ -19,24 +19,29 @@ related_claims:
 - CLM-PAV-005
 - CLM-PAV-007
 - CLM-PAV-008
+- CLM-PRESSURE-001
+- CLM-PRESSURE-002
+- CLM-PRESSURE-004
+- CLM-PRESSURE-005
+- CLM-PRESSURE-007
 
 candidate_capabilities:
 - CAP-KUT-L13-DRYOUT-DIAGNOSTICS
 
 strongest_baseline:
-Independent China capillary-fed dryout/rewetting, treated-mesh boiling, ultrathin wick/device engineering, and strong domestic UTVC controls.
+External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting and strong domestic UTVC controls.
 
 Residual differentiation:
-Actor-specific diagnostic/mechanism depth around reversible-to-irreversible dielectric dry-spot/crisis behavior.
+Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
 
 Internal control boundary:
 phone package, UTVC geometry, product fluid, manufacturing, final controller/data model and final product foreground IP remain internally owned.
 
 Next question:
-Does the retained mechanism/diagnostic knowledge add decision value or shift irreversible-dryout behavior under phone-relevant thin sealed conditions beyond strong domestic baselines?
+Can a phone-relevant observer or validation method distinguish approach to irreversible two-phase crisis from generic thermal drift using practical telemetry, and does that distinction improve design/control decisions?
 
 Promotion gate:
-repeatable phone-relevant failure-boundary or diagnostic value beyond strong domestic controls.
+repeatable phone-relevant mechanism-specific signal or failure-boundary improvement that beats a baseline using temperature, power/workload history, calibrated RC/thermal impedance and hysteresis features.
 
 Kill / downgrade gate:
 downgrade if value reduces to generic mesh/capillary treatment, is HFE/mm-scale specific, or does not change phone design/validation decisions.
