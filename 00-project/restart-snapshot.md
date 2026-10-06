@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W4 leadership overview refined / decision-first homepage / Repository Health + Astro check/build PASS
-- next: define W4 visual-asset policy and add only high-value institution/scholar/diagram visuals; then prepare W6 deployment/broken-link/accessibility checks
+- phase: presentation-readiness architecture hardening / conclusion-first Synthesis contract
+- next: canonicalize current portfolio thesis as Synthesis, wire web overview to canonical thesis, then begin Figma information-architecture redesign
 
 ## Directions
 
