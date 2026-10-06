@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: Phase-1 leadership-package gap audit PASS / ready for final management synthesis
-next_action: stop broad desk research; prepare final management synthesis from executive map, Tier A/B dossiers, China comparators, reserve/watch appendix and canonical evidence
+current_phase: Russian heat-transfer venue ecosystem supplemental scan completed / new supporting nodes added / primary portfolio unchanged
+next_action: prepare final management synthesis; include BMSTU/Zubkov, MPEI-Skoltech additive thermosyphon and Frumkin surface-chemistry nodes as supplemental capabilities
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
