@@ -5,16 +5,21 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
 ---
 <DesignLabLayout title="Russia-Thermal — Intelligence prototype" description={vm.summary} theme="intelligence">
 <div class="app">
-<aside class="rail" aria-label="Research intelligence navigation">
-  <div class="logo">RT</div>
-  <a class="active" href="#">Overview</a>
-  <a href="#act">Act</a>
-  <a href="#compare">Compare</a>
-  <a href={href('/evidence')}>Evidence</a>
-  <a href={href('/decisions')}>Decisions</a>
-</aside>
 <div class="workspace">
-<header><div><b>Russia-Thermal Intelligence</b><span>smartphone thermal collaboration landscape</span></div><div class="updated">SYNTHESIS · {vm.thesisAssessedAt ?? 'CURRENT'}</div></header>
+<header class="topbar">
+  <div class="brand-block">
+    <div class="logo">RT</div>
+    <div><b>Russia-Thermal Intelligence</b><span>smartphone thermal collaboration landscape</span></div>
+  </div>
+  <nav class="topnav" aria-label="Research intelligence navigation">
+    <a class="active" href="#">Overview</a>
+    <a href="#act">Act</a>
+    <a href="#compare">Compare</a>
+    <a href={href('/evidence')}>Evidence</a>
+    <a href={href('/decisions')}>Decisions</a>
+  </nav>
+  <div class="updated">SYNTHESIS · {vm.thesisAssessedAt ?? 'CURRENT'}</div>
+</header>
 <main>
 <section class="signal">
   <div><span class="tag">PORTFOLIO SIGNAL</span><h1>{vm.title}</h1><p>{vm.summary}</p></div>
@@ -88,44 +93,42 @@ const vm=buildOverviewVM(); const base=import.meta.env.BASE_URL; const href=(p:s
   color:#17324d;
 }
 .app{min-height:100vh}
-.rail{
-  position:fixed;
-  inset:0 auto 0 0;
-  z-index:20;
-  width:122px;
-  height:100vh;
-  background:linear-gradient(180deg,#0b5ea8 0%,#0a4f91 100%);
-  border-right:1px solid rgba(6,56,102,.18);
-  display:flex;
-  flex-direction:column;
+.workspace{min-width:0}
+.topbar{
+  position:sticky;top:0;z-index:20;
+  min-height:72px;
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) auto auto;
   align-items:center;
-  gap:10px;
-  padding:18px 0;
-  box-shadow:8px 0 30px rgba(25,82,132,.10);
-}
-.rail .logo{
-  width:46px;height:46px;display:grid;place-items:center;
-  background:#fff;color:#0b5ea8;font-weight:900;font-size:14px;
-  border-radius:12px;margin-bottom:18px;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-}
-.rail a{
-  font-size:12px;font-weight:750;letter-spacing:.01em;text-decoration:none;color:#d9edff;
-  width:98px;height:42px;display:flex;align-items:center;padding:0 14px;border-radius:10px;
-}
-.rail a.active,.rail a:hover{background:rgba(255,255,255,.18);color:#fff}
-.workspace{margin-left:122px;min-width:0}
-.workspace header{
-  position:sticky;top:0;z-index:10;height:64px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 28px;border-bottom:1px solid #d7e6f2;background:rgba(248,252,255,.92);
+  gap:24px;
+  padding:10px 28px;
+  border-bottom:1px solid #d7e6f2;
+  background:rgba(248,252,255,.94);
   backdrop-filter:blur(12px);
+  box-shadow:0 6px 20px rgba(38,89,130,.05);
 }
-.workspace header div:first-child{display:flex;gap:16px;align-items:baseline}
-.workspace header b{font-size:15px;color:#143b5c}
-.workspace header span,.updated{
-  font-size:12px;color:#60778a;text-transform:uppercase;letter-spacing:.07em
+.brand-block{display:flex;align-items:center;gap:12px;min-width:0}
+.logo{
+  width:42px;height:42px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#0b67b2,#0a5598);
+  color:#fff;font-weight:900;font-size:13px;border-radius:11px;
+  box-shadow:0 6px 16px rgba(11,94,168,.18);
+  flex:0 0 auto;
 }
-.updated{color:#0b67b2;font-weight:800}
+.brand-block>div:last-child{display:grid;gap:2px;min-width:0}
+.brand-block b{font-size:15px;color:#143b5c;white-space:nowrap}
+.brand-block span{
+  font-size:11px;color:#60778a;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap
+}
+.topnav{display:flex;align-items:center;gap:4px}
+.topnav a{
+  padding:9px 12px;border-radius:9px;text-decoration:none;
+  font-size:12px;font-weight:750;color:#3f6079
+}
+.topnav a:hover,.topnav a.active{background:#e8f3fb;color:#0b67b2}
+.updated{
+  font-size:11px;color:#0b67b2;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap
+}
 main{padding:26px;max-width:1660px;margin:0 auto}
 .signal{
   display:grid;grid-template-columns:minmax(0,1.8fr) minmax(380px,.8fr);gap:0;
@@ -210,11 +213,10 @@ main{padding:26px;max-width:1660px;margin:0 auto}
 .numbers span{font-size:12px;color:#5e7486;align-self:center;line-height:1.35}
 
 @media(max-width:900px){
-  .rail{position:static;width:100%;height:58px;flex-direction:row;justify-content:center;padding:8px}
-  .rail .logo{width:38px;height:38px;margin:0 8px 0 0}
-  .rail a{height:38px;width:auto;padding:0 9px;font-size:11px}
-  .workspace{margin-left:0}
-  .workspace header span{display:none}
+  .topbar{grid-template-columns:1fr;gap:8px;padding:10px 14px}
+  .brand-block span,.updated{display:none}
+  .topnav{overflow-x:auto;justify-content:flex-start;padding-bottom:2px}
+  .topnav a{white-space:nowrap}
   .signal,.lower{grid-template-columns:1fr}
   .scoreboard{grid-template-columns:repeat(3,1fr)!important;border-left:0;border-top:1px solid #d8e8f4}
   .basis-grid,.management-strip{grid-template-columns:1fr}
