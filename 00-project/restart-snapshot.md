@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: light-blue intelligence visual baseline frozen / pyramid-content refinement
-- next: refine module-by-module information hierarchy under the frozen intelligence visual style, then promote the selected design into the production Astro site
+- phase: production Intelligence homepage live / full-site drill-down hardening
+- next: finish link/dead-end audit, then enrich China comparator Actor graph and build the shared China Research Map
 
 ## Directions
 
