@@ -4,6 +4,8 @@ record_state: CURRENT
 actor_id: ACT-MPEI
 key_people:
 - PERSON-IVANOV
+- PERSON-KUZMA-KICHTA
+- PERSON-ALYAUTDINOVA
 maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
