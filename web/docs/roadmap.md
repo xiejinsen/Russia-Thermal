@@ -1,6 +1,6 @@
 # Web Implementation Roadmap
 
-status: DESIGN
+status: W3_MVP_COMPLETION
 
 ## Phase W0 — architecture approval
 
@@ -47,6 +47,8 @@ visual system stable enough that feature pages do not invent local styles.
 
 ## Phase W3 — MVP pages
 
+status: IMPLEMENTED_CORE_PAGES
+
 Build:
 1. Overview
 2. Partner Portfolio
@@ -56,6 +58,8 @@ Build:
 6. Evidence Explorer
 7. Decision / Kill view
 8. Frontier Watch
+
+Current state: core data-driven MVP pages implemented; visual enrichment/deployment remain.
 
 ## Phase W4 — visual enrichment
 
