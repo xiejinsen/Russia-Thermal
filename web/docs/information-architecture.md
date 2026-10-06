@@ -180,3 +180,109 @@ Technical detail appears through:
 - evidence pages.
 
 This avoids making every page encyclopedic.
+
+
+## 12. Research Intelligence expansion — maps and object explorers
+
+The site must support three user modes:
+- Decide — understand the portfolio conclusion and what to do.
+- Explore — discover organizations, scholars, capabilities and geographic clusters.
+- Audit — drill from a conclusion into Direction / Claim / Paper / Source evidence.
+
+### Production navigation target
+
+Primary groups:
+- Overview
+- Research Maps
+- Portfolio: Partners / Russia vs China / Directions
+- People & Orgs: Scholars / Institutions
+- Research Objects: Papers / Claims / Evidence
+- Decisions
+
+Frontier Watch becomes a secondary tool under Evidence / Research Maps. Fixtures remain development-only.
+
+### Research Maps
+
+Routes:
+- /research-map/russia
+- /research-map/china
+
+Russia map answers: where are the Russian organizations, scholars and capability clusters relevant to smartphone thermal management?
+
+China map uses the exact same component/view-model contract and makes the China comparator baseline inspectable as institutions, scholars and technical clusters.
+
+Current gap: Russia already has a canonical Actor graph; China currently has comparator Evidence / Claims but does not yet have a symmetrical China Actor graph. A bounded China comparator-actor enrichment pass is required before the China map is complete.
+
+Map marker/detail panel should expose:
+- institution / lab;
+- city / region;
+- key people;
+- strongest relevant capability;
+- linked Directions;
+- partner priority if any;
+- evidence confidence;
+- drill-down links.
+
+The map is a navigation surface, not a country score or ranking.
+
+### Object Explorer routes
+
+Papers:
+- /papers
+- /papers/[id]
+
+Claims:
+- /claims
+- /claims/[id]
+
+Directions:
+- /directions
+- /directions/[id]
+
+Existing stable routes remain:
+- /institutions and /institutions/[id]
+- /scholars and /scholars/[id]
+
+Paper detail should expose direct finding, background, method/mechanism, result, boundary, venue metadata, linked Claims, Actors/Capabilities, Directions and original source.
+
+Claim detail should expose proposition, status/confidence, supporting and contradicting Sources, boundary, affected Capabilities, Directions, Decisions and Synthesis.
+
+Direction detail follows Pyramid order: Recommendation -> Problem -> Strategic hypothesis -> China/global baseline -> Russia residual -> Actors/Capabilities/People -> Claims/Evidence -> internal-control boundary -> next validation question -> promotion/kill gate -> decision history.
+
+### Homepage drill-down rule
+
+Every decision-relevant homepage element must be clickable. No dead-end visuals.
+
+Minimum paths:
+- P1/P2/P3 -> partner package / institution
+- Direction name -> Direction detail
+- China baseline -> Russia-v-China view / China Research Map
+- Russia residual -> institution / capability / scholar
+- killed thesis -> Decision detail
+- evidence counts -> Evidence Explorer
+- institution/scholar counts -> respective explorers
+- geographic summary -> Research Maps
+
+### Traceability paths
+
+Management judgment -> Direction/Priority -> Capability/Actor -> Claim -> Source/Paper
+
+Scholar -> Affiliation -> Capability -> Direction -> Claim -> Paper
+
+Map marker -> Institution/Lab -> Key People -> Capability -> Direction -> Evidence
+
+Paper -> Claim -> Capability/Actor -> Direction -> Decision/Synthesis
+
+### Geographic ownership
+
+Actor owns only factual geography: city, region, latitude, longitude, location_verified_at.
+
+Organization/Lab/Company may own verified coordinates. Person normally inherits parent Actor location. Do not create a separate hand-maintained map registry. Missing geography is a visible coverage gap.
+
+### Implementation sequence
+
+1. Data + navigation contracts.
+2. Russia Research Map MVP.
+3. Directions / Claims / Papers list and detail routes.
+4. China comparator Actor enrichment + China Research Map.
+5. Promote the selected Intelligence design to the production homepage and wire all drill-down links.
