@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CapabilityRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "actorId",
+    "statement",
+    "maturity",
+    "evidenceConfidence",
+    "targetFit",
+    "keyPeopleIds",
+    "claimIds",
+    "sourcePath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actorId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "maturity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidenceConfidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "targetFit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keyPeopleIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claimIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "technicalScope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "transferBoundary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "strategicUse": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
