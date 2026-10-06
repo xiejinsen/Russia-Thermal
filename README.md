@@ -70,7 +70,7 @@ Authoritative current state lives in:
 - [Kill / Downgrade Ledger](07-decisions/kill-ledger.md)
 - [Leadership Dossiers](reports/leadership-dossiers/README.md)
 - [Final Management Synthesis](reports/final-management-synthesis.md)
-- [Web Report Architecture](reports/web-report-architecture.md)
+- [Web Report System](web/README.md)
 
 ## Repository health
 
