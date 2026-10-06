@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W2 design-system skeleton implemented on main / Astro build gate added
-- next: stabilize W2 primitives, card contracts, layout/navigation and fixture states; then build real Overview and Partner Portfolio view models/pages
+- phase: web W2 real-data integration + institution/scholar relationship pages PASS
+- next: model/decide durable partner-priority semantics, then add Evidence Explorer and Russia-vs-China landscape pages on normalized contracts
 
 ## Directions
 
