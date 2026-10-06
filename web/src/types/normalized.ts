@@ -83,3 +83,17 @@ export interface ClaimRecord {
   boundary: string | null;
   sourcePath: string;
 }
+
+export interface DecisionRecord {
+  id: string;
+  eventType: string;
+  subjectId: string;
+  newState: string;
+  effectiveDate: string | null;
+  previousState: string | null;
+  triggerClaimIds: string[];
+  triggerExperimentIds: string[];
+  rationale: string | null;
+  reopenCondition: string | null;
+  sourcePath: string;
+}
