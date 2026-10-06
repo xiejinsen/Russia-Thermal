@@ -1,0 +1,186 @@
+---
+import type { EvidenceExplorerVM } from '../types/view-models';
+
+interface Props {
+  filters: EvidenceExplorerVM['filters'];
+}
+
+const { filters } = Astro.props;
+---
+
+<form class="filters" id="evidence-filters" aria-label="Evidence filters">
+  <label class="search">
+    <span>Search</span>
+    <input type="search" name="q" placeholder="title, author, finding, claim…" autocomplete="off" />
+  </label>
+
+  <label>
+    <span>Source type</span>
+    <select name="sourceType">
+      <option value="">All</option>
+      {filters.sourceTypes.map((value) => <option value={value}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Country</span>
+    <select name="country">
+      <option value="">All</option>
+      {filters.countries.map((value) => <option value={value}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Year</span>
+    <select name="year">
+      <option value="">All</option>
+      {filters.years.map((value) => <option value={String(value)}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Institution</span>
+    <select name="institution">
+      <option value="">All</option>
+      {filters.institutions.map((value) => <option value={value}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Person</span>
+    <select name="person">
+      <option value="">All</option>
+      {filters.people.map((value) => <option value={value}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Direction</span>
+    <select name="direction">
+      <option value="">All</option>
+      {filters.directions.map((value) => <option value={value}>{value}</option>)}
+    </select>
+  </label>
+
+  <label>
+    <span>Claim relation</span>
+    <select name="relation">
+      <option value="">All</option>
+      <option value="support">Supports claim</option>
+      <option value="contradict">Contradicts / pressures claim</option>
+    </select>
+  </label>
+
+  <button type="reset">Clear filters</button>
+  <output id="evidence-count" aria-live="polite"></output>
+</form>
+
+<style>
+  .filters {
+    position: sticky;
+    top: 5rem;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(14rem, 2fr) repeat(4, minmax(9rem, 1fr));
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+    padding: var(--space-5, 1.25rem);
+    background: rgb(247 248 250 / .96);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(10px);
+  }
+
+  label {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  label span {
+    color: var(--text-muted);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  input, select, button {
+    min-height: 2.45rem;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+  }
+
+  button {
+    align-self: end;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  output {
+    align-self: end;
+    padding-bottom: .6rem;
+    color: var(--text-muted);
+    font-size: .85rem;
+  }
+
+  @media (max-width: 1100px) {
+    .filters {
+      position: static;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .search { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 620px) {
+    .filters { grid-template-columns: 1fr; }
+    .search { grid-column: auto; }
+  }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#evidence-filters');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-evidence-record]')];
+  const output = document.querySelector<HTMLOutputElement>('#evidence-count');
+
+  function normalize(value: string | undefined) {
+    return (value ?? '').toLocaleLowerCase();
+  }
+
+  function applyFilters() {
+    if (!form) return;
+    const data = new FormData(form);
+    const q = normalize(String(data.get('q') ?? '')).trim();
+    const fields = ['sourceType', 'country', 'year', 'institution', 'person', 'direction'] as const;
+    const relation = String(data.get('relation') ?? '');
+
+    let visible = 0;
+
+    for (const card of cards) {
+      const matchesQuery = !q || normalize(card.dataset.search).includes(q);
+      const matchesFields = fields.every((field) => {
+        const selected = String(data.get(field) ?? '');
+        if (!selected) return true;
+        return (card.dataset[field] ?? '').split('|').includes(selected);
+      });
+      const matchesRelation =
+        !relation ||
+        (relation === 'support' && card.dataset.hasSupport === 'true') ||
+        (relation === 'contradict' && card.dataset.hasContradict === 'true');
+
+      const show = matchesQuery && matchesFields && matchesRelation;
+      card.hidden = !show;
+      if (show) visible += 1;
+    }
+
+    if (output) output.value = `${visible} of ${cards.length} evidence records`;
+  }
+
+  form?.addEventListener('input', applyFilters);
+  form?.addEventListener('change', applyFilters);
+  form?.addEventListener('reset', () => requestAnimationFrame(applyFilters));
+  applyFilters();
+</script>

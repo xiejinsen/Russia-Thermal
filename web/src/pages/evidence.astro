@@ -3,9 +3,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import StatStrip from '../components/StatStrip.astro';
 import EvidenceCard from '../components/EvidenceCard.astro';
+import EvidenceFilterPanel from '../components/EvidenceFilterPanel.astro';
+import { actors, capabilities } from '../data/load-normalized';
 import { buildEvidenceExplorerVM } from '../view-models/builders';
 
 const vm = buildEvidenceExplorerVM();
+const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+
+function metadata(model: (typeof vm.records)[number]) {
+  const capabilityIds = new Set(model.linkedCapabilities.map((capability) => capability.id));
+  const caps = capabilities.filter((capability) => capabilityIds.has(capability.id));
+  const institutions = [...new Set(caps.map((capability) => actorById.get(capability.actorId)?.name).filter(Boolean))] as string[];
+  const people = [...new Set(caps.flatMap((capability) => capability.keyPeopleIds).map((id) => actorById.get(id)?.name).filter(Boolean))] as string[];
+  const directions = model.linkedDirections.map((direction) => direction.id);
+
+  return {
+    sourceType: model.sourceType,
+    country: model.countryContext ?? '',
+    year: model.year ? String(model.year) : '',
+    institution: institutions.join('|'),
+    person: people.join('|'),
+    direction: directions.join('|'),
+    hasSupport: String(model.supportingClaims.length > 0),
+    hasContradict: String(model.contradictingClaims.length > 0),
+    search: [
+      model.title,
+      ...model.authors,
+      model.venue ?? '',
+      model.countryContext ?? '',
+      ...model.findings,
+      model.boundary ?? '',
+      ...model.supportingClaims.map((claim) => claim.proposition),
+      ...model.contradictingClaims.map((claim) => claim.proposition),
+      ...institutions,
+      ...people,
+      ...directions
+    ].join(' ')
+  };
+}
 ---
 
 <BaseLayout title="Russia-Thermal — Evidence Explorer" description={vm.summary}>
@@ -21,11 +56,32 @@ const vm = buildEvidenceExplorerVM();
     { label: 'Claims', value: vm.totalClaims }
   ]} />
 
+  <EvidenceFilterPanel filters={vm.filters} />
+
   <section class="stack" aria-label="Evidence records">
-    {vm.records.map((model) => <EvidenceCard model={model} />)}
+    {vm.records.map((model) => {
+      const data = metadata(model);
+      return (
+        <div
+          data-evidence-record
+          data-source-type={data.sourceType}
+          data-country={data.country}
+          data-year={data.year}
+          data-institution={data.institution}
+          data-person={data.person}
+          data-direction={data.direction}
+          data-has-support={data.hasSupport}
+          data-has-contradict={data.hasContradict}
+          data-search={data.search}
+        >
+          <EvidenceCard model={model} />
+        </div>
+      );
+    })}
   </section>
 </BaseLayout>
 
 <style>
-  .stack { display: grid; gap: var(--space-6); margin-top: var(--space-12); }
+  .stack { display: grid; gap: var(--space-6); margin-top: var(--space-8); }
+  [hidden] { display: none !important; }
 </style>

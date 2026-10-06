@@ -429,16 +429,46 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
 }
 
 export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
+  const records = [...evidence]
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title))
+    .map(evidenceCard);
+
+  const sourceTypes = [...new Set(records.map((record) => record.sourceType))].sort();
+  const countries = [...new Set(records.map((record) => record.countryContext).filter((v): v is string => Boolean(v)))].sort();
+  const years = [...new Set(records.map((record) => record.year).filter((v): v is number => typeof v === 'number'))].sort((a, b) => b - a);
+  const linkedCapabilityIds = new Set(records.flatMap((record) => record.linkedCapabilities.map((capability) => capability.id)));
+  const linkedDirectionIds = new Set(records.flatMap((record) => record.linkedDirections.map((direction) => direction.id)));
+  const institutions = [...new Set(
+    capabilities
+      .filter((capability) => linkedCapabilityIds.has(capability.id))
+      .map((capability) => actorById.get(capability.actorId)?.name)
+      .filter((v): v is string => Boolean(v))
+  )].sort();
+  const people = [...new Set(
+    capabilities
+      .filter((capability) => linkedCapabilityIds.has(capability.id))
+      .flatMap((capability) => capability.keyPeopleIds)
+      .map((id) => actorById.get(id)?.name)
+      .filter((v): v is string => Boolean(v))
+  )].sort();
+
   return {
     eyebrow: 'Evidence graph',
     title: 'Evidence Explorer',
     summary:
-      'Primary sources are shown with the Claims they support or contradict, then connected onward to Capabilities and Directions. This preserves the distinction between source facts and analyst conclusions.',
+      'Primary sources are shown with the Claims they support or contradict, then connected onward to Capabilities and Directions. Filters operate on derived normalized relations and never rewrite canonical research state.',
     totalEvidence: evidence.length,
     totalClaims: claims.length,
-    records: [...evidence]
-      .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title))
-      .map(evidenceCard)
+    records,
+    filters: {
+      sourceTypes,
+      countries,
+      years,
+      institutions,
+      people,
+      capabilities: [...linkedCapabilityIds].sort(),
+      directions: [...linkedDirectionIds].sort()
+    }
   };
 }
 

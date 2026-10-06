@@ -160,6 +160,15 @@ export interface EvidenceExplorerVM {
   totalEvidence: number;
   totalClaims: number;
   records: EvidenceCardVM[];
+  filters: {
+    sourceTypes: string[];
+    countries: string[];
+    years: number[];
+    institutions: string[];
+    people: string[];
+    capabilities: string[];
+    directions: string[];
+  };
 }
 
 export interface LandscapeRowVM {
