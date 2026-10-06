@@ -5,6 +5,7 @@ Standard-library only.
 Reuses tools/v2repo.py as the canonical parser/validator.
 
 This module performs normalization only. It must not introduce strategic inference.
+Synthesis export is a thin presentation contract over canonical strategic state.
 """
 
 from __future__ import annotations
