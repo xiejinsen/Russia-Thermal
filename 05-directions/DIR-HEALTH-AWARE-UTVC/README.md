@@ -26,12 +26,13 @@ related_claims:
 - CLM-OBS-005
 - CLM-OBS-006
 - CLM-OBS-007
+- CLM-CN-SJTU-004
 
 candidate_capabilities:
 - CAP-MPEI-LONGTERM-CAPILLARY-AGING
 
 strongest_baseline:
-China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware.
+China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
 
 Residual differentiation:
 actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
