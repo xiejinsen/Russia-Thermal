@@ -10,7 +10,7 @@ Russia has a broad differentiated advantage because it possesses thin-film cooli
 supporting_sources:
 - PAPER-CN-FILM-001
 - PAPER-CN-FILM-002
-- PAPER-CN-FILM-003
+- PAPER-CN-MODEL-001
 
 Boundary:
 refutes the broad thesis only.
