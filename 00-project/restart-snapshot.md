@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: web W3 core MVP complete / Decisions + Frontier Watch implemented / repository health and page-level Astro builds PASS
-- next: begin W4 visual enrichment and leadership-overview refinement; then prepare W6 deployment checks
+- phase: web W4 leadership overview refined / decision-first homepage / Repository Health + Astro check/build PASS
+- next: define W4 visual-asset policy and add only high-value institution/scholar/diagram visuals; then prepare W6 deployment/broken-link/accessibility checks
 
 ## Directions
 
