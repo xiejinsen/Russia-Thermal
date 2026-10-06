@@ -27,7 +27,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
-- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting and strong domestic UTVC controls.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; strong domestic UTVC controls.
 - next_question_or_gate: Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
@@ -41,7 +41,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
-- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware.
+- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
 - next_question_or_gate: Can MPEI-informed aging labels/priors improve discrimination of capillary/wetting degradation from oxidation, fill-state and package/interface aging in a lab-ground-truth dataset?
 
 ### DIR-LHP-KNOWLEDGE-RESERVE
