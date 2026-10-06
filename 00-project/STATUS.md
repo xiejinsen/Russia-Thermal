@@ -8,8 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-current_phase: web W2 design-system skeleton implemented on main / Astro build gate added
-next_action: stabilize W2 primitives, card contracts, layout/navigation and fixture states; then build real Overview and Partner Portfolio view models/pages
+current_phase: web W2 real-data integration + institution/scholar relationship pages PASS
+next_action: model/decide durable partner-priority semantics, then add Evidence Explorer and Russia-vs-China landscape pages on normalized contracts
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
