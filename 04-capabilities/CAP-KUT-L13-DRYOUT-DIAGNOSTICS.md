@@ -11,6 +11,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+capability_family: ENABLING
+capability_topics:
+- BOILING_DRYOUT_PHYSICS
+- SENSING_DIAGNOSTICS
 
 Capability statement:
 Lab 1.3 demonstrates current dielectric boiling-crisis / dry-spot diagnostic capability with high-speed thermal/optical analysis and current failure-mechanism research.
