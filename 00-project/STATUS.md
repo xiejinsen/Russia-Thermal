@@ -18,9 +18,9 @@ graph_audit_report: analysis/graph-evidence-chain-audit_2026_10_07.md
 semantic_orphan_sources: 0
 semantic_orphan_claims: 0
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
-detail_page_design_status: INSTITUTION_DIRECTION_SCHOLAR_SOURCE_FUNCTIONAL_CLOSED
+detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: complete Claim and Capability detail routes using the frozen Detail Page Design System; preserve canonical graph semantics and evidence boundaries; do not reopen broad discovery
+next_action: audit and consolidate global navigation, explorer-to-detail discoverability, and Leadership Overview information hierarchy using the now-complete detail graph; avoid visual-only redesign
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
