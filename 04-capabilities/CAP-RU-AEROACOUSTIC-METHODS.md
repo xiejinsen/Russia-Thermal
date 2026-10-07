@@ -11,6 +11,10 @@ maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- AEROACOUSTICS
+- SENSING_DIAGNOSTICS
 
 Capability statement:
 Russian TsAGI/PNRPU nodes provide strong aeroacoustic measurement, source-diagnosis and noise-control methods.
