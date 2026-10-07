@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: perform a 45-paper reading-depth closure audit: assign all remaining papers to Tier-B or Reference Only, reconcile any decision-critical legacy citations not yet canonicalized, and decide whether Deep Read coverage is sufficient to resume web detail-page consolidation; do not reopen broad discovery
+- phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
+- next: resume bounded web detail-page design-system consolidation; Tier-B and SHOULD_PROMOTE lineage backfill are non-blocking; do not reopen broad discovery unless a decision-critical contradiction appears
 
 ## Directions
 
@@ -27,7 +27,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: Mechanism-resolved laboratory ground truth only: reversible/irreversible crisis classes, confinement-dependent crisis-mode transitions and topology-linked drying-front behavior. Generic mesh/surface treatment and dryout-mitigation hardware are explicitly excluded. The residual survives only if these labels expose repeatable state information beyond strong internal-sensing, saturation-state, boiling-aware vapor-chamber and China engineering baselines.
-- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; physics-informed transient time-to-dryout/time-to-rewet/hysteresis models with spatiotemporal wick saturation; internal vapor temperature/pressure ground-truth experiments; boiling-aware vapor-chamber dryout models with two-phase relative permeability; China capillary-fed dryout/rewetting and modified-mesh engineering; SJTU short-flow counter-flow microchannels explicitly targeting premature downstream dryout with large CHF/HTC gains and lower pressure-drop/pumping-power; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; physics-informed transient time-to-dryout/time-to-rewet/hysteresis models with spatiotemporal wick saturation; internal vapor temperature/pressure ground-truth experiments; boiling-aware vapor-chamber dryout models with two-phase relative permeability; China capillary-fed dryout/rewetting and modified-mesh engineering; China 3D pore-scale wick dryout modeling; independent HFE-7100 confinement experiments down to 1 mm; SJTU short-flow counter-flow microchannels explicitly targeting premature downstream dryout with large CHF/HTC gains and lower pressure-drop/pumping-power; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
 - next_question_or_gate: Can Russia-informed laboratory mechanism labels explain a repeatable failure-state residual that is not already captured by internal temperature/pressure ground truth, saturation-state dynamics or boiling-aware VC hydrodynamics, and can that residual be mapped to Tier A/B phone observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
@@ -48,7 +48,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: WATCH
 - phone_maturity: LOW
 - residual_or_use: expert/model/failure-analysis reserve plus active-capillary / orientation-tolerance watch; not a standalone device-investment thesis.
-- strongest_baseline: China/current global miniaturized heat-pipe and LHP engineering plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
+- strongest_baseline: China/current global miniaturized heat-pipe and LHP engineering, including ultra-thin dual-evaporator electronics cooling and explicit multi-evaporator capillary / cumulative-pressure-drop failure-boundary experiments, plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
 - next_question_or_gate: a specific non-public control point from the Russian knowledge / active-capillary stack materially improves phone-scale topology or orientation robustness beyond strong domestic/global capability.
 
 ### DIR-MPEI-ORDERED-WICK-HOLD
@@ -59,11 +59,11 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - next_question_or_gate: decision-grade pore geometry, permeability/capillary data, fabrication route and sub-mm device evidence.
 
 ### DIR-SURFACE-PROCESS-CHALLENGER
-- lane: STAGE0_CHALLENGER
+- lane: HOLD
 - phone_maturity: LOW
-- residual_or_use: TPU-specific process execution discipline only, plus one unproven function-first hypothesis: a spatial wetting pattern may create confined routing / rewetting behavior that strong uniform laser, oxidation or chemical treatments cannot reproduce. Open-surface durability is not counted as sealed-VC transfer evidence.
-- strongest_baseline: China target-system UTVC evidence includes optimized laser-treated wick plus direct thermal-oxidation / chemical-corrosion / laser-etching comparison, with non-laser treatment matching laser maximum heat-transfer power and thermal oxidation judged best overall; generic biphilic / patterned-wettability prior art remains crowded; BIT adds current ultra-thin VC / capillary characterization.
-- next_question_or_gate: In one bounded phone-like coupon / mini-VC test, can a TPU-inspired spatial pattern survive thin-copper fabrication, vacuum bake, sealing and fluid exposure and then deliver incremental confined rewetting / dryout value beyond strong uniform-treatment references?
+- residual_or_use: TPU-specific process execution / surface-diagnostics competence only. Generic laser processing, generic biphilic surfaces and spatial wettability patterning inside an ultra-thin sealed VC are excluded from the differentiation thesis after restoration of a 0.4 mm China SWM-WP comparator.
+- strongest_baseline: China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC geometry benchmark, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
+- next_question_or_gate: Reopen only if TPU demonstrates a matched process-specific phone advantage such as materially better low-outgassing durability, transient rewetting, manufacturing yield or diagnostics under the same sub-0.4 mm sealed-device constraints.
 
 ## Mandatory guardrails
 - Broad Russia superiority claims remain killed unless explicitly reopened by a Decision Event.
