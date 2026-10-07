@@ -35,6 +35,13 @@ function idsIn(html) {
   return new Set([...html.matchAll(/\sid=["']([^"']+)["']/g)].map((m) => m[1]));
 }
 
+function decodeHrefEntities(value) {
+  return value
+    .replace(/&#38;/g, '&')
+    .replace(/&#x26;/gi, '&')
+    .replace(/&amp;/g, '&');
+}
+
 const files = walk(root).filter((file) => file.endsWith('.html'));
 
 for (const file of files) {
@@ -49,17 +56,18 @@ for (const file of files) {
 
   for (const match of auditableHtml.matchAll(/\shref=["']([^"']+)["']/g)) {
     const raw = match[1].trim();
-    if (!raw || /^(https?:|mailto:|tel:|javascript:)/i.test(raw)) continue;
+    const decodedRaw = decodeHrefEntities(raw);
+    if (!decodedRaw || /^(https?:|mailto:|tel:|javascript:)/i.test(decodedRaw)) continue;
 
-    if (raw.startsWith('#')) {
-      const fragment = decodeURIComponent(raw.slice(1));
+    if (decodedRaw.startsWith('#')) {
+      const fragment = decodeURIComponent(decodedRaw.slice(1));
       if (fragment && !localIds.has(fragment)) errors.push(sourceRoute + ': missing local anchor #' + fragment);
       continue;
     }
 
     let url;
     try {
-      url = new URL(raw, 'https://example.invalid' + sourceRoute);
+      url = new URL(decodedRaw, 'https://example.invalid' + sourceRoute);
     } catch {
       errors.push(sourceRoute + ': invalid href ' + raw);
       continue;
