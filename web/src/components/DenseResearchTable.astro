@@ -1,0 +1,85 @@
+---
+interface Props {
+  minWidth?: string;
+  maxHeight?: string;
+  label?: string;
+}
+const {
+  minWidth = '64rem',
+  maxHeight = 'calc(100vh - 13.5rem)',
+  label = 'Research data table'
+} = Astro.props;
+---
+
+<div class="dense-table-shell" style={`--table-min:${minWidth};--table-max-h:${maxHeight}`}>
+  <table aria-label={label}>
+    <thead>
+      <slot name="head" />
+    </thead>
+    <tbody>
+      <slot />
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .dense-table-shell{
+    max-height:var(--table-max-h);
+    margin-top:12px;
+    overflow:auto;
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    background:var(--surface);
+    box-shadow:var(--shadow-1);
+  }
+  table{
+    width:100%;
+    min-width:var(--table-min);
+    border-collapse:separate;
+    border-spacing:0;
+    table-layout:fixed;
+  }
+  thead{
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  :global(th){
+    padding:9px 10px;
+    border-bottom:1px solid #cbdce7;
+    background:#eef6fb;
+    color:#47667d;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-align:left;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  :global(td){
+    padding:8px 10px;
+    border-bottom:1px solid #e6eef4;
+    background:#fff;
+    color:#405f74;
+    font-size:11px;
+    line-height:1.35;
+    vertical-align:middle;
+  }
+  :global(tbody tr:nth-child(even) td){background:#fbfdfe}
+  :global(tbody tr:hover td){background:#f2f8fc}
+  :global(tbody tr:last-child td){border-bottom:0}
+  :global(tbody tr[hidden]){display:none}
+  :global(td a){
+    color:inherit;
+    text-decoration:none;
+  }
+  :global(td a:hover),
+  :global(td a:focus-visible){
+    color:var(--accent-vivid);
+    text-decoration:underline;
+    text-underline-offset:.15em;
+  }
+  @media(max-width:760px){
+    .dense-table-shell{max-height:calc(100vh - 12rem)}
+  }
+</style>
