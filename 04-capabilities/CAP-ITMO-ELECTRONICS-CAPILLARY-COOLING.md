@@ -8,6 +8,10 @@ maturity: RESEARCH_PROGRAM
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- VC_HEAT_PIPE
+- CAPILLARY_WICK
 
 Capability statement:
 ITMO demonstrates current device/electronics thermal-engineering capability including capillary cooling of semiconductor crystals, thermal analysis and cooling-system design.
