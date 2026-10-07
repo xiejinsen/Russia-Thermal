@@ -1,87 +1,201 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import StatStrip from '../components/StatStrip.astro';
-import EvidenceCard from '../components/EvidenceCard.astro';
-import EvidenceFilterPanel from '../components/EvidenceFilterPanel.astro';
-import { actors, capabilities } from '../data/load-normalized';
+import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import DenseResearchTable from '../components/DenseResearchTable.astro';
 import { buildEvidenceExplorerVM } from '../view-models/builders';
+import { directionTitle } from '../view-models/helpers';
 
 const vm = buildEvidenceExplorerVM();
-const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 
-function metadata(model: (typeof vm.records)[number]) {
-  const capabilityIds = new Set(model.linkedCapabilities.map((capability) => capability.id));
-  const caps = capabilities.filter((capability) => capabilityIds.has(capability.id));
-  const institutions = [...new Set(caps.map((capability) => actorById.get(capability.actorId)?.name).filter(Boolean))] as string[];
-  const people = [...new Set(caps.flatMap((capability) => capability.keyPeopleIds).map((id) => actorById.get(id)?.name).filter(Boolean))] as string[];
-  const directions = model.linkedDirections.map((direction) => direction.id);
+const sourceTypes = [...new Set(vm.records.map((record) => record.sourceType))].sort();
+const countries = [...new Set(vm.records.map((record) => record.countryContext).filter((value): value is string => Boolean(value)))].sort();
+const years = [...new Set(vm.records.map((record) => record.year).filter((value): value is number => typeof value === 'number'))].sort((a,b)=>b-a);
+const usageRoles = [...new Set(vm.records.map((record) => record.usageRole).filter((value): value is string => Boolean(value)))].sort();
+const directionOptions = [...new Map(
+  vm.records.flatMap((record) => record.linkedDirections).map((direction) => [direction.id, direction.title])
+).entries()]
+  .map(([value,label])=>({value,label}))
+  .sort((a,b)=>a.label.localeCompare(b.label));
+
+const supportCount = vm.records.filter((record) => record.supportingClaims.length > 0).length;
+const pressureCount = vm.records.filter((record) => record.contradictingClaims.length > 0).length;
+
+const records = vm.records.map((record) => {
+  const directionIds = record.linkedDirections.map((direction) => direction.id);
+  const relation = [
+    ...(record.supportingClaims.length ? ['SUPPORT'] : []),
+    ...(record.contradictingClaims.length ? ['PRESSURE'] : []),
+    ...(!record.supportingClaims.length && !record.contradictingClaims.length ? ['CONTEXT_ONLY'] : [])
+  ];
+  const isPaper = record.id.startsWith('PAPER-');
 
   return {
-    sourceType: model.sourceType,
-    country: model.countryContext ?? '',
-    year: model.year ? String(model.year) : '',
-    institution: institutions.join('|'),
-    person: people.join('|'),
-    direction: directions.join('|'),
-    hasSupport: String(model.supportingClaims.length > 0),
-    hasContradict: String(model.contradictingClaims.length > 0),
+    ...record,
+    directionIds,
+    relation,
+    isPaper,
     search: [
-      model.title,
-      ...model.authors,
-      model.venue ?? '',
-      model.countryContext ?? '',
-      ...model.findings,
-      model.boundary ?? '',
-      ...model.supportingClaims.map((claim) => claim.proposition),
-      ...model.contradictingClaims.map((claim) => claim.proposition),
-      ...institutions,
-      ...people,
-      ...directions
+      record.id,
+      record.title,
+      record.sourceType,
+      record.usageRole ?? '',
+      record.venue ?? '',
+      ...record.authors,
+      record.countryContext ?? '',
+      ...record.findings,
+      record.boundary ?? '',
+      ...record.supportingClaims.map((claim) => `${claim.id} ${claim.proposition}`),
+      ...record.contradictingClaims.map((claim) => `${claim.id} ${claim.proposition}`),
+      ...record.linkedCapabilities.map((capability) => `${capability.id} ${capability.statement}`),
+      ...record.institutionNames,
+      ...record.peopleNames,
+      ...record.linkedDirections.map((direction) => `${direction.id} ${direction.title}`)
     ].join(' ')
   };
-}
+});
 ---
 
 <BaseLayout title="Russia-Thermal — Evidence Explorer" description={vm.summary}>
   <SiteHeader slot="header" />
-  <section class="hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>{vm.title}</h1>
-    <p>{vm.summary}</p>
-  </section>
 
-  <StatStrip items={[
-    { label: 'Evidence records', value: vm.totalEvidence },
-    { label: 'Claims', value: vm.totalClaims }
-  ]} />
+  <div data-explorer-root>
+    <section class="hero compact-hero">
+      <div>
+        <p class="eyebrow">{vm.eyebrow} · dense explorer</p>
+        <h1>{vm.title}</h1>
+        <p>{vm.summary}</p>
+      </div>
+      <div class="summary-chips">
+        <span>{vm.totalEvidence} evidence records</span>
+        <span>{supportCount} support-bearing</span>
+        <span>{pressureCount} pressure-bearing</span>
+      </div>
+    </section>
 
-  <EvidenceFilterPanel filters={vm.filters} />
+    <ExplorerToolbar
+      sticky
+      compact
+      total={records.length}
+      searchPlaceholder="Search source, author, institution, person, Claim, Capability…"
+      filters={[
+        {
+          key:'sourceType',
+          label:'Type',
+          options:sourceTypes.map((value)=>({value,label:value}))
+        },
+        {
+          key:'country',
+          label:'Country',
+          options:countries.map((value)=>({value,label:value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value}))
+        },
+        {
+          key:'year',
+          label:'Year',
+          options:years.map((value)=>({value:String(value),label:String(value)}))
+        },
+        {
+          key:'usageRole',
+          label:'Role',
+          options:[
+            ...usageRoles.map((value)=>({value,label:value})),
+            {value:'NO_ROLE',label:'Claim-linked / no context role'}
+          ]
+        },
+        {
+          key:'relation',
+          label:'Relation',
+          options:[
+            {value:'SUPPORT',label:'Supports Claim'},
+            {value:'PRESSURE',label:'Pressures Claim'},
+            {value:'CONTEXT_ONLY',label:'Context only'}
+          ]
+        },
+        {
+          key:'direction',
+          label:'Direction',
+          options:directionOptions
+        }
+      ]}
+    />
 
-  <section class="stack" aria-label="Evidence records">
-    {vm.records.map((model) => {
-      const data = metadata(model);
-      return (
-        <div
-          data-evidence-record
-          data-source-type={data.sourceType}
-          data-country={data.country}
-          data-year={data.year}
-          data-institution={data.institution}
-          data-person={data.person}
-          data-direction={data.direction}
-          data-has-support={data.hasSupport}
-          data-has-contradict={data.hasContradict}
-          data-search={data.search}
+    <DenseResearchTable minWidth="82rem" maxHeight="calc(100vh - 13.8rem)" label="Evidence research index">
+      <tr slot="head">
+        <th style="width:39%">Source</th>
+        <th style="width:10%">Type</th>
+        <th style="width:6%">Year</th>
+        <th style="width:7%">Country</th>
+        <th style="width:12%">Role</th>
+        <th style="width:6%">Support</th>
+        <th style="width:6%">Pressure</th>
+        <th style="width:14%">Directions</th>
+      </tr>
+
+      {records.map((record) => (
+        <tr
+          data-explorer-record
+          data-source-type={record.sourceType}
+          data-country={record.countryContext ?? ''}
+          data-year={record.year ? String(record.year) : ''}
+          data-usage-role={record.usageRole ?? 'NO_ROLE'}
+          data-relation={record.relation.join('|')}
+          data-direction={record.directionIds.join('|')}
+          data-search={record.search}
         >
-          <EvidenceCard model={model} />
-        </div>
-      );
-    })}
-  </section>
-</BaseLayout>
+          <td class="source-cell">
+            <div class="source-main">
+              {record.isPaper ? (
+                <a class="title" href={href(`/papers/${record.id}`)}>{record.title}</a>
+              ) : (
+                <a class="title" href={record.primaryUrl} target="_blank" rel="noopener noreferrer">{record.title} ↗</a>
+              )}
+              <div class="subline">
+                <span>{record.id}</span>
+                {record.venue && <span>· {record.venue}</span>}
+                {record.authors.length > 0 && <span>· {record.authors.slice(0,2).join(', ')}{record.authors.length > 2 ? ' et al.' : ''}</span>}
+                {record.isPaper && <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>}
+              </div>
+            </div>
+          </td>
+          <td><span class="type-pill">{record.sourceType}</span></td>
+          <td class="mono">{record.year ?? '—'}</td>
+          <td><span class="country-pill">{record.countryContext ?? '—'}</span></td>
+          <td>{record.usageRole ? <span class="role-pill">{record.usageRole}</span> : <span class="muted">Claim-linked</span>}</td>
+          <td class="number">{record.supportingClaims.length}</td>
+          <td class="number pressure">{record.contradictingClaims.length}</td>
+          <td>
+            {record.linkedDirections.length ? (
+              <div class="direction-cell" title={record.linkedDirections.map((direction)=>direction.title).join(' · ')}>
+                <b>{record.linkedDirections.length}</b>
+                <span>{record.linkedDirections.slice(0,1).map((direction)=>direction.title || directionTitle(direction.id)).join('')}</span>
+              </div>
+            ) : <span class="muted">0</span>}
+          </td>
+        </tr>
+      ))}
+    </DenseResearchTable>
+  </div>
 
-<style>
-  .stack { display: grid; gap: var(--space-6); margin-top: var(--space-8); }
-  [hidden] { display: none !important; }
-</style>
+  <style>
+    .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+    .compact-hero>div:first-child{max-width:72rem}
+    .compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}
+    .compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:84ch;color:var(--text-muted);line-height:1.55}
+    .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:20rem}
+    .summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
+
+    .source-main{display:grid;gap:3px;min-width:0}
+    .source-main .title{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;color:#203f57;font-size:11.5px;font-weight:750;line-height:1.32}
+    .subline{display:flex;gap:4px;min-width:0;overflow:hidden;color:#718696;font-size:8.5px;white-space:nowrap}
+    .subline span{overflow:hidden;text-overflow:ellipsis}.subline a{flex:0 0 auto;color:var(--accent-vivid);font-weight:800}
+    .mono{font-variant-numeric:tabular-nums}
+    .type-pill,.country-pill,.role-pill{display:inline-flex;max-width:100%;padding:3px 6px;border-radius:999px;font-size:8px;font-weight:850;white-space:nowrap}
+    .type-pill{background:#eef6fb;color:#315f80}.country-pill{background:#eef4f8;color:#47667d}.role-pill{overflow:hidden;background:#f3f0fb;color:#60558a;text-overflow:ellipsis}
+    .number{font-size:13px;font-weight:850;color:#0b67b2;text-align:center}.number.pressure{color:#a6662d}
+    .direction-cell{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px}.direction-cell b{color:#0b67b2;font-size:12px}.direction-cell span{display:block;overflow:hidden;color:#668092;font-size:8px;text-overflow:ellipsis;white-space:nowrap}
+    .muted{color:#8798a5;font-size:9px}
+    @media(max-width:850px){.compact-hero{align-items:flex-start;flex-direction:column}.summary-chips{justify-content:flex-start;min-width:0}}
+  </style>
+</BaseLayout>
