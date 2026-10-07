@@ -9,6 +9,11 @@ maturity: RESEARCH_PROGRAM
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- LOOP_HEAT_PIPE
+- CAPILLARY_WICK
+- PASSIVE_PHASE_CHANGE
 
 Capability statement:
 UrFU demonstrates current loop-heat-pipe and two-phase thermal-control research capability spanning capillary structures, vapor generation, nanofluid phase change, thermosyphons and performance characterization.
