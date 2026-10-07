@@ -71,8 +71,9 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       ]}
     /></div>
     <div class="claim-list">
-      {vm.claims.map((claim)=><a href={href(claim.href)}><div><span>{claim.status} · {claim.confidence}</span><b>{claim.proposition}</b></div><strong>Open claim →</strong></a>)}
+      {vm.claims.slice(0, 8).map((claim)=><a href={href(claim.href)}><div><span>{claim.status} · {claim.confidence}</span><b>{claim.proposition}</b></div><strong>Open claim →</strong></a>)}
     </div>
+    {vm.claims.length > 8 && <p class="representative-note">Showing 8 representative Claims. Use “View all Claims” for the complete Direction-linked set.</p>}
   </section>
 
   <section class="section">
@@ -84,7 +85,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       ]}
     /></div>
     <div class="evidence-list">
-      {vm.evidence.map((item)=><article>
+      {vm.evidence.slice(0, 6).map((item)=><article>
         <div><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.venue ? ` · ${item.venue}` : ''}</span><h3>{item.title}</h3>{item.findings[0] && <p>{item.findings[0]}</p>}</div>
         <div class="evidence-actions">
           {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}
@@ -92,6 +93,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
         </div>
       </article>)}
     </div>
+    {vm.evidence.length > 6 && <p class="representative-note">Showing 6 representative sources. Use “View all Evidence” for the complete Direction-linked source set.</p>}
   </section>
 
   <section class="section">
@@ -116,7 +118,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     .cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}.cap-grid article{padding:16px;border:1px solid #d9e7f1;border-radius:11px;background:white}.cap-grid .cap-title{display:block;color:inherit;font-size:13px;font-weight:800;line-height:1.5;text-decoration:none}.cap-grid .cap-title:hover,.cap-grid .cap-title:focus-visible{color:#0b67b2;text-decoration:underline;text-underline-offset:.16em}.cap-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0 0}.cap-grid dt{font-size:9px;color:#6b8192;text-transform:uppercase}.cap-grid dd{margin:2px 0 0;font-size:11px;font-weight:800}
     .claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 20px;border-bottom:1px solid #e4edf4;text-decoration:none}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:#0b67b2;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.45}.claim-list strong{white-space:nowrap;font-size:11px;color:#0b67b2}
     .evidence-list article{display:flex;justify-content:space-between;gap:24px;padding:17px 20px;border-bottom:1px solid #e4edf4}.evidence-list span{font-size:9px;color:#687f90}.evidence-list h3{margin:5px 0 7px;font-size:14px}.evidence-list p{max-width:900px;margin:0;color:#5b7487;font-size:12px;line-height:1.55}.evidence-list a{white-space:nowrap;font-size:11px;color:#0b67b2;font-weight:800}.evidence-actions{display:flex;gap:12px;align-items:flex-start}
-    .decision-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:22px;padding:16px 20px;border-bottom:1px solid #e4edf4}.decision-list article>div{display:grid;gap:4px}.decision-list span{font-size:9px;color:#657e91}.decision-list b{font-size:12px}.decision-list p{margin:0;color:#526d80;font-size:12px;line-height:1.55}.decision-list small{grid-column:2;color:#7a6a53}.empty{padding:18px 20px;color:#6b8191}
+    .representative-note{margin:0;padding:10px 20px 14px;color:#6b8191;font-size:11px}.decision-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:22px;padding:16px 20px;border-bottom:1px solid #e4edf4}.decision-list article>div{display:grid;gap:4px}.decision-list span{font-size:9px;color:#657e91}.decision-list b{font-size:12px}.decision-list p{margin:0;color:#526d80;font-size:12px;line-height:1.55}.decision-list small{grid-column:2;color:#7a6a53}.empty{padding:18px 20px;color:#6b8191}
     @media(max-width:800px){.direction-hero,.pyramid,.actor-grid,.cap-grid{grid-template-columns:1fr}.actor-column:first-child{border-right:0;border-bottom:1px solid #e0ebf3}.section-head,.evidence-list article{flex-direction:column}.decision-list article{grid-template-columns:1fr}.decision-list small{grid-column:1}}
   </style>
 </BaseLayout>
