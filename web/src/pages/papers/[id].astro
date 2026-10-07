@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
-import PaperDeepRead from '../../components/PaperDeepRead.astro';
+import TechnicalDeepRead from '../../components/TechnicalDeepRead.astro';
 import { buildPaperPageVM, paperIds } from '../../view-models/builders';
 
 export function getStaticPaths() {
@@ -50,7 +50,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     </article>
   </section>
 
-  {vm.deepRead && <PaperDeepRead model={vm.deepRead} />}
+  {vm.deepRead && <TechnicalDeepRead model={vm.deepRead} kind="Paper" />}
 
   <section class="section">
     <div class="section-head">
