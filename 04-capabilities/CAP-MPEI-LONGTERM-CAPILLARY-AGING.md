@@ -12,6 +12,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+capability_family: ENABLING
+capability_topics:
+- RELIABILITY_AGING
+- CAPILLARY_WICK
+- HEALTH_MONITORING
 
 Capability statement:
 MPEI demonstrates long-duration two-phase engineered-surface operation with post-operation capillary-state assessment and a current external thermosyphon engineering path.
