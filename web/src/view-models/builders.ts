@@ -1069,6 +1069,7 @@ export function buildClaimExplorerVM(): ClaimExplorerVM {
           contradictingCount: claim.contradictingSourceIds.length,
           directionCount: linkedDirections.length,
           directionIds: linkedDirections.map((direction) => direction.id),
+          capabilityIds: linkedCapabilities.map((capability) => capability.id),
           href: `/claims/${claim.id}`
         };
       })
@@ -1167,6 +1168,9 @@ export function buildPaperExplorerVM(): PaperExplorerVM {
         claimCount: card.supportingClaims.length + card.contradictingClaims.length,
         directionCount: card.linkedDirections.length,
         directionIds: card.linkedDirections.map((direction) => direction.id),
+        capabilityIds: card.linkedCapabilities.map((capability) => capability.id),
+        supportingClaimIds: card.supportingClaims.map((claim) => claim.id),
+        pressureClaimIds: card.contradictingClaims.map((claim) => claim.id),
         deepReadLevel: deepReadById.get(item.id)?.deepReadLevel
           ? humanize(deepReadById.get(item.id)!.deepReadLevel)
           : undefined,
