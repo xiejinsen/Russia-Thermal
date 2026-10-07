@@ -54,6 +54,7 @@ const records=vm.records.map((claim)=>({
       sticky
       compact
       total={records.length}
+      urlFilterKeys={['capability']}
       searchPlaceholder="Search proposition, Claim ID, role, Direction…"
       filters={[
         {
@@ -96,6 +97,7 @@ const records=vm.records.map((claim)=>({
           data-confidence={claim.confidence}
           data-role={claim.roleClass}
           data-direction={claim.directionIds.join('|')}
+          data-capability={claim.capabilityIds.join('|')}
           data-search={claim.search}
         >
           <td class="claim-cell">
