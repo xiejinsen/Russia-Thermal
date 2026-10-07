@@ -200,6 +200,8 @@ export interface EvidenceCardVM {
   linkedDirections: DirectionCardVM[];
   institutionNames: string[];
   peopleNames: string[];
+  institutionIds: string[];
+  peopleIds: string[];
 }
 
 export interface EvidenceExplorerVM {
@@ -375,6 +377,8 @@ export interface ClaimExplorerVM {
     directionCount: number;
     directionIds: string[];
     capabilityIds: string[];
+    institutionIds: string[];
+    peopleIds: string[];
     href: string;
   }>;
 }
@@ -419,6 +423,8 @@ export interface PaperExplorerVM {
     capabilityIds: string[];
     supportingClaimIds: string[];
     pressureClaimIds: string[];
+    institutionIds: string[];
+    peopleIds: string[];
     deepReadLevel?: string;
     reviewStatus?: string;
     href: string;
