@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import TechnicalDeepRead from '../../components/TechnicalDeepRead.astro';
+import { buildPatentPageVM, patentIds } from '../../view-models/builders';
+
+export function getStaticPaths() {
+  return patentIds().map((id) => ({ params: { id } }));
+}
+
+const id = Astro.params.id!;
+const vm = buildPatentPageVM(id);
+if (!vm) throw new Error(`Unknown patent: ${id}`);
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout title={`Russia-Thermal — ${vm.title}`} description={vm.findings[0] ?? vm.title}>
+  <SiteHeader slot="header" />
+
+  <section class="patent-hero">
+    <p class="eyebrow">Patent detail · {vm.id}</p>
+    <h1>{vm.title}</h1>
+    <div class="metadata">
+      {vm.deepRead && <span>{vm.deepRead.level} Deep Read</span>}
+      {vm.year && <span>{vm.year}</span>}
+      {vm.countryContext && <span>{vm.countryContext}</span>}
+    </div>
+    {vm.authors.length > 0 && <p class="authors"><b>Inventors:</b> {vm.authors.join(', ')}</p>}
+    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">Open public patent record ↗</a>
+  </section>
+
+  <section class="read-grid">
+    <article class="main-read">
+      <span>CLAIM-REVIEWED SCOPE</span>
+      <h2>What this patent actually covers in the project record</h2>
+      {vm.findings.length ? (
+        <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
+      ) : (
+        <p>No direct claim-reviewed findings have been normalized yet.</p>
+      )}
+    </article>
+
+    <article class="boundary-card">
+      <span>LEGAL / TECHNICAL BOUNDARY</span>
+      <h2>What this review does not establish</h2>
+      <p>{vm.boundary ?? 'No explicit boundary has been normalized yet.'}</p>
+    </article>
+  </section>
+
+  {vm.deepRead && <TechnicalDeepRead model={vm.deepRead} kind="Patent" />}
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>CLAIMS</span><h2>How this patent enters the evidence graph</h2></div>
+      <p>Patent evidence is used as technical prior art and control-point pressure, not as a legal FTO opinion.</p>
+    </div>
+    <div class="claims-grid">
+      <div>
+        <h3>Supporting / background</h3>
+        {vm.supportingClaims.length ? vm.supportingClaims.map((claim) => (
+          <a href={href(claim.href)}>
+            <span>{claim.status} · {claim.confidence}</span>
+            <b>{claim.proposition}</b>
+          </a>
+        )) : <p class="empty">No supporting Claim currently links this patent.</p>}
+      </div>
+      <div>
+        <h3>Contradicting / pressure</h3>
+        {vm.contradictingClaims.length ? vm.contradictingClaims.map((claim) => (
+          <a href={href(claim.href)}>
+            <span>{claim.status} · {claim.confidence}</span>
+            <b>{claim.proposition}</b>
+          </a>
+        )) : <p class="empty">No contradicting Claim currently links this patent.</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>STRATEGIC IMPACT</span><h2>Capabilities and Directions constrained or supported by this patent</h2></div>
+    </div>
+
+    <div class="impact-grid">
+      <div>
+        <h3>Directions</h3>
+        {vm.directions.length ? vm.directions.map((direction) => (
+          <a href={href(`/directions/${direction.id}`)}>
+            <b>{direction.title}</b>
+            <span>{direction.recommendation} · {direction.lane.label}</span>
+          </a>
+        )) : <p class="empty">No Direction is currently linked.</p>}
+      </div>
+
+      <div>
+        <h3>Capabilities</h3>
+        {vm.capabilities.length ? vm.capabilities.map((capability) => (
+          <a href={href(`/capabilities/${capability.id}`)}>
+            <b>{capability.statement}</b>
+            <span>{capability.maturity} · {capability.evidenceConfidence}</span>
+          </a>
+        )) : <p class="empty">No Capability is currently linked.</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><span>PEOPLE & ORGS</span><h2>Institutions and scholars connected through the evidence graph</h2></div>
+    </div>
+
+    <div class="impact-grid">
+      <div>
+        <h3>Institutions / labs</h3>
+        {vm.institutions.length ? vm.institutions.map((institution) => (
+          <a href={href(institution.href ?? `/institutions/${institution.id}`)}>
+            <b>{institution.name}</b>
+            <span>{institution.summary}</span>
+          </a>
+        )) : <p class="empty">No normalized institution link.</p>}
+      </div>
+
+      <div>
+        <h3>Scholars</h3>
+        {vm.scholars.length ? vm.scholars.map((scholar) => (
+          <a href={href(scholar.href ?? `/scholars/${scholar.id}`)}>
+            <b>{scholar.name}</b>
+            <span>{scholar.affiliation}</span>
+          </a>
+        )) : <p class="empty">No normalized scholar link.</p>}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .patent-hero{padding:28px;border:1px solid #cfe1ee;border-radius:17px;background:#fff;box-shadow:0 10px 30px rgba(42,96,140,.06)}
+    .patent-hero h1{max-width:1100px;margin:6px 0 12px;font-size:25px;line-height:1.25;letter-spacing:-.03em}
+    .metadata{display:flex;gap:7px;flex-wrap:wrap}.metadata span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:10px;font-weight:800}
+    .authors{margin:14px 0 0;color:#60788b;font-size:13px}.source-link{display:inline-block;margin-top:17px;color:#0b67b2;font-size:12px;font-weight:850}
+    .read-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:15px;margin-top:18px}.read-grid article{padding:20px;border:1px solid #d3e3ee;border-radius:14px;background:#fff}
+    .read-grid article>span,.section-head span{font-size:10px;color:#0b67b2;font-weight:850;letter-spacing:.08em}.read-grid h2{font-size:18px;margin:5px 0 10px}
+    .main-read ul{margin:0;padding-left:20px;color:#466276;font-size:13px;line-height:1.7}.boundary-card{background:#fffaf4!important}.boundary-card p{color:#6c5c48;font-size:13px;line-height:1.65}
+    .section{margin-top:18px;border:1px solid #d3e3ee;border-radius:14px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:25px;padding:16px 18px;border-bottom:1px solid #e0ebf3;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:18px}.section-head p{max-width:560px;margin:0;color:#60788b;font-size:12px}
+    .claims-grid,.impact-grid{display:grid;grid-template-columns:1fr 1fr}.claims-grid>div,.impact-grid>div{padding:16px}.claims-grid>div+div,.impact-grid>div+div{border-left:1px solid #e5edf3}
+    .claims-grid h3,.impact-grid h3{font-size:12px;color:#587084}.claims-grid a,.impact-grid a{display:grid;gap:4px;padding:10px 0;border-top:1px solid #edf2f6;text-decoration:none;color:inherit}
+    .claims-grid a span,.impact-grid a span{font-size:10px;color:#6c8293}.claims-grid a b,.impact-grid a b{font-size:12px;line-height:1.45}
+    .empty{color:#718697;font-size:12px}
+    @media(max-width:800px){.read-grid,.claims-grid,.impact-grid{grid-template-columns:1fr}.claims-grid>div+div,.impact-grid>div+div{border-left:0;border-top:1px solid #e5edf3}}
+  </style>
+</BaseLayout>
