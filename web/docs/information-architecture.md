@@ -311,7 +311,7 @@ Target pattern:
 Filter state should become shareable / reload-safe URL state as the Explorer interaction layer matures.
 
 ### Dense Explorer rule
-High-cardinality objects such as Papers and Claims use spreadsheet-like dense tables, not vertically expensive cards.
+High-cardinality objects such as Papers, Claims and Evidence use spreadsheet-like dense tables, not vertically expensive cards.
 
 Default desktop interaction:
 - one row per object;
@@ -327,3 +327,25 @@ On narrow viewports, preserve the single filter row using horizontal overflow be
 
 Principle:
 **high-cardinality index = dense Explorer; low-cardinality strategic set = cards; single-object understanding = detail page.**
+
+
+### Readable prose vs compact metadata
+
+Information density must not make explanatory research text difficult to read.
+
+Use compact typography for:
+- IDs;
+- badges;
+- status / confidence labels;
+- table metadata;
+- review basis;
+- counts.
+
+Use clearly larger reading typography for:
+- Deep Read Q1-Q10 explanations;
+- Why-this-matters summaries;
+- evidence-boundary prose;
+- strategic rationale and technical interpretation.
+
+Rule:
+**metadata may be dense; explanatory prose must remain comfortably readable.**
