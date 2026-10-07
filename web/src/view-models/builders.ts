@@ -27,7 +27,8 @@ import type {
   ClaimExplorerVM,
   ClaimPageVM,
   PaperExplorerVM,
-  PaperPageVM
+  PaperPageVM,
+  PatentPageVM
 } from '../types/view-models';
 import {
   actorHref,
@@ -1295,6 +1296,10 @@ export function paperIds(): string[] {
   return evidence.filter((item) => item.id.startsWith('PAPER-')).map((item) => item.id);
 }
 
+export function patentIds(): string[] {
+  return evidence.filter((item) => item.id.startsWith('PATENT-')).map((item) => item.id);
+}
+
 export function buildPaperExplorerVM(): PaperExplorerVM {
   const papers = evidence
     .filter((item) => item.id.startsWith('PAPER-'))
@@ -1392,3 +1397,63 @@ export function buildPaperPageVM(id: string): PaperPageVM | null {
       : undefined
   };
 }
+
+export function buildPatentPageVM(id: string): PatentPageVM | null {
+  const item = evidenceById.get(id);
+  if (!item || !item.id.startsWith('PATENT-')) return null;
+
+  const card = evidenceCard(item);
+  const deepRead = deepReadById.get(item.id);
+  const linkedCapabilityIds = new Set(card.linkedCapabilities.map((cap) => cap.id));
+  const linkedCapabilities = capabilities.filter((cap) => linkedCapabilityIds.has(cap.id));
+  const institutionMap = new Map<string, CapabilityRecord[]>();
+  const peopleMap = new Map<string, ActorRecord>();
+
+  for (const capability of linkedCapabilities) {
+    const current = institutionMap.get(capability.actorId) ?? [];
+    current.push(capability);
+    institutionMap.set(capability.actorId, current);
+    for (const person of peopleForCapability(capability)) peopleMap.set(person.id, person);
+  }
+
+  return {
+    id: item.id,
+    title: item.title,
+    year: item.year ?? undefined,
+    authors: item.authors,
+    countryContext: item.countryContext ?? undefined,
+    primaryUrl: item.primaryUrl,
+    findings: item.directFindings,
+    boundary: item.boundary ?? undefined,
+    supportingClaims: card.supportingClaims.map((claim) => ({ ...claim, href: `/claims/${claim.id}` })),
+    contradictingClaims: card.contradictingClaims.map((claim) => ({ ...claim, href: `/claims/${claim.id}` })),
+    capabilities: linkedCapabilities.map(capabilityDetail),
+    institutions: [...institutionMap.entries()]
+      .map(([actorId, caps]) => {
+        const actor = actorById.get(actorId);
+        return actor ? institutionCard(actor, caps) : null;
+      })
+      .filter((item): item is InstitutionCardVM => Boolean(item)),
+    scholars: [...peopleMap.values()]
+      .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)),
+    directions: card.linkedDirections,
+    deepRead: deepRead
+      ? {
+          level: humanize(deepRead.deepReadLevel),
+          reviewStatus: humanize(deepRead.reviewStatus),
+          reviewedAt: deepRead.reviewedAt,
+          whyItMatters: deepRead.whyItMatters,
+          decisionUse: humanize(deepRead.decisionUse),
+          legacyOrigin: deepRead.legacyOrigin ?? undefined,
+          sourcePath: deepRead.sourcePath,
+          questions: deepRead.questions,
+          evidenceBoundary: deepRead.evidenceBoundary,
+          relatedClaimIds: deepRead.relatedClaimIds,
+          relatedCapabilityIds: deepRead.relatedCapabilityIds,
+          relatedDirectionIds: deepRead.relatedDirectionIds,
+          relatedPriorityIds: deepRead.relatedPriorityIds
+        }
+      : undefined
+  };
+}
+
