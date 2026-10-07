@@ -21,7 +21,8 @@ const directionOptions = [...new Map(
   .sort((a,b)=>a.label.localeCompare(b.label));
 
 const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
-const otherSourceCount = vm.records.length - paperCount;
+const patentCount = vm.records.filter((record) => record.id.startsWith('PATENT-')).length;
+const otherSourceCount = vm.records.length - paperCount - patentCount;
 
 const records = vm.records.map((record) => {
   const directionIds = record.linkedDirections.map((direction) => direction.id);
@@ -31,12 +32,16 @@ const records = vm.records.map((record) => {
     ...(!record.supportingClaims.length && !record.contradictingClaims.length ? ['context'] : [])
   ];
   const isPaper = record.id.startsWith('PAPER-');
+  const isPatent = record.id.startsWith('PATENT-');
+  const localDetailHref = isPaper ? `/papers/${record.id}` : isPatent ? `/patents/${record.id}` : undefined;
 
   return {
     ...record,
     directionIds,
     relation,
     isPaper,
+    isPatent,
+    localDetailHref,
     search: [
       record.id,
       record.title,
@@ -70,8 +75,9 @@ const records = vm.records.map((record) => {
       </div>
       <div class="summary-chips">
         <span>{vm.totalEvidence} all sources</span>
-        <span>{paperCount} Paper sources included</span>
-        <span>{otherSourceCount} non-Paper sources</span>
+        <span>{paperCount} Paper sources</span>
+        <span>{patentCount} Patent sources</span>
+        <span>{otherSourceCount} other sources</span>
       </div>
     </section>
 
@@ -127,7 +133,7 @@ const records = vm.records.map((record) => {
         >
           <DenseObjectRow
             layout="detail-heavy"
-            href={record.isPaper ? href(`/papers/${record.id}`) : undefined}
+            href={record.localDetailHref ? href(record.localDetailHref) : undefined}
             ariaLabel={record.title}
           >
             <div slot="main" class="source-main">
@@ -137,8 +143,8 @@ const records = vm.records.map((record) => {
                 {record.year && <em>{record.year}</em>}
                 {record.countryContext && <i>{record.countryContext}</i>}
               </div>
-              {record.isPaper ? (
-                <a class="title" href={href(`/papers/${record.id}`)}>{record.title}</a>
+              {record.localDetailHref ? (
+                <a class="title" href={href(record.localDetailHref)}>{record.title}</a>
               ) : (
                 <a class="title" href={record.primaryUrl} target="_blank" rel="noopener noreferrer">{record.title} ↗</a>
               )}
@@ -184,6 +190,7 @@ const records = vm.records.map((record) => {
             </div>
 
             <div slot="actions" class="row-actions">
+              {record.localDetailHref && <a href={href(record.localDetailHref)}>Detail</a>}
               <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
               {(record.supportingClaims.length > 0 || record.contradictingClaims.length > 0) && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>Claims</a>}
               {record.linkedCapabilities.slice(0,2).map((capability) => <a href={href(`/capabilities/${capability.id}`)}>{capability.id}</a>)}
