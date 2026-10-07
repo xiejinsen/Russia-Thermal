@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: pressure-test the Extreme Film batch, including current shear-film system/model lineage as supporting evidence; Modeling remains a narrowed RESERVE after Deep Read; do not reopen broad discovery
+- next: complete the remaining TPU Surface Process Challenger Deep Reads, then classify the remaining papers as Tier-B / reference-only and decide whether the Deep Read campaign is sufficient to resume web detail-page consolidation; do not reopen broad discovery
 
 ## Directions
 
@@ -19,9 +19,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-EXTREME-FILM-RESERVE
 - lane: RESERVE
 - phone_maturity: LOW
-- residual_or_use: shear-driven free-surface instability / dry-spot / rupture physics under extreme confinement plus current electronics-targeted IP.
-- strongest_baseline: China/global high-flux thin-film boiling, capillary thin-film cooling, structured surfaces, strong passive UTVC and active-air alternatives.
-- next_question_or_gate: After including gas/liquid parasitic power, pressure drop, acoustics and loop volume, does any phone-relevant shear-film operating window remain system-competitive?
+- residual_or_use: gas-shear-driven free-surface flow-pattern, dry-spot / rupture and instability physics under extreme confinement, including 12.5 um slit-flow mapping, plus current electronics-targeted staged gas/droplet/film IP. High heat flux and generic biphilic surfaces are excluded from the differentiation thesis.
+- strongest_baseline: China gradient-mesh capillary thin-film boiling at 202.8 W/cm2 CHF; pressure-manipulated nanoporous thin-film boiling at 2074 W/cm2 CHF; independent China 3D thin-film instability mathematics; strong passive UTVC, microfluidic and active-air alternatives.
+- next_question_or_gate: Can any gas-shear regime preserve useful thermal or failure-boundary value at phone-class thickness while closing parasitic power, pressure drop, acoustics, separator/condenser/nozzle volume, sealing and recovery?
 
 ### DIR-FAILURE-AWARE-UTVC
 - lane: STRATEGIC_CANDIDATE
