@@ -9,6 +9,10 @@ maturity: EXPERT_KNOWLEDGE
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- LOOP_HEAT_PIPE
+- RELIABILITY_AGING
 
 Capability statement:
 ITP UB RAS retains deep LHP design, serviceability, operating-limit and failure-analysis knowledge.
