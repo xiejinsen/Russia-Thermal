@@ -39,14 +39,14 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       {vm.findings.length ? (
         <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
       ) : (
-        <p>No direct findings have been normalized yet.</p>
+        <p>No direct finding has been recorded for this paper yet.</p>
       )}
     </article>
 
     <article class="boundary-card">
       <span>BOUNDARY</span>
       <h2>What this paper does not prove</h2>
-      <p>{vm.boundary ?? 'No explicit boundary has been normalized yet.'}</p>
+      <p>{vm.boundary ?? 'No additional evidence boundary is currently recorded.'}</p>
     </article>
   </section>
 
