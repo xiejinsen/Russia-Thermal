@@ -9,4 +9,4 @@ related_directions:
 - DIR-FAILURE-AWARE-UTVC
 collaboration_readiness: HIGH
 recommended_action: CONTACT_FIRST_WHEN_OUTREACH_IS_POSSIBLE
-rationale: Strongest current Russian partner package for mechanism-specific boiling-crisis / dry-spot interpretation, with the clearest collaboration-readiness signal and a bounded smartphone-transfer question.
+rationale: Strongest current Russian partner package after full dryout comparator pressure testing, but only for mechanism-resolved crisis taxonomy / laboratory ground truth. Generic mesh treatment, dryout mitigation hardware, observer algorithms and phone UTVC architecture are not the collaboration control point.
