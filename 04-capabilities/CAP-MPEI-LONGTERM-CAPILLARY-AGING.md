@@ -6,6 +6,8 @@ key_people:
 - PERSON-IVANOV
 - PERSON-KUZMA-KICHTA
 - PERSON-ALYAUTDINOVA
+collaborating_actors:
+- ACT-NEWFROST
 maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
