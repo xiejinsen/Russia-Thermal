@@ -10,15 +10,19 @@ interface Props {
 }
 
 const { model } = Astro.props;
+const readinessTone =
+  model.priorityClass === 'Primary' ? 'positive' :
+  model.priorityClass === 'Hold' ? 'critical' :
+  model.priorityClass === 'Reserve' ? 'warning' : 'neutral';
 ---
 
 <section class="priority-card">
   <div class="priority-head">
     <div>
       <p class="rank">{model.rank}</p>
-      <h2>{model.priorityClass} collaboration package</h2>
+      <h2>{model.priorityClass} partner disposition</h2>
     </div>
-    {model.readiness && <Badge tone="positive">{model.readiness}</Badge>}
+    {model.readiness && <Badge tone={readinessTone}>{model.readiness}</Badge>}
   </div>
 
   {model.rationale && <p class="rationale">{model.rationale}</p>}
