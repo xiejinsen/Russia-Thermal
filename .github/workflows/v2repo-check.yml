@@ -18,5 +18,7 @@ jobs:
           python-version: "3.12"
       - name: Check canonical references and generated views
         run: python tools/v2repo.py --check
+      - name: Scan source dedup candidates
+        run: python tools/source_dedup.py --scan
       - name: Audit decision graph and evidence chains
         run: python tools/graph_audit.py
