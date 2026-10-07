@@ -48,7 +48,6 @@ Separate supporting capability:
 
 - PAPER-RU-AGE-001
 - OFFICIAL-MPEI-IVANOV-001
-- OFFICIAL-MPEI-SIC-MICROCHANNEL-001
 - OFFICIAL-MPEI-HEAT-TRANSFER-GROUP-001
 
 The critical 42-month result should be read precisely:
