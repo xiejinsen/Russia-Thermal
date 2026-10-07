@@ -1,12 +1,12 @@
 # Tomsk Polytechnic University — Surface-Process Line
 
 status: LEADERSHIP_DERIVED_VIEW
-priority: TIER_B
+priority: HOLD_REOPEN_ONLY
 primary_direction: DIR-SURFACE-PROCESS-CHALLENGER
 
 ## One-line leadership summary
 
-**Strong process and surface-engineering challenger with credible current team continuity, patent ownership and field-test translation, but weaker public smartphone/OEM collaboration evidence.**
+**HOLD process capability: credible execution remains, but public evidence no longer supports an active Stage-0 collaboration thesis.**
 
 ## Institution / team
 
@@ -26,11 +26,12 @@ Canonical actors:
 
 The value is not generic laser processing.
 
-Retained opportunity:
+Retained value:
 - process execution on metal heat-transfer surfaces;
 - laser-controlled micro/nanostructure;
-- wettability contrast;
-- potential confined routing / rewetting functionality if the process survives sealed-VC constraints.
+- wettability / diagnostics competence.
+
+Spatial wettability patterning itself is no longer treated as differentiated because China already demonstrates it inside completed 0.4 mm UTVCs.
 
 Canonical capability:
 - CAP-TPU-LASER-WETTABILITY-PROCESS
@@ -105,6 +106,9 @@ TPU-specific process execution and potentially useful sealed-VC-compatible patte
 
 ## Leadership decision
 
-**KEEP as Tier B process challenger.**
+**HOLD — NO PROACTIVE ENGAGEMENT.**
 
-Do not promote to co-primary until sealed phone-relevant process compatibility is evidenced.
+Reopen only if TPU can demonstrate a matched phone-relevant process-specific increment such as lower outgassing, better sealed durability, superior transient rewetting, higher yield or unique diagnostics.
+
+Current reopen package:
+[OPP-03 — TPU process-capability reopen checklist](../collaboration-opportunities/OPP-03-TPU-PROCESS-REOPEN.md)
