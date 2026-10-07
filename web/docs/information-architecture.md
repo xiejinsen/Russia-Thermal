@@ -628,3 +628,29 @@ Next web phase:
 global navigation + explorer/detail discoverability + Leadership Overview information hierarchy.
 
 Do not reopen pure visual styling until navigation and information hierarchy are functionally settled.
+
+
+## 15. Capability Atlas expansion
+
+Status: DESIGN_FROZEN
+
+The next research stage adds a Russia-first capability-landscape journey alongside the existing decision-first journey.
+
+New primary journey:
+`Overview -> Russia Capability Atlas -> Institution/Lab -> People/Capability/Output/Collaboration`.
+
+China comparison remains available as a second-layer challenge path rather than being required to interpret the Russia landscape.
+
+The Atlas must support:
+- institution hierarchy roll-up;
+- controlled technical-domain filters;
+- platform-transfer filters beyond smartphone-only scope;
+- publication/patent output snapshots with explicit time window and search basis;
+- typed/evidenced collaboration relations;
+- influence/context signals;
+- drill-down into existing Claims/Evidence.
+
+Do not overload Partner Portfolio or Direction pages to serve this purpose.
+
+Detailed contract:
+[Capability Atlas Expansion Contract](capability-atlas-expansion-contract.md).
