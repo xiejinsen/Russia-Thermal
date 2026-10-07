@@ -7,6 +7,11 @@ maturity: ENGINEERING_PRODUCTION_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- LOOP_HEAT_PIPE
+- VC_HEAT_PIPE
+- MANUFACTURING_PROCESS
 
 Capability statement:
 Thercon-KTT demonstrates full-cycle design, thermal modeling, prototyping, testing and serial production of loop heat pipes / heat pipes for electronics-oriented thermal-control applications.
