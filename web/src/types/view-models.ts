@@ -130,6 +130,7 @@ export interface CapabilityDetailVM {
 export interface CapabilityPageVM {
   capability: CapabilityDetailVM;
   owner?: InstitutionCardVM;
+  collaborators: InstitutionCardVM[];
   people: ScholarCardVM[];
   claims: Array<{
     id: string;
@@ -140,6 +141,15 @@ export interface CapabilityPageVM {
     href: string;
   }>;
   evidence: EvidenceCardVM[];
+  evidenceStats: {
+    claimCount: number;
+    evidenceCount: number;
+    deepReadCount: number;
+    russiaSourceCount: number;
+    comparatorSourceCount: number;
+    paperCount: number;
+    patentCount: number;
+  };
   directions: DirectionCardVM[];
 }
 
@@ -442,6 +452,15 @@ export interface ClaimPageVM {
   boundary?: string;
   supportingEvidence: EvidenceCardVM[];
   contradictingEvidence: EvidenceCardVM[];
+  evidenceStats: {
+    claimCount: number;
+    evidenceCount: number;
+    deepReadCount: number;
+    russiaSourceCount: number;
+    comparatorSourceCount: number;
+    paperCount: number;
+    patentCount: number;
+  };
   capabilities: CapabilityDetailVM[];
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
