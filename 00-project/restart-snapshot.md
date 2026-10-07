@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
-- next: keep external outreach paused; Phase-1 research and outreach-readiness materials are provisionally accepted; next work should focus on final leadership-deliverable consolidation or final web copy cleanup unless the user explicitly authorizes partner contact
+- next: Phase-1 leadership deliverable is closed; keep external outreach paused unless explicitly authorized; optional remaining work is final web copy cleanup or conversion of the Leadership Decision Brief into a management presentation
 
 ## Directions
 
