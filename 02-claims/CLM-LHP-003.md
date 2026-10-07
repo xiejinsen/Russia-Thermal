@@ -10,6 +10,7 @@ Russia / Maydanik has a unique current advantage in LHP routing, operating-limit
 supporting_sources:
 - PAPER-RU-LHP-001
 - PAPER-CN-LHP-001
+- PAPER-CN-LHP-002
 
 Boundary:
 broad uniqueness refuted; expert-review value remains.
