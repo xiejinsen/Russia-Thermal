@@ -426,7 +426,8 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
   const collaboratorIds = new Set(ownCapabilities.flatMap((capability) => capability.collaboratingActorIds ?? []));
   const collaboratorCards = [...collaboratorIds]
     .map((collaboratorId) => actorById.get(collaboratorId))
-    .filter((item): item is ActorRecord => Boolean(item) && item.type !== 'PERSON')
+    .filter((item): item is ActorRecord => Boolean(item))
+    .filter((item) => item.type !== 'PERSON')
     .map((collaborator) =>
       institutionCard(
         collaborator,
