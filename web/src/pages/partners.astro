@@ -27,7 +27,7 @@ const priorityDirectionIds = new Set(
     <SectionHeader
       eyebrow="Management priority"
       title="Partner actions now differ by disposition: Primary, Reserve and Hold"
-      description="P1/P2/P3 preserve the historical partner ranking, but they no longer mean three equal outreach priorities. Current action is governed by priority_class together with the connected Direction lane."
+      description="P1/P2/P3 preserve the historical partner ranking, but they are no longer equal outreach priorities. Current action follows each partner's disposition and the connected technical direction."
     />
     <div class="priority-stack">
       {vm.priorities.map((model) => <PartnerPriorityCard model={model} />)}
@@ -37,8 +37,8 @@ const priorityDirectionIds = new Set(
   <section class="lane-section">
     <SectionHeader
       eyebrow="Technical lane index"
-      title="All Directions without repeating the partner cards"
-      description="Use this compact index to reach every strategic, reserve, watch and hold Direction. Actor and evidence sets open as pre-filtered Explorers instead of being duplicated here."
+      title="Technical portfolio by investment lane"
+      description="Use this index to review every Strategic Candidate, Reserve, Watch and Hold direction, then drill into the relevant partners, claims and evidence."
     />
 
     <div class="lane-groups">
@@ -70,7 +70,7 @@ const priorityDirectionIds = new Set(
                 </div>
 
                 <nav aria-label={`Explore relationships for ${direction.title}`}>
-                  <a class="primary" href={href(`/directions/${direction.id}`)}>Open Direction →</a>
+                  <a class="primary" href={href(`/directions/${direction.id}`)}>Open direction →</a>
                   <a href={href(`/claims?direction=${encodeURIComponent(direction.id)}`)}>Claims</a>
                   <a href={href(`/evidence?direction=${encodeURIComponent(direction.id)}`)}>Evidence</a>
                   <a href={href(`/institutions?direction=${encodeURIComponent(direction.id)}`)}>Institutions</a>
