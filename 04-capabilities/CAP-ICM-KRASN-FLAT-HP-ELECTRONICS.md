@@ -8,6 +8,11 @@ maturity: RESEARCH_ENGINEERING_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- VC_HEAT_PIPE
+- RELIABILITY_AGING
+- PACKAGING_INTEGRATION
 
 Capability statement:
 ICM SB RAS demonstrates integrated flat-heat-pipe electronics thermal design, two-phase modeling and thermal-stabilization capability, including prediction of dryout-limited heat load.
