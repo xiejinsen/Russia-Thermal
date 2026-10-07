@@ -448,3 +448,37 @@ Exceptions require a clear user-facing reason, such as a fixed small dashboard, 
 
 Principle:
 **once an object class grows beyond 15 visible items, scanning efficiency takes priority over card aesthetics.**
+
+
+### Dense row column-balance rule
+
+Dense rows must not use equal-width semantic columns by default.
+
+Allocate horizontal space according to information weight:
+
+1. **Primary content** gets the most width.
+   - object title / proposition / capability statement / institution identity;
+   - citation identity or owner context.
+2. **Explanatory detail** gets a narrower secondary column.
+   - direct finding;
+   - transfer boundary;
+   - strategic use;
+   - summary.
+3. **Metadata** gets a compact tertiary column.
+   - maturity / confidence / fit;
+   - relation counts;
+   - Deep Read state;
+   - tags / Direction context.
+4. **Actions** use a fixed narrow rail.
+   - default as a 2-column action grid;
+   - 4 actions become 2×2;
+   - fewer actions collapse naturally;
+   - avoid a long horizontal button strip.
+
+Current default desktop proportion is intentionally content-heavy rather than balanced:
+primary content > explanatory detail > metadata > actions.
+
+Use subtle vertical separators between semantic zones to improve scanning, but remove them when the row stacks to a single column on narrow screens.
+
+Principle:
+**space follows semantic weight; action controls should never compete visually with the object itself.**
