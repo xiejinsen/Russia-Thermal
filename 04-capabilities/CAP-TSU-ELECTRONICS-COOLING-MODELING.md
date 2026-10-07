@@ -9,6 +9,11 @@ maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- MODELING_CFD
+- PASSIVE_PCM
+- MICROFLUIDIC_COOLING
 
 Capability statement:
 TSU demonstrates active/passive electronics-cooling modeling capability spanning channel/porous heat-removal structures, coolant-flow optimization and PCM-based thermal control, with explicit applicability to phones and compact electronics.
