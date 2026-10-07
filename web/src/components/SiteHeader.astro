@@ -14,34 +14,34 @@ const isActivePath = (path: string) => {
 
 const groups = [
   { label: 'Overview', path: '/' },
-  { label: 'Research Maps', path: '/research-map' },
-  { label: 'Research Coverage', path: '/research-coverage' },
   {
-    label: 'Portfolio',
+    label: 'Decide',
     children: [
-      { label: 'Partners', path: '/partners' },
+      { label: 'Partner Portfolio', path: '/partners' },
+      { label: 'Directions', path: '/directions' },
       { label: 'Russia vs China', path: '/landscape' },
-      { label: 'Directions', path: '/directions' }
+      { label: 'Decisions', path: '/decisions' }
     ]
   },
   {
-    label: 'People & Orgs',
+    label: 'Explore',
     children: [
-      { label: 'Scholars', path: '/scholars' },
+      { label: 'Research Coverage', path: '/research-coverage' },
+      { label: 'Research Maps', path: '/research-map' },
       { label: 'Institutions', path: '/institutions' },
+      { label: 'Scholars', path: '/scholars' },
       { label: 'Capabilities', path: '/capabilities' }
     ]
   },
   {
-    label: 'Research Objects',
+    label: 'Audit',
     children: [
-      { label: 'Papers', path: '/papers' },
       { label: 'Claims', path: '/claims' },
+      { label: 'Papers', path: '/papers' },
       { label: 'Evidence', path: '/evidence' },
       { label: 'Frontier Watch', path: '/frontier' }
     ]
-  },
-  { label: 'Decisions', path: '/decisions' }
+  }
 ];
 
 const activeGroup = groups.find((item) =>
