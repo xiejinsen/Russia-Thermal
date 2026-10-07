@@ -2,10 +2,10 @@
 
 record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
-updated_at: 2026-10-07
-canonical_paper_count: 50
-completed_deep_reads: 36
-campaign_state: DECISION_CRITICAL_CLOSED
+updated_at: 2026-10-08
+canonical_paper_count: 53
+completed_deep_reads: 37
+campaign_state: DECISION_CRITICAL_CLOSED / ATLAS_INCREMENTAL
 
 ## Purpose
 
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 36 / 50
+## Completed Tier-A Deep Reads — 37 / 53
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -60,6 +60,7 @@ Rules:
 | PAPER-RU-FRUMKIN-BIPHILIC-001 | Russia selective-wettability / surface-chemistry support | DIR-EXTREME-FILM-RESERVE |
 | PAPER-CN-FILM-001 | China passive gradient-wick thin-film boiling comparator | DIR-EXTREME-FILM-RESERVE |
 | PAPER-CN-FILM-002 | China 2074 W/cm2 pressure-controlled thin-film boiling comparator | DIR-EXTREME-FILM-RESERVE |
+| PAPER-RU-DGTU-TE-001 | Russia Atlas active-hardware qualification: experimental thermoelectric electronics cooling | ATLAS / NO DIRECTION |
 
 ## Decision-sensitive reading queue
 
@@ -228,3 +229,22 @@ Canonical audit:
 
 Next:
 resume bounded web detail-page design-system consolidation. TIER_B and SHOULD_PROMOTE lineage backfill are non-blocking unless a new contradiction appears.
+
+
+## Post-closure Atlas additions
+
+Phase-1 decision-critical closure occurred at:
+- 50 canonical papers;
+- 36 Deep Reads;
+- zero unresolved decision-critical Tier-A gaps.
+
+Subsequent Russia Capability Atlas enrichment added:
+- PAPER-RU-ASTU-ACTIVE-001 — current adjacent active liquid/refrigeration electronics cooling; no Deep Read required for current strategic portfolio;
+- PAPER-RU-ASTU-ACTIVE-002 — continuity support for the ASTU active-cooling line; no Deep Read required for current strategic portfolio;
+- PAPER-RU-DGTU-TE-001 — direct thermoelectric electronics-cooling experiment; full Tier-A-style Deep Read completed because it establishes a new Active Hardware Capability.
+
+Current corpus:
+- 53 canonical papers;
+- 37 Deep Reads.
+
+This does not reopen the Phase-1 decision-critical campaign.
