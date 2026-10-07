@@ -11,5 +11,5 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - DEC-20261004-12 — DIR-AEROACOUSTIC-METHOD-RESERVE -> WATCH / METHOD RESERVE.
 - DEC-20261004-14 — generic Russia smartphone DVFS strategic-differentiation thesis -> BACKGROUND_ONLY.
 - DEC-20261004-15 — generic Russia thermal-materials smartphone-advantage thesis -> BACKGROUND_ONLY.
-- DEC-20261007-01 — DIR-HEALTH-AWARE-UTVC -> RELIABILITY_KNOWLEDGE_RESERVE / RESERVE.
+- DEC-20261007-01 — DIR-HEALTH-AWARE-UTVC -> RELIABILITY_KNOWLEDGE_RESERVE / RESERVE. Retain the MPEI 42-month evidence as a rare long-calendar mechanism-ground-truth asset, but no longer treat it as a primary collaboration direction until incremental phone-relevant predictive value is demonstrated.
 - DEC-20261007-06 — DIR-SURFACE-PROCESS-CHALLENGER -> role: HOLD_PROCESS_CAPABILITY, investment_lane: HOLD, differentiation_confidence: LOW, phone_transfer_maturity: LOW, PRI-03-TPU remains a historical P3 slot but priority_class becomes HOLD and proactive engagement stops.
