@@ -2,17 +2,19 @@
 
 record_state: CURRENT
 status: SUPPORTED
-confidence: MEDIUM
+confidence: LOW_MEDIUM
 
 Proposition:
-A narrower TPU residual remains around copper-applicable laser process control and potentially vacuum-stable spatial liquid-routing / rewetting functionality under phone-relevant confinement.
+After Deep Read pressure testing, TPU's defensible residual is process execution competence on laser-textured / wettability-controlled metal surfaces, including copper heat-transfer surfaces and long-duration industrial field translation. The hypothesized vacuum-stable spatial liquid-routing / rewetting function inside a phone-relevant sealed VC remains unproven.
 
 supporting_sources:
 - PAPER-RU-TPU-001
+- PAPER-RU-TPU-002
 - PAPER-RU-TPU-003
 - PAPER-RU-TPU-004
 - PATENT-RU2812668C1
 - PAPER-CN-TPU-001
+- PAPER-CN-TPU-002
 
 Boundary:
-the vacuum-stable / confined-function part remains an analyst opportunity hypothesis, not demonstrated product evidence.
+process capability is demonstrated in open-surface / boiler / pool-boiling contexts. The sealed-vacuum confined-function part remains an analyst opportunity hypothesis.
