@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import InstitutionCard from '../components/cards/InstitutionCard.astro';
+import DenseObjectRow from '../components/DenseObjectRow.astro';
 import ExplorerToolbar from '../components/ExplorerToolbar.astro';
 import { actors, capabilities, directions, priorities } from '../data/load-normalized';
 import { buildInstitutionsCollectionVM } from '../view-models/builders';
@@ -58,6 +58,9 @@ const records = vm.records.map((model) => {
     dispositions,
     relations,
     directionIds: linkedDirections.map((direction) => direction.id),
+    linkedDirections,
+    scopedCapabilities,
+    peopleNames,
     search: [
       model.name,
       model.summary,
@@ -106,6 +109,8 @@ const directionOptions = directions
     </section>
 
     <ExplorerToolbar
+      sticky
+      compact
       total={records.length}
       searchPlaceholder="Search institution, lab, person, capability or direction…"
       filters={[
@@ -127,10 +132,9 @@ const directionOptions = directions
       ]}
     />
 
-    <section class="collection-grid" aria-label="Institution and lab records">
+    <section class="dense-list" aria-label="Institution and lab records">
       {records.map((record) => (
         <div
-          class="record"
           data-explorer-record
           data-country={record.actor?.country ?? ''}
           data-kind={record.actor?.type ?? ''}
@@ -138,18 +142,58 @@ const directionOptions = directions
           data-direction={record.directionIds.join('|')}
           data-search={record.search}
         >
-          <div class="record-context">
-            <div>
-              <span>{record.actor?.type === 'LAB' ? 'LAB / TEAM' : 'ORGANIZATION'}</span>
-              {record.parent && <small>Parent: {record.parent.name}</small>}
+          <DenseObjectRow
+            href={record.model.href ? `${import.meta.env.BASE_URL}${record.model.href.replace(/^\//, '')}` : undefined}
+            ariaLabel={record.model.name}
+          >
+            <div slot="main" class="inst-main">
+              <div class="topline">
+                <span>{record.actor?.type === 'LAB' ? 'LAB / TEAM' : 'ORGANIZATION'}</span>
+                <b>{record.actor?.country ?? record.model.country}</b>
+                {record.priorityRanks.map((rank) => <em>{rank}</em>)}
+              </div>
+              {record.model.href ? (
+                <a class="title" href={`${import.meta.env.BASE_URL}${record.model.href.replace(/^\//, '')}`}>{record.model.name}</a>
+              ) : <strong class="title">{record.model.name}</strong>}
+              <div class="hierarchy-line">
+                {record.parent && <span>Parent · {record.parent.name}</span>}
+                {record.actor?.city && <span>{record.actor.city}{record.actor.region ? ` · ${record.actor.region}` : ''}</span>}
+              </div>
             </div>
-            <div class="tags">
-              {record.priorityRanks.map((rank) => <b>{rank}</b>)}
-              {record.dispositions.map((value) => <em>{humanize(value)}</em>)}
-              {!record.dispositions.length && <em>Actor only</em>}
+
+            <div slot="details" class="inst-details">
+              <p>{record.model.summary}</p>
+              {record.peopleNames.length > 0 && (
+                <div class="people-line">
+                  <span>Key people</span>
+                  <p>{record.peopleNames.slice(0,4).join(' · ')}{record.peopleNames.length > 4 ? ' …' : ''}</p>
+                </div>
+              )}
             </div>
-          </div>
-          <InstitutionCard model={record.model} />
+
+            <div slot="meta" class="inst-meta">
+              <div class="metrics">
+                <span><b>{record.scopedCapabilities.length}</b> capabilities</span>
+                <span><b>{record.peopleNames.length}</b> people</span>
+              </div>
+              <div class="tags">
+                {record.dispositions.slice(0,3).map((value) => <em>{humanize(value)}</em>)}
+                {!record.dispositions.length && <em>Actor only</em>}
+              </div>
+              {record.linkedDirections.length > 0 && (
+                <div class="direction-line">
+                  <span>Directions</span>
+                  <p>{record.linkedDirections.slice(0,2).map((direction) => directionTitle(direction.id)).join(' · ')}{record.linkedDirections.length > 2 ? ' …' : ''}</p>
+                </div>
+              )}
+            </div>
+
+            <div slot="actions" class="row-actions">
+              <a href={`${import.meta.env.BASE_URL}claims?actor=${encodeURIComponent(record.model.id)}`}>Claims</a>
+              <a href={`${import.meta.env.BASE_URL}papers?actor=${encodeURIComponent(record.model.id)}`}>Papers</a>
+              <a href={`${import.meta.env.BASE_URL}evidence?actor=${encodeURIComponent(record.model.id)}`}>Evidence</a>
+            </div>
+          </DenseObjectRow>
         </div>
       ))}
     </section>
@@ -157,15 +201,26 @@ const directionOptions = directions
 </BaseLayout>
 
 <style>
-  .collection-hero{display:grid;gap:var(--space-4);max-width:68rem}
+  .collection-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;max-width:none}
+  .collection-hero>div:first-child{max-width:72rem}
   .collection-hero h1{margin:0;font-size:clamp(1.7rem,2.7vw,2.35rem);letter-spacing:-.05em;line-height:1.08}
-  .collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:78ch;line-height:1.65}
-  .count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
-  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,23rem),1fr));gap:var(--space-4);margin-top:var(--space-6)}
-  .record{display:grid;grid-template-rows:auto 1fr;min-width:0}
-  .record-context{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0;background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
-  .record-context>div:first-child{display:grid;gap:2px}.record-context span{color:var(--accent-vivid);font-size:9px;font-weight:900;letter-spacing:.06em}.record-context small{color:var(--text-muted);font-size:10px}
-  .tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-content:flex-start}.tags b,.tags em{padding:3px 6px;border-radius:999px;font-size:8px;font-style:normal;font-weight:850}.tags b{background:#e6f5ee;color:#087a66}.tags em{background:white;color:#506d82;border:1px solid #dbe7ef}
-  .record :global(.entity-card){border-top-left-radius:0;border-top-right-radius:0}
+  .collection-hero>p:not(.eyebrow),.collection-hero>div>p:not(.eyebrow){margin:.55rem 0 0;color:var(--text-muted);max-width:82ch;line-height:1.6}
+  .count{flex:0 0 auto;width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
+
+  .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
+  .inst-main,.inst-details,.inst-meta{display:grid;gap:6px;min-width:0}
+  .topline{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.topline span,.topline b,.topline em{padding:3px 6px;border-radius:999px;font-size:.54rem;font-style:normal;font-weight:900;letter-spacing:.04em;text-transform:uppercase}.topline span{background:#eef6fb;color:#315f80}.topline b{background:#eef4f8;color:#587185}.topline em{background:#e7f6ef;color:#087a66}
+  .title{width:fit-content;color:#1d405a;font-size:.98rem;font-weight:850;line-height:1.35;text-decoration:none}.title:hover,.title:focus-visible{text-decoration:underline;text-underline-offset:.16em}
+  .hierarchy-line{display:flex;gap:8px;flex-wrap:wrap;color:#738897;font-size:.67rem}
+
+  .inst-details>p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;margin:0;color:#50697b;font-size:.76rem;line-height:1.5}
+  .people-line{display:grid;gap:3px}.people-line span,.direction-line span{color:#0b67b2;font-size:.55rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}.people-line p,.direction-line p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:0;color:#647b8c;font-size:.68rem;line-height:1.45}
+
+  .metrics{display:flex;gap:10px;flex-wrap:wrap}.metrics span{color:#6a8192;font-size:.64rem}.metrics b{color:#0b67b2;font-size:.85rem}
+  .tags{display:flex;gap:4px;flex-wrap:wrap}.tags em{padding:3px 5px;border-radius:5px;background:#f1f5f8;color:#587185;font-size:.54rem;font-style:normal;font-weight:750}.direction-line{display:grid;gap:3px}
+
+  .row-actions{display:flex;gap:5px;flex-wrap:wrap}.row-actions a{padding:5px 7px;border:1px solid #d8e7f1;border-radius:6px;color:#43677f;font-size:.62rem;font-weight:800;text-decoration:none;white-space:nowrap}.row-actions a:hover{background:#eef6fb;color:#0b67b2}
+
   [hidden]{display:none!important}
+  @media(max-width:850px){.collection-hero{align-items:flex-start;flex-direction:column}}
 </style>
