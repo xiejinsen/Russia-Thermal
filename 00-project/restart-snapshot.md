@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
-- next: audit and consolidate global navigation, explorer-to-detail discoverability, and Leadership Overview information hierarchy using the now-complete detail graph; avoid visual-only redesign
+- next: prepare internal outreach-readiness artifacts for P1 Kutateladze (technical data/label brief) and P2 MPEI (long-duration data-availability questionnaire); do not prepare proactive TPU outreach
 
 ## Directions
 
