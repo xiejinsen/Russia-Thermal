@@ -2,14 +2,15 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import ExplorerToolbar from '../../components/ExplorerToolbar.astro';
-import DenseResearchTable from '../../components/DenseResearchTable.astro';
-import { directions } from '../../data/load-normalized';
+import DenseObjectRow from '../../components/DenseObjectRow.astro';
+import { directions, claims as claimRecords } from '../../data/load-normalized';
 import { buildClaimExplorerVM } from '../../view-models/builders';
 import { directionTitle } from '../../view-models/helpers';
 
 const vm = buildClaimExplorerVM();
 const base = import.meta.env.BASE_URL;
 const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
+const rawClaimById = new Map(claimRecords.map((claim) => [claim.id, claim]));
 
 const statuses=[...new Set(vm.records.map((claim)=>claim.status))].sort();
 const confidences=[...new Set(vm.records.map((claim)=>claim.confidence))].sort();
@@ -21,6 +22,7 @@ const directionOptions = directions
 
 const records=vm.records.map((claim)=>({
   ...claim,
+  raw:rawClaimById.get(claim.id),
   roleClass:claim.decisionRole ?? 'NO_ROLE',
   search:[
     claim.id,
@@ -28,6 +30,7 @@ const records=vm.records.map((claim)=>({
     claim.status,
     claim.confidence,
     claim.decisionRole ?? '',
+    rawClaimById.get(claim.id)?.boundary ?? '',
     ...claim.directionIds.map(directionTitle)
   ].join(' ')
 }));
@@ -39,7 +42,7 @@ const records=vm.records.map((claim)=>({
   <div data-explorer-root>
     <section class="hero compact-hero">
       <div>
-        <p class="eyebrow">Research objects · dense explorer</p>
+        <p class="eyebrow">Research objects · dense rows</p>
         <h1>{vm.title}</h1>
         <p>{vm.summary}</p>
       </div>
@@ -55,43 +58,22 @@ const records=vm.records.map((claim)=>({
       compact
       total={records.length}
       urlFilterKeys={['capability', 'actor', 'person']}
-      searchPlaceholder="Search proposition, Claim ID, role, Direction…"
+      searchPlaceholder="Search proposition, boundary, Claim ID, role, Direction…"
       filters={[
-        {
-          key:'status',
-          label:'Status',
-          options:statuses.map((value)=>({value,label:value}))
-        },
-        {
-          key:'confidence',
-          label:'Confidence',
-          options:confidences.map((value)=>({value,label:value}))
-        },
+        { key:'status', label:'Status', options:statuses.map((value)=>({value,label:value})) },
+        { key:'confidence', label:'Confidence', options:confidences.map((value)=>({value,label:value})) },
         {
           key:'role',
           label:'Decision role',
-          options:[
-            ...roles.map((value)=>({value,label:value})),
-            {value:'NO_ROLE',label:'No special role'}
-          ]
+          options:[...roles.map((value)=>({value,label:value})),{value:'NO_ROLE',label:'No special role'}]
         },
         {key:'direction',label:'Direction',options:directionOptions}
       ]}
     />
 
-    <DenseResearchTable minWidth="74rem" maxHeight="calc(100vh - 13.8rem)" label="Claim research index">
-      <tr slot="head">
-        <th style="width:45%">Claim</th>
-        <th style="width:10%">Status</th>
-        <th style="width:10%">Confidence</th>
-        <th style="width:15%">Decision role</th>
-        <th style="width:6%">Support</th>
-        <th style="width:6%">Pressure</th>
-        <th style="width:8%">Directions</th>
-      </tr>
-
+    <section class="dense-list" aria-label="Claim research index">
       {records.map((claim)=>(
-        <tr
+        <div
           data-explorer-record
           data-status={claim.status}
           data-confidence={claim.confidence}
@@ -102,46 +84,72 @@ const records=vm.records.map((claim)=>({
           data-person={claim.peopleIds.join('|')}
           data-search={claim.search}
         >
-          <td class="claim-cell">
-            <a href={href(claim.href)}>
-              <strong>{claim.proposition}</strong>
-              <small>{claim.id}</small>
-            </a>
-          </td>
-          <td><span class="state-pill">{claim.status}</span></td>
-          <td><span class="confidence-pill">{claim.confidence}</span></td>
-          <td>{claim.decisionRole ? <span class="role-pill">{claim.decisionRole}</span> : <span class="muted">—</span>}</td>
-          <td class="number">{claim.supportingCount}</td>
-          <td class="number pressure">{claim.contradictingCount}</td>
-          <td>
-            {claim.directionIds.length ? (
-              <div class="direction-cell" title={claim.directionIds.map(directionTitle).join(' · ')}>
-                <b>{claim.directionCount}</b>
-                <span>{claim.directionIds.slice(0,1).map(directionTitle).join('')}</span>
+          <DenseObjectRow href={href(claim.href)} ariaLabel={claim.proposition}>
+            <div slot="main" class="claim-main">
+              <div class="topline">
+                <span>{claim.id}</span>
+                <b>{claim.status}</b>
+                <em>{claim.confidence}</em>
               </div>
-            ) : <span class="muted">0</span>}
-          </td>
-        </tr>
+              <a class="title" href={href(claim.href)}>{claim.proposition}</a>
+            </div>
+
+            <div slot="details" class="claim-details">
+              {claim.raw?.boundary ? (
+                <div>
+                  <span>Boundary</span>
+                  <p>{claim.raw.boundary}</p>
+                </div>
+              ) : (
+                <p class="muted">No separate Claim boundary recorded.</p>
+              )}
+              {claim.decisionRole && (
+                <div>
+                  <span>Decision role</span>
+                  <p>{claim.decisionRole}</p>
+                </div>
+              )}
+            </div>
+
+            <div slot="meta" class="claim-meta">
+              <div class="relation-metrics">
+                <span><b>{claim.supportingCount}</b> support</span>
+                <span class="pressure"><b>{claim.contradictingCount}</b> pressure</span>
+                <span><b>{claim.directionCount}</b> Directions</span>
+              </div>
+              {claim.directionIds.length > 0 && (
+                <div class="direction-line">
+                  <span>Direction context</span>
+                  <p>{claim.directionIds.slice(0,2).map(directionTitle).join(' · ')}{claim.directionIds.length > 2 ? ' …' : ''}</p>
+                </div>
+              )}
+              {claim.capabilityIds.length > 0 && (
+                <span class="cap-count">{claim.capabilityIds.length} linked capabilit{claim.capabilityIds.length === 1 ? 'y' : 'ies'}</span>
+              )}
+            </div>
+
+            <div slot="actions" class="row-actions">
+              <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=supporting`)}>Support</a>
+              {claim.contradictingCount > 0 && <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=pressure`)}>Pressure</a>}
+              <a href={href(`/papers?claim=${encodeURIComponent(claim.id)}`)}>Papers</a>
+            </div>
+          </DenseObjectRow>
+        </div>
       ))}
-    </DenseResearchTable>
+    </section>
   </div>
 
   <style>
-    .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
-    .compact-hero>div:first-child{max-width:72rem}
-    .compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}
-    .compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:82ch;color:var(--text-muted);line-height:1.55}
-    .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:19rem}
-    .summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
+    .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.compact-hero>div:first-child{max-width:72rem}.compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}.compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:82ch;color:var(--text-muted);line-height:1.55}
+    .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:19rem}.summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
+    .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
 
-    .claim-cell a{display:grid;gap:3px}
-    .claim-cell strong{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;color:#203f57;font-size:11.5px;line-height:1.32}
-    .claim-cell small{color:#718696;font-size:9px}
-    .state-pill,.confidence-pill,.role-pill{display:inline-flex;padding:3px 6px;border-radius:999px;font-size:8px;font-weight:850;white-space:nowrap}
-    .state-pill{background:#eef4f8;color:#47667d}.confidence-pill{background:#eef6fb;color:#315f80}.role-pill{max-width:100%;overflow:hidden;background:#f3f0fb;color:#60558a;text-overflow:ellipsis}
-    .number{font-size:13px;font-weight:850;color:#0b67b2;text-align:center}.number.pressure{color:#a6662d}
-    .direction-cell{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px}.direction-cell b{color:#0b67b2;font-size:12px}.direction-cell span{display:block;overflow:hidden;color:#668092;font-size:8px;text-overflow:ellipsis;white-space:nowrap}
-    .muted{color:#8798a5;font-size:9px}
-    @media(max-width:850px){.compact-hero{align-items:flex-start;flex-direction:column}.summary-chips{justify-content:flex-start;min-width:0}}
+    .claim-main,.claim-details,.claim-meta{display:grid;gap:6px;min-width:0}.topline{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.topline span,.topline b,.topline em{padding:3px 6px;border-radius:999px;font-size:.54rem;font-style:normal;font-weight:900;letter-spacing:.04em}.topline span{background:#eef6fb;color:#315f80}.topline b{background:#eef4f8;color:#587185}.topline em{background:#f3f0fb;color:#60558a}
+    .title{color:#1d405a;font-size:.94rem;font-weight:850;line-height:1.42;text-decoration:none}.title:hover,.title:focus-visible{text-decoration:underline;text-underline-offset:.16em}
+    .claim-details>div{display:grid;gap:3px}.claim-details span,.direction-line>span{color:#0b67b2;font-size:.56rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}.claim-details p,.direction-line p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:0;color:#536d80;font-size:.75rem;line-height:1.5}.muted{margin:0;color:#8798a5;font-size:.72rem}
+
+    .relation-metrics{display:flex;gap:12px;flex-wrap:wrap}.relation-metrics span{color:#6a8192;font-size:.64rem}.relation-metrics b{color:#0b67b2;font-size:.88rem}.relation-metrics .pressure b{color:#a6662d}.direction-line{display:grid;gap:3px}.cap-count{color:#718797;font-size:.62rem}
+    .row-actions{display:flex;gap:5px;flex-wrap:wrap}.row-actions a{padding:5px 7px;border:1px solid #d8e7f1;border-radius:6px;color:#43677f;font-size:.62rem;font-weight:800;text-decoration:none;white-space:nowrap}.row-actions a:hover{background:#eef6fb;color:#0b67b2}
+    [hidden]{display:none!important}@media(max-width:850px){.compact-hero{align-items:flex-start;flex-direction:column}.summary-chips{justify-content:flex-start;min-width:0}}
   </style>
 </BaseLayout>
