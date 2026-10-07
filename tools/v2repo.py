@@ -33,6 +33,7 @@ REF_FIELDS = {
     "related_claims": "claim",
     "candidate_capabilities": "capability",
     "key_people": "actor",
+    "collaborating_actors": "actor",
     "trigger_claims": "claim",
     "trigger_experiments": "experiment",
     "target_actors": "actor",
