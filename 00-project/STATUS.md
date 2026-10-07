@@ -22,6 +22,7 @@ detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
 leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
 web_copy_status: FINAL_COPY_PASS_CLOSED
+web_usability_status: USER_FEEDBACK_PASS_1_CLOSED
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
 leadership_deliverable_source: reports/leadership-decision-brief.md
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
