@@ -35,31 +35,36 @@ Path:
 
 ## 2. Main navigation
 
-Current production grouping:
+Current production grouping is task-oriented:
 
 1. **Overview**
-2. **Research Maps**
-3. **Research Coverage**
-4. **Portfolio**
-   - Partners
-   - Russia vs China
+2. **Decide**
+   - Partner Portfolio
    - Directions
-5. **People & Orgs**
-   - Scholars
+   - Russia vs China
+   - Decisions
+3. **Explore**
+   - Research Coverage
+   - Research Maps
    - Institutions
+   - Scholars
    - Capabilities
-6. **Research Objects**
-   - Papers
+4. **Audit**
    - Claims
+   - Papers
    - Evidence
    - Frontier Watch
-7. **Decisions**
+
+The navigation separates three user intents:
+- Decide — understand what to do;
+- Explore — find institutions, people and capabilities;
+- Audit — challenge the evidence chain.
 
 ## 3. Home / Overview
 
 Above the fold:
 - one-sentence bottom line;
-- P1/P2/P3 partner recommendation;
+- current partner disposition: P1 Primary / P2 Conditional Reserve / P3 Hold;
 - Russia-vs-China summary heatmap;
 - collaboration model.
 
@@ -374,7 +379,7 @@ Rule:
 
 The Partner Portfolio has two distinct layers:
 
-1. **P1 / P2 / P3 collaboration packages** — detailed management-facing packages may show institution, key people, rationale, action and connected Direction context.
+1. **P1 / P2 / P3 partner dispositions** — detailed management-facing packages may show institution, key people, rationale, action and connected Direction context, but P1/P2/P3 are not equal outreach priorities.
 2. **Technical lane index** — all Strategic Candidate / Stage-0 / Reserve / Watch / Hold Directions must remain visible, but the page must not repeat full Institution / Scholar / Direction card trees already present in the priority packages.
 
 For lane-level exploration, use compact Direction rows plus filtered Explorer links:
@@ -385,7 +390,7 @@ For lane-level exploration, use compact Direction rows plus filtered Explorer li
 - Scholars.
 
 Principle:
-**management package = rich; portfolio registry = compact; relationship sets = filtered Explorer.**
+**management disposition = rich; portfolio registry = compact; relationship sets = filtered Explorer.**
 
 ### Actor / Person evidence navigation
 
