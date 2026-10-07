@@ -98,10 +98,10 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       <div>
         <h3>Capabilities</h3>
         {vm.capabilities.map((capability) => (
-          <article>
+          <a href={href(`/capabilities/${capability.id}`)}>
             <b>{capability.statement}</b>
             <span>{capability.maturity} · {capability.evidenceConfidence}</span>
-          </article>
+          </a>
         ))}
       </div>
     </div>
