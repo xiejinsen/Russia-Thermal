@@ -69,7 +69,7 @@ const primaryDirection =
       <article class="why">
         <p class="section-kicker">Why it matters</p>
         <h2>What this institution actually contributes to the portfolio</h2>
-        <p>{vm.relevance ?? 'No concise research-relevance statement is currently normalized for this actor.'}</p>
+        <p>{vm.relevance ?? 'A concise project-specific relevance summary has not yet been added.'}</p>
         {primaryDirection && (
           <div class="decision-line">
             <span>Current decision position</span>
@@ -93,7 +93,7 @@ const primaryDirection =
         {vm.collaborators.map((collaborator) => <a class="hierarchy-row collaborator" href={href(collaborator.href ?? `/institutions/${collaborator.id}`)}>
           <span>Collaborator</span><b>{collaborator.name}</b>
         </a>)}
-        {!vm.parent && vm.children.length === 0 && vm.collaborators.length === 0 && <p class="empty">No normalized hierarchy or collaborator relation.</p>}
+        {!vm.parent && vm.children.length === 0 && vm.collaborators.length === 0 && <p class="empty">No parent, child-team or collaborator relationship is currently recorded.</p>}
       </article>
     </section>
 
@@ -111,7 +111,7 @@ const primaryDirection =
     {vm.people.length > 0 && <section class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">People</p><h2>Key scholars linked to demonstrated capabilities</h2></div>
-        <span>{vm.people.length} normalized people</span>
+        <span>{vm.people.length} linked people</span>
       </header>
       <div class="people-list">
         {vm.people.map((person) => <a href={href(person.href ?? `/scholars/${person.id}`)}>
@@ -125,7 +125,7 @@ const primaryDirection =
     {vm.capabilities.length > 0 && <section class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">Capabilities</p><h2>What the evidence says this institution can actually do</h2></div>
-        <span>{vm.capabilities.length} canonical capabilities</span>
+        <span>{vm.capabilities.length} documented capabilities</span>
       </header>
       <div class="capability-list">
         {vm.capabilities.map((capability) => <article>
@@ -174,7 +174,7 @@ const primaryDirection =
             {item.findings[0] && <p>{item.findings[0]}</p>}
           </div>
           <div class="source-actions">
-            {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Deep detail →</a>}
+            {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open detail →</a>}
             {item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Patent detail →</a>}
             <a href={item.primaryUrl} target="_blank" rel="noopener noreferrer">Source ↗</a>
           </div>
