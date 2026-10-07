@@ -63,21 +63,21 @@ Target vocabulary should support at least:
 - ADJACENT_ELECTRONICS
 - FOUNDATIONAL_ONLY
 
-Technical-domain vocabulary should cover at least:
-- PASSIVE_HEAT_SPREADING
-- HEAT_PIPE_VC_LHP
-- PHASE_CHANGE_BOILING
-- MICROFLUIDICS_LIQUID
-- ACTIVE_AIR_COOLING
-- MEMS_MICROFAN
-- THERMAL_MATERIALS
-- SOLID_STATE_COOLING
-- SOFTWARE_THERMAL_CONTROL
-- SENSING_DIAGNOSTICS
-- RELIABILITY_HEALTH
-- MODELING_DIGITAL_TWIN
-- MANUFACTURING_INTEGRATION
-- AEROACOUSTICS
+Capability presentation uses a two-level taxonomy:
+
+Management-facing Family:
+- SOFTWARE_SYSTEM
+- PASSIVE_HARDWARE
+- ACTIVE_HARDWARE
+- ENABLING
+
+Research-facing Topic tags remain optional and controlled.
+
+Canonical taxonomy:
+- `00-project/capability-taxonomy-v1.md`
+- `00-project/platform-transfer-taxonomy-v1.md`
+
+Software/system thermal management is intentionally LIMITED_SCAN and should receive lower research and visual emphasis than hardware thermal management.
 
 Do not use Direction as the only technical taxonomy.
 
