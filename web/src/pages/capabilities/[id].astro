@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import ExplorerLinkStrip from '../../components/ExplorerLinkStrip.astro';
+import EvidencePressure from '../../components/detail/EvidencePressure.astro';
+import RelationPath from '../../components/detail/RelationPath.astro';
 import InstitutionCard from '../../components/cards/InstitutionCard.astro';
 import ScholarCard from '../../components/cards/ScholarCard.astro';
 import DirectionCard from '../../components/cards/DirectionCard.astro';
@@ -57,10 +59,38 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     </article>
   </section>
 
+  <div class="detail-audit">
+    <EvidencePressure
+      russia={vm.evidenceStats.russiaSourceCount}
+      comparator={vm.evidenceStats.comparatorSourceCount}
+      deepReads={vm.evidenceStats.deepReadCount}
+      total={vm.evidenceStats.evidenceCount}
+      papers={vm.evidenceStats.paperCount}
+      patents={vm.evidenceStats.patentCount}
+    />
+    <RelationPath
+      nodes={[
+        { label: 'Owner', value: vm.owner ? 1 : 0, href: vm.owner ? href(vm.owner.href ?? `/institutions/${vm.owner.id}`) : undefined },
+        { label: 'Collaborators', value: vm.collaborators.length },
+        { label: 'People', value: vm.people.length },
+        { label: 'Claims', value: vm.evidenceStats.claimCount, href: href(`/claims?capability=${encodeURIComponent(vm.capability.id)}`) },
+        { label: 'Evidence', value: vm.evidenceStats.evidenceCount, href: href(`/evidence?capability=${encodeURIComponent(vm.capability.id)}`) },
+        { label: 'Directions', value: vm.directions.length }
+      ]}
+    />
+  </div>
+
   {vm.owner && (
     <section class="page-section">
       <SectionHeader eyebrow="Owner" title="Institution / lab" description="Canonical ownership from Capability.actorId." />
       <div class="single-card"><InstitutionCard model={vm.owner} /></div>
+    </section>
+  )}
+
+  {vm.collaborators.length > 0 && (
+    <section class="page-section">
+      <SectionHeader eyebrow="Collaborators" title="Formal collaborating actors" description="Canonical collaborating_actors edges; these institutions are not reclassified as the capability owner." />
+      <div class="content-grid">{vm.collaborators.map((model) => <InstitutionCard model={model} />)}</div>
     </section>
   )}
 
@@ -127,6 +157,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <style>
+    .detail-audit{display:grid;gap:12px;margin-top:18px}
     .cap-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.55fr);gap:20px;padding:24px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--shadow-1)}
     .cap-hero h1{max-width:950px;margin:7px 0 14px;font-size:clamp(1.7rem,2.7vw,2.45rem);line-height:1.16;letter-spacing:-.04em}
     .chips{display:flex;gap:7px;flex-wrap:wrap}.chips span{padding:6px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:850}
