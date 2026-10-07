@@ -8,6 +8,10 @@ maturity: MATERIALS_RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- THERMOELECTRIC
+- MATERIAL_CHARACTERIZATION
 
 Capability statement:
 MISIS demonstrates current thermoelectric and solid-state thermal-control materials capability relevant to compact cooling / temperature-control concepts.
