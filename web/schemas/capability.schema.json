@@ -82,6 +82,25 @@
         "BACKGROUND_KILLED_THESIS",
         "UNRESOLVED"
       ]
+    },
+    "capabilityFamily": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "SOFTWARE_SYSTEM",
+        "PASSIVE_HARDWARE",
+        "ACTIVE_HARDWARE",
+        "ENABLING",
+        null
+      ]
+    },
+    "capabilityTopics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "additionalProperties": false
