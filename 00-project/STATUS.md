@@ -10,6 +10,8 @@ execution_state: READY
 dependency_state: CLEAR
 paper_deep_read_progress: 36/50
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
+patent_deep_read_progress: 16/17
+patent_deep_read_control: 00-project/patent-reading-depth-closure-audit.md
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
 next_action: resume bounded web detail-page design-system consolidation; Tier-B and SHOULD_PROMOTE lineage backfill are non-blocking; do not reopen broad discovery unless a decision-critical contradiction appears
 

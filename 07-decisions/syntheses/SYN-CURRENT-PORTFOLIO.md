@@ -17,6 +17,7 @@ Theory basis:
 - Current public evidence refutes broad Russia-over-China superiority in generic dryout/rewetting, two-phase product reliability, and generic laser/biphilic phone-thermal capability.
 - Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate after full Tier-A pressure testing; generic Russian mesh/surface engineering and dryout-mitigation hardware are explicitly excluded from that thesis. MPEI multi-year capillary-state aging knowledge is a reliability reserve conditional on data access / phone transfer; TPU is HOLD because restored China evidence already demonstrates wettability-patterned architecture inside completed 0.4 mm UTVCs.
 - Reading-depth closure audit reconciled the current canonical corpus against the pre-modular 38-card decision-grade 10Q set. Five decision-critical comparators were restored; canonical coverage is now 50 papers / 36 Deep Reads, with zero unreviewed Tier-A gaps. The remaining 11 Tier-B and 3 Reference-Only papers are non-blocking.
+- Patent reading-depth closure audit reconciled all 14 legacy Patent 10Q cards, restored 11 missing canonical patent objects, and added Deep Reads for two newer decision-critical patents. The canonical patent corpus is now 17 patents / 16 Deep Reads with zero unreviewed decision-critical patent gaps; PATENT-RU2834604C1 is Reference Only.
 - Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
 - Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
 - Foundational Modeling remains a reserve after Deep Read: Russian exact/group-invariant methods provide interpretable neutral boundaries and inverse closure, but China independently has current nonlinear interfacial-stability mathematics and global UTVC semi-analytical models already provide direct mobile-design variables at 4–5 orders lower cost than CFD. The Russian residual is therefore pre-test benchmark / boundary leverage only.
@@ -66,6 +67,15 @@ supporting_priorities:
 - PRI-03-TPU
 
 key_evidence:
+- PATENT-CN116989603B
+- PATENT-CN118744276B
+- PATENT-WO2025190051A1
+- PATENT-US12631401B2
+- PATENT-WO2026045372A1
+- PATENT-CN117529010B
+- PATENT-CN-VC-AGING-001
+- PATENT-GLOBAL-DRYOUT-OBS-001
+- PATENT-RU2860581C1
 - PAPER-CN-UTVC-GEOM-001
 - PAPER-CN-UTVC-WP-001
 - PAPER-CN-DRY-003
