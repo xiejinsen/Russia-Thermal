@@ -11,6 +11,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+capability_family: ACTIVE_HARDWARE
+capability_topics:
+- MICROFLUIDIC_COOLING
+- SURFACE_PROCESS
 
 Capability statement:
 MPEI has a distinct current modular microchannel cooling line using silicon-carbide nanoparticle/agglomerate coatings.
