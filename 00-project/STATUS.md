@@ -8,10 +8,10 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-paper_deep_read_progress: 28/45
+paper_deep_read_progress: 31/45
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-next_action: complete the remaining TPU Surface Process Challenger Deep Reads, then classify the remaining papers as Tier-B / reference-only and decide whether the Deep Read campaign is sufficient to resume web detail-page consolidation; do not reopen broad discovery
+next_action: perform a 45-paper reading-depth closure audit: assign all remaining papers to Tier-B or Reference Only, reconcile any decision-critical legacy citations not yet canonicalized, and decide whether Deep Read coverage is sufficient to resume web detail-page consolidation; do not reopen broad discovery
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
