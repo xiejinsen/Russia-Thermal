@@ -9,7 +9,7 @@ research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
 current_phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-next_action: Paper Deep Read pilot is complete; review pilot page density when convenient before broad Tier-A migration, then migrate the next bounded decision-critical P1/P2/P3/comparator set and continue Partner Portfolio/design consolidation
+next_action: run a site-wide dead-end and duplicate-navigation audit; then consolidate Partner Portfolio duplication and remaining design-system inconsistencies before the next bounded Tier-A Deep Read migration
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
