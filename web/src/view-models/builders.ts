@@ -300,7 +300,7 @@ function buildPartnerGroup(lane: string): PartnerGroupVM | null {
     }
   }
 
-  const meta = groupMeta[lane] ?? { title: humanize(lane), description: 'Canonical investment lane.' };
+  const meta = groupMeta[lane] ?? { title: humanize(lane), description: 'Current investment lane.' };
 
   return {
     id: lane.toLowerCase().replace(/_/g, '-'),
@@ -377,9 +377,9 @@ export function buildPartnerPortfolioVM(): PartnerPortfolioVM {
   const lanes = ['STRATEGIC_CANDIDATE', 'STAGE0_CHALLENGER', 'RESERVE', 'WATCH', 'HOLD'];
   return {
     eyebrow: 'Collaboration portfolio',
-    title: 'Partners organized by canonical investment lane',
+    title: 'Partner portfolio by current investment lane',
     summary:
-      'Partner priority and technical investment lane are separate dimensions. P1/P2/P3 come from canonical priority decision objects; lane groupings continue to come from Direction records.',
+      'Partner rank and technical investment status are separate dimensions. P1/P2/P3 preserve the partner shortlist, while each connected technical direction is managed independently as Strategic Candidate, Reserve, Watch or Hold.',
     priorities: [...priorities]
       .sort((a, b) => Number(a.rank.slice(1)) - Number(b.rank.slice(1)))
       .map(buildPriorityVM),
@@ -689,10 +689,10 @@ export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
   )].sort();
 
   return {
-    eyebrow: 'Evidence graph',
+    eyebrow: 'Evidence audit',
     title: 'Evidence Explorer — All Sources',
     summary:
-      'The complete primary-source collection: Papers, patents, official profiles, rankings, conference/journal sources and other verified evidence. Papers are a subset of this Evidence collection; filters operate on derived normalized relations and never rewrite canonical research state.',
+      'The complete verified source collection: papers, patents, official profiles, rankings, conference and journal sources. Use the filters to trace how each source supports or pressures the current research conclusions.',
     totalEvidence: evidence.length,
     totalClaims: claims.length,
     records,
@@ -738,7 +738,7 @@ export function buildLandscapeVM(): LandscapePageVM {
     eyebrow: 'Comparator pressure',
     title: 'Russia vs China thermal-management landscape',
     summary:
-      'This landscape does not score countries by publication counts. Each row starts from a canonical Direction and shows the strongest comparator baseline, the residual Russian differentiation that survived pressure testing, maturity, and decision lane.',
+      'This landscape does not score countries by publication counts. Each row starts from a strategic direction and shows the strongest comparator baseline, the Russian residual that survived pressure testing, its maturity and current decision lane.',
     rows
   };
 }
@@ -951,7 +951,7 @@ export function buildCapabilitiesCollectionVM(): import('../types/view-models').
   return {
     eyebrow: 'Collection',
     title: 'Capabilities',
-    summary: 'Browse all normalized technical capabilities. Each record remains owned by its canonical actor and linked onward to claims and strategic directions.',
+    summary: 'Browse the documented technical capabilities, who demonstrates them, how they are bounded, and which claims or strategic directions they influence.',
     records: [...capabilities]
       .sort((a, b) => a.id.localeCompare(b.id))
       .map(capabilityDetail)
@@ -966,7 +966,7 @@ export function buildInstitutionsCollectionVM(): import('../types/view-models').
   return {
     eyebrow: 'Collection',
     title: 'Institutions & labs',
-    summary: 'Browse the organizations and laboratories represented in the canonical Actor graph.',
+    summary: 'Browse the institutions and laboratories covered by the research, including their people, capabilities and strategic relevance.',
     records
   };
 }
