@@ -2,11 +2,11 @@
 
 record_state: CURRENT
 priority_rank: P3
-priority_class: CHALLENGER
+priority_class: HOLD
 target_actors:
 - ACT-TPU
 related_directions:
 - DIR-SURFACE-PROCESS-CHALLENGER
-collaboration_readiness: LOW_MEDIUM
-recommended_action: ENGAGE_ONLY_FOR_ONE_BOUNDED_FALSIFICATION_TEST
-rationale: TPU has credible laser / wettability process execution, copper boiling work and industrial field-translation evidence, but no public proof of the retained sealed-VC spatial-routing function. Any engagement should therefore be limited to one low-cost falsification experiment with explicit vacuum, contamination, sealed-fluid and strong-reference controls.
+collaboration_readiness: LOW
+recommended_action: NO_PROACTIVE_ENGAGEMENT_REOPEN_ONLY_WITH_MATCHED_PHONE_EVIDENCE
+rationale: TPU has credible laser / wettability process execution, copper boiling work and industrial field translation, but restored legacy evidence shows independent China wettability-patterned architecture already implemented inside 0.4 mm UTVCs. Public evidence therefore does not justify a Stage-0 collaboration unless TPU can show a process-specific low-outgassing, durability, transient or diagnostic advantage under matched phone-relevant constraints.
