@@ -12,6 +12,11 @@ paper_deep_read_progress: 36/50
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 patent_deep_read_progress: 16/17
 patent_deep_read_control: 00-project/patent-reading-depth-closure-audit.md
+graph_audit_status: PASS
+graph_audit_control: tools/graph_audit.py
+graph_audit_report: analysis/graph-evidence-chain-audit_2026_10_07.md
+semantic_orphan_sources: 0
+semantic_orphan_claims: 0
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
 next_action: resume bounded web detail-page design-system consolidation; Tier-B and SHOULD_PROMOTE lineage backfill are non-blocking; do not reopen broad discovery unless a decision-critical contradiction appears
 
