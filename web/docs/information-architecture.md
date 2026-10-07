@@ -307,8 +307,11 @@ Target pattern:
 - `/claims?direction=DIR-...`
 - `/papers?direction=DIR-...`
 - `/papers?claim=CLM-...&relation=supporting`
+- `/evidence?claim=CLM-...&relation=pressure`
+- `/claims?capability=CAP-...`
+- `/evidence?capability=CAP-...`
 
-Filter state should become shareable / reload-safe URL state as the Explorer interaction layer matures.
+Filter state is shareable / reload-safe URL state. Explorer controls read from and write to query parameters without creating a second source of truth.
 
 ### Dense Explorer rule
 High-cardinality objects such as Papers, Claims and Evidence use spreadsheet-like dense tables, not vertically expensive cards.
