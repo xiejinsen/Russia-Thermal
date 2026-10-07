@@ -427,3 +427,24 @@ Object-specific emphasis:
 
 Principle:
 **use density without flattening meaning: semantic dense rows for research collections, strategic cards for small decision sets.**
+
+
+### Cardinality threshold for card layouts
+
+Card grids are reserved for genuinely small, high-context sets.
+
+Default threshold:
+- **1–15 items:** cards are allowed when visual comparison or strategic context benefits from them;
+- **more than 15 items:** do not use a card grid as the primary collection view.
+
+For collections above 15 items, use:
+- Semantic Dense Row Explorer for text-rich research objects;
+- a compact registry / list when objects are structurally simple;
+- a purpose-built table only when strict column comparison is the primary task.
+
+The threshold applies to the visible collection, not only to the whole database. A page containing multiple groups should avoid mixed card/row patterns when some peer groups exceed 15; prefer one consistent dense presentation for the whole object class.
+
+Exceptions require a clear user-facing reason, such as a fixed small dashboard, decision shortlist or visual gallery where the collection is intentionally capped.
+
+Principle:
+**once an object class grows beyond 15 visible items, scanning efficiency takes priority over card aesthetics.**
