@@ -162,6 +162,8 @@ def main() -> int:
             edge(capid, aid)
         for pid in as_list(cap.get("key_people")):
             edge(capid, pid)
+        for aid in as_list(cap.get("collaborating_actors")):
+            edge(capid, aid)
         for cid in as_list(cap.get("evidence_claims")):
             downstream_claims[cid].add(capid)
             edge(capid, cid)
@@ -246,17 +248,23 @@ def main() -> int:
             warnings.append(f"{capid}: capability has no explicit transfer_boundary")
         people = as_list(cap.get("key_people"))
         if disposition == "DIRECTION_LINKED" and not people:
-            errors.append(f"{capid}: Direction-linked capability has no key_people")
+            status = str(cap.get("key_people_status") or "").strip()
+            if not status:
+                errors.append(f"{capid}: Direction-linked capability has no key_people and no explicit key_people_status")
+            else:
+                warnings.append(f"{capid}: no normalized key person; explicit status={status}")
         cap_actor = str(cap.get("actor_id") or "").strip()
-        cap_lineage = ancestors(cap_actor, actor_by_id)
+        allowed_lineages = [ancestors(cap_actor, actor_by_id)]
+        for aid in as_list(cap.get("collaborating_actors")):
+            allowed_lineages.append(ancestors(aid, actor_by_id))
         for pid in people:
             person = actor_by_id.get(pid)
             if not person:
                 continue
             parent = str(person.get("parent_actor_id") or "").strip()
             person_lineage = ancestors(parent, actor_by_id) if parent else set()
-            if cap_lineage and person_lineage and not (cap_lineage & person_lineage):
-                warnings.append(f"{capid}: key person {pid} is outside capability actor lineage {cap_actor}")
+            if person_lineage and not any(lineage & person_lineage for lineage in allowed_lineages if lineage):
+                warnings.append(f"{capid}: key person {pid} is outside primary/collaborator actor lineages")
 
     # Direction end-to-end evidence closure.
     direction_rows: list[tuple[str, str, int, int, int, int, int, int]] = []
