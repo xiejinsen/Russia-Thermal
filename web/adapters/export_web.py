@@ -176,7 +176,7 @@ def markdown_section(text: str, heading: str) -> str:
 
 
 def deep_read_questions(text: str) -> list[dict[str, Any]]:
-    matches = list(re.finditer(r"^##\s+[QP](\d+)\s+—\s+(.+?)\s*$", text, re.MULTILINE))
+    matches = list(re.finditer(r"^##\s+([QP])(\d+)(?:\s+—\s+(.+?))?\s*$", text, re.MULTILINE))
     out: list[dict[str, Any]] = []
     for index, match in enumerate(matches):
         start = match.end()
@@ -185,10 +185,22 @@ def deep_read_questions(text: str) -> list[dict[str, Any]]:
         boundary = re.search(r"^##\s+Evidence boundary\s*$", tail, re.MULTILINE)
         if boundary:
             tail = tail[: boundary.start()]
+
+        title = (match.group(3) or "").strip()
+        body = tail.strip()
+        if not title and body:
+            body_lines = body.splitlines()
+            first = body_lines[0].strip()
+            if first.endswith(":") and len(first) <= 120:
+                title = first[:-1].strip()
+                body = "\n".join(body_lines[1:]).strip()
+        if not title:
+            title = f"{match.group(1)}{match.group(2)}"
+
         out.append({
-            "number": int(match.group(1)),
-            "title": match.group(2).strip(),
-            "body": tail.strip(),
+            "number": int(match.group(2)),
+            "title": title,
+            "body": body,
         })
     return out
 
