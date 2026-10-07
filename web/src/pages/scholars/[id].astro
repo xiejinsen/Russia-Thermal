@@ -75,7 +75,7 @@ const primaryDirection =
       <article class="profile-panel">
         <p class="section-kicker">Role in this research</p>
         <h2>Why this scholar matters to the collaboration thesis</h2>
-        <p>{vm.relevance ?? 'No concise research-relevance statement is currently normalized for this scholar.'}</p>
+        <p>{vm.relevance ?? 'A concise project-specific relevance summary has not yet been added.'}</p>
         {primaryDirection && <div class="decision-line">
           <span>Current strategic link</span>
           <a href={href(`/directions/${primaryDirection.id}`)}>
@@ -96,7 +96,7 @@ const primaryDirection =
           <span>Capability collaborator</span>
           <b>{item.name}</b>
         </a>)}
-        {!vm.affiliation && vm.collaboratorInstitutions.length === 0 && <p class="empty">No normalized institutional relation.</p>}
+        {!vm.affiliation && vm.collaboratorInstitutions.length === 0 && <p class="empty">No institutional affiliation or collaboration link is currently recorded.</p>}
       </article>
     </section>
 
@@ -115,7 +115,7 @@ const primaryDirection =
       <header class="panel-head">
         <div>
           <p class="section-kicker">Capabilities</p>
-          <h2>What this scholar is linked to through canonical capability ownership</h2>
+          <h2>Capabilities directly linked to this scholar in the current research graph</h2>
         </div>
         <span>{vm.capabilityContexts.length} capability contexts</span>
       </header>
