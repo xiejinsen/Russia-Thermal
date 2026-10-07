@@ -8,6 +8,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- BOILING_DRYOUT_PHYSICS
+- MICROFLUIDIC_COOLING
 
 Capability statement:
 JIHT contributes current microchannel-boiling experimental depth to the MPEI-adjacent Moscow two-phase ecosystem.
