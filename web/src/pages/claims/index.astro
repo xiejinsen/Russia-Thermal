@@ -31,6 +31,8 @@ const records=vm.records.map((claim)=>({
     claim.confidence,
     claim.decisionRole ?? '',
     rawClaimById.get(claim.id)?.boundary ?? '',
+    ...(rawClaimById.get(claim.id)?.supportingSourceIds ?? []),
+    ...(rawClaimById.get(claim.id)?.contradictingSourceIds ?? []),
     ...claim.directionIds.map(directionTitle)
   ].join(' ')
 }));
