@@ -160,3 +160,23 @@ It must not:
 
 The goal is:
 **one canonical record per underlying source object, while preserving genuinely distinct evidence.**
+
+
+## 10. Operational preflight
+
+Before writing a newly discovered Source, use the repository preflight helper when working from a local checkout:
+
+`python tools/source_dedup.py --source-type PAPER --source-key "DOI:..." --title "..." --year 2026 --authors "..."`
+
+Interpretation:
+- exit 2 / EXACT SOURCE MATCH -> reuse the existing Source ID;
+- exit 1 / POSSIBLE SOURCE DUPLICATE -> review metadata before writing;
+- exit 0 -> no current duplicate candidate found.
+
+Existing corpus scan:
+`python tools/source_dedup.py --scan`
+
+CI enforcement remains in `tools/v2repo.py --check`, so exact canonical identity collisions cannot silently land on main.
+
+Deprecated Source IDs created by a merge are preserved in:
+`00-project/source-aliases.md`.
