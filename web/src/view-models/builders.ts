@@ -114,6 +114,8 @@ function capabilityDetail(capability: CapabilityRecord): CapabilityDetailVM {
     maturity: humanize(capability.maturity),
     evidenceConfidence: humanize(capability.evidenceConfidence),
     targetFit: humanize(capability.targetFit),
+    family: capability.capabilityFamily ? humanize(capability.capabilityFamily) : undefined,
+    topics: (capability.capabilityTopics ?? []).map(humanize),
     technicalScope: capability.technicalScope,
     transferBoundary: capability.transferBoundary ?? undefined,
     strategicUse: capability.strategicUse ?? undefined,
