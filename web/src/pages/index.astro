@@ -43,21 +43,24 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
   </section>
 
   <section class="management-strip">
-    {primaryPriority && <a href={href(`/directions/${primaryPriority.directions[0]?.id ?? ''}`)}>
+    {primaryPriority && <article>
       <span>ACT NOW · {primaryPriority.rank}</span>
       <b>{primaryPriority.institutions[0]?.name ?? primaryPriority.id}</b>
       <p>{primaryPriority.rationale}</p>
-    </a>}
-    {reservePriority && <a href={href(`/directions/${reservePriority.directions[0]?.id ?? ''}`)}>
+      <a href={href(`/directions/${primaryPriority.directions[0]?.id ?? ''}`)}>Open direction</a>
+    </article>}
+    {reservePriority && <article>
       <span>CONDITIONAL RESERVE · {reservePriority.rank}</span>
       <b>{reservePriority.institutions[0]?.name ?? reservePriority.id}</b>
       <p>{reservePriority.rationale}</p>
-    </a>}
-    {holdPriority && <a href={href(`/directions/${holdPriority.directions[0]?.id ?? ''}`)}>
+      <a href={href(`/directions/${reservePriority.directions[0]?.id ?? ''}`)}>Open direction</a>
+    </article>}
+    {holdPriority && <article>
       <span>HOLD · {holdPriority.rank}</span>
       <b>{holdPriority.institutions[0]?.name ?? holdPriority.id}</b>
       <p>{holdPriority.rationale}</p>
-    </a>}
+      <a href={href(`/directions/${holdPriority.directions[0]?.id ?? ''}`)}>Open direction</a>
+    </article>}
   </section>
 
   <section class="explore-strip">
@@ -142,18 +145,21 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
             </div>
           </div>
           <div class="compare-detail">
-            <a class="baseline" href={href('/research-map/china')}>
+            <div class="baseline">
               <small>{row.chinaLabel}</small>
               <p>{row.chinaBaseline}</p>
-            </a>
-            <a class="residual" href={href('/research-map/russia')}>
+              <a href={href('/research-map/china')}>Open China research map</a>
+            </div>
+            <div class="residual">
               <small>{row.russiaLabel}</small>
               <p>{row.russiaResidual}</p>
-            </a>
-            <a class="next" href={href(`/directions/${row.direction.id}`)}>
+              <a href={href('/research-map/russia')}>Open Russia research map</a>
+            </div>
+            <div class="next">
               <small>NEXT VALIDATION QUESTION</small>
               <p>{row.direction.nextQuestion ?? row.direction.nextGate}</p>
-            </a>
+              <a href={href(`/directions/${row.direction.id}`)}>Open direction</a>
+            </div>
           </div>
         </article>
       ))}
@@ -167,10 +173,11 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
         <p>Rejection is part of the portfolio conclusion, not an appendix.</p>
       </div>
       {vm.killDecisions.slice(0,4).map((decision) => (
-        <a class="kill" href={href(`/decisions#${decision.id}`)}>
+        <article class="kill">
           <b>×</b>
           <div><strong>{decision.subject}</strong><p>{decision.rationale}</p></div>
-        </a>
+          <a href={href(`/decisions#${decision.id}`)}>Audit decision</a>
+        </article>
       ))}
       <a class="panel-link" href={href('/decisions')}>Open full decision history →</a>
     </div>
@@ -257,8 +264,9 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       border-radius:16px;overflow:hidden;background:#d7e6f2;box-shadow:0 10px 28px rgba(42,96,140,.05)
     }
 
-    .management-strip>a{display:grid;gap:8px;padding:20px;background:#fff;text-decoration:none;color:inherit}
-    .management-strip>a:hover{background:#f8fcff}
+    .management-strip>article{display:grid;gap:8px;padding:20px;background:#fff;color:inherit}
+    .management-strip>article:hover{background:#f8fcff}
+    .management-strip>article>a{width:fit-content;color:#0b67b2;font-size:12px;font-weight:850;text-decoration:none}.management-strip>article>a:hover,.management-strip>article>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
     .management-strip span{font-size:11px;font-weight:850;letter-spacing:.08em;color:#0a6bb7}
     .management-strip b{font-size:15px;line-height:1.35;color:#173f5e}
     .management-strip p{margin:0;font-size:13px;line-height:1.55;color:#5a7183}
@@ -299,20 +307,20 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
     .matrix{display:grid;gap:18px;padding:18px;background:#f6fafd}
     .compare-row{border:1px solid #cfe1ee;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(38,89,130,.05)}
     .compare-top{display:grid;grid-template-columns:230px 190px minmax(0,1fr);border-bottom:1px solid #dce8f1;background:linear-gradient(180deg,#fbfdff,#f7fbfe)}
-    .compare-top>div,.compare-detail>a{padding:18px;border-right:1px solid #e4edf4}
+    .compare-top>div,.compare-detail>div{padding:18px;border-right:1px solid #e4edf4}
     .dir{display:grid;gap:7px;border-left:4px solid #4c9fe0}
     .dir a{text-decoration:none}.dir b{font-size:15px;color:#254a66}
     .dir span,small{font-size:10px;color:#617b8f;text-transform:uppercase;letter-spacing:.05em}
     .decision strong{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:#0878c4}
     .focus p,.matrix p{font-size:13px;line-height:1.62;color:#3e596c;margin:.45rem 0 0}
     .compare-detail{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:4px solid #f1f6fa}
-    .compare-detail>a{display:block;text-decoration:none;color:inherit}
+    .compare-detail>div{display:block;color:inherit}
     .baseline{background:#edf6ff}.residual{background:#eef9f6}.next{background:#f8fbfd}
-    .compare-detail>a:hover{filter:brightness(.985)}
+    .compare-detail>div>a{display:inline-block;margin-top:10px;color:#0b67b2;font-size:11px;font-weight:850;text-decoration:none}.compare-detail>div>a:hover,.compare-detail>div>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
 
     .lower{display:grid;grid-template-columns:1.5fr .7fr;gap:18px}
-    .kill{display:grid;grid-template-columns:34px 1fr;padding:16px 20px;border-bottom:1px solid #e0ebf3;font-size:13px;color:#344f63;text-decoration:none}
-    .kill:hover{background:#fffafa}
+    .kill{display:grid;grid-template-columns:34px 1fr auto;gap:10px;padding:16px 20px;border-bottom:1px solid #e0ebf3;font-size:13px;color:#344f63}
+    .kill:hover{background:#fffafa}.kill>a{align-self:start;color:#0b67b2;font-size:11px;font-weight:850;text-decoration:none;white-space:nowrap}.kill>a:hover,.kill>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
     .kill>b{color:#c65454;font-size:16px}.kill strong{font-size:13px;color:#36536a}.kill p{margin:5px 0 0;color:#607688;line-height:1.5}
     .numbers{display:grid;grid-template-columns:auto 1fr;gap:14px 16px;padding:22px}
     .numbers b{font-size:28px;color:#0b64aa}.numbers span{font-size:12px;color:#5e7486;align-self:center;line-height:1.35}
@@ -324,7 +332,7 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       .basis-grid,.management-strip{grid-template-columns:1fr}
       .basis-grid>div{border-right:0;border-bottom:1px solid #e0ebf3}
       .priority-row,.compare-top,.compare-detail,.compare-summary{grid-template-columns:1fr}
-      .priority-row>div,.compare-top>div,.compare-detail>a{border-right:0;border-bottom:1px solid #e4edf4}
+      .priority-row>div,.compare-top>div,.compare-detail>div{border-right:0;border-bottom:1px solid #e4edf4}
       .explore-strip{align-items:flex-start;flex-direction:column}
       .explore-strip nav{justify-content:flex-start}
     }
