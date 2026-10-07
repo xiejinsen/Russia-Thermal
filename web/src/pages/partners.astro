@@ -2,13 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import InstitutionCard from '../components/cards/InstitutionCard.astro';
-import ScholarCard from '../components/cards/ScholarCard.astro';
-import DirectionCard from '../components/cards/DirectionCard.astro';
 import PartnerPriorityCard from '../components/PartnerPriorityCard.astro';
 import { buildPartnerPortfolioVM } from '../view-models/builders';
 
 const vm = buildPartnerPortfolioVM();
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+
+const priorityDirectionIds = new Set(
+  vm.priorities.flatMap((priority) => priority.directions.map((direction) => direction.id))
+);
 ---
 
 <BaseLayout title="Russia-Thermal — Partner Portfolio" description={vm.summary}>
@@ -23,48 +26,68 @@ const vm = buildPartnerPortfolioVM();
   <section class="priority-section">
     <SectionHeader
       eyebrow="Management priority"
-      title="Partner priority is separate from technical lane"
-      description="P1/P2/P3 are canonical collaboration-decision objects. Strategic Candidate / Reserve / Watch / Hold remain Direction states."
+      title="Three collaboration packages to engage first"
+      description="P1/P2/P3 are collaboration priorities. Their connected technical Directions remain separately governed by Strategic Candidate / Stage-0 / Reserve / Watch / Hold lanes."
     />
     <div class="priority-stack">
       {vm.priorities.map((model) => <PartnerPriorityCard model={model} />)}
     </div>
   </section>
 
-  {vm.groups.map((group) => (
-    <section class="portfolio-group" id={group.id}>
-      <SectionHeader title={group.title} description={group.description} />
+  <section class="lane-section">
+    <SectionHeader
+      eyebrow="Technical lane index"
+      title="All Directions without repeating the partner cards"
+      description="Use this compact index to reach every strategic, reserve, watch and hold Direction. Actor and evidence sets open as pre-filtered Explorers instead of being duplicated here."
+    />
 
-      <div class="subsection">
-        <h3>Directions</h3>
-        <div class="content-grid">
-          {group.directions.map((model) => <DirectionCard model={model} />)}
-        </div>
-      </div>
+    <div class="lane-groups">
+      {vm.groups.map((group) => (
+        <section class="lane-group" id={group.id}>
+          <header>
+            <div>
+              <span>{group.directions.length} direction{group.directions.length === 1 ? '' : 's'}</span>
+              <h2>{group.title}</h2>
+              <p>{group.description}</p>
+            </div>
+          </header>
 
-      {group.institutions.length > 0 && (
-        <div class="subsection">
-          <h3>Institutions / labs</h3>
-          <div class="content-grid">
-            {group.institutions.map((model) => <InstitutionCard model={model} />)}
+          <div class="lane-rows">
+            {group.directions.map((direction) => (
+              <article class="lane-row">
+                <div class="direction-main">
+                  <div class="direction-topline">
+                    <span>{direction.lane.label}</span>
+                    {priorityDirectionIds.has(direction.id) && <b>Priority-linked</b>}
+                  </div>
+                  <a class="direction-title" href={href(`/directions/${direction.id}`)}>{direction.title}</a>
+                  <p>{direction.recommendation}</p>
+                </div>
+
+                <div class="direction-meta">
+                  <div><span>Phone maturity</span><b>{direction.phoneTransferMaturity}</b></div>
+                  <div><span>Differentiation</span><b>{direction.differentiationConfidence}</b></div>
+                </div>
+
+                <nav aria-label={`Explore relationships for ${direction.title}`}>
+                  <a class="primary" href={href(`/directions/${direction.id}`)}>Open Direction →</a>
+                  <a href={href(`/claims?direction=${encodeURIComponent(direction.id)}`)}>Claims</a>
+                  <a href={href(`/evidence?direction=${encodeURIComponent(direction.id)}`)}>Evidence</a>
+                  <a href={href(`/institutions?direction=${encodeURIComponent(direction.id)}`)}>Institutions</a>
+                  <a href={href(`/scholars?direction=${encodeURIComponent(direction.id)}`)}>Scholars</a>
+                </nav>
+              </article>
+            ))}
           </div>
-        </div>
-      )}
-
-      {group.scholars.length > 0 && (
-        <div class="subsection">
-          <h3>Key people</h3>
-          <div class="content-grid">
-            {group.scholars.map((model) => <ScholarCard model={model} />)}
-          </div>
-        </div>
-      )}
-    </section>
-  ))}
+        </section>
+      ))}
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  .priority-section {
+  .priority-section,
+  .lane-section {
     display: grid;
     gap: var(--space-6);
     margin-top: var(--space-10, 2.5rem);
@@ -75,30 +98,180 @@ const vm = buildPartnerPortfolioVM();
     gap: var(--space-6);
   }
 
-  .portfolio-group {
+  .lane-groups {
     display: grid;
-    gap: var(--space-6);
-    margin-top: var(--space-10, 2.5rem);
-    padding-top: var(--space-6);
-    border-top: 1px solid var(--line);
+    gap: 14px;
   }
 
-  .subsection {
-    display: grid;
-    gap: var(--space-4);
+  .lane-group {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
   }
 
-  .subsection h3 {
-    margin: 0;
-    font-size: 0.9rem;
-    letter-spacing: 0.06em;
+  .lane-group>header {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg,#fbfdff,#f5faff);
+  }
+
+  .lane-group>header>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3px 12px;
+    align-items: baseline;
+  }
+
+  .lane-group>header span {
+    color: var(--accent-vivid);
+    font-size: .63rem;
+    font-weight: 900;
+    letter-spacing: .06em;
     text-transform: uppercase;
-    color: var(--text-muted);
   }
 
-  .content-grid {
+  .lane-group h2 {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: -.015em;
+  }
+
+  .lane-group>header p {
+    grid-column: 1/-1;
+    max-width: 90ch;
+    margin: 3px 0 0;
+    color: var(--text-muted);
+    font-size: .75rem;
+    line-height: 1.5;
+  }
+
+  .lane-rows { display: grid; }
+
+  .lane-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-    gap: var(--space-4);
+    grid-template-columns: minmax(20rem,1.45fr) minmax(15rem,.6fr) minmax(22rem,.85fr);
+    gap: 18px;
+    align-items: center;
+    padding: 13px 16px;
+    border-bottom: 1px solid #e4edf3;
+  }
+
+  .lane-row:last-child { border-bottom: 0; }
+  .direction-main { display: grid; gap: 4px; min-width: 0; }
+
+  .direction-topline {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .direction-topline span,
+  .direction-topline b {
+    padding: 3px 6px;
+    border-radius: 999px;
+    font-size: .52rem;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .direction-topline span { background: #eef6fb; color: #315f80; }
+  .direction-topline b { background: #e8f6ef; color: #087a66; }
+
+  .direction-title {
+    width: fit-content;
+    color: #193f5c;
+    font-size: .88rem;
+    font-weight: 850;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .direction-title:hover,
+  .direction-title:focus-visible {
+    color: var(--accent-vivid);
+    text-decoration: underline;
+    text-underline-offset: .16em;
+  }
+
+  .direction-main p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: .72rem;
+    line-height: 1.45;
+  }
+
+  .direction-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid #dce8f0;
+    border-radius: 8px;
+    background: #dce8f0;
+  }
+
+  .direction-meta div {
+    display: grid;
+    gap: 3px;
+    padding: 8px 9px;
+    background: #f8fbfd;
+  }
+
+  .direction-meta span {
+    color: #708596;
+    font-size: .53rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .direction-meta b {
+    color: #315f80;
+    font-size: .67rem;
+    overflow-wrap: anywhere;
+  }
+
+  .lane-row nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .lane-row nav a {
+    padding: 5px 7px;
+    border: 1px solid #d8e7f1;
+    border-radius: 6px;
+    background: #fff;
+    color: #43677f;
+    font-size: .62rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .lane-row nav a:hover,
+  .lane-row nav a:focus-visible {
+    background: #eef6fb;
+    color: var(--accent-vivid);
+  }
+
+  .lane-row nav .primary {
+    border-color: #b9d7ea;
+    background: #edf7fd;
+    color: #0b67b2;
+  }
+
+  @media (max-width: 1050px) {
+    .lane-row { grid-template-columns: 1fr 1fr; }
+    .lane-row nav { grid-column: 1/-1; justify-content: flex-start; }
+  }
+
+  @media (max-width: 720px) {
+    .lane-row { grid-template-columns: 1fr; }
+    .lane-row nav { grid-column: auto; }
   }
 </style>
