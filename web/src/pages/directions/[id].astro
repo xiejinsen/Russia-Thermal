@@ -160,7 +160,7 @@ const laneTone =
           <strong>Open →</strong>
         </a>)}
       </div>
-      {vm.claims.length > 10 && <p class="more-note">Showing 10 representative claims. The evidence counts above use the complete graph-linked set.</p>}
+      {vm.claims.length > 10 && <p class="more-note">Showing 10 representative claims. The summary metrics above use the complete set linked to this direction.</p>}
     </section>
 
     <section class="panel">
@@ -182,13 +182,13 @@ const laneTone =
             <small>{item.supportingClaims.length} supporting · {item.contradictingClaims.length} pressure claims</small>
           </div>
           <div class="source-actions">
-            {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Deep detail →</a>}
+            {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open detail →</a>}
             {item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Patent detail →</a>}
             <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original ↗</a>
           </div>
         </article>)}
       </div>
-      {vm.evidence.length > 12 && <p class="more-note">Showing 12 representative sources. Evidence Pressure uses the complete reachable source set.</p>}
+      {vm.evidence.length > 12 && <p class="more-note">Showing 12 representative sources. Evidence Pressure uses the complete source set linked to this direction.</p>}
     </section>
 
     <section class="panel">
@@ -202,10 +202,10 @@ const laneTone =
             <span>{event.date ?? 'undated'} · {event.eventType.label}</span>
             <b>{event.previousState ?? '—'} → {event.newState}</b>
           </div>
-          <p>{event.rationale ?? 'No concise rationale is normalized for this event.'}</p>
+          <p>{event.rationale ?? 'No concise rationale is currently recorded for this event.'}</p>
           {event.reopenCondition && <small>Reopen only if: {event.reopenCondition}</small>}
         </article>)}
-      </div> : <p class="empty">No Direction-specific decision event is currently recorded.</p>}
+      </div> : <p class="empty">No decision event is currently recorded specifically for this direction.</p>}
     </section>
   </div>
 </BaseLayout>
