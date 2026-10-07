@@ -61,9 +61,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-SURFACE-PROCESS-CHALLENGER
 - lane: HOLD
 - phone_maturity: LOW
-- residual_or_use: TPU-specific process execution / surface-diagnostics competence only. Generic laser processing, generic biphilic surfaces and spatial wettability patterning inside an ultra-thin sealed VC are excluded from the differentiation thesis after restoration of a 0.4 mm China SWM-WP comparator.
-- strongest_baseline: China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC geometry benchmark, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
-- next_question_or_gate: Reopen only if TPU demonstrates a matched process-specific phone advantage such as materially better low-outgassing durability, transient rewetting, manufacturing yield or diagnostics under the same sub-0.4 mm sealed-device constraints.
+- residual_or_use: process execution / diagnostics competence only. Generic laser processing, generic biphilic surfaces, and spatial wettability patterning inside an ultra-thin sealed VC are all excluded from the differentiation thesis.
+- strongest_baseline: China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
+- next_question_or_gate: reopen to STAGE0_CHALLENGER only if direct evidence shows a process-specific increment over current domestic target-system controls and the process passes vacuum / contamination / sealed-fluid gates.
 
 ## Mandatory guardrails
 - Broad Russia superiority claims remain killed unless explicitly reopened by a Decision Event.
