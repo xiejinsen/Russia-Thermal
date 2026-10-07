@@ -484,6 +484,19 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
     direction.capabilityIds.some((id) => linkedCaps.some((capability) => capability.id === id))
   );
 
+  const institutionNames = [...new Set(
+    linkedCaps
+      .map((capability) => actorById.get(capability.actorId)?.name)
+      .filter((name): name is string => Boolean(name))
+  )].sort();
+
+  const peopleNames = [...new Set(
+    linkedCaps
+      .flatMap((capability) => capability.keyPeopleIds)
+      .map((id) => actorById.get(id)?.name)
+      .filter((name): name is string => Boolean(name))
+  )].sort();
+
   return {
     id: item.id,
     title: item.title,
@@ -499,7 +512,9 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
     supportingClaims: supportingClaims.map(claimSummary),
     contradictingClaims: contradictingClaims.map(claimSummary),
     linkedCapabilities: linkedCaps.map(capabilityDetail),
-    linkedDirections: linkedDirs.map(directionCard)
+    linkedDirections: linkedDirs.map(directionCard),
+    institutionNames,
+    peopleNames
   };
 }
 
