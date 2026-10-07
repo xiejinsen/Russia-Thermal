@@ -253,3 +253,60 @@ Rules:
 - map filters may derive Capability / Direction / Priority / Person relations;
 - missing location is rendered as a coverage gap, never silently geocoded to an uncertain place;
 - Russia and China research maps use the same view-model contract even if their evidence maturity differs.
+
+
+## 11. Capability Atlas additive datasets
+
+Status: PLANNED / DATA_PENDING
+
+The Russia-first Capability Atlas must extend the normalized layer additively.
+
+Do not add mutable aggregate fields such as `paperCount`, `patentCount` or `influenceScore` directly to ActorRecord.
+
+Planned additive data contracts:
+
+### CollaborationRecord
+
+Purpose:
+represent evidenced actor-to-actor collaboration with type, time and source provenance.
+
+Minimum semantics:
+- stable ID;
+- actor IDs;
+- relation type;
+- time window when publicly known;
+- technical scope;
+- evidence source IDs;
+- confidence / boundary.
+
+### ResearchOutputSnapshot
+
+Purpose:
+represent a reproducible publication/patent output estimate for an Actor over an explicit period and query scope.
+
+Minimum semantics:
+- actor ID;
+- period;
+- query/search basis;
+- yearly counts;
+- paper/patent counts;
+- assessed date;
+- completeness caveat.
+
+It must never be confused with curated Evidence count.
+
+### InfluenceSignal
+
+Purpose:
+surface separately evidenced context such as ranking, major program, editorial/venue role, international network, industrial cooperation or explicit impact metric.
+
+No opaque composite prestige score is required.
+
+### Capability classification extension
+
+Capability should gain controlled technical-domain and platform-transfer classifications only after the vocabulary is frozen.
+
+This is the one Atlas change most likely to require a normalized schema-version update.
+
+Compatibility rule:
+existing decision/audit pages must continue to build when Atlas-specific datasets are absent.
