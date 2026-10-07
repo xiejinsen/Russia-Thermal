@@ -129,14 +129,12 @@ Filters:
 - decision impact.
 
 Evidence Explorer row:
-- source title / ID;
-- source type;
-- year;
-- country;
+- source title / ID / citation context;
+- direct finding and boundary;
+- source type / year / country;
 - context / usage role;
-- supporting-Claim count;
-- pressure-Claim count;
-- Direction context.
+- supporting / pressure Claim counts;
+- Capability / Direction context.
 
 Detailed findings, boundaries and graph relationships belong on the Source/Paper/Claim/Capability detail paths rather than being expanded in every high-cardinality row.
 
@@ -330,22 +328,24 @@ Target pattern:
 Filter state is shareable / reload-safe URL state. Explorer controls read from and write to query parameters without creating a second source of truth.
 
 ### Dense Explorer rule
-High-cardinality objects such as Papers, Claims and Evidence use spreadsheet-like dense tables, not vertically expensive cards.
+High-cardinality research objects use full-width semantic dense rows rather than vertically expensive cards or rigid spreadsheet tables.
 
 Default desktop interaction:
-- one row per object;
+- one full-width row per object;
 - compact single-line sticky filter bar immediately below the site header;
 - filter labels embedded into the control's default option (for example `Country: All`) rather than occupying a separate row;
-- sticky table column header;
-- bounded scroll body;
+- 2–3 semantic content zones per row;
+- enough height for important explanatory text;
+- compact metadata / counts / tags on the side;
 - full-text search;
 - visible result count;
-- row click / object-name click opens the detail page.
+- object name opens the detail page;
+- relationship actions open concrete detail pages or filtered Explorers.
 
-On narrow viewports, preserve the single filter row using horizontal overflow before falling back to multi-line controls.
+On narrow viewports, keep the compact filter row horizontally scrollable and stack each dense object row into a single-column reading order.
 
 Principle:
-**high-cardinality index = dense Explorer; low-cardinality strategic set = cards; single-object understanding = detail page.**
+**high-cardinality object = semantic dense row; low-cardinality strategic set = cards; single-object understanding = detail page.**
 
 
 ### Readable prose vs compact metadata
@@ -400,25 +400,30 @@ Institution scope includes evidence connected through capabilities owned by chil
 
 ### Dense row Explorer rule
 
-Not every growing collection should become a spreadsheet table.
+The preferred production pattern for growing research collections is the semantic Dense Row Explorer.
 
-Use three collection presentations by object shape:
+Use two main collection presentations:
 
-1. **Dense table** — Papers / Claims / Evidence.
-   Use when fields are regular, compact and column comparison is valuable.
-2. **Dense row Explorer** — Capabilities / Institutions.
-   Use when object cardinality is high but each record needs more semantic text than a single table row can comfortably carry.
-3. **Strategic card / registry row** — Directions / Priorities / low-cardinality decision objects.
-   Use when comparison requires recommendation, rationale or management context.
+1. **Dense Row Explorer** — Papers / Claims / Evidence / Capabilities / Institutions.
+   Use for high-cardinality research objects where users need both rapid scanning and enough semantic context to understand why an item matters.
+2. **Strategic card / compact registry** — Directions / Priorities / low-cardinality decision objects.
+   Use when comparison requires richer recommendation, rationale or management context.
 
-Dense row Explorer default:
+Dense Row Explorer default:
 - one object per full-width horizontal row;
 - compact single-line sticky filter toolbar;
-- 2–3 semantic information zones rather than rigid columns;
+- 2–3 semantic information zones rather than rigid spreadsheet columns;
 - enough vertical room for 2–3 lines of explanatory text;
-- compact metadata / tags on the side;
+- compact metadata / tags / relation counts on the side;
 - direct object detail link plus filtered relationship-set links;
 - single-column stacking on narrow screens.
 
+Object-specific emphasis:
+- Paper -> citation identity + direct finding/boundary + Deep Read / graph context;
+- Claim -> proposition + boundary/decision role + support/pressure + Direction context;
+- Evidence -> source identity + direct finding/boundary + role/relationship context;
+- Capability -> statement + strategic use/transfer boundary + maturity/fit/scope;
+- Institution -> hierarchy + summary/key people + capability/disposition/Direction context.
+
 Principle:
-**use density without flattening meaning: table for regular records, dense rows for text-rich records, strategic cards for small decision sets.**
+**use density without flattening meaning: semantic dense rows for research collections, strategic cards for small decision sets.**
