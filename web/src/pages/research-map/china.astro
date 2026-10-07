@@ -33,7 +33,7 @@ const directions = [...new Map(
           <p class="eyebrow">Research Maps · China</p>
           <h1>Where China's comparator thermal-research capability clusters are located</h1>
           <p>
-            This is a navigation map for comparator institutions, scholars, capabilities and strategic directions already present in the canonical graph. Marker density is not a country capability score, and unmapped nodes remain explicit coverage gaps.
+            This map helps navigate comparator institutions, scholars, capabilities and strategic directions already covered by the research. Marker density is not a country capability score, and unmapped nodes remain visible as coverage gaps.
           </p>
         </div>
         <div class="map-stats">
@@ -270,7 +270,7 @@ const directions = [...new Map(
       const people = document.getElementById('detail-people');
       people.innerHTML = node.keyPeople.length
         ? node.keyPeople.map((person) => `<a href="${person.href}">${person.name}</a>`).join('')
-        : '<span class="empty-inline">No key-person relation in current normalized data.</span>';
+        : '<span class="empty-inline">No key person is currently linked in the research graph.</span>';
 
       const dirs = document.getElementById('detail-direction-list');
       dirs.innerHTML = node.directions.length
