@@ -4,7 +4,7 @@ record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
 canonical_paper_count: 45
-completed_deep_reads: 23
+completed_deep_reads: 28
 campaign_state: ACTIVE
 
 ## Purpose
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 23 / 45
+## Completed Tier-A Deep Reads — 28 / 45
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -47,6 +47,11 @@ Rules:
 | PAPER-RU-MODEL-002 | Russia exact neutral-stability boundary evidence | DIR-FOUNDATIONAL-MODELING-ENABLER |
 | PAPER-CN-MODEL-001 | China 3D nonlinear evaporating-film stability comparator | DIR-FOUNDATIONAL-MODELING-ENABLER |
 | PAPER-GLOBAL-UTVC-MODEL-001 | Global mobile-relevant fast UTVC semi-analytical baseline | DIR-FOUNDATIONAL-MODELING-ENABLER |
+| PAPER-RU-FILM-001 | Russia shear-driven free-surface film CHF platform | DIR-EXTREME-FILM-RESERVE |
+| PAPER-RU-FILM-002 | Russia 12.5 um extreme-confinement gas-liquid flow-pattern map | DIR-EXTREME-FILM-RESERVE |
+| PAPER-RU-FRUMKIN-BIPHILIC-001 | Russia selective-wettability / surface-chemistry support | DIR-EXTREME-FILM-RESERVE |
+| PAPER-CN-FILM-001 | China passive gradient-wick thin-film boiling comparator | DIR-EXTREME-FILM-RESERVE |
+| PAPER-CN-FILM-002 | China 2074 W/cm2 pressure-controlled thin-film boiling comparator | DIR-EXTREME-FILM-RESERVE |
 
 ## Decision-sensitive reading queue
 
@@ -119,17 +124,27 @@ Russian exact/stability methods remain technically real and interpretable, but b
 
 ### Batch E — Extreme Film Reserve
 
-Priority: HIGH
+Status: COMPLETED 2026-10-07
 
-Read next:
+Deep-read:
 - PAPER-RU-FILM-001
 - PAPER-RU-FILM-002
+- PAPER-RU-FRUMKIN-BIPHILIC-001
 - PAPER-CN-FILM-001
 - PAPER-CN-FILM-002
-- PAPER-RU-FRUMKIN-BIPHILIC-001
 
-Decision question:
-Is there a phone-relevant residual in extreme confinement / shear-driven thin-film instability, or does strong China/global capillary thin-film work plus system parasitics keep this as a reserve only?
+Supporting disposition:
+- PAPER-RU-NET-001 remains current shear-film system/model lineage support.
+- PATENT-RU2860581C1 remains direct claim-reviewed electronics-targeted staged gas/droplet/film IP.
+
+Decision:
+- DEC-20261007-04
+- DIR-EXTREME-FILM-RESERVE remains RESERVE.
+- differentiation confidence reduced from MEDIUM_HIGH to MEDIUM.
+- phone transfer maturity remains LOW.
+
+Conclusion:
+The surviving Russian residual is gas-shear free-surface flow-pattern / dry-spot / rupture / instability physics under extreme confinement, not headline heat flux or generic surface engineering. China/global capillary and nanoporous thin-film routes strongly crowd thermal-performance claims; phone-class full-loop gas/liquid power, pressure-drop, acoustics and volume remain unclosed.
 
 ### Batch F — LHP / active-capillary reserve
 
@@ -172,7 +187,8 @@ The first expanded Deep Read pass already changes the reasoning structure:
 6. Health-aware deep reading changes the portfolio: MPEI's 42-month evidence remains a rare long-calendar ground-truth asset, but China now has a coherent mechanism -> service-life -> production-QA -> mobile-aging chain. DIR-HEALTH-AWARE-UTVC is therefore downgraded to RESERVE.
 7. Failure-aware completion confirms one surviving Primary collaboration thesis, but only in mechanism-resolved crisis taxonomy / lab ground truth; SJTU architecture-level dryout mitigation and the Russian mesh process paper further eliminate generic hardware/surface engineering as differentiation.
 8. Foundational Modeling remains RESERVE but is narrowed to exact benchmark / neutral-boundary / inverse-closure leverage; generic analytical modeling, nonlinear stability mathematics and fast UTVC design-space modeling are not Russian differentiation.
-9. Broad Russia superiority theses remain killed.
+9. Extreme Film remains RESERVE but is narrowed to gas-shear free-surface instability / rupture physics under extreme confinement; China 202.8 W/cm2 passive capillary thin-film boiling and 2074 W/cm2 pressure-controlled nanoporous TFB eliminate high heat flux as Russian differentiation.
+10. Broad Russia superiority theses remain killed.
 
 ## Stop condition for this campaign
 
