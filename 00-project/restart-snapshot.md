@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: run a site-wide dead-end and duplicate-navigation audit; then consolidate Partner Portfolio duplication and remaining design-system inconsistencies before the next bounded Tier-A Deep Read migration
+- next: consolidate shared detail-page visual primitives and remaining page-local CSS; then migrate the next bounded decision-critical Tier-A Deep Read set without reopening broad discovery
 
 ## Directions
 
