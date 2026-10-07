@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import ExplorerLinkStrip from '../../components/ExplorerLinkStrip.astro';
 import InstitutionCard from '../../components/cards/InstitutionCard.astro';
 import DirectionCard from '../../components/cards/DirectionCard.astro';
 import CapabilityDetail from '../../components/CapabilityDetail.astro';
@@ -26,11 +27,13 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     <p class="meta">{vm.country}{vm.role ? ` · ${vm.role}` : ''}</p>
     {vm.relevance && <p class="summary">{vm.relevance}</p>}
     {vm.officialUrl && <a class="official" href={vm.officialUrl} target="_blank" rel="noopener noreferrer">Official source ↗</a>}
-    <nav class="relation-strip" aria-label="Explore related research objects">
-      <a href={href(`/claims?person=${encodeURIComponent(vm.id)}`)}>Related Claims</a>
-      <a href={href(`/papers?person=${encodeURIComponent(vm.id)}`)}>Related Papers</a>
-      <a href={href(`/evidence?person=${encodeURIComponent(vm.id)}`)}>All Evidence</a>
-    </nav>
+    <ExplorerLinkStrip
+      links={[
+        { label: 'Related Claims', href: href(`/claims?person=${encodeURIComponent(vm.id)}`) },
+        { label: 'Related Papers', href: href(`/papers?person=${encodeURIComponent(vm.id)}`) },
+        { label: 'All Evidence', href: href(`/evidence?person=${encodeURIComponent(vm.id)}`), primary: true }
+      ]}
+    />
   </section>
 
   {vm.affiliation && (
@@ -84,28 +87,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     font-weight: 700;
   }
 
-  .relation-strip {
-    display: flex;
-    gap: .45rem;
-    flex-wrap: wrap;
-    margin-top: var(--space-5);
-  }
-
-  .relation-strip a {
-    padding: .48rem .62rem;
-    border: 1px solid var(--line);
-    border-radius: .5rem;
-    background: var(--surface-muted);
-    color: var(--accent);
-    font-size: .76rem;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  .relation-strip a:hover,
-  .relation-strip a:focus-visible {
-    background: var(--accent-soft);
-  }
+  :global(.detail-hero .explorer-link-strip) { margin-top: var(--space-5); }
 
   .page-section {
     display: grid;
