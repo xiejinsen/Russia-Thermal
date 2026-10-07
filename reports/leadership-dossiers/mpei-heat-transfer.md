@@ -1,12 +1,12 @@
 # MPEI — Heat-Transfer / Engineered-Surface Line
 
 status: LEADERSHIP_DERIVED_VIEW
-priority: TIER_A
+priority: CONDITIONAL_RESERVE
 primary_direction: DIR-HEALTH-AWARE-UTVC
 
 ## One-line leadership summary
 
-**Best current Russian package for engineering execution around long-duration surface/capillary aging, controlled wettability and adjacent device realization.**
+**Conditional reliability-data reserve: valuable only if long-duration raw/time-resolved information or a phone-relevant reproduction path is accessible.**
 
 ## Institution / team
 
@@ -115,7 +115,10 @@ long-duration engineered-surface / capillary-state aging knowledge. SJTU raises 
 
 ## Leadership decision
 
-**KEEP as Tier A co-primary partner candidate.**
+**RESERVE — CONTACT ONLY IF LONG-DURATION DATA ACCESS IS POSSIBLE.**
 
 Reason:
-strongest engineering/team-execution complement to Lab 1.3.
+China now has the stronger product-path reliability stack. MPEI retains value only as rare long-calendar mechanism ground truth that may add information beyond oxidation/process/accelerated-aging baselines.
+
+Current action package:
+[OPP-02 — MPEI long-duration reliability data reserve](../collaboration-opportunities/OPP-02-MPEI-LONG-DURATION-RELIABILITY.md)
