@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import ExplorerToolbar from '../components/ExplorerToolbar.astro';
-import DenseResearchTable from '../components/DenseResearchTable.astro';
+import DenseObjectRow from '../components/DenseObjectRow.astro';
 import { buildEvidenceExplorerVM } from '../view-models/builders';
 import { directionTitle } from '../view-models/helpers';
 
@@ -22,8 +22,6 @@ const directionOptions = [...new Map(
 
 const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
 const otherSourceCount = vm.records.length - paperCount;
-const supportCount = vm.records.filter((record) => record.supportingClaims.length > 0).length;
-const pressureCount = vm.records.filter((record) => record.contradictingClaims.length > 0).length;
 
 const records = vm.records.map((record) => {
   const directionIds = record.linkedDirections.map((direction) => direction.id);
@@ -66,7 +64,7 @@ const records = vm.records.map((record) => {
   <div data-explorer-root>
     <section class="hero compact-hero">
       <div>
-        <p class="eyebrow">{vm.eyebrow} · dense explorer</p>
+        <p class="eyebrow">{vm.eyebrow} · dense rows</p>
         <h1>{vm.title}</h1>
         <p>{vm.summary}</p>
       </div>
@@ -82,30 +80,19 @@ const records = vm.records.map((record) => {
       compact
       total={records.length}
       urlFilterKeys={['claim', 'capability', 'actor', 'person']}
-      searchPlaceholder="Search source, author, institution, person, Claim, Capability…"
+      searchPlaceholder="Search source, finding, boundary, author, institution, person, Claim…"
       filters={[
-        {
-          key:'sourceType',
-          label:'Type',
-          options:sourceTypes.map((value)=>({value,label:value}))
-        },
+        { key:'sourceType', label:'Type', options:sourceTypes.map((value)=>({value,label:value})) },
         {
           key:'country',
           label:'Country',
           options:countries.map((value)=>({value,label:value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value}))
         },
-        {
-          key:'year',
-          label:'Year',
-          options:years.map((value)=>({value:String(value),label:String(value)}))
-        },
+        { key:'year', label:'Year', options:years.map((value)=>({value:String(value),label:String(value)})) },
         {
           key:'usageRole',
           label:'Role',
-          options:[
-            ...usageRoles.map((value)=>({value,label:value})),
-            {value:'NO_ROLE',label:'Claim-linked / no context role'}
-          ]
+          options:[...usageRoles.map((value)=>({value,label:value})),{value:'NO_ROLE',label:'Claim-linked / no context role'}]
         },
         {
           key:'relation',
@@ -116,28 +103,13 @@ const records = vm.records.map((record) => {
             {value:'context',label:'Context only'}
           ]
         },
-        {
-          key:'direction',
-          label:'Direction',
-          options:directionOptions
-        }
+        { key:'direction', label:'Direction', options:directionOptions }
       ]}
     />
 
-    <DenseResearchTable minWidth="82rem" maxHeight="calc(100vh - 13.8rem)" label="Evidence research index">
-      <tr slot="head">
-        <th style="width:39%">Source</th>
-        <th style="width:10%">Type</th>
-        <th style="width:6%">Year</th>
-        <th style="width:7%">Country</th>
-        <th style="width:12%">Role</th>
-        <th style="width:6%">Support</th>
-        <th style="width:6%">Pressure</th>
-        <th style="width:14%">Directions</th>
-      </tr>
-
+    <section class="dense-list" aria-label="Evidence research index">
       {records.map((record) => (
-        <tr
+        <div
           data-explorer-record
           data-source-type={record.sourceType}
           data-country={record.countryContext ?? ''}
@@ -153,58 +125,86 @@ const records = vm.records.map((record) => {
           data-person={record.peopleIds.join('|')}
           data-search={record.search}
         >
-          <td class="source-cell">
-            <div class="source-main">
+          <DenseObjectRow
+            href={record.isPaper ? href(`/papers/${record.id}`) : undefined}
+            ariaLabel={record.title}
+          >
+            <div slot="main" class="source-main">
+              <div class="topline">
+                <span>{record.id}</span>
+                <b>{record.sourceType}</b>
+                {record.year && <em>{record.year}</em>}
+                {record.countryContext && <i>{record.countryContext}</i>}
+              </div>
               {record.isPaper ? (
                 <a class="title" href={href(`/papers/${record.id}`)}>{record.title}</a>
               ) : (
                 <a class="title" href={record.primaryUrl} target="_blank" rel="noopener noreferrer">{record.title} ↗</a>
               )}
-              <div class="subline">
-                <span>{record.id}</span>
-                {record.venue && <span>· {record.venue}</span>}
-                {record.authors.length > 0 && <span>· {record.authors.slice(0,2).join(', ')}{record.authors.length > 2 ? ' et al.' : ''}</span>}
-                {record.isPaper && <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>}
-              </div>
+              <p class="source-line">
+                {record.venue ?? ''}
+                {record.authors.length > 0 ? `${record.venue ? ' · ' : ''}${record.authors.slice(0,3).join(' · ')}${record.authors.length > 3 ? ' et al.' : ''}` : ''}
+              </p>
             </div>
-          </td>
-          <td><span class="type-pill">{record.sourceType}</span></td>
-          <td class="mono">{record.year ?? '—'}</td>
-          <td><span class="country-pill">{record.countryContext ?? '—'}</span></td>
-          <td>{record.usageRole ? <span class="role-pill">{record.usageRole}</span> : <span class="muted">Claim-linked</span>}</td>
-          <td class="number">{record.supportingClaims.length}</td>
-          <td class="number pressure">{record.contradictingClaims.length}</td>
-          <td>
-            {record.linkedDirections.length ? (
-              <div class="direction-cell" title={record.linkedDirections.map((direction)=>direction.title).join(' · ')}>
-                <b>{record.linkedDirections.length}</b>
-                <span>{record.linkedDirections.slice(0,1).map((direction)=>direction.title || directionTitle(direction.id)).join('')}</span>
+
+            <div slot="details" class="source-details">
+              {record.findings.length > 0 ? (
+                <div>
+                  <span>Direct finding</span>
+                  <p>{record.findings[0]}</p>
+                </div>
+              ) : (
+                <p class="muted">Context source without a technical direct-finding statement.</p>
+              )}
+              {record.boundary && (
+                <div>
+                  <span>Boundary</span>
+                  <p>{record.boundary}</p>
+                </div>
+              )}
+            </div>
+
+            <div slot="meta" class="source-meta">
+              <div class="relation-metrics">
+                <span><b>{record.supportingClaims.length}</b> support</span>
+                <span class="pressure"><b>{record.contradictingClaims.length}</b> pressure</span>
+                <span><b>{record.linkedCapabilities.length}</b> capabilities</span>
               </div>
-            ) : <span class="muted">0</span>}
-          </td>
-        </tr>
+              <div class="role-line">
+                <span>Role</span>
+                <b>{record.usageRole ?? 'Claim-linked'}</b>
+              </div>
+              {record.linkedDirections.length > 0 && (
+                <div class="direction-line">
+                  <span>Direction context</span>
+                  <p>{record.linkedDirections.slice(0,2).map((direction)=>direction.title || directionTitle(direction.id)).join(' · ')}{record.linkedDirections.length > 2 ? ' …' : ''}</p>
+                </div>
+              )}
+            </div>
+
+            <div slot="actions" class="row-actions">
+              <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
+              {record.supportingClaims.length > 0 && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>Claims</a>}
+              {record.linkedCapabilities.length > 0 && <a href={href(`/capabilities?q=${encodeURIComponent(record.id)}`)}>Capabilities</a>}
+            </div>
+          </DenseObjectRow>
+        </div>
       ))}
-    </DenseResearchTable>
+    </section>
   </div>
 
   <style>
-    .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
-    .compact-hero>div:first-child{max-width:72rem}
-    .compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}
-    .compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:84ch;color:var(--text-muted);line-height:1.55}
-    .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:20rem}
-    .summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
+    .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.compact-hero>div:first-child{max-width:72rem}.compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}.compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:84ch;color:var(--text-muted);line-height:1.55}
+    .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:20rem}.summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
+    .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
 
-    .source-main{display:grid;gap:3px;min-width:0}
-    .source-main .title{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;color:#203f57;font-size:11.5px;font-weight:750;line-height:1.32}
-    .subline{display:flex;gap:4px;min-width:0;overflow:hidden;color:#718696;font-size:8.5px;white-space:nowrap}
-    .subline span{overflow:hidden;text-overflow:ellipsis}.subline a{flex:0 0 auto;color:var(--accent-vivid);font-weight:800}
-    .mono{font-variant-numeric:tabular-nums}
-    .type-pill,.country-pill,.role-pill{display:inline-flex;max-width:100%;padding:3px 6px;border-radius:999px;font-size:8px;font-weight:850;white-space:nowrap}
-    .type-pill{background:#eef6fb;color:#315f80}.country-pill{background:#eef4f8;color:#47667d}.role-pill{overflow:hidden;background:#f3f0fb;color:#60558a;text-overflow:ellipsis}
-    .number{font-size:13px;font-weight:850;color:#0b67b2;text-align:center}.number.pressure{color:#a6662d}
-    .direction-cell{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px}.direction-cell b{color:#0b67b2;font-size:12px}.direction-cell span{display:block;overflow:hidden;color:#668092;font-size:8px;text-overflow:ellipsis;white-space:nowrap}
-    .muted{color:#8798a5;font-size:9px}
-    @media(max-width:850px){.compact-hero{align-items:flex-start;flex-direction:column}.summary-chips{justify-content:flex-start;min-width:0}}
+    .source-main,.source-details,.source-meta{display:grid;gap:6px;min-width:0}.topline{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.topline span,.topline b,.topline em,.topline i{padding:3px 6px;border-radius:999px;font-size:.54rem;font-style:normal;font-weight:900;letter-spacing:.04em}.topline span{background:#eef6fb;color:#315f80}.topline b{background:#eef4f8;color:#587185}.topline em{background:#f3f0fb;color:#60558a}.topline i{background:#e7f6ef;color:#087a66}
+    .title{color:#1d405a;font-size:.92rem;font-weight:850;line-height:1.4;text-decoration:none}.title:hover,.title:focus-visible{text-decoration:underline;text-underline-offset:.16em}.source-line{margin:0;color:#708696;font-size:.67rem;line-height:1.4;font-style:italic}
+
+    .source-details>div{display:grid;gap:3px}.source-details span,.role-line>span,.direction-line>span{color:#0b67b2;font-size:.56rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}.source-details p,.direction-line p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:0;color:#536d80;font-size:.75rem;line-height:1.5}.muted{margin:0;color:#8798a5;font-size:.72rem}
+    .relation-metrics{display:flex;gap:10px;flex-wrap:wrap}.relation-metrics span{color:#6a8192;font-size:.62rem}.relation-metrics b{color:#0b67b2;font-size:.86rem}.relation-metrics .pressure b{color:#a6662d}.role-line{display:grid;gap:2px}.role-line b{color:#5d668b;font-size:.62rem}.direction-line{display:grid;gap:3px}
+
+    .row-actions{display:flex;gap:5px;flex-wrap:wrap}.row-actions a{padding:5px 7px;border:1px solid #d8e7f1;border-radius:6px;color:#43677f;font-size:.62rem;font-weight:800;text-decoration:none;white-space:nowrap}.row-actions a:hover{background:#eef6fb;color:#0b67b2}
+    [hidden]{display:none!important}@media(max-width:850px){.compact-hero{align-items:flex-start;flex-direction:column}.summary-chips{justify-content:flex-start;min-width:0}}
   </style>
 </BaseLayout>
