@@ -8,6 +8,10 @@ maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ENABLER
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- BOILING_DRYOUT_PHYSICS
+- SENSING_DIAGNOSTICS
 
 Capability statement:
 MEPhI demonstrates boiling-onset and transient heat-transfer diagnostic methods based on thermohydraulic fluctuations and channel-regime prediction.
