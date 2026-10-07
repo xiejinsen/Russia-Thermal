@@ -111,3 +111,26 @@ Do not maintain an independent PPT story.
 - multilingual authoring.
 
 These can be reconsidered later only if user value justifies architecture expansion.
+
+
+## Phase W8 — Capability Atlas expansion
+
+status: ARCHITECTURE_PREPARED / DATA_PENDING
+
+Purpose:
+support the broadened Russia-first capability landscape without destabilizing the existing Phase-1 decision site.
+
+Sequence:
+1. freeze Atlas data/relationship contract;
+2. extend technical/platform taxonomy;
+3. add additive collaboration/output normalized datasets;
+4. implement institution-lineage aggregation;
+5. build Russia Capability Atlas;
+6. reuse the same contract for China comparator coverage;
+7. update leadership Overview only after the Atlas is populated.
+
+Rule:
+do not add placeholder public UI before the underlying Atlas datasets are meaningful.
+
+See:
+[Capability Atlas Expansion Contract](capability-atlas-expansion-contract.md).
