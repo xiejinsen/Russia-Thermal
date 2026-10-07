@@ -30,6 +30,7 @@ export interface CapabilityRecord {
   evidenceConfidence: string;
   targetFit: string;
   keyPeopleIds: string[];
+  collaboratingActorIds: string[];
   claimIds: string[];
   technicalScope: string[];
   transferBoundary: string | null;
