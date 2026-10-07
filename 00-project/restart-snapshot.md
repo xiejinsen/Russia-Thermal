@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: complete the remaining TPU Surface Process Challenger Deep Reads, then classify the remaining papers as Tier-B / reference-only and decide whether the Deep Read campaign is sufficient to resume web detail-page consolidation; do not reopen broad discovery
+- next: perform a 45-paper reading-depth closure audit: assign all remaining papers to Tier-B or Reference Only, reconcile any decision-critical legacy citations not yet canonicalized, and decide whether Deep Read coverage is sufficient to resume web detail-page consolidation; do not reopen broad discovery
 
 ## Directions
 
@@ -60,10 +60,10 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 ### DIR-SURFACE-PROCESS-CHALLENGER
 - lane: STAGE0_CHALLENGER
-- phone_maturity: LOW_MEDIUM
-- residual_or_use: not generic laser processing; the retained opportunity is TPU-specific process execution plus a possible vacuum-stable confined routing/rewetting function after strong process gates.
-- strongest_baseline: China target-system UTVC evidence now includes both optimized laser-treated wick and a direct thermal-oxidation / chemical-corrosion / laser-etching comparison in which non-laser treatment reaches the same maximum heat-transfer power and thermal oxidation is judged best overall; generic biphilic/wettability-pattern prior art remains crowded; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
-- next_question_or_gate: Can TPU's spatial wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond optimized uniform laser and strong non-laser superhydrophilic references?
+- phone_maturity: LOW
+- residual_or_use: TPU-specific process execution discipline only, plus one unproven function-first hypothesis: a spatial wetting pattern may create confined routing / rewetting behavior that strong uniform laser, oxidation or chemical treatments cannot reproduce. Open-surface durability is not counted as sealed-VC transfer evidence.
+- strongest_baseline: China target-system UTVC evidence includes optimized laser-treated wick plus direct thermal-oxidation / chemical-corrosion / laser-etching comparison, with non-laser treatment matching laser maximum heat-transfer power and thermal oxidation judged best overall; generic biphilic / patterned-wettability prior art remains crowded; BIT adds current ultra-thin VC / capillary characterization.
+- next_question_or_gate: In one bounded phone-like coupon / mini-VC test, can a TPU-inspired spatial pattern survive thin-copper fabrication, vacuum bake, sealing and fluid exposure and then deliver incremental confined rewetting / dryout value beyond strong uniform-treatment references?
 
 ## Mandatory guardrails
 - Broad Russia superiority claims remain killed unless explicitly reopened by a Decision Event.
