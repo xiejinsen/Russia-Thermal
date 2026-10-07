@@ -896,11 +896,23 @@ export function buildCapabilityPageVM(id: string): CapabilityPageVM | null {
     relatedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
   );
 
-  const linkedEvidence = [...sourceIds]
+  const linkedEvidenceRecords = [...sourceIds]
     .map((sourceId) => evidenceById.get(sourceId))
     .filter((item): item is EvidenceRecord => Boolean(item))
-    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title))
-    .map(evidenceCard);
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title));
+  const linkedEvidence = linkedEvidenceRecords.map(evidenceCard);
+
+  const collaborators = (capability.collaboratingActorIds ?? [])
+    .map((actorId) => actorById.get(actorId))
+    .filter((item): item is ActorRecord => Boolean(item))
+    .filter((item) => item.type !== 'PERSON')
+    .map((actor) =>
+      institutionCard(
+        actor,
+        capabilities.filter((candidate) => candidate.actorId === actor.id)
+      )
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return {
     capability: capabilityDetail(capability),
@@ -908,6 +920,7 @@ export function buildCapabilityPageVM(id: string): CapabilityPageVM | null {
       ownerActor && ownerActor.type !== 'PERSON'
         ? institutionCard(ownerActor, [capability])
         : undefined,
+    collaborators,
     people: peopleForCapability(capability)
       .map((person) =>
         scholarCard(
@@ -925,6 +938,7 @@ export function buildCapabilityPageVM(id: string): CapabilityPageVM | null {
       href: `/claims/${claim.id}`
     })),
     evidence: linkedEvidence,
+    evidenceStats: evidencePressureStats(relatedClaims, linkedEvidenceRecords),
     directions: directionsForCapability(capability.id).map(directionCard)
   };
 }
@@ -1246,15 +1260,19 @@ export function buildClaimPageVM(id: string): ClaimPageVM | null {
     for (const person of peopleForCapability(capability)) peopleMap.set(person.id, person);
   }
 
-  const supportingEvidence = claim.supportingSourceIds
+  const supportingEvidenceRecords = claim.supportingSourceIds
     .map((sourceId) => evidenceById.get(sourceId))
-    .filter((item): item is EvidenceRecord => Boolean(item))
-    .map(evidenceCard);
+    .filter((item): item is EvidenceRecord => Boolean(item));
 
-  const contradictingEvidence = claim.contradictingSourceIds
+  const contradictingEvidenceRecords = claim.contradictingSourceIds
     .map((sourceId) => evidenceById.get(sourceId))
-    .filter((item): item is EvidenceRecord => Boolean(item))
-    .map(evidenceCard);
+    .filter((item): item is EvidenceRecord => Boolean(item));
+
+  const supportingEvidence = supportingEvidenceRecords.map(evidenceCard);
+  const contradictingEvidence = contradictingEvidenceRecords.map(evidenceCard);
+  const allEvidenceRecords = [...new Map(
+    [...supportingEvidenceRecords, ...contradictingEvidenceRecords].map((item) => [item.id, item] as const)
+  ).values()];
 
   const linkedDecisions = [...decisions]
     .filter((event) => event.triggerClaimIds.includes(claim.id))
@@ -1277,6 +1295,7 @@ export function buildClaimPageVM(id: string): ClaimPageVM | null {
     boundary: claim.boundary ?? undefined,
     supportingEvidence,
     contradictingEvidence,
+    evidenceStats: evidencePressureStats([claim], allEvidenceRecords),
     capabilities: linkedCapabilities.map(capabilityDetail),
     institutions: [...institutionMap.entries()]
       .map(([actorId, caps]) => {
