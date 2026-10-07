@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: Paper Deep Read pilot is complete; review pilot page density when convenient before broad Tier-A migration, then migrate the next bounded decision-critical P1/P2/P3/comparator set and continue Partner Portfolio/design consolidation
+- next: run a site-wide dead-end and duplicate-navigation audit; then consolidate Partner Portfolio duplication and remaining design-system inconsistencies before the next bounded Tier-A Deep Read migration
 
 ## Directions
 
