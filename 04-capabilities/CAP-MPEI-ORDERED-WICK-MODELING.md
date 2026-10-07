@@ -8,6 +8,10 @@ maturity: PRE_DEVICE
 evidence_confidence: MEDIUM_HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- CAPILLARY_WICK
+- MODELING_REDUCED_ORDER
 
 Capability statement:
 MPEI has a current ordered-porous wick / heat-pipe modeling and geometry-optimization line.
