@@ -7,7 +7,7 @@ Conclusion:
 Russia is a selective complement, not a broad smartphone-thermal leader.
 
 Implication:
-Prioritize one current primary collaboration thesis around Kutateladze mechanism-resolved failure ground truth / crisis taxonomy only, while retaining MPEI long-duration reliability knowledge as a conditional reserve and TPU spatial-wettability process execution as a bounded Stage-0 challenger. Strong China/global device, manufacturing, reliability-QA, modeling and smartphone-integration baselines remain mandatory comparators.
+Prioritize one current primary collaboration thesis around Kutateladze mechanism-resolved failure ground truth / crisis taxonomy only. Retain MPEI long-duration reliability knowledge and other mechanism/modeling lines as reserves; TPU is now HOLD process capability rather than an active Stage-0 thesis. Strong China/global device, manufacturing, reliability-QA, modeling and smartphone-integration baselines remain mandatory comparators.
 
 Coverage-closure refresh:
 The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe, UUST microchannel and MISIS solid-state thermal-material capabilities without changing P1/P2/P3. NovSU is absorbed into the existing LHP/active-capillary WATCH rather than promoted to a new Direction because established global electroosmotic electronics-cooling / micro-heat-pipe prior art removes principle-level uniqueness. UUST remains a supporting capability because stronger and more integrated current China microchannel baselines exist. MISIS confirms a real materials-side capability but does not reopen the killed broad Russian thermal-material advantage thesis. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
@@ -15,12 +15,13 @@ The completed Russia anti-omission scan added current NovSU electroosmotic heat-
 Theory basis:
 - Collaboration value should come from an incremental mechanism, diagnostic, reliability, or process control point that survives comparator pressure; publication volume or historical prestige is insufficient.
 - Current public evidence refutes broad Russia-over-China superiority in generic dryout/rewetting, two-phase product reliability, and generic laser/biphilic phone-thermal capability.
-- Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate after full Tier-A pressure testing; generic Russian mesh/surface engineering and dryout-mitigation hardware are explicitly excluded from that thesis. MPEI multi-year capillary-state aging knowledge is now a reliability reserve conditional on data access / phone transfer; TPU remains a Stage-0 spatial-function challenger after strong generic-process comparator pressure.
+- Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate after full Tier-A pressure testing; generic Russian mesh/surface engineering and dryout-mitigation hardware are explicitly excluded from that thesis. MPEI multi-year capillary-state aging knowledge is a reliability reserve conditional on data access / phone transfer; TPU is HOLD because restored China evidence already demonstrates wettability-patterned architecture inside completed 0.4 mm UTVCs.
+- Reading-depth closure audit reconciled the current canonical corpus against the pre-modular 38-card decision-grade 10Q set. Five decision-critical comparators were restored; canonical coverage is now 50 papers / 36 Deep Reads, with zero unreviewed Tier-A gaps. The remaining 11 Tier-B and 3 Reference-Only papers are non-blocking.
 - Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
 - Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
 - Foundational Modeling remains a reserve after Deep Read: Russian exact/group-invariant methods provide interpretable neutral boundaries and inverse closure, but China independently has current nonlinear interfacial-stability mathematics and global UTVC semi-analytical models already provide direct mobile-design variables at 4–5 orders lower cost than CFD. The Russian residual is therefore pre-test benchmark / boundary leverage only.
 - Extreme Film remains a reserve but its thesis is narrowed: Russia retains unusual gas-shear free-surface / extreme-confinement flow-pattern and rupture knowledge, including 12.5 um slit-flow experiments, while China/global comparators eliminate headline heat flux and generic biphilic surfaces as differentiation. Phone-class full-loop gas/liquid power, pressure drop, acoustics and packaging remain unclosed.
-- TPU deep reading confirms strong surface-process execution but weakens the transfer thesis: copper boiling, open-surface durability and 60-day industrial field translation are credible, yet no reviewed source demonstrates the sealed-VC spatial-routing / rewetting function. TPU therefore remains only a falsification-oriented Stage-0 challenger, with LOW_MEDIUM differentiation and LOW phone maturity.
+- TPU closure changed again after legacy reconciliation: restored PAPER-CN-UTVC-WP-001 directly demonstrates wettability-patterned SWM-WP architecture inside completed 0.4 mm UTVCs. Spatial wettability patterning itself is therefore not a TPU differentiation; TPU moves from STAGE0_CHALLENGER to HOLD, retaining process / diagnostics competence only.
 
 supporting_claims:
 - CLM-PAV-004
@@ -42,6 +43,7 @@ supporting_claims:
 - CLM-TPU-007
 - CLM-TPU-008
 - CLM-TPU-009
+- CLM-TPU-010
 - CLM-NOVSU-001
 - CLM-UUST-001
 - CLM-MISIS-001
@@ -64,6 +66,11 @@ supporting_priorities:
 - PRI-03-TPU
 
 key_evidence:
+- PAPER-CN-UTVC-GEOM-001
+- PAPER-CN-UTVC-WP-001
+- PAPER-CN-DRY-003
+- PAPER-CN-DRY-004
+- PAPER-CN-LHP-002
 - PAPER-RU-DRY-002
 - PAPER-RU-MESH-001
 - PAPER-CN-SJTU-DRY-001
