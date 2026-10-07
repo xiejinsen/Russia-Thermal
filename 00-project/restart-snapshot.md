@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: collection-layout patterns are frozen with semantic Dense Row variants; continue bounded detail-page design-system consolidation, then migrate the next decision-critical Tier-A Deep Read set without reopening broad discovery
+- phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
+- next: complete decision-critical Tier-A / Tier-B paper Deep Reads and pressure-test current Strategic Candidates / Challenger against strong China-global baselines before resuming bounded detail-page design-system consolidation; do not reopen broad discovery
 
 ## Directions
 
@@ -26,9 +26,9 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-FAILURE-AWARE-UTVC
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
-- residual_or_use: Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
-- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
-- next_question_or_gate: Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
+- residual_or_use: Mechanism-resolved laboratory ground truth: reversible/irreversible crisis classes, confinement-dependent crisis-mode transitions and topology-linked drying-front behavior, only if these labels expose repeatable residual state information beyond strong internal-sensing, saturation-state and boiling-aware vapor-chamber baselines.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; physics-informed transient time-to-dryout/time-to-rewet/hysteresis models with spatiotemporal wick saturation; internal vapor temperature/pressure ground-truth experiments; boiling-aware vapor-chamber dryout models with two-phase relative permeability; independent China capillary-fed dryout/rewetting and modified-mesh engineering; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
+- next_question_or_gate: Can Russia-informed laboratory mechanism labels explain a repeatable failure-state residual that is not already captured by internal temperature/pressure ground truth, saturation-state dynamics or boiling-aware VC hydrodynamics, and can that residual be mapped to Tier A/B phone observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
 - lane: RESERVE
@@ -41,7 +41,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
-- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
+- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; China capillary-fed repeated-dryout evidence also shows history-dependent wettability / CHF degradation in a tested wick system; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
 - next_question_or_gate: Can MPEI-informed aging labels/priors improve discrimination of capillary/wetting degradation from oxidation, fill-state and package/interface aging in a lab-ground-truth dataset?
 
 ### DIR-LHP-KNOWLEDGE-RESERVE
