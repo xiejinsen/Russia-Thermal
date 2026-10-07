@@ -18,6 +18,9 @@ related_claims:
 Strategic use:
 method/facility reserve for actual phone-class microfan source diagnosis.
 
+Strongest baseline:
+China independently demonstrates narrow-space electronic-cooling fan aeroacoustic characterization and flow-control noise reduction; exact phone-class centrifugal microfan parity remains unresolved.
+
 Promotion gate:
 Russian method yields materially better actionable design decisions than strong domestic baseline on the same phone-class fan/duct.
 
