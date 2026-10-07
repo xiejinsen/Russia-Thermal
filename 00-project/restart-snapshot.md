@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: pressure-test the Foundational Modeling batch, then Extreme Film; Failure-aware is retained but narrowed after complete Tier-A review and Health-aware is RESERVE; do not reopen broad discovery
+- next: pressure-test the Extreme Film batch, including current shear-film system/model lineage as supporting evidence; Modeling remains a narrowed RESERVE after Deep Read; do not reopen broad discovery
 
 ## Directions
 
@@ -32,10 +32,10 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
 - lane: RESERVE
-- phone_maturity: LOW_MEDIUM
-- residual_or_use: continuous exact/group-invariant analytical lineage with interpretable stability boundaries and historically experiment-informed closure.
-- strongest_baseline: independent China interfacial-stability mathematics plus modern global product-relevant UTVC semi-analytical modeling.
-- next_question_or_gate: the modular stack materially improves pre-test prediction / experiment design / failure-boundary accuracy versus strong internal/global modeling baselines.
+- phone_maturity: LOW
+- residual_or_use: interpretable exact/group-invariant benchmark solutions, explicit neutral-stability boundaries and inverse parameter closure with historical theory-experiment linkage. Generic analytical modeling, fast design-space prediction and nonlinear thin-film stability mathematics are excluded from the differentiation thesis.
+- strongest_baseline: independent China 3D nonlinear evaporating-film stability mathematics plus modern mobile-electronics UTVC semi-analytical modeling that directly treats vapor-core thickness, temperature-dependent vapor density, wick permeability / pore radius, Qmax and cooling boundary conditions at 4–5 orders lower computational cost than CFD.
+- next_question_or_gate: on one matched phone-relevant subproblem, does the exact/stability layer reduce experiment count, improve transition-boundary accuracy, expose a missed mechanism or change a design decision versus strong semi-analytical / numerical baselines?
 
 ### DIR-HEALTH-AWARE-UTVC
 - lane: RESERVE
