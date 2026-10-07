@@ -8,6 +8,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ENABLER
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- SENSING_DIAGNOSTICS
+- HEAT_FLUX_MEASUREMENT
 
 Capability statement:
 NSU provides a current two-phase / thin-film experimental and advanced-diagnostics execution bridge relevant to model-experiment closure and talent/student execution.
