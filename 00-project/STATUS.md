@@ -8,10 +8,10 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-paper_deep_read_progress: 17/45
+paper_deep_read_progress: 19/45
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-next_action: finish the two remaining Failure-aware Tier-A reads, then pressure-test Foundational Modeling and Extreme Film batches; Health-aware is now RESERVE after comparator Deep Read; do not reopen broad discovery
+next_action: pressure-test the Foundational Modeling batch, then Extreme Film; Failure-aware is retained but narrowed after complete Tier-A review and Health-aware is RESERVE; do not reopen broad discovery
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
