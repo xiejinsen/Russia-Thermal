@@ -2,18 +2,40 @@
 
 ## Decision goal
 
-Identify which Russia-based mobile-thermal capabilities remain differentiated or strategically complementary after strong China/global comparison, who actually owns those capabilities, and what smallest validation would justify collaboration.
+Build a credible Russia-first capability map for terminal / compact-electronics thermal management, identify who actually owns the relevant capabilities, and determine which Russia-based capabilities justify collaboration after China/global comparison.
+
+The project serves three linked questions:
+1. what thermal-management capability exists in Russia;
+2. which capabilities are credible collaboration candidates;
+3. why a Russia-based collaboration is or is not preferable to an available China/domestic alternative.
 
 ## Product scope
 
 Primary:
 - smartphones.
 
-Secondary:
-- tablets where the mechanism is transferable.
+Important adjacent terminal targets:
+- tablets;
+- wearables;
+- AR/VR;
+- laptops where the capability is technically transferable.
+
+Transfer-source domains:
+- compact electronics;
+- embedded / power / aerospace electronics when the capability can reasonably migrate to terminal thermal management.
+
+Thermal scope emphasis:
+- passive hardware thermal management: PRIMARY;
+- active hardware thermal management: PRIMARY;
+- enabling capability: PRIMARY_WHEN_TRANSFER_RELEVANT;
+- software / system thermal management: LIMITED_SCAN.
+
+Software scope guard:
+- retain representative high-value institutions / people / capabilities;
+- do not expand into exhaustive compiler, scheduler, OS, runtime or DVFS ecosystem research unless a later leadership question explicitly requires it.
 
 Out of scope as a product target:
-- general aerospace, boiler, detector, server or industrial thermal systems unless they provide transferable mechanism / method / reliability evidence.
+- general boiler, process-plant or industrial thermal systems with no credible terminal / compact-electronics transfer path.
 
 ## Phase-1 research mode
 
