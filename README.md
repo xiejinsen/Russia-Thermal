@@ -114,3 +114,8 @@ It is still fully recoverable from Git history, including the frozen V1 baseline
 `c4fa8d070771531f2f912897e055621a5f5d2df4`
 
 Do not restore legacy V1 directories into current `main` unless performing an explicit historical/fidelity investigation.
+
+
+## Leadership
+
+- [Leadership Decision Brief](reports/leadership-decision-brief.md) — preferred Phase-1 management summary and decision source
