@@ -3,8 +3,8 @@
 record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
-canonical_paper_count: 44
-completed_deep_reads: 13
+canonical_paper_count: 45
+completed_deep_reads: 14
 campaign_state: ACTIVE
 
 ## Purpose
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 13 / 44
+## Completed Tier-A Deep Reads — 14 / 45
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -31,6 +31,7 @@ Rules:
 | PAPER-GLOBAL-DRY-RECOVERY-001 | Global transient dryout / throttling / time-to-rewet baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-RU-TPU-001 | TPU core biphilic / spatial-wettability process evidence | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-CN-TPU-001 | China target-system UTVC laser-wick comparator | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-CN-TPU-002 | China direct oxidation / corrosion / laser UTVC process comparator | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-RU-DRY-002 | Russia confinement-dependent hydrodynamic vs surface-drying crisis taxonomy | DIR-FAILURE-AWARE-UTVC |
 | PAPER-RU-DRY-003 | Russia topology-linked directional drying-front mechanism | DIR-FAILURE-AWARE-UTVC |
 | PAPER-CN-DRY-002 | China superhydrophilic copper-mesh capillary / CHF / HTC engineering comparator | DIR-FAILURE-AWARE-UTVC |
@@ -76,8 +77,8 @@ Read next:
 - PAPER-RU-TPU-003
 - PAPER-RU-TPU-004
 
-Comparator action:
-- canonicalize and deep-read the newly identified China multi-process UTVC surface-modification comparator before any TPU promotion.
+Comparator status:
+- PAPER-CN-TPU-002 has now been canonicalized and deep-read as the multi-process target-system comparator.
 
 Decision question:
 Does TPU retain any spatial-routing / rewetting function that survives comparison against optimized generic laser, oxidation and chemical surface treatments?
@@ -147,7 +148,7 @@ The first expanded Deep Read pass already changes the reasoning structure:
 1. Dryout / recovery is history-dependent; it should not be modeled only as an instantaneous threshold event.
 2. Repeated dryout can alter subsequent wetting / capillary state in at least one strong China comparator, creating a bridge between failure-state and health-state reasoning.
 3. The mandatory baseline for DIR-FAILURE-AWARE-UTVC must include physics-informed transient dryout / rewet history, internal temperature/pressure ground truth and boiling-aware two-phase vapor-chamber hydrodynamics, not only a generic anomaly / RC baseline.
-4. TPU's generic laser-surface proposition is more crowded than a superficial reading suggests; its only retained strategic hypothesis is a specific spatial function under confinement / sealed-process constraints.
+4. TPU's generic laser-surface proposition is more crowded than a superficial reading suggests; a direct China UTVC comparison shows oxidation, corrosion and laser all improve the wick, with thermal oxidation matching laser maximum power and judged best overall. The only retained strategic TPU hypothesis is a specific spatial function under confinement / sealed-process constraints.
 5. The retained Kutateladze residual is now more precisely framed as mechanism-resolved laboratory ground truth / crisis taxonomy that can falsify or extend an internally owned phone-UTVC state model.
 6. No current lane is upgraded from this pass. Broad Russia superiority theses remain killed.
 
