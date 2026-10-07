@@ -51,6 +51,10 @@ export interface OverviewStatsVM {
   capabilities: number;
   directions: number;
   activeDirections: number;
+  strategicCandidates: number;
+  reserves: number;
+  holds: number;
+  deepReads: number;
 }
 
 export interface OverviewDecisionVM {
