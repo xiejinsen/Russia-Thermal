@@ -285,7 +285,7 @@ def evidence_record(o: dict[str, Any], usage_role: str | None = None) -> dict[st
         "title": source_title(o),
         "primaryUrl": source_url(o),
         "year": year_value(o.get("published_year") or o.get("verified_at")),
-        "authors": split_semicolon(o.get("authors") or o.get("author")),
+        "authors": split_semicolon(o.get("authors") or o.get("author") or o.get("inventors")),
         "venue": nullable(o.get("journal") or o.get("venue")),
         "countryContext": nullable(o.get("country_context")),
         "directFindings": findings(o),
