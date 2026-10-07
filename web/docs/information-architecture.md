@@ -592,3 +592,34 @@ These pilots define the baseline for Scholar, Paper, Patent, Claim and Capabilit
 
 Principle:
 **detail page = decision-readable local knowledge graph, not a collection of object cards.**
+
+
+## 15. Core Detail Functional Closure
+
+Status: CLOSED
+
+The core canonical object graph now has functional detail coverage for:
+- Institution / Lab;
+- Scholar;
+- Direction;
+- Paper;
+- Patent;
+- Claim;
+- Capability.
+
+All routes preserve canonical research semantics and use normalized graph relations rather than parsing Markdown in the page layer.
+
+Functional closure includes:
+- Paper Q1-Q10 Deep Read;
+- Patent P1-P10 Deep Read;
+- Evidence Boundary separation;
+- local Paper / Patent navigation from Evidence Explorer and detail pages;
+- Scholar authored-evidence vs capability-pressure distinction;
+- Capability owner + collaborating-actor distinction;
+- Claim supporting vs pressure evidence;
+- Evidence Pressure metrics aligned with graph-audit semantics.
+
+Next web phase:
+global navigation + explorer/detail discoverability + Leadership Overview information hierarchy.
+
+Do not reopen pure visual styling until navigation and information hierarchy are functionally settled.
