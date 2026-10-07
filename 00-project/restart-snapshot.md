@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: continue ACTIVE_HARDWARE gap closure: deeper Russia-language compact-air-mover pass, qualify thermoelectric device capability, and add credible compact liquid/refrigeration/microfluidic nodes; then platform-transfer/output/collaboration enrichment; keep SOFTWARE_SYSTEM LIMITED_SCAN
+- next: transition Russia Capability Atlas enrichment to platform-transfer tagging plus institution research-output / patent-output / collaboration / influence enrichment; retain compact-air-mover/MEMS fan as an explicit reopenable gap; keep SOFTWARE_SYSTEM LIMITED_SCAN
 
 ## Directions
 
