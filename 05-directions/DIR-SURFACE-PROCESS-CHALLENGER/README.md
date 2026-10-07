@@ -1,17 +1,17 @@
 # DIR-SURFACE-PROCESS-CHALLENGER
 
 record_state: CURRENT
-role: CHALLENGER
-investment_lane: STAGE0_CHALLENGER
+role: HOLD_PROCESS_CAPABILITY
+investment_lane: HOLD
 evidence_maturity: MULTISOURCE_SUPPORT
-differentiation_confidence: LOW_MEDIUM
+differentiation_confidence: LOW
 phone_transfer_maturity: LOW
 
 Problem:
-Spatial wetting and laser-created surface states may improve liquid routing / rewetting, but generic laser and biphilic approaches are already crowded and sealed-phone process compatibility is the dominant risk.
+TPU demonstrates credible laser / wettability process execution, copper-water boiling work and industrial durability translation, but China already demonstrates both generic surface modification and wettability-patterned architecture inside completed sub-0.4 mm UTVCs.
 
 Strategic hypothesis:
-Retain TPU only as a falsification-oriented process challenger: use its demonstrated laser / wettability process execution to test whether a phone-compatible spatial liquid-routing / rewetting function can survive sealed-VC process gates and outperform strong uniform-treatment controls.
+Do not fund an active Stage-0 collaboration from public evidence alone. Retain TPU as a process / diagnostics capability hold that can be reopened only if a process-specific phone-relevant increment appears beyond strong domestic target-system baselines.
 
 related_claims:
 - CLM-TPU-005
@@ -19,25 +19,26 @@ related_claims:
 - CLM-TPU-007
 - CLM-TPU-008
 - CLM-TPU-009
+- CLM-TPU-010
 - CLM-CN-BIT-001
 
 candidate_capabilities:
 - CAP-TPU-LASER-WETTABILITY-PROCESS
 
 strongest_baseline:
-China target-system UTVC evidence now includes both optimized laser-treated wick and a direct thermal-oxidation / chemical-corrosion / laser-etching comparison in which non-laser treatment reaches the same maximum heat-transfer power and thermal oxidation is judged best overall; generic biphilic/wettability-pattern prior art remains crowded; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
+China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
 
 Residual differentiation:
-TPU-specific process execution discipline only, plus one unproven function-first hypothesis: a spatial wetting pattern may create confined routing / rewetting behavior that strong uniform laser, oxidation or chemical treatments cannot reproduce. Open-surface durability is not counted as sealed-VC transfer evidence.
+process execution / diagnostics competence only. Generic laser processing, generic biphilic surfaces, and spatial wettability patterning inside an ultra-thin sealed VC are all excluded from the differentiation thesis.
 
 Internal control boundary:
-phone VC architecture, thin copper geometry, sealed water/product-fluid process, contamination limits, final pattern specification, and foreground product IP remain internally owned.
+phone VC architecture, thin copper geometry, sealed fluid / contamination process, final pattern specification, device validation and foreground product IP remain internally owned.
 
-Next question:
-In one bounded phone-like coupon / mini-VC test, can a TPU-inspired spatial pattern survive thin-copper fabrication, vacuum bake, sealing and fluid exposure and then deliver incremental confined rewetting / dryout value beyond optimized uniform laser and strong non-laser superhydrophilic references?
+Reopen question:
+Can TPU demonstrate a matched, phone-relevant process advantage not already covered by the China baseline—such as materially better low-outgassing durability, yield, transient rewetting, or diagnostics—under the same sub-0.4 mm sealed-device constraints?
 
 Promotion gate:
-only promote if the spatial-pattern branch survives vacuum / contamination / sealed-fluid gates and shows repeatable incremental confined rewetting / dryout benefit over untreated, optimized uniform-laser and strong non-laser superhydrophilic controls.
+reopen to STAGE0_CHALLENGER only if direct evidence shows a process-specific increment over current domestic target-system controls and the process passes vacuum / contamination / sealed-fluid gates.
 
-Kill / downgrade gate:
-move to HOLD / reference-only if the spatial-pattern branch fails vacuum / contamination / sealed-fluid compatibility, cannot be fabricated inside the VC geometry budget, or is matched by a generic uniform treatment.
+Hold / kill gate:
+remain HOLD / reference-only if TPU evidence continues to show process competence without incremental phone-system value.
