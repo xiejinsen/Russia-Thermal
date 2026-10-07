@@ -481,6 +481,26 @@ export interface PaperExplorerVM {
   }>;
 }
 
+export interface DeepReadDetailVM {
+  level: string;
+  reviewStatus: string;
+  reviewedAt: string;
+  whyItMatters: string;
+  decisionUse: string;
+  legacyOrigin?: string;
+  sourcePath: string;
+  questions: Array<{ number: number; title: string; body: string }>;
+  evidenceBoundary: {
+    sourceFacts: string;
+    analystInference: string;
+    unknownRequests: string;
+  };
+  relatedClaimIds: string[];
+  relatedCapabilityIds: string[];
+  relatedDirectionIds: string[];
+  relatedPriorityIds: string[];
+}
+
 export interface PaperPageVM {
   id: string;
   title: string;
@@ -509,23 +529,36 @@ export interface PaperPageVM {
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
   directions: DirectionCardVM[];
-  deepRead?: {
-    level: string;
-    reviewStatus: string;
-    reviewedAt: string;
-    whyItMatters: string;
-    decisionUse: string;
-    legacyOrigin?: string;
-    sourcePath: string;
-    questions: Array<{ number: number; title: string; body: string }>;
-    evidenceBoundary: {
-      sourceFacts: string;
-      analystInference: string;
-      unknownRequests: string;
-    };
-    relatedClaimIds: string[];
-    relatedCapabilityIds: string[];
-    relatedDirectionIds: string[];
-    relatedPriorityIds: string[];
-  };
+  deepRead?: DeepReadDetailVM;
+}
+
+
+export interface PatentPageVM {
+  id: string;
+  title: string;
+  year?: number;
+  authors: string[];
+  countryContext?: string;
+  primaryUrl: string;
+  findings: string[];
+  boundary?: string;
+  supportingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  contradictingClaims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  capabilities: CapabilityDetailVM[];
+  institutions: InstitutionCardVM[];
+  scholars: ScholarCardVM[];
+  directions: DirectionCardVM[];
+  deepRead?: DeepReadDetailVM;
 }
