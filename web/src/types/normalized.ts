@@ -29,6 +29,8 @@ export interface CapabilityRecord {
   maturity: string;
   evidenceConfidence: string;
   targetFit: string;
+  capabilityFamily?: 'SOFTWARE_SYSTEM' | 'PASSIVE_HARDWARE' | 'ACTIVE_HARDWARE' | 'ENABLING' | null;
+  capabilityTopics?: string[];
   keyPeopleIds: string[];
   collaboratingActorIds: string[];
   claimIds: string[];
