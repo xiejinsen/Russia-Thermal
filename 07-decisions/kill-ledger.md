@@ -12,3 +12,4 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - DEC-20261004-14 — generic Russia smartphone DVFS strategic-differentiation thesis -> BACKGROUND_ONLY.
 - DEC-20261004-15 — generic Russia thermal-materials smartphone-advantage thesis -> BACKGROUND_ONLY.
 - DEC-20261007-01 — DIR-HEALTH-AWARE-UTVC -> RELIABILITY_KNOWLEDGE_RESERVE / RESERVE.
+- DEC-20261007-06 — DIR-SURFACE-PROCESS-CHALLENGER -> HOLD / PROCESS CAPABILITY; restored 0.4 mm wettability-patterned UTVC comparator removes concept-level differentiation.
