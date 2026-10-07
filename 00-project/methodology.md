@@ -99,3 +99,22 @@ Do not routinely expand into:
 - unrelated system optimization.
 
 Escalate software coverage only when it materially changes a leadership or collaboration decision.
+
+
+## Source deduplication gate
+
+Every newly discovered paper, patent, official page or vendor source must pass Source identity review **before** a new canonical SOURCE is created.
+
+Required sequence:
+1. resolve DOI / patent publication number / canonical URL;
+2. check normalized identity against existing Sources;
+3. check title + year + author/inventor metadata when identity is absent or ambiguous;
+4. reuse the existing Source ID when the same underlying source already exists;
+5. store alternate landing pages as metadata rather than duplicate Sources;
+6. review fuzzy matches before treating them as new evidence.
+
+Exact normalized identity duplicates are repository-health errors.
+High-similarity matches are review warnings.
+
+See:
+[Source Identity and Deduplication Contract](source-deduplication-contract.md).
