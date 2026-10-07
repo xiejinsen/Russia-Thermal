@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: finish the two remaining Failure-aware Tier-A reads, then pressure-test Foundational Modeling and Extreme Film batches; Health-aware is now RESERVE after comparator Deep Read; do not reopen broad discovery
+- next: pressure-test the Foundational Modeling batch, then Extreme Film; Failure-aware is retained but narrowed after complete Tier-A review and Health-aware is RESERVE; do not reopen broad discovery
 
 ## Directions
 
@@ -26,8 +26,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 ### DIR-FAILURE-AWARE-UTVC
 - lane: STRATEGIC_CANDIDATE
 - phone_maturity: LOW_MEDIUM
-- residual_or_use: Mechanism-resolved laboratory ground truth: reversible/irreversible crisis classes, confinement-dependent crisis-mode transitions and topology-linked drying-front behavior, only if these labels expose repeatable residual state information beyond strong internal-sensing, saturation-state and boiling-aware vapor-chamber baselines.
-- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; physics-informed transient time-to-dryout/time-to-rewet/hysteresis models with spatiotemporal wick saturation; internal vapor temperature/pressure ground-truth experiments; boiling-aware vapor-chamber dryout models with two-phase relative permeability; independent China capillary-fed dryout/rewetting and modified-mesh engineering; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
+- residual_or_use: Mechanism-resolved laboratory ground truth only: reversible/irreversible crisis classes, confinement-dependent crisis-mode transitions and topology-linked drying-front behavior. Generic mesh/surface treatment and dryout-mitigation hardware are explicitly excluded. The residual survives only if these labels expose repeatable state information beyond strong internal-sensing, saturation-state, boiling-aware vapor-chamber and China engineering baselines.
+- strongest_baseline: External temperature-difference + power dryout characterization/control prior art; physics-informed transient time-to-dryout/time-to-rewet/hysteresis models with spatiotemporal wick saturation; internal vapor temperature/pressure ground-truth experiments; boiling-aware vapor-chamber dryout models with two-phase relative permeability; China capillary-fed dryout/rewetting and modified-mesh engineering; SJTU short-flow counter-flow microchannels explicitly targeting premature downstream dryout with large CHF/HTC gains and lower pressure-drop/pumping-power; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
 - next_question_or_gate: Can Russia-informed laboratory mechanism labels explain a repeatable failure-state residual that is not already captured by internal temperature/pressure ground truth, saturation-state dynamics or boiling-aware VC hydrodynamics, and can that residual be mapped to Tier A/B phone observables?
 
 ### DIR-FOUNDATIONAL-MODELING-ENABLER
