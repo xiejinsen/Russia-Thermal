@@ -5,9 +5,14 @@ status: OPEN
 confidence: HIGH
 
 Proposition:
-Phone-thickness copper, <=150 um functional-height transfer, vacuum/outgassing behavior, sealed-fluid compatibility, post-process wetting retention, and confined rewetting benefit remain unproven in the current public evidence base.
+Phone-thickness copper, <=150 um functional-height transfer, vacuum/outgassing behavior, sealed-fluid compatibility, post-bake / post-seal wetting retention, and incremental confined rewetting benefit remain unproven in the current TPU public evidence base.
 
-supporting_sources: []
+supporting_sources:
+- PAPER-RU-TPU-002
+- PAPER-RU-TPU-003
+- PAPER-RU-TPU-004
+- PAPER-CN-TPU-001
+- PAPER-CN-TPU-002
 
 Boundary:
-evidence gap, not proof the capability is absent.
+this is an evidence gap, not proof the capability is absent. PAPER-RU-TPU-002 specifically demonstrates a hydrocarbon-derived hydrophobic functional layer, which increases the importance of contamination / outgassing validation rather than closing it.
