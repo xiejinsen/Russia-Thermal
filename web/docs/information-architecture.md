@@ -423,7 +423,8 @@ Object-specific emphasis:
 - Claim -> proposition + boundary/decision role + support/pressure + Direction context;
 - Evidence -> source identity + direct finding/boundary + role/relationship context;
 - Capability -> statement + strategic use/transfer boundary + maturity/fit/scope;
-- Institution -> hierarchy + summary/key people + capability/disposition/Direction context.
+- Institution -> hierarchy + summary/key people + capability/disposition/Direction context;
+- Scholar -> person/affiliation + research relevance/capability touchpoints + priority/disposition/Direction context.
 
 Principle:
 **use density without flattening meaning: semantic dense rows for research collections, strategic cards for small decision sets.**
@@ -482,3 +483,38 @@ Use subtle vertical separators between semantic zones to improve scanning, but r
 
 Principle:
 **space follows semantic weight; action controls should never compete visually with the object itself.**
+
+
+### Semantic layout variants
+
+Dense Row does not mean one fixed four-column ratio across all object classes.
+
+The shared row shell supports semantic layout variants selected by the object type:
+
+- `content-heavy`
+  - wider primary-object column;
+  - use for Claims, Capabilities and capability-based Research Coverage;
+  - appropriate when the proposition / capability statement is itself the main reading object.
+
+- `detail-heavy`
+  - narrower citation / identity column;
+  - wider explanatory-detail column;
+  - use for Papers and Evidence where Direct finding / Boundary usually deserves more horizontal space than citation identity.
+
+- `balanced`
+  - identity and explanatory context receive similar width;
+  - use for Institutions and Scholars, where affiliation / identity and research relevance / summary are equally important.
+
+The variant is chosen by semantic structure, not by a universal numeric column ratio.
+
+Within all variants:
+- metadata remains compact;
+- actions remain a fixed narrow rail;
+- actions use a 2-column grid when practical;
+- at medium width the row falls back to a 2×2 semantic layout;
+- at narrow width the row stacks to one column.
+
+Do not widen a column merely because another object class needed more space.
+
+Principle:
+**Dense Row is a shared interaction pattern, not a shared fixed geometry.**
