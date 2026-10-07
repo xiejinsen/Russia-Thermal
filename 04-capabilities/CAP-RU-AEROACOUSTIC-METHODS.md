@@ -5,6 +5,8 @@ actor_id: ACT-TSAGI
 key_people:
 - PERSON-KOPIEV
 - PERSON-PALCHIKOVSKIY
+collaborating_actors:
+- ACT-PNRPU
 maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ADJACENT
@@ -15,9 +17,6 @@ Russian TsAGI/PNRPU nodes provide strong aeroacoustic measurement, source-diagno
 
 evidence_claims:
 - CLM-ACOU-001
-
-Secondary institutional node:
-ACT-PNRPU
 
 Transfer boundary:
 actual phone-class microfan design superiority is unproven.
