@@ -145,6 +145,7 @@ const directionOptions = directions
           data-search={record.search}
         >
           <DenseObjectRow
+            layout="balanced"
             href={record.model.href ? `${import.meta.env.BASE_URL}${record.model.href.replace(/^\//, '')}` : undefined}
             ariaLabel={record.model.name}
           >
