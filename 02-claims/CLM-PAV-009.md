@@ -19,6 +19,8 @@ supporting_sources:
 - PAPER-GLOBAL-DRY-TRANSIENT-001
 - PAPER-GLOBAL-INTERNAL-DRYOUT-001
 - PAPER-GLOBAL-VC-DRYOUT-MODEL-001
+- PAPER-CN-DRY-003
+- PAPER-CN-DRY-004
 
 Boundary:
 this is an analyst comparative synthesis. It does not establish that the Russian taxonomy will remain separable or decision-useful in a sealed sub-mm phone UTVC; that incremental information value is the Stage-0 falsification question.
