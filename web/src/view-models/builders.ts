@@ -233,7 +233,11 @@ export function buildOverviewVM(): OverviewPageVM {
       people: actors.filter((actor) => actor.type === 'PERSON').length,
       capabilities: capabilities.length,
       directions: directions.length,
-      activeDirections: active.length
+      activeDirections: active.length,
+      strategicCandidates: directions.filter((direction) => direction.investmentLane === 'STRATEGIC_CANDIDATE').length,
+      reserves: directions.filter((direction) => direction.investmentLane === 'RESERVE').length,
+      holds: directions.filter((direction) => direction.investmentLane === 'HOLD').length,
+      deepReads: deepReads.length
     },
     priorities: overviewPriorities,
     landscape: overviewLandscape,
