@@ -3,9 +3,9 @@
 record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
-canonical_paper_count: 45
-completed_deep_reads: 31
-campaign_state: ACTIVE
+canonical_paper_count: 50
+completed_deep_reads: 36
+campaign_state: DECISION_CRITICAL_CLOSED
 
 ## Purpose
 
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 31 / 45
+## Completed Tier-A Deep Reads — 36 / 50
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -35,6 +35,8 @@ Rules:
 | PAPER-RU-TPU-001 | TPU core biphilic / spatial-wettability process evidence | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-CN-TPU-001 | China target-system UTVC laser-wick comparator | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-CN-TPU-002 | China direct oxidation / corrosion / laser UTVC process comparator | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-CN-UTVC-GEOM-001 | 0.39 mm sealed UTVC geometry / manufacturability baseline | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-CN-UTVC-WP-001 | 0.4 mm wettability-patterned sealed UTVC target-system comparator | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-RU-TPU-002 | TPU durable laser + hydrocarbon surface-process evidence / contamination gate | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-RU-TPU-003 | TPU 60-day industrial field process-translation evidence | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-RU-TPU-004 | TPU copper-water boiling / thermal-exposure process bridge | DIR-SURFACE-PROCESS-CHALLENGER |
@@ -43,9 +45,12 @@ Rules:
 | PAPER-CN-DRY-002 | China superhydrophilic copper-mesh capillary / CHF / HTC engineering comparator | DIR-FAILURE-AWARE-UTVC |
 | PAPER-RU-MESH-001 | Russia electrochemically modified steel-mesh process bridge | DIR-FAILURE-AWARE-UTVC |
 | PAPER-CN-SJTU-DRY-001 | SJTU architecture-level premature-dryout mitigation baseline | DIR-FAILURE-AWARE-UTVC |
+| PAPER-CN-DRY-003 | China pore-scale wick dryout / meniscus-recession comparator | DIR-FAILURE-AWARE-UTVC |
+| PAPER-CN-DRY-004 | China HFE-7100 confinement comparator down to 1 mm | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-DRY-TRANSIENT-001 | Global spatiotemporal wick-saturation dryout / recovery model baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-INTERNAL-DRYOUT-001 | Global internal vapor-temperature / pressure ground-truth baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-VC-DRYOUT-MODEL-001 | Global boiling-aware two-phase vapor-chamber dryout model baseline | DIR-FAILURE-AWARE-UTVC |
+| PAPER-CN-LHP-002 | China multi-evaporator LHP capillary / cumulative-pressure-drop failure boundary | DIR-LHP-KNOWLEDGE-RESERVE |
 | PAPER-RU-MODEL-001 | Russia current exact evaporative-convection benchmark / inverse-closure evidence | DIR-FOUNDATIONAL-MODELING-ENABLER |
 | PAPER-RU-MODEL-002 | Russia exact neutral-stability boundary evidence | DIR-FOUNDATIONAL-MODELING-ENABLER |
 | PAPER-CN-MODEL-001 | China 3D nonlinear evaporating-film stability comparator | DIR-FOUNDATIONAL-MODELING-ENABLER |
@@ -100,13 +105,14 @@ Deep-read:
 - PAPER-CN-TPU-002
 
 Decision:
-- DEC-20261007-05
-- DIR-SURFACE-PROCESS-CHALLENGER remains STAGE0_CHALLENGER, but is narrowed to a falsification-only process challenger.
-- differentiation confidence reduced from MEDIUM to LOW_MEDIUM.
-- phone transfer maturity reduced from LOW_MEDIUM to LOW.
+- DEC-20261007-05 initially narrowed TPU to a falsification-only Stage-0 challenger.
+- Closure audit restored PAPER-CN-UTVC-WP-001, which directly demonstrates wettability-patterned architecture inside completed 0.4 mm UTVCs.
+- DEC-20261007-06 therefore downgrades DIR-SURFACE-PROCESS-CHALLENGER to HOLD / HOLD_PROCESS_CAPABILITY.
+- differentiation confidence: LOW
+- phone transfer maturity: LOW
 
 Conclusion:
-TPU demonstrates credible process execution, copper heat-transfer processing and industrial durability / translation, but no reviewed source demonstrates the retained sealed-VC spatial-routing / rewetting function. One durable superhydrophobic route explicitly uses hydrocarbon-derived surface chemistry, increasing the importance of contamination / outgassing gates. The only justified next step is one bounded function-first Stage-0 test with strong uniform-treatment controls.
+TPU demonstrates credible process execution, copper heat-transfer processing and industrial durability / translation, but spatial wettability patterning itself is already demonstrated in the China target system. TPU now remains only a process / diagnostics hold and should be reopened only for a matched process-specific increment such as low-outgassing durability, transient rewetting, yield or diagnostics.
 
 ### Batch D — Foundational Modeling Enabler
 
@@ -157,32 +163,35 @@ The surviving Russian residual is gas-shear free-surface flow-pattern / dry-spot
 
 ### Batch F — LHP / active-capillary reserve
 
-Priority: MEDIUM
+Status: NON_BLOCKING_TIER_B
 
-Read next:
-- PAPER-RU-LHP-001
-- PAPER-RU-URFU-LHP-001
-- PAPER-CN-LHP-001
-- PAPER-GLOBAL-EO-COOLING-001
-- PAPER-GLOBAL-EO-MICROHEATPIPE-001
+Disposition:
+- PAPER-RU-LHP-001 — TIER_B
+- PAPER-RU-URFU-LHP-001 — TIER_B
+- PAPER-CN-LHP-001 — TIER_B
+- PAPER-GLOBAL-EO-COOLING-001 — TIER_B
+- PAPER-GLOBAL-EO-MICROHEATPIPE-001 — TIER_B
+- PAPER-CN-LHP-002 — restored TIER_A comparator
 
-Likely depth:
-TIER_B unless a source materially changes DIR-LHP-KNOWLEDGE-RESERVE.
+Decision:
+DIR-LHP-KNOWLEDGE-RESERVE remains WATCH. Restored China multi-evaporator failure-boundary evidence strengthens the existing downgrade but does not change lane.
 
-### Batch G — Other background / method papers
+### Batch G — Remaining explicit disposition
 
-Priority: LOWER unless promoted by a Direction or contradiction
-
-Includes:
+TIER_B:
 - PAPER-RU-ACOU-001
 - PAPER-CN-ACOU-001
-- PAPER-RU-DVFS-001
-- PAPER-RU-MAT-001
 - PAPER-RU-JIHT-001
 - PAPER-RU-MPEI-SKOL-AM-001
+- PAPER-RU-NET-001
+- PAPER-RU-NET-002
+
+REFERENCE_ONLY:
+- PAPER-RU-DVFS-001
+- PAPER-RU-MAT-001
 - PAPER-RU-ORDERED-WICK-001
-- PAPER-CN-FILM-002 if not already handled above
-- remaining reference-only papers not promoted by the preceding batches
+
+These are non-blocking for the current portfolio.
 
 ## First-round conclusion delta
 
@@ -197,13 +206,25 @@ The first expanded Deep Read pass already changes the reasoning structure:
 7. Failure-aware completion confirms one surviving Primary collaboration thesis, but only in mechanism-resolved crisis taxonomy / lab ground truth; SJTU architecture-level dryout mitigation and the Russian mesh process paper further eliminate generic hardware/surface engineering as differentiation.
 8. Foundational Modeling remains RESERVE but is narrowed to exact benchmark / neutral-boundary / inverse-closure leverage; generic analytical modeling, nonlinear stability mathematics and fast UTVC design-space modeling are not Russian differentiation.
 9. Extreme Film remains RESERVE but is narrowed to gas-shear free-surface instability / rupture physics under extreme confinement; China 202.8 W/cm2 passive capillary thin-film boiling and 2074 W/cm2 pressure-controlled nanoporous TFB eliminate high heat flux as Russian differentiation.
-10. TPU remains STAGE0_CHALLENGER only as a falsification-oriented process branch: process execution is credible, but sealed-VC spatial routing / rewetting remains unproven and open-surface durability does not count as vacuum / fluid compatibility.
-11. Broad Russia superiority theses remain killed.
+10. Closure audit restored a missing 0.4 mm wettability-patterned UTVC comparator; spatial wettability patterning itself is therefore not a TPU differentiation. DIR-SURFACE-PROCESS-CHALLENGER is downgraded to HOLD.
+11. Restored China pore-scale dryout and HFE-confinement evidence further strengthens the narrow Failure-aware interpretation without changing its STRATEGIC_CANDIDATE lane.
+12. Restored China multi-evaporator LHP failure-boundary evidence strengthens the existing LHP WATCH disposition.
+13. Broad Russia superiority theses remain killed.
 
-## Stop condition for this campaign
+## Stop condition for this campaign — SATISFIED
 
-Resume detail-page design-system consolidation only after:
-- the HIGHEST-priority Failure-aware and Health-aware batches have been deep-read sufficiently to pressure-test both Strategic Candidates;
-- the TPU challenger has a fair target-system comparator set;
-- any resulting Claim / Direction changes are landed in canonical state;
-- remaining papers have explicit TIER_A / TIER_B / REFERENCE_ONLY disposition rather than accidental omission.
+Decision-critical reading is closed.
+
+Closure audit:
+- 50 canonical papers;
+- 36 decision-oriented Deep Reads;
+- 0 unreviewed TIER_A gaps;
+- 11 remaining TIER_B papers;
+- 3 REFERENCE_ONLY papers;
+- legacy decision-grade omissions reconciled.
+
+Canonical audit:
+- 00-project/paper-reading-depth-closure-audit.md
+
+Next:
+resume bounded web detail-page design-system consolidation. TIER_B and SHOULD_PROMOTE lineage backfill are non-blocking unless a new contradiction appears.
