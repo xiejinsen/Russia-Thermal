@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
-- next: extend the frozen Detail Page Design System to Scholar, then Paper/Patent, then Claim/Capability detail routes; preserve audited Evidence Pressure / graph semantics; do not reopen broad discovery unless a decision-critical contradiction appears
+- next: complete Claim and Capability detail routes using the frozen Detail Page Design System; preserve canonical graph semantics and evidence boundaries; do not reopen broad discovery
 
 ## Directions
 
