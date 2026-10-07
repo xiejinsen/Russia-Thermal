@@ -20,11 +20,13 @@ semantic_orphan_claims: 0
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
 detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
+leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
+leadership_deliverable_source: reports/leadership-decision-brief.md
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: keep external outreach paused; Phase-1 research and outreach-readiness materials are provisionally accepted; next work should focus on final leadership-deliverable consolidation or final web copy cleanup unless the user explicitly authorizes partner contact
+next_action: Phase-1 leadership deliverable is closed; keep external outreach paused unless explicitly authorized; optional remaining work is final web copy cleanup or conversion of the Leadership Decision Brief into a management presentation
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
