@@ -4,6 +4,9 @@ import SiteHeader from '../components/SiteHeader.astro';
 import { buildOverviewVM } from '../view-models/builders';
 
 const vm = buildOverviewVM();
+const primaryPriority = vm.priorities.find((priority) => priority.priorityClass === 'Primary');
+const reservePriority = vm.priorities.find((priority) => priority.priorityClass === 'Reserve');
+const holdPriority = vm.priorities.find((priority) => priority.priorityClass === 'Hold');
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
 ---
@@ -24,9 +27,9 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       </div>
     </div>
     <div class="scoreboard">
-      <a href={href('/partners')}><b>{vm.priorities.length}</b><span>PRIORITY PACKAGES</span></a>
-      <a href={href('/directions')}><b>{vm.stats.activeDirections}</b><span>ACTIVE / RESERVE</span></a>
-      <a href={href('/capabilities')}><b>{vm.stats.capabilities}</b><span>CAPABILITIES</span></a>
+      <a href={href('/directions')}><b>{vm.stats.strategicCandidates}</b><span>STRATEGIC CANDIDATE</span></a>
+      <a href={href('/directions')}><b>{vm.stats.reserves}</b><span>STRATEGIC RESERVES</span></a>
+      <a href={href('/evidence')}><b>{vm.stats.deepReads}</b><span>DEEP READS</span></a>
     </div>
   </section>
 
@@ -40,21 +43,21 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
   </section>
 
   <section class="management-strip">
-    <a href={href('/partners')}>
-      <span>DO NOW</span>
-      <b>Align the three priority collaboration packages and prepare bounded engagement questions</b>
-      <p>Keep validation as a future gate: first align the mechanism question, evidence boundary and partner/data feasibility for each package.</p>
-    </a>
-    <a href={href('/decisions')}>
-      <span>DO NOT</span>
-      <b>Do not fund broad Russia-over-China superiority theses</b>
-      <p>Country-level narratives already killed by comparator pressure stay out of the investment case.</p>
-    </a>
-    <a href={href('/frontier')}>
-      <span>KEEP WATCH</span>
-      <b>Maintain frontier coverage without treating it as partner evidence</b>
-      <p>Discovery can trigger reassessment, but it does not promote a Direction by itself.</p>
-    </a>
+    {primaryPriority && <a href={href(`/directions/${primaryPriority.directions[0]?.id ?? ''}`)}>
+      <span>ACT NOW · {primaryPriority.rank}</span>
+      <b>{primaryPriority.institutions[0]?.name ?? primaryPriority.id}</b>
+      <p>{primaryPriority.rationale}</p>
+    </a>}
+    {reservePriority && <a href={href(`/directions/${reservePriority.directions[0]?.id ?? ''}`)}>
+      <span>CONDITIONAL RESERVE · {reservePriority.rank}</span>
+      <b>{reservePriority.institutions[0]?.name ?? reservePriority.id}</b>
+      <p>{reservePriority.rationale}</p>
+    </a>}
+    {holdPriority && <a href={href(`/directions/${holdPriority.directions[0]?.id ?? ''}`)}>
+      <span>HOLD · {holdPriority.rank}</span>
+      <b>{holdPriority.institutions[0]?.name ?? holdPriority.id}</b>
+      <p>{holdPriority.rationale}</p>
+    </a>}
   </section>
 
   <section class="explore-strip">
@@ -76,8 +79,8 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
 
   <section id="act" class="panel">
     <div class="panel-head">
-      <div><span>01 · ACT</span><h2>Advance three bounded collaboration packages</h2></div>
-      <p><b>Question answered:</b> who should we engage first, what should we work on, and what must be proven before promotion?</p>
+      <div><span>01 · ACT</span><h2>One primary action, one conditional reserve, one hold</h2></div>
+      <p><b>Question answered:</b> which partner should move now, which one needs a data condition, and which one should not be proactively engaged?</p>
     </div>
     <div class="priority-stack">
       {vm.priorities.map((priority) => {
@@ -87,6 +90,7 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
           <article class="priority-row">
             <div class="priority-rank">
               <b>{priority.rank}</b>
+              <small>{priority.priorityClass}</small>
               {institution?.href ? <a href={href(institution.href)}>{institution.name}</a> : <span>{institution?.name ?? priority.id}</span>}
             </div>
             <div class="priority-decision">
@@ -278,6 +282,7 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
     .priority-row>div{padding:20px;border-right:1px solid #e4edf4}
     .priority-rank{display:grid;align-content:start;gap:8px;background:#f7fbfe}
     .priority-rank b{font-size:25px;color:#0b67b2}
+    .priority-rank small{width:fit-content;padding:3px 6px;border-radius:999px;background:#eaf4fb;color:#315f80;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
     .priority-rank a,.priority-rank span{font-size:13px;font-weight:750;color:#36566e;text-decoration:none}
     .priority-decision{background:#f1fbf7}
     .priority-decision>a{text-decoration:none}
