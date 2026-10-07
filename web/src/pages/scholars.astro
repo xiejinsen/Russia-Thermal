@@ -1,14 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import ScholarCard from '../components/cards/ScholarCard.astro';
 import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import DenseObjectRow from '../components/DenseObjectRow.astro';
 import { actors, capabilities, directions, priorities } from '../data/load-normalized';
 import { buildScholarsCollectionVM } from '../view-models/builders';
 import { directionTitle, humanize } from '../view-models/helpers';
 
 const vm = buildScholarsCollectionVM();
 const actorById = new Map(actors.map((actor) => [actor.id, actor]));
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 
 function isUnder(actorId: string | null | undefined, rootId: string) {
   let current = actorId ? actorById.get(actorId) : undefined;
@@ -48,6 +50,8 @@ const records = vm.records.map((model) => {
     model,
     person,
     affiliation,
+    relatedCapabilities,
+    linkedDirections,
     priorityRanks,
     dispositions,
     relations,
@@ -93,16 +97,20 @@ const directionOptions = directions
 
   <div data-explorer-root>
     <section class="collection-hero">
-      <p class="eyebrow">People explorer</p>
-      <h1>Scholars & key people</h1>
-      <p>
-        Browse people across the full Russia / China research graph. Strategic partners, support-only researchers,
-        comparator scholars and profile-only contacts remain visible without implying equal portfolio priority.
-      </p>
+      <div>
+        <p class="eyebrow">People explorer · dense rows</p>
+        <h1>Scholars & key people</h1>
+        <p>
+          Browse the full Russia / China people graph without turning 70+ researchers into a card wall.
+          Each row keeps identity, affiliation, research relevance, capability touchpoints and portfolio context visible.
+        </p>
+      </div>
       <div class="count">{records.length} records</div>
     </section>
 
     <ExplorerToolbar
+      sticky
+      compact
       total={records.length}
       searchPlaceholder="Search person, affiliation, role, capability or direction…"
       filters={[
@@ -117,10 +125,9 @@ const directionOptions = directions
       ]}
     />
 
-    <section class="collection-grid" aria-label="Scholar and key-person records">
+    <section class="dense-list" aria-label="Scholar and key-person records">
       {records.map((record) => (
         <div
-          class="record"
           data-explorer-record
           data-country={record.person?.country ?? ''}
           data-affiliation={record.affiliation?.id ?? ''}
@@ -128,18 +135,73 @@ const directionOptions = directions
           data-direction={record.directionIds.join('|')}
           data-search={record.search}
         >
-          <div class="record-context">
-            <div>
-              <span>{record.affiliation?.name ?? 'Affiliation unresolved'}</span>
-              {record.model.role && <small>{record.model.role}</small>}
+          <DenseObjectRow
+            layout="balanced"
+            href={record.model.href ? href(record.model.href) : undefined}
+            ariaLabel={record.model.name}
+          >
+            <div slot="main" class="scholar-main">
+              <div class="identity">
+                <div class="avatar" aria-hidden="true">{record.model.name.slice(0,1)}</div>
+                <div>
+                  <div class="topline">
+                    <span>{record.person?.country ?? '—'}</span>
+                    {record.priorityRanks.map((rank) => <b>{rank}</b>)}
+                    {record.model.status && <em>{record.model.status.label}</em>}
+                  </div>
+                  {record.model.href ? (
+                    <a class="title" href={href(record.model.href)}>{record.model.name}</a>
+                  ) : <strong class="title">{record.model.name}</strong>}
+                </div>
+              </div>
+
+              <div class="affiliation-line">
+                {record.affiliation ? (
+                  <a href={href(`/institutions/${record.affiliation.id}`)}>{record.affiliation.name}</a>
+                ) : <span>{record.model.affiliation}</span>}
+                {record.model.role && <span>· {record.model.role}</span>}
+              </div>
             </div>
-            <div class="tags">
-              {record.priorityRanks.map((rank) => <b>{rank}</b>)}
-              {record.dispositions.map((value) => <em>{humanize(value)}</em>)}
-              {!record.dispositions.length && <em>Profile only</em>}
+
+            <div slot="details" class="scholar-details">
+              <div>
+                <span>Research relevance</span>
+                <p>{record.model.relevance}</p>
+              </div>
+              {record.relatedCapabilities.length > 0 && (
+                <div>
+                  <span>Capability touchpoints</span>
+                  <p>
+                    {record.relatedCapabilities.slice(0,2).map((capability) => capability.statement).join(' · ')}
+                    {record.relatedCapabilities.length > 2 ? ' …' : ''}
+                  </p>
+                </div>
+              )}
             </div>
-          </div>
-          <ScholarCard model={record.model} />
+
+            <div slot="meta" class="scholar-meta">
+              <div class="metrics">
+                <span><b>{record.relatedCapabilities.length}</b> capabilities</span>
+                <span><b>{record.linkedDirections.length}</b> directions</span>
+              </div>
+              <div class="tags">
+                {record.dispositions.slice(0,3).map((value) => <em>{humanize(value)}</em>)}
+                {!record.dispositions.length && <em>Profile only</em>}
+              </div>
+              {record.linkedDirections.length > 0 && (
+                <div class="direction-line">
+                  <span>Direction context</span>
+                  <p>{record.linkedDirections.slice(0,2).map((direction) => directionTitle(direction.id)).join(' · ')}{record.linkedDirections.length > 2 ? ' …' : ''}</p>
+                </div>
+              )}
+            </div>
+
+            <div slot="actions" class="row-actions">
+              <a href={href(`/claims?person=${encodeURIComponent(record.model.id)}`)}>Claims</a>
+              <a href={href(`/papers?person=${encodeURIComponent(record.model.id)}`)}>Papers</a>
+              <a href={href(`/evidence?person=${encodeURIComponent(record.model.id)}`)}>Evidence</a>
+            </div>
+          </DenseObjectRow>
         </div>
       ))}
     </section>
@@ -147,15 +209,31 @@ const directionOptions = directions
 </BaseLayout>
 
 <style>
-  .collection-hero{display:grid;gap:var(--space-4);max-width:68rem}
+  .collection-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;max-width:none}
+  .collection-hero>div:first-child{max-width:72rem}
   .collection-hero h1{margin:0;font-size:clamp(1.7rem,2.7vw,2.35rem);letter-spacing:-.05em;line-height:1.08}
-  .collection-hero>p:not(.eyebrow){margin:0;color:var(--text-muted);max-width:78ch;line-height:1.65}
-  .count{width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
-  .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--space-4);margin-top:var(--space-6)}
-  .record{display:grid;grid-template-rows:auto 1fr;min-width:0}
-  .record-context{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0;background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
-  .record-context>div:first-child{display:grid;gap:2px}.record-context span{color:var(--accent-vivid);font-size:9px;font-weight:900;letter-spacing:.04em}.record-context small{color:var(--text-muted);font-size:10px}
-  .tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-content:flex-start}.tags b,.tags em{padding:3px 6px;border-radius:999px;font-size:8px;font-style:normal;font-weight:850}.tags b{background:#e6f5ee;color:#087a66}.tags em{background:white;color:#506d82;border:1px solid #dbe7ef}
-  .record :global(.scholar-card){border-top-left-radius:0;border-top-right-radius:0;min-height:100%}
+  .collection-hero>div>p:not(.eyebrow){margin:.55rem 0 0;color:var(--text-muted);max-width:82ch;line-height:1.6}
+  .count{flex:0 0 auto;width:fit-content;padding:.45rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800}
+
+  .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
+  .scholar-main,.scholar-details,.scholar-meta{display:grid;gap:6px;min-width:0}
+  .identity{display:flex;gap:10px;align-items:center;min-width:0}
+  .avatar{display:grid;place-items:center;width:2.35rem;height:2.35rem;flex:0 0 auto;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:850}
+  .topline{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+  .topline span,.topline b,.topline em{padding:3px 6px;border-radius:999px;font-size:.54rem;font-style:normal;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+  .topline span{background:#eef4f8;color:#587185}.topline b{background:#e7f6ef;color:#087a66}.topline em{background:#f3f0fb;color:#60558a}
+  .title{display:block;width:fit-content;margin-top:4px;color:#1d405a;font-size:.98rem;font-weight:850;line-height:1.35;text-decoration:none}
+  .title:hover,.title:focus-visible{text-decoration:underline;text-underline-offset:.16em}
+  .affiliation-line{display:flex;gap:5px;flex-wrap:wrap;color:#708696;font-size:.69rem}.affiliation-line a{color:#3e6682;font-weight:800;text-decoration:none}
+
+  .scholar-details>div{display:grid;gap:3px}.scholar-details span,.direction-line span{color:#0b67b2;font-size:.55rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+  .scholar-details p,.direction-line p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:0;color:#536d80;font-size:.75rem;line-height:1.5}
+  .metrics{display:flex;gap:10px;flex-wrap:wrap}.metrics span{color:#6a8192;font-size:.64rem}.metrics b{color:#0b67b2;font-size:.85rem}
+  .tags{display:flex;gap:4px;flex-wrap:wrap}.tags em{padding:3px 5px;border-radius:5px;background:#f1f5f8;color:#587185;font-size:.54rem;font-style:normal;font-weight:750}
+  .direction-line{display:grid;gap:3px}
+
+  .row-actions{display:flex;gap:5px;flex-wrap:wrap}.row-actions a{padding:5px 7px;border:1px solid #d8e7f1;border-radius:6px;color:#43677f;font-size:.62rem;font-weight:800;text-decoration:none;white-space:nowrap}.row-actions a:hover{background:#eef6fb;color:#0b67b2}
+
   [hidden]{display:none!important}
+  @media(max-width:850px){.collection-hero{align-items:flex-start;flex-direction:column}}
 </style>
