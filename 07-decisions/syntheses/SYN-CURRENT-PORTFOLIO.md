@@ -7,7 +7,7 @@ Conclusion:
 Russia is a selective complement, not a broad smartphone-thermal leader.
 
 Implication:
-Prioritize a small number of bounded collaboration packages where Russian mechanism depth, long-duration reliability knowledge, or selected process execution adds value beyond strong China/global device, manufacturing, reliability-QA, and smartphone-integration baselines.
+Prioritize one current primary collaboration thesis around Kutateladze mechanism-resolved failure ground truth, while retaining MPEI long-duration reliability knowledge as a conditional reserve and TPU spatial-wettability process execution as a bounded Stage-0 challenger. Strong China/global device, manufacturing, reliability-QA, modeling and smartphone-integration baselines remain mandatory comparators.
 
 Coverage-closure refresh:
 The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe, UUST microchannel and MISIS solid-state thermal-material capabilities without changing P1/P2/P3. NovSU is absorbed into the existing LHP/active-capillary WATCH rather than promoted to a new Direction because established global electroosmotic electronics-cooling / micro-heat-pipe prior art removes principle-level uniqueness. UUST remains a supporting capability because stronger and more integrated current China microchannel baselines exist. MISIS confirms a real materials-side capability but does not reopen the killed broad Russian thermal-material advantage thesis. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
@@ -15,8 +15,9 @@ The completed Russia anti-omission scan added current NovSU electroosmotic heat-
 Theory basis:
 - Collaboration value should come from an incremental mechanism, diagnostic, reliability, or process control point that survives comparator pressure; publication volume or historical prestige is insufficient.
 - Current public evidence refutes broad Russia-over-China superiority in generic dryout/rewetting, two-phase product reliability, and generic laser/biphilic phone-thermal capability.
-- Actor-specific residuals remain credible around Kutateladze mechanism-level crisis interpretation, MPEI multi-year capillary-state aging knowledge, and TPU-specific process execution after phone-relevant gates.
+- Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate; MPEI multi-year capillary-state aging knowledge is now a reliability reserve conditional on data access / phone transfer; TPU remains a Stage-0 spatial-function challenger after strong generic-process comparator pressure.
 - Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
+- Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
 
 supporting_claims:
 - CLM-PAV-004
@@ -27,6 +28,7 @@ supporting_claims:
 - CLM-TPU-006
 - CLM-CN-SJTU-003
 - CLM-PRESSURE-003
+- CLM-PRESSURE-006
 - CLM-PRESSURE-008
 - CLM-NOVSU-001
 - CLM-UUST-001
@@ -51,6 +53,9 @@ key_evidence:
 - PAPER-RU-DRY-002
 - PAPER-RU-AGE-001
 - PAPER-CN-AGE-001
+- PAPER-CN-AGE-002
+- PAPER-CN-AGE-003
+- PAPER-CN-AGE-004
 - PAPER-CN-TPU-001
 - OFFICIAL-SJTU-GONG-001
 - PAPER-GLOBAL-EO-COOLING-001
@@ -70,4 +75,4 @@ Russia Top-20, Russia ecosystem anti-omission, and China Top-20 positive-signal 
 Reopen condition:
 Reassess if new matched phone-scale device/process evidence materially changes the China/global comparator baseline, demonstrates a new Russian control point, or invalidates one of the current residual collaboration theses. For NovSU/UUST specifically, promotion requires matched system-level advantage in phone-relevant thickness, parasitic power, reliability/integration or another demonstrably distinct control point.
 
-assessed_at: 2026-10-06
+assessed_at: 2026-10-07
