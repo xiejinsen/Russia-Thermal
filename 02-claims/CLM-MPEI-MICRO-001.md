@@ -8,7 +8,7 @@ Proposition:
 MPEI has a distinct current modular SiC-coated microchannel cooling line led by Kuzma-Kichta with Kiselev, Strashnikova and Yastrebov.
 
 supporting_sources:
-- OFFICIAL-MPEI-SIC-MICROCHANNEL-001
+- OFFICIAL-MPEI-IVANOV-001
 - PAPER-RU-JIHT-001
 
 Boundary:
