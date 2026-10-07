@@ -4,7 +4,7 @@ record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
 canonical_paper_count: 45
-completed_deep_reads: 17
+completed_deep_reads: 19
 campaign_state: ACTIVE
 
 ## Purpose
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 17 / 45
+## Completed Tier-A Deep Reads — 19 / 45
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -38,6 +38,8 @@ Rules:
 | PAPER-RU-DRY-002 | Russia confinement-dependent hydrodynamic vs surface-drying crisis taxonomy | DIR-FAILURE-AWARE-UTVC |
 | PAPER-RU-DRY-003 | Russia topology-linked directional drying-front mechanism | DIR-FAILURE-AWARE-UTVC |
 | PAPER-CN-DRY-002 | China superhydrophilic copper-mesh capillary / CHF / HTC engineering comparator | DIR-FAILURE-AWARE-UTVC |
+| PAPER-RU-MESH-001 | Russia electrochemically modified steel-mesh process bridge | DIR-FAILURE-AWARE-UTVC |
+| PAPER-CN-SJTU-DRY-001 | SJTU architecture-level premature-dryout mitigation baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-DRY-TRANSIENT-001 | Global spatiotemporal wick-saturation dryout / recovery model baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-INTERNAL-DRYOUT-001 | Global internal vapor-temperature / pressure ground-truth baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-VC-DRYOUT-MODEL-001 | Global boiling-aware two-phase vapor-chamber dryout model baseline | DIR-FAILURE-AWARE-UTVC |
@@ -46,14 +48,14 @@ Rules:
 
 ### Batch A — Failure-aware UTVC completion
 
-Priority: HIGHEST
+Status: COMPLETED 2026-10-07
 
-Remaining read next:
-- PAPER-RU-MESH-001
-- PAPER-CN-SJTU-DRY-001
+Decision:
+- DEC-20261007-02
+- DIR-FAILURE-AWARE-UTVC remains STRATEGIC_CANDIDATE / PRIMARY_COLLABORATION_DIRECTION, but is narrowed to mechanism-resolved laboratory ground truth / crisis taxonomy only.
 
-Decision question:
-Does Kutateladze / Pavlenko retain mechanism-specific information value after comparison with state-history, transient recovery, internal-state and China capillary baselines?
+Conclusion:
+Kutateladze / Pavlenko retains a specific mechanism-labeling residual after comparison with China treated-wick and architecture-level dryout mitigation plus strong global transient, internal-sensing and boiling-aware model baselines. Generic surface treatment, dryout hardware and imported observer/model routes are excluded from the strategic differentiation thesis.
 
 ### Batch B — Health-aware UTVC completion
 
@@ -156,7 +158,8 @@ The first expanded Deep Read pass already changes the reasoning structure:
 4. TPU's generic laser-surface proposition is more crowded than a superficial reading suggests; a direct China UTVC comparison shows oxidation, corrosion and laser all improve the wick, with thermal oxidation matching laser maximum power and judged best overall. The only retained strategic TPU hypothesis is a specific spatial function under confinement / sealed-process constraints.
 5. The retained Kutateladze residual is now more precisely framed as mechanism-resolved laboratory ground truth / crisis taxonomy that can falsify or extend an internally owned phone-UTVC state model.
 6. Health-aware deep reading changes the portfolio: MPEI's 42-month evidence remains a rare long-calendar ground-truth asset, but China now has a coherent mechanism -> service-life -> production-QA -> mobile-aging chain. DIR-HEALTH-AWARE-UTVC is therefore downgraded to RESERVE.
-7. Broad Russia superiority theses remain killed.
+7. Failure-aware completion confirms one surviving Primary collaboration thesis, but only in mechanism-resolved crisis taxonomy / lab ground truth; SJTU architecture-level dryout mitigation and the Russian mesh process paper further eliminate generic hardware/surface engineering as differentiation.
+8. Broad Russia superiority theses remain killed.
 
 ## Stop condition for this campaign
 
