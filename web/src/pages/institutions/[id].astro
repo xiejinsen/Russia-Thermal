@@ -175,6 +175,7 @@ const primaryDirection =
           </div>
           <div class="source-actions">
             {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Deep detail →</a>}
+            {item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Patent detail →</a>}
             <a href={item.primaryUrl} target="_blank" rel="noopener noreferrer">Source ↗</a>
           </div>
         </article>)}
