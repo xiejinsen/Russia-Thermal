@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import ExplorerToolbar from '../components/ExplorerToolbar.astro';
+import DenseObjectRow from '../components/DenseObjectRow.astro';
 import { actors, capabilities, claims, evidence, directions } from '../data/load-normalized';
 import { actorHref, directionTitle, humanize } from '../view-models/helpers';
 
@@ -56,7 +58,27 @@ const capabilityGroups = groups.map((group) => ({
         .map((id) => actorById.get(id))
         .filter((item): item is NonNullable<typeof item> => Boolean(item));
       const linkedDirections = directionByCapability.get(capability.id) ?? [];
-      return { capability, owner, people, linkedDirections };
+      return {
+        capability,
+        owner,
+        people,
+        linkedDirections,
+        search: [
+          capability.id,
+          capability.statement,
+          capability.portfolioDisposition,
+          capability.strategicUse ?? '',
+          capability.transferBoundary ?? '',
+          capability.maturity,
+          capability.evidenceConfidence,
+          capability.targetFit,
+          ...capability.technicalScope,
+          owner?.name ?? '',
+          owner?.country ?? '',
+          ...people.map((person) => person.name),
+          ...linkedDirections.map((direction) => directionTitle(direction.id))
+        ].join(' ')
+      };
     })
     .sort((a, b) =>
       (a.owner?.country ?? '').localeCompare(b.owner?.country ?? '') ||
@@ -84,6 +106,20 @@ const summary = {
   explicitRoleClaims: roleClaims.length,
   contextSources: contextSources.length
 };
+
+const capabilityCountries = [...new Set(
+  capabilityGroups.flatMap((group) => group.records.map((record) => record.owner?.country).filter((value): value is string => Boolean(value)))
+)].sort();
+
+const dispositionOptions = groups.map((group) => ({
+  value: group.disposition,
+  label: group.label
+}));
+
+const directionOptions = directions
+  .filter((direction) => capabilityGroups.some((group) => group.records.some((record) => record.linkedDirections.some((item) => item.id === direction.id))))
+  .map((direction) => ({ value: direction.id, label: directionTitle(direction.id) }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <BaseLayout title="Russia-Thermal — Research Coverage" description="See what was researched, what entered the strategic portfolio, and why other valid assets remain support, comparator, context or evidence-gap objects.">
@@ -127,71 +163,113 @@ const summary = {
     </a>
   </section>
 
-  {capabilityGroups.map((group) => (
-    <section class="coverage-section" id={group.id}>
-      <header>
-        <div>
-          <span>{group.label}</span>
-          <h2>{group.title}</h2>
+  <div data-explorer-root class="coverage-capability-explorer">
+    <ExplorerToolbar
+      sticky
+      compact
+      total={summary.capabilities}
+      searchPlaceholder="Search capability, institution, person, scope or Direction…"
+      filters={[
+        {
+          key: 'country',
+          label: 'Country',
+          options: capabilityCountries.map((value) => ({ value, label: value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value }))
+        },
+        { key: 'disposition', label: 'Disposition', options: dispositionOptions },
+        { key: 'direction', label: 'Direction', options: directionOptions }
+      ]}
+    />
+
+    {capabilityGroups.map((group) => (
+      <section class="coverage-section" id={group.id}>
+        <header>
+          <div>
+            <span>{group.label}</span>
+            <h2>{group.title}</h2>
+          </div>
+          <div class="section-count">{group.records.length} total</div>
+          <p>{group.description}</p>
+        </header>
+
+        <div class="dense-list">
+          {group.records.map(({ capability, owner, people, linkedDirections, search }) => (
+            <div
+              data-explorer-record
+              data-country={owner?.country ?? ''}
+              data-disposition={capability.portfolioDisposition}
+              data-direction={linkedDirections.map((direction) => direction.id).join('|')}
+              data-search={search}
+            >
+              <DenseObjectRow
+                href={href(`/capabilities/${capability.id}`)}
+                ariaLabel={capability.statement}
+              >
+                <div slot="main" class="cap-main">
+                  <div class="topline">
+                    <span>{capability.id}</span>
+                    <b>{humanize(capability.portfolioDisposition)}</b>
+                    <em>{owner?.country ?? '—'}</em>
+                  </div>
+                  <a class="title" href={href(`/capabilities/${capability.id}`)}>{capability.statement}</a>
+                  <div class="owner-line">
+                    <span>Owner</span>
+                    {owner ? <a href={href(actorHref(owner.id, owner.type))}>{owner.name}</a> : <b>{capability.actorId}</b>}
+                    {people.length > 0 && <small>· {people.slice(0,3).map((person) => person.name).join(' · ')}{people.length > 3 ? ' …' : ''}</small>}
+                  </div>
+                </div>
+
+                <div slot="details" class="cap-details">
+                  {capability.strategicUse && (
+                    <div>
+                      <span>Strategic use</span>
+                      <p>{capability.strategicUse}</p>
+                    </div>
+                  )}
+                  {capability.transferBoundary && (
+                    <div>
+                      <span>Transfer boundary</span>
+                      <p>{capability.transferBoundary}</p>
+                    </div>
+                  )}
+                  {!capability.strategicUse && !capability.transferBoundary && (
+                    <p class="muted">No separate strategic-use or transfer-boundary statement.</p>
+                  )}
+                </div>
+
+                <div slot="meta" class="cap-meta">
+                  <div class="metric-line">
+                    <span>Maturity <b>{humanize(capability.maturity)}</b></span>
+                    <span>Evidence <b>{humanize(capability.evidenceConfidence)}</b></span>
+                    <span>Fit <b>{humanize(capability.targetFit)}</b></span>
+                  </div>
+                  <div class="scope-tags">
+                    {capability.technicalScope.slice(0,4).map((item) => <span>{item}</span>)}
+                    {capability.technicalScope.length > 4 && <span>+{capability.technicalScope.length - 4}</span>}
+                  </div>
+                  <div class="direction-line">
+                    <span>Direction</span>
+                    <p>
+                      {linkedDirections.length
+                        ? linkedDirections.slice(0,2).map((direction) => directionTitle(direction.id)).join(' · ')
+                        : 'Not promoted to a Direction'}
+                    </p>
+                  </div>
+                </div>
+
+                <div slot="actions" class="row-actions">
+                  <a href={href(`/claims?capability=${encodeURIComponent(capability.id)}`)}>Claims</a>
+                  <a href={href(`/evidence?capability=${encodeURIComponent(capability.id)}`)}>Evidence</a>
+                  {linkedDirections.slice(0,1).map((direction) => (
+                    <a href={href(`/directions/${direction.id}`)}>Direction</a>
+                  ))}
+                </div>
+              </DenseObjectRow>
+            </div>
+          ))}
         </div>
-        <div class="section-count">{group.records.length}</div>
-        <p>{group.description}</p>
-      </header>
-
-      <div class="capability-list">
-        {group.records.map(({ capability, owner, people, linkedDirections }) => (
-          <article class="coverage-card">
-            <div class="card-top">
-              <span class="disposition">{humanize(capability.portfolioDisposition)}</span>
-              <span class="country">{owner?.country ?? '—'}</span>
-            </div>
-
-            <h3><a href={href(`/capabilities/${capability.id}`)}>{capability.statement}</a></h3>
-
-            <div class="owner">
-              <span>OWNER</span>
-              {owner ? <a href={href(actorHref(owner.id, owner.type))}>{owner.name}</a> : <b>{capability.actorId}</b>}
-            </div>
-
-            {people.length > 0 && (
-              <div class="people">
-                <span>KEY PEOPLE</span>
-                <div>
-                  {people.map((person) => <a href={href(actorHref(person.id, person.type))}>{person.name}</a>)}
-                </div>
-              </div>
-            )}
-
-            <div class="meta">
-              <span>{humanize(capability.maturity)} maturity</span>
-              <span>{humanize(capability.evidenceConfidence)} evidence</span>
-              <span>{humanize(capability.targetFit)} target fit</span>
-            </div>
-
-            {capability.strategicUse && <p class="use"><b>Strategic use:</b> {capability.strategicUse}</p>}
-            {capability.transferBoundary && <p class="boundary"><b>Boundary:</b> {capability.transferBoundary}</p>}
-
-            <div class="relations">
-              <div>
-                <span>CLAIMS</span>
-                <div>
-                  {capability.claimIds.map((id) => <a href={href(`/claims/${id}`)}>{id}</a>)}
-                </div>
-              </div>
-              <div>
-                <span>DIRECTIONS</span>
-                <div>
-                  {linkedDirections.length
-                    ? linkedDirections.map((direction) => <a href={href(`/directions/${direction.id}`)}>{directionTitle(direction.id)}</a>)
-                    : <em>Not promoted to a Direction</em>}
-                </div>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  ))}
+      </section>
+    ))}
+  </div>
 
   <section class="coverage-section" id="claim-roles">
     <header>
@@ -281,15 +359,26 @@ const summary = {
     .coverage-section>header p{grid-column:1/-1;max-width:950px;margin:0;color:var(--text-muted);font-size:13px;line-height:1.6}
     .section-count{display:grid;place-items:center;min-width:44px;height:32px;padding:0 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:900}
 
-    .capability-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}
-    .coverage-card{display:grid;gap:13px;padding:18px;border:1px solid #d7e4ed;border-radius:12px;background:white}
-    .card-top{display:flex;justify-content:space-between;gap:10px}.disposition{padding:4px 7px;border-radius:999px;background:#e8f3fb;color:#245f88;font-size:9px;font-weight:900;text-transform:uppercase}.country{color:var(--text-muted);font-size:10px;font-weight:800}
-    .coverage-card h3{margin:0;font-size:15px;line-height:1.45;letter-spacing:-.01em}.coverage-card h3 a{color:inherit;text-decoration:none}.coverage-card h3 a:hover,.coverage-card h3 a:focus-visible{text-decoration:underline;text-underline-offset:.18em}
-    .owner,.people{display:grid;gap:6px}.owner a,.owner b{width:fit-content;color:#244e6b;font-size:12px;font-weight:800;text-decoration:none}.people>div{display:flex;gap:6px;flex-wrap:wrap}.people a{padding:5px 7px;border-radius:7px;background:#eef6fb;color:#3a6583;font-size:10px;text-decoration:none;font-weight:750}
-    .meta{display:flex;gap:6px;flex-wrap:wrap}.meta span{padding:5px 7px;border-radius:7px;background:#f1f5f8;color:#587185;font-size:9px;text-transform:uppercase;font-weight:800}
-    .use,.boundary{margin:0;font-size:12px;line-height:1.58;color:#4d6679}.boundary{padding:10px;border-left:3px solid #bd8e51;background:#fffaf3}
-    .relations{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:12px;border-top:1px solid #e4edf3}
-    .relations>div{display:grid;gap:7px}.relations>div>div{display:flex;gap:5px;flex-wrap:wrap}.relations a{padding:4px 6px;border-radius:6px;background:#edf6fb;color:#315f80;font-size:9px;text-decoration:none;font-weight:750}.relations em{color:#7c8d99;font-size:10px}
+    .coverage-capability-explorer{margin-top:14px}
+    .coverage-capability-explorer .coverage-section{margin-top:14px}
+    .dense-list{background:var(--surface)}
+    .cap-main,.cap-details,.cap-meta{display:grid;gap:6px;min-width:0}
+    .topline{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+    .topline span,.topline b,.topline em{padding:3px 6px;border-radius:999px;font-size:.54rem;font-style:normal;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .topline span{background:#eef6fb;color:#315f80}.topline b{background:#eef4f8;color:#587185}.topline em{background:#e7f6ef;color:#087a66}
+    .title{color:#1d405a;font-size:.94rem;font-weight:850;line-height:1.4;text-decoration:none}
+    .title:hover,.title:focus-visible{text-decoration:underline;text-underline-offset:.16em}
+    .owner-line{display:flex;gap:5px;align-items:center;flex-wrap:wrap;color:#6f8697;font-size:.67rem}
+    .owner-line>span,.cap-details span,.direction-line>span{color:#0b67b2;font-size:.55rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+    .owner-line a{color:#3f6680;font-weight:800;text-decoration:none}.owner-line small{font-size:.65rem}
+    .cap-details>div{display:grid;gap:3px}
+    .cap-details p,.direction-line p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:0;color:#536d80;font-size:.75rem;line-height:1.5}
+    .muted{margin:0;color:#8798a5;font-size:.72rem}
+    .metric-line{display:grid;gap:3px}.metric-line span{color:#6a8192;font-size:.62rem}.metric-line b{color:#315f80}
+    .scope-tags{display:flex;gap:4px;flex-wrap:wrap}.scope-tags span{padding:3px 5px;border-radius:5px;background:#f1f5f8;color:#587185;font-size:.54rem;font-weight:750}
+    .direction-line{display:grid;gap:3px}
+    .row-actions{display:flex;gap:5px;flex-wrap:wrap}.row-actions a{padding:5px 7px;border:1px solid #d8e7f1;border-radius:6px;color:#43677f;font-size:.62rem;font-weight:800;text-decoration:none;white-space:nowrap}.row-actions a:hover{background:#eef6fb;color:#0b67b2}
+    [data-explorer-record][hidden]{display:none!important}
 
     .role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px;background:#f6fafd}
     .role-card{display:grid;gap:7px;padding:15px;border:1px solid #d7e5ef;border-radius:10px;background:#fff;text-decoration:none;color:inherit}.role-card>span{font-size:9px;color:var(--accent-vivid);font-weight:900;text-transform:uppercase}.role-card b{font-size:12px;line-height:1.5}.role-card small{color:var(--text-muted)}
@@ -298,7 +387,7 @@ const summary = {
 
     .coverage-note{display:grid;grid-template-columns:170px 1fr;gap:18px;margin-top:20px;padding:18px;border-left:4px solid var(--accent-vivid);background:var(--accent-soft);border-radius:0 var(--radius-md) var(--radius-md) 0}.coverage-note p{margin:0;color:var(--text-secondary)}
 
-    @media(max-width:900px){.coverage-hero,.reading-paths,.capability-list,.role-grid{grid-template-columns:1fr}.relations{grid-template-columns:1fr}.coverage-note{grid-template-columns:1fr}}
+    @media(max-width:900px){.coverage-hero,.reading-paths,.role-grid{grid-template-columns:1fr}.coverage-note{grid-template-columns:1fr}}
     @media(max-width:640px){.coverage-hero{padding:20px}.coverage-stats{grid-template-columns:1fr 1fr}.source-list article{flex-direction:column}}
   </style>
 </BaseLayout>
