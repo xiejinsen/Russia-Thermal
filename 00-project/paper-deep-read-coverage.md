@@ -4,7 +4,7 @@ record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
 canonical_paper_count: 45
-completed_deep_reads: 19
+completed_deep_reads: 23
 campaign_state: ACTIVE
 
 ## Purpose
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 19 / 45
+## Completed Tier-A Deep Reads — 23 / 45
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -43,6 +43,10 @@ Rules:
 | PAPER-GLOBAL-DRY-TRANSIENT-001 | Global spatiotemporal wick-saturation dryout / recovery model baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-INTERNAL-DRYOUT-001 | Global internal vapor-temperature / pressure ground-truth baseline | DIR-FAILURE-AWARE-UTVC |
 | PAPER-GLOBAL-VC-DRYOUT-MODEL-001 | Global boiling-aware two-phase vapor-chamber dryout model baseline | DIR-FAILURE-AWARE-UTVC |
+| PAPER-RU-MODEL-001 | Russia current exact evaporative-convection benchmark / inverse-closure evidence | DIR-FOUNDATIONAL-MODELING-ENABLER |
+| PAPER-RU-MODEL-002 | Russia exact neutral-stability boundary evidence | DIR-FOUNDATIONAL-MODELING-ENABLER |
+| PAPER-CN-MODEL-001 | China 3D nonlinear evaporating-film stability comparator | DIR-FOUNDATIONAL-MODELING-ENABLER |
+| PAPER-GLOBAL-UTVC-MODEL-001 | Global mobile-relevant fast UTVC semi-analytical baseline | DIR-FOUNDATIONAL-MODELING-ENABLER |
 
 ## Decision-sensitive reading queue
 
@@ -92,18 +96,26 @@ Does TPU retain any spatial-routing / rewetting function that survives compariso
 
 ### Batch D — Foundational Modeling Enabler
 
-Priority: HIGH
+Status: COMPLETED 2026-10-07
 
-Read next:
+Deep-read:
 - PAPER-RU-MODEL-001
 - PAPER-RU-MODEL-002
 - PAPER-CN-MODEL-001
 - PAPER-GLOBAL-UTVC-MODEL-001
-- PAPER-RU-NET-001
-- PAPER-RU-NET-002
 
-Decision question:
-Does the Russian exact / group-invariant modeling lineage add actionable prediction or experiment-design value beyond current China/global interfacial-stability and product-relevant UTVC modeling?
+Supporting disposition:
+- PAPER-RU-NET-002 remains Tier-B lineage evidence for historical theory-experiment closure.
+- PAPER-RU-NET-001 is deferred to the Extreme Film batch.
+
+Decision:
+- DEC-20261007-03
+- DIR-FOUNDATIONAL-MODELING-ENABLER remains RESERVE but is narrowed to exact benchmark / neutral-boundary / inverse-closure value.
+- differentiation confidence reduced to LOW_MEDIUM;
+- phone transfer maturity reduced to LOW.
+
+Conclusion:
+Russian exact/stability methods remain technically real and interpretable, but broad mathematical uniqueness is refuted and global product-level UTVC semi-analytical models already provide direct mobile variables at very low computational cost. Promotion now requires measurable experiment-count or boundary-prediction gain.
 
 ### Batch E — Extreme Film Reserve
 
@@ -159,7 +171,8 @@ The first expanded Deep Read pass already changes the reasoning structure:
 5. The retained Kutateladze residual is now more precisely framed as mechanism-resolved laboratory ground truth / crisis taxonomy that can falsify or extend an internally owned phone-UTVC state model.
 6. Health-aware deep reading changes the portfolio: MPEI's 42-month evidence remains a rare long-calendar ground-truth asset, but China now has a coherent mechanism -> service-life -> production-QA -> mobile-aging chain. DIR-HEALTH-AWARE-UTVC is therefore downgraded to RESERVE.
 7. Failure-aware completion confirms one surviving Primary collaboration thesis, but only in mechanism-resolved crisis taxonomy / lab ground truth; SJTU architecture-level dryout mitigation and the Russian mesh process paper further eliminate generic hardware/surface engineering as differentiation.
-8. Broad Russia superiority theses remain killed.
+8. Foundational Modeling remains RESERVE but is narrowed to exact benchmark / neutral-boundary / inverse-closure leverage; generic analytical modeling, nonlinear stability mathematics and fast UTVC design-space modeling are not Russian differentiation.
+9. Broad Russia superiority theses remain killed.
 
 ## Stop condition for this campaign
 
