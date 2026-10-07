@@ -8,6 +8,11 @@ maturity: ENGINEERING_PRODUCTION_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- LOOP_HEAT_PIPE
+- VC_HEAT_PIPE
+- MANUFACTURING_PROCESS
 
 Capability statement:
 NPO Lavochkin demonstrates complete-cycle two-phase thermal-control engineering, including heat-pipe/LHP design, manufacturing, testing and integration into flight thermal-control systems.
