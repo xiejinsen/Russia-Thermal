@@ -9,7 +9,9 @@ from __future__ import annotations
 import argparse
 import difflib
 import re
+import unicodedata
 from pathlib import Path
+from urllib.parse import parse_qsl, unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 GEN_HEADER = "DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS\n\n"
@@ -94,6 +96,176 @@ def as_list(v):
         return []
     return v if isinstance(v, list) else [v]
 
+
+TRACKING_QUERY_KEYS = {
+    "fbclid", "gclid", "mc_cid", "mc_eid", "ref", "source",
+}
+TRACKING_QUERY_PREFIXES = ("utm_",)
+
+
+def scalar_text(v) -> str:
+    if v is None:
+        return ""
+    if isinstance(v, list):
+        return " ".join(str(x).strip() for x in v if str(x).strip()).strip()
+    return str(v).strip()
+
+
+def normalize_doi(value):
+    s = unquote(scalar_text(value)).strip().lower()
+    if not s:
+        return None
+    s = re.sub(r"^doi\s*:\s*", "", s)
+    m = re.search(r"(10\.\d{4,9}/[^\s?#]+)", s, re.I)
+    if not m:
+        return None
+    doi = m.group(1).strip().rstrip(".,;:)]}>")
+    return doi.lower() if doi else None
+
+
+def normalize_patent_publication(value):
+    s = unquote(scalar_text(value)).upper()
+    if not s:
+        return None
+    s = re.sub(r"^(?:PATENT|PUB(?:LICATION)?)\s*:\s*", "", s)
+    m = re.search(
+        r"\b(?:WO|EP|US|CN|RU|DE|JP|KR|GB|FR|CA|AU|IN)\s*[-/]?\s*\d[\d./-]*\s*[A-Z]\d?\b",
+        s,
+    )
+    if not m:
+        return None
+    return re.sub(r"[^A-Z0-9]", "", m.group(0))
+
+
+def normalize_url_identity(value):
+    s = scalar_text(value).strip()
+    if not s:
+        return None
+    s = re.sub(r"^URL\s*:\s*", "", s, flags=re.I)
+    try:
+        parts = urlsplit(s)
+    except ValueError:
+        return None
+    if not parts.netloc:
+        return None
+    host = (parts.hostname or "").casefold()
+    if host.startswith("www."):
+        host = host[4:]
+    port = parts.port
+    if port and not ((parts.scheme == "http" and port == 80) or (parts.scheme == "https" and port == 443)):
+        host = f"{host}:{port}"
+    path = unquote(parts.path or "/")
+    path = re.sub(r"/+", "/", path)
+    if path != "/":
+        path = path.rstrip("/")
+    kept = []
+    for key, val in parse_qsl(parts.query, keep_blank_values=True):
+        k = key.casefold()
+        if k in TRACKING_QUERY_KEYS or any(k.startswith(prefix) for prefix in TRACKING_QUERY_PREFIXES):
+            continue
+        kept.append((k, val.strip()))
+    kept.sort()
+    query = "&".join(f"{k}={v}" if v else k for k, v in kept)
+    return f"{host}{path}" + (f"?{query}" if query else "")
+
+
+def normalize_title(value):
+    s = unicodedata.normalize("NFKC", scalar_text(value)).casefold()
+    s = s.replace("&", " and ")
+    s = "".join(ch if ch.isalnum() else " " for ch in s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def source_title_text(o):
+    return scalar_text(o.get("title") or o.get("source") or o.get("canonical_name"))
+
+
+def source_year(o):
+    s = scalar_text(o.get("published_year") or o.get("verified_at"))
+    m = re.search(r"\b(19|20)\d{2}\b", s)
+    return int(m.group(0)) if m else None
+
+
+def source_author_tokens(o):
+    raw = scalar_text(o.get("authors") or o.get("author") or o.get("inventors") or o.get("inventor"))
+    tokens = {
+        token
+        for token in normalize_title(raw).split()
+        if len(token) >= 4
+    }
+    return tokens
+
+
+def source_identity_fingerprints(o):
+    source_type = scalar_text(o.get("source_type")).upper()
+    source_key = scalar_text(o.get("source_key"))
+    primary_url = scalar_text(o.get("primary_url"))
+    fps = []
+
+    doi = normalize_doi(source_key) or normalize_doi(primary_url) or normalize_doi(o.get("doi"))
+    if doi:
+        fps.append(f"DOI:{doi}")
+
+    if source_type == "PATENT":
+        publication = normalize_patent_publication(source_key) or normalize_patent_publication(primary_url)
+        if publication:
+            fps.append(f"PATENT:{publication}")
+
+    key_url = normalize_url_identity(source_key)
+    primary_url_identity = normalize_url_identity(primary_url)
+    if key_url:
+        fps.append(f"URL:{key_url}")
+    elif source_type in {"OFFICIAL", "VENDOR", "DATASET", "OTHER"} and primary_url_identity:
+        fps.append(f"URL:{primary_url_identity}")
+
+    if not fps and source_key:
+        fps.append("KEY:" + re.sub(r"\s+", "", source_key).casefold())
+
+    return list(dict.fromkeys(fps))
+
+
+def marked_distinct(a, b):
+    return (
+        b["id"] in as_list(a.get("dedup_distinct_from"))
+        or a["id"] in as_list(b.get("dedup_distinct_from"))
+    )
+
+
+def source_dedup_warnings(db):
+    warnings = []
+    candidates = [
+        o for o in db["source"]
+        if scalar_text(o.get("source_type")).upper() in {"PAPER", "PATENT"}
+        and len(normalize_title(source_title_text(o))) >= 20
+    ]
+    for i, a in enumerate(candidates):
+        type_a = scalar_text(a.get("source_type")).upper()
+        title_a = normalize_title(source_title_text(a))
+        year_a = source_year(a)
+        authors_a = source_author_tokens(a)
+        fps_a = set(source_identity_fingerprints(a))
+        for b in candidates[i + 1:]:
+            if scalar_text(b.get("source_type")).upper() != type_a or marked_distinct(a, b):
+                continue
+            fps_b = set(source_identity_fingerprints(b))
+            if fps_a & fps_b:
+                continue
+            year_b = source_year(b)
+            if year_a and year_b and abs(year_a - year_b) > 1:
+                continue
+            title_b = normalize_title(source_title_text(b))
+            ratio = difflib.SequenceMatcher(None, title_a, title_b).ratio()
+            if ratio < (0.92 if type_a == "PAPER" else 0.95):
+                continue
+            authors_b = source_author_tokens(b)
+            if authors_a and authors_b and not (authors_a & authors_b) and ratio < 0.98:
+                continue
+            warnings.append(
+                f"{type_a} possible duplicate: {a['id']} <-> {b['id']} "
+                f"(title_similarity={ratio:.3f}, years={year_a}/{year_b})"
+            )
+    return warnings
+
 def validate(db):
     errors = []
     ids = {}
@@ -106,14 +278,41 @@ def validate(db):
             objects_by_id[o["id"]] = o
 
     source_keys = {}
+    source_fingerprints = {}
+    paper_title_year = {}
     for o in db["source"]:
         key = o.get("source_key")
-        if not key:
-            continue
-        if key in source_keys:
-            errors.append(f"duplicate source_key: {key} -> {source_keys[key]}, {o['id']}")
-        else:
-            source_keys[key] = o["id"]
+        if key:
+            raw_key = scalar_text(key)
+            if raw_key in source_keys:
+                errors.append(f"duplicate source_key: {raw_key} -> {source_keys[raw_key]}, {o['id']}")
+            else:
+                source_keys[raw_key] = o["id"]
+
+        for fingerprint in source_identity_fingerprints(o):
+            if fingerprint in source_fingerprints:
+                errors.append(
+                    f"duplicate canonical source identity: {fingerprint} -> "
+                    f"{source_fingerprints[fingerprint]}, {o['id']}"
+                )
+            else:
+                source_fingerprints[fingerprint] = o["id"]
+
+        if scalar_text(o.get("source_type")).upper() == "PAPER":
+            title = normalize_title(source_title_text(o))
+            year = source_year(o)
+            if title and year:
+                title_key = (title, year)
+                prior_id = paper_title_year.get(title_key)
+                if prior_id:
+                    prior = objects_by_id.get(prior_id)
+                    if prior and not marked_distinct(prior, o):
+                        errors.append(
+                            f"duplicate normalized paper title/year: {year} '{source_title_text(o)}' "
+                            f"-> {prior_id}, {o['id']}"
+                        )
+                else:
+                    paper_title_year[title_key] = o["id"]
 
     for kind, objs in db.items():
         for o in objs:
@@ -330,6 +529,11 @@ def main():
 
     db = load_all()
     errors = validate(db)
+    dedup_warnings = source_dedup_warnings(db)
+    if dedup_warnings:
+        print("SOURCE DEDUP REVIEW WARNINGS")
+        for warning in dedup_warnings:
+            print("WARNING:", warning)
     if errors:
         print("HEALTH CHECK FAILED")
         for e in errors:
