@@ -65,3 +65,37 @@ Default escalation path:
 Do not propagate changes upward merely because a new paper/source was found. Propagation requires semantic impact at that layer.
 
 This is the primary robustness rule for recurring monthly research.
+
+
+## Capability-Atlas research rule
+
+The next landscape-enrichment stage is Russia-first rather than comparator-first.
+
+Default sequence:
+1. discover / verify Actor;
+2. establish demonstrated Capability;
+3. classify the Capability by coarse family and optional topics;
+4. assess platform transfer separately;
+5. attach collaboration / output / influence evidence with explicit provenance;
+6. use China/global comparison only when testing strategic differentiation or responding to a leadership challenge.
+
+Do not force every Capability into a Direction.
+Atlas-worthy capability can remain background, reserve or context without becoming an investment thesis.
+
+### Software thermal-management scope guard
+
+Software/system thermal management is intentionally bounded.
+
+Research:
+- representative important Russian institutions / people / capabilities;
+- directly terminal-relevant software thermal work;
+- unusually strong collaboration or strategic evidence.
+
+Do not routinely expand into:
+- compiler optimization;
+- broad CPU scheduling research;
+- generic OS/runtime policy;
+- generic DVFS literature;
+- unrelated system optimization.
+
+Escalate software coverage only when it materially changes a leadership or collaboration decision.
