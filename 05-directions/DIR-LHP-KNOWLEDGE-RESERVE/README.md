@@ -22,7 +22,7 @@ Strategic use:
 expert/model/failure-analysis reserve plus active-capillary / orientation-tolerance watch; not a standalone device-investment thesis.
 
 strongest_baseline:
-China/current global miniaturized heat-pipe and LHP engineering plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
+China/current global miniaturized heat-pipe and LHP engineering, including ultra-thin dual-evaporator electronics cooling and explicit multi-evaporator capillary / cumulative-pressure-drop failure-boundary experiments, plus established electroosmotic electronics-cooling / micro-heat-pipe prior art.
 
 Promotion gate:
 a specific non-public control point from the Russian knowledge / active-capillary stack materially improves phone-scale topology or orientation robustness beyond strong domestic/global capability.
