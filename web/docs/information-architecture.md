@@ -396,3 +396,29 @@ Instead:
 - Scholar -> related Claims / Papers / Evidence via `person=`.
 
 Institution scope includes evidence connected through capabilities owned by child labs/teams in the same actor lineage, so parent-organization exploration does not silently omit lab-owned work.
+
+
+### Dense row Explorer rule
+
+Not every growing collection should become a spreadsheet table.
+
+Use three collection presentations by object shape:
+
+1. **Dense table** — Papers / Claims / Evidence.
+   Use when fields are regular, compact and column comparison is valuable.
+2. **Dense row Explorer** — Capabilities / Institutions.
+   Use when object cardinality is high but each record needs more semantic text than a single table row can comfortably carry.
+3. **Strategic card / registry row** — Directions / Priorities / low-cardinality decision objects.
+   Use when comparison requires recommendation, rationale or management context.
+
+Dense row Explorer default:
+- one object per full-width horizontal row;
+- compact single-line sticky filter toolbar;
+- 2–3 semantic information zones rather than rigid columns;
+- enough vertical room for 2–3 lines of explanatory text;
+- compact metadata / tags on the side;
+- direct object detail link plus filtered relationship-set links;
+- single-column stacking on narrow screens.
+
+Principle:
+**use density without flattening meaning: table for regular records, dense rows for text-rich records, strategic cards for small decision sets.**
