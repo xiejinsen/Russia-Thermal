@@ -38,14 +38,14 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       {vm.findings.length ? (
         <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
       ) : (
-        <p>No direct claim-reviewed findings have been normalized yet.</p>
+        <p>No claim-reviewed finding has been recorded for this patent yet.</p>
       )}
     </article>
 
     <article class="boundary-card">
       <span>LEGAL / TECHNICAL BOUNDARY</span>
       <h2>What this review does not establish</h2>
-      <p>{vm.boundary ?? 'No explicit boundary has been normalized yet.'}</p>
+      <p>{vm.boundary ?? 'No additional evidence boundary is currently recorded.'}</p>
     </article>
   </section>
 
@@ -119,7 +119,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
             <b>{institution.name}</b>
             <span>{institution.summary}</span>
           </a>
-        )) : <p class="empty">No normalized institution link.</p>}
+        )) : <p class="empty">No institution is currently linked through the evidence graph.</p>}
       </div>
 
       <div>
@@ -129,7 +129,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
             <b>{scholar.name}</b>
             <span>{scholar.affiliation}</span>
           </a>
-        )) : <p class="empty">No normalized scholar link.</p>}
+        )) : <p class="empty">No scholar is currently linked through the evidence graph.</p>}
       </div>
     </div>
   </section>
