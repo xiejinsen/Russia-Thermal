@@ -8,6 +8,11 @@ maturity: RESEARCH_PROGRAM
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: ACTIVE_HARDWARE
+capability_topics:
+- MICROFLUIDIC_COOLING
+- SENSING_DIAGNOSTICS
+- MANUFACTURING_PROCESS
 
 Capability statement:
 UUST demonstrates current experimental and numerical capability for structured micro/mini-channel heat exchangers, silicon microchannel processing and high-spatial-resolution thermal diagnostics relevant to electronics cooling.
