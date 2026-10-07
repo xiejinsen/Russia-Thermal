@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: collection Explorer patterns are unified; continue bounded design-system consolidation for shared detail-page hero, section and metadata primitives, then migrate the next decision-critical Tier-A Deep Read set without reopening broad discovery
+- next: collection-layout patterns are frozen with semantic Dense Row variants; continue bounded detail-page design-system consolidation, then migrate the next decision-critical Tier-A Deep Read set without reopening broad discovery
 
 ## Directions
 
