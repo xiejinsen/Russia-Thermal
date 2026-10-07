@@ -35,6 +35,10 @@ const { href, ariaLabel } = Astro.props;
 
   .main,.details,.meta,.actions{min-width:0}
   .main,.details,.meta{display:grid;gap:6px}
+  .details,.meta,.actions{
+    padding-left:14px;
+    border-left:1px solid #edf2f6;
+  }
   .actions{display:block}
 
   .action-grid{
@@ -87,7 +91,11 @@ const { href, ariaLabel } = Astro.props;
 
   @media(max-width:720px){
     .dense-object-row{grid-template-columns:1fr;gap:12px}
-    .meta,.actions{grid-row:auto}
+    .details,.meta,.actions{
+      grid-row:auto;
+      padding-left:0;
+      border-left:0;
+    }
     .action-grid{width:100%;max-width:none}
   }
 </style>
