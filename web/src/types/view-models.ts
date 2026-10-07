@@ -184,11 +184,31 @@ export interface ScholarPageVM {
   relevance?: string;
   officialUrl?: string;
   affiliation?: InstitutionCardVM;
+  collaboratorInstitutions: InstitutionCardVM[];
   capabilityContexts: Array<{
     institution: InstitutionCardVM;
     capability: CapabilityDetailVM;
     directions: DirectionCardVM[];
   }>;
+  directions: DirectionCardVM[];
+  claims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  evidence: EvidenceCardVM[];
+  authoredEvidence: EvidenceCardVM[];
+  evidenceStats: {
+    claimCount: number;
+    evidenceCount: number;
+    deepReadCount: number;
+    russiaSourceCount: number;
+    comparatorSourceCount: number;
+    paperCount: number;
+    patentCount: number;
+  };
 }
 
 export interface EvidenceCardVM {
