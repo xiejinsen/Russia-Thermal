@@ -2,12 +2,13 @@
 interface Props {
   href?: string;
   ariaLabel?: string;
+  layout?: 'content-heavy' | 'detail-heavy' | 'balanced';
 }
 
-const { href, ariaLabel } = Astro.props;
+const { href, ariaLabel, layout = 'balanced' } = Astro.props;
 ---
 
-<article class="dense-object-row" aria-label={ariaLabel}>
+<article class:list={['dense-object-row', layout]} aria-label={ariaLabel}>
   <div class="main"><slot name="main" /></div>
   <div class="details"><slot name="details" /></div>
   <div class="meta"><slot name="meta" /></div>
@@ -22,12 +23,23 @@ const { href, ariaLabel } = Astro.props;
 <style>
   .dense-object-row{
     display:grid;
-    grid-template-columns:minmax(24rem,2fr) minmax(13rem,.95fr) minmax(11rem,.72fr) 8.75rem;
     gap:14px;
     align-items:start;
     padding:15px 16px;
     border-bottom:1px solid #e2ebf2;
     background:var(--surface);
+  }
+
+  .dense-object-row.content-heavy{
+    grid-template-columns:minmax(19rem,1.55fr) minmax(14rem,1fr) minmax(10rem,.72fr) 8.75rem;
+  }
+
+  .dense-object-row.detail-heavy{
+    grid-template-columns:minmax(16rem,.95fr) minmax(22rem,1.6fr) minmax(10rem,.72fr) 8.75rem;
+  }
+
+  .dense-object-row.balanced{
+    grid-template-columns:minmax(17rem,1.12fr) minmax(17rem,1.12fr) minmax(11rem,.78fr) 8.75rem;
   }
 
   .dense-object-row:last-child{border-bottom:0}
@@ -81,8 +93,11 @@ const { href, ariaLabel } = Astro.props;
   }
 
   @media(max-width:1180px){
-    .dense-object-row{
-      grid-template-columns:minmax(20rem,1.35fr) minmax(16rem,1fr);
+    .dense-object-row,
+    .dense-object-row.content-heavy,
+    .dense-object-row.detail-heavy,
+    .dense-object-row.balanced{
+      grid-template-columns:minmax(20rem,1.2fr) minmax(16rem,1fr);
       gap:14px 18px;
     }
     .meta,.actions{grid-row:2}
@@ -90,7 +105,10 @@ const { href, ariaLabel } = Astro.props;
   }
 
   @media(max-width:720px){
-    .dense-object-row{grid-template-columns:1fr;gap:12px}
+    .dense-object-row,
+    .dense-object-row.content-heavy,
+    .dense-object-row.detail-heavy,
+    .dense-object-row.balanced{grid-template-columns:1fr;gap:12px}
     .details,.meta,.actions{
       grid-row:auto;
       padding-left:0;
