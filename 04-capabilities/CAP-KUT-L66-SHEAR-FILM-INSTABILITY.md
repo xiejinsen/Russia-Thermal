@@ -10,6 +10,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+capability_family: ENABLING
+capability_topics:
+- BOILING_DRYOUT_PHYSICS
+- STABILITY_ANALYSIS
+- MICROFLUIDIC_COOLING
 
 Capability statement:
 Kutateladze Lab 6.6 demonstrates a coherent shear-driven thin-film / interfacial-instability research capability with extreme-confinement experiments, dry-spot/rupture mechanism depth, and current electronics-cooling IP activity.
