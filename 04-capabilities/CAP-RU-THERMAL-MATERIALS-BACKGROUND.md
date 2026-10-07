@@ -8,6 +8,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM_HIGH
 target_fit: BACKGROUND
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- HEAT_SPREADER_GRAPHITE
+- TIM_INTERFACE
+- MATERIAL_CHARACTERIZATION
 
 Capability statement:
 Russia has credible thermal-material activity including polymer-BN composites and thin graphite/carbon conductive-cooling structures.
