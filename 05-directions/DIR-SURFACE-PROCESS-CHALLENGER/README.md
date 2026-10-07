@@ -24,7 +24,7 @@ candidate_capabilities:
 - CAP-TPU-LASER-WETTABILITY-PROCESS
 
 strongest_baseline:
-China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
+China target-system UTVC evidence now includes both optimized laser-treated wick and a direct thermal-oxidation / chemical-corrosion / laser-etching comparison in which non-laser treatment reaches the same maximum heat-transfer power and thermal oxidation is judged best overall; generic biphilic/wettability-pattern prior art remains crowded; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
 
 Residual differentiation:
 not generic laser processing; the retained opportunity is TPU-specific process execution plus a possible vacuum-stable confined routing/rewetting function after strong process gates.
@@ -33,10 +33,10 @@ Internal control boundary:
 phone VC architecture, thin copper geometry, sealed water/product-fluid process, contamination limits, final pattern specification, and foreground product IP remain internally owned.
 
 Next question:
-Can TPU's laser-only or wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond a strong generic reference?
+Can TPU's spatial wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond optimized uniform laser and strong non-laser superhydrophilic references?
 
 Promotion gate:
-a repeatable phone-compatible surface state that survives process/contamination gates and adds confined rewetting/dryout value.
+a repeatable phone-compatible spatial surface state that survives process/contamination gates and adds confined rewetting/dryout value beyond untreated, optimized uniform-laser and strong non-laser superhydrophilic controls.
 
 Kill / downgrade gate:
 kill or reframe if generic reference matches it, geometry exceeds the VC budget, or useful wetting contrast cannot survive sealed-process constraints.
