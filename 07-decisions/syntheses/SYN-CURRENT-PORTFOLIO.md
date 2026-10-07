@@ -7,7 +7,7 @@ Conclusion:
 Russia is a selective complement, not a broad smartphone-thermal leader.
 
 Implication:
-Prioritize one current primary collaboration thesis around Kutateladze mechanism-resolved failure ground truth, while retaining MPEI long-duration reliability knowledge as a conditional reserve and TPU spatial-wettability process execution as a bounded Stage-0 challenger. Strong China/global device, manufacturing, reliability-QA, modeling and smartphone-integration baselines remain mandatory comparators.
+Prioritize one current primary collaboration thesis around Kutateladze mechanism-resolved failure ground truth / crisis taxonomy only, while retaining MPEI long-duration reliability knowledge as a conditional reserve and TPU spatial-wettability process execution as a bounded Stage-0 challenger. Strong China/global device, manufacturing, reliability-QA, modeling and smartphone-integration baselines remain mandatory comparators.
 
 Coverage-closure refresh:
 The completed Russia anti-omission scan added current NovSU electroosmotic heat-pipe, UUST microchannel and MISIS solid-state thermal-material capabilities without changing P1/P2/P3. NovSU is absorbed into the existing LHP/active-capillary WATCH rather than promoted to a new Direction because established global electroosmotic electronics-cooling / micro-heat-pipe prior art removes principle-level uniqueness. UUST remains a supporting capability because stronger and more integrated current China microchannel baselines exist. MISIS confirms a real materials-side capability but does not reopen the killed broad Russian thermal-material advantage thesis. China Top-20 comparator closure further strengthens this pressure by canonically adding Fudan wafer-level embedded microfluidic packaging and BIT ultra-thin VC / microchannel / capillary capability.
@@ -15,7 +15,7 @@ The completed Russia anti-omission scan added current NovSU electroosmotic heat-
 Theory basis:
 - Collaboration value should come from an incremental mechanism, diagnostic, reliability, or process control point that survives comparator pressure; publication volume or historical prestige is insufficient.
 - Current public evidence refutes broad Russia-over-China superiority in generic dryout/rewetting, two-phase product reliability, and generic laser/biphilic phone-thermal capability.
-- Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate; MPEI multi-year capillary-state aging knowledge is now a reliability reserve conditional on data access / phone transfer; TPU remains a Stage-0 spatial-function challenger after strong generic-process comparator pressure.
+- Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate after full Tier-A pressure testing; generic Russian mesh/surface engineering and dryout-mitigation hardware are explicitly excluded from that thesis. MPEI multi-year capillary-state aging knowledge is now a reliability reserve conditional on data access / phone transfer; TPU remains a Stage-0 spatial-function challenger after strong generic-process comparator pressure.
 - Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
 - Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
 
@@ -51,6 +51,8 @@ supporting_priorities:
 
 key_evidence:
 - PAPER-RU-DRY-002
+- PAPER-RU-MESH-001
+- PAPER-CN-SJTU-DRY-001
 - PAPER-RU-AGE-001
 - PAPER-CN-AGE-001
 - PAPER-CN-AGE-002
