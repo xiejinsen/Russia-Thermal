@@ -86,7 +86,7 @@ const records=vm.records.map((claim)=>({
           data-person={claim.peopleIds.join('|')}
           data-search={claim.search}
         >
-          <DenseObjectRow href={href(claim.href)} ariaLabel={claim.proposition}>
+          <DenseObjectRow layout="content-heavy" href={href(claim.href)} ariaLabel={claim.proposition}>
             <div slot="main" class="claim-main">
               <div class="topline">
                 <span>{claim.id}</span>
