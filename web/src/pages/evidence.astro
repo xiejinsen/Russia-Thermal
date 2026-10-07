@@ -81,7 +81,7 @@ const records = vm.records.map((record) => {
       sticky
       compact
       total={records.length}
-      urlFilterKeys={['claim', 'capability']}
+      urlFilterKeys={['claim', 'capability', 'actor', 'person']}
       searchPlaceholder="Search source, author, institution, person, Claim, Capability…"
       filters={[
         {
@@ -149,6 +149,8 @@ const records = vm.records.map((record) => {
           data-supporting-claim={record.supportingClaims.map((claim)=>claim.id).join('|')}
           data-pressure-claim={record.contradictingClaims.map((claim)=>claim.id).join('|')}
           data-capability={record.linkedCapabilities.map((capability)=>capability.id).join('|')}
+          data-actor={record.institutionIds.join('|')}
+          data-person={record.peopleIds.join('|')}
           data-search={record.search}
         >
           <td class="source-cell">
