@@ -21,8 +21,9 @@ current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_C
 detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
+outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: prepare internal outreach-readiness artifacts for P1 Kutateladze (technical data/label brief) and P2 MPEI (long-duration data-availability questionnaire); do not prepare proactive TPU outreach
+next_action: management review of the prepared P1 Kutateladze technical brief and P2 MPEI data-availability questionnaire; decide whether external outreach is authorized; no contact has been executed
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
