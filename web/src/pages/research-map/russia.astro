@@ -64,7 +64,7 @@ const directions = [...new Map(
             <option value="P1">P1</option>
             <option value="P2">P2</option>
             <option value="P3">P3</option>
-            <option value="NONE">No P1/P2/P3 priority</option>
+            <option value="NONE">No active partner disposition</option>
           </select>
         </label>
         <div class="coverage-note">
@@ -274,7 +274,7 @@ const directions = [...new Map(
       const people = document.getElementById('detail-people');
       people.innerHTML = node.keyPeople.length
         ? node.keyPeople.map((person) => `<a href="${person.href}">${person.name}</a>`).join('')
-        : '<span class="empty-inline">No key-person relation in current normalized data.</span>';
+        : '<span class="empty-inline">No key person is currently linked in the research graph.</span>';
 
       const dirs = document.getElementById('detail-direction-list');
       dirs.innerHTML = node.directions.length
