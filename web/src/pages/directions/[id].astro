@@ -157,7 +157,7 @@ const laneTone =
         {vm.claims.slice(0, 10).map((claim) => <a href={href(claim.href)}>
           <div class="claim-state"><span>{claim.status}</span><small>{claim.confidence}</small></div>
           <b>{claim.proposition}</b>
-          <strong>Open →</strong>
+          <strong>Open detail →</strong>
         </a>)}
       </div>
       {vm.claims.length > 10 && <p class="more-note">Showing 10 representative claims. The summary metrics above use the complete set linked to this direction.</p>}
