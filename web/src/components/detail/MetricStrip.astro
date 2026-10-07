@@ -1,0 +1,58 @@
+---
+interface MetricItem {
+  label: string;
+  value: string | number;
+  note?: string;
+}
+interface Props { items: MetricItem[]; }
+const { items } = Astro.props;
+---
+<div class="metric-strip">
+  {items.map((item) => (
+    <div class="metric">
+      <span>{item.label}</span>
+      <strong>{item.value}</strong>
+      {item.note && <small>{item.note}</small>}
+    </div>
+  ))}
+</div>
+
+<style>
+  .metric-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(8.2rem,1fr));
+    border:1px solid var(--line);
+    border-radius:.85rem;
+    overflow:hidden;
+    background:var(--line);
+    gap:1px;
+    width:100%;
+  }
+  .metric{
+    min-width:0;
+    padding:.85rem .9rem;
+    background:rgb(248 252 255 / .97);
+  }
+  span{
+    display:block;
+    color:#668093;
+    font-size:.6rem;
+    font-weight:850;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  strong{
+    display:block;
+    margin-top:.18rem;
+    color:#163f5d;
+    font-size:1.05rem;
+    line-height:1.1;
+  }
+  small{
+    display:block;
+    margin-top:.28rem;
+    color:#708697;
+    font-size:.64rem;
+    line-height:1.35;
+  }
+</style>
