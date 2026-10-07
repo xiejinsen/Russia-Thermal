@@ -306,6 +306,7 @@ def capability_record(o: dict[str, Any], portfolio_disposition: str | None = Non
         "evidenceConfidence": nullable(o.get("evidence_confidence")) or "",
         "targetFit": nullable(o.get("target_fit")) or "",
         "keyPeopleIds": as_list(o.get("key_people")),
+        "collaboratingActorIds": as_list(o.get("collaborating_actors")),
         "claimIds": as_list(o.get("evidence_claims")),
         "technicalScope": as_list(o.get("technical_scope")),
         "transferBoundary": nullable(o.get("transfer_boundary")),
@@ -505,6 +506,9 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for pid in r["keyPeopleIds"]:
             if pid not in actor_ids:
                 errors.append(f"{r['id']}: unresolved keyPeopleId {pid}")
+        for aid in r.get("collaboratingActorIds", []):
+            if aid not in actor_ids:
+                errors.append(f"{r['id']}: unresolved collaboratingActorId {aid}")
         for cid in r["claimIds"]:
             if cid not in claim_ids:
                 errors.append(f"{r['id']}: unresolved claimId {cid}")
