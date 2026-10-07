@@ -11,6 +11,7 @@ supporting_sources:
 - PAPER-RU-DRY-002
 - PAPER-RU-DRY-003
 - PAPER-RU-MESH-001
+- PATENT-RU2793671C2
 
 Boundary:
 these sources strengthen lineage/mechanism/process capability but do not establish phone-scale device superiority.
