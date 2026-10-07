@@ -42,6 +42,7 @@ export interface DirectionCardVM {
   ourControlBoundary?: string;
   nextQuestion?: string;
   nextGate?: string;
+  killGate?: string;
 }
 
 export interface OverviewStatsVM {
@@ -153,8 +154,26 @@ export interface InstitutionPageVM {
   parent?: InstitutionCardVM;
   children: InstitutionCardVM[];
   people: ScholarCardVM[];
+  collaborators: InstitutionCardVM[];
   capabilities: CapabilityDetailVM[];
   directions: DirectionCardVM[];
+  claims: Array<{
+    id: string;
+    proposition: string;
+    confidence: string;
+    status: string;
+    href: string;
+  }>;
+  evidence: EvidenceCardVM[];
+  evidenceStats: {
+    claimCount: number;
+    evidenceCount: number;
+    deepReadCount: number;
+    russiaSourceCount: number;
+    comparatorSourceCount: number;
+    paperCount: number;
+    patentCount: number;
+  };
 }
 
 export interface ScholarPageVM {
@@ -351,6 +370,15 @@ export interface DirectionPageVM {
     href: string;
   }>;
   evidence: EvidenceCardVM[];
+  evidenceStats: {
+    claimCount: number;
+    evidenceCount: number;
+    deepReadCount: number;
+    russiaSourceCount: number;
+    comparatorSourceCount: number;
+    paperCount: number;
+    patentCount: number;
+  };
   decisions: Array<{
     id: string;
     date?: string;
