@@ -126,6 +126,7 @@ const records = vm.records.map((record) => {
           data-search={record.search}
         >
           <DenseObjectRow
+            layout="detail-heavy"
             href={record.isPaper ? href(`/papers/${record.id}`) : undefined}
             ariaLabel={record.title}
           >
