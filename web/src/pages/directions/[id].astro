@@ -2,6 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import ExplorerLinkStrip from '../../components/ExplorerLinkStrip.astro';
+import DetailHero from '../../components/detail/DetailHero.astro';
+import MetricStrip from '../../components/detail/MetricStrip.astro';
+import EvidencePressure from '../../components/detail/EvidencePressure.astro';
+import RelationPath from '../../components/detail/RelationPath.astro';
 import { buildDirectionPageVM, directionIds } from '../../view-models/builders';
 
 export function getStaticPaths() {
@@ -14,111 +18,263 @@ if (!vm) throw new Error(`Unknown direction: ${id}`);
 
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
+const laneTone =
+  vm.direction.lane.tone === 'critical' ? 'critical' :
+  vm.direction.lane.tone === 'warning' ? 'warning' :
+  vm.direction.lane.tone === 'positive' ? 'positive' : 'neutral';
 ---
+
 <BaseLayout title={`Russia-Thermal — ${vm.direction.title}`} description={vm.direction.collaborationFocus ?? vm.direction.problem}>
   <SiteHeader slot="header" />
 
-  <section class="direction-hero">
-    <div>
-      <p class="eyebrow">Direction detail · {vm.direction.lane.label}</p>
-      <h1>{vm.direction.title}</h1>
-      <div class="recommendation">{vm.direction.recommendation}</div>
-      {vm.direction.collaborationFocus && <p class="lead">{vm.direction.collaborationFocus}</p>}
+  <DetailHero
+    eyebrow={`Direction detail · ${vm.direction.role}`}
+    title={vm.direction.title}
+    summary={vm.direction.collaborationFocus ?? vm.direction.problem}
+    meta={[
+      `Phone maturity · ${vm.direction.phoneTransferMaturity}`,
+      `Differentiation · ${vm.direction.differentiationConfidence}`
+    ]}
+    badge={vm.direction.lane.label}
+    badgeTone={laneTone}
+  >
+    <div slot="actions">
+      <ExplorerLinkStrip
+        links={[
+          { label: 'Claims', href: href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`) },
+          { label: 'Papers', href: href(`/papers?direction=${encodeURIComponent(vm.direction.id)}`) },
+          { label: 'All Evidence', href: href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`), primary: true }
+        ]}
+      />
     </div>
-    <aside class="signal">
-      <div><span>PHONE MATURITY</span><b>{vm.direction.phoneTransferMaturity}</b></div>
-      <div><span>DIFFERENTIATION</span><b>{vm.direction.differentiationConfidence}</b></div>
-      <div><span>CLAIMS</span><b>{vm.claims.length}</b></div>
-      <div><span>EVIDENCE</span><b>{vm.evidence.length}</b></div>
-    </aside>
-  </section>
-
-  <section class="pyramid">
-    {vm.direction.problem && <article><span>01 · PROBLEM</span><h2>What problem are we trying to solve?</h2><p>{vm.direction.problem}</p></article>}
-    {vm.strongestBaseline && <article class="china"><span>02 · CHINA / GLOBAL BASELINE</span><h2>What is the strongest baseline we must beat?</h2><p>{vm.strongestBaseline}</p></article>}
-    {vm.direction.residualDifferentiation && <article class="russia"><span>03 · RUSSIA RESIDUAL</span><h2>Where Russian value may still survive</h2><p>{vm.direction.residualDifferentiation}</p></article>}
-    {vm.direction.ourControlBoundary && <article><span>04 · OUR CONTROL BOUNDARY</span><h2>What remains under internal control?</h2><p>{vm.direction.ourControlBoundary}</p></article>}
-    {vm.direction.nextQuestion && <article class="gate"><span>05 · NEXT QUESTION</span><h2>What must be answered next?</h2><p>{vm.direction.nextQuestion}</p></article>}
-    {vm.direction.nextGate && <article class="gate"><span>06 · PROMOTION GATE</span><h2>What evidence would justify promotion?</h2><p>{vm.direction.nextGate}</p></article>}
-  </section>
-
-  <section class="section">
-    <div class="section-head"><div><span>ACTORS</span><h2>Institutions and scholars behind this direction</h2></div><p>These relations come from Capability ownership and key-person links.</p></div>
-    <div class="actor-grid">
-      <div class="actor-column">
-        <h3>Institutions / labs</h3>
-        {vm.institutions.map((inst)=><a href={href(inst.href ?? `/institutions/${inst.id}`)}><b>{inst.name}</b><span>{inst.summary}</span></a>)}
-      </div>
-      <div class="actor-column">
-        <h3>Key scholars</h3>
-        {vm.scholars.map((scholar)=><a href={href(scholar.href ?? `/scholars/${scholar.id}`)}><b>{scholar.name}</b><span>{scholar.affiliation}</span></a>)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head"><div><span>CAPABILITIES</span><h2>External technical abilities linked to this direction</h2></div></div>
-    <div class="cap-grid">
-      {vm.capabilities.map((cap)=><article><a class="cap-title" href={href(`/capabilities/${cap.id}`)}>{cap.statement}</a><dl><div><dt>Maturity</dt><dd>{cap.maturity}</dd></div><div><dt>Evidence</dt><dd>{cap.evidenceConfidence}</dd></div><div><dt>Target fit</dt><dd>{cap.targetFit}</dd></div></dl></article>)}
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head"><div><span>CLAIMS</span><h2>Claims that support or pressure this direction</h2></div><ExplorerLinkStrip
-      align="end"
-      links={[
-        { label: 'View all Claims →', href: href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`), primary: true }
+    <MetricStrip
+      slot="aside"
+      items={[
+        { label: 'Sources', value: vm.evidenceStats.evidenceCount },
+        { label: 'Deep Reads', value: vm.evidenceStats.deepReadCount },
+        { label: 'Claims', value: vm.evidenceStats.claimCount },
+        { label: 'Capabilities', value: vm.capabilities.length }
       ]}
-    /></div>
-    <div class="claim-list">
-      {vm.claims.slice(0, 8).map((claim)=><a href={href(claim.href)}><div><span>{claim.status} · {claim.confidence}</span><b>{claim.proposition}</b></div><strong>Open claim →</strong></a>)}
-    </div>
-    {vm.claims.length > 8 && <p class="representative-note">Showing 8 representative Claims. Use “View all Claims” for the complete Direction-linked set.</p>}
-  </section>
+    />
+  </DetailHero>
 
-  <section class="section">
-    <div class="section-head"><div><span>EVIDENCE</span><h2>Primary evidence behind the direction</h2></div><ExplorerLinkStrip
-      align="end"
-      links={[
-        { label: 'View all Evidence →', href: href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`), primary: true },
-        { label: 'Papers only →', href: href(`/papers?direction=${encodeURIComponent(vm.direction.id)}`) }
+  <div class="detail-stack">
+    <EvidencePressure
+      russia={vm.evidenceStats.russiaSourceCount}
+      comparator={vm.evidenceStats.comparatorSourceCount}
+      deepReads={vm.evidenceStats.deepReadCount}
+      total={vm.evidenceStats.evidenceCount}
+      papers={vm.evidenceStats.paperCount}
+      patents={vm.evidenceStats.patentCount}
+      baseline={vm.strongestBaseline}
+      residual={vm.direction.residualDifferentiation}
+    />
+
+    <RelationPath
+      nodes={[
+        { label: 'Direction', value: vm.direction.lane.label },
+        { label: 'Capabilities', value: vm.capabilities.length },
+        { label: 'Scholars', value: vm.scholars.length },
+        { label: 'Claims', value: vm.evidenceStats.claimCount, href: href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`) },
+        { label: 'Evidence', value: vm.evidenceStats.evidenceCount, href: href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`) },
+        { label: 'Decisions', value: vm.decisions.length }
       ]}
-    /></div>
-    <div class="evidence-list">
-      {vm.evidence.slice(0, 6).map((item)=><article>
-        <div><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.venue ? ` · ${item.venue}` : ''}</span><h3>{item.title}</h3>{item.findings[0] && <p>{item.findings[0]}</p>}</div>
-        <div class="evidence-actions">
-          {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}
-          <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a>
+    />
+
+    <section class="thesis-grid">
+      {vm.direction.problem && <article>
+        <span>Problem</span>
+        <h2>What problem is worth solving?</h2>
+        <p>{vm.direction.problem}</p>
+      </article>}
+      {vm.strongestBaseline && <article class="baseline">
+        <span>China / global baseline</span>
+        <h2>What must the Russian hypothesis beat?</h2>
+        <p>{vm.strongestBaseline}</p>
+      </article>}
+      {vm.direction.residualDifferentiation && <article class="residual">
+        <span>Surviving Russia residual</span>
+        <h2>What is still plausibly differentiated?</h2>
+        <p>{vm.direction.residualDifferentiation}</p>
+      </article>}
+      {vm.direction.ourControlBoundary && <article>
+        <span>Internal control boundary</span>
+        <h2>What must remain internally owned?</h2>
+        <p>{vm.direction.ourControlBoundary}</p>
+      </article>}
+    </section>
+
+    <section class="gate-panel">
+      <div>
+        <p class="section-kicker">Decision gate</p>
+        <h2>The direction advances only if evidence changes the decision</h2>
+      </div>
+      <div class="gate-grid">
+        {vm.direction.nextQuestion && <article><span>Next question</span><p>{vm.direction.nextQuestion}</p></article>}
+        {vm.direction.nextGate && <article class="promote"><span>Promotion gate</span><p>{vm.direction.nextGate}</p></article>}
+        {vm.direction.killGate && <article class="kill"><span>Kill / downgrade gate</span><p>{vm.direction.killGate}</p></article>}
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel-head">
+        <div><p class="section-kicker">Actors + capability</p><h2>Who owns the mechanism and what can they actually do?</h2></div>
+        <span>{vm.institutions.length} institutions · {vm.scholars.length} scholars</span>
+      </header>
+      <div class="actor-cap-grid">
+        <div class="actor-side">
+          <h3>Institutions / labs</h3>
+          {vm.institutions.map((inst) => <a href={href(inst.href ?? `/institutions/${inst.id}`)}>
+            <div><b>{inst.name}</b><span>{inst.kindLabel} · {inst.country}</span></div>
+            <p>{inst.summary}</p>
+          </a>)}
+          {vm.scholars.length > 0 && <div class="scholar-strip">
+            <h3>Key scholars</h3>
+            <div>{vm.scholars.map((scholar) => <a href={href(scholar.href ?? `/scholars/${scholar.id}`)}>{scholar.name}</a>)}</div>
+          </div>}
         </div>
-      </article>)}
-    </div>
-    {vm.evidence.length > 6 && <p class="representative-note">Showing 6 representative sources. Use “View all Evidence” for the complete Direction-linked source set.</p>}
-  </section>
+        <div class="capability-side">
+          <h3>Linked capabilities</h3>
+          {vm.capabilities.map((capability) => <article>
+            <a href={href(`/capabilities/${capability.id}`)}>{capability.statement}</a>
+            <div class="cap-meta">
+              <span>Maturity · {capability.maturity}</span>
+              <span>Evidence · {capability.evidenceConfidence}</span>
+              <span>Target fit · {capability.targetFit}</span>
+            </div>
+            {capability.transferBoundary && <p>{capability.transferBoundary}</p>}
+          </article>)}
+        </div>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="section-head"><div><span>DECISION HISTORY</span><h2>How this direction changed state</h2></div></div>
-    {vm.decisions.length ? <div class="decision-list">
-      {vm.decisions.map((event)=><article><div><span>{event.date ?? 'undated'} · {event.eventType.label}</span><b>{event.previousState ?? '—'} → {event.newState}</b></div>{event.rationale && <p>{event.rationale}</p>}{event.reopenCondition && <small>Reopen: {event.reopenCondition}</small>}</article>)}
-    </div> : <p class="empty">No Direction-specific decision event is currently recorded.</p>}
-  </section>
+    <section class="panel">
+      <header class="panel-head">
+        <div><p class="section-kicker">Claims</p><h2>Claims that support, constrain or pressure the direction</h2></div>
+        <a href={href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`)}>All {vm.claims.length} claims →</a>
+      </header>
+      <div class="claim-list">
+        {vm.claims.slice(0, 10).map((claim) => <a href={href(claim.href)}>
+          <div class="claim-state"><span>{claim.status}</span><small>{claim.confidence}</small></div>
+          <b>{claim.proposition}</b>
+          <strong>Open →</strong>
+        </a>)}
+      </div>
+      {vm.claims.length > 10 && <p class="more-note">Showing 10 representative claims. The evidence counts above use the complete graph-linked set.</p>}
+    </section>
 
-  <style>
-    .direction-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.55fr);gap:20px;padding:24px;border:1px solid #cfe1ee;border-radius:18px;background:#fff;box-shadow:0 12px 34px rgba(42,96,140,.07)}
-    .direction-hero h1{max-width:900px;margin:7px 0 12px;font-size:26px;line-height:1.18;letter-spacing:-.04em}
-    .recommendation{display:inline-block;padding:7px 10px;border-radius:8px;background:#eef8f4;color:#087a66;font-size:12px;font-weight:850}
-    .lead{max-width:900px;color:#486478;font-size:14px;line-height:1.6}
-    .signal{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid #dbe8f1;border-radius:12px;overflow:hidden;background:#dbe8f1}
-    .signal div{display:grid;gap:4px;padding:15px;background:#f5faff}.signal span{font-size:9px;color:#657f92;font-weight:850}.signal b{font-size:15px;color:#16496d}
-    .pyramid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
-    .pyramid article{padding:20px;border:1px solid #d4e4ef;border-radius:14px;background:#fff}.pyramid .china{background:#edf6ff}.pyramid .russia{background:#eef9f6}.pyramid .gate{border-left:4px solid #5ba4dd}
-    .pyramid span,.section-head span{font-size:10px;font-weight:850;letter-spacing:.08em;color:#0b67b2}.pyramid h2{font-size:17px;margin:6px 0 9px}.pyramid p{margin:0;color:#496578;line-height:1.62;font-size:13px}
-    .section{margin-top:20px;border:1px solid #cfe1ee;border-radius:16px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:30px;padding:18px 20px;border-bottom:1px solid #dce8f1;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:19px}.section-head p{max-width:480px;margin:0;color:#60798c;font-size:12px}
-    .actor-grid{display:grid;grid-template-columns:1fr 1fr}.actor-column{padding:18px}.actor-column:first-child{border-right:1px solid #e0ebf3}.actor-column h3{font-size:13px;color:#526d82}.actor-column a{display:grid;gap:4px;padding:12px 0;border-top:1px solid #edf2f6;text-decoration:none}.actor-column a b{font-size:13px}.actor-column a span{color:#637c8f;font-size:11px;line-height:1.45}
-    .cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}.cap-grid article{padding:16px;border:1px solid #d9e7f1;border-radius:11px;background:white}.cap-grid .cap-title{display:block;color:inherit;font-size:13px;font-weight:800;line-height:1.5;text-decoration:none}.cap-grid .cap-title:hover,.cap-grid .cap-title:focus-visible{color:#0b67b2;text-decoration:underline;text-underline-offset:.16em}.cap-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0 0}.cap-grid dt{font-size:9px;color:#6b8192;text-transform:uppercase}.cap-grid dd{margin:2px 0 0;font-size:11px;font-weight:800}
-    .claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 20px;border-bottom:1px solid #e4edf4;text-decoration:none}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:#0b67b2;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.45}.claim-list strong{white-space:nowrap;font-size:11px;color:#0b67b2}
-    .evidence-list article{display:flex;justify-content:space-between;gap:24px;padding:17px 20px;border-bottom:1px solid #e4edf4}.evidence-list span{font-size:9px;color:#687f90}.evidence-list h3{margin:5px 0 7px;font-size:14px}.evidence-list p{max-width:900px;margin:0;color:#5b7487;font-size:12px;line-height:1.55}.evidence-list a{white-space:nowrap;font-size:11px;color:#0b67b2;font-weight:800}.evidence-actions{display:flex;gap:12px;align-items:flex-start}
-    .representative-note{margin:0;padding:10px 20px 14px;color:#6b8191;font-size:11px}.decision-list article{display:grid;grid-template-columns:minmax(260px,.7fr) 1.3fr;gap:22px;padding:16px 20px;border-bottom:1px solid #e4edf4}.decision-list article>div{display:grid;gap:4px}.decision-list span{font-size:9px;color:#657e91}.decision-list b{font-size:12px}.decision-list p{margin:0;color:#526d80;font-size:12px;line-height:1.55}.decision-list small{grid-column:2;color:#7a6a53}.empty{padding:18px 20px;color:#6b8191}
-    @media(max-width:800px){.direction-hero,.pyramid,.actor-grid,.cap-grid{grid-template-columns:1fr}.actor-column:first-child{border-right:0;border-bottom:1px solid #e0ebf3}.section-head,.evidence-list article{flex-direction:column}.decision-list article{grid-template-columns:1fr}.decision-list small{grid-column:1}}
-  </style>
+    <section class="panel">
+      <header class="panel-head">
+        <div><p class="section-kicker">Evidence</p><h2>Primary sources behind the surviving thesis</h2></div>
+        <a href={href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`)}>All {vm.evidence.length} sources →</a>
+      </header>
+      <div class="evidence-list">
+        {vm.evidence.slice(0, 12).map((item) => <article>
+          <div class="source-meta">
+            <span>{item.year ?? 'n.d.'}</span>
+            <span>{item.sourceType}</span>
+            {item.countryContext && <span>{item.countryContext}</span>}
+            {item.deepReadLevel && <span class="deep">{item.deepReadLevel}</span>}
+          </div>
+          <div class="source-copy">
+            <h3>{item.title}</h3>
+            {item.findings[0] && <p>{item.findings[0]}</p>}
+            <small>{item.supportingClaims.length} supporting · {item.contradictingClaims.length} pressure claims</small>
+          </div>
+          <div class="source-actions">
+            {item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Deep detail →</a>}
+            <a href={item.primaryUrl} target="_blank" rel="noreferrer">Original ↗</a>
+          </div>
+        </article>)}
+      </div>
+      {vm.evidence.length > 12 && <p class="more-note">Showing 12 representative sources. Evidence Pressure uses the complete reachable source set.</p>}
+    </section>
+
+    <section class="panel">
+      <header class="panel-head">
+        <div><p class="section-kicker">Decision history</p><h2>How the direction changed after comparator pressure</h2></div>
+        <span>{vm.decisions.length} recorded events</span>
+      </header>
+      {vm.decisions.length > 0 ? <div class="decision-list">
+        {vm.decisions.map((event) => <article>
+          <div class="decision-state">
+            <span>{event.date ?? 'undated'} · {event.eventType.label}</span>
+            <b>{event.previousState ?? '—'} → {event.newState}</b>
+          </div>
+          <p>{event.rationale ?? 'No concise rationale is normalized for this event.'}</p>
+          {event.reopenCondition && <small>Reopen only if: {event.reopenCondition}</small>}
+        </article>)}
+      </div> : <p class="empty">No Direction-specific decision event is currently recorded.</p>}
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .detail-stack{display:grid;gap:1rem;margin-top:1rem}
+  .section-kicker{margin:0;color:var(--accent-vivid);font-size:.62rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+  .thesis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .thesis-grid article,.gate-panel,.panel{border:1px solid var(--line);border-radius:1rem;background:var(--surface)}
+  .thesis-grid article{padding:1.1rem;border-top:3px solid #8ca9bc}
+  .thesis-grid article.baseline{border-top-color:#5d98c4;background:#f5faff}
+  .thesis-grid article.residual{border-top-color:#5b9b82;background:#f5fbf8}
+  .thesis-grid span,.gate-grid span{font-size:.61rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#667f92}
+  .thesis-grid h2,.gate-panel h2{margin:.35rem 0 0;font-size:1.05rem;letter-spacing:-.025em}
+  .thesis-grid p,.gate-grid p{margin:.55rem 0 0;color:var(--text-muted);font-size:.76rem;line-height:1.65}
+  .gate-panel{padding:1.1rem}
+  .gate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+  .gate-grid article{padding:.85rem;border:1px solid var(--line);border-radius:.7rem;background:#fafcfe}
+  .gate-grid .promote{border-color:#c8e4d7;background:#f4faf7}
+  .gate-grid .promote span{color:var(--positive)}
+  .gate-grid .kill{border-color:#ead0d0;background:#fff8f8}
+  .gate-grid .kill span{color:var(--critical)}
+  .panel{overflow:hidden}
+  .panel-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;border-bottom:1px solid var(--line);background:#f9fcfe}
+  .panel-head h2{margin:.28rem 0 0;font-size:1.1rem;letter-spacing:-.03em}
+  .panel-head>span,.panel-head>a{font-size:.67rem;color:#6c8394;font-weight:800;text-decoration:none}
+  .actor-cap-grid{display:grid;grid-template-columns:minmax(18rem,.7fr) minmax(0,1.3fr)}
+  .actor-side,.capability-side{padding:1rem}
+  .actor-side{border-right:1px solid var(--line)}
+  .actor-side>h3,.capability-side>h3,.scholar-strip h3{margin:0 0 .45rem;font-size:.72rem;color:#5e7486}
+  .actor-side>a{display:grid;grid-template-columns:minmax(10rem,.55fr) minmax(0,1fr);gap:.8rem;padding:.75rem 0;border-top:1px solid #e8eff4;text-decoration:none}
+  .actor-side>a div{display:grid;gap:.12rem}
+  .actor-side>a b{font-size:.76rem}
+  .actor-side>a span{font-size:.6rem;color:#708798}
+  .actor-side>a p{margin:0;color:#61798b;font-size:.68rem;line-height:1.5}
+  .scholar-strip{margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--line)}
+  .scholar-strip>div{display:flex;gap:.38rem;flex-wrap:wrap}
+  .scholar-strip a{padding:.33rem .45rem;border-radius:.42rem;background:#edf5fa;color:#2b5672;font-size:.65rem;font-weight:750;text-decoration:none}
+  .capability-side article{padding:.85rem 0;border-top:1px solid #e8eff4}
+  .capability-side article>a{font-size:.78rem;font-weight:850;line-height:1.45;color:#153f5e;text-decoration:none}
+  .cap-meta{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.4rem}
+  .cap-meta span{padding:.25rem .36rem;border-radius:.35rem;background:#f0f5f8;color:#647d90;font-size:.58rem}
+  .capability-side article p{margin:.45rem 0 0;color:#708596;font-size:.66rem;line-height:1.5}
+  .claim-list a{display:grid;grid-template-columns:8.5rem minmax(0,1fr) auto;gap:1rem;align-items:start;padding:.85rem 1.1rem;border-bottom:1px solid #e8eff4;text-decoration:none}
+  .claim-state{display:grid;gap:.12rem}
+  .claim-state span{font-size:.62rem;font-weight:850;color:#285f84}
+  .claim-state small{font-size:.58rem;color:#7890a0}
+  .claim-list b{font-size:.76rem;line-height:1.5}
+  .claim-list strong{font-size:.65rem;color:#0b67b2;white-space:nowrap}
+  .evidence-list article{display:grid;grid-template-columns:10rem minmax(0,1fr) auto;gap:1rem;padding:.9rem 1.1rem;border-bottom:1px solid #e8eff4}
+  .source-meta{display:flex;align-content:start;gap:.3rem;flex-wrap:wrap}
+  .source-meta span{height:max-content;padding:.23rem .35rem;border-radius:.35rem;background:#f1f6f9;color:#667f91;font-size:.58rem;font-weight:800}
+  .source-meta .deep{background:#e8f4ef;color:var(--positive)}
+  .source-copy h3{margin:0;font-size:.78rem;line-height:1.45}
+  .source-copy p{margin:.32rem 0 0;color:#61798b;font-size:.68rem;line-height:1.5}
+  .source-copy small{display:block;margin-top:.35rem;color:#8294a1;font-size:.6rem}
+  .source-actions{display:grid;gap:.34rem;justify-items:end}
+  .source-actions a{font-size:.65rem;color:#0b67b2;font-weight:800;text-decoration:none;white-space:nowrap}
+  .decision-list article{display:grid;grid-template-columns:minmax(14rem,.55fr) minmax(0,1.1fr);gap:1rem;padding:.9rem 1.1rem;border-bottom:1px solid #e8eff4}
+  .decision-state{display:grid;gap:.18rem}
+  .decision-state span{font-size:.6rem;color:#6b8293;text-transform:uppercase}
+  .decision-state b{font-size:.72rem}
+  .decision-list p{margin:0;color:#5e7688;font-size:.7rem;line-height:1.55}
+  .decision-list small{grid-column:2;color:#8a6e4f;font-size:.63rem}
+  .more-note,.empty{margin:0;padding:.7rem 1.1rem;color:#758a9a;font-size:.65rem}
+  @media(max-width:860px){
+    .thesis-grid,.gate-grid,.actor-cap-grid{grid-template-columns:1fr}
+    .actor-side{border-right:0;border-bottom:1px solid var(--line)}
+    .claim-list a,.evidence-list article,.decision-list article{grid-template-columns:1fr}
+    .source-actions{justify-items:start}
+    .decision-list small{grid-column:1}
+  }
+</style>
