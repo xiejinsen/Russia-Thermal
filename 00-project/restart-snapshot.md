@@ -62,8 +62,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: STAGE0_CHALLENGER
 - phone_maturity: LOW_MEDIUM
 - residual_or_use: not generic laser processing; the retained opportunity is TPU-specific process execution plus a possible vacuum-stable confined routing/rewetting function after strong process gates.
-- strongest_baseline: China/global laser-treated UTVC wick and generic biphilic/wettability-pattern prior art; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
-- next_question_or_gate: Can TPU's laser-only or wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond a strong generic reference?
+- strongest_baseline: China target-system UTVC evidence now includes both optimized laser-treated wick and a direct thermal-oxidation / chemical-corrosion / laser-etching comparison in which non-laser treatment reaches the same maximum heat-transfer power and thermal oxidation is judged best overall; generic biphilic/wettability-pattern prior art remains crowded; BIT adds a current ultra-thin VC / porous-capillary characterization baseline.
+- next_question_or_gate: Can TPU's spatial wettability-contrast branch survive phone-relevant copper thickness and VC process exposure and deliver confined rewetting/dryout value beyond optimized uniform laser and strong non-laser superhydrophilic references?
 
 ## Mandatory guardrails
 - Broad Russia superiority claims remain killed unless explicitly reopened by a Decision Event.
