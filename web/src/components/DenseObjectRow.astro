@@ -12,16 +12,18 @@ const { href, ariaLabel } = Astro.props;
   <div class="details"><slot name="details" /></div>
   <div class="meta"><slot name="meta" /></div>
   <div class="actions">
-    <slot name="actions" />
-    {href && <a class="open-link" href={href}>Open →</a>}
+    <div class="action-grid">
+      <slot name="actions" />
+      {href && <a class="open-link" href={href}>Open →</a>}
+    </div>
   </div>
 </article>
 
 <style>
   .dense-object-row{
     display:grid;
-    grid-template-columns:minmax(18rem,1.25fr) minmax(20rem,1.45fr) minmax(13rem,.8fr) auto;
-    gap:18px;
+    grid-template-columns:minmax(24rem,2fr) minmax(13rem,.95fr) minmax(11rem,.72fr) 8.75rem;
+    gap:14px;
     align-items:start;
     padding:15px 16px;
     border-bottom:1px solid #e2ebf2;
@@ -33,7 +35,28 @@ const { href, ariaLabel } = Astro.props;
 
   .main,.details,.meta,.actions{min-width:0}
   .main,.details,.meta{display:grid;gap:6px}
-  .actions{display:flex;align-items:flex-start;justify-content:flex-end;gap:6px;flex-wrap:wrap}
+  .actions{display:block}
+
+  .action-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:5px;
+    width:8.75rem;
+  }
+
+  .action-grid :global(.row-actions){
+    display:contents !important;
+  }
+
+  .action-grid :global(a){
+    box-sizing:border-box;
+    width:100%;
+    min-width:0;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
 
   .open-link{
     padding:6px 8px;
@@ -53,14 +76,18 @@ const { href, ariaLabel } = Astro.props;
     text-underline-offset:.15em;
   }
 
-  @media(max-width:1100px){
-    .dense-object-row{grid-template-columns:minmax(18rem,1fr) minmax(18rem,1fr)}
+  @media(max-width:1180px){
+    .dense-object-row{
+      grid-template-columns:minmax(20rem,1.35fr) minmax(16rem,1fr);
+      gap:14px 18px;
+    }
     .meta,.actions{grid-row:2}
-    .actions{justify-content:flex-start}
+    .action-grid{width:100%;max-width:18rem}
   }
 
   @media(max-width:720px){
     .dense-object-row{grid-template-columns:1fr;gap:12px}
     .meta,.actions{grid-row:auto}
+    .action-grid{width:100%;max-width:none}
   }
 </style>
