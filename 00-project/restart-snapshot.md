@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
-- next: prepare internal outreach-readiness artifacts for P1 Kutateladze (technical data/label brief) and P2 MPEI (long-duration data-availability questionnaire); do not prepare proactive TPU outreach
+- next: management review of the prepared P1 Kutateladze technical brief and P2 MPEI data-availability questionnaire; decide whether external outreach is authorized; no contact has been executed
 
 ## Directions
 
