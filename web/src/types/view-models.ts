@@ -374,6 +374,7 @@ export interface ClaimExplorerVM {
     contradictingCount: number;
     directionCount: number;
     directionIds: string[];
+    capabilityIds: string[];
     href: string;
   }>;
 }
@@ -415,6 +416,9 @@ export interface PaperExplorerVM {
     claimCount: number;
     directionCount: number;
     directionIds: string[];
+    capabilityIds: string[];
+    supportingClaimIds: string[];
+    pressureClaimIds: string[];
     deepReadLevel?: string;
     reviewStatus?: string;
     href: string;
