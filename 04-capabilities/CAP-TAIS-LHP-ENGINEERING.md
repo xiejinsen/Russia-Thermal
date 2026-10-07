@@ -8,6 +8,11 @@ maturity: ENGINEERING_PRODUCTION_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- LOOP_HEAT_PIPE
+- VC_HEAT_PIPE
+- MANUFACTURING_PROCESS
 
 Capability statement:
 TAIS demonstrates mature Russian design/manufacturing capability across loop heat pipes, variable-conductance heat pipes, thermal-control structures and flight-qualified two-phase systems.
