@@ -11,6 +11,9 @@ supporting_sources:
 - PAPER-CN-TPU-001
 - PAPER-CN-TPU-002
 - PAPER-CN-UTVC-WP-001
+- PATENT-RU2542253C2
+- PATENT-CN116989603B
+- PATENT-CN118744276B
 
 Boundary:
 the refutation applies to the broad thesis; a narrow process/transfer residual may remain.

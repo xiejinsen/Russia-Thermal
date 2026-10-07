@@ -14,6 +14,8 @@ supporting_sources:
 - PAPER-CN-FILM-001
 - PAPER-CN-FILM-002
 - PAPER-CN-MODEL-001
+- PATENT-RU2860581C1
+- PATENT-RU2542253C2
 
 Boundary:
 comparative synthesis only; this does not prove a viable phone architecture or normalized system advantage.

@@ -17,6 +17,8 @@ supporting_sources:
 - PAPER-CN-UTVC-WP-001
 - PAPER-CN-UTVC-GEOM-001
 - PATENT-RU2812668C1
+- PATENT-CN116989603B
+- PATENT-CN118744276B
 
 Boundary:
 TPU could still offer a process-specific durability, yield, transient-rewetting or diagnostic advantage, but no such incremental phone-relevant advantage is demonstrated in the current public evidence.

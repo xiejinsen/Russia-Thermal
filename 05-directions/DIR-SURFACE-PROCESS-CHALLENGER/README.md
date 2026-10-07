@@ -26,7 +26,7 @@ candidate_capabilities:
 - CAP-TPU-LASER-WETTABILITY-PROCESS
 
 strongest_baseline:
-China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
+China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches, direct biphilic/self-driven VC patent prior art, and direct laser hierarchical UTVC-wick patent prior art.
 
 Residual differentiation:
 process execution / diagnostics competence only. Generic laser processing, generic biphilic surfaces, and spatial wettability patterning inside an ultra-thin sealed VC are all excluded from the differentiation thesis.

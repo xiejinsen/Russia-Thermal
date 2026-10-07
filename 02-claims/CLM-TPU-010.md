@@ -10,6 +10,8 @@ Independent China evidence directly demonstrates wettability-patterned wick/surf
 supporting_sources:
 - PAPER-CN-UTVC-WP-001
 - PAPER-CN-UTVC-GEOM-001
+- PATENT-CN116989603B
+- PATENT-CN118744276B
 
 Boundary:
 this does not prove identical process durability, transient rewetting dynamics, contamination behavior or manufacturing yield between the China and TPU approaches.
