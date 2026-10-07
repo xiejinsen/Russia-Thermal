@@ -11,6 +11,8 @@ supporting_sources:
 - PAPER-CN-DRY-001
 - PAPER-CN-DRY-002
 - PAPER-CN-SJTU-DRY-001
+- PAPER-CN-DRY-003
+- PAPER-CN-DRY-004
 
 Boundary:
 the refutation applies to the broad thesis; a narrower actor-specific mechanism-ground-truth residual may remain.
