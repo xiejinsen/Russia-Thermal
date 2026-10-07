@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: begin Russia Capability Atlas gap-driven enrichment with ACTIVE_HARDWARE first; prioritize microfan/MEMS air movers and compact liquid/microfluidic cooling, then platform-transfer/output/collaboration enrichment; keep SOFTWARE_SYSTEM LIMITED_SCAN
+- next: continue ACTIVE_HARDWARE gap closure: deeper Russia-language compact-air-mover pass, qualify thermoelectric device capability, and add credible compact liquid/refrigeration/microfluidic nodes; then platform-transfer/output/collaboration enrichment; keep SOFTWARE_SYSTEM LIMITED_SCAN
 
 ## Directions
 
