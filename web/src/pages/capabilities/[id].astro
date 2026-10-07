@@ -82,21 +82,21 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 
   {vm.owner && (
     <section class="page-section">
-      <SectionHeader eyebrow="Owner" title="Institution / lab" description="Canonical ownership from Capability.actorId." />
+      <SectionHeader eyebrow="Owner" title="Institution / lab" description="Institution or lab currently responsible for this capability in the research graph." />
       <div class="single-card"><InstitutionCard model={vm.owner} /></div>
     </section>
   )}
 
   {vm.collaborators.length > 0 && (
     <section class="page-section">
-      <SectionHeader eyebrow="Collaborators" title="Formal collaborating actors" description="Canonical collaborating_actors edges; these institutions are not reclassified as the capability owner." />
+      <SectionHeader eyebrow="Collaborators" title="Formal collaborating actors" description="Institutions with documented collaboration links to this capability; they remain distinct from the primary owner." />
       <div class="content-grid">{vm.collaborators.map((model) => <InstitutionCard model={model} />)}</div>
     </section>
   )}
 
   {vm.people.length > 0 && (
     <section class="page-section">
-      <SectionHeader eyebrow="People" title="Key people" description="Canonical key-person relations for this capability." />
+      <SectionHeader eyebrow="People" title="Key people" description="Researchers directly linked to this capability in the current evidence base." />
       <div class="content-grid">{vm.people.map((model) => <ScholarCard model={model} />)}</div>
     </section>
   )}
@@ -109,7 +109,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     />
     <ExplorerLinkStrip
       links={[
-        { label: 'View all related Claims →', href: href(`/claims?capability=${encodeURIComponent(vm.capability.id)}`), primary: true }
+        { label: 'View related claims →', href: href(`/claims?capability=${encodeURIComponent(vm.capability.id)}`), primary: true }
       ]}
     />
     <div class="claim-list">
@@ -119,7 +119,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
             <span>{claim.status} · {claim.confidence}{claim.decisionRole ? ` · ${claim.decisionRole}` : ''}</span>
             <b>{claim.proposition}</b>
           </div>
-          <strong>Open claim →</strong>
+          <strong>Open detail →</strong>
         </a>
       ))}
     </div>
@@ -129,16 +129,16 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     <SectionHeader
       eyebrow="Evidence"
       title="Primary evidence connected through the capability's Claims"
-      description={`${vm.evidence.length} unique source records after Claim-level deduplication.`}
+      description={`${vm.evidence.length} unique source records linked through the capability's claims.`}
     />
     <ExplorerLinkStrip
       links={[
-        { label: 'View all Evidence →', href: href(`/evidence?capability=${encodeURIComponent(vm.capability.id)}`), primary: true },
+        { label: 'View all evidence →', href: href(`/evidence?capability=${encodeURIComponent(vm.capability.id)}`), primary: true },
         { label: 'Papers only →', href: href(`/papers?capability=${encodeURIComponent(vm.capability.id)}`) }
       ]}
     />
     <div class="evidence-stack">{vm.evidence.slice(0, 4).map((model) => <EvidenceCard model={model} />)}</div>
-    {vm.evidence.length > 4 && <p class="representative-note">Showing 4 representative sources here. Use “View all Evidence” for the complete capability-linked source set.</p>}
+    {vm.evidence.length > 4 && <p class="representative-note">Showing 4 representative sources. Open the full evidence set for every source linked to this capability.</p>}
   </section>
 
   <section class="page-section">
