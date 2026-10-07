@@ -317,6 +317,8 @@ def capability_record(o: dict[str, Any], portfolio_disposition: str | None = Non
         "maturity": nullable(o.get("maturity")) or "",
         "evidenceConfidence": nullable(o.get("evidence_confidence")) or "",
         "targetFit": nullable(o.get("target_fit")) or "",
+        "capabilityFamily": nullable(o.get("capability_family")),
+        "capabilityTopics": as_list(o.get("capability_topics")),
         "keyPeopleIds": as_list(o.get("key_people")),
         "collaboratingActorIds": as_list(o.get("collaborating_actors")),
         "claimIds": as_list(o.get("evidence_claims")),
@@ -447,9 +449,13 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         for f in ("id", "proposition", "status", "confidence", "sourcePath"):
             require_nonempty(r, f, errors)
 
+    allowed_capability_families = {"SOFTWARE_SYSTEM", "PASSIVE_HARDWARE", "ACTIVE_HARDWARE", "ENABLING"}
     for r in datasets["capabilities"]:
         for f in ("id", "actorId", "statement", "maturity", "evidenceConfidence", "targetFit", "sourcePath"):
             require_nonempty(r, f, errors)
+        family = r.get("capabilityFamily")
+        if family and family not in allowed_capability_families:
+            errors.append(f"{r['id']}: invalid capabilityFamily {family}")
 
     for r in datasets["directions"]:
         for f in ("id", "role", "investmentLane", "differentiationConfidence", "phoneTransferMaturity", "sourcePath"):
