@@ -20,10 +20,10 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
       <h1>{vm.title}</h1>
       <p>{vm.summary}</p>
       <div class="signal-links">
-        <a class="primary" href={href('/partners')}>Open partner portfolio →</a>
-        <a href={href('/research-coverage')}>See full research coverage →</a>
-        <a href={href('/research-map/russia')}>Explore Russia research map →</a>
-        <a href={href('/landscape')}>Review Russia vs China →</a>
+        <a href={href('/partners')}>Open partner portfolio</a>
+        <a href={href('/research-coverage')}>See full research coverage</a>
+        <a href={href('/research-map/russia')}>Explore Russia research map</a>
+        <a href={href('/landscape')}>Review Russia vs China</a>
       </div>
     </div>
     <div class="scoreboard">
@@ -218,9 +218,9 @@ const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\/
 
     .signal-copy>p{max-width:930px;color:#4d6477;margin:0;font-size:16px;line-height:1.65}
 
-    .signal-links{display:flex;gap:14px 22px;flex-wrap:wrap;margin-top:22px}
-    .signal-links a{font-size:12px;font-weight:800;color:#0b67b2;text-decoration:none}
-    .signal-links .primary{padding:9px 12px;border-radius:9px;background:#0b67b2;color:#fff}
+    .signal-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+    .signal-links a{display:inline-flex;align-items:center;min-height:34px;padding:8px 11px;border:1px solid #c9dfed;border-radius:9px;background:#f7fbfe;color:#0b67b2;font-size:12px;font-weight:800;text-decoration:none}
+    .signal-links a:hover,.signal-links a:focus-visible{border-color:#88bce0;background:#edf7fd;outline:none}
 
     .scoreboard{
       display:grid;
