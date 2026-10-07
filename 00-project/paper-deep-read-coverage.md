@@ -4,7 +4,7 @@ record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-07
 canonical_paper_count: 45
-completed_deep_reads: 28
+completed_deep_reads: 31
 campaign_state: ACTIVE
 
 ## Purpose
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 28 / 45
+## Completed Tier-A Deep Reads — 31 / 45
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -35,6 +35,9 @@ Rules:
 | PAPER-RU-TPU-001 | TPU core biphilic / spatial-wettability process evidence | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-CN-TPU-001 | China target-system UTVC laser-wick comparator | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-CN-TPU-002 | China direct oxidation / corrosion / laser UTVC process comparator | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-RU-TPU-002 | TPU durable laser + hydrocarbon surface-process evidence / contamination gate | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-RU-TPU-003 | TPU 60-day industrial field process-translation evidence | DIR-SURFACE-PROCESS-CHALLENGER |
+| PAPER-RU-TPU-004 | TPU copper-water boiling / thermal-exposure process bridge | DIR-SURFACE-PROCESS-CHALLENGER |
 | PAPER-RU-DRY-002 | Russia confinement-dependent hydrodynamic vs surface-drying crisis taxonomy | DIR-FAILURE-AWARE-UTVC |
 | PAPER-RU-DRY-003 | Russia topology-linked directional drying-front mechanism | DIR-FAILURE-AWARE-UTVC |
 | PAPER-CN-DRY-002 | China superhydrophilic copper-mesh capillary / CHF / HTC engineering comparator | DIR-FAILURE-AWARE-UTVC |
@@ -86,18 +89,24 @@ MPEI retains rare 42-month actual-operation capillary-state evidence, but China 
 
 ### Batch C — TPU Surface Process Challenger completion
 
-Priority: HIGH
+Status: COMPLETED 2026-10-07
 
-Read next:
+Deep-read:
+- PAPER-RU-TPU-001
 - PAPER-RU-TPU-002
 - PAPER-RU-TPU-003
 - PAPER-RU-TPU-004
+- PAPER-CN-TPU-001
+- PAPER-CN-TPU-002
 
-Comparator status:
-- PAPER-CN-TPU-002 has now been canonicalized and deep-read as the multi-process target-system comparator.
+Decision:
+- DEC-20261007-05
+- DIR-SURFACE-PROCESS-CHALLENGER remains STAGE0_CHALLENGER, but is narrowed to a falsification-only process challenger.
+- differentiation confidence reduced from MEDIUM to LOW_MEDIUM.
+- phone transfer maturity reduced from LOW_MEDIUM to LOW.
 
-Decision question:
-Does TPU retain any spatial-routing / rewetting function that survives comparison against optimized generic laser, oxidation and chemical surface treatments?
+Conclusion:
+TPU demonstrates credible process execution, copper heat-transfer processing and industrial durability / translation, but no reviewed source demonstrates the retained sealed-VC spatial-routing / rewetting function. One durable superhydrophobic route explicitly uses hydrocarbon-derived surface chemistry, increasing the importance of contamination / outgassing gates. The only justified next step is one bounded function-first Stage-0 test with strong uniform-treatment controls.
 
 ### Batch D — Foundational Modeling Enabler
 
@@ -188,7 +197,8 @@ The first expanded Deep Read pass already changes the reasoning structure:
 7. Failure-aware completion confirms one surviving Primary collaboration thesis, but only in mechanism-resolved crisis taxonomy / lab ground truth; SJTU architecture-level dryout mitigation and the Russian mesh process paper further eliminate generic hardware/surface engineering as differentiation.
 8. Foundational Modeling remains RESERVE but is narrowed to exact benchmark / neutral-boundary / inverse-closure leverage; generic analytical modeling, nonlinear stability mathematics and fast UTVC design-space modeling are not Russian differentiation.
 9. Extreme Film remains RESERVE but is narrowed to gas-shear free-surface instability / rupture physics under extreme confinement; China 202.8 W/cm2 passive capillary thin-film boiling and 2074 W/cm2 pressure-controlled nanoporous TFB eliminate high heat flux as Russian differentiation.
-10. Broad Russia superiority theses remain killed.
+10. TPU remains STAGE0_CHALLENGER only as a falsification-oriented process branch: process execution is credible, but sealed-VC spatial routing / rewetting remains unproven and open-surface durability does not count as vacuum / fluid compatibility.
+11. Broad Russia superiority theses remain killed.
 
 ## Stop condition for this campaign
 
