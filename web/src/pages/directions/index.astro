@@ -17,11 +17,11 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 
   <section class="direction-list">
     {vm.records.map((record) => (
-      <a class="direction-card" href={href(record.href)}>
+      <article class="direction-card">
         <div class="card-head">
           <div>
             <span class="lane">{record.direction.lane.label}</span>
-            <h2>{record.direction.title}</h2>
+            <h2><a href={href(record.href)}>{record.direction.title}</a></h2>
           </div>
           <strong>{record.direction.recommendation}</strong>
         </div>
@@ -38,9 +38,9 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
         <div class="bottom">
           <span>Phone maturity · {record.direction.phoneTransferMaturity}</span>
           <span>Differentiation · {record.direction.differentiationConfidence}</span>
-          <b>Open detail →</b>
+          <a class="open-detail" href={href(record.href)}>Open detail</a>
         </div>
-      </a>
+      </article>
     ))}
   </section>
 
@@ -49,19 +49,19 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     .direction-list{display:grid;gap:16px;margin-top:30px}
     .direction-card{
       display:grid;gap:18px;padding:22px;border:1px solid #cfe1ee;border-radius:16px;
-      background:#fff;text-decoration:none;color:inherit;box-shadow:0 10px 26px rgba(42,96,140,.05)
+      background:#fff;box-shadow:0 10px 26px rgba(42,96,140,.05)
     }
     .direction-card:hover{border-color:#79b3df;box-shadow:0 14px 34px rgba(42,96,140,.10);transform:translateY(-1px)}
     .card-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
     .lane{font-size:10px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#0b67b2}
-    h2{margin:5px 0 0;font-size:23px;letter-spacing:-.025em}
+    h2{margin:5px 0 0;font-size:23px;letter-spacing:-.025em}h2 a{color:inherit;text-decoration:none}h2 a:hover,h2 a:focus-visible{color:#0b67b2;text-decoration:underline;text-underline-offset:.16em}
     .card-head>strong{max-width:220px;padding:8px 10px;border-radius:9px;background:#eef8f4;color:#087a66;font-size:12px}
     .focus{margin:0;max-width:1000px;color:#486477;line-height:1.6}
     .meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid #dbe8f1;border-radius:10px;overflow:hidden;background:#dbe8f1}
     .meta-grid div{display:grid;gap:2px;padding:12px;background:#f7fbfe}
     .meta-grid b{font-size:20px;color:#0b67b2}.meta-grid span{font-size:10px;text-transform:uppercase;color:#6a8192}
     .bottom{display:flex;gap:18px;flex-wrap:wrap;padding-top:4px;color:#607789;font-size:11px}
-    .bottom b{margin-left:auto;color:#0b67b2}
-    @media(max-width:720px){.card-head{flex-direction:column}.meta-grid{grid-template-columns:1fr 1fr}.bottom b{margin-left:0}}
+    .open-detail{margin-left:auto;color:#0b67b2;font-weight:850;text-decoration:none}.open-detail:hover,.open-detail:focus-visible{text-decoration:underline;text-underline-offset:.16em}
+    @media(max-width:720px){.card-head{flex-direction:column}.meta-grid{grid-template-columns:1fr 1fr}.open-detail{margin-left:0}}
   </style>
 </BaseLayout>
