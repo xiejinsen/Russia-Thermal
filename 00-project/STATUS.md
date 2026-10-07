@@ -23,14 +23,14 @@ leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
 leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
 web_copy_status: FINAL_COPY_PASS_CLOSED
 web_usability_status: USER_FEEDBACK_PASS_1_CLOSED
-web_atlas_architecture_status: PREPARED / DATA_PENDING
+web_atlas_architecture_status: PREPARED / TAXONOMY_FROZEN / DATA_PENDING
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
 leadership_deliverable_source: reports/leadership-decision-brief.md
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: no mandatory Phase-1 work remains; keep outreach paused unless explicitly authorized; future work should be user-requested targeted web refinements, an explicit partner-contact decision, or a Phase-2 trigger
+next_action: begin Russia Capability Atlas data-enrichment round using frozen capability/platform taxonomy; keep software/system thermal management LIMITED_SCAN; preserve Phase-1 P1/P2/P3 decisions unless new evidence materially changes them
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
