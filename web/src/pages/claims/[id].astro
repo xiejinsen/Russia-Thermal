@@ -42,12 +42,12 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
 
   <section class="evidence-grid">
     <div class="bucket support">
-      <div class="head"><span>SUPPORTING EVIDENCE</span><div class="head-actions"><b>{vm.supportingEvidence.length}</b><a href={href(`/evidence?claim=${encodeURIComponent(vm.id)}&relation=supporting`)}>All sources →</a><a href={href(`/papers?claim=${encodeURIComponent(vm.id)}&relation=supporting`)}>Papers →</a></div></div>
-      {vm.supportingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.deepReadLevel ? ` · ${item.deepReadLevel} Deep Read` : ''}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}{item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Open patent →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>)}
+      <div class="head"><span>SUPPORTING EVIDENCE</span><div class="head-actions"><b>{vm.supportingEvidence.length}</b><a href={href(`/evidence?claim=${encodeURIComponent(vm.id)}&relation=supporting`)}>View evidence →</a><a href={href(`/papers?claim=${encodeURIComponent(vm.id)}&relation=supporting`)}>Papers →</a></div></div>
+      {vm.supportingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.deepReadLevel ? ` · ${item.deepReadLevel} Deep Read` : ''}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open detail →</a>}{item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Open detail →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>)}
     </div>
     <div class="bucket pressure">
-      <div class="head"><span>CONTRADICTING / PRESSURE EVIDENCE</span><div class="head-actions"><b>{vm.contradictingEvidence.length}</b><a href={href(`/evidence?claim=${encodeURIComponent(vm.id)}&relation=pressure`)}>All sources →</a><a href={href(`/papers?claim=${encodeURIComponent(vm.id)}&relation=pressure`)}>Papers →</a></div></div>
-      {vm.contradictingEvidence.length ? vm.contradictingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.deepReadLevel ? ` · ${item.deepReadLevel} Deep Read` : ''}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open paper →</a>}{item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Open patent →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>) : <p class="empty">No contradicting source currently linked.</p>}
+      <div class="head"><span>CONTRADICTING / PRESSURE EVIDENCE</span><div class="head-actions"><b>{vm.contradictingEvidence.length}</b><a href={href(`/evidence?claim=${encodeURIComponent(vm.id)}&relation=pressure`)}>View evidence →</a><a href={href(`/papers?claim=${encodeURIComponent(vm.id)}&relation=pressure`)}>Papers →</a></div></div>
+      {vm.contradictingEvidence.length ? vm.contradictingEvidence.map((item)=><article><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.deepReadLevel ? ` · ${item.deepReadLevel} Deep Read` : ''}</span><h2>{item.title}</h2>{item.findings[0] && <p>{item.findings[0]}</p>}<div class="source-actions">{item.id.startsWith('PAPER-') && <a href={href(`/papers/${item.id}`)}>Open detail →</a>}{item.id.startsWith('PATENT-') && <a href={href(`/patents/${item.id}`)}>Open detail →</a>}<a href={item.primaryUrl} target="_blank" rel="noreferrer">Original source ↗</a></div></article>) : <p class="empty">No pressure or contradicting evidence is currently linked to this claim.</p>}
     </div>
   </section>
 
@@ -63,7 +63,7 @@ const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
 
   <section class="section">
     <div class="section-head"><span>DECISION IMPACT</span><h2>Decisions triggered by this claim</h2></div>
-    {vm.decisions.length ? <div class="decisions">{vm.decisions.map((d)=><article><span>{d.date ?? 'undated'} · {d.eventType.label}</span><b>{d.subject} → {d.newState}</b>{d.rationale && <p>{d.rationale}</p>}</article>)}</div> : <p class="empty">No Decision Event currently lists this Claim as a trigger.</p>}
+    {vm.decisions.length ? <div class="decisions">{vm.decisions.map((d)=><article><span>{d.date ?? 'undated'} · {d.eventType.label}</span><b>{d.subject} → {d.newState}</b>{d.rationale && <p>{d.rationale}</p>}</article>)}</div> : <p class="empty">This claim has not directly triggered a recorded portfolio decision.</p>}
   </section>
 
   <style>
