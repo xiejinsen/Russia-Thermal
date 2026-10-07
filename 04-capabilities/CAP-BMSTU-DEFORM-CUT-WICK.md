@@ -8,6 +8,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM_HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- CAPILLARY_WICK
+- MANUFACTURING_PROCESS
 
 Capability statement:
 Bauman MSTU demonstrates a current manufacturing/process capability for deformationally cut copper heat-transfer and capillary-porous structures, including heat-pipe wick concepts and measured capillary pressure.
