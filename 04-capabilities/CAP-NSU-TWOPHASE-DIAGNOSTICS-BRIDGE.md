@@ -3,6 +3,7 @@
 record_state: CURRENT
 actor_id: ACT-NSU-EITP-LAB
 key_people: []
+key_people_status: PUBLIC_PERSON_NOT_NORMALIZED_FROM_CURRENT_SOURCE
 maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ENABLER
