@@ -492,6 +492,43 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
     };
   });
 
+  const relatedDirections = [...new Map(
+    relatedCapabilities
+      .flatMap((capability) => directionsForCapability(capability.id))
+      .map((direction) => [direction.id, direction] as const)
+  ).values()];
+
+  const claimIds = new Set(relatedCapabilities.flatMap((capability) => capability.claimIds));
+  const linkedClaims = [...claimIds]
+    .map((claimId) => claimById.get(claimId))
+    .filter((item): item is ClaimRecord => Boolean(item));
+
+  const sourceIds = new Set(
+    linkedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
+  );
+  const linkedEvidenceRecords = [...sourceIds]
+    .map((sourceId) => evidenceById.get(sourceId))
+    .filter((item): item is EvidenceRecord => Boolean(item))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+
+  const surname = person.name.trim().split(/\s+/).at(-1)?.toLowerCase() ?? '';
+  const authoredEvidenceRecords = linkedEvidenceRecords.filter((item) =>
+    surname && item.authors.some((author) => author.toLowerCase().includes(surname))
+  );
+
+  const collaboratorIds = new Set(relatedCapabilities.flatMap((capability) => capability.collaboratingActorIds ?? []));
+  const collaboratorInstitutions = [...collaboratorIds]
+    .map((collaboratorId) => actorById.get(collaboratorId))
+    .filter((item): item is ActorRecord => Boolean(item))
+    .filter((item) => item.type !== 'PERSON')
+    .map((collaborator) =>
+      institutionCard(
+        collaborator,
+        capabilities.filter((capability) => capability.actorId === collaborator.id)
+      )
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   return {
     id: person.id,
     name: person.name,
@@ -503,7 +540,19 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
       affiliation && affiliation.type !== 'PERSON'
         ? institutionCard(affiliation, capabilities.filter((capability) => capability.actorId === affiliation.id))
         : undefined,
-    capabilityContexts
+    collaboratorInstitutions,
+    capabilityContexts,
+    directions: relatedDirections.map(directionCard),
+    claims: linkedClaims.map((claim) => ({
+      id: claim.id,
+      proposition: claim.proposition,
+      confidence: humanize(claim.confidence),
+      status: humanize(claim.status),
+      href: `/claims/${claim.id}`
+    })),
+    evidence: linkedEvidenceRecords.map(evidenceCard),
+    authoredEvidence: authoredEvidenceRecords.map(evidenceCard),
+    evidenceStats: evidencePressureStats(linkedClaims, linkedEvidenceRecords)
   };
 }
 
