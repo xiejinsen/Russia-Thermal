@@ -198,6 +198,8 @@ export interface EvidenceCardVM {
   }>;
   linkedCapabilities: CapabilityDetailVM[];
   linkedDirections: DirectionCardVM[];
+  institutionNames: string[];
+  peopleNames: string[];
 }
 
 export interface EvidenceExplorerVM {
