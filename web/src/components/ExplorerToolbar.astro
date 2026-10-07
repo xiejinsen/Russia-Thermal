@@ -5,15 +5,17 @@ interface Props {
   filters: FilterDef[];
   searchPlaceholder?: string;
   total: number;
+  sticky?: boolean;
 }
 const {
   filters,
   searchPlaceholder = 'Search records…',
-  total
+  total,
+  sticky = false
 } = Astro.props;
 ---
 
-<div class="explorer-toolbar" data-explorer-toolbar>
+<div class:list={['explorer-toolbar', { sticky }]} data-explorer-toolbar>
   <label class="search-box">
     <span>Search</span>
     <input type="search" placeholder={searchPlaceholder} data-explorer-search />
@@ -102,6 +104,13 @@ const {
     background:var(--surface);
     box-shadow:var(--shadow-1);
   }
+  .explorer-toolbar.sticky{
+    position:sticky;
+    top:4.15rem;
+    z-index:80;
+    background:rgb(255 255 255 / .96);
+    backdrop-filter:blur(14px);
+  }
   label{display:grid;gap:5px;min-width:0}
   label>span,.toolbar-result span{color:var(--text-muted);font-size:.68rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
   input,select{
@@ -132,5 +141,6 @@ const {
   }
   button:hover,button:focus-visible{background:var(--accent-soft);outline:none}
   @media(max-width:950px){.explorer-toolbar{grid-template-columns:1fr 1fr}.search-box{grid-column:1/-1}}
+  @media(max-width:860px){.explorer-toolbar.sticky{top:7.35rem}}
   @media(max-width:620px){.explorer-toolbar{grid-template-columns:1fr}.search-box{grid-column:auto}}
 </style>
