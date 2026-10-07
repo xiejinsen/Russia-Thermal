@@ -8,6 +8,11 @@ maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ENABLER
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- RELIABILITY_AGING
+- MODELING_REDUCED_ORDER
+- SYSTEM_THERMAL_MODEL
 
 Capability statement:
 HSE MIEM demonstrates electrothermal modeling methods that couple semiconductor/component thermal behavior, PCB heating and cooling conditions to predict overheating and improve electronics reliability.
