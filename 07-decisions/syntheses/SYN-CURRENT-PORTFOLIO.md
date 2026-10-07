@@ -18,6 +18,7 @@ Theory basis:
 - Actor-specific residuals remain credible but are no longer equal in strategic weight: Kutateladze mechanism-level crisis taxonomy remains the only current primary Strategic Candidate after full Tier-A pressure testing; generic Russian mesh/surface engineering and dryout-mitigation hardware are explicitly excluded from that thesis. MPEI multi-year capillary-state aging knowledge is now a reliability reserve conditional on data access / phone transfer; TPU remains a Stage-0 spatial-function challenger after strong generic-process comparator pressure.
 - Newly discovered capability is not automatically a new opportunity: NovSU is retained inside a WATCH-level LHP/active-capillary reserve; UUST and MISIS remain supporting capabilities without standalone Directions; comparator pressure blocks strategic promotion.
 - Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
+- Foundational Modeling remains a reserve after Deep Read: Russian exact/group-invariant methods provide interpretable neutral boundaries and inverse closure, but China independently has current nonlinear interfacial-stability mathematics and global UTVC semi-analytical models already provide direct mobile-design variables at 4–5 orders lower cost than CFD. The Russian residual is therefore pre-test benchmark / boundary leverage only.
 
 supporting_claims:
 - CLM-PAV-004
@@ -30,6 +31,9 @@ supporting_claims:
 - CLM-PRESSURE-003
 - CLM-PRESSURE-006
 - CLM-PRESSURE-008
+- CLM-MODEL-008
+- CLM-MODEL-009
+- CLM-MODEL-010
 - CLM-NOVSU-001
 - CLM-UUST-001
 - CLM-MISIS-001
@@ -43,6 +47,7 @@ supporting_directions:
 - DIR-FAILURE-AWARE-UTVC
 - DIR-HEALTH-AWARE-UTVC
 - DIR-SURFACE-PROCESS-CHALLENGER
+- DIR-FOUNDATIONAL-MODELING-ENABLER
 
 supporting_priorities:
 - PRI-01-KUT-LAB13
@@ -59,6 +64,10 @@ key_evidence:
 - PAPER-CN-AGE-003
 - PAPER-CN-AGE-004
 - PAPER-CN-TPU-001
+- PAPER-RU-MODEL-001
+- PAPER-RU-MODEL-002
+- PAPER-CN-MODEL-001
+- PAPER-GLOBAL-UTVC-MODEL-001
 - OFFICIAL-SJTU-GONG-001
 - PAPER-GLOBAL-EO-COOLING-001
 - PAPER-GLOBAL-EO-MICROHEATPIPE-001
