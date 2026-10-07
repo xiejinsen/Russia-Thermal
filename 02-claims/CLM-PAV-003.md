@@ -14,6 +14,8 @@ supporting_sources:
 - PAPER-CN-DRY-001
 - PAPER-CN-DRY-002
 - PAPER-CN-SJTU-DRY-001
+- PAPER-CN-DRY-003
+- PAPER-CN-DRY-004
 
 Boundary:
 this does not mean every Russian crisis-diagnostic / mechanism-labeling method has a matched China analogue.
