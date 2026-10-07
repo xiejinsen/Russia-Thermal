@@ -76,6 +76,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       title="Claims that establish or bound this capability"
       description="Claims are the semantic bridge between primary evidence and the capability judgment."
     />
+    <div class="explore-links"><a href={href(`/claims?capability=${encodeURIComponent(vm.capability.id)}`)}>View all related Claims →</a></div>
     <div class="claim-list">
       {vm.claims.map((claim) => (
         <a href={href(claim.href)}>
@@ -95,6 +96,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
       title="Primary evidence connected through the capability's Claims"
       description={`${vm.evidence.length} unique source records after Claim-level deduplication.`}
     />
+    <div class="explore-links"><a href={href(`/evidence?capability=${encodeURIComponent(vm.capability.id)}`)}>View all Evidence →</a><a href={href(`/papers?capability=${encodeURIComponent(vm.capability.id)}`)}>Papers only →</a></div>
     <div class="evidence-stack">{vm.evidence.map((model) => <EvidenceCard model={model} />)}</div>
   </section>
 
@@ -122,7 +124,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.context-grid article{padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface)}.context-grid article>span{font-size:9px;color:var(--accent-vivid);font-weight:850;letter-spacing:.07em}.context-grid p{margin:8px 0 0;color:var(--text-muted);line-height:1.6}.context-grid .scope{grid-column:1/-1}.scope div{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.scope small{padding:5px 7px;border-radius:7px;background:var(--surface-muted);color:var(--text-secondary)}
     .page-section{display:grid;gap:var(--space-6);margin-top:var(--space-12)}.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--space-4)}.single-card{max-width:32rem}
     .claim-list{display:grid;gap:10px}.claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-decoration:none;color:inherit}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:var(--accent-vivid);font-weight:850;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.5}.claim-list strong{white-space:nowrap;color:var(--accent-vivid);font-size:11px}
-    .evidence-stack{display:grid;gap:var(--space-5)}.coverage-link{width:fit-content;padding:10px 13px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-weight:850;text-decoration:none}
+    .explore-links{display:flex;gap:10px;flex-wrap:wrap}.explore-links a{color:var(--accent-vivid);font-size:.8rem;font-weight:850;text-decoration:none}.explore-links a:hover,.explore-links a:focus-visible{text-decoration:underline;text-underline-offset:.16em}.evidence-stack{display:grid;gap:var(--space-5)}.coverage-link{width:fit-content;padding:10px 13px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-weight:850;text-decoration:none}
     @media(max-width:800px){.cap-hero,.context-grid{grid-template-columns:1fr}.context-grid .scope{grid-column:auto}.claim-list a{flex-direction:column}}
   </style>
 </BaseLayout>
