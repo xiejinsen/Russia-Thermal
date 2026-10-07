@@ -19,12 +19,15 @@ Affiliations:
 - A.N. Frumkin Institute of Physical Chemistry and Electrochemistry RAS
 
 Direct reported results:
-- laser-ablated cavities on copper were selectively hydrophobized by fluorinated methoxysilane chemistry;
-- boiling heat transfer depended strongly on hydrophobic-cavity density / pitch;
-- removing hydrophobic treatment significantly reduced enhancement.
+- water pool boiling at atmospheric pressure;
+- cavities fabricated on copper by laser ablation;
+- cavities selectively hydrophobized by chemisorption of fluorinated methoxysilane vapor at 105 C;
+- heat-transfer intensity depends primarily on hydrophobic-cavity specific density / pitch;
+- cavity shape and size have much smaller influence in the reported comparison;
+- removing the water-repellent treatment significantly reduces enhancement.
 
 Decision use:
-shows a current Kutateladze + Frumkin cross-institution capability combining boiling physics with surface-chemistry / wettability control.
+current Kutateladze + Frumkin cross-institution surface-chemistry capability.
 
 Boundary:
-pool boiling at atmospheric pressure; not sealed phone VC and generic biphilic-surface novelty remains crowded.
+supporting wettability / nucleation-control evidence only; exact HTC / CHF improvement was not recovered in this review, and generic biphilic-surface novelty remains crowded.
