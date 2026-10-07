@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / WEB_RESULTS_CONVERSION
-- next: consolidate shared detail-page visual primitives and remaining page-local CSS; then migrate the next bounded decision-critical Tier-A Deep Read set without reopening broad discovery
+- next: continue bounded design-system consolidation for shared detail-page hero, section and metadata primitives; then migrate the next decision-critical Tier-A Deep Read set without reopening broad discovery
 
 ## Directions
 
