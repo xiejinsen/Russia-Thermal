@@ -17,20 +17,22 @@ graph_audit_control: tools/graph_audit.py
 graph_audit_report: analysis/graph-evidence-chain-audit_2026_10_07.md
 semantic_orphan_sources: 0
 semantic_orphan_claims: 0
-current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / WEB_DETAIL_CONSOLIDATION
+current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
 detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
 leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
 web_copy_status: FINAL_COPY_PASS_CLOSED
 web_usability_status: USER_FEEDBACK_PASS_1_CLOSED
 web_atlas_architecture_status: PREPARED / TAXONOMY_FROZEN / DATA_PENDING
+russia_capability_family_baseline: 31/31 CLASSIFIED
+russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
 leadership_deliverable_source: reports/leadership-decision-brief.md
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: begin Russia Capability Atlas data-enrichment round using frozen capability/platform taxonomy; keep software/system thermal management LIMITED_SCAN; preserve Phase-1 P1/P2/P3 decisions unless new evidence materially changes them
+next_action: begin Russia Capability Atlas gap-driven enrichment with ACTIVE_HARDWARE first; prioritize microfan/MEMS air movers and compact liquid/microfluidic cooling, then platform-transfer/output/collaboration enrichment; keep SOFTWARE_SYSTEM LIMITED_SCAN
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
