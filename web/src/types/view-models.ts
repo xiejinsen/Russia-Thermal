@@ -83,25 +83,6 @@ export interface OverviewPageVM {
   institutions: InstitutionCardVM[];
   scholars: ScholarCardVM[];
   directions: DirectionCardVM[];
-  deepRead?: {
-    level: string;
-    reviewStatus: string;
-    reviewedAt: string;
-    whyItMatters: string;
-    decisionUse: string;
-    legacyOrigin?: string;
-    sourcePath: string;
-    questions: Array<{ number: number; title: string; body: string }>;
-    evidenceBoundary: {
-      sourceFacts: string;
-      analystInference: string;
-      unknownRequests: string;
-    };
-    relatedClaimIds: string[];
-    relatedCapabilityIds: string[];
-    relatedDirectionIds: string[];
-    relatedPriorityIds: string[];
-  };
 }
 
 export interface PartnerGroupVM {
@@ -390,8 +371,7 @@ export interface ClaimExplorerVM {
     supportingCount: number;
     contradictingCount: number;
     directionCount: number;
-    deepReadLevel?: string;
-    reviewStatus?: string;
+    directionIds: string[];
     href: string;
   }>;
 }
@@ -432,6 +412,7 @@ export interface PaperExplorerVM {
     countryContext?: string;
     claimCount: number;
     directionCount: number;
+    directionIds: string[];
     deepReadLevel?: string;
     reviewStatus?: string;
     href: string;
