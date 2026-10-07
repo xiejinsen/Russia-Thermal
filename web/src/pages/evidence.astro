@@ -28,9 +28,9 @@ const pressureCount = vm.records.filter((record) => record.contradictingClaims.l
 const records = vm.records.map((record) => {
   const directionIds = record.linkedDirections.map((direction) => direction.id);
   const relation = [
-    ...(record.supportingClaims.length ? ['SUPPORT'] : []),
-    ...(record.contradictingClaims.length ? ['PRESSURE'] : []),
-    ...(!record.supportingClaims.length && !record.contradictingClaims.length ? ['CONTEXT_ONLY'] : [])
+    ...(record.supportingClaims.length ? ['supporting'] : []),
+    ...(record.contradictingClaims.length ? ['pressure'] : []),
+    ...(!record.supportingClaims.length && !record.contradictingClaims.length ? ['context'] : [])
   ];
   const isPaper = record.id.startsWith('PAPER-');
 
@@ -81,6 +81,7 @@ const records = vm.records.map((record) => {
       sticky
       compact
       total={records.length}
+      urlFilterKeys={['claim', 'capability']}
       searchPlaceholder="Search source, author, institution, person, Claim, Capability…"
       filters={[
         {
@@ -110,9 +111,9 @@ const records = vm.records.map((record) => {
           key:'relation',
           label:'Relation',
           options:[
-            {value:'SUPPORT',label:'Supports Claim'},
-            {value:'PRESSURE',label:'Pressures Claim'},
-            {value:'CONTEXT_ONLY',label:'Context only'}
+            {value:'supporting',label:'Supports Claim'},
+            {value:'pressure',label:'Pressures Claim'},
+            {value:'context',label:'Context only'}
           ]
         },
         {
@@ -144,6 +145,10 @@ const records = vm.records.map((record) => {
           data-usage-role={record.usageRole ?? 'NO_ROLE'}
           data-relation={record.relation.join('|')}
           data-direction={record.directionIds.join('|')}
+          data-claim={[...new Set([...record.supportingClaims.map((claim)=>claim.id), ...record.contradictingClaims.map((claim)=>claim.id)])].join('|')}
+          data-supporting-claim={record.supportingClaims.map((claim)=>claim.id).join('|')}
+          data-pressure-claim={record.contradictingClaims.map((claim)=>claim.id).join('|')}
+          data-capability={record.linkedCapabilities.map((capability)=>capability.id).join('|')}
           data-search={record.search}
         >
           <td class="source-cell">
