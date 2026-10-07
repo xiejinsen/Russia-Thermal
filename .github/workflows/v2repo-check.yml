@@ -18,3 +18,5 @@ jobs:
           python-version: "3.12"
       - name: Check canonical references and generated views
         run: python tools/v2repo.py --check
+      - name: Audit decision graph and evidence chains
+        run: python tools/graph_audit.py
