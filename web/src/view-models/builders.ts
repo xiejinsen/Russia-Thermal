@@ -101,7 +101,8 @@ function directionCard(direction: DirectionRecord): DirectionCardVM {
     residualDifferentiation: direction.residualDifferentiation ?? undefined,
     ourControlBoundary: direction.internalControlBoundary ?? undefined,
     nextQuestion: direction.nextQuestion ?? undefined,
-    nextGate: direction.promotionGate ?? undefined
+    nextGate: direction.promotionGate ?? undefined,
+    killGate: direction.killGate ?? undefined
   };
 }
 
@@ -409,6 +410,31 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
     direction.capabilityIds.some((capabilityId) => ownCapabilities.some((capability) => capability.id === capabilityId))
   );
 
+  const claimIds = new Set(ownCapabilities.flatMap((capability) => capability.claimIds));
+  const linkedClaims = [...claimIds]
+    .map((claimId) => claimById.get(claimId))
+    .filter((item): item is ClaimRecord => Boolean(item));
+
+  const sourceIds = new Set(
+    linkedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
+  );
+  const linkedEvidenceRecords = [...sourceIds]
+    .map((sourceId) => evidenceById.get(sourceId))
+    .filter((item): item is EvidenceRecord => Boolean(item))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+
+  const collaboratorIds = new Set(ownCapabilities.flatMap((capability) => capability.collaboratingActorIds ?? []));
+  const collaboratorCards = [...collaboratorIds]
+    .map((collaboratorId) => actorById.get(collaboratorId))
+    .filter((item): item is ActorRecord => Boolean(item) && item.type !== 'PERSON')
+    .map((collaborator) =>
+      institutionCard(
+        collaborator,
+        capabilities.filter((capability) => capability.actorId === collaborator.id)
+      )
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   const parent = actor.parentId ? actorById.get(actor.parentId) : undefined;
 
   return {
@@ -426,8 +452,18 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
     people: [...peopleMap.values()]
       .map((person) => scholarCard(person, actor))
       .sort((a, b) => a.name.localeCompare(b.name)),
+    collaborators: collaboratorCards,
     capabilities: ownCapabilities.map(capabilityDetail),
-    directions: linkedDirections.map(directionCard)
+    directions: linkedDirections.map(directionCard),
+    claims: linkedClaims.map((claim) => ({
+      id: claim.id,
+      proposition: claim.proposition,
+      confidence: humanize(claim.confidence),
+      status: humanize(claim.status),
+      href: `/claims/${claim.id}`
+    })),
+    evidence: linkedEvidenceRecords.map(evidenceCard),
+    evidenceStats: evidencePressureStats(linkedClaims, linkedEvidenceRecords)
   };
 }
 
@@ -474,6 +510,39 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
 const claimById = new Map(claims.map((claim) => [claim.id, claim]));
 const evidenceById = new Map(evidence.map((item) => [item.id, item]));
 const deepReadById = new Map(deepReads.map((item) => [item.id, item]));
+
+function sourceBucket(item: EvidenceRecord): 'RU' | 'COMPARATOR' {
+  const country = (item.countryContext ?? '').trim().toUpperCase();
+  if (country === 'RU' || country === 'RUSSIA') return 'RU';
+  if (
+    item.id.startsWith('PAPER-RU-') ||
+    item.id.startsWith('PATENT-RU') ||
+    item.id.startsWith('OFFICIAL-RU-') ||
+    item.id.startsWith('OFFICIAL-KUT-') ||
+    item.id.startsWith('OFFICIAL-MPEI-') ||
+    item.id.startsWith('OFFICIAL-TPU-') ||
+    item.id.startsWith('OFFICIAL-RAS-')
+  ) return 'RU';
+  return 'COMPARATOR';
+}
+
+function evidencePressureStats(claimSet: ClaimRecord[], linkedEvidence: EvidenceRecord[]) {
+  const russiaSourceCount = linkedEvidence.filter((item) => sourceBucket(item) === 'RU').length;
+  const paperCount = linkedEvidence.filter((item) => item.id.startsWith('PAPER-')).length;
+  const patentCount = linkedEvidence.filter((item) => item.id.startsWith('PATENT-')).length;
+  const deepReadCount = linkedEvidence.filter((item) => deepReadById.has(item.id)).length;
+
+  return {
+    claimCount: claimSet.length,
+    evidenceCount: linkedEvidence.length,
+    deepReadCount,
+    russiaSourceCount,
+    comparatorSourceCount: linkedEvidence.length - russiaSourceCount,
+    paperCount,
+    patentCount
+  };
+}
+
 
 function claimSummary(claim: ClaimRecord) {
   return {
@@ -1003,7 +1072,11 @@ export function buildDirectionPageVM(id: string): DirectionPageVM | null {
     }
   }
 
-  const relatedClaims = direction.claimIds
+  const relatedClaimIds = new Set([
+    ...direction.claimIds,
+    ...linkedCapabilities.flatMap((capability) => capability.claimIds)
+  ]);
+  const relatedClaims = [...relatedClaimIds]
     .map((claimId) => claimById.get(claimId))
     .filter((item): item is ClaimRecord => Boolean(item));
 
@@ -1011,11 +1084,11 @@ export function buildDirectionPageVM(id: string): DirectionPageVM | null {
     relatedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
   );
 
-  const linkedEvidence = [...sourceIds]
+  const linkedEvidenceRecords = [...sourceIds]
     .map((sourceId) => evidenceById.get(sourceId))
     .filter((item): item is EvidenceRecord => Boolean(item))
-    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0))
-    .map(evidenceCard);
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+  const linkedEvidence = linkedEvidenceRecords.map(evidenceCard);
 
   const directionDecisions = [...decisions]
     .filter((event) => event.subjectId === direction.id)
@@ -1054,6 +1127,7 @@ export function buildDirectionPageVM(id: string): DirectionPageVM | null {
       href: `/claims/${claim.id}`
     })),
     evidence: linkedEvidence,
+    evidenceStats: evidencePressureStats(relatedClaims, linkedEvidenceRecords),
     decisions: directionDecisions
   };
 }
