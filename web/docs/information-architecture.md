@@ -518,3 +518,77 @@ Do not widen a column merely because another object class needed more space.
 
 Principle:
 **Dense Row is a shared interaction pattern, not a shared fixed geometry.**
+
+
+## 14. Detail Page Design System
+
+Status: PILOT_FROZEN
+
+The Detail system is decision-first, not card-first.
+
+Shared reading order:
+1. Detail Hero — object identity, current role/lane and concise why-it-matters summary.
+2. Metric Strip — compact counts only; no explanatory prose.
+3. Relation Path — show the local graph from object to Claims/Evidence/Direction/Decision.
+4. Evidence Pressure — compare Russia-side evidence with China/global comparator pressure and expose Deep Read depth.
+5. Object-specific interpretation — institution capability context or direction decision thesis.
+6. Dense relationship rows — People, Capabilities, Claims, Evidence and Decisions.
+7. Boundaries / Gates — explicitly separate surviving value from transfer limitations and promotion/kill conditions.
+
+### Institution detail
+
+Institution pages answer:
+- why this organization/lab matters;
+- who the key people are;
+- what capabilities are actually evidenced;
+- what Claims those capabilities support;
+- what evidence depth exists;
+- which strategic Directions the institution can influence;
+- which formal collaborators participate.
+
+Do not use a large card grid for People/Capabilities/Evidence on detail pages. Use compact full-width rows.
+
+Evidence metrics follow:
+Institution -> owned Capability -> Capability Claims -> supporting/pressure Sources.
+
+### Direction detail
+
+Direction pages are leadership + audit pages.
+
+Required top-level blocks:
+- current investment lane;
+- phone maturity / differentiation confidence;
+- complete reachable evidence metrics;
+- Russia vs China/global Evidence Pressure;
+- Problem / strongest baseline / surviving Russia residual / internal-control boundary;
+- Next question / Promotion gate / Kill-downgrade gate;
+- Institutions, scholars and capabilities;
+- Claims;
+- primary evidence with Deep Read depth;
+- decision history.
+
+Evidence counts must use the same closure rule as Graph Audit:
+Direction direct Claims + candidate-Capability Claims -> Sources.
+
+Do not display a separate, weaker web-only evidence count.
+
+### Shared detail components
+
+Current production primitives:
+- `detail/DetailHero.astro`
+- `detail/MetricStrip.astro`
+- `detail/EvidencePressure.astro`
+- `detail/RelationPath.astro`
+
+These are layout/reading primitives only. They do not own research semantics.
+
+### Pilot routes
+
+Design-system pilots:
+- Institution: `/institutions/ACT-KUT-LAB13`
+- Direction: `/directions/DIR-FAILURE-AWARE-UTVC`
+
+These pilots define the baseline for Scholar, Paper, Patent, Claim and Capability details.
+
+Principle:
+**detail page = decision-readable local knowledge graph, not a collection of object cards.**
