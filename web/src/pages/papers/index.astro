@@ -104,7 +104,7 @@ const records = vm.records.map((paper) => {
           data-person={paper.peopleIds.join('|')}
           data-search={paper.search}
         >
-          <DenseObjectRow href={href(paper.href)} ariaLabel={paper.title}>
+          <DenseObjectRow layout="detail-heavy" href={href(paper.href)} ariaLabel={paper.title}>
             <div slot="main" class="paper-main">
               <div class="topline">
                 <span>{paper.id}</span>
