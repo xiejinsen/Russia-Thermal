@@ -8,7 +8,7 @@ differentiation_confidence: MEDIUM
 phone_transfer_maturity: LOW_MEDIUM
 
 Problem:
-Long-life two-phase surfaces may accumulate capillary/wetting degradation before steady-state thermal resistance visibly collapses, but China already has strong copper-water oxidation failure, rapid lifetime prediction and dedicated VC aging-test baselines.
+Long-life two-phase surfaces may accumulate capillary/wetting degradation before steady-state thermal resistance visibly collapses. Deep reading also shows that dryout history itself can alter later wettability/capillary state in at least one strong China comparator, while China already has strong copper-water oxidation failure, rapid lifetime prediction and dedicated VC aging-test baselines.
 
 Strategic hypothesis:
 Use MPEI long-duration capillary-state aging knowledge to test whether surface/capillary-state evolution provides incremental predictive value beyond strong oxygen/oxidation/lifetime QA and generic thermal-health baselines.
@@ -26,13 +26,14 @@ related_claims:
 - CLM-OBS-005
 - CLM-OBS-006
 - CLM-OBS-007
+- CLM-OBS-008
 - CLM-CN-SJTU-004
 
 candidate_capabilities:
 - CAP-MPEI-LONGTERM-CAPILLARY-AGING
 
 strongest_baseline:
-China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
+China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; China capillary-fed repeated-dryout evidence also shows history-dependent wettability / CHF degradation in a tested wick system; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
 
 Residual differentiation:
 actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
