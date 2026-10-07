@@ -41,6 +41,20 @@ import {
 const actorById = new Map(actors.map((actor) => [actor.id, actor]));
 const capabilityById = new Map(capabilities.map((capability) => [capability.id, capability]));
 
+function institutionLineageIds(actorId: string): string[] {
+  const ids: string[] = [];
+  const seen = new Set<string>();
+  let current = actorById.get(actorId);
+
+  while (current && current.type !== 'PERSON' && !seen.has(current.id)) {
+    ids.push(current.id);
+    seen.add(current.id);
+    current = current.parentId ? actorById.get(current.parentId) : undefined;
+  }
+
+  return ids;
+}
+
 function capabilityLinks(direction: DirectionRecord): CapabilityRecord[] {
   return direction.capabilityIds
     .map((id) => capabilityById.get(id))
@@ -490,11 +504,14 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
       .filter((name): name is string => Boolean(name))
   )].sort();
 
-  const peopleNames = [...new Set(
-    linkedCaps
-      .flatMap((capability) => capability.keyPeopleIds)
-      .map((id) => actorById.get(id)?.name)
-      .filter((name): name is string => Boolean(name))
+  const peopleIds = [...new Set(linkedCaps.flatMap((capability) => capability.keyPeopleIds))].sort();
+  const peopleNames = peopleIds
+    .map((id) => actorById.get(id)?.name)
+    .filter((name): name is string => Boolean(name))
+    .sort();
+
+  const institutionIds = [...new Set(
+    linkedCaps.flatMap((capability) => institutionLineageIds(capability.actorId))
   )].sort();
 
   return {
@@ -514,7 +531,9 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
     linkedCapabilities: linkedCaps.map(capabilityDetail),
     linkedDirections: linkedDirs.map(directionCard),
     institutionNames,
-    peopleNames
+    peopleNames,
+    institutionIds,
+    peopleIds
   };
 }
 
@@ -1070,6 +1089,8 @@ export function buildClaimExplorerVM(): ClaimExplorerVM {
           directionCount: linkedDirections.length,
           directionIds: linkedDirections.map((direction) => direction.id),
           capabilityIds: linkedCapabilities.map((capability) => capability.id),
+          institutionIds: [...new Set(linkedCapabilities.flatMap((capability) => institutionLineageIds(capability.actorId)))],
+          peopleIds: [...new Set(linkedCapabilities.flatMap((capability) => capability.keyPeopleIds))],
           href: `/claims/${claim.id}`
         };
       })
@@ -1171,6 +1192,8 @@ export function buildPaperExplorerVM(): PaperExplorerVM {
         capabilityIds: card.linkedCapabilities.map((capability) => capability.id),
         supportingClaimIds: card.supportingClaims.map((claim) => claim.id),
         pressureClaimIds: card.contradictingClaims.map((claim) => claim.id),
+        institutionIds: card.institutionIds,
+        peopleIds: card.peopleIds,
         deepReadLevel: deepReadById.get(item.id)?.deepReadLevel
           ? humanize(deepReadById.get(item.id)!.deepReadLevel)
           : undefined,
