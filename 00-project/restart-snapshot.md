@@ -13,7 +13,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: WATCH
 - phone_maturity: LOW
 - residual_or_use: method/facility reserve for actual phone-class microfan source diagnosis.
-- strongest_baseline: -
+- strongest_baseline: China independently demonstrates narrow-space electronic-cooling fan aeroacoustic characterization and flow-control noise reduction; exact phone-class centrifugal microfan parity remains unresolved.
 - next_question_or_gate: Russian method yields materially better actionable design decisions than strong domestic baseline on the same phone-class fan/duct.
 
 ### DIR-EXTREME-FILM-RESERVE
