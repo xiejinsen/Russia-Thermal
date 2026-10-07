@@ -9,6 +9,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+capability_family: ENABLING
+capability_topics:
+- PASSIVE_SURFACE_ENGINEERING
+- SURFACE_PROCESS
 
 Capability statement:
 TPU demonstrates a current laser / wettability heat-transfer-surface engineering capability spanning patterned liquid behavior, copper laser processing, process durability, and partner-linked background IP.
