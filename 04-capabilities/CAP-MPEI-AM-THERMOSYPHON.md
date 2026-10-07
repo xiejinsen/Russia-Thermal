@@ -12,6 +12,11 @@ maturity: DEVICE_RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: PASSIVE_HARDWARE
+capability_topics:
+- VC_HEAT_PIPE
+- PASSIVE_PHASE_CHANGE
+- MANUFACTURING_PROCESS
 
 Capability statement:
 MPEI, in joint work with Skoltech, demonstrates current two-phase-device integration using a flat loop thermosyphon with a 3D-printed microstructured evaporator.
