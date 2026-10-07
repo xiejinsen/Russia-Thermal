@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
+import ExplorerLinkStrip from '../../components/ExplorerLinkStrip.astro';
 import { buildDirectionPageVM, directionIds } from '../../view-models/builders';
 
 export function getStaticPaths() {
@@ -63,14 +64,25 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <section class="section">
-    <div class="section-head"><div><span>CLAIMS</span><h2>Claims that support or pressure this direction</h2></div><div class="section-actions"><a href={href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`)}>View all Claims →</a></div></div>
+    <div class="section-head"><div><span>CLAIMS</span><h2>Claims that support or pressure this direction</h2></div><ExplorerLinkStrip
+      align="end"
+      links={[
+        { label: 'View all Claims →', href: href(`/claims?direction=${encodeURIComponent(vm.direction.id)}`), primary: true }
+      ]}
+    /></div>
     <div class="claim-list">
       {vm.claims.map((claim)=><a href={href(claim.href)}><div><span>{claim.status} · {claim.confidence}</span><b>{claim.proposition}</b></div><strong>Open claim →</strong></a>)}
     </div>
   </section>
 
   <section class="section">
-    <div class="section-head"><div><span>EVIDENCE</span><h2>Primary evidence behind the direction</h2></div><div class="section-actions"><a href={href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`)}>View all Evidence →</a><a href={href(`/papers?direction=${encodeURIComponent(vm.direction.id)}`)}>Papers only →</a></div></div>
+    <div class="section-head"><div><span>EVIDENCE</span><h2>Primary evidence behind the direction</h2></div><ExplorerLinkStrip
+      align="end"
+      links={[
+        { label: 'View all Evidence →', href: href(`/evidence?direction=${encodeURIComponent(vm.direction.id)}`), primary: true },
+        { label: 'Papers only →', href: href(`/papers?direction=${encodeURIComponent(vm.direction.id)}`) }
+      ]}
+    /></div>
     <div class="evidence-list">
       {vm.evidence.map((item)=><article>
         <div><span>{item.year ?? 'n.d.'} · {item.sourceType}{item.venue ? ` · ${item.venue}` : ''}</span><h3>{item.title}</h3>{item.findings[0] && <p>{item.findings[0]}</p>}</div>
@@ -99,7 +111,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
     .pyramid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
     .pyramid article{padding:20px;border:1px solid #d4e4ef;border-radius:14px;background:#fff}.pyramid .china{background:#edf6ff}.pyramid .russia{background:#eef9f6}.pyramid .gate{border-left:4px solid #5ba4dd}
     .pyramid span,.section-head span{font-size:10px;font-weight:850;letter-spacing:.08em;color:#0b67b2}.pyramid h2{font-size:17px;margin:6px 0 9px}.pyramid p{margin:0;color:#496578;line-height:1.62;font-size:13px}
-    .section{margin-top:20px;border:1px solid #cfe1ee;border-radius:16px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:30px;padding:18px 20px;border-bottom:1px solid #dce8f1;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:19px}.section-head p{max-width:480px;margin:0;color:#60798c;font-size:12px}.section-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.section-actions a{color:#0b67b2;font-size:11px;font-weight:850;white-space:nowrap}
+    .section{margin-top:20px;border:1px solid #cfe1ee;border-radius:16px;background:#fff;overflow:hidden}.section-head{display:flex;justify-content:space-between;gap:30px;padding:18px 20px;border-bottom:1px solid #dce8f1;background:#f9fcfe}.section-head h2{margin:4px 0 0;font-size:19px}.section-head p{max-width:480px;margin:0;color:#60798c;font-size:12px}
     .actor-grid{display:grid;grid-template-columns:1fr 1fr}.actor-column{padding:18px}.actor-column:first-child{border-right:1px solid #e0ebf3}.actor-column h3{font-size:13px;color:#526d82}.actor-column a{display:grid;gap:4px;padding:12px 0;border-top:1px solid #edf2f6;text-decoration:none}.actor-column a b{font-size:13px}.actor-column a span{color:#637c8f;font-size:11px;line-height:1.45}
     .cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#f6fafd}.cap-grid article{padding:16px;border:1px solid #d9e7f1;border-radius:11px;background:white}.cap-grid .cap-title{display:block;color:inherit;font-size:13px;font-weight:800;line-height:1.5;text-decoration:none}.cap-grid .cap-title:hover,.cap-grid .cap-title:focus-visible{color:#0b67b2;text-decoration:underline;text-underline-offset:.16em}.cap-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0 0}.cap-grid dt{font-size:9px;color:#6b8192;text-transform:uppercase}.cap-grid dd{margin:2px 0 0;font-size:11px;font-weight:800}
     .claim-list a{display:flex;justify-content:space-between;gap:20px;padding:15px 20px;border-bottom:1px solid #e4edf4;text-decoration:none}.claim-list a>div{display:grid;gap:5px}.claim-list span{font-size:9px;color:#0b67b2;text-transform:uppercase}.claim-list b{font-size:13px;line-height:1.45}.claim-list strong{white-space:nowrap;font-size:11px;color:#0b67b2}
