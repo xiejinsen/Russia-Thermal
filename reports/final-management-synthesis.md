@@ -244,17 +244,19 @@ It does not replace:
 
 ## Now
 
-1. Prepare a one-page outreach brief for Kutateladze Lab 1.3 focused on:
+Internal outreach-readiness materials are prepared:
+
+1. [P1 Kutateladze Technical Brief](outreach-prep/P1-KUTATELADZE-TECHNICAL-BRIEF.md)
    - crisis-state labels;
    - raw data availability;
    - repeatability;
    - data/IP constraints.
 
-2. Prepare a data-availability questionnaire for MPEI.
-   - Do not open a project unless long-duration information beyond the published endpoint is accessible.
+2. [P2 MPEI Data Availability Questionnaire](outreach-prep/P2-MPEI-DATA-QUESTIONNAIRE.md)
+   - do not open a project unless long-duration information beyond the published endpoint is accessible.
 
 3. Take no proactive TPU action.
-   - Keep only the reopen checklist.
+   - keep only the reopen checklist.
 
 ## After partner confirmation
 
