@@ -544,9 +544,9 @@ export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
 
   return {
     eyebrow: 'Evidence graph',
-    title: 'Evidence Explorer',
+    title: 'Evidence Explorer — All Sources',
     summary:
-      'Primary sources are shown with the Claims they support or contradict, then connected onward to Capabilities and Directions. Filters operate on derived normalized relations and never rewrite canonical research state.',
+      'The complete primary-source collection: Papers, patents, official profiles, rankings, conference/journal sources and other verified evidence. Papers are a subset of this Evidence collection; filters operate on derived normalized relations and never rewrite canonical research state.',
     totalEvidence: evidence.length,
     totalClaims: claims.length,
     records,
@@ -1152,9 +1152,9 @@ export function buildPaperExplorerVM(): PaperExplorerVM {
     .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title));
 
   return {
-    title: 'Papers',
+    title: 'Papers — Scholarly Sources & Deep Reads',
     summary:
-      'Peer-reviewed and scholarly paper records connected to the Claim / Capability / Direction graph. Paper pages summarize only canonical extracted findings and boundaries.',
+      'The scholarly-paper subset of the Evidence collection. Every Paper is also an Evidence Source; only decision-critical papers receive an additional Deep Read / 10Q layer.',
     records: papers.map((item) => {
       const card = evidenceCard(item);
       return {
