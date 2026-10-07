@@ -286,3 +286,44 @@ Organization/Lab/Company may own verified coordinates. Person normally inherits 
 3. Directions / Claims / Papers list and detail routes.
 4. China comparator Actor enrichment + China Research Map.
 5. Promote the selected Intelligence design to the production homepage and wire all drill-down links.
+
+
+## 13. High-cardinality research-object navigation
+
+Use different presentation modes based on object cardinality and user intent.
+
+### Single object
+A specific named object always opens its detail page:
+- Claim -> Claim detail;
+- Paper -> Paper detail;
+- Capability -> Capability detail;
+- Direction -> Direction detail;
+- Institution / Scholar -> their detail pages.
+
+### Object set / relationship exploration
+"View all", "Explore related", evidence-set and relationship-set actions should open the relevant Explorer with URL-addressable filters rather than a single detail page.
+
+Target pattern:
+- `/claims?direction=DIR-...`
+- `/papers?direction=DIR-...`
+- `/papers?claim=CLM-...&relation=supporting`
+
+Filter state should become shareable / reload-safe URL state as the Explorer interaction layer matures.
+
+### Dense Explorer rule
+High-cardinality objects such as Papers and Claims use spreadsheet-like dense tables, not vertically expensive cards.
+
+Default desktop interaction:
+- one row per object;
+- compact single-line sticky filter bar immediately below the site header;
+- filter labels embedded into the control's default option (for example `Country: All`) rather than occupying a separate row;
+- sticky table column header;
+- bounded scroll body;
+- full-text search;
+- visible result count;
+- row click / object-name click opens the detail page.
+
+On narrow viewports, preserve the single filter row using horizontal overflow before falling back to multi-line controls.
+
+Principle:
+**high-cardinality index = dense Explorer; low-cardinality strategic set = cards; single-object understanding = detail page.**
