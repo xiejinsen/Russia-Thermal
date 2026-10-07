@@ -7,17 +7,23 @@ interface Props {
   total: number;
   sticky?: boolean;
   compact?: boolean;
+  urlFilterKeys?: string[];
 }
 const {
   filters,
   searchPlaceholder = 'Search records…',
   total,
   sticky = false,
-  compact = false
+  compact = false,
+  urlFilterKeys = []
 } = Astro.props;
 ---
 
-<div class:list={['explorer-toolbar', { sticky, compact }]} data-explorer-toolbar>
+<div
+  class:list={['explorer-toolbar', { sticky, compact }]}
+  data-explorer-toolbar
+  data-url-filter-keys={urlFilterKeys.join('|')}
+>
   <label class="search-box">
     <span>Search</span>
     <input type="search" placeholder={searchPlaceholder} data-explorer-search />
@@ -32,6 +38,8 @@ const {
       </select>
     </label>
   ))}
+
+  <div class="toolbar-scope" data-explorer-scope hidden></div>
 
   <div class="toolbar-result">
     <strong data-explorer-count>{total}</strong>
@@ -52,43 +60,122 @@ const {
     const filters = [...toolbar.querySelectorAll<HTMLSelectElement>('[data-explorer-filter]')];
     const reset = toolbar.querySelector<HTMLButtonElement>('[data-explorer-reset]');
     const count = toolbar.querySelector<HTMLElement>('[data-explorer-count]');
+    const scope = toolbar.querySelector<HTMLElement>('[data-explorer-scope]');
     const records = [...root.querySelectorAll<HTMLElement>('[data-explorer-record]')];
+    const extraKeys = (toolbar.dataset.urlFilterKeys ?? '').split('|').filter(Boolean);
 
     const values = (record: HTMLElement, key: string) =>
       (record.dataset[key] ?? '').split('|').map((value) => value.trim()).filter(Boolean);
 
+    const params = () => new URLSearchParams(window.location.search);
+
+    const relationMatches = (record: HTMLElement, url: URLSearchParams) => {
+      const claim = url.get('claim');
+      const relation = url.get('relation')?.toLowerCase();
+      if (!claim || !relation) return true;
+      if (relation === 'supporting' || relation === 'support') {
+        return values(record, 'supportingClaim').includes(claim);
+      }
+      if (relation === 'pressure' || relation === 'contradicting' || relation === 'contradict') {
+        return values(record, 'pressureClaim').includes(claim);
+      }
+      return true;
+    };
+
+    const syncControlsFromUrl = () => {
+      const url = params();
+      if (search) search.value = url.get('q') ?? '';
+      filters.forEach((select) => {
+        const key = select.dataset.filterKey ?? '';
+        const requested = url.get(key) ?? '';
+        select.value = [...select.options].some((option) => option.value === requested) ? requested : '';
+      });
+    };
+
+    const updateScope = (url: URLSearchParams) => {
+      if (!scope) return;
+      const labels: string[] = [];
+      for (const key of extraKeys) {
+        const value = url.get(key);
+        if (value) labels.push(`${key}: ${value}`);
+      }
+      const relation = url.get('relation');
+      if (relation && !extraKeys.includes('relation')) labels.push(`relation: ${relation}`);
+      scope.textContent = labels.length ? `Scope · ${labels.join(' · ')}` : '';
+      scope.hidden = labels.length === 0;
+    };
+
+    const writeUrlFromControls = () => {
+      const url = new URL(window.location.href);
+      const query = search?.value.trim() ?? '';
+      if (query) url.searchParams.set('q', query);
+      else url.searchParams.delete('q');
+
+      filters.forEach((select) => {
+        const key = select.dataset.filterKey ?? '';
+        if (!key) return;
+        if (select.value) url.searchParams.set(key, select.value);
+        else url.searchParams.delete(key);
+      });
+
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    };
+
     const apply = () => {
-      const query = (search?.value ?? '').trim().toLowerCase();
+      const url = params();
+      const query = (url.get('q') ?? search?.value ?? '').trim().toLowerCase();
       let visible = 0;
 
       for (const record of records) {
         const searchable = (record.dataset.search ?? '').toLowerCase();
         const searchMatch = !query || searchable.includes(query);
 
-        const filterMatch = filters.every((select) => {
-          const selected = select.value;
-          if (!selected) return true;
+        const visibleFilterMatch = filters.every((select) => {
           const key = select.dataset.filterKey ?? '';
+          const selected = url.get(key) ?? select.value;
+          if (!selected) return true;
           return values(record, key).includes(selected);
         });
 
-        const matched = searchMatch && filterMatch;
+        const extraFilterMatch = extraKeys.every((key) => {
+          if (key === 'relation') return true;
+          const selected = url.get(key);
+          if (!selected) return true;
+          return values(record, key).includes(selected);
+        });
+
+        const matched = searchMatch && visibleFilterMatch && extraFilterMatch && relationMatches(record, url);
         record.hidden = !matched;
         if (matched) visible += 1;
       }
 
       if (count) count.textContent = String(visible);
+      updateScope(url);
     };
 
-    search?.addEventListener('input', apply);
-    filters.forEach((select) => select.addEventListener('change', apply));
+    const onControlChange = () => {
+      writeUrlFromControls();
+      apply();
+    };
+
+    search?.addEventListener('input', onControlChange);
+    filters.forEach((select) => select.addEventListener('change', onControlChange));
+
     reset?.addEventListener('click', () => {
-      if (search) search.value = '';
-      filters.forEach((select) => { select.value = ''; });
+      const url = new URL(window.location.href);
+      url.search = '';
+      window.history.replaceState({}, '', `${url.pathname}${url.hash}`);
+      syncControlsFromUrl();
       apply();
       search?.focus();
     });
 
+    window.addEventListener('popstate', () => {
+      syncControlsFromUrl();
+      apply();
+    });
+
+    syncControlsFromUrl();
     apply();
   });
 </script>
@@ -140,6 +227,20 @@ const {
     padding:4px 8px;
     border-radius:6px;
     font-size:.75rem;
+  }
+  .explorer-toolbar.compact .toolbar-scope{
+    flex:0 0 auto;
+    max-width:18rem;
+    overflow:hidden;
+    padding:5px 8px;
+    border:1px solid #d8e7f1;
+    border-radius:6px;
+    background:#f8fbfd;
+    color:#5a7183;
+    font-size:.63rem;
+    font-weight:800;
+    text-overflow:ellipsis;
+    white-space:nowrap;
   }
   .explorer-toolbar.compact .toolbar-result{
     display:flex;
