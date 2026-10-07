@@ -23,7 +23,7 @@ V2REPO_PATH = ROOT / "tools" / "v2repo.py"
 DEFAULT_OUT = ROOT / "web" / "data" / "generated"
 SCHEMA_VERSION = "1.0"
 VISIBILITY_DIR = ROOT / "00-project" / "visibility-dispositions"
-DEEP_READ_ROOT = ROOT / "01-evidence" / "papers"
+DEEP_READ_ROOTS = [ROOT / "01-evidence" / "papers", ROOT / "01-evidence" / "patents"]
 
 
 def markdown_role_map(path: Path) -> dict[str, str]:
@@ -214,15 +214,18 @@ def deep_read_boundary(text: str) -> dict[str, str]:
 
 def load_deep_reads() -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
-    if not DEEP_READ_ROOT.exists():
-        return records
 
-    for path in sorted(DEEP_READ_ROOT.glob("*/deep-read.md")):
+    paths: list[Path] = []
+    for root in DEEP_READ_ROOTS:
+        if root.exists():
+            paths.extend(root.glob("*/deep-read.md"))
+
+    for path in sorted(paths):
         text = path.read_text(encoding="utf-8")
         meta = deep_read_metadata(text)
-        paper_id = meta.get("paper_id", "").strip()
+        source_id = (meta.get("paper_id") or meta.get("patent_id") or "").strip()
         records.append({
-            "id": paper_id,
+            "id": source_id,
             "deepReadLevel": meta.get("deep_read_level", "").strip(),
             "reviewStatus": meta.get("review_status", "").strip(),
             "reviewedAt": meta.get("reviewed_at", "").strip(),
