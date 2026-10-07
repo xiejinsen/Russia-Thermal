@@ -6,6 +6,8 @@ key_people:
 - PERSON-LYULIN-YV
 - PERSON-DEDOV-AV
 - PERSON-EVLASHIN
+collaborating_actors:
+- ACT-SKOLTECH
 maturity: DEVICE_RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
