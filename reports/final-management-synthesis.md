@@ -1,429 +1,279 @@
-# Russia Thermal Management — Final Management Synthesis (V2)
+# Russia Thermal Management — Final Management Synthesis (V3)
 
-status: LEADERSHIP_DERIVED_VIEW
-phase: PHASE1_FINAL_MANAGEMENT_SYNTHESIS
-date: 2026-10-06
+status: CURRENT_LEADERSHIP_DERIVED_VIEW
+phase: PHASE1_FROZEN
+date: 2026-10-07
 
-> Leadership decision document.  
-> Canonical facts remain in `01-evidence/`, `02-claims/`, `03-actors/`, `04-capabilities/`, `05-directions/`, and `07-decisions/`.
+> Leadership decision document derived from canonical V2.1 objects.  
+> Canonical authority remains in `01-evidence/`, `02-claims/`, `03-actors/`, `04-capabilities/`, `05-directions/`, and `07-decisions/`.
 
 ---
 
 # 1. Executive Decision
 
-## 1.1 What we should conclude
+## Bottom line
 
-**Russia is not broadly ahead of China in smartphone thermal management.**
+**Russia is a selective complement, not a broad smartphone-thermal leader versus China.**
 
-China is stronger in:
+China remains stronger in:
 - ultra-thin VC / heat-spreader engineering;
-- copper-water product and manufacturing reliability;
+- copper-water manufacturing and reliability;
 - wick / surface / microchannel productization;
-- supply chain and mobile-system integration.
+- mobile-system integration.
 
-The credible Russian opportunity is narrower:
+The surviving Russian value is narrower:
+- mechanism-resolved failure physics;
+- rare long-calendar reliability ground truth;
+- selected process / diagnostics competence;
+- analytical / mechanism reserves.
 
-> **selective mechanism depth + long-duration reliability knowledge + niche process capability**
+## Current management action
 
-This is useful as a **complement** to Chinese device engineering and our own smartphone integration capability.
+There is **one primary collaboration action**, not three equal partner packages.
 
-## 1.2 What leadership should decide
+| Priority | Partner | Current management state | Action |
+| --- | --- | --- | --- |
+| **P1** | Kutateladze Lab 1.3 / Alexander Pavlenko | **PRIMARY / STRATEGIC_CANDIDATE** | Contact first when outreach is possible |
+| **P2** | MPEI / Nikita Ivanov + team | **CONDITIONAL RESERVE** | Contact only if long-duration data access is plausible |
+| **P3** | TPU / Feoktistov + Orlova | **HOLD / REOPEN-ONLY** | No proactive engagement |
 
-Recommended decision:
-
-1. **Prioritize two Russian partner packages for future contact**
-   - **P1: Kutateladze Lab 1.3 / Pavlenko**
-   - **P2: MPEI / Ivanov + Kuzma-Kichta**
-
-2. **Keep TPU as a bounded process challenger**
-   - engage only around a concrete thin-copper / wettability / sealed-VC process question.
-
-3. **Do not invest management attention in broad Russia-country narratives**
-   - no broad Russian advantage in ultra-thin VC, generic LHP, microchannel, materials, DVFS or aeroacoustics.
-
-4. **Retain several supporting nodes**
-   - BMSTU / Zubkov;
-   - MPEI–Skoltech additive two-phase line;
-   - Frumkin Institute;
-   - Kutateladze Lab 6.6;
-   - NovSU / Yuri Kiliba electroosmotic orientation-tolerance research;
-   - UUST / Olga Solnyshkina structured microchannel research;
-   - modeling network.
-
-## 1.3 Recommended collaboration model
-
-**Russia:** mechanism / diagnostics / specialized process knowledge  
-× **China:** ultra-thin device / manufacturing / reliability engineering  
-× **Us:** smartphone architecture / constraints / integration / validation / foreground IP  
-→ **joint differentiated capability**
-
-The strategy is **complementary, not substitutive**.
+Detailed action packages:
+- [OPP-01 — Kutateladze mechanism-resolved failure ground truth](collaboration-opportunities/OPP-01-KUTATELADZE-FAILURE-GROUND-TRUTH.md)
+- [OPP-02 — MPEI long-duration reliability data reserve](collaboration-opportunities/OPP-02-MPEI-LONG-DURATION-RELIABILITY.md)
+- [OPP-03 — TPU process-capability reopen checklist](collaboration-opportunities/OPP-03-TPU-PROCESS-REOPEN.md)
 
 ---
 
-# 2. Why This Is the Right Framing
+# 2. Current Portfolio
 
-## 2.1 Russia vs China capability heatmap
+## Strategic Candidate
 
-| Capability area | China baseline | Russia residual | Decision |
-|---|---|---|---|
-| Ultra-thin VC / device integration | Strong | Weak | China dominant |
-| Dryout / rewetting | Strong | narrow crisis-mechanism residual | collaborate only on mechanism depth |
-| Wick / capillary engineering | Strong | selected process routes | supporting opportunity |
-| Long-term two-phase reliability | Strong product/process QA | unusual multi-year capillary-aging evidence | meaningful complement |
-| Laser / biphilic surfaces | Strong | TPU process execution | challenger only |
-| Thin-film instability | Strong global competition | Kutateladze mechanism lineage | reserve |
-| Microchannel cooling | Very strong current embedded / near-junction / flow-boiling programs | UUST and other supporting Russian research nodes, but no distinct system edge | China stronger; support only |
-| LHP / active capillary assistance | Strong current miniaturization + established global electroosmotic prior art | foundational Russian knowledge; NovSU current electroosmotic orientation-tolerance execution | watch / support |
-| Aeroacoustics | Strong electronics-specific stack | Russian methods | watch |
-| Materials / TIM / graphite | Strong | no clear Russian edge | do not invest |
-| Thermal control / DVFS | Strong / crowded | no clear Russian edge | do not invest |
-| Analytical stability / modeling | Strong globally | Russian analytical tradition | enabling reserve |
-| Diagnostics / failure physics | Strong but fragmented | selected Russian depth | collaboration value |
+### Failure-aware UTVC — Kutateladze Lab 1.3
 
-## 2.2 What China already covers
+Retained residual:
+- reversible / irreversible crisis taxonomy;
+- confinement-dependent crisis modes;
+- topology-linked drying-front behavior;
+- mechanism-resolved laboratory ground truth.
 
-The China baseline is not weak.
+Explicitly excluded:
+- generic dryout observer;
+- generic dryout model;
+- generic wick / surface treatment;
+- generic dryout-mitigation hardware;
+- phone-UTVC architecture ownership.
 
-Key anchors include:
-- **Shanghai Jiao Tong University** — micro/nano phase change, dielectric-fluid ultra-thin composite wick, near-junction / 3D-chip thermal management, microchannel boiling;
-- **Peking University** — extreme near-junction embedded microfluidic cooling with explicit pressure-drop / pumping-power performance;
-- **Fudan University** — package-level microchannel design plus 2026 wafer-level SiC embedded microfluidic cooling;
-- **Beijing Institute of Technology** — ultra-thin high-performance VC / flat heat pipes, porous-capillary characterization and current microchannel boiling;
-- **Guangdong University of Technology** — capillary-fed dryout / rewetting / wettability degradation;
-- **East China Jiaotong University** — laser-modified UTVC wick / device path;
-- **Chinese copper-water VC ecosystem** — oxidation failure, lifetime prediction, pre-encapsulation aging, design/manufacture/test integration.
+Current decision:
+**advance only as a laboratory ground-truth / model-falsification collaboration hypothesis.**
 
-Therefore the Russia thesis must stay narrow:
+## Strategic Reserves
 
-> Russia is valuable where it adds mechanism depth, unusual long-duration evidence, or a distinct process route — not because China lacks thermal-management capability.
+### Health-aware UTVC — MPEI
 
----
+Retained residual:
+- actual 42-month calendar operation;
+- post-operation capillary-state degradation;
+- rare long-duration mechanism evidence.
 
-# 3. Partner Portfolio
+Current decision:
+**reserve only; promote only if time-resolved data or a phone-relevant reproduction adds information beyond China chemistry/process/lifetime baselines.**
 
-## 3.1 Management comparison
+### Foundational Modeling
 
-| Priority | Partner | Key people | Residual value | Collaboration readiness | Best role | Main risk | Recommended action |
-|---|---|---|---|---|---|---|---|
-| **P1** | Kutateladze Lab 1.3 | Pavlenko; Surtaev; Shvetsov; Zhukov | reversible → irreversible boiling-crisis / dry-spot interpretation | **High** | mechanism / failure-state partner | phone copper-water transfer unproven | contact first when outreach is possible |
-| **P2** | MPEI heat-transfer ecosystem | Ivanov; Kuzma-Kichta; Alyautdinova | multi-year engineered-surface / capillary aging | **Med-High** | reliability / aging partner | thermosyphon/R410A scale transfer | contact second; pair Ivanov + Kuzma-Kichta |
-| **P3** | TPU surface-process line | Feoktistov; Orlova | laser/wettability process execution | **Medium** | sample/process challenger | sealed phone-VC compatibility unproven | engage only with bounded process question |
-| Support | BMSTU | Zubkov | deformational-cutting copper wick | Medium | wick/process challenger | no sub-mm sealed device evidence | retain for future wick process comparison |
-| Support | MPEI + Skoltech | Lyulin; Dedov; Evlashin | additive two-phase device prototyping | Medium | prototype/fabrication support | architecture too large for phone | use as MPEI engineering breadth |
-| Support | Frumkin Institute | Boinovich; Emelyanenko team | wettability / surface chemistry | Medium | surface chemistry support | sealed-system chemistry unknown | use only when chemistry is a key uncertainty |
+Retained residual:
+- exact / group-invariant benchmark solutions;
+- neutral-stability boundaries;
+- inverse parameter closure.
 
----
+Current decision:
+**reserve / enabler; no evidence that Russia currently owns the product-level UTVC modeling control point.**
 
-# 4. Priority 1 — Kutateladze Lab 1.3
+### Extreme Film
 
-## Why leadership should care
+Retained residual:
+- gas-shear free-surface flow-pattern / dry-spot / rupture knowledge;
+- extreme-confinement mechanism mapping;
+- current staged gas/droplet/liquid-film electronics IP.
 
-**This is the strongest current Russian partner package for phase-change failure mechanism work.**
+Current decision:
+**high-risk mechanism/IP reserve; phone parasitic power, noise, volume and sealing remain unresolved.**
 
-What is genuinely differentiated:
-- boiling crisis / dry-spot physics;
-- reversible vs irreversible failure behavior;
-- optical / IR mechanism diagnostics;
-- ability to discuss failure boundaries rather than just temperature thresholds.
+## Watch / Hold
 
-Why the team is collaboration-ready:
-- repeated industrial / international collaboration;
-- Huawei / Bel Huawei public collaboration evidence;
-- current China collaboration and RSF/NSFC activity;
-- named senior scientific anchor: **Alexander Pavlenko**.
-
-## What we should collaborate on
-
-Not:
-- generic dryout detection;
-- complete smartphone cooling design.
-
-Instead:
-- failure-state taxonomy;
-- crisis-transition mechanism;
-- design-rule / diagnostic interpretation;
-- phone-relevant transfer of mechanism knowledge.
-
-## What must be proven later
-
-- transfer from dielectric/open/thin-layer rigs to sealed copper-water UTVC;
-- relevance at phone thickness and geometry;
-- partner willingness / data access / IP terms.
-
-## Recommendation
-
-**KEEP — PRIORITY 1**
-
-Detailed dossier:
-[leadership-dossiers/kutateladze-lab13.md](leadership-dossiers/kutateladze-lab13.md)
+- LHP knowledge reserve — WATCH.
+- Aeroacoustic method reserve — WATCH.
+- MPEI ordered-wick — HOLD.
+- TPU surface-process line — HOLD.
 
 ---
 
-# 5. Priority 2 — MPEI
+# 3. Why the Primary Thesis Survives
 
-## Why leadership should care
+Failure-aware UTVC remains the only Strategic Candidate **after** strong comparator pressure.
 
-**MPEI offers the strongest Russian complement on long-duration surface / capillary aging and engineering execution.**
+Current reachable evidence chain:
+- 22 sources;
+- 5 Russia-side sources;
+- 17 China/global comparator sources;
+- 18 Deep Reads.
 
-What is genuinely differentiated:
-- actual multi-year operation of an engineered surface;
-- capillary / imbibition state evolution;
-- evidence that local capillary condition can change while overall thermal behavior remains comparatively stable;
-- Newfrost implementation/manufacturing chain;
-- broader current two-phase / microchannel / additive-device activity.
+The thesis therefore does not survive because Russia has more publications.
 
-## What we should collaborate on
+It survives because the remaining narrow mechanism labels have not yet been shown to be fully redundant with:
+- internal pressure / temperature sensing;
+- saturation-state dynamics;
+- boiling-aware VC models;
+- China dryout-mitigation engineering.
 
-Not:
-- generic VC lifetime prediction;
-- generic reliability QA.
-
-Instead:
-- degradation taxonomy;
-- capillary / wetting aging labels;
-- long-duration mechanism interpretation;
-- selected controlled-aging experiments on phone-relevant structures.
-
-## What must be proven later
-
-- transfer from R410A / thermosyphon conditions to copper-water UTVC;
-- repeatability across samples;
-- exact Newfrost role;
-- phone-scale fabrication compatibility.
-
-## Recommendation
-
-**KEEP — PRIORITY 2**
-
-Detailed dossier:
-[leadership-dossiers/mpei-heat-transfer.md](leadership-dossiers/mpei-heat-transfer.md)
+That remaining uncertainty is exactly what a bounded collaboration should falsify.
 
 ---
 
-# 6. Priority 3 — TPU
+# 4. Why P2 and P3 Are Not Equal Bets
 
-## Why leadership should care
+## MPEI
 
-TPU is not a broad strategic partner, but it may be a useful **surface-process challenger**.
+China already provides a stronger product path:
+- oxidation failure physics;
+- oxygen-linked lifetime prediction;
+- production oxidation grading;
+- accelerated mobile aging;
+- VC aging-test prior art.
 
-Retained value:
-- laser micro/nanostructuring;
-- wettability control;
-- current process IP;
-- sample/process execution;
-- current team continuity.
+MPEI's 42-month evidence remains unusual, but rarity alone is not a product control point.
 
-China already has strong laser-modified UTVC work, so novelty is not the reason to collaborate.
+Therefore:
+**data access is a prerequisite to collaboration value.**
 
-## What we should collaborate on
+## TPU
 
-Only around a bounded question such as:
+China already demonstrates:
+- optimized laser-treated UTVC wick;
+- oxidation / corrosion / laser process comparison;
+- 0.39 mm integrated UTVC;
+- 0.4 mm wettability-patterned UTVC;
+- biphilic/self-driven VC patent prior art;
+- hierarchical laser-wick prior art.
 
-> Can TPU fabricate a thin-copper, low-outgassing, vacuum-stable, DI-water-compatible pattern that improves confined rewetting / dryout behavior?
+Therefore:
+**generic laser or spatial wettability patterning is not a TPU differentiation.**
 
-## Recommendation
-
-**KEEP — PRIORITY 3 / CHALLENGER**
-
-Detailed dossier:
-[leadership-dossiers/tpu-surface-process.md](leadership-dossiers/tpu-surface-process.md)
-
----
-
-# 7. Supporting Russian Capability Nodes
-
-These should be visible, but should not dilute the top-three message.
-
-## BMSTU / Nikolay Zubkov
-
-New value:
-- deformational cutting;
-- copper capillary structures;
-- heat-pipe wick manufacturing;
-- current capillary-pressure work.
-
-Decision:
-**Supporting manufacturing challenger.**
-
-## MPEI + Skoltech
-
-New value:
-- 3D-printed microstructured evaporator;
-- loop thermosyphon device integration;
-- cross-institution fabrication capability.
-
-Decision:
-**Supporting MPEI engineering breadth.**
-
-## Frumkin Institute
-
-New value:
-- wettability / hydrophobic surface chemistry;
-- selective functionalization of laser-textured copper.
-
-Decision:
-**Supporting surface-chemistry node.**
-
-## NovSU / Yuri Kiliba
-
-New value:
-- current electroosmotic pump + heat-pipe work aimed at orientation-tolerant electronics cooling;
-- physical pump prototype and continuing 2023-2025 research line;
-- useful active-capillary / orientation-sensitivity research capability.
-
-Comparator pressure:
-- electroosmotic electronics cooling was experimentally demonstrated globally decades earlier;
-- electroosmotic enhancement of micro heat pipes is also established prior art;
-- phone-scale voltage, parasitic power, volume, EMI and lifetime are unresolved.
-
-Decision:
-**Supporting / frontier-watch node. Do not create a new strategic direction.**
-
-## UUST / Olga Solnyshkina
-
-New value:
-- active 2024-2026 structured microchannel program;
-- experimental micro/mini-channel heat exchangers, silicon/glass process work and thermal-field diagnostics;
-- explicit electronics-cooling motivation.
-
-Comparator pressure:
-- PKU has current embedded near-junction microfluidic cooling with explicit pumping-power accounting;
-- SJTU and SEU have current near-junction / 3D / flow-boiling microchannel programs closer to chip/device integration.
-
-Decision:
-**Supporting microchannel research node. China comparator remains stronger; no priority promotion.**
-
-## MISIS / Vladimir Khovaylo
-
-New value:
-- current thermoelectric / solid-state thermal-control materials research relevant to compact temperature-control concepts;
-- credible materials-side capability with a current responsible-person anchor.
-
-Comparator pressure:
-- the evidence is materials-led rather than a complete electronics cooling-device program;
-- package integration, COP, thickness and smartphone power overhead remain unproven;
-- strong China/global solid-state and conventional mobile thermal baselines remain.
-
-Decision:
-**Supporting materials comparator only. Do not reopen the broad Russia thermal-material advantage thesis.**
-
-## Other reserves
-
-- Kutateladze Lab 6.6 — thin-film / rupture / instability reserve;
-- ICM / Lavrentyev / NSU — modeling / stability enabler;
-- ITP UB RAS / Maydanik + NovSU / Kiliba — LHP / active-capillary knowledge and orientation-tolerance watch;
-- TsAGI / PNRPU — aeroacoustic method reserve.
-
-See:
-[Reserve / Watch Appendix](leadership-dossiers/reserve-watch-appendix.md)
+TPU is retained only as a process-capability reopen option.
 
 ---
 
-# 8. What We Explicitly Reject
+# 5. Collaboration Model
 
-The project should **not** recommend investment based on the following broad claims:
+The intended ownership model is:
 
-- Russia is stronger in ultra-thin VC;
-- Russia has unique generic dryout / rewetting capability;
-- Russia is broadly ahead in laser / biphilic surfaces;
-- Russia is broadly ahead in LHP;
-- Russia is broadly ahead in microchannels;
-- Russia has a unique electroosmotic-cooling principle for electronics / micro heat pipes;
-- Russia has a clear smartphone thermal-material / TIM / graphite advantage;
-- generic Russian smartphone DVFS is differentiated;
-- Russia has a broad aeroacoustic advantage;
-- Russia is uniquely strong in nonlinear stability mathematics in a way that directly creates product advantage.
+**Russia**
+- mechanism ground truth;
+- rare long-duration data;
+- selected process / diagnostic expertise.
 
-Why this matters:
+×
 
-> The shortlist is narrow because the broader candidate set was pressure-tested and downgraded — not because the research scope was narrow.
+**China / domestic baseline**
+- ultra-thin device engineering;
+- manufacturing;
+- reliability QA;
+- strong comparator hardware/process paths.
 
-Canonical ledger:
+×
+
+**Our team**
+- phone architecture;
+- package / geometry constraints;
+- internal models;
+- product telemetry;
+- validation;
+- manufacturing decision;
+- foreground product IP.
+
+The strategy is complementary, not substitutive.
+
+---
+
+# 6. Explicit Do-Not-Invest Conclusions
+
+Do not invest based on broad claims that Russia is ahead in:
+
+- ultra-thin VC;
+- generic dryout / rewetting;
+- generic laser / biphilic surfaces;
+- LHP;
+- microchannels;
+- thermal materials / TIM / graphite;
+- smartphone DVFS;
+- aeroacoustics;
+- nonlinear stability mathematics as a direct product differentiator.
+
+The shortlist is narrow because the broader candidate set was pressure-tested and downgraded.
+
+Canonical decision ledger:
 [../07-decisions/kill-ledger.md](../07-decisions/kill-ledger.md)
 
 ---
 
-# 9. Recommended Action Plan
+# 7. Evidence Closure
 
-## Stage 1 — management alignment
+Current decision-critical evidence state:
 
-Confirm:
-- P1 / P2 are worth future engagement;
-- TPU remains a bounded challenger;
-- supporting nodes stay reserve until a concrete need appears.
+- 50 canonical papers;
+- 36 paper Deep Reads;
+- 17 canonical patents;
+- 16 patent Deep Reads;
+- 52 total Deep Reads;
+- decision-critical paper Tier-A gaps: 0;
+- decision-critical patent Tier-A gaps: 0;
+- semantic orphan Sources: 0;
+- semantic orphan Claims: 0;
+- Graph Audit: PASS.
 
-## Stage 2 — direct partner confirmation
+This is sufficient for the current **public-evidence portfolio decision**.
 
-When outreach becomes possible, verify only what desk research cannot resolve:
-
-### Kutateladze / Pavlenko
-- shareable crisis / dry-spot data;
-- mechanism transfer to confined copper-water;
-- current collaboration scope boundaries;
-- available team / facilities.
-
-### MPEI / Ivanov + Kuzma-Kichta
-- long-duration raw histories;
-- repeatability;
-- exact Newfrost implementation role;
-- phone-relevant copper-water experiment capability.
-
-### TPU / Feoktistov + Orlova
-- thin-copper process window;
-- feature height;
-- vacuum / DI-water / outgassing stability;
-- sample fabrication capability.
-
-## Stage 3 — only then design joint validation
-
-Do not design a full product PoC before partner capability and data availability are confirmed.
+It does not replace:
+- direct partner confirmation;
+- partner data access;
+- phone-scale experiments;
+- legal FTO analysis.
 
 ---
 
-# 10. Frontier Watch
+# 8. Recommended Next Actions
 
-The project should now move from broad research to **lightweight monitoring**.
+## Now
 
-Primary Russia discovery surfaces:
-- AVTFG;
-- Russian National Heat Transfer Conference (RNKT);
-- Thermophysics and Aeromechanics;
-- High Temperature.
+1. Prepare a one-page outreach brief for Kutateladze Lab 1.3 focused on:
+   - crisis-state labels;
+   - raw data availability;
+   - repeatability;
+   - data/IP constraints.
 
-NovSU and UUST are examples of the intended frontier-watch discipline: both are real current capabilities, but neither is promoted simply because it was newly discovered.
+2. Prepare a data-availability questionnaire for MPEI.
+   - Do not open a project unless long-duration information beyond the published endpoint is accessible.
 
-Promote a new node only when at least two are true:
-1. direct electronics/mobile transfer;
-2. current 2024–2026 continuity;
-3. repeat publication/project lineage;
-4. device/process evidence;
-5. distinct control point not already represented.
+3. Take no proactive TPU action.
+   - Keep only the reopen checklist.
 
-This keeps the project fresh without reopening broad research.
+## After partner confirmation
 
----
+Only then define a bounded Stage-0 experiment.
 
-# 11. Final Management Message
-
-> **Russia is not broadly ahead of China in smartphone thermal hardware.**  
-> The opportunity is selective. Kutateladze Lab 1.3 offers strong failure-mechanism depth and the best collaboration-readiness signal; MPEI offers unusual long-duration surface/capillary aging knowledge with a credible engineering chain; TPU is a useful process challenger.  
-> China remains stronger in ultra-thin device engineering, manufacturing reliability and product integration.  
-> The recommended strategy is to combine Russian mechanism/process depth with Chinese engineering strengths and our own smartphone system ownership.
-
-## Recommended decision
-
-**Proceed with a two-partner priority model:**
-1. **Pavlenko / Kutateladze Lab 1.3**
-2. **Ivanov + Kuzma-Kichta / MPEI**
-
-Keep TPU and the supporting nodes as targeted reserves.
+Do not design a full product PoC before data / capability / IP feasibility is known.
 
 ---
 
-# Appendix — Drill-down Navigation
+# 9. Leadership Drill-down
 
-## Leadership dossiers
+## Current opportunity packages
+
+- [Opportunity Package Index](collaboration-opportunities/README.md)
+- [P1 — Kutateladze](collaboration-opportunities/OPP-01-KUTATELADZE-FAILURE-GROUND-TRUTH.md)
+- [P2 — MPEI](collaboration-opportunities/OPP-02-MPEI-LONG-DURATION-RELIABILITY.md)
+- [P3 — TPU Reopen Checklist](collaboration-opportunities/OPP-03-TPU-PROCESS-REOPEN.md)
+
+## Supporting dossiers
 
 - [Executive Map](leadership-dossiers/executive-map.md)
 - [Kutateladze Lab 1.3](leadership-dossiers/kutateladze-lab13.md)
@@ -431,18 +281,10 @@ Keep TPU and the supporting nodes as targeted reserves.
 - [TPU](leadership-dossiers/tpu-surface-process.md)
 - [China Comparator Anchors](leadership-dossiers/china-comparator-anchors.md)
 - [Reserve / Watch Appendix](leadership-dossiers/reserve-watch-appendix.md)
-- [Heat-Transfer Venue Supplement](leadership-dossiers/heat-transfer-venue-supplement.md)
-
-## Key people
-
-- [Alexander Pavlenko](leadership-dossiers/people/pavlenko.md)
-- [Nikita Ivanov](leadership-dossiers/people/ivanov.md)
-- [Yuri Kuzma-Kichta](leadership-dossiers/people/kuzma-kichta.md)
-- [Dmitry Feoktistov](leadership-dossiers/people/feoktistov.md)
-- [Evgeniya Orlova](leadership-dossiers/people/orlova.md)
 
 ## Canonical views
 
+- [Current Portfolio Synthesis](../07-decisions/syntheses/SYN-CURRENT-PORTFOLIO.md)
 - [Phase-1 Management Table](../views/russia-vs-china/phase1-management.md)
 - [Direction Portfolio](../05-directions/portfolio.md)
 - [Kill Ledger](../07-decisions/kill-ledger.md)
