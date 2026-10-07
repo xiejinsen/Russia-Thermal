@@ -1053,6 +1053,7 @@ export function buildClaimExplorerVM(): ClaimExplorerVM {
           supportingCount: claim.supportingSourceIds.length,
           contradictingCount: claim.contradictingSourceIds.length,
           directionCount: linkedDirections.length,
+          directionIds: linkedDirections.map((direction) => direction.id),
           href: `/claims/${claim.id}`
         };
       })
@@ -1150,6 +1151,7 @@ export function buildPaperExplorerVM(): PaperExplorerVM {
         countryContext: item.countryContext ?? undefined,
         claimCount: card.supportingClaims.length + card.contradictingClaims.length,
         directionCount: card.linkedDirections.length,
+        directionIds: card.linkedDirections.map((direction) => direction.id),
         deepReadLevel: deepReadById.get(item.id)?.deepReadLevel
           ? humanize(deepReadById.get(item.id)!.deepReadLevel)
           : undefined,
