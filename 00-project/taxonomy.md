@@ -46,3 +46,45 @@ Background-only capabilities do not require a Direction.
 
 Scientific evidence confidence is not phone-product maturity.
 A capability can be HIGH evidence / LOW phone maturity.
+
+
+## Capability classification
+
+Capability classification uses a two-level model:
+
+### Management-facing family
+
+Each Capability has one primary family:
+- SOFTWARE_SYSTEM
+- PASSIVE_HARDWARE
+- ACTIVE_HARDWARE
+- ENABLING
+
+Leadership views use this coarse grouping by default.
+
+### Research-facing topics
+
+Capabilities may additionally carry multiple controlled topic tags for detailed filtering.
+Papers / Patents / Sources do not duplicate Capability taxonomy.
+
+Canonical contracts:
+- [Thermal Capability Taxonomy v1.0](capability-taxonomy-v1.md)
+- [Terminal Transfer Taxonomy v1.0](platform-transfer-taxonomy-v1.md)
+
+Software/system thermal management is intentionally LIMITED_SCAN in this project.
+
+## Platform transfer
+
+Platform relevance is assessed on Capability rather than on every Source.
+
+A Capability may have different transfer levels for:
+- SMARTPHONE
+- TABLET
+- WEARABLE
+- AR_VR
+- LAPTOP
+- COMPACT_ELECTRONICS
+- ADJACENT_ELECTRONICS
+- FOUNDATIONAL_ONLY
+
+Transfer level is evidence-bounded and must not be inferred from technical plausibility alone.
