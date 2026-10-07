@@ -35,15 +35,25 @@ Path:
 
 ## 2. Main navigation
 
+Current production grouping:
+
 1. **Overview**
-2. **Partners**
-3. **Technology Landscape**
-4. **Russia vs China**
-5. **Institutions**
-6. **Scholars**
-7. **Evidence**
-8. **Decisions**
-9. **Frontier Watch**
+2. **Research Maps**
+3. **Research Coverage**
+4. **Portfolio**
+   - Partners
+   - Russia vs China
+   - Directions
+5. **People & Orgs**
+   - Scholars
+   - Institutions
+   - Capabilities
+6. **Research Objects**
+   - Papers
+   - Claims
+   - Evidence
+   - Frontier Watch
+7. **Decisions**
 
 ## 3. Home / Overview
 
@@ -118,15 +128,17 @@ Filters:
 - strategic direction;
 - decision impact.
 
-Evidence card:
-- title;
+Evidence Explorer row:
+- source title / ID;
 - source type;
 - year;
-- authors;
-- institution;
-- direct finding;
-- boundary;
-- linked claim/capability/direction.
+- country;
+- context / usage role;
+- supporting-Claim count;
+- pressure-Claim count;
+- Direction context.
+
+Detailed findings, boundaries and graph relationships belong on the Source/Paper/Claim/Capability detail paths rather than being expanded in every high-cardinality row.
 
 ## 8. Decision page
 
@@ -310,6 +322,10 @@ Target pattern:
 - `/evidence?claim=CLM-...&relation=pressure`
 - `/claims?capability=CAP-...`
 - `/evidence?capability=CAP-...`
+- `/papers?actor=ACT-...`
+- `/evidence?actor=ACT-...`
+- `/papers?person=ACT-PERSON-...`
+- `/claims?person=ACT-PERSON-...`
 
 Filter state is shareable / reload-safe URL state. Explorer controls read from and write to query parameters without creating a second source of truth.
 
@@ -352,3 +368,31 @@ Use clearly larger reading typography for:
 
 Rule:
 **metadata may be dense; explanatory prose must remain comfortably readable.**
+
+
+### Partner Portfolio anti-duplication rule
+
+The Partner Portfolio has two distinct layers:
+
+1. **P1 / P2 / P3 collaboration packages** — detailed management-facing packages may show institution, key people, rationale, action and connected Direction context.
+2. **Technical lane index** — all Strategic Candidate / Stage-0 / Reserve / Watch / Hold Directions must remain visible, but the page must not repeat full Institution / Scholar / Direction card trees already present in the priority packages.
+
+For lane-level exploration, use compact Direction rows plus filtered Explorer links:
+- Direction detail;
+- Claims;
+- Evidence;
+- Institutions;
+- Scholars.
+
+Principle:
+**management package = rich; portfolio registry = compact; relationship sets = filtered Explorer.**
+
+### Actor / Person evidence navigation
+
+Institution and Scholar detail pages should not duplicate long Evidence/Paper lists.
+
+Instead:
+- Institution -> related Claims / Papers / Evidence via `actor=`;
+- Scholar -> related Claims / Papers / Evidence via `person=`.
+
+Institution scope includes evidence connected through capabilities owned by child labs/teams in the same actor lineage, so parent-organization exploration does not silently omit lab-owned work.
