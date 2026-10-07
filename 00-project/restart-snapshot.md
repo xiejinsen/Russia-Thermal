@@ -55,14 +55,14 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - lane: HOLD
 - phone_maturity: VERY_LOW
 - residual_or_use: preserve as pre-device research lead; no current Stage-0 allocation.
-- strongest_baseline: -
-- next_question_or_gate: decision-grade pore geometry, permeability/capillary data, fabrication route and sub-mm device evidence.
+- strongest_baseline: OEM VC prior art already covers multiple/graded capillary structures, embedded low-resistance liquid channels, multifunctional support/vapor/capillary partitioning, microporous support/circulation, and composite porous + channel-type capillary paths.
+- next_question_or_gate: decision-grade pore geometry, permeability/capillary data, fabrication route and sub-mm device evidence that establish a quantitatively distinct transport frontier or new dynamic/state-dependent control point beyond these OEM baselines.
 
 ### DIR-SURFACE-PROCESS-CHALLENGER
 - lane: HOLD
 - phone_maturity: LOW
 - residual_or_use: process execution / diagnostics competence only. Generic laser processing, generic biphilic surfaces, and spatial wettability patterning inside an ultra-thin sealed VC are all excluded from the differentiation thesis.
-- strongest_baseline: China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, and a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches.
+- strongest_baseline: China target-system evidence includes optimized laser-treated UTVC wick, direct thermal-oxidation / chemical-corrosion / laser comparison, a 0.39 mm composite-wick UTVC with explicit manufacturable geometry and 26 W ultimate heat-transfer power, a 0.4 mm UTVC family directly comparing SWM, SWM-SM and wettability-patterned SWM-WP branches, direct biphilic/self-driven VC patent prior art, and direct laser hierarchical UTVC-wick patent prior art.
 - next_question_or_gate: reopen to STAGE0_CHALLENGER only if direct evidence shows a process-specific increment over current domestic target-system controls and the process passes vacuum / contamination / sealed-fluid gates.
 
 ## Mandatory guardrails

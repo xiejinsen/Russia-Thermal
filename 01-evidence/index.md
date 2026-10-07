@@ -1,10 +1,6 @@
-# V2.1 Evidence Index
+DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
-record_state: CURRENT
-
-Canonical sources are stored as one source per directory.
-
-## Official / Ranking
+# Evidence Index
 
 - OFFICIAL-BIT-JIANG-001 — 01-evidence/official/OFFICIAL-BIT-JIANG-001/README.md
 - OFFICIAL-BIT-TAN-001 — 01-evidence/official/OFFICIAL-BIT-TAN-001/README.md
@@ -71,9 +67,6 @@ Canonical sources are stored as one source per directory.
 - OFFICIAL-XJTU-QIN-001 — 01-evidence/official/OFFICIAL-XJTU-QIN-001/README.md
 - OFFICIAL-XJTU-YANGXP-001 — 01-evidence/official/OFFICIAL-XJTU-YANGXP-001/README.md
 - OFFICIAL-ZJU-WUZAN-001 — 01-evidence/official/OFFICIAL-ZJU-WUZAN-001/README.md
-
-## Papers
-
 - PAPER-CN-ACOU-001 — 01-evidence/papers/PAPER-CN-ACOU-001/README.md
 - PAPER-CN-AGE-001 — 01-evidence/papers/PAPER-CN-AGE-001/README.md
 - PAPER-CN-AGE-002 — 01-evidence/papers/PAPER-CN-AGE-002/README.md
@@ -124,9 +117,6 @@ Canonical sources are stored as one source per directory.
 - PAPER-RU-TPU-003 — 01-evidence/papers/PAPER-RU-TPU-003/README.md
 - PAPER-RU-TPU-004 — 01-evidence/papers/PAPER-RU-TPU-004/README.md
 - PAPER-RU-URFU-LHP-001 — 01-evidence/papers/PAPER-RU-URFU-LHP-001/README.md
-
-## Patents
-
 - PATENT-CN-VC-AGING-001 — 01-evidence/patents/PATENT-CN-VC-AGING-001/README.md
 - PATENT-CN116989603B — 01-evidence/patents/PATENT-CN116989603B/README.md
 - PATENT-CN117529010B — 01-evidence/patents/PATENT-CN117529010B/README.md
@@ -144,4 +134,3 @@ Canonical sources are stored as one source per directory.
 - PATENT-WO2024152684A1 — 01-evidence/patents/PATENT-WO2024152684A1/README.md
 - PATENT-WO2025190051A1 — 01-evidence/patents/PATENT-WO2025190051A1/README.md
 - PATENT-WO2026045372A1 — 01-evidence/patents/PATENT-WO2026045372A1/README.md
-
