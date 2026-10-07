@@ -125,6 +125,8 @@ export interface CapabilityDetailVM {
   maturity: string;
   evidenceConfidence: string;
   targetFit: string;
+  family?: string;
+  topics: string[];
   technicalScope: string[];
   transferBoundary?: string;
   strategicUse?: string;
