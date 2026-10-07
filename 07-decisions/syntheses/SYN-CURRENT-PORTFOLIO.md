@@ -20,6 +20,7 @@ Theory basis:
 - Deep reading of the Health-aware evidence shows that China now has a coherent reliability chain spanning oxygen-driven failure physics, oxygen-linked service-life prediction, production oxidation grading and mobile-scale accelerated aging. MPEI's 42-month actual-operation evidence remains unusual, but evidence rarity alone is insufficient for primary strategic status.
 - Foundational Modeling remains a reserve after Deep Read: Russian exact/group-invariant methods provide interpretable neutral boundaries and inverse closure, but China independently has current nonlinear interfacial-stability mathematics and global UTVC semi-analytical models already provide direct mobile-design variables at 4–5 orders lower cost than CFD. The Russian residual is therefore pre-test benchmark / boundary leverage only.
 - Extreme Film remains a reserve but its thesis is narrowed: Russia retains unusual gas-shear free-surface / extreme-confinement flow-pattern and rupture knowledge, including 12.5 um slit-flow experiments, while China/global comparators eliminate headline heat flux and generic biphilic surfaces as differentiation. Phone-class full-loop gas/liquid power, pressure drop, acoustics and packaging remain unclosed.
+- TPU deep reading confirms strong surface-process execution but weakens the transfer thesis: copper boiling, open-surface durability and 60-day industrial field translation are credible, yet no reviewed source demonstrates the sealed-VC spatial-routing / rewetting function. TPU therefore remains only a falsification-oriented Stage-0 challenger, with LOW_MEDIUM differentiation and LOW phone maturity.
 
 supporting_claims:
 - CLM-PAV-004
@@ -38,6 +39,9 @@ supporting_claims:
 - CLM-FILM-003
 - CLM-FILM-005
 - CLM-FILM-007
+- CLM-TPU-007
+- CLM-TPU-008
+- CLM-TPU-009
 - CLM-NOVSU-001
 - CLM-UUST-001
 - CLM-MISIS-001
@@ -69,6 +73,10 @@ key_evidence:
 - PAPER-CN-AGE-003
 - PAPER-CN-AGE-004
 - PAPER-CN-TPU-001
+- PAPER-CN-TPU-002
+- PAPER-RU-TPU-002
+- PAPER-RU-TPU-003
+- PAPER-RU-TPU-004
 - PAPER-RU-MODEL-001
 - PAPER-RU-MODEL-002
 - PAPER-CN-MODEL-001
