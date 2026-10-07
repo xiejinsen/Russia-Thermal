@@ -13,6 +13,9 @@ paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 patent_deep_read_progress: 16/17
 patent_deep_read_control: 00-project/patent-reading-depth-closure-audit.md
 graph_audit_status: PASS
+source_dedup_status: CI_ENFORCED / BASELINE_CLEAN
+source_dedup_contract: 00-project/source-deduplication-contract.md
+source_alias_registry: 00-project/source-aliases.md
 graph_audit_control: tools/graph_audit.py
 graph_audit_report: analysis/graph-evidence-chain-audit_2026_10_07.md
 semantic_orphan_sources: 0
