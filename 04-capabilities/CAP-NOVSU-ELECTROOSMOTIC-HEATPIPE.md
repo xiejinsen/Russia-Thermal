@@ -8,6 +8,10 @@ maturity: RESEARCH_PROGRAM
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+capability_family: ACTIVE_HARDWARE
+capability_topics:
+- ELECTROOSMOTIC_PUMP
+- VC_HEAT_PIPE
 
 Capability statement:
 NovSU demonstrates current research capability in electroosmotic pumping integrated with heat-pipe / loop-style thermal transport for electronics whose orientation or acceleration environment changes.
