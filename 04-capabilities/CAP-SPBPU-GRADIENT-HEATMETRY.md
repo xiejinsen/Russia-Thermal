@@ -9,6 +9,10 @@ maturity: RESEARCH_METHOD
 evidence_confidence: HIGH
 target_fit: ENABLER
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- HEAT_FLUX_MEASUREMENT
+- SENSING_DIAGNOSTICS
 
 Capability statement:
 SPbPU provides gradient-heatmetry / local and transient heat-flux diagnostics relevant to boiling/crisis Stage-0 experiments.
