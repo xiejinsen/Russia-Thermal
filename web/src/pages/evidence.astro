@@ -20,6 +20,8 @@ const directionOptions = [...new Map(
   .map(([value,label])=>({value,label}))
   .sort((a,b)=>a.label.localeCompare(b.label));
 
+const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
+const otherSourceCount = vm.records.length - paperCount;
 const supportCount = vm.records.filter((record) => record.supportingClaims.length > 0).length;
 const pressureCount = vm.records.filter((record) => record.contradictingClaims.length > 0).length;
 
@@ -69,9 +71,9 @@ const records = vm.records.map((record) => {
         <p>{vm.summary}</p>
       </div>
       <div class="summary-chips">
-        <span>{vm.totalEvidence} evidence records</span>
-        <span>{supportCount} support-bearing</span>
-        <span>{pressureCount} pressure-bearing</span>
+        <span>{vm.totalEvidence} all sources</span>
+        <span>{paperCount} Paper sources included</span>
+        <span>{otherSourceCount} non-Paper sources</span>
       </div>
     </section>
 
