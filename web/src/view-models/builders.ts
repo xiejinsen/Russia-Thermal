@@ -554,6 +554,7 @@ function claimSummary(claim: ClaimRecord) {
 }
 
 function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
+  const deepRead = deepReadById.get(item.id);
   const supportingClaims = claims.filter((claim) => claim.supportingSourceIds.includes(item.id));
   const contradictingClaims = claims.filter((claim) => claim.contradictingSourceIds.includes(item.id));
   const allClaimIds = new Set([...supportingClaims, ...contradictingClaims].map((claim) => claim.id));
@@ -595,6 +596,8 @@ function evidenceCard(item: EvidenceRecord): EvidenceCardVM {
     findings: item.directFindings,
     boundary: item.boundary ?? undefined,
     usageRole: item.usageRole ? humanize(item.usageRole) : undefined,
+    deepReadLevel: deepRead ? humanize(deepRead.deepReadLevel) : undefined,
+    reviewStatus: deepRead ? humanize(deepRead.reviewStatus) : undefined,
     supportingClaims: supportingClaims.map(claimSummary),
     contradictingClaims: contradictingClaims.map(claimSummary),
     linkedCapabilities: linkedCaps.map(capabilityDetail),
