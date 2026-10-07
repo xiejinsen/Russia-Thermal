@@ -26,8 +26,8 @@ const priorityDirectionIds = new Set(
   <section class="priority-section">
     <SectionHeader
       eyebrow="Management priority"
-      title="Three collaboration packages to engage first"
-      description="P1/P2/P3 are collaboration priorities. Their connected technical Directions remain separately governed by Strategic Candidate / Stage-0 / Reserve / Watch / Hold lanes."
+      title="Partner actions now differ by disposition: Primary, Reserve and Hold"
+      description="P1/P2/P3 preserve the historical partner ranking, but they no longer mean three equal outreach priorities. Current action is governed by priority_class together with the connected Direction lane."
     />
     <div class="priority-stack">
       {vm.priorities.map((model) => <PartnerPriorityCard model={model} />)}
