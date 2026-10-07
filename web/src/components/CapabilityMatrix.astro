@@ -31,8 +31,8 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
           <a href={href(`/directions/${row.direction.id}`)}><strong>{row.direction.title}</strong></a>
           <span>{row.direction.role}</span>
         </div>
-        <div class="china" role="cell"><a href={href('/research-map/china')}><strong class="entity-label">{row.chinaLabel}</strong><p>{row.chinaBaseline}</p></a></div>
-        <div class="russia" role="cell"><a href={href('/research-map/russia')}><strong class="entity-label">{row.russiaLabel}</strong><p>{row.russiaResidual}</p></a></div>
+        <div class="china" role="cell"><strong class="entity-label">{row.chinaLabel}</strong><p>{row.chinaBaseline}</p><a class="cell-link" href={href('/research-map/china')}>Open China research map</a></div>
+        <div class="russia" role="cell"><strong class="entity-label">{row.russiaLabel}</strong><p>{row.russiaResidual}</p><a class="cell-link" href={href('/research-map/russia')}>Open Russia research map</a></div>
         <div class="maturity" role="cell"><strong>{row.direction.phoneTransferMaturity}</strong><span>{row.direction.differentiationConfidence} differentiation</span></div>
         <div role="cell"><DecisionBadge label={row.direction.lane.label} tone={row.direction.lane.tone} /></div>
       </div>
@@ -48,7 +48,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 .matrix-row>div{min-width:0;padding:var(--space-4);border-bottom:1px solid #d3e0eb}
 .matrix-row>div+div{border-left:1px solid #d3e0eb}.matrix-row:last-child>div{border-bottom:0}
 .matrix-header{background:linear-gradient(90deg,#e4f2fd,#f5faff);color:#20384f;font-size:.72rem;font-weight:850;letter-spacing:.055em;text-transform:uppercase}
-.direction{display:grid;gap:var(--space-1)}.direction>a,.china>a,.russia>a{color:inherit;text-decoration:none}.direction>a:hover,.direction>a:focus-visible,.china>a:hover,.china>a:focus-visible,.russia>a:hover,.russia>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}.direction span,.maturity span{color:#50657a;font-size:.8rem}
+.direction{display:grid;gap:var(--space-1)}.direction>a{color:inherit;text-decoration:none}.direction>a:hover,.direction>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}.cell-link{display:inline-block;margin-top:.7rem;color:var(--accent-vivid);font-size:.75rem;font-weight:800;text-decoration:none}.cell-link:hover,.cell-link:focus-visible{text-decoration:underline;text-underline-offset:.16em}.direction span,.maturity span{color:#50657a;font-size:.8rem}
 .entity-label{display:block;margin-bottom:var(--space-2);color:#172b40;font-size:.8rem;line-height:1.35}
 .matrix p{margin:0;color:#34495e;font-size:.88rem;line-height:1.58;font-weight:500}
 .china{background:rgb(237 246 255 / .52)}.russia{background:rgb(235 248 244 / .64)}
