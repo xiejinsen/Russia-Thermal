@@ -12,7 +12,7 @@ Use the web UI for leadership review, research navigation, and evidence drill-do
 
 - [Overview ↗](https://xiejinsen.github.io/Russia-Thermal/) — current portfolio thesis, priorities, comparator pressure and management actions
 - [Research Maps ↗](https://xiejinsen.github.io/Russia-Thermal/research-map/) — geographic discovery for Russia / China research capability
-- [Partner Portfolio ↗](https://xiejinsen.github.io/Russia-Thermal/partners/) — P1/P2/P3 collaboration packages and investment lanes
+- [Partner Portfolio ↗](https://xiejinsen.github.io/Russia-Thermal/partners/) — current P1 Primary / P2 Reserve / P3 Hold partner dispositions plus technical investment lanes
 - [Russia vs China ↗](https://xiejinsen.github.io/Russia-Thermal/landscape/) — comparator baseline and residual Russian differentiation
 - [Directions ↗](https://xiejinsen.github.io/Russia-Thermal/directions/) — strategic directions and validation gates
 - [Institutions ↗](https://xiejinsen.github.io/Russia-Thermal/institutions/) / [Scholars ↗](https://xiejinsen.github.io/Russia-Thermal/scholars/) — organization and key-person drill-down
