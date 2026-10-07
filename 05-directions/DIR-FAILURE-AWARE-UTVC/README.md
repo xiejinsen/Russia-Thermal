@@ -39,7 +39,7 @@ strongest_baseline:
 External temperature-difference + power dryout characterization/control prior art; transient time-to-dryout/time-to-rewet/thermal-hysteresis models and experiments; independent China capillary-fed dryout/rewetting; SJTU micro/nano phase-change, dielectric-fluid ultra-thin-wick and dryout-mitigation microchannel work; BIT ultra-thin VC / capillary-porous / microchannel-boiling capability; strong domestic UTVC controls.
 
 Residual differentiation:
-Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond generic external thermal signatures.
+Mechanism-specific reversible-to-irreversible dielectric dry-spot/crisis classification, only if it adds information beyond both generic external thermal signatures and a physics-informed transient dryout / rewet state-history baseline.
 
 Internal control boundary:
 phone package, UTVC geometry, product fluid, manufacturing, final controller/data model and final product foreground IP remain internally owned.
@@ -48,7 +48,7 @@ Next question:
 Can a bounded excitation/recovery protocol separate reversible-to-irreversible two-phase crisis from generic thermal/package drift using Tier A/B product observables?
 
 Promotion gate:
-a minimum falsifying dataset shows controlled transient features classify the mechanism-specific crisis/recovery state materially better than a generic anomaly/RC baseline.
+a minimum falsifying dataset shows Russia-informed mechanism features classify reversible / irreversible crisis state materially better than both (1) a generic anomaly / RC baseline and (2) a physics-informed transient baseline using excitation history, time-to-dryout, throttling level, time-to-rewet and post-dryout hysteresis.
 
 Kill / downgrade gate:
 downgrade if value reduces to generic mesh/capillary treatment, is HFE/mm-scale specific, or does not change phone design/validation decisions.
