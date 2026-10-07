@@ -9,6 +9,7 @@ Independent China evidence directly covers ultra-thin multi-evaporator LHPs and 
 
 supporting_sources:
 - PAPER-CN-LHP-001
+- PAPER-CN-LHP-002
 
 Boundary:
 does not erase Maydanik's foundational expertise, but weakens a broad Russia differentiation thesis.
