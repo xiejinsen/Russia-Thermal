@@ -198,3 +198,24 @@ A change in:
 - evidence filter → Evidence Explorer island only.
 
 This containment is a core architecture requirement.
+
+
+## 8. Detail-page component boundary
+
+Detail pages use shared presentation primitives but keep object-specific view models.
+
+Shared components may own:
+- hero layout;
+- compact metric rendering;
+- Evidence Pressure visualization;
+- local relation-path rendering.
+
+Shared components may not:
+- decide which Claims belong to a Direction;
+- calculate strategic lane;
+- infer Russia/global evidence categories from raw Markdown;
+- decide evidence sufficiency.
+
+Those calculations belong in Layer C view models and must stay aligned with repository Graph Audit semantics.
+
+The current Institution and Direction pilots intentionally share visual primitives while retaining separate page composition. Do not create a universal mega-template.
