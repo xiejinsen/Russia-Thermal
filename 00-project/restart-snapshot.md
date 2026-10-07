@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
-- next: complete decision-critical Tier-A / Tier-B paper Deep Reads and pressure-test current Strategic Candidates / Challenger against strong China-global baselines before resuming bounded detail-page design-system consolidation; do not reopen broad discovery
+- next: finish the two remaining Failure-aware Tier-A reads, then pressure-test Foundational Modeling and Extreme Film batches; Health-aware is now RESERVE after comparator Deep Read; do not reopen broad discovery
 
 ## Directions
 
@@ -38,11 +38,11 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - next_question_or_gate: the modular stack materially improves pre-test prediction / experiment design / failure-boundary accuracy versus strong internal/global modeling baselines.
 
 ### DIR-HEALTH-AWARE-UTVC
-- lane: STRATEGIC_CANDIDATE
-- phone_maturity: LOW_MEDIUM
-- residual_or_use: actual multi-year operation of one engineered hierarchical evaporator surface with capillary-state evolution observed while integral thermal performance remained comparatively stable; this is a reliability-knowledge residual, not an online-health-observer proof.
-- strongest_baseline: China copper-water oxidation failure physics, rapid lifetime prediction, pre-encapsulation VC aging-test methods, oxidation QA and mobile-scale thin two-phase hardware; China capillary-fed repeated-dryout evidence also shows history-dependent wettability / CHF degradation in a tested wick system; SJTU adds current dielectric-fluid ultra-thin composite-wick and chip-level phase-change programs.
-- next_question_or_gate: Can MPEI-informed aging labels/priors improve discrimination of capillary/wetting degradation from oxidation, fill-state and package/interface aging in a lab-ground-truth dataset?
+- lane: RESERVE
+- phone_maturity: LOW
+- residual_or_use: actual 42-month calendar operation of one engineered hierarchical evaporator surface with post-operation capillary-state degradation observed while integral thermal performance remained comparatively stable. This is a rare long-horizon mechanism-ground-truth residual, not a demonstrated product observer, lifetime model or phone reliability advantage.
+- strongest_baseline: China copper-water oxidation failure physics; oxygen-linked rapid service-life prediction with R2 = 0.98 and approximately 8% prediction error; production wick-oxidation grading with highest reported test accuracy above 95%; dedicated VC aging-test prior art; a 0.7 mm mobile mLHP with stable reported performance after 30 days at 90 C; repeated-dryout history-dependent wettability / CHF degradation; current SJTU phase-change and dryout-mitigation work.
+- next_question_or_gate: Does the MPEI long-duration dataset contain time-resolved or otherwise discriminating capillary/surface-state information that predicts future transport-margin loss after oxygen chemistry, process state and standard thermal metrics are already accounted for?
 
 ### DIR-LHP-KNOWLEDGE-RESERVE
 - lane: WATCH
