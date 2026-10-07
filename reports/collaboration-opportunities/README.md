@@ -1,0 +1,54 @@
+# Collaboration Opportunity Packages
+
+status: CURRENT_DERIVED_MANAGEMENT_VIEW
+date: 2026-10-07
+authority: DERIVED_FROM_CANONICAL_PRIORITY_DIRECTION_CAPABILITY_OBJECTS
+
+These packages translate the frozen public-evidence portfolio into management actions.
+
+They do **not** create new technical Directions or override canonical decisions.  
+Current authority remains:
+- `07-decisions/priorities/`
+- `05-directions/`
+- `04-capabilities/`
+- `02-claims/`
+- `01-evidence/`
+
+## Current management portfolio
+
+| Package | Partner | Current status | Action |
+| --- | --- | --- | --- |
+| OPP-01 | Kutateladze Lab 1.3 / Alexander Pavlenko | **PRIMARY / STRATEGIC_CANDIDATE** | Contact first when outreach is possible |
+| OPP-02 | MPEI / Nikita Ivanov + team | **CONDITIONAL RESERVE** | Contact only if long-duration data access is plausible |
+| OPP-03 | TPU / Dmitry Feoktistov + Evgeniya Orlova | **HOLD / REOPEN-ONLY** | No proactive engagement; reopen only with matched phone-relevant evidence |
+
+## Why three packages are retained
+
+The three files are not three equal opportunities.
+
+They represent three different management actions:
+
+1. **Advance** — there is a surviving collaboration thesis worth testing.
+2. **Conditionally preserve** — value exists only if a specific data/resource condition can be met.
+3. **Do not advance now** — keep a precise reopen gate so the organization knows what future evidence would matter.
+
+## Package files
+
+- [OPP-01 — Kutateladze mechanism-resolved failure ground truth](OPP-01-KUTATELADZE-FAILURE-GROUND-TRUTH.md)
+- [OPP-02 — MPEI long-duration reliability data reserve](OPP-02-MPEI-LONG-DURATION-RELIABILITY.md)
+- [OPP-03 — TPU process-capability reopen checklist](OPP-03-TPU-PROCESS-REOPEN.md)
+
+## Common collaboration principle
+
+Russia should not own:
+- phone architecture;
+- UTVC product geometry;
+- production fluid/process decisions;
+- final controller/model;
+- product validation;
+- foreground product IP.
+
+The intended role is selective:
+- mechanism ground truth;
+- rare long-duration evidence;
+- or a process capability that proves a measurable increment over strong domestic baselines.
