@@ -184,8 +184,8 @@ const records = vm.records.map((record) => {
 
             <div slot="actions" class="row-actions">
               <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
-              {record.supportingClaims.length > 0 && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>Claims</a>}
-              {record.linkedCapabilities.length > 0 && <a href={href(`/capabilities?q=${encodeURIComponent(record.id)}`)}>Capabilities</a>}
+              {(record.supportingClaims.length > 0 || record.contradictingClaims.length > 0) && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>Claims</a>}
+              {record.linkedCapabilities.slice(0,2).map((capability) => <a href={href(`/capabilities/${capability.id}`)}>{capability.id}</a>)}
             </div>
           </DenseObjectRow>
         </div>
