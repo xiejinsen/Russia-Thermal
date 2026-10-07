@@ -4,7 +4,9 @@ status: CURRENT_LEADERSHIP_DERIVED_VIEW
 phase: PHASE1_FROZEN
 date: 2026-10-07
 
-> Leadership decision document derived from canonical V2.1 objects.  
+> Leadership decision document derived from canonical V2.1 objects.
+>
+> **Preferred leadership brief:** [Phase-1 Leadership Decision Brief](leadership-decision-brief.md)  
 > Canonical authority remains in `01-evidence/`, `02-claims/`, `03-actors/`, `04-capabilities/`, `05-directions/`, and `07-decisions/`.
 
 ---
