@@ -56,7 +56,7 @@ const records = vm.records.map((paper) => ({
       sticky
       compact
       total={records.length}
-      urlFilterKeys={['claim', 'capability', 'relation']}
+      urlFilterKeys={['claim', 'capability', 'actor', 'person', 'relation']}
       searchPlaceholder="Search title, author, venue, ID, Direction…"
       filters={[
         {
@@ -103,6 +103,8 @@ const records = vm.records.map((paper) => ({
           data-supporting-claim={paper.supportingClaimIds.join('|')}
           data-pressure-claim={paper.pressureClaimIds.join('|')}
           data-capability={paper.capabilityIds.join('|')}
+          data-actor={paper.institutionIds.join('|')}
+          data-person={paper.peopleIds.join('|')}
           data-search={paper.search}
         >
           <td class="paper-cell">
