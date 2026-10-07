@@ -6,11 +6,12 @@ Use this file when resuming the project in a new chat/window.
 
 1. [STATUS.md](STATUS.md) — authority, research mode, current phase and next action.
 2. [restart-snapshot.md](restart-snapshot.md) — generated current Direction snapshot.
-3. [Phase-1 Management Table](../views/russia-vs-china/phase1-management.md) — strategic / reserve / Watch / Hold portfolio.
-4. [Kill / Downgrade Ledger](../07-decisions/kill-ledger.md) — theses that must not silently reappear.
-5. [charter.md](charter.md) — project goal and scope.
-6. [methodology.md](methodology.md) — evidence and decision method.
-7. [architecture.md](architecture.md) + [taxonomy.md](taxonomy.md) — object ownership and hierarchy.
+3. [paper-deep-read-coverage.md](paper-deep-read-coverage.md) — current 44-paper reading depth, completed Deep Reads and decision-sensitive queue.
+4. [Phase-1 Management Table](../views/russia-vs-china/phase1-management.md) — strategic / reserve / Watch / Hold portfolio.
+5. [Kill / Downgrade Ledger](../07-decisions/kill-ledger.md) — theses that must not silently reappear.
+6. [charter.md](charter.md) — project goal and scope.
+7. [methodology.md](methodology.md) — evidence and decision method.
+8. [architecture.md](architecture.md) + [taxonomy.md](taxonomy.md) — object ownership and hierarchy.
 
 ## Resume rule
 
