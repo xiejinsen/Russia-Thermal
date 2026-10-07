@@ -10,6 +10,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM_HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+capability_family: ENABLING
+capability_topics:
+- PASSIVE_SURFACE_ENGINEERING
+- SURFACE_PROCESS
+- MATERIAL_CHARACTERIZATION
 
 Capability statement:
 Frumkin Institute provides surface-chemistry / wettability expertise that has been combined with Kutateladze boiling experiments to create selectively hydrophobic laser-textured copper cavities.
