@@ -203,6 +203,8 @@ export interface EvidenceCardVM {
   findings: string[];
   boundary?: string;
   usageRole?: string;
+  deepReadLevel?: string;
+  reviewStatus?: string;
   supportingClaims: Array<{
     id: string;
     proposition: string;
