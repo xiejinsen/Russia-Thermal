@@ -12,7 +12,6 @@ supporting_sources:
 - OFFICIAL-NEWFROST-001
 - OFFICIAL-NEWFROST-002
 - OFFICIAL-MPEI-IVANOV-001
-- OFFICIAL-MPEI-SIC-MICROCHANNEL-001
 
 Boundary:
 engineering translation is credible; smartphone/OEM commercialization is not publicly established.
