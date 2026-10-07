@@ -9,6 +9,7 @@ TPU / Russia has a broad differentiated advantage in generic laser or biphilic h
 
 supporting_sources:
 - PAPER-CN-TPU-001
+- PAPER-CN-TPU-002
 
 Boundary:
 the refutation applies to the broad thesis; a narrow process/transfer residual may remain.
