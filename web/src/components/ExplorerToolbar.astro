@@ -6,16 +6,18 @@ interface Props {
   searchPlaceholder?: string;
   total: number;
   sticky?: boolean;
+  compact?: boolean;
 }
 const {
   filters,
   searchPlaceholder = 'Search records…',
   total,
-  sticky = false
+  sticky = false,
+  compact = false
 } = Astro.props;
 ---
 
-<div class:list={['explorer-toolbar', { sticky }]} data-explorer-toolbar>
+<div class:list={['explorer-toolbar', { sticky, compact }]} data-explorer-toolbar>
   <label class="search-box">
     <span>Search</span>
     <input type="search" placeholder={searchPlaceholder} data-explorer-search />
@@ -25,7 +27,7 @@ const {
     <label>
       <span>{filter.label}</span>
       <select data-explorer-filter data-filter-key={filter.key}>
-        <option value="">All</option>
+        <option value="">{compact ? `${filter.label}: All` : 'All'}</option>
         {filter.options.map((option) => <option value={option.value}>{option.label}</option>)}
       </select>
     </label>
@@ -104,6 +106,66 @@ const {
     background:var(--surface);
     box-shadow:var(--shadow-1);
   }
+  .explorer-toolbar.compact{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    padding:6px 8px;
+    border-radius:9px;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scrollbar-width:thin;
+  }
+  .explorer-toolbar.compact label{
+    display:block;
+    flex:0 0 auto;
+  }
+  .explorer-toolbar.compact label>span{
+    display:none;
+  }
+  .explorer-toolbar.compact .search-box{
+    flex:1 0 17rem;
+    min-width:17rem;
+    max-width:28rem;
+  }
+  .explorer-toolbar.compact label:not(.search-box){
+    min-width:8.5rem;
+    max-width:12rem;
+  }
+  .explorer-toolbar.compact input,
+  .explorer-toolbar.compact select{
+    min-height:32px;
+    height:32px;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:.75rem;
+  }
+  .explorer-toolbar.compact .toolbar-result{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    flex:0 0 auto;
+    min-width:auto;
+    height:32px;
+    padding:0 8px;
+    border-radius:6px;
+  }
+  .explorer-toolbar.compact .toolbar-result strong{
+    font-size:.82rem;
+  }
+  .explorer-toolbar.compact .toolbar-result span{
+    font-size:.57rem;
+  }
+  .explorer-toolbar.compact button{
+    flex:0 0 auto;
+    min-height:32px;
+    height:32px;
+    padding:0 9px;
+    border-radius:6px;
+    font-size:.69rem;
+  }
+
   .explorer-toolbar.sticky{
     position:sticky;
     top:4.15rem;
@@ -140,7 +202,7 @@ const {
     cursor:pointer;
   }
   button:hover,button:focus-visible{background:var(--accent-soft);outline:none}
-  @media(max-width:950px){.explorer-toolbar{grid-template-columns:1fr 1fr}.search-box{grid-column:1/-1}}
+  @media(max-width:950px){.explorer-toolbar:not(.compact){grid-template-columns:1fr 1fr}.explorer-toolbar:not(.compact) .search-box{grid-column:1/-1}}
   @media(max-width:860px){.explorer-toolbar.sticky{top:7.35rem}}
-  @media(max-width:620px){.explorer-toolbar{grid-template-columns:1fr}.search-box{grid-column:auto}}
+  @media(max-width:620px){.explorer-toolbar:not(.compact){grid-template-columns:1fr}.explorer-toolbar:not(.compact) .search-box{grid-column:auto}.explorer-toolbar.compact .search-box{flex-basis:14rem;min-width:14rem}}
 </style>
