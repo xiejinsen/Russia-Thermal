@@ -8,6 +8,8 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
+paper_deep_read_progress: 13/44
+paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_EXPANSION
 next_action: complete decision-critical Tier-A / Tier-B paper Deep Reads and pressure-test current Strategic Candidates / Challenger against strong China-global baselines before resuming bounded detail-page design-system consolidation; do not reopen broad discovery
 
