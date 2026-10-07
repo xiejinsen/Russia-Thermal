@@ -176,7 +176,7 @@ def markdown_section(text: str, heading: str) -> str:
 
 
 def deep_read_questions(text: str) -> list[dict[str, Any]]:
-    matches = list(re.finditer(r"^##\s+Q(\d+)\s+—\s+(.+?)\s*$", text, re.MULTILINE))
+    matches = list(re.finditer(r"^##\s+[QP](\d+)\s+—\s+(.+?)\s*$", text, re.MULTILINE))
     out: list[dict[str, Any]] = []
     for index, match in enumerate(matches):
         start = match.end()
@@ -229,7 +229,7 @@ def load_deep_reads() -> list[dict[str, Any]]:
             "deepReadLevel": meta.get("deep_read_level", "").strip(),
             "reviewStatus": meta.get("review_status", "").strip(),
             "reviewedAt": meta.get("reviewed_at", "").strip(),
-            "whyItMatters": meta.get("why_it_matters", "").strip(),
+            "whyItMatters": meta.get("why_it_matters", "").strip() or meta.get("decision_use", "").strip().replace("_", " ").title(),
             "decisionUse": meta.get("decision_use", "").strip(),
             "legacyOrigin": meta.get("legacy_origin", "").strip() or None,
             "relatedClaimIds": split_semicolon(meta.get("related_claims")),
@@ -424,7 +424,7 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
         if r["deepReadLevel"] == "TIER_A":
             numbers = [q.get("number") for q in r.get("questions", [])]
             if numbers != list(range(1, 11)):
-                errors.append(f"{r['id']}: TIER_A deep read must contain Q1-Q10 exactly once; got {numbers}")
+                errors.append(f"{r['id']}: TIER_A deep read must contain prompts 1-10 exactly once; got {numbers}")
         boundary = r.get("evidenceBoundary") or {}
         for f in ("sourceFacts", "analystInference", "unknownRequests"):
             if not str(boundary.get(f, "")).strip():
@@ -475,8 +475,8 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     for r in datasets["deepReads"]:
         if r["id"] not in evidence_ids:
             errors.append(f"{r['id']}: deep read has no matching evidence record")
-        elif not r["id"].startswith("PAPER-"):
-            errors.append(f"{r['id']}: deep read must target a PAPER source")
+        elif not r["id"].startswith(("PAPER-", "PATENT-")):
+            errors.append(f"{r['id']}: deep read must target a PAPER or PATENT source")
         for cid in r["relatedClaimIds"]:
             if cid not in claim_ids:
                 errors.append(f"{r['id']}: unresolved relatedClaimId {cid}")
