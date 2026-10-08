@@ -8,6 +8,7 @@ Proposition:
 Tomsk State University currently maintains an active electronics-cooling research line spanning forced cooling, porous/channel heat-removal structures and PCM-based passive thermal control, with official applicability claims extending to phones and other compact electronics.
 
 supporting_sources:
+- OFFICIAL-TSU-CHMT-LAB-2026
 - OFFICIAL-TSU-GIBANOV-001
 - OFFICIAL-TSU-BONDAREVA-001
 
