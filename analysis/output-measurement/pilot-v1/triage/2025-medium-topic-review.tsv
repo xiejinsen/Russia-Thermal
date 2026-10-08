@@ -1,0 +1,22 @@
+year	archive_index	technical_relevance_class	topic_basis	publisher_identity_gate	publication_affiliation_gate	work_count_policy
+2025	59	TRANSFERABLE_HEAT_TRANSFER	Dielectric liquid layer-height-dependent boiling on mesh; confinement relevance	PENDING	PENDING	NOT_COUNTABLE
+2025	62	TRANSFERABLE_HEAT_TRANSFER	Porous coatings and local heater in minichannel; transferable local-hotspot mechanism	PENDING	PENDING	NOT_COUNTABLE
+2025	63	OUT_OF_SCOPE	External high-Re flow past hydrophobic cylinder, unrelated terminal thermal objective	PENDING	PENDING	NOT_COUNTABLE
+2025	65	BROADER_ADJACENT	General wettability and contact-angle modeling; no target sealed wick or device evidence	PENDING	PENDING	NOT_COUNTABLE
+2025	68	TRANSFERABLE_HEAT_TRANSFER	HFE-7100 thin-layer boiling with electrochemically modified mesh; surface physics, no phone device	PENDING	PENDING	NOT_COUNTABLE
+2025	70	ELECTRONICS_HARDWARE	Electronics immersion cooling review only; already one staged review DOI and linked corrigendum zero extra work	PENDING	PENDING	NOT_COUNTABLE
+2025	81	TRANSFERABLE_HEAT_TRANSFER	Non-boiling single-nozzle spray cooling; active liquid cooling reference, large system parasitic caveat	PENDING	PENDING	NOT_COUNTABLE
+2025	90	BROADER_ADJACENT	Magnetic nanofluid deposition on biphilic surface; no clear terminal cooling pathway	PENDING	PENDING	NOT_COUNTABLE
+2025	104	BROADER_ADJACENT	Falling film on horizontal tube arrays; macrogeometry, transfer conditional	PENDING	PENDING	NOT_COUNTABLE
+2025	105	BROADER_ADJACENT	Continuously supplied multicomponent film evaporation; generic film physics with no target architecture	PENDING	PENDING	NOT_COUNTABLE
+2025	108	BROADER_ADJACENT	Droplet impact splashing on textured surfaces; no direct target transport mechanism	PENDING	PENDING	NOT_COUNTABLE
+2025	114	BROADER_ADJACENT	Plasma treatment of PTFE wettability; no sealed thermal-device performance	PENDING	PENDING	NOT_COUNTABLE
+2025	146	ENABLING_METROLOGY	Neural-network dry-spot segmentation in high-speed boiling footage, ground-truth diagnostic	PENDING	PENDING	NOT_COUNTABLE
+2025	162	BROADER_ADJACENT	Laser-textured silicon morphology and wettability; surface process without phone-specific result	PENDING	PENDING	NOT_COUNTABLE
+2025	166	ENABLING_METROLOGY	Dynamic contact angle numerical closure; enabling model, no phone prediction validation	PENDING	PENDING	NOT_COUNTABLE
+2025	179	TRANSFERABLE_HEAT_TRANSFER	Boiling in 3D micropores; capillary evaporator pore-scale understanding	PENDING	PENDING	NOT_COUNTABLE
+2025	184	TRANSFERABLE_HEAT_TRANSFER	Non-condensables and subcooled bubble dynamics under microgravity; mechanism transferable only with gravity caveat	PENDING	PENDING	NOT_COUNTABLE
+2025	190	BROADER_ADJACENT	Biphilic drop evaporation/natural convection, generic surface science	PENDING	PENDING	NOT_COUNTABLE
+2025	215	BROADER_ADJACENT	CVD precursor dilution and coating wettability, process evidence only	PENDING	PENDING	NOT_COUNTABLE
+2025	234	ENABLING_METROLOGY	LED interferometry for boiling microlayer and pressure drop, mechanism measurement	PENDING	PENDING	NOT_COUNTABLE
+2025	236	OUT_OF_SCOPE	HFC-134a hydrate growth in salt solution, outside terminal thermal transfer scope	PENDING	PENDING	NOT_COUNTABLE
