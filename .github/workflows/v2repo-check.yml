@@ -24,5 +24,7 @@ jobs:
         run: python tools/graph_audit.py
       - name: Audit Russia Capability Atlas coverage
         run: python tools/atlas_coverage_audit.py --summary
+      - name: Validate academic-first research routing
+        run: python tools/actor_research_router.py
       - name: Audit output-measurement sample identities
         run: python tools/output_measurement_audit.py
