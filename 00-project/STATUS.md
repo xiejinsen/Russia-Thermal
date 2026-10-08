@@ -62,6 +62,10 @@ academic_catalog_triage_audit: tools/itp_triage_audit.py
 academic_team_mapping_status: KUT_LAB13_BATCH_A_REPRESENTATIVE_LINEAGE_11_WORKS / 2026_YTD_SEPARATE / NO_YEARLY_OUTPUT_COUNTS
 academic_team_mapping_report: analysis/academic-team-mapping/kutateladze-lab13-team-capability-2026-10-08.md
 academic_team_identity_guard: SURTAEV_OFFICIAL_LAB13_CONFIRMED / ZHUKOV_VI_VE_NOT_MERGED / SERDYUKOV_EXACT_LAB_HOLD
+academic_p1_comparator_b_state: PUBLIC_PRIMARY_REVIEW_COMPLETE / MECHANISM_LABEL_INCREMENTAL_INFORMATION_NOT_MEASURED / KEEP_P1_NARROW
+academic_p1_comparator_b_report: analysis/academic-team-mapping/kutateladze-p1-incremental-value-batch-b-2026-10-08.md
+academic_p1_comparator_new_pressure: KOREA_2016_IRREVERSIBLE_DRY_SPOT / GLOBAL_2019_UNET / MIT_2023_IR_UNET / US_2025_INTERNAL_STATE_AND_SATURATION / JAPAN_2026_PORE
+academic_p1_version_control: RUS_2025_RU_EN_TRANSLATION_PENDING / RUS_2026_FINAL_HTC_RATIO_1_47_VS_2025_PREPRINT_1_9
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -70,7 +74,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Kutateladze Lab1.3 batch B: compare the 2026 HFE-7100/Novec649 multimodal dry-spot experiment and 2025 neural-network detection with matched China/global crisis-observer models; prove or falsify incremental mechanism-label information beyond internal temperature/pressure/saturation-state baselines. In parallel fix DOI HTML href association, group RU/EN/preprint versions, audit 2025 NONKEYWORD sample, confirm V.I. Zhukov and Serdyukov affiliation, then review 2021-2024 leads and reconcile output counts; MPEI/ITP Ural Branch next; academic collaboration only; companies context, no experiments/outreach.
+next_action: P1 Batch B is publicly pressure-tested: preserve narrow mechanism-label/model-falsification hypothesis; information gain versus Korea 2016, MIT 2023, Purdue 2025 and Chinese engineering remains NOT_MEASURED. Next run bounded public 2026 label/repeatability/uncertainty audit without experiments or outreach, then shift primary capacity to MPEI and ITP Ural Branch institutional team maps plus 10 remaining Russia capability-owner profiles. In parallel restore DOI href associations, review 2021-2024 204 keyword leads, sample non-keyword omissions and verify author affiliations before publishing any annual output counts. Companies context only, software limited scan.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
