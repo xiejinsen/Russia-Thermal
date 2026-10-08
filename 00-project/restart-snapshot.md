@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: P1 Batch B is publicly pressure-tested: preserve narrow mechanism-label/model-falsification hypothesis; information gain versus Korea 2016, MIT 2023, Purdue 2025 and Chinese engineering remains NOT_MEASURED. Next run bounded public 2026 label/repeatability/uncertainty audit without experiments or outreach, then shift primary capacity to MPEI and ITP Ural Branch institutional team maps plus 10 remaining Russia capability-owner profiles. In parallel restore DOI href associations, review 2021-2024 204 keyword leads, sample non-keyword omissions and verify author affiliations before publishing any annual output counts. Companies context only, software limited scan.
+- next: P1 public-data gate is bounded and paused without collaboration data: no verified shareable run-level labels or added information versus strong China/global physics baselines; keep P1 PRIMARY narrow and no outreach. MPEI named-team reliability pilot is now started; verify 2025 Russian/English same-work publication identity, other MPEI lab-team affiliations and evidence, then prioritize ITP Ural Branch and uncovered Russia academic institute profiles. Continue DOI HTML href recovery, remaining 2021-2024 204 keyword candidates, 2025 non-keyword false-negative sample and independent index recall before annual totals; companies context only, no experiments/outreach.
 
 ## Directions
 
