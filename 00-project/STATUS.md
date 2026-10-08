@@ -108,6 +108,7 @@ final_insight_acceptance_contract: 00-project/final-insight-acceptance-contract.
 final_insight_question_ledger: 00-project/final-insight-question-ledger.tsv
 final_insight_question_state_summary: Q03_Q05_Q10_SUBSTANTIALLY_ANSWERED / Q01_Q02_Q04_Q06_Q07_Q08_Q09_IN_PROGRESS / NONE_CLOSED
 final_insight_collaboration_card_template: reports/collaboration-opportunities/decision-card-template.md
+final_insight_chinese_leadership_overview: reports/final-insight-acceptance-overview-cn.md
 final_insight_most_critical_gaps: Q04_2021_2025_COMPARABLE_ACADEMIC_OUTPUT / Q08_RUSSIA_INCREMENTAL_VALUE / Q09_NAMED_ACTIONABLE_FEASIBILITY / Q01_COVERAGE_REMAINING_FIVE
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
