@@ -116,6 +116,10 @@ function capabilityDetail(capability: CapabilityRecord): CapabilityDetailVM {
     targetFit: humanize(capability.targetFit),
     family: capability.capabilityFamily ? humanize(capability.capabilityFamily) : undefined,
     topics: (capability.capabilityTopics ?? []).map(humanize),
+    platformTransfer: (capability.platformTransfer ?? []).map((item) => ({
+      platform: humanize(item.platform),
+      level: humanize(item.level)
+    })),
     technicalScope: capability.technicalScope,
     transferBoundary: capability.transferBoundary ?? undefined,
     strategicUse: capability.strategicUse ?? undefined,
