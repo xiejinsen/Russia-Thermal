@@ -8,6 +8,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-08
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- COMPACT_ELECTRONICS=TRANSFERABLE
+- ADJACENT_ELECTRONICS=TRANSFERABLE
 capability_family: ACTIVE_HARDWARE
 capability_topics:
 - JET_SPRAY_COOLING
