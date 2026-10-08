@@ -31,6 +31,7 @@ export interface CapabilityRecord {
   targetFit: string;
   capabilityFamily?: 'SOFTWARE_SYSTEM' | 'PASSIVE_HARDWARE' | 'ACTIVE_HARDWARE' | 'ENABLING' | null;
   capabilityTopics?: string[];
+  platformTransfer?: Array<{ platform: string; level: string }>;
   keyPeopleIds: string[];
   collaboratingActorIds: string[];
   claimIds: string[];
