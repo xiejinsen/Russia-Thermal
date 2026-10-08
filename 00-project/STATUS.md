@@ -31,9 +31,9 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 23/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MISIS_PROFILE_ADDED / CI_VERIFIED
+institution_atlas_profile_status: 24/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / LAVRENTYEV_PROFILE_ADDED / CI_RERUN_PENDING
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PASS / DISTINCT_23_28_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37809471028
+russia_atlas_audit_status: PRIOR_PASS_23_28 / NEW_LAVRENTYEV_EXPECTED_24_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
@@ -45,15 +45,15 @@ web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/ru
 web_ui_ci: SUCCESS
 web_production_deploy_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37787614367
 web_production_browser_live_check: NOT_INDEPENDENTLY_VERIFIED
-russia_atlas_unprofiled_owners: 5
-output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / ALL_YEARLY_TOTALS_NOT_MEASURED
+russia_atlas_unprofiled_owners: 4
+output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / KUT_MPEI_2024_2025_12_IDENTITY_RECORDS_STAGED / ALL_YEARLY_TOTALS_NOT_MEASURED
 output_measurement_contract: 00-project/output-measurement-contract.md
 output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
 output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 25/30 DISTINCT_ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY / OLD_ICM_ALIAS_NOT_A_ROOT
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
-academic_profile_current_coverage: 19/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / MISIS_PROFILE_ADDED / CORPUS_SPECIFIC
+academic_profile_current_coverage: 20/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / LAVRENTYEV_PROFILE_ADDED / CORPUS_SPECIFIC
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
@@ -110,6 +110,14 @@ final_insight_question_state_summary: Q03_Q05_Q10_SUBSTANTIALLY_ANSWERED / Q01_Q
 final_insight_collaboration_card_template: reports/collaboration-opportunities/decision-card-template.md
 final_insight_chinese_leadership_overview: reports/final-insight-acceptance-overview-cn.md
 final_insight_most_critical_gaps: Q04_2021_2025_COMPARABLE_ACADEMIC_OUTPUT / Q08_RUSSIA_INCREMENTAL_VALUE / Q09_NAMED_ACTIONABLE_FEASIBILITY / Q01_COVERAGE_REMAINING_FIVE
+academic_lavrentyev_profile_status: OFFICIAL_CURRENT_HYDRODYNAMICS_LAB_AND_KUZNETSOV_HEAD_CONFIRMED / PAPER_TIME_AFFILIATIONS_OPEN / NO_PHONE_DEVICE / NO_PRIORITY_PROMOTION
+academic_lavrentyev_research_report: analysis/academic-team-mapping/lavrentyev-hydrodynamics-team-capability-2026-10-08.md
+academic_lavrentyev_official_source: OFFICIAL-LAVRENTYEV-LAB-2026
+academic_lavrentyev_canonical_lab: ACT-LAVRENTYEV-APPLIED-CFD
+academic_lavrentyev_2025_paper_year_gate: FLUID_DYNAMICS_VOL60_NO8_ISSUE_2025 / WEB_ONLINE_DATE_NOT_VERIFIED / ONE_WORK
+q04_kut_mpei_2024_25_status: 12_MIXED_TYPED_IDENTITY_RECORDS_REVIEWED / RU_EN_VERSIONS_AND_CORRIGENDA_FLAGGED / NOT_YEARLY_COUNTS
+q04_kut_mpei_2024_25_report: analysis/output-measurement/pilot-v1/academic-2024-2025-kut-mpei-identity-audit.md
+q04_kut_mpei_2024_25_ledger: analysis/output-measurement/pilot-v1/academic-2024-2025-work-identity-sample.tsv
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -118,7 +126,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Final insight acceptance now governed by 10 explicit user-approved Q01-Q10 questions and source-linked status ledger, currently Q03/Q05/Q10 substantially answered, 7 in progress, 0 closed. Phase1 P1/P2/P3 portfolio remains frozen; no outreach or experiments. Continue ACT-LAVRENTYEV then ACT-SKOLTECH academic teams and 2021-2025 verified publication/patent output measurement to close Q01/Q02/Q04 and clarify Q08 incremental collaboration value. Every research round reports changed Q-IDs, blocked gates and goal regression. Prior latest verified corpus: 23/28 Russia capability-owner institution profiles, 19/25 priority academic profiles, 34 Russia capabilities; verify after subsequent commits. Academic-only partners, China/global strong comparison, software LIMITED_SCAN.
+next_action: Q01/Q02 Lavrentyev Atlas now built: official Applied/Computational Hydrodynamics Lab head V. V. Kuznetsov verified, Kabov joint Fluid Dynamics 2025 issue work already canonical; cross-institution formal collaboration and article-time affiliations not inferred. Expected institution Atlas 24/28 and priority academic 20/25, pending current CI; Q04 Kutateladze/MPEI 2024-2025 12-row work-identity pilot built with journal-vs-online-year, English/Russian versions and correction controls, but full annual relevant paper/patent totals remain NOT_MEASURED. Final acceptance Q01/Q02/Q04 evidence improved, Q05/Q08/Q09 still conditioned; P1/P2/TPU portfolio unchanged. Next Skoltech official graphene/BN materials+teams Atlas and bounded Q04 recall/DOI matching, then MSU/HSE/SPbU; no outreach or device experiments, academic-only partners and China/global comparators.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
