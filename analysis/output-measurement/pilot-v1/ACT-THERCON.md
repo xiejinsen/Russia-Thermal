@@ -49,3 +49,9 @@ Public descriptions of full-cycle electronics cooling engineering are industrial
 A patent-assignee/registry reconstruction is required. Even a thorough DOI query would not represent its engineering translation capacity. Start from registered legal-entity aliases, patent numbers, family/priority-year records, and verify public applications through direct registry entries.
 
 Company-reported 6 + 3 is displayed as an **unverified external aggregate** rather than a ledger count.
+
+## Academic-first scope reclassification
+
+As of 2026-10-08, this company is `CONTEXT_ONLY` under the user's research-priority constraint.
+
+Do not continue a systematic Thercon five-year patent census in parallel with prioritized academic-lab research. Preserve this file and its RU/WO same-family example as a patent-dedup methodological control and industry context. Reopen deep company research only if a specific academic collaboration, patent-boundary or leadership question requires it.
