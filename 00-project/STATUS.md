@@ -31,9 +31,9 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 22/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / SAME_ICM_DUPLICATE_ROOT_RECONCILED / CI_VERIFIED_2026_10_08
+institution_atlas_profile_status: 23/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MISIS_PROFILE_ADDED / CI_RERUN_PENDING
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PASS / TRUE_22_28_DISTINCT_INSTITUTES / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / ACTIONS_RUN_37800187972
+russia_atlas_audit_status: PRIOR_PASS_22_28 / NEW_MISIS_PROFILE_EXPECTED_23_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / NEW_ACTIONS_PENDING
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
@@ -45,7 +45,7 @@ web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/ru
 web_ui_ci: SUCCESS
 web_production_deploy_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37787614367
 web_production_browser_live_check: NOT_INDEPENDENTLY_VERIFIED
-russia_atlas_unprofiled_owners: 6
+russia_atlas_unprofiled_owners: 5
 output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / ALL_YEARLY_TOTALS_NOT_MEASURED
 output_measurement_contract: 00-project/output-measurement-contract.md
 output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
@@ -53,7 +53,7 @@ output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 25/30 DISTINCT_ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY / OLD_ICM_ALIAS_NOT_A_ROOT
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
-academic_profile_current_coverage: 18/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / ICM_ALIAS_MERGED / CORPUS_SPECIFIC
+academic_profile_current_coverage: 19/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / MISIS_PROFILE_ADDED / CORPUS_SPECIFIC
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
@@ -99,6 +99,10 @@ academic_icm_identity_state: SAME_INSTITUTE_DUPLICATE_ACTOR_RESOLVED / CANONICAL
 academic_icm_research_report: analysis/academic-team-mapping/icm-krasn-two-track-identity-capability-2026-10-08.md
 academic_icm_identity_ledger: 00-project/actor-aliases.md
 academic_icm_two_research_lines: BEKEZHANOVA_STEPANOVA_THERMOCAPILLARY_EXACT_MODELS / NESTEROV_FLAT_HP_SPACE_ELECTRONICS_DESIGN / 2021_2025_OUTPUT_TOTALS_UNMEASURED
+academic_misis_profile_state: PROFILE_CREATED / VERIFIED_KUZNETSOV_CENTER_DIRECTOR / KHOVAYLO_THERMOELECTRICS / KARPENKOV_MAGNETOCALORIC / ARGUNOV_THERMOELECTRIC_GENERATOR_NOT_COOLER / 2021_2025_OUTPUT_NOT_MEASURED
+academic_misis_research_report: analysis/academic-team-mapping/misis-solidstate-materials-academic-profile-2026-10-08.md
+academic_misis_staging: analysis/academic-team-mapping/misis-2021-2026-materials-evidence-staging.tsv
+academic_misis_transfer_guard: 575_700K_MATERIAL_ZT_NOT_AMBIENT_COP / MAGNETIC_CRYOGENIC_NOT_PHONE / STRONG_CHINA_MICROTEC_PRIOR_ART / NO_PORTFOLIO_UPGRADE
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -107,7 +111,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: ICM Krasnoyarsk same-institute identity repair validated in main GitHub Actions (22/28 distinct Russia owner institutions, 18/25 prioritized academic root profiles, 34/34 platform transfer, SOURCE dedup and graph PASS; 1 NSU academic-person gap warning). ACT-ICM-SBRAS is historic non-owning alias of ACT-ICM-KRASN; actual Bekezhanova-led DiffMech lab and Nesterov flat-HP engineering line under one institution, no claimed Russia-unique phone technology. Next ACT-MISIS 2021-2025 solid-state/thermoelectric team and original academia evidence, then other five unprofiled roots, alongside full relevant paper/patent DOI-year-affiliation reconciliation. Companies context only, no outreach, no experiments.
+next_action: MISIS academic materials Atlas now added: expected 23/28 distinct Russia capability-owner institution profiles and 19/25 prioritized academic profiles, pending final GitHub Actions current main check. Center for Energy Efficiency has director Kuznetsov, independent group leads Khovaylo (thermoelectric materials), Karpenkov (magnetocaloric) and Argunov (spin thermoelectric GENERATION); 2023-25 original materials papers anchored, 575/700K zT and cryogenic RCo2 results do not prove room-temperature smartphone cooling COP. Compare strongly with China fabricated 2024 microTEC and 2025 externally chilled phone experiment; no P1/P2 promotion. Next prioritize ACT-LAVRENTYEV and ACT-SKOLTECH then MSU/HSE/SPBU, and start controlled 2021-2025 relevant institute-output DOI/year/affiliation census. No outreach/experiments, companies context only.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
