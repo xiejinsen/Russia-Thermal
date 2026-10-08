@@ -1,6 +1,7 @@
 # ACT-UUST
 
 record_state: CURRENT
+official_url: https://uust.ru/
 actor_type: ORGANIZATION
 canonical_name: Ufa University of Science and Technology
 country: RU
