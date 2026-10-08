@@ -8,6 +8,10 @@ maturity: PRE_DEVICE
 evidence_confidence: MEDIUM_HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=TRANSFERABLE
+- TABLET=TRANSFERABLE
+- COMPACT_ELECTRONICS=TRANSFERABLE
 capability_family: PASSIVE_HARDWARE
 capability_topics:
 - CAPILLARY_WICK
