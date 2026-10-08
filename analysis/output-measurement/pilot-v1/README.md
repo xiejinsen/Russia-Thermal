@@ -109,3 +109,24 @@ See:
 First web-based year-page probe confirmed the Kutateladze journal-article catalog exists with paginated official pages across 2021–2025. Estimated page counts from the probe: 2021=27, 2022=14, 2023=16, 2024=14, 2025=14. These are **page numbers**, not paper counts. Some first-page entries did not match the initial parser and need extraction QA.
 
 Full-year relevant research output is still NOT_MEASURED; website explicitly states its public bibliography is incomplete.
+
+## Official archive extraction and machine screening (2026-10-08)
+
+A real GitHub Action retrieved 65/85 Kutateladze annual article listing pages and archived 1,250 raw catalog records. The 20 missing pages are all from 2021 after timeout errors; 2022–2025 site pages were retrieved with continuous ordinals.
+
+Automated TITLE keyword triage identified 186 **unreviewed research leads**, a deliberately overinclusive review queue and NOT a measured 2021–2025 Paper output count.
+
+Important QA:
+- URL/page/site ordinal from original archive preserved;
+- row-level provenance cross-check in `tools/itp_triage_audit.py`;
+- `HIGH` review priority is not mobile relevance, product capability or quality rank;
+- DOI HTML link href extraction not yet complete;
+- publisher-linked 2025 review + corrigendum are one review plus a correction, not two new research papers.
+
+Research report:
+`analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md`
+
+Manual representative decision-use review:
+`analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md`
+
+Company research remains CONTEXT_ONLY; Kutateladze -> MPEI -> ITP Ural Branch academic institute output is the current deep-data priority.
