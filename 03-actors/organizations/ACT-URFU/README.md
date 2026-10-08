@@ -1,6 +1,7 @@
 # ACT-URFU
 
 record_state: CURRENT
+official_url: https://urfu.ru/
 actor_type: ORGANIZATION
 canonical_name: Ural Federal University
 country: RU
