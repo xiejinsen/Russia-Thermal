@@ -8,6 +8,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM_HIGH
 target_fit: BACKGROUND
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- COMPACT_ELECTRONICS=TRANSFERABLE
 capability_family: PASSIVE_HARDWARE
 capability_topics:
 - HEAT_SPREADER_GRAPHITE
