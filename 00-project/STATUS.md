@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 28/28 DISTINCT_RECOVERED_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / HSE_SPBU_PROFILE_ADDED / CI_RERUN_PENDING / NOT_NATIONAL_COMPLETENESS
+institution_atlas_profile_status: 28/28 DISTINCT_RECOVERED_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / HSE_SPBU_PROFILE_ADDED / CI_VERIFIED_2026_10_08 / NOT_NATIONAL_COMPLETENESS
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_26_28_PASS / HSE_SPBU_EXPECTED_28_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
+russia_atlas_audit_status: PASS / DISTINCT_28_28_OWNER_PROFILES / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / ACTIONS_RUN_37820156518
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37817988788
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_26_OF_28_ATLAS / 34_34_TRANSFER / KUT_41_RAW_ONLY_TITLE_SCREEN_24_NEGATIVE_SAMPLE_NOT_CENSUS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37817988871
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37820156518
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_28_OF_28_KNOWN_OWNER_ATLAS / 34_34_TRANSFER / Q01_OUTSIDE_DISCOVERED_ROOTS_OPEN / Q04_COMPLETE_OUTPUT_CENSUS_NOT_MEASURED
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37820156439
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -152,7 +152,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: HSE/SPbU final recovered Russia CAP-owner root Atlas profiles created, expected 28/28 distinct recovered owner profiles and 24/25 priority academic institution profiles pending CI. HSE first-party educational+research MIEM lab Petrosyants/Kharitonov 2023 COMSOL/SPICE/ASONIKA PCB original, 2024–25 educational projects NOT paper outputs; SPbU Granichin official stochastic lab 2023 smartphone energy-only DVFS, independent high-energy physics department Feofilov 2024/25 carbon-fleece detector cooling patent publications family link NOT_VERIFIED. Q04 high-signal Kut DOI identity round: 2025 YBCO Russian plus 2026 English translation coaffiliated Kut/Rzhanov/Skoltech; 2025 HFE droplet original distinct from 2024 HFE journal original, 2026 IJMF issue even with 2025 DOI; MPEI 2024 Ivanov thesis not 2024 peer-reviewed paper. All 2021–25 full relevant institute annual paper/patent family totals NOT_MEASURED; 170 dual-negative titles and external recall remain. Next Q01 outside current 28-root institution/lab discovery, Q04 comparable full-year DOI corpus and patent-family census, and Q08/Q09 concrete Russia-vs-domestic incremental P1/P2 partner gates; no contact/device testing, P1/P2/TPU frozen.
+next_action: CI-verified recovered-root 28/28 Russia capability-owner institution Atlas via GitHub Actions 37820156518 (no absent profiles, 34/34 transfer, source dedup and graph PASS with one existing NSU unassigned current PI warning). HSE MIEM educational/research lab: Petrosyants/Kharitonov 2023 PCB COMSOL/SPICE/ASONIKA, student projects not journal outputs. SPbU Granichin stochastic algorithm lab direct 2023 smartphone energy DVFS (not thermal governor), independent physics detector carbon-laminate patents 2024 RU2825727 and 2025 RU2834604 family link still unknown. Q01 recovered corpus covered BUT nationwide Russia institution/lab recall NOT audited, Q02 prioritized academic cohort 24/25 with one separate cohort root gap and NSU person gap. Q04 Kut high-value original source identity ledger separates 2025 Russian YBCO from 2026 English, 2024 from 2025 HFE, 2026 IJMF issue and 2024 MPEI PhD thesis; complete relevant annual 2021-25 institutional output and patent family totals NOT_MEASURED. Next shift from mere institution counts to authority/venue guided outside-corpus recall, comparable Kut/MPEI 2021-25 paper DOI/year/affiliation/patent family census, and P1/P2 Q08/Q09 counterfactual research value gates. Strategic P1/P2/TPU frozen; no outreach or physical tests.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
