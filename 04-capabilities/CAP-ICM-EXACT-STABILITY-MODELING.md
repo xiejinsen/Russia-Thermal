@@ -9,6 +9,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: FOUNDATIONAL
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=FOUNDATIONAL
+- TABLET=FOUNDATIONAL
+- COMPACT_ELECTRONICS=FOUNDATIONAL
 capability_family: ENABLING
 capability_topics:
 - STABILITY_ANALYSIS
