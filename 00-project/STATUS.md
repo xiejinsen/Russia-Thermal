@@ -31,8 +31,13 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: BATCH1+BATCH2+BATCH3=16 INSTITUTIONS_AND_COMPANIES / WEB_CONNECTED
+institution_atlas_profile_status: BATCH1+BATCH2+BATCH3+AUDIT=19/29 RUSSIA_CAPABILITY_OWNERS / WEB_CONNECTED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
+russia_atlas_audit_status: REPRODUCIBLE / CURRENT_GRAPH=29 OWNERS / PROFILE=19/29 / PLATFORM_TRANSFER=34/34
+russia_atlas_audit_control: tools/atlas_coverage_audit.py
+russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
+russia_atlas_key_person_gaps: 2
+russia_atlas_unprofiled_owners: 10
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -41,7 +46,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: audit Russia Capability Atlas completeness across all current Russian Actors: identify missing institution/company profiles, people ownership, platform-transfer coverage, recovered relevant paper/patent count gaps, and verified collaboration/influence; prioritize remaining leadership-critical gaps before more discovery; keep SOFTWARE_SYSTEM LIMITED_SCAN
+next_action: pilot an independently source-traceable five-year (2021-2025 complete plus 2026 YTD separate) institution output / patent-family feasibility audit for Kutateladze, MPEI and Thercon; retain 10 unprofiled Russian Capability owners as prioritized gap queue; keep SOFTWARE_SYSTEM LIMITED_SCAN and require each-round goal regression
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
