@@ -3,7 +3,7 @@
 record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-08
-canonical_paper_count: 53
+canonical_paper_count: 55
 completed_deep_reads: 37
 campaign_state: DECISION_CRITICAL_CLOSED / ATLAS_INCREMENTAL
 
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 37 / 53
+## Completed Tier-A Deep Reads — 37 / 55
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -241,10 +241,12 @@ Phase-1 decision-critical closure occurred at:
 Subsequent Russia Capability Atlas enrichment added:
 - PAPER-RU-ASTU-ACTIVE-001 — current adjacent active liquid/refrigeration electronics cooling; no Deep Read required for current strategic portfolio;
 - PAPER-RU-ASTU-ACTIVE-002 — continuity support for the ASTU active-cooling line; no Deep Read required for current strategic portfolio;
-- PAPER-RU-DGTU-TE-001 — direct thermoelectric electronics-cooling experiment; full Tier-A-style Deep Read completed because it establishes a new Active Hardware Capability.
+- PAPER-RU-DGTU-TE-001 — direct thermoelectric electronics-cooling experiment; full Tier-A-style Deep Read completed because it establishes a new Active Hardware Capability;
+- PAPER-RU-DGTU-TE-002 — 2022 electronic-board thermoelectric full-scale experiment; lineage/support evidence, no new portfolio decision;
+- PAPER-RU-DGTU-TE-003 — 2022 discrete-semiconductor thermoelectric-system model; lineage/support evidence, no new portfolio decision.
 
 Current corpus:
-- 53 canonical papers;
+- 55 canonical papers;
 - 37 Deep Reads.
 
 This does not reopen the Phase-1 decision-critical campaign.
