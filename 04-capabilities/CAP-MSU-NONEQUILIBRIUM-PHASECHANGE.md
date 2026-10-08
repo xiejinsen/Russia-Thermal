@@ -1,7 +1,7 @@
 # CAP-MSU-NONEQUILIBRIUM-PHASECHANGE
 
 record_state: CURRENT
-actor_id: ACT-MSU
+actor_id: ACT-MSU-KINETIC-GASES
 key_people:
 - PERSON-LEVASHOV-VY
 maturity: FOUNDATIONAL_RESEARCH
@@ -27,4 +27,6 @@ Technical scope:
 nonequilibrium evaporation; condensation; two-phase heat/mass transfer; kinetic theory; molecular dynamics; interfacial transport.
 
 Transfer boundary:
-useful for mechanism/model insight, not evidence of smartphone-scale cooling hardware.
+useful for vapor/interface mechanism and Boltzmann/DSMC boundary-condition modeling, not evidence of smartphone-scale cooling hardware. Gas/Knudsen-layer and supersaturated vapor regimes require verified correspondence to sealed phone VC geometry; no measured improvement. MSU CMC Faculty numerical HMT lab is a separate group.
+
+Current lab and original paper: https://www.imec.msu.ru/en/institute/team/people/levashov-vladimir-yurevich/ ; https://doi.org/10.31857/S1024708424060129 .
