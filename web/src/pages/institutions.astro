@@ -25,6 +25,8 @@ function descendantIds(rootId: string) {
   return ids;
 }
 
+const researchSortOrder = { PRIMARY: 0, SELECTIVE: 1, CONTEXT_ONLY: 2 } as const;
+
 const records = vm.records.map((model) => {
   const actor = actorById.get(model.id);
   const scopedIds = descendantIds(model.id);
@@ -73,6 +75,10 @@ const records = vm.records.map((model) => {
     ].join(' ')
   };
 }).sort((a, b) => {
+  const ad = a.actor?.researchDepth as keyof typeof researchSortOrder | undefined;
+  const bd = b.actor?.researchDepth as keyof typeof researchSortOrder | undefined;
+  const research = (ad ? researchSortOrder[ad] : 3) - (bd ? researchSortOrder[bd] : 3);
+  if (research) return research;
   const country = (a.actor?.country ?? '').localeCompare(b.actor?.country ?? '');
   if (country) return country;
   const ak = a.actor?.type === 'ORGANIZATION' ? 0 : 1;
@@ -103,7 +109,7 @@ const directionOptions = directions
         <p class="eyebrow">Institution & lab explorer</p>
         <h1>Institutions & labs</h1>
         <p>
-          Browse the full organization and lab landscape, including teams that were researched but not promoted as partners.
+          Academic universities and research institutes lead this list; applied institutes and companies are retained as contextual engineering evidence. Browse also the labs that were researched but not promoted as partners.
           Each horizontal record keeps hierarchy, capability context, people and strategic role visible without reverting to large cards.
         </p>
       </div>
@@ -126,7 +132,19 @@ const directionOptions = directions
           label: 'Kind',
           options: [
             { value: 'ORGANIZATION', label: 'Organization' },
-            { value: 'LAB', label: 'Lab / team' }
+            { value: 'LAB', label: 'Lab / team' },
+            { value: 'COMPANY', label: 'Company' }
+          ]
+        },
+        {
+          key: 'research',
+          label: 'Organization class',
+          options: [
+            { value: 'ACADEMIC_UNIVERSITY', label: 'Academic university' },
+            { value: 'ACADEMIC_RESEARCH_INSTITUTE', label: 'Academic research institute' },
+            { value: 'APPLIED_RESEARCH_ORG', label: 'Applied research institute' },
+            { value: 'INDUSTRIAL_ORG', label: 'Industrial organization' },
+            { value: 'COMPANY', label: 'Company' }
           ]
         },
         { key: 'relation', label: 'Research role', options: relationOptions },
@@ -140,6 +158,7 @@ const directionOptions = directions
           data-explorer-record
           data-country={record.actor?.country ?? ''}
           data-kind={record.actor?.type ?? ''}
+          data-research={record.actor?.researchClass ?? ''}
           data-relation={record.relations.join('|')}
           data-direction={record.directionIds.join('|')}
           data-search={record.search}
@@ -151,8 +170,9 @@ const directionOptions = directions
           >
             <div slot="main" class="inst-main">
               <div class="topline">
-                <span>{record.actor?.type === 'LAB' ? 'LAB / TEAM' : 'ORGANIZATION'}</span>
+                <span>{record.actor?.researchClass ? humanize(record.actor.researchClass) : record.actor?.type === 'LAB' ? 'LAB / TEAM' : 'ORGANIZATION'}</span>
                 <b>{record.actor?.country ?? record.model.country}</b>
+                {record.actor?.researchDepth && <em>{humanize(record.actor.researchDepth)} research</em>}
                 {record.priorityRanks.map((rank) => <em>{rank}</em>)}
               </div>
               {record.model.href ? (
