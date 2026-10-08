@@ -31,13 +31,13 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: BATCH1+BATCH2+BATCH3+AUDIT=19/29 RUSSIA_CAPABILITY_OWNERS / WEB_CONNECTED
+institution_atlas_profile_status: BATCH1+BATCH2+BATCH3+AUDIT+NSU=20/29 RUSSIA_CAPABILITY_OWNERS / NSU_PROFILE_ADDED / WEB_REBUILD_NOT_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: REPRODUCIBLE / CURRENT_GRAPH=29 OWNERS / PROFILE=19/29 / PLATFORM_TRANSFER=34/34
+russia_atlas_audit_status: PRIOR_AUDIT_PASS_19/29 / NSU_NEW_PROFILE_EXPECTED_20/29 / CURRENT_GRAPH_AUDIT_RERUN_REQUIRED
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-russia_atlas_unprofiled_owners: 10
+russia_atlas_unprofiled_owners: 9
 output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / ALL_YEARLY_TOTALS_NOT_MEASURED
 output_measurement_contract: 00-project/output-measurement-contract.md
 output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
@@ -45,7 +45,7 @@ output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 26/31 ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
-academic_profile_current_coverage: 15/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS
+academic_profile_current_coverage: 16/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS / BASELINE_15_PLUS_NSU_1 / AUDIT_RERUN_REQUIRED
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
@@ -70,6 +70,9 @@ academic_mpei_team_mapping_status: BOUNDED_BATCH_A_STARTED / 2025_RU_EN_VERSION_
 academic_mpei_team_mapping_report: analysis/academic-team-mapping/mpei-team-reliability-pilot-2026-10-08.md
 academic_itp_ural_team_mapping_status: OFFICIAL_ROSTER_CONFIRMED / 2 NEW_ACADEMIC_PEOPLE / 13 REPRESENTATIVE_IDENTITY_ROWS / NO_YEARLY_TOTALS
 academic_itp_ural_team_mapping_report: analysis/academic-team-mapping/itp-ural-lhp-team-capability-2026-10-08.md
+academic_nsu_profile_state: PROFILE_CREATED / LABPET_DISTINCT_CURRENT_ROSTER / EITP_PERSON_UNRESOLVED / TWO_JOINT_2024_ISSUE_PAPERS_PLUS_2025_LINEAGE / NO_YEARLY_COUNTS
+academic_nsu_research_report: analysis/academic-team-mapping/nsu-atlas-round-2026-10-08.md
+academic_nsu_actor_identity_guard: NSU_LABPET_NOT_NSU_EITP / JOINT_KUTATELADZE_NSU_AUTHOR_AFFILIATION_NOT_EXCLUSIVE_IP / 2024_VOLUME_2025_CROSSMARK_DATE_GATE
 academic_itp_ural_identity_guard: PASTUKHOV_HISTORICAL_COAUTHOR_DIFFERENT_CURRENT_LAB / 2024_RU_EN_TRANSLATION_SINGLE_WORK / 2025_RU_EN_SERVICEABILITY_SINGLE_WORK / 2025_AUTHOR_CORRIGENDUM_ZERO_NEW
 academic_itp_ural_investment_lane: WATCH_UNCHANGED / CHINA_2025_0_7MM_MOBILE_LHP_COMPARATOR
 academic_p1_comparator_new_pressure: KOREA_2016_IRREVERSIBLE_DRY_SPOT / GLOBAL_2019_UNET / MIT_2023_IR_UNET / US_2025_INTERNAL_STATE_AND_SATURATION / JAPAN_2026_PORE
@@ -82,7 +85,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: ITP Ural LHP named-team mapping complete as bounded research sample: 2021-25 papers/methods and 2025 copper-wick ammonia experiment traced, China thin 0.7-mm mobile LHP pressure leaves DIR-LHP-KNOWLEDGE-RESERVE WATCH; no product/unproven lifetime upgrade or outreach. Next prioritize missing Russian academic Atlas profiles ACT-NSU (two-phase diagnostics personnel gap), ACT-MEPHI, ACT-TSU, ACT-ICM-SBRAS and ACT-MISIS, with linked original team papers and China comparator only where decision-relevant; then remaining lower-priority actors. MPEI other-team affiliation and RU/EN paper identity, Kutateladze DOI anchors and relevant 2021-25 output denominators remain open. Companies context only, software limited, no experiments/outreach.
+next_action: NSU institutional Atlas profile now added (expected 20/29 Russia capability-owner roots; 16/26 primary academic profiles); LabPET leader Alekseenko/Naumov verified, but Energy-Intensive Thermal Processes Lab PI remains unresolved. Verify 2024-volume versus 2025-online dual-affiliation DOI year identities without double-counting and keep NSU execution/diagnostics support only, no new strategic phone thermal bet. Next bounded academic profile ACT-MEPHI (named boiling/onset/heat-flux investigators), then ACT-TSU, ACT-ICM-SBRAS and ACT-MISIS; run graph/atlas/generated-view and web health tests to verify 20/29. Five-year academic relevant paper/patent counts remain NOT_MEASURED; avoid mixing China comparison systems, no outreach/experiments, software LIMITED_SCAN.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
