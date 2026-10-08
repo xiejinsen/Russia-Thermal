@@ -166,6 +166,32 @@
         }
       },
       "additionalProperties": false
+    },
+    "researchClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "ACADEMIC_UNIVERSITY",
+        "ACADEMIC_RESEARCH_INSTITUTE",
+        "APPLIED_RESEARCH_ORG",
+        "INDUSTRIAL_ORG",
+        "COMPANY",
+        null
+      ]
+    },
+    "researchDepth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "PRIMARY",
+        "SELECTIVE",
+        "CONTEXT_ONLY",
+        null
+      ]
     }
   },
   "additionalProperties": false
