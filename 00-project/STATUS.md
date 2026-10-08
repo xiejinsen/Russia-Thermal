@@ -103,6 +103,12 @@ academic_misis_profile_state: PROFILE_CREATED / VERIFIED_KUZNETSOV_CENTER_DIRECT
 academic_misis_research_report: analysis/academic-team-mapping/misis-solidstate-materials-academic-profile-2026-10-08.md
 academic_misis_staging: analysis/academic-team-mapping/misis-2021-2026-materials-evidence-staging.tsv
 academic_misis_transfer_guard: 575_700K_MATERIAL_ZT_NOT_AMBIENT_COP / MAGNETIC_CRYOGENIC_NOT_PHONE / STRONG_CHINA_MICROTEC_PRIOR_ART / NO_PORTFOLIO_UPGRADE
+final_insight_acceptance_state: TEN_QUESTIONS_USER_APPROVED / INTEGRATED_FINAL_INSIGHT_OPEN / PHASE1_PORTFOLIO_UNCHANGED
+final_insight_acceptance_contract: 00-project/final-insight-acceptance-contract.md
+final_insight_question_ledger: 00-project/final-insight-question-ledger.tsv
+final_insight_question_state_summary: Q03_Q05_Q10_SUBSTANTIALLY_ANSWERED / Q01_Q02_Q04_Q06_Q07_Q08_Q09_IN_PROGRESS / NONE_CLOSED
+final_insight_collaboration_card_template: reports/collaboration-opportunities/decision-card-template.md
+final_insight_most_critical_gaps: Q04_2021_2025_COMPARABLE_ACADEMIC_OUTPUT / Q08_RUSSIA_INCREMENTAL_VALUE / Q09_NAMED_ACTIONABLE_FEASIBILITY / Q01_COVERAGE_REMAINING_FIVE
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -111,7 +117,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: MISIS academic center and three distinct groups now verified at GitHub Actions run 37809471028: 23/28 real Russia capability-owner institution profiles, 19/25 priority academic profiles, 34/34 platform transfer, SOURCE dedup and graph PASS with 1 preexisting NSU person warning. Khovaylo thermoelectrics, Karpenkov magnetic refrigeration, Argunov thermoelectric generators separated; high-T materials zT and cryogenic RCo2 are NOT phone cooler COP, current China fabricated microTEC controls rule out generic Russia-only cooler claims. Next ACT-LAVRENTYEV and ACT-SKOLTECH, then MSU/HSE/SPbU, plus 2021-2025 institution topic-relevant paper/patent DOI/translation/affiliation output census. P1/P2 unchanged, academic-only, no outreach or device testing.
+next_action: Final insight acceptance now governed by 10 explicit user-approved Q01-Q10 questions and source-linked status ledger, currently Q03/Q05/Q10 substantially answered, 7 in progress, 0 closed. Phase1 P1/P2/P3 portfolio remains frozen; no outreach or experiments. Continue ACT-LAVRENTYEV then ACT-SKOLTECH academic teams and 2021-2025 verified publication/patent output measurement to close Q01/Q02/Q04 and clarify Q08 incremental collaboration value. Every research round reports changed Q-IDs, blocked gates and goal regression. Prior latest verified corpus: 23/28 Russia capability-owner institution profiles, 19/25 priority academic profiles, 34 Russia capabilities; verify after subsequent commits. Academic-only partners, China/global strong comparison, software LIMITED_SCAN.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
