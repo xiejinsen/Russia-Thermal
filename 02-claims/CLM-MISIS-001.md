@@ -9,6 +9,7 @@ MISIS currently maintains thermoelectric and other solid-state thermal-control m
 
 supporting_sources:
 - OFFICIAL-MISIS-THERMOELECTRIC-001
+- OFFICIAL-MISIS-ENERGY-CENTER-STAFF-2026
 
 Boundary:
 do not equate materials-level thermoelectric capability with smartphone cooling-system readiness.
