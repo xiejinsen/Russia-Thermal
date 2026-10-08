@@ -270,7 +270,7 @@ def load_deep_reads() -> list[dict[str, Any]]:
 def load_academic_research_routes() -> dict[str, dict[str, str]]:
     path = ROOT / "00-project" / "russia-root-actor-research-routing.tsv"
     with path.open(encoding="utf-8", newline="") as handle:
-        rows = list(csv.DictReader(handle, delimiter="\\t"))
+        rows = list(csv.DictReader(handle, delimiter="\t"))
     return {row["actor_id"]: {"researchClass": row["research_organization_class"],
                                "researchDepth": row["research_depth"]} for row in rows}
 
