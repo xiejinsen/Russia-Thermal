@@ -32,6 +32,10 @@ They represent three different management actions:
 2. **Conditionally preserve** — value exists only if a specific data/resource condition can be met.
 3. **Do not advance now** — keep a precise reopen gate so the organization knows what future evidence would matter.
 
+## Integrated insight acceptance
+
+The decision-card format is now governed by the [Ten Final Insight Questions](../../00-project/final-insight-acceptance-contract.md) and the [Academic Collaboration Decision Card Template](decision-card-template.md). The existing P1/P2/P3 packages remain valid frozen Phase-1 products and **are not automatically reopened** by this new layout standard. New partner packages must show the specific Russia-vs-China/internal incremental value, phone transfer and stop/reopen conditions.
+
 ## Package files
 
 - [OPP-01 — Kutateladze mechanism-resolved failure ground truth](OPP-01-KUTATELADZE-FAILURE-GROUND-TRUTH.md)
