@@ -14,7 +14,8 @@ PATHS = (
     "03-actors/organizations/ACT-MPEI/representative-works.tsv",
 )
 FIELDS = ("selection_id","work_ref","source_locator","scholar_refs","research_lane",
-          "selection_reason","evidence_state","deep_read_priority","decision_ref","selection_limit")
+          "selection_reason","evidence_state","deep_read_priority","decision_ref","selection_limit",
+          "display_title","display_authors","display_venue","display_year")
 STATES = {"CANONICAL","ORIGINAL_REVIEWED","SECONDARY_ONLY","PENDING_IDENTITY"}
 PRIORITIES = {"DECISIVE","SUPPORTING","CONTEXT"}
 
@@ -69,8 +70,15 @@ def checked_records():
                         continue
                     if person not in actors or actors[person].get("actor_type") != "PERSON":
                         errors.append(f"{mark}: invalid person ref {person}")
+                if row["display_year"] != "UNVERIFIED" and not (row["display_year"].isdigit() and 1900 <= int(row["display_year"]) <= 2100):
+                    errors.append(f"{mark}: invalid publication year")
+                if row["evidence_state"] == "CANONICAL" and row["display_year"] == "UNVERIFIED":
+                    errors.append(f"{mark}: canonical publication year cannot be unverified")
                 records.append({
-                    "id": key, "teamId": "ACT-KUT-LAB13" if "ACT-KUT" in rel else "ACT-MPEI",
+                    "id": key, "title": row["display_title"],
+                    "authors": row["display_authors"], "venue": row["display_venue"],
+                    "year": None if row["display_year"] == "UNVERIFIED" else int(row["display_year"]),
+                    "teamId": "ACT-KUT-LAB13" if "ACT-KUT" in rel else "ACT-MPEI",
                     "sourceId": None if work == "CANDIDATE" else work,
                     "sourceUrl": locator,
                     "scholarRefs": row["scholar_refs"].split(";"),
