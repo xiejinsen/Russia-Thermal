@@ -38,6 +38,10 @@ russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
 russia_atlas_unprofiled_owners: 10
+output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / ALL_YEARLY_TOTALS_NOT_MEASURED
+output_measurement_contract: 00-project/output-measurement-contract.md
+output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
+output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -46,7 +50,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: pilot an independently source-traceable five-year (2021-2025 complete plus 2026 YTD separate) institution output / patent-family feasibility audit for Kutateladze, MPEI and Thercon; retain 10 unprofiled Russian Capability owners as prioritized gap queue; keep SOFTWARE_SYSTEM LIMITED_SCAN and require each-round goal regression
+next_action: continue bounded Kutateladze 2021-2025 full annual publication/patent catalog extraction, DOI/translations dedup and mobile-thermal relevance filtering, while staging MPEI named-team bibliography and Thercon assignee/family reconciliation; do not present institution-level five-year totals until evidence coverage is reconciled; preserve SOFTWARE_SYSTEM LIMITED_SCAN and goal-regression at every round
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
