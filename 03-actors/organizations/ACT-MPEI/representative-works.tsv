@@ -1,0 +1,5 @@
+selection_id	work_ref	source_locator	scholar_refs	research_lane	selection_reason	evidence_state	deep_read_priority	decision_ref	selection_limit
+MPEI-01	CANDIDATE	https://doi.org/10.1134/S0869864321060093	NAME:Ivanov;NAME:Kuzma-Kichta	SURFACE_WETTING	Earlier surface-science continuity	SECONDARY_ONLY	CONTEXT	DIR-HEALTH-AWARE-UTVC	Original methods require audit
+MPEI-02	CANDIDATE	https://doi.org/10.56304/S0040363625701103	NAME:Ivanov;NAME:Kuzma-Kichta;NAME:Alyautdinova	THERMOSYPHON_COATING	Named MPEI team original coating experiment	ORIGINAL_REVIEWED	SUPPORTING	DIR-HEALTH-AWARE-UTVC	English DOI provisional translation not new work
+MPEI-03	CANDIDATE	https://tptmai.ru/eng/publications.php?ID=187722&mobile=Y	NAME:Ivanov;NAME:Kuzma-Kichta	THERMOSYPHON_CIRCULATION	Separates measured and modeled structure benefits	PENDING_IDENTITY	SUPPORTING	DIR-HEALTH-AWARE-UTVC	Publication year/DOI remains unresolved
+MPEI-04	PAPER-RU-AGE-001	https://doi.org/10.1016/j.pes.2026.100314	NAME:Ivanov	LONG_DURATION_AGING	Key 42-month operational endpoint and hidden capillary change	CANONICAL	DECISIVE	DIR-HEALTH-AWARE-UTVC	No proven time-resolved early warning; 2026
