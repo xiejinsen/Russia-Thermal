@@ -22,6 +22,7 @@ A network Direction does not create a synthetic consortium Actor.
 - history/ — transactions / migration receipts
 - views/ — generated human-facing views
 - reports/ — derived reports
+- analysis/ — non-canonical audits and research working notes
 
 ## Presentation-readiness layer
 
@@ -37,7 +38,6 @@ Synthesis owns only:
 It does **not** own source facts, capability truth, actor identity, or direction state.
 
 This allows the website/Figma layer to read stable conclusion-first contracts without copying strategic prose into frontend code.
-- analysis/ — audits/reviews, never canonical truth
 
 ## Generated files
 
@@ -46,11 +46,10 @@ Generated views must begin with a DO NOT EDIT marker and must be reproducible by
 Health check:
 python tools/v2repo.py --check
 
-GitHub Actions runs the same check on dev.
+The authoritative CI target is main; verify the actual current GitHub Actions runs rather than relying on this document as proof.
 
 ## Legacy V1
 
-V1 files remain present during migration for semantic comparison and history.
-They do not become V2.1 canonical merely because they remain in the repository.
+V1 baseline is retained in Git history for provenance; it is not part of the V2.1 current working-tree model.
 
-Cutover is complete: V2.1 canonical objects on main are authoritative. Legacy V1 files remain historical/provenance material only.
+Cutover is complete: V2.1 canonical objects on main are authoritative. Legacy V1 content in Git history is historical/provenance material only.
