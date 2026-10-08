@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: TSU academic lab/person/capability mapping now GitHub Actions verified: 22/29 Russian capability-owner profiles, 34/34 platform-transfer, source dedup and graph PASS with old nonblocking NSU key-person and foundational modeling-sufficiency warnings; academic cohort 18/26 from confirmed current profile objects. TSU remains WATCH for PCM/channel modeling, not phone prototype or new strategic bet. Next research priority ACT-ICM-SBRAS followed by ACT-MISIS and remaining 7 profile gaps. Concurrent focus 2021-2025 source-deduped affiliation-qualified institutional paper/patent counts, no country-wide output ranking or false mobile superiority. No outreach or experiments; companies context only.
+- next: ICM Krasnoyarsk identity correction: ACT-ICM-SBRAS and ACT-ICM-KRASN are one institute; history preserved under alias, actual differential mechanics department ACT-ICM-DIFFMECH now lab-owned, Nesterov electronics flat-HP line remains at canonical institute. Verify revised Atlas 22/28 distinct Russia capability owners, 18/25 academic roots and 34/34 transfer in main Actions. ICM is methodological research complement, not phone product partner promotion. Next ACT-MISIS plus remaining 6 owner profiles; parallel reconcile 2021-2025 academic output/collaboration/patent DOI records using single-institute identities. P1/P2 reserve hierarchy unchanged, academic-only partners, no outreach/experiments.
 
 ## Directions
 
