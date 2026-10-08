@@ -25,7 +25,7 @@ public_gaps:
 
 **Joint research authors, not lab owners by default:** V. S. Serdyukov, I. A. Kosovskikh and A. S. Surtaev have NSU co-affiliation on a [boiling-microlayer LED interferometry work](https://doi.org/10.1134/S0869864324040188). The [black-silicon boiling study](https://sibran.ru/en/journals/issue.php?ARTICLE_ID=189961&ID=165707&PAGEN_1=719) also names NSU co-affiliated authors. This supports an academic execution/diagnostics bridge, but not exclusive experiment ownership.
 
-Research audit note: [NSU source and publication-time identity staging](../../../../analysis/academic-team-mapping/nsu-2021-2026-evidence-staging.md).
+Research audit note: [NSU source and publication-time identity staging](../../../analysis/academic-team-mapping/nsu-atlas-round-2026-10-08.md).
 
 ## Investment boundary
 
