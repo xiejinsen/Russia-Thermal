@@ -48,3 +48,27 @@ All sample rows are in `sample-records.tsv`; they are NOT a census.
 Official yearly article and IP catalogs make this the BEST first institution for a bounded extraction/reconciliation campaign. However the catalog explicitly disclaims completeness, so counts will require another index (OpenAlex/Crossref/RSCI where accessible, plus DOI-level matching) and affiliation / relevance review.
 
 Next: extract all yearly article listing pages, pagination and patent types into a dated candidate table; dedup and relevance-classify before any official total.
+
+## Annual archive extraction outcome (2026-10-08)
+
+Source:
+`analysis/output-measurement/itp-annual-raw/retrieval-manifest.json`.
+
+2021: 7/27 pages, 121 raw listings; **20 unavailable middle pages** after repeated timeouts. Retrieval is incomplete.
+2022: 14/14 pages, 272 raw listings.
+2023: 16/16 pages, 315 raw listings.
+2024: 14/14 pages, 272 raw listings.
+2025: 14/14 pages, 270 raw listings.
+
+Total extracted: 1,250 raw listings from 65/85 pages, not 1,250 deduplicated relevant Papers.
+
+Machine keyword review queue: 186 unreviewed title candidates (67 high-review priority, 113 medium, 6 ambiguous). This is NOT a validated total or an exhaustive relevant-paper search. See:
+- `analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md`
+- `analysis/output-measurement/pilot-v1/triage/`
+- `analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md`
+
+The scraper collected the bibliographic plain text but generally **did not preserve the site's DOI link hrefs**; blank DOI fields therefore mean pending resolution, not unavailable DOI.
+
+Publisher example: 2025 electronics immersion-cooling review DOI `10.1016/j.applthermaleng.2025.127088` has a publisher corrigendum DOI `10.1016/j.applthermaleng.2025.127221`; one research review + correction, not two new research works.
+
+All annual **relevant and deduplicated** output counts remain NOT_MEASURED.
