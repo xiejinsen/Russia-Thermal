@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: audit Russia Capability Atlas completeness across all current Russian Actors: identify missing institution/company profiles, people ownership, platform-transfer coverage, recovered relevant paper/patent count gaps, and verified collaboration/influence; prioritize remaining leadership-critical gaps before more discovery; keep SOFTWARE_SYSTEM LIMITED_SCAN
+- next: pilot an independently source-traceable five-year (2021-2025 complete plus 2026 YTD separate) institution output / patent-family feasibility audit for Kutateladze, MPEI and Thercon; retain 10 unprofiled Russian Capability owners as prioritized gap queue; keep SOFTWARE_SYSTEM LIMITED_SCAN and require each-round goal regression
 
 ## Directions
 
