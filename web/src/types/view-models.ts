@@ -127,6 +127,7 @@ export interface CapabilityDetailVM {
   targetFit: string;
   family?: string;
   topics: string[];
+  platformTransfer: Array<{ platform: string; level: string }>;
   technicalScope: string[];
   transferBoundary?: string;
   strategicUse?: string;
