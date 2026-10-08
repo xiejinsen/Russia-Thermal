@@ -16,6 +16,8 @@ Use this file when resuming the project in a new chat/window.
 10. [methodology.md](methodology.md) — evidence and decision method.
 11. [architecture.md](architecture.md) + [taxonomy.md](taxonomy.md) — object ownership and hierarchy.
 
+For a concise Chinese leadership overview of final acceptance, see [Final Insight Ten-Question Overview](../reports/final-insight-acceptance-overview-cn.md). The overview is a **snapshot**; STATUS and the ten-question ledger are authoritative.
+
 ## Resume rule
 
 Do not restart research from scratch.
