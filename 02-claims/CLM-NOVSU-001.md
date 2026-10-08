@@ -8,6 +8,7 @@ Proposition:
 NovSU maintains a current electroosmotic heat-pipe research line led by Yuri Kiliba that targets orientation-tolerant electronics cooling and has progressed from modeling/measurement to a physical electroosmotic-pump prototype.
 
 supporting_sources:
+- PAPER-RU-NOVSU-EO-001
 - OFFICIAL-RSCF-NOVSU-EO-001
 - OFFICIAL-NOVSU-EO-001
 
