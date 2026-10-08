@@ -266,7 +266,30 @@ def load_deep_reads() -> list[dict[str, Any]]:
     return records
 
 
-def actor_record(o: dict[str, Any]) -> dict[str, Any]:
+def load_actor_atlas_profiles(v2repo) -> dict[str, dict[str, Any]]:
+    profiles: dict[str, dict[str, Any]] = {}
+    for path in sorted(ROOT.glob("03-actors/*/*/atlas-profile.md")):
+        o = v2repo.parse(path)
+        actor_id = nullable(o.get("actor_id"))
+        if not actor_id:
+            continue
+        profiles[actor_id] = {
+            "state": nullable(o.get("profile_state")) or "",
+            "assessedAt": nullable(o.get("assessed_at")) or "",
+            "leadershipSummary": nullable(o.get("leadership_summary")) or "",
+            "collaborationSummary": nullable(o.get("collaboration_summary")) or "",
+            "influenceSummary": nullable(o.get("influence_summary")) or "",
+            "outputInterpretation": nullable(o.get("output_interpretation")) or "",
+            "contextSourceIds": as_list(o.get("context_sources")),
+            "collaborationSourceIds": as_list(o.get("collaboration_sources")),
+            "influenceSourceIds": as_list(o.get("influence_sources")),
+            "publicGaps": as_list(o.get("public_gaps")),
+            "sourcePath": str(path.relative_to(ROOT)).replace("\\", "/"),
+        }
+    return profiles
+
+
+def actor_record(o: dict[str, Any], atlas_profile: dict[str, Any] | None = None) -> dict[str, Any]:
     parent = nullable(o.get("parent_actor_id"))
     if parent == "null":
         parent = None
@@ -285,6 +308,7 @@ def actor_record(o: dict[str, Any]) -> dict[str, Any]:
         "latitude": float_value(o.get("latitude")),
         "longitude": float_value(o.get("longitude")),
         "locationVerifiedAt": nullable(o.get("location_verified_at")),
+        "atlasProfile": atlas_profile,
         "sourcePath": o["_path"],
     }
 
@@ -531,6 +555,14 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     for r in datasets["actors"]:
         if r["parentId"] and r["parentId"] not in actor_ids:
             errors.append(f"{r['id']}: unresolved parentId {r['parentId']}")
+        profile = r.get("atlasProfile")
+        if profile:
+            for f in ("state", "assessedAt", "leadershipSummary", "collaborationSummary", "influenceSummary", "outputInterpretation", "sourcePath"):
+                if not str(profile.get(f, "")).strip():
+                    errors.append(f"{r['id']}: atlasProfile.{f} is empty")
+            for sid in profile.get("contextSourceIds", []) + profile.get("collaborationSourceIds", []) + profile.get("influenceSourceIds", []):
+                if sid not in evidence_ids:
+                    errors.append(f"{r['id']}: atlas profile unresolved source {sid}")
 
     for r in datasets["claims"]:
         for sid in r["supportingSourceIds"] + r["contradictingSourceIds"]:
@@ -642,8 +674,9 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
         raise RuntimeError("canonical validation failed:\n" + "\n".join(canonical_errors))
 
     roles = load_visibility_dispositions()
+    profiles = load_actor_atlas_profiles(v2repo)
     return {
-        "actors": [actor_record(o) for o in db["actor"]],
+        "actors": [actor_record(o, profiles.get(o["id"])) for o in db["actor"]],
         "evidence": [evidence_record(o, roles["sources"].get(o["id"])) for o in db["source"]],
         "deepReads": load_deep_reads(),
         "claims": [claim_record(o, roles["claims"].get(o["id"])) for o in db["claim"]],
