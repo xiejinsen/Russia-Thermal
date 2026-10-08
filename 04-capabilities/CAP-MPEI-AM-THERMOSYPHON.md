@@ -12,6 +12,11 @@ maturity: DEVICE_RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- LAPTOP=ADJACENT
+- COMPACT_ELECTRONICS=ADJACENT
 capability_family: PASSIVE_HARDWARE
 capability_topics:
 - VC_HEAT_PIPE
