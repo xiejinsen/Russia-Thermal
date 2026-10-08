@@ -1,6 +1,7 @@
 # ACT-ITMO
 
 record_state: CURRENT
+official_url: https://itmo.ru/
 actor_type: ORGANIZATION
 canonical_name: ITMO University
 country: RU
