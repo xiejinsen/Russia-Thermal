@@ -1,6 +1,7 @@
 # ACT-THERCON
 
 record_state: CURRENT
+official_url: https://thercon.ru/
 actor_type: COMPANY
 canonical_name: Thercon-KTT LLC
 country: RU
