@@ -130,3 +130,20 @@ Manual representative decision-use review:
 `analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md`
 
 Company research remains CONTEXT_ONLY; Kutateladze -> MPEI -> ITP Ural Branch academic institute output is the current deep-data priority.
+
+## Newer status — official Article archive fully fetched (2026-10-08)
+
+The earlier 65/85 and 2021 missing-page statements above are historical snapshots and have been **superseded**. Two low-rate retry passes successfully recovered all 20 missing 2021 Article pages, giving 85/85 visible site pages and 1,650 raw bibliography citations for 2021–2025.
+
+Automatic unreviewed TITLE triage now flags 239 leads (2021=64, 2022=44, 2023=47, 2024=49, 2025=35). This is NOT a verified thermal-relevant output count.
+
+DOI identity examples currently resolve 14 staged bibliographic identity records: one existing canonical paper reused, six new but NOT-yet-ingested primary-identifiable independent work candidates, one linked publisher corrigendum, six secondary DOI leads on hold. None may be extrapolated to annual output.
+
+Current report and machine provenance:
+- `kutateladze-full-archive-doi-round_2026_10_08.md`
+- `kutateladze-doi-identity-review.tsv`
+- `analysis/output-measurement/itp-annual-raw/retrieval-manifest.json`
+- `tools/itp_doi_identity_audit.py`
+- `tools/itp_triage_audit.py`
+
+Academic-first Kutateladze -> MPEI -> ITP Ural Branch remains the publication/research-partner priority. No new canonical source ingested and no publication total asserted.
