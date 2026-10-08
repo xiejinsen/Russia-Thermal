@@ -1,5 +1,7 @@
 # Russia Capability Atlas — Full-Corpus Coverage Audit and Targeted Repair
 
+> **Updated status, 2026-10-08:** The 19/29 counts below are the **historical initial audited snapshot**, kept to document the baseline and targeted repair. They are **not current**. GitHub Actions [V2.1 Repository Health run 37787716672](https://github.com/xiejinsen/Russia-Thermal/actions/runs/37787716672) independently reran `tools/atlas_coverage_audit.py --summary` against commit `c57a6aa94c0766eff7e5311afcc55f439794730d` and reported **21 of 29 Russia Capability-owner roots with Atlas profiles**, 34 Russia Capabilities, **34/34 platform-transfer metadata** and 2 remaining capabilities missing named people: NSU two-phase diagnostics bridge and Thercon electronics LHP production. **8 roots still lack profiles**: HSE, ICM-SBRAS, Lavrentyev, MISIS, MSU, Skoltech, SPbU and TSU. This is current-corpus coverage, **not** a census of all Russian institutions. See `00-project/STATUS.md` for subsequent changes.
+
 date: 2026-10-08
 status: ROUND_CLOSED
 audit_scope: current Russia-owned Capability graph (not a census of all Russian research institutions)
