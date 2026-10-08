@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: TSU academic team Atlas created: ACT-TSU-CHMT-LAB with official Sheremet director, Gibanov channel active cooling, Bondareva porous-PCM modeling and 2021-2026 representative original line; initial Atlas expected 22/29 Russia capability-owner roots and 18/26 primary academic profiles, pending GitHub Actions rerun. Preserve TSU as modeling/PCM WATCH (China 2024 experimental PCM pin-fin and honeycomb plus 2023 global GaN device constrain generic uniqueness); journal metadata discrepancies and 2025 heat-pipe review tagged, no yearly totals. Next priority ACT-ICM-SBRAS then ACT-MISIS and remaining university owners, and start standardised 2021-2025 paper/patent outcome reconciliation. Academic-only collaboration; company benchmarks context-only; no outreach/experiments; software limited.
+- next: TSU academic lab/person/capability mapping now GitHub Actions verified: 22/29 Russian capability-owner profiles, 34/34 platform-transfer, source dedup and graph PASS with old nonblocking NSU key-person and foundational modeling-sufficiency warnings; academic cohort 18/26 from confirmed current profile objects. TSU remains WATCH for PCM/channel modeling, not phone prototype or new strategic bet. Next research priority ACT-ICM-SBRAS followed by ACT-MISIS and remaining 7 profile gaps. Concurrent focus 2021-2025 source-deduped affiliation-qualified institutional paper/patent counts, no country-wide output ranking or false mobile superiority. No outreach or experiments; companies context only.
 
 ## Directions
 
