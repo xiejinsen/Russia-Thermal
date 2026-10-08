@@ -1,10 +1,18 @@
-# Institution Research-Output Measurement Contract v0.1 — Pilot
+# Representative Academic Contribution and Optional Output-Measurement Contract v0.2
 
-status: PILOT / DO_NOT_PUBLISH_COMPARATIVE_TOTALS
+status: REPRESENTATIVE_FIRST / FULL_CENSUS_OPTIONAL / DO_NOT_PUBLISH_UNRECONCILED_TOTALS
 date: 2026-10-08
 scope: research-output and IP measurement for leadership's Russia-only thermal-capability atlas
 
-## Measurement target
+## User-approved policy change — representative-first (2026-10-08)
+
+The research goal is **decisive technical evidence and academic partner value**, NOT a publication census. Default output per P1 team: approximately 8–12 representative works, P2: 5–10, other relevant institutions: 3–5, individual scholars: typically 3–5 overlapping works. These are flexible ranges, never quotas. Deep-read approximately 2–4 decision-changing works per priority team; foundational older works may be included and clearly dated.
+
+Select via institutional/lab pages, credible scholarly venues, key researchers, citations and recent independent/China competitor results. Check **important contrary works and mechanism coverage**, not exhaustive publication counts. For every selected paper record stable original title hyperlink, authors, publication year/venue, affiliation at publication, method/results, limits, relevance to smartphone and China/global pressure. Do not select only papers supporting the thesis.
+
+**Annual totals, patent-family totals, output rankings and institutional productivity comparisons are OPTIONAL, NOT Q04 EXIT GATES.** When not independently reconciled they must remain NULL/NOT_MEASURED, not estimated or zero. All historical full-census experiments remain archived as methodological research, not mandatory tasks.
+
+## Optional full-census measurement target (only when specifically required by a quantitative claim)
 
 **Question:** What research output, IP, coauthorship, grants and engineering translation has a specified Russian organization/team produced in mobile-terminal-related thermal-management areas?
 
@@ -76,7 +84,7 @@ Source: official publication index + publisher + official patent register; third
 
 Run existing Source preflight before promoting any candidate to canonical.
 
-## Pilot release gates
+## Optional quantitative release gates (NOT required for representative-first Q04 closure)
 
 Before marking an institution RECONCILED:
 1. retrieval query log with date/source, interval, language terms and pagination;
@@ -93,8 +101,7 @@ No contact/experiments needed for the public-evidence phase.
 
 ## Academic-first sample allocation (2026-10-08 update)
 
-Target study population for deep five-year output is academic universities and academic research institutes. Sample next:
-Kutateladze -> MPEI named groups -> ITP Ural Branch RAS.
+Target study population is academic universities and research institutes. Next: representative contribution and contrary-evidence cards for Kutateladze, MPEI, then ITP Ural Branch RAS. Do not initiate complete bibliometric census without a concrete decision need.
 
 Company and industrial output is contextual only; keep self-reported patent counts and verified patent families as limited boundary evidence. Do not place academic institutions and companies in one productivity leaderboard or spend equal analyst effort on commercial patent portfolios.
 
