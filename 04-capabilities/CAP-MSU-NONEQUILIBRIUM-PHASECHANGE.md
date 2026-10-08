@@ -8,6 +8,10 @@ maturity: FOUNDATIONAL_RESEARCH
 evidence_confidence: HIGH
 target_fit: FOUNDATIONAL
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=FOUNDATIONAL
+- TABLET=FOUNDATIONAL
+- COMPACT_ELECTRONICS=FOUNDATIONAL
 capability_family: ENABLING
 capability_topics:
 - BOILING_DRYOUT_PHYSICS
