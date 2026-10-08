@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: pilot an independently source-traceable five-year (2021-2025 complete plus 2026 YTD separate) institution output / patent-family feasibility audit for Kutateladze, MPEI and Thercon; retain 10 unprofiled Russian Capability owners as prioritized gap queue; keep SOFTWARE_SYSTEM LIMITED_SCAN and require each-round goal regression
+- next: continue bounded Kutateladze 2021-2025 full annual publication/patent catalog extraction, DOI/translations dedup and mobile-thermal relevance filtering, while staging MPEI named-team bibliography and Thercon assignee/family reconciliation; do not present institution-level five-year totals until evidence coverage is reconciled; preserve SOFTWARE_SYSTEM LIMITED_SCAN and goal-regression at every round
 
 ## Directions
 
