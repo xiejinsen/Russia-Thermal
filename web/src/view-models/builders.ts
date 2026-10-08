@@ -470,6 +470,8 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
 
   return {
     id: actor.id,
+    researchClassification: actor.researchClass ? humanize(actor.researchClass) : undefined,
+    researchDepth: actor.researchDepth ? humanize(actor.researchDepth) : undefined,
     name: actor.name,
     country: actor.country,
     kindLabel: actorKind(actor.type),
