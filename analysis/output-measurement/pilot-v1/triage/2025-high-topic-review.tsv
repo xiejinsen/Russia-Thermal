@@ -1,0 +1,15 @@
+year	archive_index	title_scope_review	review_basis	work_identity_status	publication_affiliation_status	count_policy
+2025	10	ENABLING_METROLOGY	LED interferometry for film evaporation in microchannels; diagnostic method, no phone test	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	15	TRANSFERABLE_HEAT_TRANSFER	Subcooled boiling in flat minichannel with graphene; localized boiling mechanism	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	18	TRANSFERABLE_HEAT_TRANSFER	HFE-7100 capillary wicking and boiling on black silicon; surface mechanism	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	38	OUT_OF_SCOPE	Digital petroleum-core immiscible-fluid simulation in Fuel, despite microfluidic keyword	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	52	ENABLING_METROLOGY	Local heating, microchannel two-phase heat-transfer coefficient with schlieren visualization	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	67	TRANSFERABLE_HEAT_TRANSFER	Porous-heater wettability and boiling performance; no thin device demonstration	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	103	TRANSFERABLE_HEAT_TRANSFER	HFE-7100 capillary-porous coated boiling; already DOI staged separately, do not duplicate	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	119	BROADER_ADJACENT	Surfactant effects on immiscible slug flow in curved microchannel, no demonstrated cooling mechanism	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	120	BROADER_ADJACENT	Microchannel mixing efficiency; no explicit heat transport or cooling benefit	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	159	ENABLING_METROLOGY	Two-phase frictional pressure-drop model; enabling design analysis not phone implementation	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	168	TRANSFERABLE_HEAT_TRANSFER	Turbulent-gas-driven liquid-film simulation in flat minichannel; high parasitic-power caveat	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	196	TRANSFERABLE_HEAT_TRANSFER	Stratified-annular transition with drop entrainment; confinement and flow-regime mechanism	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	216	TRANSFERABLE_HEAT_TRANSFER	Graphene/porous-coated flow boiling in flat microchannels; DOI secondary hold already tracked	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
+2025	230	OUT_OF_SCOPE	Hemicyindrical-dimple turbulent flow; no identified mobile thermal mechanism	NOT_FULLY_VERIFIED	PENDING	NOT_COUNTABLE
