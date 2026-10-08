@@ -162,6 +162,8 @@ export interface CapabilityPageVM {
 
 export interface InstitutionPageVM {
   id: string;
+  researchClassification?: string;
+  researchDepth?: string;
   name: string;
   country: string;
   kindLabel: string;
