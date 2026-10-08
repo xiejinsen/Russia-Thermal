@@ -15,6 +15,7 @@ Direct facts:
 - Russian science-and-production company with more than 20 years in two-phase passive thermal-control systems;
 - full-cycle thermal modeling, design, prototyping, testing and serial production;
 - own production includes loop heat pipes, heat pipes and custom thermal-control systems;
+- the company reports 6 invention patents and 3 utility-model patents (company-reported aggregate, not independently family-audited);
 - patent portfolio includes a loop-heat-pipe passive thermal-control system for processors and FPGAs in electronic modules/servers;
 - current application areas include avionics, server/industrial computers and instrumentation;
 - the company participated in Russia's Microelectronics 2025 forum and continues current production in 2026.
