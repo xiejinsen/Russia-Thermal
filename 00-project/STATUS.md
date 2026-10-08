@@ -42,6 +42,11 @@ output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / ALL_YEARLY_T
 output_measurement_contract: 00-project/output-measurement-contract.md
 output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
 output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
+academic_research_priority: 26/31 ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY
+academic_research_contract: 00-project/academic-first-research-contract.md
+academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
+academic_catalog_probe: KUT_2021-2025_FIRST_PAGES_PASS / 85 OFFICIAL ARTICLE PAGES / INSTITUTION_CATALOG_INCOMPLETE
+academic_catalog_extractor: tools/itp_catalog_extract.py
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -50,7 +55,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: continue bounded Kutateladze 2021-2025 full annual publication/patent catalog extraction, DOI/translations dedup and mobile-thermal relevance filtering, while staging MPEI named-team bibliography and Thercon assignee/family reconciliation; do not present institution-level five-year totals until evidence coverage is reconciled; preserve SOFTWARE_SYSTEM LIMITED_SCAN and goal-regression at every round
+next_action: complete Kutateladze 2021-2025 official article archive traversal with page-completeness manifest, then DOI and translated-version dedup plus mobile-thermal relevance review; follow with MPEI and ITP Ural Branch academic lab output; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments and round-close goal regression
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
