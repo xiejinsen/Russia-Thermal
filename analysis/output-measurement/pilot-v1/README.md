@@ -168,3 +168,11 @@ Important examples absent from curated 35: 2025 #46 bubble+dry-spot imaging (sec
 
 Parallel academic Atlas:
 [Skoltech 2021–2025 two academic labs materials and additive source dossier](../../academic-team-mapping/skoltech-materials-and-am-2021-2025-profile-2026-10-08.md). Its papers and 2023 thesis are *samples* and cannot rank institute productivity.
+
+## 2025 raw-only queue topic review and seeded both-negative control (2026-10-08)
+
+- [41/41 raw-keyword-only and seeded 24/194 both-negative title-screen row decisions](kutateladze-2025-raw-only-41-and-dual-negative-24-topic-screen.tsv).
+- [Results, source/year guards and publisher identity next gates](kutateladze-2025-expanded-topic-screen-2026-10-08.md).
+- This closes **only the defined 41-row TITLE SCREEN** (2 P1 direct, 10 transferable, 3 enabling, 2 review, 3 other-platform, 11 broad and 10 out-of-scope), and not full paper/affiliation admission. Dual-negative 24-sample has 5 broadly enabling/transfer candidates, including #106 HFE-7100 droplet and #197 horizontal-pipe two-phase regime. The `LCG 20261008` reproducible sample is NOT an unbiased high-confidence recall estimate. Remaining 170 dual-negative titles and incomplete public bibliography plus missing external DOIs still block comprehensive census.
+- **MSU two-lab institutional boundary** now documented in [academic profile](../../academic-team-mapping/msu-phasechange-academic-atlas-2026-10-08.md). 2024 RU-English interface paper and 2025 review are **separate typed research objects or manifestations**, not a valid total count.
+- Institute-year thermal research article/patent-family totals remain **null / NOT_MEASURED** and no rank/paper count may be inferred from the title-screen sample.
