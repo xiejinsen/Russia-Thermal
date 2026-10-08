@@ -1,6 +1,7 @@
 # ACT-LAVOCHKIN
 
 record_state: CURRENT
+official_url: https://www.laspace.ru/
 actor_type: ORGANIZATION
 canonical_name: NPO Lavochkin
 country: RU
