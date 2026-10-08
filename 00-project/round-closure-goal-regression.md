@@ -33,12 +33,25 @@ The project is not required to prove that Russia is broadly better than China.
 - No experimental/device-testing requirement is assumed for the current insight phase.
 - Institution prestige is context, not proof of technical superiority or collaboration value.
 
+## Final ten-question acceptance linkage (2026-10-08)
+
+The **ten-question contract** [Q01–Q10](final-insight-acceptance-contract.md) and [ten-question ledger](final-insight-question-ledger.tsv) are now the project-wide *integrated insight* acceptance standard. The existing six fixed project-goal questions above remain a compact strategic summary; they are not an alternative or replacement set that permits dropping Q04 scientific strength, Q07 future trends, or Q09 named work packages.
+
+After each meaningful research round:
+1. report which **Q-IDs materially advanced, regressed or remain blocked**, with links to original evidence or changed canonical objects;
+2. update the corresponding ledger rows only if the verified answer, state, uncertainty or next gate changed — do not edit all ten rows gratuitously;
+3. state the **whole-project** Q01–Q10 status distribution, the decisive remaining gates, and whether the Phase-1 priority portfolio changed;
+4. distinguish research acceptance, GitHub CI PASS, and real-world phone or partner feasibility; none implies the other;
+5. include the six-axis checkpoint below as a shorter management narrative, and keep same-institution alias/2021–25 output measurement controls.
+
+For a final integrated insight signoff, review **all ten Q-IDs individually**. Per-round summaries may group unchanged IDs to stay readable, but must not omit material gaps.
+
 ## Mandatory round-close review
 
 Each round summary must report:
 
 ### A. Final questions
-For each final question above:
+Use Q01–Q10 from the final-insight ledger as the auditable ten-question backbone; use the six strategic questions above as the management roll-up. For each materially affected question:
 - current answer / working conclusion;
 - status: NOT_STARTED / IN_PROGRESS / SUBSTANTIALLY_ANSWERED / CLOSED;
 - important remaining gap.
