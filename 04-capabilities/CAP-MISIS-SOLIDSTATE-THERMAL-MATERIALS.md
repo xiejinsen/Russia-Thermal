@@ -8,6 +8,10 @@ maturity: MATERIALS_RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- COMPACT_ELECTRONICS=ADJACENT
 capability_family: ENABLING
 capability_topics:
 - THERMOELECTRIC
