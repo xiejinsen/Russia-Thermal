@@ -38,7 +38,7 @@ russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
 repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37820156518
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_28_OF_28_KNOWN_OWNER_ATLAS / 34_34_TRANSFER / Q01_OUTSIDE_DISCOVERED_ROOTS_OPEN / Q04_COMPLETE_OUTPUT_CENSUS_NOT_MEASURED
+repo_health_review: 2026-10-08 / LAST_RECORDED_ACTIONS_RUN_37820156518 / CANONICAL_GRAPH_AND_DEDUP_PASS_WITH_NSU_WARNING / POST_REPRESENTATIVE_Q04_COMMITS_HEAD_CI_NOT_YET_CONFIRMED
 web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37820156439
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
@@ -66,7 +66,8 @@ academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
 academic_catalog_raw_snapshot: 1650 RAW_SITE_CITATIONS / 2021=521 / 2022=272 / 2023=315 / 2024=272 / 2025=270 / NOT_INSTITUTION_OUTPUT
-academic_catalog_review_queue: 239 TITLE_KEYWORD_LEADS / 2021=64 UNREVIEWED / 2022=44 UNREVIEWED / 2023=47 UNREVIEWED / 2024=49 UNREVIEWED / 2025=35 TOPIC_SCREENED_NOT_COUNTABLE
+academic_catalog_review_queue: 239 TITLE_KEYWORD_LEADS / 2021=64 UNREVIEWED / 2022=44 UNREVIEWED / 2023=47 UNREVIEWED / 2024=49 UNREVIEWED / 2025=35 TOPIC_SCREENED_NOT_COUNTABLE 
+academic_catalog_queue_policy: HISTORICAL_OPTIONAL_CENSUS_PILOT / NOT_Q04_REQUIRED_WORK
 academic_catalog_screening: analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md
 academic_catalog_curated: analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md
 academic_catalog_latest_report: analysis/output-measurement/pilot-v1/kutateladze-full-archive-doi-round_2026_10_08.md
@@ -117,7 +118,7 @@ final_insight_question_ledger: 00-project/final-insight-question-ledger.tsv
 final_insight_question_state_summary: Q03_Q05_Q10_SUBSTANTIALLY_ANSWERED / Q01_Q02_Q04_Q06_Q07_Q08_Q09_IN_PROGRESS / NONE_CLOSED
 final_insight_collaboration_card_template: reports/collaboration-opportunities/decision-card-template.md
 final_insight_chinese_leadership_overview: reports/final-insight-acceptance-overview-cn.md
-final_insight_most_critical_gaps: Q04_2021_2025_COMPARABLE_ACADEMIC_OUTPUT / Q08_RUSSIA_INCREMENTAL_VALUE / Q09_NAMED_ACTIONABLE_FEASIBILITY / Q01_COVERAGE_REMAINING_FIVE
+final_insight_most_critical_gaps: Q01_OUTSIDE_CORPUS_RECALL / Q02_NSU_PERSON_OWNERSHIP / Q04_REPRESENTATIVE_WORK_OMISSION_AND_CONTRARY_AUDIT / Q08_RUSSIA_INCREMENTAL_VALUE / Q09_NAMED_FEASIBILITY
 academic_lavrentyev_profile_status: OFFICIAL_CURRENT_HYDRODYNAMICS_LAB_AND_KUZNETSOV_HEAD_CONFIRMED / PAPER_TIME_AFFILIATIONS_OPEN / NO_PHONE_DEVICE / NO_PRIORITY_PROMOTION
 academic_lavrentyev_research_report: analysis/academic-team-mapping/lavrentyev-hydrodynamics-team-capability-2026-10-08.md
 academic_lavrentyev_official_source: OFFICIAL-LAVRENTYEV-LAB-2026
@@ -162,7 +163,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: CI-verified recovered-root 28/28 Russia capability-owner institution Atlas via GitHub Actions 37820156518 (no absent profiles, 34/34 transfer, source dedup and graph PASS with one existing NSU unassigned current PI warning). HSE MIEM educational/research lab: Petrosyants/Kharitonov 2023 PCB COMSOL/SPICE/ASONIKA, student projects not journal outputs. SPbU Granichin stochastic algorithm lab direct 2023 smartphone energy DVFS (not thermal governor), independent physics detector carbon-laminate patents 2024 RU2825727 and 2025 RU2834604 family link still unknown. Q01 recovered corpus covered BUT nationwide Russia institution/lab recall NOT audited, Q02 prioritized academic cohort 24/25 with remaining confirmed **ACT-PNRPU** priority academic root NOT a currently recovered Capability owner, plus NSU person gap. Q04 Kut high-value original source identity ledger separates 2025 Russian YBCO from 2026 English, 2024 from 2025 HFE, 2026 IJMF issue and 2024 MPEI PhD thesis; complete relevant annual 2021-25 institutional output and patent family totals NOT_MEASURED. PNRPU (25th priority academic root, outside the 28 Capability owner denominator) now has an official facility/lab-head and 2023-2025 representative-paper Atlas; aeroacoustics WATCH unchanged, and external source validation must not be conflated with complete annual totals. Next use user-approved representative-first Q04 to assemble P1/P2 key-paper cards and deep reads, audit counterexamples and recent activity, then pursue outside-corpus academic recall and P1/P2 Q08/Q09 counterfactual research value gates. Complete Kut/MPEI 2021-25 output census is optional and NOT a Q04 closure requirement. Strategic P1/P2/TPU frozen; no outreach or physical tests.
+next_action: Governance health refresh before Q08: representative-first Q04 adopted; P1 Kutateladze and P2 MPEI joint representative audit bounded pass with unresolved independent omission/contrary check. Known primary academic root Atlas 25/25, known capability-owner Atlas 28/28; neither proves nationwide Russia completeness. Q01 outside-corpus institution recall and NSU person ownership remain open. Prioritize verifying current main CI and generated views, then pilot compact representative-work link modules for P1/P2 without duplicating Source/Claim; proceed to Q08 internal/China build-versus-Russia counterfactual. Annual publication census optional and not a Q04 gate. Existing P1/P2/TPU decisions frozen; no contact or physical tests.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
