@@ -1,7 +1,7 @@
 # CAP-ICM-EXACT-STABILITY-MODELING
 
 record_state: CURRENT
-actor_id: ACT-ICM-SBRAS
+actor_id: ACT-ICM-DIFFMECH
 key_people:
 - PERSON-BEKEZHANOVA
 - PERSON-STEPANOVA
@@ -19,7 +19,7 @@ capability_topics:
 - MODELING_REDUCED_ORDER
 
 Capability statement:
-ICM SB RAS demonstrates a current exact-solution / thermosolutal-convection / instability-boundary modeling capability for evaporative two-layer flows, with historical linkage to Kutateladze experiments.
+The Department of Differential Equations in Mechanics at ICM Krasnoyarsk demonstrates a current exact-solution / thermosolutal-convection / instability-boundary modeling capability for evaporative two-layer flows, with historical linkage to Kutateladze experiments.
 
 evidence_claims:
 - CLM-MODEL-001
@@ -28,3 +28,7 @@ evidence_claims:
 
 Transfer boundary:
 direct phone-geometry validation and current formal Kutateladze collaboration status remain unverified.
+
+
+Identity and comparability guard:
+The two original actor labels ACT-ICM-SBRAS and ACT-ICM-KRASN are **not different institutes**. Actual owner is ACT-ICM-DIFFMECH under ACT-ICM-KRASN (official https://icm.krasn.ru/section.php?id=14). This is a theoretical evaporative-flow modeling ability with open/bilayer channel boundary assumptions, NOT empirically demonstrated sealed smartphone wick failure prediction or superiority over China/global models.
