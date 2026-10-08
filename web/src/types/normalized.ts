@@ -19,6 +19,8 @@ export interface ActorRecord {
   latitude: number | null;
   longitude: number | null;
   locationVerifiedAt: string | null;
+  researchClass: string | null;
+  researchDepth: string | null;
   atlasProfile: {
     state: string;
     assessedAt: string;
