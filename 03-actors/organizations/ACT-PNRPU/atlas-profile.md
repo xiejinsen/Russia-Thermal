@@ -8,9 +8,12 @@ leadership_summary: Perm National Research Polytechnic University (PNRPU) has a 
 collaboration_summary: Possible bounded method/facility collaboration on phone-class microfan or compact duct acoustic source identification, impedance and noise measurement. Target geometry, Reynolds/flow conditions, tonal/broadband decomposition, parasitic power, airflow and actual heat rejection would require matching benchmarks. No direct phone-class feasibility, superiority, willingness or data rights evidenced.
 influence_summary: Official equipment/facility and named current laboratory head are stronger institutional ownership evidence than paper affiliation alone. Existing TSAGI-owned CAP-RU-AEROACOUSTIC-METHODS lists PNRPU as collaborating actor; do not misstate it as PNRPU-exclusive.
 output_interpretation: Three representative, individually identified 2023, 2024 and 2025 research works are supplied below. They are examples, not a measured full 2021–2025 publication census. Do not infer full patent-family counts or national academic completeness.
-context_sources:
-- https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/
-- https://journals.rcsi.science/1063-7710/article/view/186019
+## Source links pending canonical Source-ID reconciliation
+
+- [PNRPU official anechoic-facility record](https://pstu.ru/science-and-innovation/infrastructure/unique-scientific-installations/unikalnaya-nauchnaya-ustanovka-akusticheskaya-zaglushennaya-kamera-s-aerodinamicheskimi-istochnikami/)
+- [Original journal facility characterization](https://journals.rcsi.science/1063-7710/article/view/186019)
+
+These are source locators, not canonical `context_sources` object IDs. Preserve originals here until the source identity preflight is completed; do not create an unverified source or imply these records are part of the recovered canonical count.
 public_gaps:
 - exact current roster and named institutional lab team apart from officially identified facility lead
 - phone-class microfan/duct geometry and thermal/acoustic co-optimization validation
