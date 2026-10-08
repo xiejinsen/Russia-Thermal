@@ -168,6 +168,25 @@ export interface InstitutionPageVM {
   role?: string;
   relevance?: string;
   officialUrl?: string;
+  atlasProfile?: {
+    assessedAt: string;
+    leadershipSummary: string;
+    collaborationSummary: string;
+    influenceSummary: string;
+    outputInterpretation: string;
+    publicGaps: string[];
+    contextEvidence: EvidenceCardVM[];
+    collaborationEvidence: EvidenceCardVM[];
+    influenceEvidence: EvidenceCardVM[];
+  };
+  outputSnapshot: {
+    label: string;
+    firstYear?: number;
+    latestYear?: number;
+    paperCount: number;
+    patentCount: number;
+    officialCount: number;
+  };
   parent?: InstitutionCardVM;
   children: InstitutionCardVM[];
   people: ScholarCardVM[];
