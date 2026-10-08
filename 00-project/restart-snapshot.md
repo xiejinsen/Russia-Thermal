@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: continue bounded Kutateladze 2021-2025 full annual publication/patent catalog extraction, DOI/translations dedup and mobile-thermal relevance filtering, while staging MPEI named-team bibliography and Thercon assignee/family reconciliation; do not present institution-level five-year totals until evidence coverage is reconciled; preserve SOFTWARE_SYSTEM LIMITED_SCAN and goal-regression at every round
+- next: complete Kutateladze 2021-2025 official article archive traversal with page-completeness manifest, then DOI and translated-version dedup plus mobile-thermal relevance review; follow with MPEI and ITP Ural Branch academic lab output; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments and round-close goal regression
 
 ## Directions
 
