@@ -22,3 +22,5 @@ jobs:
         run: python tools/source_dedup.py --scan
       - name: Audit decision graph and evidence chains
         run: python tools/graph_audit.py
+      - name: Audit Russia Capability Atlas coverage
+        run: python tools/atlas_coverage_audit.py --summary
