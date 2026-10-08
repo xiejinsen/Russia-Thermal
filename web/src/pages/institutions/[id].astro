@@ -138,6 +138,10 @@ const primaryDirection =
             <div><dt>Evidence</dt><dd>{capability.evidenceConfidence}</dd></div>
             <div><dt>Target fit</dt><dd>{capability.targetFit}</dd></div>
           </dl>
+          {capability.platformTransfer.length > 0 && <div class="transfer-row">
+            <span>Platform transfer</span>
+            <div>{capability.platformTransfer.map((item) => <b>{item.platform}: {item.level}</b>)}</div>
+          </div>}
           {capability.transferBoundary && <p class="boundary">{capability.transferBoundary}</p>}
         </article>)}
       </div>
@@ -233,6 +237,10 @@ const primaryDirection =
   dl{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin:0}
   dt{font-size:.56rem;text-transform:uppercase;color:#75899a}
   dd{margin:.08rem 0 0;font-size:.68rem;font-weight:800;color:#344f63}
+  .transfer-row{grid-column:1/-1;display:flex;align-items:flex-start;gap:.7rem;padding-top:.65rem;border-top:1px dashed #dde8ef}
+  .transfer-row>span{font-size:.6rem;color:#75899a;text-transform:uppercase;font-weight:800;white-space:nowrap}
+  .transfer-row>div{display:flex;gap:.35rem;flex-wrap:wrap}
+  .transfer-row b{padding:.25rem .4rem;border-radius:.4rem;background:#eef6fb;color:#365f7c;font-size:.61rem;font-weight:800}
   .boundary{grid-column:1/-1;margin:0;padding-top:.65rem;border-top:1px dashed #dde8ef;color:#748797;font-size:.68rem;line-height:1.55}
   .claim-list a{grid-template-columns:minmax(0,1fr) auto}
   .evidence-list article{display:grid;grid-template-columns:10rem minmax(0,1fr) auto;gap:1rem;padding:.95rem 1.1rem;border-bottom:1px solid #e8eff4}
