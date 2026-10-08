@@ -90,3 +90,14 @@ Before marking an institution RECONCILED:
 
 A missing online record is not proof that the organization published nothing.
 No contact/experiments needed for the public-evidence phase.
+
+## Academic-first sample allocation (2026-10-08 update)
+
+Target study population for deep five-year output is academic universities and academic research institutes. Sample next:
+Kutateladze -> MPEI named groups -> ITP Ural Branch RAS.
+
+Company and industrial output is contextual only; keep self-reported patent counts and verified patent families as limited boundary evidence. Do not place academic institutions and companies in one productivity leaderboard or spend equal analyst effort on commercial patent portfolios.
+
+Authoritative research routing:
+`00-project/academic-first-research-contract.md` and
+`00-project/russia-root-actor-research-routing.tsv`.
