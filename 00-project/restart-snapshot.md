@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: complete DOI/publisher link identity and six-level relevance adjudication of 239 Kutateladze title leads from 1,650 site records, test non-keyword false negatives, group translated/preprint/corrigenda variants, attribute papers to academic labs and reconcile against independent indices; only then publish bounded yearly relevant research-output counts; next MPEI and ITP Ural Branch; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments/outreach
+- next: Kutateladze Lab1.3 batch B: compare the 2026 HFE-7100/Novec649 multimodal dry-spot experiment and 2025 neural-network detection with matched China/global crisis-observer models; prove or falsify incremental mechanism-label information beyond internal temperature/pressure/saturation-state baselines. In parallel fix DOI HTML href association, group RU/EN/preprint versions, audit 2025 NONKEYWORD sample, confirm V.I. Zhukov and Serdyukov affiliation, then review 2021-2024 leads and reconcile output counts; MPEI/ITP Ural Branch next; academic collaboration only; companies context, no experiments/outreach.
 
 ## Directions
 
