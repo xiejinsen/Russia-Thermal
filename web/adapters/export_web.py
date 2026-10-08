@@ -85,6 +85,17 @@ def split_semicolon(v: Any) -> list[str]:
     return out
 
 
+def platform_transfer_entries(v: Any) -> list[dict[str, str]]:
+    out: list[dict[str, str]] = []
+    for item in as_list(v):
+        if "=" not in item:
+            continue
+        platform, level = [part.strip() for part in item.split("=", 1)]
+        if platform and level:
+            out.append({"platform": platform, "level": level})
+    return out
+
+
 def nullable(v: Any) -> str | None:
     if v is None:
         return None
@@ -319,6 +330,7 @@ def capability_record(o: dict[str, Any], portfolio_disposition: str | None = Non
         "targetFit": nullable(o.get("target_fit")) or "",
         "capabilityFamily": nullable(o.get("capability_family")),
         "capabilityTopics": as_list(o.get("capability_topics")),
+        "platformTransfer": platform_transfer_entries(o.get("platform_transfer")),
         "keyPeopleIds": as_list(o.get("key_people")),
         "collaboratingActorIds": as_list(o.get("collaborating_actors")),
         "claimIds": as_list(o.get("evidence_claims")),
@@ -450,12 +462,19 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             require_nonempty(r, f, errors)
 
     allowed_capability_families = {"SOFTWARE_SYSTEM", "PASSIVE_HARDWARE", "ACTIVE_HARDWARE", "ENABLING"}
+    allowed_transfer_platforms = {"SMARTPHONE", "TABLET", "WEARABLE", "AR_VR", "LAPTOP", "COMPACT_ELECTRONICS", "ADJACENT_ELECTRONICS", "FOUNDATIONAL_ONLY"}
+    allowed_transfer_levels = {"DIRECT", "NEAR_DIRECT", "TRANSFERABLE", "ADJACENT", "FOUNDATIONAL", "NOT_SUPPORTED"}
     for r in datasets["capabilities"]:
         for f in ("id", "actorId", "statement", "maturity", "evidenceConfidence", "targetFit", "sourcePath"):
             require_nonempty(r, f, errors)
         family = r.get("capabilityFamily")
         if family and family not in allowed_capability_families:
             errors.append(f"{r['id']}: invalid capabilityFamily {family}")
+        for item in r.get("platformTransfer", []):
+            if item.get("platform") not in allowed_transfer_platforms:
+                errors.append(f"{r['id']}: invalid transfer platform {item.get('platform')}")
+            if item.get("level") not in allowed_transfer_levels:
+                errors.append(f"{r['id']}: invalid transfer level {item.get('level')}")
 
     for r in datasets["directions"]:
         for f in ("id", "role", "investmentLane", "differentiationConfidence", "phoneTransferMaturity", "sourcePath"):
