@@ -9,6 +9,7 @@ MEPhI currently maintains boiling-onset and transient thermohydraulic diagnostic
 
 supporting_sources:
 - OFFICIAL-MEPHI-STRUCHALIN-001
+- OFFICIAL-MEPHI-BOILING-LAB-2026
 
 Boundary:
 current evidence comes from nuclear thermohydraulics; transfer to compact mobile cooling requires scale and sensor feasibility work.
