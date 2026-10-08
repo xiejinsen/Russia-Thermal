@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: complete Kutateladze 2021-2025 official article archive traversal with page-completeness manifest, then DOI and translated-version dedup plus mobile-thermal relevance review; follow with MPEI and ITP Ural Branch academic lab output; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments and round-close goal regression
+- next: recover 20 Kutateladze official Article pages missing in 2021 using bounded retry; restore DOI href/publisher identities for high-priority 2022-2025 paper queue and review translated-version/corrigendum clusters, mobile-thermal relevance and institute/team affiliation; keep Kutateladze annual measured relevant counts NOT_MEASURED until validated; then MPEI and ITP Ural academic teams
 
 ## Directions
 
