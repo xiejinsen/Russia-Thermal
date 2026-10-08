@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: continue Institution Atlas enrichment batch 2 across ITP Ural Branch/LHP, UUST, ASTU, ITMO, BMSTU and NovSU; apply capability-owned platform transfer plus graph-derived relevant-output snapshots and evidence-scoped collaboration/influence profiles; keep SOFTWARE_SYSTEM LIMITED_SCAN
+- next: continue Institution Atlas batch 3 across TAIS, Thercon, Lavochkin Association, ICM Krasnoyarsk, UrFU and JIHT; prioritize direct/transferable hardware and industry-linked nodes; preserve the mandatory round-close goal-regression checkpoint; keep SOFTWARE_SYSTEM LIMITED_SCAN
 
 ## Directions
 
