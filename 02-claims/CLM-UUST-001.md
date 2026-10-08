@@ -8,6 +8,7 @@ Proposition:
 UUST currently maintains a sustained microfluidic / microchannel heat-transfer program led by Olga Solnyshkina with explicit electronics-cooling motivation, experimental micro/mini-channel heat exchangers, thermal-field diagnostics and silicon microfabrication process work.
 
 supporting_sources:
+- PAPER-RU-UUST-MICRO-001
 - OFFICIAL-RSCF-UUST-MICROCHANNEL-001
 - OFFICIAL-UUST-SOLNYSHKINA-001
 
