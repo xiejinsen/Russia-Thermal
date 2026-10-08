@@ -50,7 +50,7 @@ academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
 academic_catalog_raw_snapshot: 1650 RAW_SITE_CITATIONS / 2021=521 / 2022=272 / 2023=315 / 2024=272 / 2025=270 / NOT_INSTITUTION_OUTPUT
-academic_catalog_review_queue: 239 TITLE_KEYWORD_LEADS_UNREVIEWED / 2021=64 / 2022=44 / 2023=47 / 2024=49 / 2025=35
+academic_catalog_review_queue: 239 TITLE_KEYWORD_LEADS / 2021=64 UNREVIEWED / 2022=44 UNREVIEWED / 2023=47 UNREVIEWED / 2024=49 UNREVIEWED / 2025=35 TOPIC_SCREENED_NOT_COUNTABLE
 academic_catalog_screening: analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md
 academic_catalog_curated: analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md
 academic_catalog_latest_report: analysis/output-measurement/pilot-v1/kutateladze-full-archive-doi-round_2026_10_08.md
@@ -59,6 +59,9 @@ academic_catalog_2021_recovery: COMPLETE / tools/itp_2021_recovery.py / 20 PAGES
 academic_catalog_review_queue_builder: tools/itp_triage_build.py
 academic_catalog_doi_state: 14 STAGED_IDENTITY_RECORDS / 1 EXISTING_CANONICAL / 6 DISTINCT_VERIFIED_NEW_CANDIDATES / 1 CORRIGENDUM / 6 SECONDARY_HOLD / DOI_HREF_BULK_EXTRACTION_PENDING
 academic_catalog_triage_audit: tools/itp_triage_audit.py
+academic_team_mapping_status: KUT_LAB13_BATCH_A_REPRESENTATIVE_LINEAGE_11_WORKS / 2026_YTD_SEPARATE / NO_YEARLY_OUTPUT_COUNTS
+academic_team_mapping_report: analysis/academic-team-mapping/kutateladze-lab13-team-capability-2026-10-08.md
+academic_team_identity_guard: SURTAEV_OFFICIAL_LAB13_CONFIRMED / ZHUKOV_VI_VE_NOT_MERGED / SERDYUKOV_EXACT_LAB_HOLD
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -67,7 +70,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: complete DOI/publisher link identity and six-level relevance adjudication of 239 Kutateladze title leads from 1,650 site records, test non-keyword false negatives, group translated/preprint/corrigenda variants, attribute papers to academic labs and reconcile against independent indices; only then publish bounded yearly relevant research-output counts; next MPEI and ITP Ural Branch; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments/outreach
+next_action: Kutateladze Lab1.3 batch B: compare the 2026 HFE-7100/Novec649 multimodal dry-spot experiment and 2025 neural-network detection with matched China/global crisis-observer models; prove or falsify incremental mechanism-label information beyond internal temperature/pressure/saturation-state baselines. In parallel fix DOI HTML href association, group RU/EN/preprint versions, audit 2025 NONKEYWORD sample, confirm V.I. Zhukov and Serdyukov affiliation, then review 2021-2024 leads and reconcile output counts; MPEI/ITP Ural Branch next; academic collaboration only; companies context, no experiments/outreach.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
