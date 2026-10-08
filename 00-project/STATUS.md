@@ -47,13 +47,17 @@ academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
 academic_profile_current_coverage: 15/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
-academic_catalog_probe: KUT_2021=7/27 PAGES_PARTIAL / 2022=14/14 / 2023=16/16 / 2024=14/14 / 2025=14/14 / INSTITUTION_CATALOG_ITSELF_INCOMPLETE
+academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
-academic_catalog_raw_snapshot: 1250 ORIGINAL_SITE_CITATIONS / 65_OF_85 PAGES / NO_INSTITUTION_TOTAL
-academic_catalog_review_queue: 186 KEYWORD_LEADS_UNREVIEWED / 67 HIGH / 113 MEDIUM / 6 AMBIGUOUS
+academic_catalog_raw_snapshot: 1650 RAW_SITE_CITATIONS / 2021=521 / 2022=272 / 2023=315 / 2024=272 / 2025=270 / NOT_INSTITUTION_OUTPUT
+academic_catalog_review_queue: 239 TITLE_KEYWORD_LEADS_UNREVIEWED / 2021=64 / 2022=44 / 2023=47 / 2024=49 / 2025=35
 academic_catalog_screening: analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md
 academic_catalog_curated: analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md
-academic_catalog_doi_state: HTML_HREF_EXTRACTION_PENDING / PUBLISHER_CORRIGENDUM_LINK_VERIFIED
+academic_catalog_latest_report: analysis/output-measurement/pilot-v1/kutateladze-full-archive-doi-round_2026_10_08.md
+academic_catalog_doi_ledger: analysis/output-measurement/pilot-v1/kutateladze-doi-identity-review.tsv
+academic_catalog_2021_recovery: COMPLETE / tools/itp_2021_recovery.py / 20 PAGES RECOVERED
+academic_catalog_review_queue_builder: tools/itp_triage_build.py
+academic_catalog_doi_state: 14 STAGED_IDENTITY_RECORDS / 1 EXISTING_CANONICAL / 6 DISTINCT_VERIFIED_NEW_CANDIDATES / 1 CORRIGENDUM / 6 SECONDARY_HOLD / DOI_HREF_BULK_EXTRACTION_PENDING
 academic_catalog_triage_audit: tools/itp_triage_audit.py
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
@@ -63,7 +67,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: recover 20 Kutateladze official Article pages missing in 2021 using bounded retry; restore DOI href/publisher identities for high-priority 2022-2025 paper queue and review translated-version/corrigendum clusters, mobile-thermal relevance and institute/team affiliation; keep Kutateladze annual measured relevant counts NOT_MEASURED until validated; then MPEI and ITP Ural academic teams
+next_action: complete DOI/publisher link identity and six-level relevance adjudication of 239 Kutateladze title leads from 1,650 site records, test non-keyword false negatives, group translated/preprint/corrigenda variants, attribute papers to academic labs and reconcile against independent indices; only then publish bounded yearly relevant research-output counts; next MPEI and ITP Ural Branch; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments/outreach
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
