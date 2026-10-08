@@ -12,7 +12,7 @@ paper_deep_read_progress: 37/60
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 patent_deep_read_progress: 16/17
 patent_deep_read_control: 00-project/patent-reading-depth-closure-audit.md
-graph_audit_status: PASS / VERIFIED_ON_MAIN_ACTIONS_2026_10_08 / TWO_NONBLOCKING_WARNINGS
+graph_audit_status: PASS / VERIFIED_ON_MAIN_ACTIONS_2026_10_08 / ONE_NONBLOCKING_WARNING_NSU_PERSON
 source_dedup_status: CI_ENFORCED / LIVE_ACTIONS_SCAN_CLEAN_2026_10_08
 source_dedup_contract: 00-project/source-deduplication-contract.md
 source_alias_registry: 00-project/source-aliases.md
@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 22/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / SAME_ICM_DUPLICATE_ROOT_RECONCILED / CI_RERUN_PENDING
+institution_atlas_profile_status: 22/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / SAME_ICM_DUPLICATE_ROOT_RECONCILED / CI_VERIFIED_2026_10_08
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_22_29_INCLUDED_DUPLICATE_ICM / NEW_CORRECTED_22_28_EXPECTED / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
+russia_atlas_audit_status: PASS / TRUE_22_28_DISTINCT_INSTITUTES / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / ACTIONS_RUN_37800187972
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37787716672
-repo_health_review: 2026-10-08 / SOURCE_DEDUP_CLEAN / GRAPH_AUDIT_PASS_TWO_WARNINGS / ATLAS_21_OF_29_CURRENT_CORPUS / OTHER_CATALOG_OUTPUT_AUDITS_PASS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789894557
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37800187972
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_AUDIT_PASS_ONE_NSU_WARNING / DISTINCT_22_OF_28_ATLAS / ACADEMIC_ROUTE_25_OF_30 / OUTPUT_PILOT_VALIDATED_NOT_CENSUS
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37800187993
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -107,7 +107,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: ICM Krasnoyarsk identity correction: ACT-ICM-SBRAS and ACT-ICM-KRASN are one institute; history preserved under alias, actual differential mechanics department ACT-ICM-DIFFMECH now lab-owned, Nesterov electronics flat-HP line remains at canonical institute. Verify revised Atlas 22/28 distinct Russia capability owners, 18/25 academic roots and 34/34 transfer in main Actions. ICM is methodological research complement, not phone product partner promotion. Next ACT-MISIS plus remaining 6 owner profiles; parallel reconcile 2021-2025 academic output/collaboration/patent DOI records using single-institute identities. P1/P2 reserve hierarchy unchanged, academic-only partners, no outreach/experiments.
+next_action: ICM Krasnoyarsk same-institute identity repair validated in main GitHub Actions (22/28 distinct Russia owner institutions, 18/25 prioritized academic root profiles, 34/34 platform transfer, SOURCE dedup and graph PASS; 1 NSU academic-person gap warning). ACT-ICM-SBRAS is historic non-owning alias of ACT-ICM-KRASN; actual Bekezhanova-led DiffMech lab and Nesterov flat-HP engineering line under one institution, no claimed Russia-unique phone technology. Next ACT-MISIS 2021-2025 solid-state/thermoelectric team and original academia evidence, then other five unprofiled roots, alongside full relevant paper/patent DOI-year-affiliation reconciliation. Companies context only, no outreach, no experiments.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
