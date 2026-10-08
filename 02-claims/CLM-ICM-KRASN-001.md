@@ -8,6 +8,8 @@ Proposition:
 The Institute of Computational Modeling SB RAS maintains an active thermal-engineering line for electronics that combines flat-heat-pipe integration, thermal modeling, high-conductivity structures and thermal-stabilization methods, with historical models capable of predicting flat-heat-pipe dryout limits.
 
 supporting_sources:
+- PAPER-RU-ICM-ELECTRONICS-001
+- OFFICIAL-ICM-INDUSTRY-001
 - OFFICIAL-ICM-KRASN-001
 
 Boundary:
