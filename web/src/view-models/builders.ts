@@ -411,11 +411,15 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
   const actor = actorById.get(id);
   if (!actor || actor.type === 'PERSON') return null;
 
-  const ownCapabilities = capabilities.filter((capability) => capability.actorId === actor.id);
   const childActors = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type !== 'PERSON');
+  const scopedActorIds = new Set([actor.id, ...childActors.map((child) => child.id)]);
+  const ownCapabilities = capabilities.filter((capability) => scopedActorIds.has(capability.actorId));
   const directPeople = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type === 'PERSON');
+  const childPeople = actors.filter(
+    (candidate) => candidate.type === 'PERSON' && candidate.parentId && scopedActorIds.has(candidate.parentId)
+  );
   const capabilityPeople = ownCapabilities.flatMap(peopleForCapability);
-  const peopleMap = new Map([...directPeople, ...capabilityPeople].map((person) => [person.id, person]));
+  const peopleMap = new Map([...directPeople, ...childPeople, ...capabilityPeople].map((person) => [person.id, person]));
 
   const linkedDirections = sortedDirections.filter((direction) =>
     direction.capabilityIds.some((capabilityId) => ownCapabilities.some((capability) => capability.id === capabilityId))
