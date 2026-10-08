@@ -14,7 +14,7 @@ Head of second research group of MISIS Research and Education Center for Energy 
 Original direct source:
 https://misis.ru/university/struktura-universiteta/centre/51/
 Recent exact work:
-- https://doi.org/10.1016/j.jallcom.2023.173149 (La(Fe,Si)13 hydride multi-stimulus cycle; DOI identity to reverify for admission; see staging ledger)
+- https://doi.org/10.1016/j.jallcom.2023.171154 (original 2023 La(Fe,Si)13 hydride multi-stimulus material/cycle; verified publisher DOI and article 171154)
 - https://doi.org/10.1016/j.jallcom.2025.183808 (2025 low-temperature magnetic-regenerator geometry; NOT smartphone ambient cooling)
 
 Boundary:
