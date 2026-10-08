@@ -1,6 +1,7 @@
 # ACT-NOVSU
 
 record_state: CURRENT
+official_url: https://www.novsu.ru/
 actor_type: ORGANIZATION
 canonical_name: Yaroslav-the-Wise Novgorod State University
 country: RU
