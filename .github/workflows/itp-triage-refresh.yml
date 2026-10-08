@@ -1,0 +1,38 @@
+name: Kutateladze 2021 Title Triage Refresh
+
+on:
+  push:
+    paths:
+      - tools/itp_triage_build.py
+      - analysis/output-measurement/itp-annual-raw/2021-candidates.tsv
+      - .github/workflows/itp-triage-refresh.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: itp-2021-triage-refresh
+  cancel-in-progress: false
+
+jobs:
+  regenerate-review-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild title-only manual review queue
+        run: python tools/itp_triage_build.py --years 2021
+      - name: Check each triage citation still points to original raw site row
+        run: python tools/itp_triage_audit.py
+      - name: Commit derived review queue, not research output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/output-measurement/pilot-v1/triage/2021-keyword-candidates.tsv
+          if ! git diff --cached --quiet; then
+            git commit -m "Derived queue: refresh unreviewed 2021 title leads after catalog recovery"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
