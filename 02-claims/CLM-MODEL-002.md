@@ -8,6 +8,7 @@ Proposition:
 The Russian exact-solution line can derive explicit instability/stability thresholds for evaporative two-layer channel flows.
 
 supporting_sources:
+- OFFICIAL-ICM-DIFFMECH-2026
 - PAPER-RU-MODEL-002
 
 Boundary:
