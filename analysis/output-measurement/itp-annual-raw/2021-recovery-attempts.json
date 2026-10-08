@@ -1,0 +1,86 @@
+{
+  "assessed_at": "2026-10-08T10:26:11.209067+00:00",
+  "pages_missing_before": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "attempts": [
+    {
+      "page": 6,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/6.html"
+    },
+    {
+      "page": 7,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/7.html"
+    },
+    {
+      "page": 8,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/8.html"
+    },
+    {
+      "page": 9,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/9.html"
+    },
+    {
+      "page": 10,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/10.html"
+    },
+    {
+      "page": 11,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/11.html"
+    },
+    {
+      "page": 12,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/12.html"
+    },
+    {
+      "page": 13,
+      "outcome": "RECOVERED",
+      "count": 20,
+      "url": "https://www.itp.nsc.ru/publikacii/2021/2021stati/13.html"
+    }
+  ],
+  "pages_recovered_in_attempt": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "scope": "official 2021 article listing only; not complete institution output"
+}
