@@ -95,7 +95,7 @@ def parse_entries(year: int, page: int, html: str):
         # The site header/footer contains year links: do not let them become articles.
         nextpos = next((p for p, _ in indexes if p > pos), len(lines))
         body = " ".join(lines[pos + 1:nextpos]).strip()
-        if not body or len(body) < 35 or "//" not in body:
+        if not body or len(body) < 25:
             continue
         if "Россия, 630090" in body:
             body = body.split("Россия, 630090", 1)[0].strip()
@@ -139,7 +139,7 @@ def main():
             pages = {1: initial}
             failures = []
             if not args.probe:
-                with ThreadPoolExecutor(max_workers=3) as pool:
+                with ThreadPoolExecutor(max_workers=4) as pool:
                     futures = {pool.submit(fetch, path_for(year, n)): n
                                for n in range(2, total_pages+1)}
                     for fut in as_completed(futures):
