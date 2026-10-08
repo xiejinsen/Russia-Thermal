@@ -12,6 +12,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+platform_transfer:
+- SMARTPHONE=TRANSFERABLE
+- TABLET=TRANSFERABLE
+- COMPACT_ELECTRONICS=TRANSFERABLE
 capability_family: ENABLING
 capability_topics:
 - RELIABILITY_AGING
