@@ -1006,7 +1006,7 @@ export function buildCapabilitiesCollectionVM(): import('../types/view-models').
 
 export function buildInstitutionsCollectionVM(): import('../types/view-models').CollectionPageVM<InstitutionCardVM> {
   const records = actors
-    .filter((actor) => actor.type === 'ORGANIZATION' || actor.type === 'LAB')
+    .filter((actor) => actor.type === 'ORGANIZATION' || actor.type === 'LAB' || actor.type === 'COMPANY')
     .map((actor) => institutionCard(actor, capabilities.filter((capability) => capability.actorId === actor.id)))
     .sort((a, b) => a.name.localeCompare(b.name));
   return {
