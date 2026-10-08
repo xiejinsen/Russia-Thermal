@@ -153,3 +153,18 @@ Academic-first Kutateladze -> MPEI -> ITP Ural Branch remains the publication/re
 [Bounded 12-record Kutateladze/MPEI work-identity ledger](academic-2024-2025-work-identity-sample.tsv) and [audit report](academic-2024-2025-kut-mpei-identity-audit.md) now explicitly track journal ISSUE year vs English ONLINE year, Russian/English versions, correction vs original review, already-canonical work, publisher-on-hold DOI and 2026 exclusion. The records include KUT P1 and MPEI Ivanov/Kuzma-Kichta P2 plus one **separate MPEI Lyulin/Dedov + Skoltech** experiment; no institutional productivity inference from those selected rows.
 
 **Still DISCOVERY_PARTIAL.** Annual 2024/25 and 2021–25 *relevant research paper and patent family totals remain null/NOT_MEASURED for both institutes*. The institute Kutateladze archive is recovered as 85/85 pages but publicly declared incomplete and is not a complete paper census. MPEI faculty group site provides a selectively assembled bibliography, not complete years. For Q04 completion, reconcile each institute's full candidate universe plus cross-database recall, version/work de-duplication, publication-date and affiliation snapshots. No new canonical SOURCE ingested merely to count a paper.
+
+## 2025 Kutateladze keyword recall reconciliation and raw-negative control (2026-10-08)
+
+**Critical correction to any interpretation of the earlier "35 title-keyword leads"**: the 2025 original archived `2025-candidates.tsv` has 270 entries, **67 preliminary raw-keyword hints** and 203 preliminary nonmatches. The separate curated title review queue has **35** records, with only **26 shared**; **41 raw-hint-only** and **9 curated-only** papers, a union of **76** title leads, and **194 original catalog entries in neither set**. The 35/35 completed earlier topic-class adjudication was complete only for the *narrower curated queue*. It was not all keyword signals in the stored original catalog.
+
+Added:
+- [62-row raw-vs-curated differences plus deterministic 12/203 negative-control sampling](kutateladze-2025-keyword-queue-reconciliation.tsv);
+- [reconciliation report, source links, candidate P1 dry spot papers and counting risks](kutateladze-2025-keyword-coverage-reconciliation_2026-10-08.md).
+
+Important examples absent from curated 35: 2025 #46 bubble+dry-spot imaging (secondary DOI not publisher verified), #98 **already canonical PAPER-RU-NET-001** for Kutateladze/Lavrentyev coauthor work, #137 film/droplet metrology, #164 2025 HFE-7100 pool-boiling paper **publisher original DOI 10.1134/S004060152470068X** with Kutateladze/NSTU mixed affiliations, #194 film stability. One systematic negative #262 is relevant stratified-to-annular mini-channel flow with original RU work identity to compare against existing 2025 #196 (NOT presumed duplicate).
+
+**Do not use 270−35=235 as the original raw-classifier nonmatches.** The 235 denotes "not in narrower curated queue"; true original raw nonmatches = 203, and 194 sit outside **both** keyword sets. None is an institute unique-paper census; original official site explicitly incomplete. Full paper-year thermal output remains NULL.
+
+Parallel academic Atlas:
+[Skoltech 2021–2025 two academic labs materials and additive source dossier](../../academic-team-mapping/skoltech-materials-and-am-2021-2025-profile-2026-10-08.md). Its papers and 2023 thesis are *samples* and cannot rank institute productivity.
