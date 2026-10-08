@@ -3,7 +3,7 @@
 record_state: CURRENT
 authority: V2_1_RESEARCH_CONTROL
 updated_at: 2026-10-08
-canonical_paper_count: 59
+canonical_paper_count: 60
 completed_deep_reads: 37
 campaign_state: DECISION_CRITICAL_CLOSED / ATLAS_INCREMENTAL
 
@@ -20,7 +20,7 @@ Rules:
 - Reading depth is independent of institution prestige.
 - Full-text unavailable means Unknown remains Unknown; do not upgrade review status from metadata / abstract alone.
 
-## Completed Tier-A Deep Reads — 37 / 59
+## Completed Tier-A Deep Reads — 37 / 60
 
 | Paper | Role in decision | Direction |
 | --- | --- | --- |
@@ -246,8 +246,11 @@ Subsequent Russia Capability Atlas enrichment added:
 - PAPER-RU-DGTU-TE-003 — 2022 discrete-semiconductor thermoelectric-system model; lineage/support evidence, no new portfolio decision.
 
 Current corpus:
-- 59 canonical papers;
+- 60 canonical papers;
 - 37 Deep Reads.
+
+Batch-3 addition:
+- PAPER-RU-ICM-ELECTRONICS-001 — 2021 directly electronics-relevant flat heat-pipe design and external coauthorship; Atlas lineage/Tier-B only, no strategic portfolio change.
 
 Batch-2 Institution Atlas lineage/support additions:
 - PAPER-RU-UUST-MICRO-001 — representative current structured-microchannel hydrodynamic lineage;
