@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: NSU institutional Atlas profile now added (expected 20/29 Russia capability-owner roots; 16/26 primary academic profiles); LabPET leader Alekseenko/Naumov verified, but Energy-Intensive Thermal Processes Lab PI remains unresolved. Verify 2024-volume versus 2025-online dual-affiliation DOI year identities without double-counting and keep NSU execution/diagnostics support only, no new strategic phone thermal bet. Next bounded academic profile ACT-MEPHI (named boiling/onset/heat-flux investigators), then ACT-TSU, ACT-ICM-SBRAS and ACT-MISIS; run graph/atlas/generated-view and web health tests to verify 20/29. Five-year academic relevant paper/patent counts remain NOT_MEASURED; avoid mixing China comparison systems, no outreach/experiments, software LIMITED_SCAN.
+- next: MEPhI academic Atlas profile created: expected 21/29 recovered Russia capability-owner root profiles and 17/26 priority academic profiles, pending full Atlas and web health rerun; Kutsenko is boiling-lab head, Delov PI 2025-2027 RSF, Struchalin dual-lab member, original 2023 wavelet boiling-regime experiment is water/LN2 pool not phone VC. No new strategic direction. Next close high-priority ACT-TSU profile (compact-electronics active/passive cooling) and ACT-ICM-SBRAS / ACT-MISIS; other five low-priority root gaps then complete balanced academic outputs 2021-2025 with DOI/translation/year/affiliation/patent-family reconciliation. No outreach/device tests; industry context only and software LIMITED_SCAN.
 
 ## Directions
 
