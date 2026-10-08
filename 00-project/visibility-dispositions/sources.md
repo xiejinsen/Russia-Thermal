@@ -8,3 +8,6 @@
 | OFFICIAL-RANK-MPEI-2026 | RANKING_CONTEXT | Institutional ranking context only. |
 | OFFICIAL-RANK-RAEX-2026 | RANKING_CONTEXT | Russia domestic ranking / subject context only. |
 | OFFICIAL-RANK-TPU-2026 | RANKING_CONTEXT | Institutional ranking context only. |
+
+| OFFICIAL-KUT-NCMU-2025 | CONTEXT_PROFILE |
+| OFFICIAL-RANK-DGTU-2026 | RANKING_CONTEXT |
