@@ -8,7 +8,7 @@ cutover_source_branch: dev
 research_mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 execution_state: READY
 dependency_state: CLEAR
-paper_deep_read_progress: 37/53
+paper_deep_read_progress: 37/55
 paper_deep_read_control: 00-project/paper-deep-read-coverage.md
 patent_deep_read_progress: 16/17
 patent_deep_read_control: 00-project/patent-reading-depth-closure-audit.md
@@ -26,18 +26,20 @@ leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
 leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
 web_copy_status: FINAL_COPY_PASS_CLOSED
 web_usability_status: USER_FEEDBACK_PASS_1_CLOSED
-web_atlas_architecture_status: PREPARED / TAXONOMY_FROZEN / DATA_ENRICHMENT_ACTIVE
+web_atlas_architecture_status: TAXONOMY_FROZEN / INSTITUTION_PROFILE_BATCH1_FUNCTIONAL / DATA_ENRICHMENT_ACTIVE
 russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
+institution_atlas_profile_status: BATCH1=4 INSTITUTIONS / WEB_CONNECTED
+institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
 leadership_deliverable_source: reports/leadership-decision-brief.md
 collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: transition Russia Capability Atlas enrichment to platform-transfer tagging plus institution research-output / patent-output / collaboration / influence enrichment; retain compact-air-mover/MEMS fan as an explicit reopenable gap; keep SOFTWARE_SYSTEM LIMITED_SCAN
+next_action: continue Institution Atlas enrichment batch 2 across ITP Ural Branch/LHP, UUST, ASTU, ITMO, BMSTU and NovSU; apply capability-owned platform transfer plus graph-derived relevant-output snapshots and evidence-scoped collaboration/influence profiles; keep SOFTWARE_SYSTEM LIMITED_SCAN
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
