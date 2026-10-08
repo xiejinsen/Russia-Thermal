@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: ICM Krasnoyarsk identity correction: ACT-ICM-SBRAS and ACT-ICM-KRASN are one institute; history preserved under alias, actual differential mechanics department ACT-ICM-DIFFMECH now lab-owned, Nesterov electronics flat-HP line remains at canonical institute. Verify revised Atlas 22/28 distinct Russia capability owners, 18/25 academic roots and 34/34 transfer in main Actions. ICM is methodological research complement, not phone product partner promotion. Next ACT-MISIS plus remaining 6 owner profiles; parallel reconcile 2021-2025 academic output/collaboration/patent DOI records using single-institute identities. P1/P2 reserve hierarchy unchanged, academic-only partners, no outreach/experiments.
+- next: ICM Krasnoyarsk same-institute identity repair validated in main GitHub Actions (22/28 distinct Russia owner institutions, 18/25 prioritized academic root profiles, 34/34 platform transfer, SOURCE dedup and graph PASS; 1 NSU academic-person gap warning). ACT-ICM-SBRAS is historic non-owning alias of ACT-ICM-KRASN; actual Bekezhanova-led DiffMech lab and Nesterov flat-HP engineering line under one institution, no claimed Russia-unique phone technology. Next ACT-MISIS 2021-2025 solid-state/thermoelectric team and original academia evidence, then other five unprofiled roots, alongside full relevant paper/patent DOI-year-affiliation reconciliation. Companies context only, no outreach, no experiments.
 
 ## Directions
 
