@@ -10,6 +10,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM_HIGH
 target_fit: SUPPORTING
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- COMPACT_ELECTRONICS=TRANSFERABLE
 capability_family: ENABLING
 capability_topics:
 - PASSIVE_SURFACE_ENGINEERING
