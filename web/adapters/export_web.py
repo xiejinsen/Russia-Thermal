@@ -11,6 +11,7 @@ Synthesis export is a thin presentation contract over canonical strategic state.
 from __future__ import annotations
 
 import argparse
+import csv
 import importlib.util
 import json
 import re
@@ -266,6 +267,28 @@ def load_deep_reads() -> list[dict[str, Any]]:
     return records
 
 
+def load_academic_research_routes() -> dict[str, dict[str, str]]:
+    path = ROOT / "00-project" / "russia-root-actor-research-routing.tsv"
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\\t"))
+    return {row["actor_id"]: {"researchClass": row["research_organization_class"],
+                               "researchDepth": row["research_depth"]} for row in rows}
+
+
+def root_actor_id(o: dict[str, Any], by_id: dict[str, dict[str, Any]]) -> str:
+    cur = o
+    seen: set[str] = set()
+    while True:
+        cid = cur["id"]
+        if cid in seen:
+            return cid
+        seen.add(cid)
+        parent_id = nullable(cur.get("parent_actor_id"))
+        if not parent_id or parent_id == "null" or parent_id not in by_id:
+            return cid
+        cur = by_id[parent_id]
+
+
 def load_actor_atlas_profiles(v2repo) -> dict[str, dict[str, Any]]:
     profiles: dict[str, dict[str, Any]] = {}
     for path in sorted(ROOT.glob("03-actors/*/*/atlas-profile.md")):
@@ -289,7 +312,7 @@ def load_actor_atlas_profiles(v2repo) -> dict[str, dict[str, Any]]:
     return profiles
 
 
-def actor_record(o: dict[str, Any], atlas_profile: dict[str, Any] | None = None) -> dict[str, Any]:
+def actor_record(o: dict[str, Any], atlas_profile: dict[str, Any] | None = None, research_route: dict[str, str] | None = None) -> dict[str, Any]:
     parent = nullable(o.get("parent_actor_id"))
     if parent == "null":
         parent = None
@@ -309,6 +332,8 @@ def actor_record(o: dict[str, Any], atlas_profile: dict[str, Any] | None = None)
         "longitude": float_value(o.get("longitude")),
         "locationVerifiedAt": nullable(o.get("location_verified_at")),
         "atlasProfile": atlas_profile,
+        "researchClass": research_route["researchClass"] if research_route else None,
+        "researchDepth": research_route["researchDepth"] if research_route else None,
         "sourcePath": o["_path"],
     }
 
@@ -457,6 +482,12 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             require_nonempty(r, f, errors)
         if r["type"] not in {"ORGANIZATION", "LAB", "PERSON", "COMPANY"}:
             errors.append(f"{r['id']}: invalid actor type {r['type']}")
+        cls = r.get("researchClass")
+        if cls and cls not in {"ACADEMIC_UNIVERSITY", "ACADEMIC_RESEARCH_INSTITUTE", "APPLIED_RESEARCH_ORG", "INDUSTRIAL_ORG", "COMPANY"}:
+            errors.append(f"{r['id']}: invalid academic research class {cls}")
+        depth = r.get("researchDepth")
+        if depth and depth not in {"PRIMARY", "SELECTIVE", "CONTEXT_ONLY"}:
+            errors.append(f"{r['id']}: invalid academic research depth {depth}")
 
     for r in datasets["evidence"]:
         for f in ("id", "sourceType", "title", "primaryUrl", "sourcePath"):
@@ -675,8 +706,10 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
 
     roles = load_visibility_dispositions()
     profiles = load_actor_atlas_profiles(v2repo)
+    routes = load_academic_research_routes()
+    actor_lookup = {o["id"]: o for o in db["actor"]}
     return {
-        "actors": [actor_record(o, profiles.get(o["id"])) for o in db["actor"]],
+        "actors": [actor_record(o, profiles.get(o["id"]), routes.get(root_actor_id(o, actor_lookup))) for o in db["actor"]],
         "evidence": [evidence_record(o, roles["sources"].get(o["id"])) for o in db["source"]],
         "deepReads": load_deep_reads(),
         "claims": [claim_record(o, roles["claims"].get(o["id"])) for o in db["claim"]],
