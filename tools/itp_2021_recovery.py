@@ -50,6 +50,9 @@ def main():
     rows = load_rows()
     old_pages = observed_pages(rows)
     missing = sorted(set(range(1, 28)) - old_pages)
+    if not missing:
+        print("2021 official archive is already 27/27 pages; preserve previous attempt evidence and do not refetch")
+        return
     attempts = []
     recovered = []
     for page in missing[: args.max_pages]:
