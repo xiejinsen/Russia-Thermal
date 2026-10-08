@@ -10,6 +10,7 @@ Russia has credible thermal-material research signals in polymer-BN composites a
 supporting_sources:
 - OFFICIAL-SKOLTECH-AM-LAB-2026
 - OFFICIAL-SKOLTECH-ABAIMOV-2026
+- OFFICIAL-SKOLTECH-OWAIS-PHD-2023
 - PAPER-RU-MAT-001
 - PATENT-RU2834604C1
 
