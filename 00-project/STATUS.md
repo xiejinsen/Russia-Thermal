@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 23/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MISIS_PROFILE_ADDED / CI_RERUN_PENDING
+institution_atlas_profile_status: 23/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MISIS_PROFILE_ADDED / CI_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_PASS_22_28 / NEW_MISIS_PROFILE_EXPECTED_23_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / NEW_ACTIONS_PENDING
+russia_atlas_audit_status: PASS / DISTINCT_23_28_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37809471028
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37800187972
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_AUDIT_PASS_ONE_NSU_WARNING / DISTINCT_22_OF_28_ATLAS / ACADEMIC_ROUTE_25_OF_30 / OUTPUT_PILOT_VALIDATED_NOT_CENSUS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37800187993
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37809471028
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_AUDIT_PASS_ONE_NSU_WARNING / DISTINCT_23_OF_28_ATLAS / 34_34_TRANSFER / OUTPUT_PILOT_NOT_CENSUS
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37809471112
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -111,7 +111,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: MISIS academic materials Atlas now added: expected 23/28 distinct Russia capability-owner institution profiles and 19/25 prioritized academic profiles, pending final GitHub Actions current main check. Center for Energy Efficiency has director Kuznetsov, independent group leads Khovaylo (thermoelectric materials), Karpenkov (magnetocaloric) and Argunov (spin thermoelectric GENERATION); 2023-25 original materials papers anchored, 575/700K zT and cryogenic RCo2 results do not prove room-temperature smartphone cooling COP. Compare strongly with China fabricated 2024 microTEC and 2025 externally chilled phone experiment; no P1/P2 promotion. Next prioritize ACT-LAVRENTYEV and ACT-SKOLTECH then MSU/HSE/SPBU, and start controlled 2021-2025 relevant institute-output DOI/year/affiliation census. No outreach/experiments, companies context only.
+next_action: MISIS academic center and three distinct groups now verified at GitHub Actions run 37809471028: 23/28 real Russia capability-owner institution profiles, 19/25 priority academic profiles, 34/34 platform transfer, SOURCE dedup and graph PASS with 1 preexisting NSU person warning. Khovaylo thermoelectrics, Karpenkov magnetic refrigeration, Argunov thermoelectric generators separated; high-T materials zT and cryogenic RCo2 are NOT phone cooler COP, current China fabricated microTEC controls rule out generic Russia-only cooler claims. Next ACT-LAVRENTYEV and ACT-SKOLTECH, then MSU/HSE/SPbU, plus 2021-2025 institution topic-relevant paper/patent DOI/translation/affiliation output census. P1/P2 unchanged, academic-only, no outreach or device testing.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
