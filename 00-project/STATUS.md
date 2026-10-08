@@ -31,9 +31,9 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: BATCH1+BATCH2+BATCH3+AUDIT+NSU+MEPHI+TSU=22/29 RUSSIA_CAPABILITY_OWNERS / TSU_PROFILE_ADDED / CI_RERUN_REQUIRED
+institution_atlas_profile_status: BATCH1+BATCH2+BATCH3+AUDIT+NSU+MEPHI+TSU=22/29 RUSSIA_CAPABILITY_OWNERS / TSU_PROFILE_ADDED / CI_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_PASS_21_29_OWNERS / TSU_PROFILE_EXPECTED_22_29 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / NEW_CI_RERUN_REQUIRED
+russia_atlas_audit_status: PASS / VERIFIED_22_29_RUSSIA_CAPABILITY_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / ACTIONS_RUN_37791759210
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
@@ -53,7 +53,7 @@ output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 26/31 ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
-academic_profile_current_coverage: 18/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS / BASELINE_15_PLUS_NSU_MEPHI_TSU / AUDIT_RERUN_REQUIRED
+academic_profile_current_coverage: 18/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS / BASELINE_15_PLUS_NSU_MEPHI_TSU / PROFILE_FILE_VERIFIED
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
@@ -103,7 +103,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: TSU academic team Atlas created: ACT-TSU-CHMT-LAB with official Sheremet director, Gibanov channel active cooling, Bondareva porous-PCM modeling and 2021-2026 representative original line; initial Atlas expected 22/29 Russia capability-owner roots and 18/26 primary academic profiles, pending GitHub Actions rerun. Preserve TSU as modeling/PCM WATCH (China 2024 experimental PCM pin-fin and honeycomb plus 2023 global GaN device constrain generic uniqueness); journal metadata discrepancies and 2025 heat-pipe review tagged, no yearly totals. Next priority ACT-ICM-SBRAS then ACT-MISIS and remaining university owners, and start standardised 2021-2025 paper/patent outcome reconciliation. Academic-only collaboration; company benchmarks context-only; no outreach/experiments; software limited.
+next_action: TSU academic lab/person/capability mapping now GitHub Actions verified: 22/29 Russian capability-owner profiles, 34/34 platform-transfer, source dedup and graph PASS with old nonblocking NSU key-person and foundational modeling-sufficiency warnings; academic cohort 18/26 from confirmed current profile objects. TSU remains WATCH for PCM/channel modeling, not phone prototype or new strategic bet. Next research priority ACT-ICM-SBRAS followed by ACT-MISIS and remaining 7 profile gaps. Concurrent focus 2021-2025 source-deduped affiliation-qualified institutional paper/patent counts, no country-wide output ranking or false mobile superiority. No outreach or experiments; companies context only.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
