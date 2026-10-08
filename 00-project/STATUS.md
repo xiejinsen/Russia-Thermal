@@ -48,6 +48,10 @@ web_production_browser_live_check: NOT_INDEPENDENTLY_VERIFIED
 russia_atlas_unprofiled_owners: 0
 q04_research_policy: REPRESENTATIVE_FIRST_USER_APPROVED_2026_10_08 / PRIORITY_TEAM_5_TO_10_WORKS_P1_UP_TO_12 / DECISIVE_DEEP_READ_2_TO_4 / TOTAL_CENSUS_OPTIONAL
 q04_research_policy_contract: 00-project/output-measurement-contract.md
+representative_work_pilot: KUT_10 / MPEI_4 / TOOLS_VALIDATOR_ADDED / WEB_EXPORT_AND_PILOT_PAGE_WIRED / FULL_BUILD_CI_NOT_VERIFIED
+representative_work_pilot_contract: 00-project/representative-work-link-contract.md
+representative_work_pilot_validator: tools/representative_works.py
+representative_work_pilot_page: web/src/pages/representative-works.astro
 q04_joint_audit: analysis/academic-team-mapping/q04-p1-p2-representative-joint-audit-2026-10-08.md
 q04_joint_audit_state: BOUNDED_P1_P2_PASS_WITH_GAPS / NEW_2022_2023_MPEI_AND_2026_KUT_LEADS / PROJECT_Q04_IN_PROGRESS
 q04_mpei_representative_profile: analysis/academic-team-mapping/mpei-representative-contributions-2026-10-08.md
