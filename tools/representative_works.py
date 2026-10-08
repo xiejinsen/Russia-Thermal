@@ -2,10 +2,10 @@
 """Validate and export representative-work selections without inventing canonical papers."""
 from __future__ import annotations
 import csv
-import json
-import re
+import sys
 from pathlib import Path
 from urllib.parse import urlsplit
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import v2repo
 
 ROOT = Path(__file__).resolve().parents[1]
