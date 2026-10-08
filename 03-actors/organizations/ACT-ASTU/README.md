@@ -1,6 +1,7 @@
 # ACT-ASTU
 
 record_state: CURRENT
+official_url: https://astu.org/
 actor_type: ORGANIZATION
 canonical_name: Astrakhan State Technical University
 country: RU
