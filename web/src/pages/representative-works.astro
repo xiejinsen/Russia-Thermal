@@ -17,8 +17,8 @@ const panels = [
 ];
 ---
 <BaseLayout title="Representative research works">
-  <SiteHeader />
-  <main class="mx-auto" style="max-width:1040px;padding:40px 24px 80px">
+  <SiteHeader slot="header" />
+  <div class="mx-auto" style="max-width:1040px;padding:40px 24px 80px">
     <h1>Representative research works</h1>
     <p>Selected evidence for team capability assessment, not a complete publication census. Candidate sources are visibly distinguished from canonical evidence records.</p>
     {panels.map((panel) => (
@@ -40,5 +40,5 @@ const panels = [
         </div>
       </section>
     ))}
-  </main>
+  </div>
 </BaseLayout>
