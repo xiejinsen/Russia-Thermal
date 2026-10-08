@@ -8,6 +8,11 @@ maturity: RESEARCH_PROGRAM
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=ADJACENT
+- LAPTOP=TRANSFERABLE
+- COMPACT_ELECTRONICS=DIRECT
 capability_family: PASSIVE_HARDWARE
 capability_topics:
 - VC_HEAT_PIPE
