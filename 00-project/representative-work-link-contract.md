@@ -21,6 +21,6 @@ Columns:
 
 Pilot readers MUST ignore candidate rows when computing recovered canonical paper counts. Do not use this to infer five-year totals, patent family totals or research leadership. No modification to v2repo.py generator until the manifest parser has schema/ID validation and evidence-to-view tests. Keep one manifest per team: actual verified lab directory for Lab 1.3; MPEI organization directory for the **named core group** without inventing an ACT lab ID.
 
-A future web adapter may render rows after explicit schema validation and join to canonical SOURCE; do not claim UI integration until it is built and tested.
+Pilot web integration implemented via `tools/representative_works.py` (strict schema/reference/DOI and candidate-state validator), `web/adapters/export_web.py` (adds `representativeWorks.json` and manifest entry) and `web/src/pages/representative-works.astro` (separate limited two-team view). Candidate rows are visibly marked; canonical Source link uses existing evidence objects. These files have been committed but the latest live build / CI must be checked independently before claiming production availability.
 
 Sources for curation: analysis/academic-team-mapping/kutateladze-lab13-representative-contributions-2026-10-08.md and analysis/academic-team-mapping/mpei-representative-contributions-2026-10-08.md. 
