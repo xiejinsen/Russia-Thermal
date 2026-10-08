@@ -19,6 +19,19 @@ export interface ActorRecord {
   latitude: number | null;
   longitude: number | null;
   locationVerifiedAt: string | null;
+  atlasProfile: {
+    state: string;
+    assessedAt: string;
+    leadershipSummary: string;
+    collaborationSummary: string;
+    influenceSummary: string;
+    outputInterpretation: string;
+    contextSourceIds: string[];
+    collaborationSourceIds: string[];
+    influenceSourceIds: string[];
+    publicGaps: string[];
+    sourcePath: string;
+  } | null;
   sourcePath: string;
 }
 
