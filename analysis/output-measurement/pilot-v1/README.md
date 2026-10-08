@@ -89,3 +89,23 @@ No external contact or real-device testing is required for this public-source re
 - No change to P1 Kutateladze / P2 MPEI / P3 TPU HOLD / LHP WATCH.
 - This work increases evidence accounting reliability; it does **not** prove one Russian institution outperforms a Chinese counterpart.
 - Patent and publication annual totals remain unmeasured; the original goal of institution-level five-year output intensity is still OPEN, but its measurement rules and pilot evidence paths are now established.
+
+## User-scoped academic-first priority (2026-10-08)
+
+The user explicitly prioritized **academic institutions and research institutes for collaboration**. Universities and RAS research organizations are the PRIMARY objects for scholar/team mapping, literature/claims review and five-year output analysis.
+
+Company/industrial organizations remain **CONTEXT_ONLY** and no longer receive equal-depth output census or partner-ranking effort. Retain Thercon as a bounded company-reported patent-portfolio / RU-vs-WO family dedup example only.
+
+Academic measurement queue:
+1. Kutateladze Institute;
+2. MPEI named thermal research groups;
+3. ITP Ural Branch RAS / LHP Laboratory.
+
+See:
+- `00-project/academic-first-research-contract.md`
+- `00-project/russia-root-actor-research-routing.tsv`
+- `analysis/output-measurement/pilot-v1/ACT-ITP-UBRAS.md`
+
+First web-based year-page probe confirmed the Kutateladze journal-article catalog exists with paginated official pages across 2021–2025. Estimated page counts from the probe: 2021=27, 2022=14, 2023=16, 2024=14, 2025=14. These are **page numbers**, not paper counts. Some first-page entries did not match the initial parser and need extraction QA.
+
+Full-year relevant research output is still NOT_MEASURED; website explicitly states its public bibliography is incomplete.
