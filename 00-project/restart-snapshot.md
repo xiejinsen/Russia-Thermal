@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: Repository health recovery is verified from GitHub Actions: canonical generated views, SOURCE dedup, graph/atlas/routing/catalog output checks passed (21/29 Russia Capability-owner profiles, 34/34 transfer, 2 nonblocking warnings); newer Web Data Check and Web UI success records obtained. Keep separate production Pages deployment and live browser content verification. Proceed to ACT-TSU academic team and smartphone-transfer original research profile, then ACT-ICM-SBRAS and ACT-MISIS; preserve no-new-country-superiority claims, academic-only partner model, no outreach/device tests and complete comparable 2021-2025 paper/patent baselines.
+- next: TSU academic team Atlas created: ACT-TSU-CHMT-LAB with official Sheremet director, Gibanov channel active cooling, Bondareva porous-PCM modeling and 2021-2026 representative original line; initial Atlas expected 22/29 Russia capability-owner roots and 18/26 primary academic profiles, pending GitHub Actions rerun. Preserve TSU as modeling/PCM WATCH (China 2024 experimental PCM pin-fin and honeycomb plus 2023 global GaN device constrain generic uniqueness); journal metadata discrepancies and 2025 heat-pipe review tagged, no yearly totals. Next priority ACT-ICM-SBRAS then ACT-MISIS and remaining university owners, and start standardised 2021-2025 paper/patent outcome reconciliation. Academic-only collaboration; company benchmarks context-only; no outreach/experiments; software limited.
 
 ## Directions
 
