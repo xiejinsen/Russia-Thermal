@@ -45,6 +45,8 @@ output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 26/31 ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
+academic_profile_current_coverage: 15/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS
+academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025_FIRST_PAGES_PASS / 85 OFFICIAL ARTICLE PAGES / INSTITUTION_CATALOG_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
 round_closure_goal_regression: REQUIRED
