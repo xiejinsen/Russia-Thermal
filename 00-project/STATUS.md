@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 24/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / LAVRENTYEV_PROFILE_ADDED / CI_RERUN_PENDING
+institution_atlas_profile_status: 24/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / LAVRENTYEV_PROFILE_ADDED / CI_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_PASS_23_28 / NEW_LAVRENTYEV_EXPECTED_24_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
+russia_atlas_audit_status: PASS / DISTINCT_24_28_RUSSIA_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37813616348
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37809471028
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_AUDIT_PASS_ONE_NSU_WARNING / DISTINCT_23_OF_28_ATLAS / 34_34_TRANSFER / OUTPUT_PILOT_NOT_CENSUS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37809471112
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37813616348
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_24_OF_28_ATLAS / 34_34_TRANSFER / Q04_BOUNDED_SAMPLE_NOT_CENSUS
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37813511288
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -126,7 +126,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Q01/Q02 Lavrentyev Atlas now built: official Applied/Computational Hydrodynamics Lab head V. V. Kuznetsov verified, Kabov joint Fluid Dynamics 2025 issue work already canonical; cross-institution formal collaboration and article-time affiliations not inferred. Expected institution Atlas 24/28 and priority academic 20/25, pending current CI; Q04 Kutateladze/MPEI 2024-2025 12-row work-identity pilot built with journal-vs-online-year, English/Russian versions and correction controls, but full annual relevant paper/patent totals remain NOT_MEASURED. Final acceptance Q01/Q02/Q04 evidence improved, Q05/Q08/Q09 still conditioned; P1/P2/TPU portfolio unchanged. Next Skoltech official graphene/BN materials+teams Atlas and bounded Q04 recall/DOI matching, then MSU/HSE/SPbU; no outreach or device experiments, academic-only partners and China/global comparators.
+next_action: Lavrentyev Atlas 24/28 and prioritized academic profiles 20/25 now independently GitHub Actions verified (run 37813616348; source dedup clean, graph PASS one NSU person warning, 34/34 platform transfer), current academic laboratory head V. V. Kuznetsov officially anchored; Kabov/Kuznetsov 2025 work is already canonical, formal project/author-at-publication institute remains unverified. Q04 2024-2025 Kutateladze/MPEI 12 typed DOI/version/year records staged with annual output totals STILL NOT_MEASURED. Next academic Atlas ACT-SKOLTECH (and MSU/HSE/SPbU) plus actual comprehensive 2024-25 Kut/MPEI paper recall, translated-work dedup, affiliation and patent-family validation. P1/P2/TPU unchanged. Academic-only, no outreach/device testing.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
