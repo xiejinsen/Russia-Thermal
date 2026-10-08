@@ -101,6 +101,43 @@
       "items": {
         "type": "string"
       }
+    },
+    "platformTransfer": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "platform",
+          "level"
+        ],
+        "properties": {
+          "platform": {
+            "type": "string",
+            "enum": [
+              "SMARTPHONE",
+              "TABLET",
+              "WEARABLE",
+              "AR_VR",
+              "LAPTOP",
+              "COMPACT_ELECTRONICS",
+              "ADJACENT_ELECTRONICS",
+              "FOUNDATIONAL_ONLY"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "DIRECT",
+              "NEAR_DIRECT",
+              "TRANSFERABLE",
+              "ADJACENT",
+              "FOUNDATIONAL",
+              "NOT_SUPPORTED"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false
