@@ -147,3 +147,9 @@ Current report and machine provenance:
 - `tools/itp_triage_audit.py`
 
 Academic-first Kutateladze -> MPEI -> ITP Ural Branch remains the publication/research-partner priority. No new canonical source ingested and no publication total asserted.
+
+## 2024–2025 two-academic-team DOI/version identity audit — added 2026-10-08
+
+[Bounded 12-record Kutateladze/MPEI work-identity ledger](academic-2024-2025-work-identity-sample.tsv) and [audit report](academic-2024-2025-kut-mpei-identity-audit.md) now explicitly track journal ISSUE year vs English ONLINE year, Russian/English versions, correction vs original review, already-canonical work, publisher-on-hold DOI and 2026 exclusion. The records include KUT P1 and MPEI Ivanov/Kuzma-Kichta P2 plus one **separate MPEI Lyulin/Dedov + Skoltech** experiment; no institutional productivity inference from those selected rows.
+
+**Still DISCOVERY_PARTIAL.** Annual 2024/25 and 2021–25 *relevant research paper and patent family totals remain null/NOT_MEASURED for both institutes*. The institute Kutateladze archive is recovered as 85/85 pages but publicly declared incomplete and is not a complete paper census. MPEI faculty group site provides a selectively assembled bibliography, not complete years. For Q04 completion, reconcile each institute's full candidate universe plus cross-database recall, version/work de-duplication, publication-date and affiliation snapshots. No new canonical SOURCE ingested merely to count a paper.
