@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import selectedJson from '../../data/generated/representativeWorks.json';
+import { evidence } from '../data/load-normalized';
+
+type Selection = {
+  id: string; teamId: string; sourceId: string | null; sourceUrl: string;
+  scholarRefs: string[]; researchLane: string; selectionReason: string;
+  evidenceState: string; deepReadPriority: string; directionId: string; selectionLimit: string;
+};
+const records = (selectedJson.records as Selection[]);
+const byId = new Map(evidence.map((source) => [source.id, source]));
+const panels = [
+  { id: 'ACT-KUT-LAB13', title: 'Kutateladze · Laboratory 1.3', subtitle: 'Dry-spot diagnostics and boiling-crisis mechanisms' },
+  { id: 'ACT-MPEI', title: 'MPEI · Ivanov / Kuzma-Kichta research line', subtitle: 'Thermosyphon surfaces and long-duration reliability' },
+];
+---
+<BaseLayout title="Representative research works">
+  <SiteHeader />
+  <main class="mx-auto" style="max-width:1040px;padding:40px 24px 80px">
+    <h1>Representative research works</h1>
+    <p>Selected evidence for team capability assessment, not a complete publication census. Candidate sources are visibly distinguished from canonical evidence records.</p>
+    {panels.map((panel) => (
+      <section style="margin-top:36px" aria-label={panel.title}>
+        <h2>{panel.title}</h2>
+        <p>{panel.subtitle}</p>
+        <div style="display:grid;gap:12px">
+          {records.filter((r) => r.teamId === panel.id).map((r) => (
+            <article style="border:1px solid #b9cde5;border-radius:12px;padding:18px;background:#f6faff;color:#142a46">
+              <div style="font-size:13px;font-weight:700;color:#315b88">{r.deepReadPriority} · {r.evidenceState === 'CANONICAL' ? 'Canonical evidence' : 'Research candidate / staged evidence'}</div>
+              <h3 style="font-size:17px;line-height:1.35;margin:8px 0">
+                <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer" style="color:#165aab;text-decoration:underline">{byId.get(r.sourceId ?? '')?.title ?? r.researchLane.replaceAll('_', ' ')}</a>
+              </h3>
+              <p style="margin:4px 0"><strong>Why selected:</strong> {r.selectionReason}</p>
+              <p style="margin:4px 0"><strong>Limit:</strong> {r.selectionLimit}</p>
+              <p style="font-size:13px;margin:6px 0 0">Evidence reference: {r.sourceId ?? 'Not yet canonical'} · {r.directionId}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+</BaseLayout>
