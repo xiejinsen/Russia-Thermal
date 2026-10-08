@@ -433,6 +433,12 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
   const sourceIds = new Set(
     linkedClaims.flatMap((claim) => [...claim.supportingSourceIds, ...claim.contradictingSourceIds])
   );
+  const profileSourceIds = new Set([
+    ...(actor.atlasProfile?.contextSourceIds ?? []),
+    ...(actor.atlasProfile?.collaborationSourceIds ?? []),
+    ...(actor.atlasProfile?.influenceSourceIds ?? [])
+  ]);
+  profileSourceIds.forEach((sourceId) => sourceIds.add(sourceId));
   const linkedEvidenceRecords = [...sourceIds]
     .map((sourceId) => evidenceById.get(sourceId))
     .filter((item): item is EvidenceRecord => Boolean(item))
@@ -452,6 +458,15 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const parent = actor.parentId ? actorById.get(actor.parentId) : undefined;
+  const researchOutputYears = linkedEvidenceRecords
+    .filter((item) => item.id.startsWith('PAPER-') || item.id.startsWith('PATENT-'))
+    .map((item) => item.year)
+    .filter((year): year is number => typeof year === 'number');
+  const evidenceForIds = (ids: string[]) =>
+    ids
+      .map((sourceId) => evidenceById.get(sourceId))
+      .filter((item): item is EvidenceRecord => Boolean(item))
+      .map(evidenceCard);
 
   return {
     id: actor.id,
@@ -461,6 +476,25 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
     role: actor.currentRole ?? undefined,
     relevance: actor.researchRelevance ?? undefined,
     officialUrl: actor.officialUrl ?? undefined,
+    atlasProfile: actor.atlasProfile ? {
+      assessedAt: actor.atlasProfile.assessedAt,
+      leadershipSummary: actor.atlasProfile.leadershipSummary,
+      collaborationSummary: actor.atlasProfile.collaborationSummary,
+      influenceSummary: actor.atlasProfile.influenceSummary,
+      outputInterpretation: actor.atlasProfile.outputInterpretation,
+      publicGaps: actor.atlasProfile.publicGaps,
+      contextEvidence: evidenceForIds(actor.atlasProfile.contextSourceIds),
+      collaborationEvidence: evidenceForIds(actor.atlasProfile.collaborationSourceIds),
+      influenceEvidence: evidenceForIds(actor.atlasProfile.influenceSourceIds)
+    } : undefined,
+    outputSnapshot: {
+      label: 'Recovered relevant corpus',
+      firstYear: researchOutputYears.length ? Math.min(...researchOutputYears) : undefined,
+      latestYear: researchOutputYears.length ? Math.max(...researchOutputYears) : undefined,
+      paperCount: linkedEvidenceRecords.filter((item) => item.id.startsWith('PAPER-')).length,
+      patentCount: linkedEvidenceRecords.filter((item) => item.id.startsWith('PATENT-')).length,
+      officialCount: linkedEvidenceRecords.filter((item) => item.id.startsWith('OFFICIAL-')).length
+    },
     parent: parent && parent.type !== 'PERSON' ? institutionCard(parent, capabilities.filter((c) => c.actorId === parent.id)) : undefined,
     children: childActors
       .map((child) => institutionCard(child, capabilities.filter((c) => c.actorId === child.id)))
