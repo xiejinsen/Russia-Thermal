@@ -1,6 +1,7 @@
 # ACT-TAIS
 
 record_state: CURRENT
+official_url: https://mpei.ru/news/Pages/newsItem.aspx?newsID=2610
 actor_type: COMPANY
 canonical_name: NPP Thermal Aggregates and Systems LLC
 country: RU
