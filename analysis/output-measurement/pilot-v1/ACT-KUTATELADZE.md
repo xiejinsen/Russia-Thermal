@@ -72,3 +72,22 @@ The scraper collected the bibliographic plain text but generally **did not prese
 Publisher example: 2025 electronics immersion-cooling review DOI `10.1016/j.applthermaleng.2025.127088` has a publisher corrigendum DOI `10.1016/j.applthermaleng.2025.127221`; one research review + correction, not two new research works.
 
 All annual **relevant and deduplicated** output counts remain NOT_MEASURED.
+
+## Current update — 2026-10-08 full visible-site recovery
+
+The earlier provisional 2021=7/27 state was superseded by two successful low-rate GitHub recovery passes.
+
+Current official Article site snapshot for 2021–2025:
+- 2021: 27/27 pages, 521 raw records;
+- 2022: 14/14, 272;
+- 2023: 16/16, 315;
+- 2024: 14/14, 272;
+- 2025: 14/14, 270;
+- Total: 85/85 site pages and 1,650 raw bibliography records.
+
+2021 title-only manual-review queue was regenerated from all 521 site entries: 64 leads (30 HIGH review, 32 MEDIUM, 2 AMBIGUOUS); combined across years: 239 unreviewed leads. These are NOT admitted relevant Papers.
+
+Current authoritative work report:
+`analysis/output-measurement/pilot-v1/kutateladze-full-archive-doi-round_2026_10_08.md`.
+
+The institute itself warns official bibliography is being filled; **all five annual eligible and deduplicated research-output totals remain NOT_MEASURED** pending DOI/relevance/affiliation/external recall reconciliation.
