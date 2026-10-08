@@ -64,6 +64,10 @@ academic_team_mapping_report: analysis/academic-team-mapping/kutateladze-lab13-t
 academic_team_identity_guard: SURTAEV_OFFICIAL_LAB13_CONFIRMED / ZHUKOV_VI_VE_NOT_MERGED / SERDYUKOV_EXACT_LAB_HOLD
 academic_p1_comparator_b_state: PUBLIC_PRIMARY_REVIEW_COMPLETE / MECHANISM_LABEL_INCREMENTAL_INFORMATION_NOT_MEASURED / KEEP_P1_NARROW
 academic_p1_comparator_b_report: analysis/academic-team-mapping/kutateladze-p1-incremental-value-batch-b-2026-10-08.md
+academic_p1_public_data_gate: LIMITED_PUBLIC_EVIDENCE / RAW_REPLICATES_LABEL_THRESHOLDS_NOT_INDEPENDENTLY_VERIFIED / INFORMATION_GAIN_NOT_MEASURED / NO_CONTACT
+academic_p1_public_data_gate_report: analysis/academic-team-mapping/kutateladze-p1-public-evidence-stop-gate-2026-10-08.md
+academic_mpei_team_mapping_status: BOUNDED_BATCH_A_STARTED / 2025_RU_EN_VERSION_GROUP_PENDING / 2026_IVANOV_SINGLE_AUTHOR / YEARS_NOT_MEASURED
+academic_mpei_team_mapping_report: analysis/academic-team-mapping/mpei-team-reliability-pilot-2026-10-08.md
 academic_p1_comparator_new_pressure: KOREA_2016_IRREVERSIBLE_DRY_SPOT / GLOBAL_2019_UNET / MIT_2023_IR_UNET / US_2025_INTERNAL_STATE_AND_SATURATION / JAPAN_2026_PORE
 academic_p1_version_control: RUS_2025_RU_EN_TRANSLATION_PENDING / RUS_2026_FINAL_HTC_RATIO_1_47_VS_2025_PREPRINT_1_9
 round_closure_goal_regression: REQUIRED
@@ -74,7 +78,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: P1 Batch B is publicly pressure-tested: preserve narrow mechanism-label/model-falsification hypothesis; information gain versus Korea 2016, MIT 2023, Purdue 2025 and Chinese engineering remains NOT_MEASURED. Next run bounded public 2026 label/repeatability/uncertainty audit without experiments or outreach, then shift primary capacity to MPEI and ITP Ural Branch institutional team maps plus 10 remaining Russia capability-owner profiles. In parallel restore DOI href associations, review 2021-2024 204 keyword leads, sample non-keyword omissions and verify author affiliations before publishing any annual output counts. Companies context only, software limited scan.
+next_action: P1 public-data gate is bounded and paused without collaboration data: no verified shareable run-level labels or added information versus strong China/global physics baselines; keep P1 PRIMARY narrow and no outreach. MPEI named-team reliability pilot is now started; verify 2025 Russian/English same-work publication identity, other MPEI lab-team affiliations and evidence, then prioritize ITP Ural Branch and uncovered Russia academic institute profiles. Continue DOI HTML href recovery, remaining 2021-2024 204 keyword candidates, 2025 non-keyword false-negative sample and independent index recall before annual totals; companies context only, no experiments/outreach.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
