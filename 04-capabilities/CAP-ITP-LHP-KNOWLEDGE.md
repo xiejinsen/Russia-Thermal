@@ -5,6 +5,8 @@ actor_id: ACT-ITP-LHP-LAB
 key_people:
 - PERSON-MAYDANIK
 - PERSON-CHERNYSHEVA
+- PERSON-VERSHININ
+- PERSON-PANASENKO
 maturity: EXPERT_KNOWLEDGE
 evidence_confidence: HIGH
 target_fit: ADJACENT
