@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 25/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / SKOLTECH_PROFILE_ADDED / CI_RERUN_PENDING
+institution_atlas_profile_status: 25/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / SKOLTECH_PROFILE_ADDED / CI_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_24_28_PASS / SKOLTECH_NEW_PROFILE_EXPECTED_25_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
+russia_atlas_audit_status: PASS / DISTINCT_25_28_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37815857837
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37813616348
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_24_OF_28_ATLAS / 34_34_TRANSFER / Q04_BOUNDED_SAMPLE_NOT_CENSUS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37813511288
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37815857837
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_25_OF_28_ATLAS / 34_34_TRANSFER / Q04_2025_KEYWORD_67_VS_35_RECONCILIATION_NOT_CENSUS
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37815857676
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -135,7 +135,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Q01/Q02 Skoltech Atlas completed as two independently verified labs: Evlashin Additive Manufacturing (2023 original 3D BN composite plus MPEI joint thermosyphon) and Abaimov Smart Materials & Systems (2022 BN/PVA and 2024 rGO/PVA), Owais 2023 PhD/2024 author but current employment unknown. Expect 25/28 distinct Russian institution Atlas and 21/25 priority academic cohort pending CI; 34 Russian CAPs unchanged, Skoltech supporting WATCH and no China superiority. Q04 Kut 2025 raw archived 270 rows, initial keyword hints 67 versus curated 35 (26 overlap, 41 raw-only, 9 curated-only, union 76, 194 in neither); 12 systematic raw-negative controls include flow case #262; all yearly outputs NOT_MEASURED. Next MSU/HSE/SPbU academic profiles and union-screen 2025 41 raw-only Kut leads + validate 2024-25 MPEI names/DOI and external recall, no research dissemination claiming full output. P1/P2/TPU unchanged; academic only, no outreach/tests.
+next_action: Skoltech Q01/Q02 Atlas and Q04 bibliography-recall audit confirmed by GitHub Actions 37815857837: 25/28 distinct Russian capability-owner institution profiles, 21/25 prioritized academic profiles, 34/34 transfer, source dedup and graph PASS with one known NSU person gap. Skoltech's current Evlashin additive BN/thermosyphon lab and Abaimov Smart Materials lab mapped separately; Owais 2023 PhD and 2024 paper affiliation historical, 2026 employment unverified. Supporting WATCH; no China-superiority claim. Kut 2025 raw 270 paper-site records, raw keyword hints 67 and curated 35 overlap only 26; 41 raw-only +9 curated-only and 12 selected raw negatives including #262, all relevant paper/year totals NOT_MEASURED. Next complete MSU/HSE/SPbU academic Atlas then review 41 omitted Kut candidate titles and robust 194 dual-negative recall sample, and build full 2024-2025 MPEI output query/dedup. Phase1 P1/P2/TPU unchanged, academic-only, no outreach/tests.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
