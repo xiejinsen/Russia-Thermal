@@ -8,6 +8,10 @@ maturity: RESEARCH_ASSET
 evidence_confidence: MEDIUM
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=FOUNDATIONAL
+- TABLET=FOUNDATIONAL
+- COMPACT_ELECTRONICS=ADJACENT
 capability_family: ENABLING
 capability_topics:
 - MODELING_CFD
