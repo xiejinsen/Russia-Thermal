@@ -30,7 +30,7 @@ const primaryDirection =
     eyebrow={`${vm.kindLabel} detail`}
     title={vm.name}
     summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance}
-    meta={[vm.country, ...(vm.role ? [vm.role] : []), ...(primaryDirection ? [primaryDirection.lane.label] : [])]}
+    meta={[vm.country, ...(vm.researchClassification ? [vm.researchClassification] : []), ...(vm.researchDepth ? [vm.researchDepth + ' research'] : []), ...(vm.role ? [vm.role] : []), ...(primaryDirection ? [primaryDirection.lane.label] : [])]}
   >
     <div slot="actions">
       <ExplorerLinkStrip
