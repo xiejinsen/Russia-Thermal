@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: P1 public-data gate is bounded and paused without collaboration data: no verified shareable run-level labels or added information versus strong China/global physics baselines; keep P1 PRIMARY narrow and no outreach. MPEI named-team reliability pilot is now started; verify 2025 Russian/English same-work publication identity, other MPEI lab-team affiliations and evidence, then prioritize ITP Ural Branch and uncovered Russia academic institute profiles. Continue DOI HTML href recovery, remaining 2021-2024 204 keyword candidates, 2025 non-keyword false-negative sample and independent index recall before annual totals; companies context only, no experiments/outreach.
+- next: ITP Ural LHP named-team mapping complete as bounded research sample: 2021-25 papers/methods and 2025 copper-wick ammonia experiment traced, China thin 0.7-mm mobile LHP pressure leaves DIR-LHP-KNOWLEDGE-RESERVE WATCH; no product/unproven lifetime upgrade or outreach. Next prioritize missing Russian academic Atlas profiles ACT-NSU (two-phase diagnostics personnel gap), ACT-MEPHI, ACT-TSU, ACT-ICM-SBRAS and ACT-MISIS, with linked original team papers and China comparator only where decision-relevant; then remaining lower-priority actors. MPEI other-team affiliation and RU/EN paper identity, Kutateladze DOI anchors and relevant 2021-25 output denominators remain open. Companies context only, software limited, no experiments/outreach.
 
 ## Directions
 
