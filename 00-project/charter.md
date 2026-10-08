@@ -64,6 +64,14 @@ The project prefers:
 
 Broad country-superiority narratives are rejected unless directly supported.
 
+## Final integrated insight acceptance — user-approved ten questions (2026-10-08)
+
+The frozen Phase-1 portfolio is a **stage decision**, not proof that the full academic cooperation insight has answered all required questions.
+
+The final leadership report must answer ten linked questions: Russian academic institution coverage; specific labs/people; demonstrated mechanisms; 2021–2025 research strength; China/global differentiation; smartphone engineering transfer; future trend; Russia-vs-domestic incremental collaboration value; named falsifiable academic work package; and priority/reserve/watch/hold/kill investment decision.
+
+Use the [Final Insight Acceptance Contract](final-insight-acceptance-contract.md) for evidence gates and the [Ten-Question Ledger](final-insight-question-ledger.tsv) for current answer, stage, and remaining gaps. A public-evidence-qualified "unknown / needs future authorization" is valid; inventing annual totals, experimental phone validation, data rights or partner consent is not.
+
 ## Current authority
 
 Always read [STATUS.md](STATUS.md).
