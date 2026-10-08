@@ -28,5 +28,7 @@ jobs:
         run: python tools/actor_research_router.py
       - name: Audit official Kutateladze catalog extraction
         run: python tools/itp_catalog_quality.py
+      - name: Audit Kutateladze title-triage provenance
+        run: python tools/itp_triage_audit.py
       - name: Audit output-measurement sample identities
         run: python tools/output_measurement_audit.py
