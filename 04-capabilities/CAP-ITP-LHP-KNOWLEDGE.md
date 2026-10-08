@@ -9,6 +9,11 @@ maturity: EXPERT_KNOWLEDGE
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-06
+platform_transfer:
+- SMARTPHONE=ADJACENT
+- TABLET=TRANSFERABLE
+- LAPTOP=DIRECT
+- COMPACT_ELECTRONICS=DIRECT
 capability_family: PASSIVE_HARDWARE
 capability_topics:
 - LOOP_HEAT_PIPE
@@ -18,6 +23,7 @@ Capability statement:
 ITP UB RAS retains deep LHP design, serviceability, operating-limit and failure-analysis knowledge.
 
 evidence_claims:
+- CLM-LHP-004
 - CLM-LHP-001
 
 Transfer boundary:
