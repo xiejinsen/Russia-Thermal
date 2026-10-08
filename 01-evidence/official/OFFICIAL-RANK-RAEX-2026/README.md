@@ -12,9 +12,12 @@ RAEX-100 Best Universities in Russia, 2026.
 Direct facts:
 - National Research Tomsk Polytechnic University: #13 overall in Russia.
 - National Research University MPEI: #24 overall in Russia.
+- Bauman Moscow State Technical University: #2 overall in Russia.
+- ITMO University: #15 overall in Russia.
+- Ufa University of Science and Technology: #100 overall in Russia.
 
 Complementary subject context:
-RAEX 2026 Mechanical Engineering & Robotics subject ranking places TPU #4.
+RAEX 2026 Mechanical Engineering & Robotics subject ranking places TPU #4, Bauman MSTU #1 and ITMO #5; RAEX 2026 Electronics / Radio Engineering / Communications ranks Bauman MSTU #1 and ITMO #5.
 
 Boundary:
 ranking is contextual metadata only; it must not be used as evidence of specific thermal-management capability or partner value.
