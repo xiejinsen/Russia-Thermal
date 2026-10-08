@@ -8,6 +8,7 @@ Proposition:
 ITMO currently maintains electronics-cooling capability spanning semiconductor-device capillary cooling, thermal analysis and broader cooling-system engineering, with 2025-2026 evidence of continuing activity.
 
 supporting_sources:
+- PAPER-RU-ITMO-CAP-001
 - OFFICIAL-ITMO-KORABLEV-001
 
 Boundary:
