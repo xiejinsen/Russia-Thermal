@@ -8,6 +8,7 @@ Proposition:
 TsAGI/PNRPU retain strong current aeroacoustic experimental and noise-control method capability.
 
 supporting_sources:
+- OFFICIAL-TSAGI-AEROACOUSTIC-RESEARCH-001
 - PAPER-RU-ACOU-001
 
 Boundary:
