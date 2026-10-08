@@ -5,7 +5,7 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
 - phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: MEPhI academic Atlas profile created: expected 21/29 recovered Russia capability-owner root profiles and 17/26 priority academic profiles, pending full Atlas and web health rerun; Kutsenko is boiling-lab head, Delov PI 2025-2027 RSF, Struchalin dual-lab member, original 2023 wavelet boiling-regime experiment is water/LN2 pool not phone VC. No new strategic direction. Next close high-priority ACT-TSU profile (compact-electronics active/passive cooling) and ACT-ICM-SBRAS / ACT-MISIS; other five low-priority root gaps then complete balanced academic outputs 2021-2025 with DOI/translation/year/affiliation/patent-family reconciliation. No outreach/device tests; industry context only and software LIMITED_SCAN.
+- next: Repository health recovery is verified from GitHub Actions: canonical generated views, SOURCE dedup, graph/atlas/routing/catalog output checks passed (21/29 Russia Capability-owner profiles, 34/34 transfer, 2 nonblocking warnings); newer Web Data Check and Web UI success records obtained. Keep separate production Pages deployment and live browser content verification. Proceed to ACT-TSU academic team and smartphone-transfer original research profile, then ACT-ICM-SBRAS and ACT-MISIS; preserve no-new-country-superiority claims, academic-only partner model, no outreach/device tests and complete comparable 2021-2025 paper/patent baselines.
 
 ## Directions
 
