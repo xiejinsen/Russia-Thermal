@@ -47,8 +47,14 @@ academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
 academic_profile_current_coverage: 15/26 PRIMARY_ACADEMIC_RU_ROOT_ACTORS
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
-academic_catalog_probe: KUT_2021-2025_FIRST_PAGES_PASS / 85 OFFICIAL ARTICLE PAGES / INSTITUTION_CATALOG_INCOMPLETE
+academic_catalog_probe: KUT_2021=7/27 PAGES_PARTIAL / 2022=14/14 / 2023=16/16 / 2024=14/14 / 2025=14/14 / INSTITUTION_CATALOG_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
+academic_catalog_raw_snapshot: 1250 ORIGINAL_SITE_CITATIONS / 65_OF_85 PAGES / NO_INSTITUTION_TOTAL
+academic_catalog_review_queue: 186 KEYWORD_LEADS_UNREVIEWED / 67 HIGH / 113 MEDIUM / 6 AMBIGUOUS
+academic_catalog_screening: analysis/output-measurement/pilot-v1/kutateladze-catalog-screening_2026_10_08.md
+academic_catalog_curated: analysis/output-measurement/pilot-v1/kutateladze-curated-2024-2025.md
+academic_catalog_doi_state: HTML_HREF_EXTRACTION_PENDING / PUBLISHER_CORRIGENDUM_LINK_VERIFIED
+academic_catalog_triage_audit: tools/itp_triage_audit.py
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -57,7 +63,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: complete Kutateladze 2021-2025 official article archive traversal with page-completeness manifest, then DOI and translated-version dedup plus mobile-thermal relevance review; follow with MPEI and ITP Ural Branch academic lab output; keep companies CONTEXT_ONLY, software LIMITED_SCAN, no experiments and round-close goal regression
+next_action: recover 20 Kutateladze official Article pages missing in 2021 using bounded retry; restore DOI href/publisher identities for high-priority 2022-2025 paper queue and review translated-version/corrigendum clusters, mobile-thermal relevance and institute/team affiliation; keep Kutateladze annual measured relevant counts NOT_MEASURED until validated; then MPEI and ITP Ural academic teams
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
