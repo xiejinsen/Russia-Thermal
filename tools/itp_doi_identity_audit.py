@@ -36,7 +36,7 @@ def main():
     errors=[]
     ids=set()
     dois=set()
-    byyear={y:{int(r["index_on_site"]):r for r in read(RAW/f"{y}-candidates.tsv")} for y in (2024,2025)}
+    byyear={y:{int(r["index_on_site"]):r for r in read(RAW/f"{y}-candidates.tsv")} for y in (2021,2024,2025)}
     for row in ledger:
         rid=row["candidate_id"]
         if rid in ids:errors.append(f"duplicate ledger ID {rid}")
