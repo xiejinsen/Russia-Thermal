@@ -6,18 +6,22 @@ Use this file when resuming the project in a new chat/window.
 
 1. [STATUS.md](STATUS.md) — authority, research mode, current phase and next action.
 2. [restart-snapshot.md](restart-snapshot.md) — generated current Direction snapshot.
-3. [paper-deep-read-coverage.md](paper-deep-read-coverage.md) — current canonical Paper deep-read coverage and decision-sensitive queue (always verify denominator in STATUS.md; latest 37/60).
-4. [Phase-1 Management Table](../views/russia-vs-china/phase1-management.md) — strategic / reserve / Watch / Hold portfolio.
-5. [Kill / Downgrade Ledger](../07-decisions/kill-ledger.md) — theses that must not silently reappear.
-6. [charter.md](charter.md) — project goal and scope.
-7. [methodology.md](methodology.md) — evidence and decision method.
-8. [architecture.md](architecture.md) + [taxonomy.md](taxonomy.md) — object ownership and hierarchy.
+3. [Final Insight Acceptance Contract](final-insight-acceptance-contract.md) — ten final questions, scientific closure and decision gates.
+4. [Ten-Question Live Ledger](final-insight-question-ledger.tsv) — current answer, confidence/status, evidence pointer and remaining action.
+5. [Academic Collaboration Card Template](../reports/collaboration-opportunities/decision-card-template.md) — partner-level management output format.
+6. [paper-deep-read-coverage.md](paper-deep-read-coverage.md) — current canonical Paper deep-read coverage and decision-sensitive queue (always verify denominator in STATUS.md; latest 37/60).
+7. [Phase-1 Management Table](../views/russia-vs-china/phase1-management.md) — strategic / reserve / Watch / Hold portfolio.
+8. [Kill / Downgrade Ledger](../07-decisions/kill-ledger.md) — theses that must not silently reappear.
+9. [charter.md](charter.md) — project goal and scope.
+10. [methodology.md](methodology.md) — evidence and decision method.
+11. [architecture.md](architecture.md) + [taxonomy.md](taxonomy.md) — object ownership and hierarchy.
 
 ## Resume rule
 
 Do not restart research from scratch.
 
 Before doing new research:
+- identify which Q01–Q10 acceptance gap the round will close; avoid bibliography for its own sake;
 - read current Direction(s);
 - inspect linked Claims/Sources;
 - preserve explicit China/global comparator pressure;
