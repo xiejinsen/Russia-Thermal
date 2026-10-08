@@ -1,9 +1,11 @@
 name: Web Data Check
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
+      - "00-project/**"
       - "01-evidence/**"
       - "02-claims/**"
       - "03-actors/**"
@@ -17,6 +19,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "00-project/**"
       - "01-evidence/**"
       - "02-claims/**"
       - "03-actors/**"
