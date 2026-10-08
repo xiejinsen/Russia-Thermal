@@ -31,9 +31,9 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 26/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MSU_PROFILE_ADDED / CI_VERIFIED
+institution_atlas_profile_status: 28/28 DISTINCT_RECOVERED_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / HSE_SPBU_PROFILE_ADDED / CI_RERUN_PENDING / NOT_NATIONAL_COMPLETENESS
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PASS / DISTINCT_26_28_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37817988788
+russia_atlas_audit_status: PRIOR_26_28_PASS / HSE_SPBU_EXPECTED_28_28 / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
@@ -45,15 +45,15 @@ web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/ru
 web_ui_ci: SUCCESS
 web_production_deploy_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37787614367
 web_production_browser_live_check: NOT_INDEPENDENTLY_VERIFIED
-russia_atlas_unprofiled_owners: 2
-output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / KUT_2025_41_RAW_ONLY_TOPIC_SCREEN_COMPLETE_24_DUAL_NEGATIVE_SAMPLE / MPEI_2024_2025_12_IDENTITY_STAGING / ALL_YEARLY_TOTALS_NOT_MEASURED
+russia_atlas_unprofiled_owners: 0
+output_measurement_status: THREE_ACTOR_FEASIBILITY_PILOT_COMPLETE / KUT_2025_41_RAW_ONLY_24_NEG_SAMPLE / NINE_HIGH_VALUE_2024_2026_DOI_YEAR_IDENTITY_ROWS / MPEI_THESIS_SEPARATED / ALL_YEARLY_TOTALS_NOT_MEASURED
 output_measurement_contract: 00-project/output-measurement-contract.md
 output_measurement_pilot: analysis/output-measurement/pilot-v1/README.md
 output_measurement_sample_records: 11 / EXAMPLES_ONLY / CI_VALIDATED
 academic_research_priority: 25/30 DISTINCT_ROOT_ACTORS PRIMARY_ACADEMIC / 1 SELECTIVE_APPLIED / 4 CONTEXT_ONLY_INDUSTRY / OLD_ICM_ALIAS_NOT_A_ROOT
 academic_research_contract: 00-project/academic-first-research-contract.md
 academic_research_routing: 00-project/russia-root-actor-research-routing.tsv
-academic_profile_current_coverage: 22/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / MSU_PROFILE_ADDED / CORPUS_SPECIFIC
+academic_profile_current_coverage: 24/25 DISTINCT_PRIMARY_ACADEMIC_RU_ROOT_ACTORS / HSE_SPBU_ADDED / CORPUS_SPECIFIC
 academic_doi_seed_examples: 4 / NOT_CANONICAL / PRIMARY_PUBLISHER_VERIFIED
 academic_catalog_probe: KUT_2021-2025=85/85 OFFICIAL_ARTICLE_PAGES_RETRIEVED / INSTITUTION_SITE_BIBLIOGRAPHY_ITSELF_INCOMPLETE
 academic_catalog_extractor: tools/itp_catalog_extract.py
@@ -135,6 +135,15 @@ q04_kut_2025_raw_41_title_screen: COMPLETE_41_OF_41 / 2_DIRECT_P1_10_TRANSFERABL
 q04_kut_2025_negative_24: LCG_SEED_20261008 / 24_OF_194_DUAL_NEGATIVE / 5_TRANSFERABLE_OR_ENABLING_TITLE_LEADS / 170_REMAINING / NO_UNBIASED_RECALL_CI
 q04_kut_2025_screen_report: analysis/output-measurement/pilot-v1/kutateladze-2025-expanded-topic-screen-2026-10-08.md
 q04_kut_2025_screen_ledger: analysis/output-measurement/pilot-v1/kutateladze-2025-raw-only-41-and-dual-negative-24-topic-screen.tsv
+academic_hse_atlas_profile: 03-actors/organizations/ACT-HSE/atlas-profile.md
+academic_hse_team_report: analysis/academic-team-mapping/hse-electrothermal-academic-profile-2026-10-08.md
+academic_spbu_atlas_profile: 03-actors/organizations/ACT-SPBU/atlas-profile.md
+academic_spbu_team_report: analysis/academic-team-mapping/spbu-dvfs-detector-thermal-academic-profile-2026-10-08.md
+academic_hse_spbu_group_guard: HSE_EDU_RESEARCH_LAB_KHARITONOV_NOT_DIRECTOR / SPBU_GRANICHIN_STOCHASTIC_LAB_DISTINCT_DETECTOR_HEP_DEPARTMENT / RU2825727_AND_RU2834604_PUBLICATIONS_FAMILY_UNMEASURED
+academic_2025_kut_selected_doi_report: analysis/output-measurement/pilot-v1/kutateladze-high-signal-original-doi-and-year-gates-2026-10-08.md
+academic_2025_kut_selected_doi_ledger: analysis/output-measurement/pilot-v1/kutateladze-2025-high-signal-publisher-identity-round.tsv
+academic_2025_kut_doi_caveats: YBCO_AVTOMETRIYA_2025_2026_EN_SAME_WORK / 2025_HFE_2024_IJTS_DIFFERENT_PAPERS / 2026_IJMF_ISSUE_NOT_2025 / 2024_MPEI_THESIS_NOT_PAPER
+final_insight_q01_root_catalog_coverage: 28_OF_28_RECOVERED_OWNER_ROOTS / INSTITUTION_DISCOVERY_OUTSIDE_RECOVERED_GRAPH_OPEN / TEN_Q01_NOT_CLOSED
 round_closure_goal_regression: REQUIRED
 round_closure_goal_regression_control: 00-project/round-closure-goal-regression.md
 web_copy_audit: analysis/web-final-copy-audit_2026_10_07.md
@@ -143,7 +152,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: MSU Q01/Q02 Atlas and Kutataladze Q04 2025 title-screen validated on main Actions run 37817988788: 26/28 distinct Russia capability-owner profiles, 22/25 priority academic profiles, 34/34 platform transfer, source dedup+graph PASS, one legacy NSU key-person warning. MSU Institute of Mechanics Levashov gas kinetics vs separate CMC Faculty Lebedev CFD/HMT head verified, 2024 RU/English 2025 related version identities still cautious; no mobile device. Kut 2025 41/41 RAW_ONLY titles screened (2 direct, 10 transferable, 3 enabling, 2 reviews, 3 other-platform, 11 broad, 10 out-of-scope), plus seeded 24/194 BOTH_NEGATIVE titles with five transfer/enabling signals. Remaining 170 both-negative titles and incomplete first-party website plus cross-index DOI/lab-affiliation audit block any yearly institute paper/patent totals. Next HSE/SPbU Atlas, high-value original DOI of Kut #46/#97/#106/#137/#164/#197 and version #196/#262, complete MPEI team output sets; no outreach, no device tests. Existing P1/P2/TPU directions frozen.
+next_action: HSE/SPbU final recovered Russia CAP-owner root Atlas profiles created, expected 28/28 distinct recovered owner profiles and 24/25 priority academic institution profiles pending CI. HSE first-party educational+research MIEM lab Petrosyants/Kharitonov 2023 COMSOL/SPICE/ASONIKA PCB original, 2024–25 educational projects NOT paper outputs; SPbU Granichin official stochastic lab 2023 smartphone energy-only DVFS, independent high-energy physics department Feofilov 2024/25 carbon-fleece detector cooling patent publications family link NOT_VERIFIED. Q04 high-signal Kut DOI identity round: 2025 YBCO Russian plus 2026 English translation coaffiliated Kut/Rzhanov/Skoltech; 2025 HFE droplet original distinct from 2024 HFE journal original, 2026 IJMF issue even with 2025 DOI; MPEI 2024 Ivanov thesis not 2024 peer-reviewed paper. All 2021–25 full relevant institute annual paper/patent family totals NOT_MEASURED; 170 dual-negative titles and external recall remain. Next Q01 outside current 28-root institution/lab discovery, Q04 comparable full-year DOI corpus and patent-family census, and Q08/Q09 concrete Russia-vs-domestic incremental P1/P2 partner gates; no contact/device testing, P1/P2/TPU frozen.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
