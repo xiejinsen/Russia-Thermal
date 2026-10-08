@@ -697,6 +697,16 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     return errors
 
 
+def load_representative_works() -> list[dict[str, Any]]:
+    """Validated editorial links; candidates retain null source IDs."""
+    import sys
+    tool_dir = str(ROOT / "tools")
+    if tool_dir not in sys.path:
+        sys.path.insert(0, tool_dir)
+    from representative_works import checked_records
+    return checked_records()
+
+
 def build_datasets() -> dict[str, list[dict[str, Any]]]:
     v2repo = load_v2repo()
     db = v2repo.load_all()
@@ -712,6 +722,7 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
         "actors": [actor_record(o, profiles.get(o["id"]), routes.get(root_actor_id(o, actor_lookup))) for o in db["actor"]],
         "evidence": [evidence_record(o, roles["sources"].get(o["id"])) for o in db["source"]],
         "deepReads": load_deep_reads(),
+        "representativeWorks": load_representative_works(),
         "claims": [claim_record(o, roles["claims"].get(o["id"])) for o in db["claim"]],
         "capabilities": [capability_record(o, roles["capabilities"].get(o["id"])) for o in db["capability"]],
         "directions": [direction_record(o) for o in db["direction"]],
