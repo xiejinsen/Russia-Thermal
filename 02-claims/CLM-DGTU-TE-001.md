@@ -9,6 +9,8 @@ Dagestan State Technical University currently maintains an experimentally demons
 
 supporting_sources:
 - PAPER-RU-DGTU-TE-001
+- PAPER-RU-DGTU-TE-002
+- PAPER-RU-DGTU-TE-003
 - OFFICIAL-RSCF-DGTU-TE-001
 
 Boundary:
