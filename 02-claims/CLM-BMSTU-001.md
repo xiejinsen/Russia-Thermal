@@ -8,6 +8,7 @@ Proposition:
 Bauman MSTU / Nikolay Zubkov has a current manufacturing-oriented heat-transfer line in deformational cutting that extends into copper heat-pipe wick / capillary-porous structures and compact heat-transfer surfaces.
 
 supporting_sources:
+- PAPER-RU-BMSTU-WICK-001
 - OFFICIAL-BMSTU-ZUBKOV-2025
 - OFFICIAL-BMSTU-ZUBKOV-PROFILE-001
 
