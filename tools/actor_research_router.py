@@ -19,7 +19,7 @@ def main():
     ru_roots = {x["id"]: x for x in db["actor"] if
                 x.get("country") == "RU"
                 and x.get("actor_type") in {"ORGANIZATION", "COMPANY"}
-                and not x.get("parent_actor_id")}
+                and x.get("parent_actor_id") in {None, "", "null"}}
     with ROUTING.open(encoding="utf-8", newline="") as f:
         entries = list(csv.DictReader(f, delimiter="\t"))
     by_id = {x["actor_id"]: x for x in entries}
