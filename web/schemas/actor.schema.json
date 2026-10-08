@@ -99,6 +99,73 @@
         "string",
         "null"
       ]
+    },
+    "atlasProfile": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "state",
+        "assessedAt",
+        "leadershipSummary",
+        "collaborationSummary",
+        "influenceSummary",
+        "outputInterpretation",
+        "contextSourceIds",
+        "collaborationSourceIds",
+        "influenceSourceIds",
+        "publicGaps",
+        "sourcePath"
+      ],
+      "properties": {
+        "state": {
+          "type": "string"
+        },
+        "assessedAt": {
+          "type": "string"
+        },
+        "leadershipSummary": {
+          "type": "string"
+        },
+        "collaborationSummary": {
+          "type": "string"
+        },
+        "influenceSummary": {
+          "type": "string"
+        },
+        "outputInterpretation": {
+          "type": "string"
+        },
+        "contextSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "collaborationSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "influenceSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "publicGaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourcePath": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
