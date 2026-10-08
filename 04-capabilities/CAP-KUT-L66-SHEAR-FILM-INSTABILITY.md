@@ -10,6 +10,11 @@ maturity: RESEARCH_ASSET
 evidence_confidence: HIGH
 target_fit: ADJACENT
 assessed_at: 2026-10-05
+platform_transfer:
+- SMARTPHONE=FOUNDATIONAL
+- TABLET=FOUNDATIONAL
+- COMPACT_ELECTRONICS=ADJACENT
+- ADJACENT_ELECTRONICS=TRANSFERABLE
 capability_family: ENABLING
 capability_topics:
 - BOILING_DRYOUT_PHYSICS
