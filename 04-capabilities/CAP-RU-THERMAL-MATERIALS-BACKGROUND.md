@@ -20,7 +20,7 @@ capability_topics:
 - MATERIAL_CHARACTERIZATION
 
 Capability statement:
-Skoltech has two separately evidenced functional-material academic lines: Evlashin-led **additively printed polymer–BN** radiator composites (*Polymers* 2023, DOI 10.3390/polym15051214) and Abaimov-supervised Owais **BN/PVA aerogel and rGO/PVA flexible-film** thermal composite studies (2022 DOI 10.3390/polym14163316, 2024 DOI 10.1002/vnl.22130). Current Skoltech centers/labs and 2021–25 author affiliations require year-specific attribution; do not confuse one materials method with a proven phone heat spreader or functional TIM package.
+Skoltech has two separately evidenced functional-material academic lines. The Evlashin-led **additively printed polymer–BN** radiator composites (*Polymers* 2023, DOI 10.3390/polym15051214) and Abaimov-supervised Owais **BN/PVA aerogel and rGO/PVA flexible-film** thermal composite studies (2022 DOI 10.3390/polym14163316, 2024 DOI 10.1002/vnl.22130). Current Skoltech centers/labs and 2021–25 author affiliations require year-specific attribution; do not confuse one materials method with a proven phone heat spreader or functional TIM package.
 
 evidence_claims:
 - CLM-MAT-001
