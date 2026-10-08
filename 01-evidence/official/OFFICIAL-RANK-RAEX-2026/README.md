@@ -12,6 +12,7 @@ RAEX-100 Best Universities in Russia, 2026.
 Direct facts:
 - National Research Tomsk Polytechnic University: #13 overall in Russia.
 - National Research University MPEI: #24 overall in Russia.
+- Ural Federal University: #12 overall in Russia.
 - Bauman Moscow State Technical University: #2 overall in Russia.
 - ITMO University: #15 overall in Russia.
 - Ufa University of Science and Technology: #100 overall in Russia.
