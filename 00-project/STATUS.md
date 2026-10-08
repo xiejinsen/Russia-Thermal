@@ -31,15 +31,15 @@ russia_capability_family_baseline: 31/31 CLASSIFIED
 russia_capability_family_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=3 / ENABLING=16 / SOFTWARE_SYSTEM=1
 russia_capability_atlas_current_count: 34
 russia_capability_family_current_counts: PASSIVE_HARDWARE=11 / ACTIVE_HARDWARE=6 / ENABLING=16 / SOFTWARE_SYSTEM=1
-institution_atlas_profile_status: 26/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MSU_PROFILE_ADDED / CI_RERUN_PENDING
+institution_atlas_profile_status: 26/28 DISTINCT_RUSSIA_CAPABILITY_OWNER_INSTITUTIONS / MSU_PROFILE_ADDED / CI_VERIFIED
 institution_atlas_profile_contract: 00-project/institution-atlas-profile-contract.md
-russia_atlas_audit_status: PRIOR_25_28_PASS / MSU_26_28_EXPECTED / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / CI_RERUN_PENDING
+russia_atlas_audit_status: PASS / DISTINCT_26_28_OWNERS / 34_34_TRANSFER / 2_KEY_PERSON_GAPS / RUN_37817988788
 russia_atlas_audit_control: tools/atlas_coverage_audit.py
 russia_atlas_audit_report: analysis/russia-atlas-coverage-audit_2026_10_08.md
 russia_atlas_key_person_gaps: 2
-repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37815857837
-repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_25_OF_28_ATLAS / 34_34_TRANSFER / Q04_2025_KEYWORD_67_VS_35_RECONCILIATION_NOT_CENSUS
-web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37815857676
+repo_health_ci_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37817988788
+repo_health_review: 2026-10-08 / CANONICAL_V2_PASS / SOURCE_DEDUP_CLEAN / GRAPH_PASS_ONE_NSU_WARNING / DISTINCT_26_OF_28_ATLAS / 34_34_TRANSFER / KUT_41_RAW_ONLY_TITLE_SCREEN_24_NEGATIVE_SAMPLE_NOT_CENSUS
+web_data_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37817988871
 web_data_ci: SUCCESS_AFTER_INTERMEDIATE_INDEX_STALENESS_REPAIRED
 web_ui_last_verified_run: https://github.com/xiejinsen/Russia-Thermal/actions/runs/37789798654
 web_ui_ci: SUCCESS
@@ -143,7 +143,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Q04 Kutataladze 2025 raw keyword-only 41/41 titles screened with high-level exclusions and phone relevance; 24 seeded of 194 dual-negative titles screened, incl #106 HFE-7100 droplet and #197 stratified/annular transition missed by BOTH title queues. This is not complete paper/DOI/affiliation census: 170 dual-negative unreviewed, original official bibliography incomplete, 2021-25 yearly institute-output/patent totals remain NULL. MSU Atlas created with two DISTINCT academic labs: Levashov Institute of Mechanics gas-kinetic evaporation vs Lebedev CMC Faculty numerical HMT; 2024 RU-English related original and 2025 review typed, no phone device. Expected 26/28 distinct Russian owner profiles and 22/25 prioritized academic profiles, current GitHub CI rerun pending; 34 CAPs unchanged. Next HSE/SPbU verified academic Atlas and original publisher DOI checks for #46 #97 #106 #137 #164 #197 / #196 #262; full MPEI 2024-25 team outputs. P1/P2/TPU unchanged, no outreach/experiments.
+next_action: MSU Q01/Q02 Atlas and Kutataladze Q04 2025 title-screen validated on main Actions run 37817988788: 26/28 distinct Russia capability-owner profiles, 22/25 priority academic profiles, 34/34 platform transfer, source dedup+graph PASS, one legacy NSU key-person warning. MSU Institute of Mechanics Levashov gas kinetics vs separate CMC Faculty Lebedev CFD/HMT head verified, 2024 RU/English 2025 related version identities still cautious; no mobile device. Kut 2025 41/41 RAW_ONLY titles screened (2 direct, 10 transferable, 3 enabling, 2 reviews, 3 other-platform, 11 broad, 10 out-of-scope), plus seeded 24/194 BOTH_NEGATIVE titles with five transfer/enabling signals. Remaining 170 both-negative titles and incomplete first-party website plus cross-index DOI/lab-affiliation audit block any yearly institute paper/patent totals. Next HSE/SPbU Atlas, high-value original DOI of Kut #46/#97/#106/#137/#164/#197 and version #196/#262, complete MPEI team output sets; no outreach, no device tests. Existing P1/P2/TPU directions frozen.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
