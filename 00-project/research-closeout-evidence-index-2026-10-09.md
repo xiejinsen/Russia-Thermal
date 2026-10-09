@@ -39,6 +39,10 @@ authority: original Sources / Claims / Actor / Capability / Direction / Decision
 - Original paper's **Dmitry A. Nesterov** must not silently merge with current official **Denis A. Nesterov**. Paper authorship does not establish current position. ICM engineering and analytical modeling lines are separate teams within one institute.
 - [TPU/Frumkin 2026 microchip-cooling lead](../analysis/coverage/russia-academic-anti-omission-refresh-2026-10-09.md): primary institution reports exist, **publisher paper identity already resolved as IJHMT 260 (2026) 128413, DOI 10.1016/j.ijheatmasstransfer.2026.128413 (see academic-team-mapping/tpu-frumkin-2026-original-paper-identity-gate.md); exact per-author affiliations and full methods remain bounded verification gaps**. No conversion of temperature-change ratios into smartphone product benefit.
 
+## Decision-critical China / global counterfactual (WP2)
+
+See [bounded P1/P2 China-first and global comparator audit](../analysis/audits/research-closeout-wp2-china-global-counterfactual-2026-10-09.md). It rejects across-rig numerical rankings, preserves P1 as a data/diagnostic feasibility thesis and P2 as calendar-aging reserve, and accepts nonpublic rights/internal baselines as future conditions rather than missing public-research sources.
+
 ## Research closure checklist — WP1 evidence integrity
 
 | Check | Status | Strict interpretation |
