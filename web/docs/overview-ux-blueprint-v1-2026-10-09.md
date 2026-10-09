@@ -148,3 +148,16 @@ All partner data access, willingness, IP arrangements, internal personnel cost a
 ### Editorial and interaction rules
 
 Each major English headline has a concise Chinese subtitle. Keep original paper titles, author names, DOI and technical language in English. No 10 cards for ten questions, no five equal rectangles and no invented heat maps. Distinct visual grammars by content: institution browser, readable evidence table, asymmetric research prose, counterfactual table, ranked decision directory. Critical claims must reveal original paper, author and phone transfer limitation within one or two clicks. Real desktop and mobile review required before shipping implementation.
+
+
+## Integrated design v2 — Figma handoff (2026-10-09)
+
+Five-chapter, Q01–Q10-complete design composition is now in the existing editable Figma file:
+- [Desktop Integrated Overview v2 — 1440px](https://www.figma.com/design/NAPiueDASYJpYLiiOyYBer?node-id=11-2): English scientific lead + Chinese executive conclusion, bounded institution & scholar landscape, China/global comparison and phone transfer, future unsolved research, build-vs-partner collaboration test, P1/P2/HOLD decision.
+- [Mobile Integrated Overview v2 — 390px](https://www.figma.com/design/NAPiueDASYJpYLiiOyYBer?node-id=11-121): readable stacked institution index and claim boundary, compact scientific notes and collaboration gates.
+
+Status: **FIGMA_EDITABLE_COMPOSITION_COMPLETE / DESKTOP_PREVIEW_RENDERED / MOBILE_VISUAL_QA_BLOCKED_BY_FIGMA_STARTER_RATE_LIMIT**. 118 desktop and 59 mobile editable layers were created. Desktop screenshot request succeeded; mobile screenshot request hit plan call quota. No claim of final visual QA, responsive interactivity, accessibility pass, or Astro code implementation. The 2026-10-09 code release is earlier editorial v1, **not** the Figma Integrated v2. Do not confuse those versions.
+
+Critical scientific boundaries: known-corpus-only institution counts, publication-time affiliation verification still partial, no alleged mobile prototype validation, KAIST comparator globally Korean, no assumed data/IP rights. This design adds navigational logic, not a new science decision.
+
+Next gate: visually inspect both frames on Figma via supplied URLs; correct legibility and language treatment, then implement v2 in Astro only after acceptance. Figma API tool rate limit may prevent immediate further remote editing, but manual review link remains available.
