@@ -181,3 +181,11 @@ Legacy V1 files remain for provenance/history and must not override canonical V2
 - [Current key Q09-to-canonical evidence trace](../analysis/audits/q09-evidence-trace-repair-2026-10-09.md) and [archive audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md) cover a bounded review, not full file-tree link closure.
 - **Fresh CI gate remains OPEN:** verify `python tools/v2repo.py --check`, `tools/graph_audit.py`, `tools/atlas_coverage_audit.py`, source-dedup and current web/export tests at a recorded actual SHA; record outcome and any warnings. Until then, do not label newest revision as full PASS.
 - The Phase1 P1 primary / MPEI conditional reserve / TPU HOLD decisions remain authoritative. New Q09 methods cards are derived hypothetical research packages, not new approvals.
+
+
+## Overview leadership redesign — 2026-10-09
+
+- [Homepage source](../web/src/pages/index.astro) redesigned to prioritize scientific conclusion -> Russia/China complementary value -> three bounded partner choices -> 2027–29 research outlook -> evidence and leadership decision, rather than broad raw matrix/counter UI.
+- [Header](../web/src/components/SiteHeader.astro) compacted for screen-sharing readability and navigation.
+- [Design / scientific copy handoff](../analysis/web-overview-leadership-redesign-2026-10-09.md) records source changes and screenshot/build/deployment gates.
+- **Reportability:** public-evidence-based leadership *discussion ready, conditional*. **Website publication verification:** NOT VERIFIED after redesign; no `astro build`, live responsive inspection or fresh Actions success observed. Do not present historic web CI as current.
