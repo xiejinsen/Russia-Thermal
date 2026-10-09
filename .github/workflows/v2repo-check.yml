@@ -18,6 +18,9 @@ jobs:
           python-version: "3.12"
       - name: Check canonical references and generated views
         run: python tools/v2repo.py --check
+      - name: Audit Markdown local references (baseline, non-blocking)
+        continue-on-error: true
+        run: python tools/check_local_links.py
       - name: Scan source dedup candidates
         run: python tools/source_dedup.py --scan
       - name: Audit decision graph and evidence chains
