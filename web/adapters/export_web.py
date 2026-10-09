@@ -622,6 +622,32 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             if actor and actor["type"] != "PERSON":
                 errors.append(f"{capability['id']}: keyPeopleId {person_id} is not a PERSON")
 
+    # Whole-graph structural invariants. Current personnel affiliations and
+    # publication authorship remain distinct; no same-parent assumption here.
+    for actor in datasets["actors"]:
+        parent = actor_by_id.get(actor.get("parentId"))
+        if parent and parent["type"] == "PERSON":
+            errors.append(f"{actor['id']}: parentId cannot refer to a PERSON")
+        visited = {actor["id"]}
+        current = actor
+        while current.get("parentId") in actor_by_id:
+            next_id = current["parentId"]
+            if next_id in visited:
+                errors.append(f"{actor['id']}: cyclic actor parent hierarchy")
+                break
+            visited.add(next_id)
+            current = actor_by_id[next_id]
+
+    for capability in datasets["capabilities"]:
+        owner = actor_by_id.get(capability["actorId"])
+        if owner and owner["type"] == "PERSON":
+            errors.append(f"{capability['id']}: capability owner cannot be PERSON")
+        if len(capability["keyPeopleIds"]) != len(set(capability["keyPeopleIds"])):
+            errors.append(f"{capability['id']}: duplicated keyPeopleIds")
+        for person_id in capability["keyPeopleIds"]:
+            if person_id == capability["actorId"]:
+                errors.append(f"{capability['id']}: self-linked capability key person")
+
     # The lab roster names V. E. Zhukov, while PERSON-ZHUKOV is paper author
     # V. I. Zhukov, with institute-level rather than current Lab 1.3 affiliation.
     lab_dryout = capability_by_id.get("CAP-KUT-L13-DRYOUT-DIAGNOSTICS")
