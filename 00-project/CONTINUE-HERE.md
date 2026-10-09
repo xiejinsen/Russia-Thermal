@@ -2,6 +2,10 @@
 
 Use this file when resuming the project in a new chat/window.
 
+## Current research-only closeout (2026-10-09)
+
+Start with the [curated closeout evidence index](research-closeout-evidence-index-2026-10-09.md) and [WP1–WP5 work plan](research-closeout-workplan-2026-10-09.md). Q01–Q10 research acceptance is currently prioritized over web/PPT; dated website checks are not scientific evidence gates. The index resolves recent academic partner comparison, Q09 tasks, 2026 TPU–Frumkin lead, identity cautions and accepted public-data limits. Do not treat derived reports as new canonical portfolio decisions.
+
 ## Read in this order
 
 1. [STATUS.md](STATUS.md) — authority, research mode, current phase and next action.
