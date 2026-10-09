@@ -40,3 +40,10 @@ Do not change Phase1 P1 Primary / MPEI Conditional Reserve / TPU HOLD. Do not ma
 - On an actual repository checkout, run `python tools/check_local_links.py`. This checks existing local Markdown link paths, ignores remote URLs/anchors/code fences and reports file/line for absent paths. It **does not** validate remote DOI URLs or Markdown section anchors.
 - This is an added inspection tool, **NOT an execution result**: no full-tree PASS can be claimed until its output on the actual HEAD is recorded.
 - GitHub Actions and `v2repo.py --check` / graph / atlas remain separately unverified on the newest commit.
+
+
+## Link checker wired to GitHub Actions — 2026-10-09
+
+- [V2.1 Repository Health](../../.github/workflows/v2repo-check.yml) now invokes `python tools/check_local_links.py` on push/PR to main (commit `140eb6ae16e779a57fefe88ddf8d6761479ec963`).
+- It uses `continue-on-error: true` **temporarily** to establish the repository's existing broken-link baseline without blocking the previously enforced graph/source audit. A green workflow under this setting **does not** mean Markdown links passed; the step log/result needs review.
+- External Actions web is inaccessible in the current tool session, and container git clone fails due to DNS; no post-change run is independently verified. Follow-up: capture link step errors, repair legitimate live references, classify intentionally historical links, then remove `continue-on-error` to make it an actual release gate.
