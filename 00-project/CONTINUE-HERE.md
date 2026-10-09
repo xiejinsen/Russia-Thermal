@@ -45,3 +45,9 @@ The organization hierarchy comes first so capability ownership stays unambiguous
 Historical V1 round notes can be used for provenance and fidelity checks, but they should not be required to know current V2.1 truth.
 
 V2.1 on main is now authoritative. Always trust [STATUS.md](STATUS.md) for the current authority state.
+
+## Latest integrated-research handoff (2026-10-09)
+
+Before restarting individual institute literature searches, use the [current research archive map](../analysis/research-archive-index-2026-10-09.md). It points to the [latest Russian academic partner comparison](../reports/russia-academic-partner-comparison-2026-10-09.md), [Q09 conditional academic task portfolio](../reports/collaboration-opportunities/academic-q09-feasibility-portfolio-2026-10-09.md), and [final-insight/archive audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md).
+
+**Freshness caveat:** the 2026-10-07 graph PASS and the CI run recorded in 2026-10-08 STATUS predate new 2026-10-09 analysis/reports. Do not describe them as a current HEAD full-tree/CI result. Canonical Phase1 P1 Primary / P2 Conditional Reserve / TPU HOLD remains unchanged. Current audit found no basis for unauthorized collaboration, phone prototype assertion or automatic research-source promotion.
