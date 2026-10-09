@@ -1,5 +1,14 @@
 # V2.1 STATUS
 
+## 2026-10-09 research closeout authority (latest; takes precedence over older progress snapshots)
+
+- Q01–Q10 **all accepted at bounded public-evidence decision-support level**, 3 direct and 7 with explicit disclosed limitations. This does not assert complete national institutional coverage, phone test validation, partner willingness, data/IP rights or research export/test PASS.
+- [WP3 decision matrix](../analysis/audits/research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md), [Q02/Q04 identity and publication exceptions](../analysis/audits/research-closeout-wp3-q02-q04-exception-disposition-2026-10-09.md) and [final WP4 research synthesis](../reports/final-research-insight-and-collaboration-decision-2026-10-09.md) are current decision-support summaries; the [Phase-1 brief](../reports/leadership-decision-brief.md) and canonical decisions retain strategic authority.
+- Historical `q04_*_IN_PROGRESS`, `q01_*_NOT_CLOSED`, `graph_audit_status` and `repo_health_ci_verified_run` fields below describe **earlier snapshots or workstream/source gaps**, not the current research-level question acceptance or fresh HEAD verification. Preserve this distinction until a versioned status schema replaces historical fields.
+- Investment conclusion unchanged: P1 Kutateladze mechanism labels = feasibility hypothesis; P2 MPEI calendar-aging = conditional reserve; TPU wettability = HOLD; methods watch = not independently authorized investment.
+- **Full repository mechanical verification remains OPEN** until a reproducible current-SHA run of canonical generators, graph/atlas/source de-duplication checks and link checks is recorded. No web implementation or slide work is part of this acceptance.
+
+
 record_state: CURRENT
 authority: AUTHORITATIVE_V2_1_MAIN
 baseline_branch: main
@@ -20,10 +29,10 @@ graph_audit_control: tools/graph_audit.py
 graph_audit_report: analysis/graph-evidence-chain-audit_2026_10_07.md
 semantic_orphan_sources: 0
 semantic_orphan_claims: 0
-current_phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
+current_phase: PUBLIC_EVIDENCE_RESEARCH_CLOSEOUT_Q01_Q10_ACCEPTED_WITH_LIMITATIONS / PHASE1_FROZEN / PRE_PPT_ARCHIVE_QA
 detail_page_design_status: CORE_DETAIL_FUNCTIONAL_CLOSED
 leadership_overview_status: CURRENT_PORTFOLIO_ALIGNED
-leadership_deliverable_status: PHASE1_DECISION_BRIEF_CLOSED
+leadership_deliverable_status: WP4_FINAL_RESEARCH_INSIGHT_DRAFT_COMPLETE / WP5_ARCHIVE_QA_IN_PROGRESS / PHASE1_FROZEN
 web_copy_status: FINAL_COPY_PASS_CLOSED
 web_usability_status: USER_FEEDBACK_PASS_1_CLOSED
 web_atlas_architecture_status: TAXONOMY_FROZEN / INSTITUTION_PROFILE_BATCH3_FUNCTIONAL / DATA_ENRICHMENT_ACTIVE
@@ -167,7 +176,7 @@ collaboration_package_status: PRIMARY_RESERVE_HOLD_PACKAGES_CLOSED
 outreach_readiness_status: P1_P2_INTERNAL_PREP_COMPLETE / NO_CONTACT_EXECUTED
 outreach_readiness_review: PROVISIONALLY_ACCEPTED_BY_USER / EXTERNAL_OUTREACH_NOT_AUTHORIZED
 detail_page_pilots: ACT-KUT-LAB13; DIR-FAILURE-AWARE-UTVC; PERSON-PAVLENKO; PAPER-RU-DRY-002; PATENT-RU2860581C1
-next_action: Governance health refresh before Q08: representative-first Q04 adopted; P1 Kutateladze and P2 MPEI joint representative audit bounded pass with unresolved independent omission/contrary check. Known primary academic root Atlas 25/25, known capability-owner Atlas 28/28; neither proves nationwide Russia completeness. Q01 outside-corpus institution recall and NSU person ownership remain open. Prioritize verifying current main CI and generated views, then pilot compact representative-work link modules for P1/P2 without duplicating Source/Claim; proceed to Q08 internal/China build-versus-Russia counterfactual. Annual publication census optional and not a Q04 gate. Existing P1/P2/TPU decisions frozen; no contact or physical tests.
+next_action: Finish WP5 research-only repository reconciliation and traceability checks; prepare PPT evidence handoff only after recording unresolved mechanical full-tree validation as OPEN. No new broad research, Q08 repetition, or website/PPT implementation in this phase.
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
