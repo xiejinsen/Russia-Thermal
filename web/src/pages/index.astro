@@ -43,6 +43,30 @@ const comparisons = [
       </div>
     </header>
 
+    <section class="landscape-index" aria-labelledby="landscape-index-title">
+      <div class="section-intro">
+        <p class="eyebrow">RESEARCH LANDSCAPE / INSTITUTIONS, PEOPLE & ORIGINAL WORKS</p>
+        <h2 id="landscape-index-title">Who is doing relevant thermal science?<span class="heading-cn" lang="zh-CN">俄罗斯科研版图：机构、关键学者和代表性能力</span></h2>
+        <p>A bounded index of groups connected to the current research portfolio, not an exhaustive census of Russian thermal institutes. Follow a named institution or scholar to inspect its original research.</p>
+      </div>
+      <div class="landscape-columns">
+        <aside class="landscape-context">
+          <strong>LANDSCAPE / SCOPE</strong>
+          <p><b>{vm.stats.capabilities}</b> capability records in the normalized research graph. Coverage is corpus-specific: these are not independently counted national capabilities or universally phone-qualified technologies.</p>
+          <a href={href('/research-map/russia')}>Explore verified Russian research locations →</a>
+          <a href={href('/research-coverage')}>How coverage was assessed →</a>
+        </aside>
+        <div class="actor-directory">
+          <div class="directory-labels"><span>INSTITUTION / RESEARCH ROLE</span><span>CANONICAL PROFILE</span></div>
+          {vm.institutions.slice(0,6).map(institution => <div class="actor-entry">
+            <div><a class="actor-name" href={href(institution.href)}>{institution.name}</a><p>{institution.capabilityCount} linked capability records in the active portfolio view</p></div>
+            <a href={href(institution.href)}>Profile ↗</a>
+          </div>)}
+          <p class="directory-hint">The active-portfolio index is selective. Browse the full <a href={href('/institutions')}>institution atlas</a>, <a href={href('/scholars')}>scholars</a> and <a href={href('/representative-works')}>representative original papers</a> for the wider research corpus.</p>
+        </div>
+      </div>
+    </section>
+
     <article class="featured" aria-labelledby="study-title">
       <div class="study-body">
         <p class="eyebrow">FEATURED RESEARCH / PHASE-1 PRIORITY</p>
@@ -94,6 +118,25 @@ const comparisons = [
       <a class="inline-link" href={href('/directions')}>Explore all research directions →</a>
     </section>
 
+    <section class="collaboration-value" aria-labelledby="collaboration-value-title">
+      <div class="section-intro">
+        <p class="eyebrow">COLLABORATION VALUE / BUILD-VS-PARTNER COUNTERFACTUAL</p>
+        <h2 id="collaboration-value-title">Why partner instead of building internally?<span class="heading-cn" lang="zh-CN">合作价值：俄罗斯能补充哪些国内尚未证明拥有的研究增量？</span></h2>
+        <p>A published method does not establish a collaboration advantage. Each hypothesis must beat the strongest Chinese/internal and independent global alternative on the same practical question.</p>
+      </div>
+      <div class="table-scroll" role="region" aria-label="Collaboration value counterfactual comparison" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Research thesis</th><th scope="col">Strong alternative</th><th scope="col">Incremental evidence required</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href={href('/partners')}>P1 · Kutateladze</a><p>Mechanism-resolved crisis-state labels</p></th><td>China phone dryout experiments, existing sensors, global wick-mode classification and segmentation.</td><td>Licensable repeatable experimental labels must change a held-out phone validation or protection decision; otherwise stop.</td></tr>
+            <tr><th scope="row"><a href={href('/partners')}>P2 · MPEI</a><p>Long-duration capillary degradation</p></th><td>Domestic oxidation grading, accelerated VC aging, and internal QA models.</td><td>Accessible chronological intermediate states, not just a 42-month post-operation endpoint; otherwise reserve.</td></tr>
+            <tr><th scope="row"><a href={href('/partners')}>TPU · HOLD</a><p>Surface engineering</p></th><td>Chinese laser-wick processing and mature handset integration capabilities.</td><td>Reopen only with a repeatable, phone-device-matched benefit that current alternatives do not offer.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="method-boundary"><strong>Unverified external conditions:</strong> collaborator willingness, licensed raw data, IP rights, internal cost or staffing counterfactual, and phone-scale predictive gain. This is a research screening recommendation, not authorization to engage.</p>
+    </section>
+
     <footer class="decision-footer">
       <p class="eyebrow">MANAGEMENT DECISION / EVIDENCE-LIMITED</p>
       <h2>Authorize a P1 feasibility inquiry — not product development?<span class="heading-cn" lang="zh-CN">建议决策：是否批准 P1 前期合作可行性接洽？</span></h2>
@@ -134,10 +177,25 @@ const comparisons = [
     .citation-limit{border-top:1px solid #bfd5e1;border-bottom:1px solid #bfd5e1;padding:16px 0;margin:24px 0}
     .citation-limit strong{font-size:12px;color:#236b99}
     .citation-limit p{font-size:14px;margin:5px 0}
-    .comparison,.directory,.outlook{padding:64px 45px;border-bottom:1px solid #d5e1e8}
+    .comparison,.directory,.outlook,.landscape-index,.collaboration-value{padding:64px 45px;border-bottom:1px solid #d5e1e8}
     .section-intro{max-width:990px;margin-bottom:32px}
     .section-intro h2{font-size:31px;line-height:1.34;letter-spacing:-.03em;margin:0 0 12px}
     .section-intro>p:last-child{font-size:16px;color:#526879;margin:0}
+    .landscape-columns{display:grid;grid-template-columns:minmax(240px,.75fr) minmax(0,1.8fr);gap:46px}
+    .landscape-context{border-left:3px solid #236b99;background:#e8f2f8;padding:24px;align-self:start}
+    .landscape-context strong,.directory-labels{font-size:12px;letter-spacing:.06em;color:#236b99;font-weight:800}
+    .landscape-context p{font-size:15px;line-height:1.8;color:#40596b}
+    .landscape-context b{font-size:25px;color:#142b40}
+    .landscape-context a{display:block;color:#236b99;margin-top:15px;text-decoration:none;font-weight:700;font-size:13px}
+    .directory-labels{display:flex;justify-content:space-between;padding-bottom:10px}
+    .actor-entry{display:flex;align-items:start;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid #d5e1e8}
+    .actor-name{font-size:16px;font-weight:750;color:#142b40;text-decoration:none}
+    .actor-entry p{font-size:13px;color:#526879;margin:5px 0}
+    .actor-entry>a{color:#236b99;font-size:13px;white-space:nowrap}
+    .directory-hint,.method-boundary{font-size:14px;line-height:1.75;color:#526879}
+    .directory-hint a{color:#236b99}
+    .method-boundary{background:#e8f2f8;padding:17px 21px;margin:24px 0 0}
+    .collaboration-value tbody th p{font-size:13px;font-weight:400;color:#526879;margin:6px 0}
     .table-scroll{overflow-x:auto}
     table{width:100%;border-collapse:collapse;min-width:810px;text-align:left}
     th,td{padding:21px 16px 21px 0;border-bottom:1px solid #d5e1e8;vertical-align:top}
@@ -164,7 +222,7 @@ const comparisons = [
     .decision-footer h2{font-size:30px;margin:0 0 20px;line-height:1.4}
     .decision-footer>p:not(.eyebrow){max-width:900px;font-size:17px}
     .footer-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;font-size:14px}
-    @media(max-width:1050px){.masthead-grid,.featured{gap:30px}.thread{grid-template-columns:1fr 1fr}.thread-link{grid-column:1/-1;justify-self:start}}
-    @media(max-width:760px){.masthead,.featured,.comparison,.directory,.outlook,.decision-footer{padding:36px 20px}.masthead-grid,.featured{grid-template-columns:1fr;gap:30px}.evidence-rail{border-left:0;background:#e8f2f8;padding:20px}.wide-only{display:none}h1{font-size:34px}.executive{font-size:18px}.technical-lead{font-size:16px}.study-body h2{font-size:27px}.study-body>p:not(.eyebrow){font-size:16px}.section-intro h2{font-size:26px}.thread{grid-template-columns:1fr;gap:12px}.thread-link{grid-column:auto}.notes{grid-template-columns:1fr;gap:22px}.citation{padding:20px}.decision-footer h2{font-size:26px}}
+    @media(max-width:1050px){.landscape-columns{gap:24px}.masthead-grid,.featured{gap:30px}.thread{grid-template-columns:1fr 1fr}.thread-link{grid-column:1/-1;justify-self:start}}
+    @media(max-width:760px){.landscape-columns{grid-template-columns:1fr;gap:20px}.directory-labels span:last-child{display:none}.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer{padding:36px 20px}.masthead-grid,.featured{grid-template-columns:1fr;gap:30px}.evidence-rail{border-left:0;background:#e8f2f8;padding:20px}.wide-only{display:none}h1{font-size:34px}.executive{font-size:18px}.technical-lead{font-size:16px}.study-body h2{font-size:27px}.study-body>p:not(.eyebrow){font-size:16px}.section-intro h2{font-size:26px}.thread{grid-template-columns:1fr;gap:12px}.thread-link{grid-column:auto}.notes{grid-template-columns:1fr;gap:22px}.citation{padding:20px}.decision-footer h2{font-size:26px}}
   </style>
 </BaseLayout>
