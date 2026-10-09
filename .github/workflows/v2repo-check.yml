@@ -18,6 +18,8 @@ jobs:
           python-version: "3.12"
       - name: Check canonical references and generated views
         run: python tools/v2repo.py --check
+      - name: Regression-test Markdown link checker
+        run: python -m unittest discover -s tools -p test_check_local_links.py
       - name: Audit Markdown local references (baseline, non-blocking)
         continue-on-error: true
         run: python tools/check_local_links.py
