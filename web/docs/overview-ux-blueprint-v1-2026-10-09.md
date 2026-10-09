@@ -108,3 +108,12 @@ This ends the story; no homepage-long list of every frontend route.
 **Functional**: production Astro build; valid route links; keyboard menu and focus visibility; mobile touch targets; no broken site reference; read-back actual current HEAD and CI logs.
 
 This spec is the prerequisite for revising the Figma concepts. Figma files are for critique and editable mockups, not authority for factual claims.
+
+
+## Implementation handoff — 2026-10-09
+
+The bilingual editorial Homepage was implemented in [web/src/pages/index.astro](../src/pages/index.astro) at commit `92e836f9891e895e35c7e11dc9fe44fb5e2008dd`, grounded in Figma Desktop frame `6:2` and Mobile frame `6:82`. Main modules: editorial thesis, Claim/Provenance sidebar (inline on mobile), original-paper featured study, comparison table, indexed academic partners, future research notes, management feasibility question.
+
+Code read-back confirms 3 section opening/closing pairs, evidence rail and mobile breakpoint present, 15 internal helper links authored. This is a **static source inspection only**, not an Astro TypeScript or visual rendering test.
+
+**Deployment acceptance OPEN**: combined commit status API returned no statuses for `92e836f`; current Actions run not inspected, `npm run check`/`npm run build`/`npm run check:links` not executed. Browser screenshot comparison with Figma and accessibility inspection at 1440/1024/390 remain required. The older Figma concepts are still comparison sketches, not alternative deployed branches. Any new scientific factual edit must be source checked before approval.
