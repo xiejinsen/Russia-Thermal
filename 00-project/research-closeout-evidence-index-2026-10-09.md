@@ -17,6 +17,11 @@ authority: original Sources / Claims / Actor / Capability / Direction / Decision
 8. [Scholarly attribution and identity](../analysis/audits/normalized-research-graph-identity-audit-2026-10-09.md) and [ICM two-track identity audit](../analysis/academic-team-mapping/icm-krasn-two-tracks-decision-audit-2026-10-09.md).
 9. [Final archive integrity audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md) — derivation freshness, publication-level caveats and unresolved metadata.
 
+## 领导汇报 PPT 前期设计（仅逻辑与证据）
+
+- [Gate 0：PPT 证据—决策契约](../reports/presentation/thermal-insight-ppt-gate0-evidence-contract-2026-10-09.md) — 把关键主张绑定到原始论文、比较基线、适用边界及准备使用的页面。
+- [Gate 1：15 页叙事与页间逻辑](../reports/presentation/thermal-insight-ppt-gate1-narrative-storyboard-2026-10-09.md) — 逐页结论、可视化意图、故事转场及待完成 Gate 2 设计要求；尚未生成 PPT。
+
 ## WP4 final research insight
 
 [Final research insight and collaboration decision report](../reports/final-research-insight-and-collaboration-decision-2026-10-09.md) — leadership-decision-oriented Q01–Q10 synthesis, original evidence, strongest China/global comparators, 2027–29 conditional research questions, P1/P2/TPU decisions and stop gates. Research interpretation only; WP5 archival acceptance remains separate.
