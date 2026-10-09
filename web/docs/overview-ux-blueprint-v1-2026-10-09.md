@@ -161,3 +161,14 @@ Status: **FIGMA_EDITABLE_COMPOSITION_COMPLETE / DESKTOP_PREVIEW_RENDERED / MOBIL
 Critical scientific boundaries: known-corpus-only institution counts, publication-time affiliation verification still partial, no alleged mobile prototype validation, KAIST comparator globally Korean, no assumed data/IP rights. This design adds navigational logic, not a new science decision.
 
 Next gate: visually inspect both frames on Figma via supplied URLs; correct legibility and language treatment, then implement v2 in Astro only after acceptance. Figma API tool rate limit may prevent immediate further remote editing, but manual review link remains available.
+
+
+## Integrated Overview v2 Astro implementation — 2026-10-09
+
+Commit `cdad27de567dfc25c7fde55e954787ade3b4acbf` updates [the production Astro homepage source](../src/pages/index.astro), extending editorial v1 with two decision-critical chapters from Figma v2:
+- Research Landscape / Q01–Q04 — dynamic active-portfolio institution list from normalized `buildOverviewVM().institutions`, corpus-bounded capability count and links to full institution/scholar/representative-work explorers. Map is **linked**, not fabricated with unverified coordinates.
+- Collaboration Value / Q08 — build-vs-partner counterfactual with P1 Kutateladze, P2 MPEI, TPU HOLD, China/global/internal alternatives, licensing, repeatability and phone-level falsification gates.
+
+The existing editorial paper (Q03–Q04), comparison (Q05–Q06), outlook (Q07), academic short list (Q09), and leadership decision (Q10) remain part of the same page. CSS keeps one editorial reading surface and table/list semantics; bilingual major headings remain.
+
+**Review limitations:** fetched GitHub source shows five opening and five closing `section` tags and the expected new modules. This is a narrow source-readback, **not** a browser review, build, TypeScript check, link audit, or live Pages deploy observation. GitHub combined status endpoint on this HEAD returned an empty status list; no claim of PASS. Final publication gate requires workflow build, real 1440/1024/390 browser screenshots, keyboard focus and citation click-through checks.
