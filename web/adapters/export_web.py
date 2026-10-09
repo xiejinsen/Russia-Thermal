@@ -613,6 +613,38 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
             if cid not in claim_ids:
                 errors.append(f"{r['id']}: unresolved claimId {cid}")
 
+    # Identity guardrails: a valid ID is not proof of a valid real-world person link.
+    actor_by_id = {r["id"]: r for r in datasets["actors"]}
+    capability_by_id = {r["id"]: r for r in datasets["capabilities"]}
+    for capability in datasets["capabilities"]:
+        for person_id in capability["keyPeopleIds"]:
+            actor = actor_by_id.get(person_id)
+            if actor and actor["type"] != "PERSON":
+                errors.append(f"{capability['id']}: keyPeopleId {person_id} is not a PERSON")
+
+    # The lab roster names V. E. Zhukov, while PERSON-ZHUKOV is paper author
+    # V. I. Zhukov, with institute-level rather than current Lab 1.3 affiliation.
+    lab_dryout = capability_by_id.get("CAP-KUT-L13-DRYOUT-DIAGNOSTICS")
+    if lab_dryout and "PERSON-ZHUKOV" in lab_dryout["keyPeopleIds"]:
+        errors.append(
+            "CAP-KUT-L13-DRYOUT-DIAGNOSTICS: PERSON-ZHUKOV (V. I.) "
+            "must not be treated as a verified current Lab 1.3 member"
+        )
+
+    # The 2021 -0317 publisher renders Dmitry A. Nesterov; the current ICM
+    # official profile is Denis A. Nesterov. These identities are unresolved.
+    icm_ambiguous = next(
+        (r for r in datasets["evidence"] if r["id"] == "PAPER-RU-ICM-ELECTRONICS-001"),
+        None,
+    )
+    if icm_ambiguous:
+        author_names = [str(v).lower() for v in icm_ambiguous.get("authors", [])]
+        if not any("dmitry" in v and "nesterov" in v for v in author_names):
+            errors.append(
+                "PAPER-RU-ICM-ELECTRONICS-001: preserve publisher identity "
+                "'Dmitry A. Nesterov'; do not silently assign to Denis A. Nesterov"
+            )
+
     for r in datasets["directions"]:
         for cid in r["capabilityIds"]:
             if cid not in capability_ids:
