@@ -42,6 +42,6 @@ The bounded public research is sufficient to draft a leadership decision: Russia
 
 ## Overall exit criterion
 
-All ten questions can be accepted at **public-research decision-support level**, six with explicit limited-scope caveats, because Q02 and Q04 unresolved identities and publication completeness have been formally excluded from unsupported leadership assertions in [their exception disposition](research-closeout-wp3-q02-q04-exception-disposition-2026-10-09.md). This is not original-data access, comprehensive Russia institution mapping or phone-device validation. Acceptance of the public-evidence study does not mean collaboration feasibility, engineering transfer or archive/website pipeline PASS.
+All ten questions can be accepted at **public-research decision-support level**, seven with explicit limited-scope caveats, because Q02 and Q04 unresolved identities and publication completeness have been formally excluded from unsupported leadership assertions in [their exception disposition](research-closeout-wp3-q02-q04-exception-disposition-2026-10-09.md). This is not original-data access, comprehensive Russia institution mapping or phone-device validation. Acceptance of the public-evidence study does not mean collaboration feasibility, engineering transfer or archive/website pipeline PASS.
 
 **Next:** create final insight and leadership decision synthesis (WP4), preserve the Q02/Q04 exceptions and synchronize question ledger without rewriting historical progress as experiments (WP5).
