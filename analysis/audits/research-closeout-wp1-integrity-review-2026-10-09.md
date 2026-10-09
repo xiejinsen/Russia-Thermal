@@ -33,3 +33,14 @@ scope: research-only Q01–Q10 closeout
 ## WP1 exit and WP2 opening
 
 WP1 can close **content-level documentation/traceability** once a bounded sample of source → claim → actor → capability → direction → decision paths is rechecked, but whole-repository mechanical PASS cannot be asserted without actual local/CI execution. Continue next with targeted **TPU–Frumkin paper primary source and author/affiliation check** plus P1/P2 original study comparator tests. If the article cannot be recovered, retain institution-news evidence as a weaker level, with source gap clearly labeled, rather than block entire public-evidence research closure.
+
+
+## Targeted publisher lookup addendum (same day; not yet promoted)
+
+A bounded search for the TPU–Frumkin institutional March 2026 microchip-cooling press story found a potentially related **publisher original**:
+
+- Feoktistov D.V., Orlova E.G., Kotelnikov G.E., Paushkina K.K., Pleshko A.O., Semyonov O.V., Glushkov D.O., Buglak A.V., “Hydrophobization of metal surfaces by laser treatment and subsequent heat treatment of hydrocarbon liquids,” *Surfaces and Interfaces* **92** (2026), 109390, DOI [10.1016/j.surfin.2026.109390](https://doi.org/10.1016/j.surfin.2026.109390). Publisher public metadata establishes laser–thermolysis surface hydrophobization of AlMg3 and author names; Japanese J-GLOBAL indexing reports multiple TPU and Frumkin Institute affiliations (see [publisher](https://www.sciencedirect.com/science/article/abs/pii/S2468023026009776), [bibliographic affiliation index](https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602211990964398)).
+- **Identity/claim linkage is not yet established**: public publisher highlights about contact angle and coating durability do **not** by themselves authenticate the TPU press story's 6×/20× near-surface temperature comparisons or its exact mixed wetting process/test. This is a **candidate related paper**, not necessarily the exact cited performance study. Treat stronger original facts separately from the institutional extrapolation.
+- WP2 decision gate: obtain exact article full experimental description or TPU citation mapping before assigning the specific press ratios to this DOI. No TPU portfolio promotion.
+
+This addition corrects the earlier blanket statement that no prospective related journal record could be located; it does not close the exact news-to-original-study relationship.
