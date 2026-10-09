@@ -73,3 +73,14 @@ The audit inspected via GitHub connector the actual index and detail files, `web
 - **WEB-R01 NOT CLEARED:** `fetch_commit_workflow_runs` returned `workflow_runs: []` for previous HEAD but the connector only reports PR-triggered runs, so it cannot prove no `push` run or a failure. GitHub Actions UI and deployed GitHub Pages could not be fetched by web tool during this cycle. No `npm run check`/`build`/`check:links` was executed.
 - **WEB-R02 NOT CLEARED:** no rendered browser screenshots or real mobile interaction observed. Do not assert release PASS.
 - Next remediation: retrieve actual push-triggered GitHub Actions result through a capable authenticated route or user-provided Actions link, then run targeted P1/P2 click-through and canonical scientific content consistency check.
+
+
+## Remediation cycle 2 — 2026-10-09 P1/P2 evidence-path audit
+
+**P1 verified source semantics:** `01-evidence/papers/PAPER-RU-DRY-001/README.md` and `02-claims/CLM-PAV-002.md` characterize local dielectric-boiling dry-spot observations associated with irreversible crisis under that rig's conditions; direct sealed phone-UTVC predictor remains unproven. Homepage direct paper and Claim links were added in previous cycle.
+
+**P2 verified source semantics:** `01-evidence/papers/PAPER-RU-AGE-001/README.md` describes one MPEI R410A two-phase thermosyphon with 42 calendar months periodic operation and post-operation diminished capillary imbibition, despite comparatively stable aggregate thermal performance. `02-claims/CLM-MPEI-008.md` is explicitly `OPEN`, `MEDIUM` confidence, an analyst early-indicator hypothesis **not observed in the original study**. The P2 priority file `07-decisions/priorities/PRI-02-MPEI.md` maintains `RESERVE`, contact only if long-duration data access possible.
+
+**WEB-A03 / P2 partial fix:** commit `b13ee705d55b2f1f3191a63fec30784846d929fc` adds direct hyperlinks to `/papers/PAPER-RU-AGE-001` and `/claims/CLM-MPEI-008` in the homepage Collaboration Value comparison, adds visible “OPEN hypothesis” and distinguishes post-operation observation from a hypothetical early warning. This patch preserves P2 Reserve and no phone device claim.
+
+**Remaining risks:** person/organization exact affiliation quality, homepage editorial hand-maintained facts against evolving canonical view models, and generated link/deployment accessibility remain open. No build / browser test was run in this cycle.
