@@ -56,3 +56,13 @@ The intended role is selective:
 - mechanism ground truth;
 - rare long-duration evidence;
 - or a process capability that proves a measurable increment over strong domestic baselines.
+
+## Q09 academic feasibility layer (2026-10-09)
+
+**[Cross-team feasibility portfolio and decision matrix](academic-q09-feasibility-portfolio-2026-10-09.md)** is the latest Russia-first management view. It is DERIVED, not a new priority or Canonical Decision Event. OPP-01 primary and OPP-02 reserve remain the only P1/P2 engagement-gated options; OPP-03 TPU remains HOLD. The new cards below are **not proactive outreach packages**:
+
+- [OPP-04 — ITP Ural LHP operating-limit knowledge WATCH](OPP-04-ITP-URAL-LHP-OPERABILITY-METHOD.md)
+- [OPP-05 — TSU PCM transient methods WATCH](OPP-05-TSU-PCM-TRANSIENT-METHOD.md)
+- [OPP-06 — ICM electronics LTCC / flat-heat-pipe modeling METHOD RESERVE](OPP-06-ICM-ELECTRONICS-INTEGRATION-METHOD.md)
+
+All access, future willingness, phone-scale hardware validation, confidential data and rights remain unverified. No university has been contacted. China and in-house methods are the primary alternatives, and there are no invented ROI, staffing or budget numbers.
