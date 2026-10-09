@@ -84,3 +84,12 @@ The audit inspected via GitHub connector the actual index and detail files, `web
 **WEB-A03 / P2 partial fix:** commit `b13ee705d55b2f1f3191a63fec30784846d929fc` adds direct hyperlinks to `/papers/PAPER-RU-AGE-001` and `/claims/CLM-MPEI-008` in the homepage Collaboration Value comparison, adds visible “OPEN hypothesis” and distinguishes post-operation observation from a hypothetical early warning. This patch preserves P2 Reserve and no phone device claim.
 
 **Remaining risks:** person/organization exact affiliation quality, homepage editorial hand-maintained facts against evolving canonical view models, and generated link/deployment accessibility remain open. No build / browser test was run in this cycle.
+
+
+## Scholar-affiliation cycle — 2026-10-09
+
+Detailed original-work identity audit archived: [web-scholar-affiliation-lineage-audit-2026-10-09.md](web-scholar-affiliation-lineage-audit-2026-10-09.md), commit `7117cea2d6e949cd0061efe023c504704ce0718e`.
+
+P1 Lab1.3 current Pavlenko/Surtaev official roster identity strong; do not equate V. E. Zhukov (official roster) to author V. I. Zhukov. P2 MPEI Ivanov paper and primary experimental line grounded, collaborator willingness and Newfrost role not established. ICM Krasnoyarsk is one institute with separate experiments and bilayer-model teams; **Dmitry A.** vs **Denis A.** Nesterov is an unresolved publisher/official author conflict and must not silently join.
+
+This is source-dossier-level triage, not full generated normalized scholar profile QA. **WEB-A05 remains open**, prioritizing normalized `keyPeopleIds` and paper-person joins for these names. Build/deployment acceptance also remains open.
