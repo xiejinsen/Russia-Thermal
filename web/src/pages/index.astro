@@ -34,7 +34,7 @@ const comparisons = [
           <a class="inline-link" href={href('/landscape')}>Explore the research landscape <span aria-hidden="true">↗</span></a>
         </div>
         <aside class="evidence-rail" aria-label="Research thesis provenance and scope">
-          <h2>CLAIM / PROVENANCE</h2>
+          <h2>CLAIM / PROVENANCE <span class="cn-inline" lang="zh-CN">· 结论依据</span></h2>
           <div class="rail-entry"><strong>China / Internal</strong><p>Ultra-thin VC · manufacturing quality · system integration · device reliability</p></div>
           <div class="rail-entry"><strong>Russia / Academia</strong><p>Dryout diagnostics · long-calendar aging endpoints · focused thermal models</p></div>
           <div class="rail-entry"><strong>Evidence boundary</strong><p>No demonstrated smartphone UTVC superiority. Data access and collaboration willingness remain unknown.</p></div>
@@ -46,7 +46,7 @@ const comparisons = [
     <article class="featured" aria-labelledby="study-title">
       <div class="study-body">
         <p class="eyebrow">FEATURED RESEARCH / PHASE-1 PRIORITY</p>
-        <h2 id="study-title">When does Dryout become irreversible?</h2>
+        <h2 id="study-title">When does Dryout become irreversible?<span class="heading-cn" lang="zh-CN">干涸何时演变为不可逆失效？</span></h2>
         <p>Surtaev, Malakhov, Perminov, Polovnikov and Pavlenko investigated boiling of dielectric fluids HFE-7100 and Novec 649 using high-speed infrared and optical diagnostics. The work documents local dry-spot evolution near critical heat flux (CHF), including the formation of persistent dry regions under the studied experimental conditions.</p>
         <p>This is <strong>mechanism-resolved laboratory evidence</strong>, not a sealed ultra-thin vapor chamber (UTVC) experiment. A prospective research collaboration would need repeatable annotations, test conditions and accessible datasets before it could contribute to handset evaluation.</p>
         <div class="research-question"><span>THE FALSIFIABLE QUESTION</span><p>Can distinct reversible and irreversible crisis-state labels improve a phone-relevant validation or protection decision beyond existing thermal, pressure and physics-model baselines?</p></div>
@@ -61,7 +61,7 @@ const comparisons = [
     </article>
 
     <section class="comparison" aria-labelledby="landscape-title">
-      <div class="section-intro"><p class="eyebrow">COMPARATOR-PRESSURED EVIDENCE</p><h2 id="landscape-title">Where China leads — and Russia may complement</h2><p>Comparison is by mechanism, available observables and phone transfer constraints; cross-rig CHF or heat-transfer numbers are not ranked as device performance.</p></div>
+      <div class="section-intro"><p class="eyebrow">COMPARATOR-PRESSURED EVIDENCE</p><h2 id="landscape-title">Where China leads — and Russia may complement<span class="heading-cn" lang="zh-CN">中俄技术能力对比与互补空间</span></h2><p>Comparison is by mechanism, available observables and phone transfer constraints; cross-rig CHF or heat-transfer numbers are not ranked as device performance.</p></div>
       <div class="table-scroll" role="region" aria-label="Research capability comparison" tabindex="0">
         <table>
           <thead><tr><th scope="col">Research area</th><th scope="col">China / Global baseline</th><th scope="col">Russian published capability</th><th scope="col">Current disposition</th></tr></thead>
@@ -72,7 +72,7 @@ const comparisons = [
     </section>
 
     <section class="directory" aria-labelledby="directory-title">
-      <div class="section-intro"><p class="eyebrow">RESEARCH THREADS / INSTITUTIONS & PEOPLE</p><h2 id="directory-title">Which academic teams deserve attention?</h2><p>Research capability and collaboration feasibility are separate questions. P1 is a feasibility thesis, not an approved joint project.</p></div>
+      <div class="section-intro"><p class="eyebrow">RESEARCH THREADS / INSTITUTIONS & PEOPLE</p><h2 id="directory-title">Which academic teams deserve attention?<span class="heading-cn" lang="zh-CN">值得关注的俄罗斯机构与学者</span></h2><p>Research capability and collaboration feasibility are separate questions. P1 is a feasibility thesis, not an approved joint project.</p></div>
       <div class="thread-list">
         {candidates.map(candidate => <article class="thread">
           <div class="thread-identity"><span>{candidate.status}</span><h3><a href={href(candidate.url)}>{candidate.name}</a></h3><p>{candidate.person}</p></div>
@@ -84,7 +84,7 @@ const comparisons = [
     </section>
 
     <section class="outlook" aria-labelledby="outlook-title">
-      <div class="section-intro"><p class="eyebrow">RESEARCH HORIZON / 2027–2029</p><h2 id="outlook-title">Unanswered thermal questions, not product forecasts</h2></div>
+      <div class="section-intro"><p class="eyebrow">RESEARCH HORIZON / 2027–2029</p><h2 id="outlook-title">Unanswered thermal questions, not product forecasts<span class="heading-cn" lang="zh-CN">2027–2029 年值得研究的关键热问题</span></h2></div>
       <div class="notes">
         <article><h3>Failure-aware UTVC</h3><p>Which boiling states are reversible, observable and useful for validation margins?</p></article>
         <article><h3>Health-aware lifetime</h3><p>Can capillary degradation be detected before aggregate thermal output changes?</p></article>
@@ -96,7 +96,7 @@ const comparisons = [
 
     <footer class="decision-footer">
       <p class="eyebrow">MANAGEMENT DECISION / EVIDENCE-LIMITED</p>
-      <h2>Authorize a P1 feasibility inquiry — not product development?</h2>
+      <h2>Authorize a P1 feasibility inquiry — not product development?<span class="heading-cn" lang="zh-CN">建议决策：是否批准 P1 前期合作可行性接洽？</span></h2>
       <p lang="zh-CN">建议仅核实 Kutateladze 的实验条件、机理标注、原始数据及合作许可。MPEI 继续条件储备，TPU 保持 HOLD；尚无对外联系授权。</p>
       <div class="footer-links"><a href={href('/partners')}>Partner work packages ↗</a><a href={href('/claims')}>Audit Claims ↗</a><a href={href('/papers')}>Original Papers ↗</a><a href={href('/research-coverage')}>Coverage and limitations ↗</a></div>
     </footer>
@@ -117,7 +117,7 @@ const comparisons = [
     a:hover{text-decoration:underline;text-underline-offset:4px}
     a:focus-visible{outline:3px solid #236b99;outline-offset:4px}
     .evidence-rail{border-left:2px solid #b6d4e4;padding-left:28px;align-self:start}
-    .evidence-rail h2,.citation>span{font-size:12px;font-weight:850;letter-spacing:.09em;color:#236b99;margin:0 0 20px}
+    .heading-cn{display:block;margin-top:7px;font-family:var(--font-sans);font-size:.58em;font-weight:650;line-height:1.55;letter-spacing:0;color:#355a75}\n    .cn-inline{font-size:12px;letter-spacing:0;font-weight:650;color:#446b84}\n    .evidence-rail h2,.citation>span{font-size:12px;font-weight:850;letter-spacing:.09em;color:#236b99;margin:0 0 20px}
     .rail-entry{padding:0 0 15px;margin-bottom:16px;border-bottom:1px solid #d5e1e8}
     .rail-entry strong{font-size:16px}
     .rail-entry p{font-size:14px;color:#526879;margin:5px 0 0}
