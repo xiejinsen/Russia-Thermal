@@ -8,6 +8,7 @@ rule: canonical Source/Claim/Actor/Capability/Direction/Decision controls overri
 ## Start with the decision and its evidence chain
 
 - [Latest scope and data quality audit](audits/final-insight-and-archive-audit-2026-10-09.md)
+- [Q09 source-to-canonical trace and repair log](audits/q09-evidence-trace-repair-2026-10-09.md)
 - [Cross-Russian-academic-team management comparison](../reports/russia-academic-partner-comparison-2026-10-09.md)
 - [Q09 five-team academic feasibility matrix](../reports/collaboration-opportunities/academic-q09-feasibility-portfolio-2026-10-09.md)
 - [Existing authoritative Phase-1 strategy](../reports/leadership-decision-brief.md)
