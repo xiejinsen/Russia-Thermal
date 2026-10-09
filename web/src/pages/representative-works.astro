@@ -37,8 +37,19 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
       <p>Which papers best demonstrate each team's research capability — and what remains unproven for smartphone thermal management?</p>
       <p class="note">A selected scientific sample, not a complete publication census. Papers awaiting canonical evidence linking are clearly marked, even where their original article has been reviewed.</p>
     </header>
+    <nav class="team-jump" aria-label="Research team quick navigation">
+      {panels.map((panel) => (
+        <a class="jump-card" href={`#${panel.id}`}>
+          <span class="jump-label">{panel.id === 'ACT-KUT-LAB13' ? 'P1 · priority candidate' : 'P2 · conditional reserve'}</span>
+          <strong>{panel.title}</strong>
+          <span class="jump-count">{records.filter((r) => r.teamId === panel.id).length} selected papers</span>
+          <span class="jump-desc">{panel.description}</span>
+          <span class="jump-action">View research papers ↓</span>
+        </a>
+      ))}
+    </nav>
     {panels.map((panel) => (
-      <section class="team" aria-label={panel.title}>
+      <section id={panel.id} class="team" aria-label={panel.title}>
         <div class="team-head">
           <div>
             <p class="eyebrow">{panel.id === 'ACT-KUT-LAB13' ? 'Priority research candidate' : 'Conditional research reserve'}</p>
@@ -80,7 +91,15 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
   h1 {font-size:clamp(30px,3.1vw,42px);line-height:1.2;margin:9px 0 14px;color:#173a5d}
   .intro>p:not(.eyebrow) {font-size:18px;line-height:1.6}
   .intro .note {font-size:15px!important;color:#3d5268}
-  .team {margin:40px 0}
+  .team-jump {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 40px}
+  .jump-card {display:flex;flex-direction:column;gap:9px;border:1px solid #b8d1e7;border-radius:12px;padding:21px 23px;background:#f2f8fd;color:#183c60;text-decoration:none}
+  .jump-card:hover,.jump-card:focus-visible {border-color:#397db4;background:#e8f3fd;outline:2px solid transparent;box-shadow:0 0 0 2px #8cbee9}
+  .jump-label {font-size:13px;font-weight:750;color:#336eaa;text-transform:uppercase;letter-spacing:.035em}
+  .jump-card strong {font-size:21px;line-height:1.3}
+  .jump-count {font-size:20px;font-weight:800;color:#1d578f}
+  .jump-desc {font-size:15px;line-height:1.5;color:#345470}
+  .jump-action {margin-top:auto;padding-top:10px;font-weight:750;font-size:15px;color:#165ca8}
+  .team {margin:40px 0;scroll-margin-top:95px}
   .team-head {display:grid;grid-template-columns:minmax(0,1.25fr) minmax(250px,1fr);gap:24px;align-items:center;padding:24px;border:1px solid #c6dbec;border-radius:14px;background:#eaf4fc}
   .team-head h2 {font-size:25px;line-height:1.25;color:#173a5d;margin:8px 0 10px}
   .team-head p {line-height:1.55;font-size:16px;margin:8px 0}
@@ -95,5 +114,5 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
   .paper p {font-size:16px;line-height:1.55;margin:9px 0}
   .paper .citation {font-size:15px;color:#425c75;margin-bottom:15px}
   .footnote {margin-top:34px;font-size:15px;color:#36546f}
-  @media(max-width:700px) {.works-page {width:calc(100% - 28px)}.team-head {grid-template-columns:1fr;padding:18px}.paper {padding:18px}.paper h3 {font-size:18px}}
+  @media(max-width:700px) {.team-jump{grid-template-columns:1fr}.works-page {width:calc(100% - 28px)}.team-head {grid-template-columns:1fr;padding:18px}.paper {padding:18px}.paper h3 {font-size:18px}}
 </style>
