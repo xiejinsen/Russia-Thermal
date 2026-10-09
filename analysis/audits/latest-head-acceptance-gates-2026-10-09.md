@@ -32,3 +32,11 @@ P1: Resolve Denis-vs-Dmitry Nesterov for distinct SFU source, NSU EITP lead, per
 ## Decision consequence
 
 Do not change Phase1 P1 Primary / MPEI Conditional Reserve / TPU HOLD. Do not mark final integrated insight, latest CI or full archive link integrity as CLOSED on the present evidence. The research is ready for a conditional management brief, not a full automation-certified release.
+
+
+## Follow-up on 2026-10-09: link checker added, execution still OPEN
+
+- A standard-library link-target checker was added at [tools/check_local_links.py](../../tools/check_local_links.py) (commit `f22d9cb60272d0f527401b9e72342180a7691401`).
+- On an actual repository checkout, run `python tools/check_local_links.py`. This checks existing local Markdown link paths, ignores remote URLs/anchors/code fences and reports file/line for absent paths. It **does not** validate remote DOI URLs or Markdown section anchors.
+- This is an added inspection tool, **NOT an execution result**: no full-tree PASS can be claimed until its output on the actual HEAD is recorded.
+- GitHub Actions and `v2repo.py --check` / graph / atlas remain separately unverified on the newest commit.
