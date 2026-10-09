@@ -65,3 +65,11 @@ Route design: `/institutions → /scholars → /representative-works → /partne
 ## Verification provenance and limits
 
 The audit inspected via GitHub connector the actual index and detail files, `web/src/view-models/builders.ts`, `web/package.json` and `web/scripts/check-internal-links.mjs`. Confirmed route files and implementation intent, not a built site. Missing verified network/current Actions browser session prevents asserting PASS. The scientific conclusions remain conditional (no phone-scale verified RU advantage, no external contacts, no raw data permission).
+
+
+## Remediation cycle 1 — 2026-10-09
+
+- **WEB-A03 PARTIAL FIX:** homepage featured Dryout paper now links directly to `/papers/PAPER-RU-DRY-001` and `/claims/CLM-PAV-002`, whose canonical repository records were found in `01-evidence/papers/PAPER-RU-DRY-001/README.md` and `02-claims/CLM-PAV-002.md`. Source code commit `ee621ea712f6f5108c0cf8f4f2fb545ca06d7093`. User-facing paper headline still separately links to publisher DOI.
+- **WEB-R01 NOT CLEARED:** `fetch_commit_workflow_runs` returned `workflow_runs: []` for previous HEAD but the connector only reports PR-triggered runs, so it cannot prove no `push` run or a failure. GitHub Actions UI and deployed GitHub Pages could not be fetched by web tool during this cycle. No `npm run check`/`build`/`check:links` was executed.
+- **WEB-R02 NOT CLEARED:** no rendered browser screenshots or real mobile interaction observed. Do not assert release PASS.
+- Next remediation: retrieve actual push-triggered GitHub Actions result through a capable authenticated route or user-provided Actions link, then run targeted P1/P2 click-through and canonical scientific content consistency check.
