@@ -93,3 +93,16 @@ Detailed original-work identity audit archived: [web-scholar-affiliation-lineage
 P1 Lab1.3 current Pavlenko/Surtaev official roster identity strong; do not equate V. E. Zhukov (official roster) to author V. I. Zhukov. P2 MPEI Ivanov paper and primary experimental line grounded, collaborator willingness and Newfrost role not established. ICM Krasnoyarsk is one institute with separate experiments and bilayer-model teams; **Dmitry A.** vs **Denis A.** Nesterov is an unresolved publisher/official author conflict and must not silently join.
 
 This is source-dossier-level triage, not full generated normalized scholar profile QA. **WEB-A05 remains open**, prioritizing normalized `keyPeopleIds` and paper-person joins for these names. Build/deployment acceptance also remains open.
+
+
+## One-off acceptance drive — 2026-10-09; no daily monitor
+
+User requested immediate completion rather than a scheduled polling loop. The daily check automation was disabled in the conversation; no scheduled follow-up should be interpreted as acceptance.
+
+**Release gate improvement:** commit `be7605f41a0c95c8f03271f57202c22299c228b6` modified `.github/workflows/deploy-web.yml` to run `npm run check`, `npm run build`, then `npm run check:links` prior to deploying Pages; Node 22 matches the Web UI Check workflow. This prevents a successful build alone from being used as the sole deployment qualification.
+
+**Immediate static smoke inspection, ALL 8 PASS as source-shape assertions**: balanced Overview section delimiters; P1 direct paper+Claim links; P2 direct paper+Claim links; institution and scholar detail getStaticPaths; paper detail original source URL; normalized exporter guards against Zhukov and Denis/Dmitry attribution; deployment workflow now includes all gates and Node22. These are **source checks only** and **not** Astro compilation, generated route test, browser visual QA or real external source resolution.
+
+**Remaining actual execution blocked in assistant environment:** local container cannot resolve `github.com` to clone source; public GitHub Actions and GitHub Pages fetch were unavailable; authenticated GitHub connector exposes commit PR-workflow query only (not push run history); latest HEAD combined commit-status returned `statuses: []`. That empty array means **NO VERIFIED STATUS**, neither PASS nor FAIL. Therefore **P0 release gate remains NOT VERIFIED**. Required artifact: successful actual `Web UI Check` and `Deploy Web Report` runs for HEAD `be7605f` or later, including generated HTML link audit, and browser 1440/1024/390 check.
+
+**Honest conclusion:** all reachable source-level checks completed and CI gating improved; no evidence supports claiming fully finished deployed-site validation. A browser-capable Work session or an Actions result URL is required to close the remaining execution-only gates.
