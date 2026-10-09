@@ -17,6 +17,10 @@ authority: original Sources / Claims / Actor / Capability / Direction / Decision
 8. [Scholarly attribution and identity](../analysis/audits/normalized-research-graph-identity-audit-2026-10-09.md) and [ICM two-track identity audit](../analysis/academic-team-mapping/icm-krasn-two-tracks-decision-audit-2026-10-09.md).
 9. [Final archive integrity audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md) — derivation freshness, publication-level caveats and unresolved metadata.
 
+## WP4 final research insight
+
+[Final research insight and collaboration decision report](../reports/final-research-insight-and-collaboration-decision-2026-10-09.md) — leadership-decision-oriented Q01–Q10 synthesis, original evidence, strongest China/global comparators, 2027–29 conditional research questions, P1/P2/TPU decisions and stop gates. Research interpretation only; WP5 archival acceptance remains separate.
+
 ## WP3 ten-question research acceptance
 
 [Q01–Q10 closeout decision matrix](../analysis/audits/research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md) — eight questions accepted at research level (including explicit limitations), Q02/Q04 still require bounded identity / representative-paper resolution. The live TSV retains its earlier workstream progress codes until the remaining gates close; these different fields do **not** indicate a change to frozen investment decisions.
