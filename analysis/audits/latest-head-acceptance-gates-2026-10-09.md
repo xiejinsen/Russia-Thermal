@@ -47,3 +47,11 @@ Do not change Phase1 P1 Primary / MPEI Conditional Reserve / TPU HOLD. Do not ma
 - [V2.1 Repository Health](../../.github/workflows/v2repo-check.yml) now invokes `python tools/check_local_links.py` on push/PR to main (commit `140eb6ae16e779a57fefe88ddf8d6761479ec963`).
 - It uses `continue-on-error: true` **temporarily** to establish the repository's existing broken-link baseline without blocking the previously enforced graph/source audit. A green workflow under this setting **does not** mean Markdown links passed; the step log/result needs review.
 - External Actions web is inaccessible in the current tool session, and container git clone fails due to DNS; no post-change run is independently verified. Follow-up: capture link step errors, repair legitimate live references, classify intentionally historical links, then remove `continue-on-error` to make it an actual release gate.
+
+
+## Follow-up: link-checker regression safety (2026-10-09)
+
+- Added [standard-library unittest fixtures](../../tools/test_check_local_links.py) for valid/missing relative paths, fragment suffixes, external URLs, fenced-code false positives and reference-style Markdown definitions (commit `f7a289d65b7ba14275772451fa43d6d1a881d426`).
+- Added mandatory `python -m unittest discover -s tools -p test_check_local_links.py` before the **still non-blocking** whole-repository link baseline scan in [repository health workflow](../../.github/workflows/v2repo-check.yml) (commit `23e2b7f916c3a31d99922a440e61278279ef48b6`).
+- **No current workflow run output has been inspected**, and no independent test execution result is claimed. Combined commit status returned no statuses for preceding head; web Actions endpoint could not be opened. Full repo and CI release gates remain OPEN.
+- Promote the repository-wide link scan from `continue-on-error` to blocking only after observing output and fixing actual broken or intentionally historical target classes.
