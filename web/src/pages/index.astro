@@ -4,344 +4,189 @@ import SiteHeader from '../components/SiteHeader.astro';
 import { buildOverviewVM } from '../view-models/builders';
 
 const vm = buildOverviewVM();
-const primaryPriority = vm.priorities.find((priority) => priority.priorityClass === 'Primary');
-const reservePriority = vm.priorities.find((priority) => priority.priorityClass === 'Reserve');
-const holdPriority = vm.priorities.find((priority) => priority.priorityClass === 'Hold');
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
+const getPriority = (kind: string) => vm.priorities.find((p) => p.priorityClass === kind);
+const primary = getPriority('Primary');
+const reserve = getPriority('Reserve');
+const hold = getPriority('Hold');
+const dateLabel = '公开文献洞察 · 2026.10';
 ---
 
-<BaseLayout title="Russia-Thermal — Research Intelligence" description={vm.summary}>
+<BaseLayout title="Russia-Thermal | 俄罗斯手机热管理科研洞察" description="俄罗斯科研机构、学者、研究能力、中俄对比与条件性合作建议；证据驱动，不宣称手机实测或合作承诺。">
   <SiteHeader slot="header" />
 
-  <section class="signal">
-    <div class="signal-copy">
-      <span class="tag">PORTFOLIO SIGNAL</span>
-      <h1>{vm.title}</h1>
-      <p>{vm.summary}</p>
-      <div class="signal-links">
-        <a href={href('/partners')}>Open partner portfolio</a>
-        <a href={href('/research-coverage')}>See full research coverage</a>
-        <a href={href('/research-map/russia')}>Explore Russia research map</a>
-        <a href={href('/landscape')}>Review Russia vs China</a>
+  <div class="overview">
+    <section class="hero" aria-labelledby="intro">
+      <div class="hero-main">
+        <div class="eyebrow-line"><span class="dot"></span> RESEARCH INTELLIGENCE <span class="hero-date">{dateLabel}</span></div>
+        <h1 id="intro">俄罗斯不是手机散热产品链的全面领先者，<em>但部分基础研究能力值得合作。</em></h1>
+        <p class="lead">面向下一代智能手机，国内方案在超薄均热板、器件制造与系统集成方面更接近产品落地。俄罗斯研究的潜在价值主要在于<span>沸腾失效机理、长期退化证据和特定实验/建模方法</span>，用于补充我们已有的验证能力，而不是替代产品技术。</p>
+        <div class="hero-actions">
+          <a class="action-primary" href={href('/partners')}>查看合作建议 <span aria-hidden="true">↗</span></a>
+          <a class="action-secondary" href={href('/landscape')}>阅读中俄技术对比 <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="disclosure">证据边界：公开论文和机构资料支持“研究能力及合作假设”，不代表手机级性能验证、数据可获得性或机构合作意愿。</p>
       </div>
-    </div>
-    <div class="scoreboard">
-      <a href={href('/directions')}><b>{vm.stats.strategicCandidates}</b><span>STRATEGIC CANDIDATE</span></a>
-      <a href={href('/directions')}><b>{vm.stats.reserves}</b><span>STRATEGIC RESERVES</span></a>
-      <a href={href('/evidence')}><b>{vm.stats.deepReads}</b><span>DEEP READS</span></a>
-    </div>
-  </section>
+      <div class="model" aria-label="科研合作分工示意">
+        <div class="model-kicker">PROPOSED COLLABORATION MODEL</div>
+        <h2>合作应补足什么？</h2>
+        <div class="model-layer">
+          <span class="model-index">01 · RUSSIA / ACADEMIA</span>
+          <strong>机理、实验数据与模型边界</strong>
+          <p>失效状态 · 毛细退化 · 专题测量</p>
+        </div>
+        <div class="model-arrow" aria-hidden="true">↓ <span>经过可重复、可证伪的比较</span></div>
+        <div class="model-layer domestic">
+          <span class="model-index">02 · CHINA / INTERNAL TEAM</span>
+          <strong>产品器件、系统架构与验证</strong>
+          <p>超薄 VC · 封装工艺 · 控制策略 · 可靠性</p>
+        </div>
+        <div class="model-result">目标：改进具体的手机热设计或验证决策，而不是重复开发已有器件。</div>
+      </div>
+    </section>
 
-  <section class="basis">
-    <div class="bar-title"><span>WHY THIS CONCLUSION</span><span>{vm.thesisAssessedAt ?? 'CURRENT'}</span></div>
-    <div class="basis-grid">
-      {vm.theoryBasis.slice(0,3).map((item, index) => (
-        <div><b>0{index + 1}</b><p>{item}</p></div>
-      ))}
-    </div>
-  </section>
-
-  <section class="management-strip">
-    {primaryPriority && <article>
-      <span>ACT NOW · {primaryPriority.rank}</span>
-      <b>{primaryPriority.institutions[0]?.name ?? primaryPriority.id}</b>
-      <p>{primaryPriority.rationale}</p>
-      <a href={href(`/directions/${primaryPriority.directions[0]?.id ?? ''}`)}>Open direction</a>
-    </article>}
-    {reservePriority && <article>
-      <span>CONDITIONAL RESERVE · {reservePriority.rank}</span>
-      <b>{reservePriority.institutions[0]?.name ?? reservePriority.id}</b>
-      <p>{reservePriority.rationale}</p>
-      <a href={href(`/directions/${reservePriority.directions[0]?.id ?? ''}`)}>Open direction</a>
-    </article>}
-    {holdPriority && <article>
-      <span>HOLD · {holdPriority.rank}</span>
-      <b>{holdPriority.institutions[0]?.name ?? holdPriority.id}</b>
-      <p>{holdPriority.rationale}</p>
-      <a href={href(`/directions/${holdPriority.directions[0]?.id ?? ''}`)}>Open direction</a>
-    </article>}
-  </section>
-
-  <section class="explore-strip">
-    <div>
-      <span>EXPLORE THE GRAPH</span>
-      <b>Move from conclusion to geography, people, papers and claims.</b>
-    </div>
-    <nav aria-label="Deep research entry points">
-      <a href={href('/research-coverage')}>Research Coverage</a>
-      <a href={href('/research-map/russia')}>Russia Map</a>
-      <a href={href('/institutions')}>Institutions</a>
-      <a href={href('/scholars')}>Scholars</a>
-      <a href={href('/directions')}>Directions</a>
-      <a href={href('/claims')}>Claims</a>
-      <a href={href('/papers')}>Papers</a>
-      <a href={href('/evidence')}>Evidence</a>
-    </nav>
-  </section>
-
-  <section id="act" class="panel">
-    <div class="panel-head">
-      <div><span>01 · ACT</span><h2>One primary action, one conditional reserve, one hold</h2></div>
-      <p><b>Question answered:</b> which partner should move now, which one needs a data condition, and which one should not be proactively engaged?</p>
-    </div>
-    <div class="priority-stack">
-      {vm.priorities.map((priority) => {
-        const direction = priority.directions[0];
-        const institution = priority.institutions[0];
-        return (
-          <article class="priority-row">
-            <div class="priority-rank">
-              <b>{priority.rank}</b>
-              <small>{priority.priorityClass}</small>
-              {institution?.href ? <a href={href(institution.href)}>{institution.name}</a> : <span>{institution?.name ?? priority.id}</span>}
-            </div>
-            <div class="priority-decision">
-              <span>DECISION</span>
-              {direction ? <a href={href(`/directions/${direction.id}`)}><strong>{direction.recommendation}</strong></a> : <strong>{priority.recommendedAction}</strong>}
-              <p>{direction?.collaborationFocus ?? priority.rationale}</p>
-            </div>
-            <div class="priority-why">
-              <span>WHY RUSSIA STILL ADDS VALUE</span>
-              <p>{direction?.residualDifferentiation ?? priority.rationale}</p>
-            </div>
-            <div class="priority-gate">
-              <span>NEXT GATE</span>
-              <p>{direction?.nextQuestion ?? direction?.nextGate ?? priority.recommendedAction}</p>
-            </div>
-          </article>
-        );
-      })}
-    </div>
-  </section>
-
-  <section id="compare" class="panel">
-    <div class="panel-head">
-      <div><span>02 · COMPARE</span><h2>China leads the product stack; Russia retains selective specialist value</h2></div>
-      <p><b>Question answered:</b> after comparator pressure, where does a Russian capability still change a smartphone decision?</p>
-    </div>
-
-    <div class="compare-summary">
-      <b>Portfolio conclusion</b>
-      <p>Do not compare countries in the abstract. Retain only direction-level residuals that survive a stronger China/global baseline and still clear a phone-relevant validation gate.</p>
-      <a href={href('/landscape')}>Open full comparison →</a>
-    </div>
-
-    <div class="matrix">
-      {vm.landscape.map((row) => (
-        <article class="compare-row">
-          <div class="compare-top">
-            <div class="dir">
-              <a href={href(`/directions/${row.direction.id}`)}><b>{row.direction.title}</b></a>
-              <span>{row.direction.phoneTransferMaturity} phone maturity</span>
-            </div>
-            <div class="decision">
-              <small>DECISION</small>
-              <strong>{row.direction.recommendation}</strong>
-            </div>
-            <div class="focus">
-              <small>COLLABORATION FOCUS</small>
-              <p>{row.direction.collaborationFocus ?? row.direction.residualDifferentiation}</p>
-            </div>
-          </div>
-          <div class="compare-detail">
-            <div class="baseline">
-              <small>{row.chinaLabel}</small>
-              <p>{row.chinaBaseline}</p>
-              <a href={href('/research-map/china')}>Open China research map</a>
-            </div>
-            <div class="residual">
-              <small>{row.russiaLabel}</small>
-              <p>{row.russiaResidual}</p>
-              <a href={href('/research-map/russia')}>Open Russia research map</a>
-            </div>
-            <div class="next">
-              <small>NEXT VALIDATION QUESTION</small>
-              <p>{row.direction.nextQuestion ?? row.direction.nextGate}</p>
-              <a href={href(`/directions/${row.direction.id}`)}>Open direction</a>
-            </div>
-          </div>
+    <section class="decision-section" aria-labelledby="recommend">
+      <div class="section-heading"><div><span class="section-label">01 / DECISION</span><h2 id="recommend">建议优先关注谁，具体研究什么？</h2></div><p>只有一项优先可行性评估，其他方向保留条件或暂缓。这里没有授权对外联系。</p></div>
+      <div class="decision-grid">
+        <article class="candidate primary">
+          <div class="candidate-head"><span class="candidate-step">01 · 优先评估</span><span class="candidate-state">PRIMARY / FEASIBILITY</span></div>
+          <h3>{primary?.institutions[0]?.name ?? 'Kutateladze Institute of Thermophysics'}</h3>
+          <p class="scholar">Pavlenko · Surtaev / Laboratory 1.3</p>
+          <strong class="candidate-focus">研究问题：能否更可靠地识别局部干涸及不可逆沸腾危机？</strong>
+          <p>潜在贡献是实验中的机理标注和可重复的干斑演化证据，而不是一款更好的手机均热板。</p>
+          <div class="gate"><b>先核实</b><span>原始数据、重复实验、状态标注是否可用，以及能否改变手机验证决策。</span></div>
+          <a href={href(primary?.institutions[0]?.href ?? '/partners')}>了解机构与依据 <span aria-hidden="true">↗</span></a>
         </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="lower">
-    <div class="panel reject">
-      <div class="panel-head">
-        <div><span>03 · REJECT</span><h2>Broad theses we should not invest in</h2></div>
-        <p>Rejection is part of the portfolio conclusion, not an appendix.</p>
-      </div>
-      {vm.killDecisions.slice(0,4).map((decision) => (
-        <article class="kill">
-          <b>×</b>
-          <div><strong>{decision.subject}</strong><p>{decision.rationale}</p></div>
-          <a href={href(`/decisions#${decision.id}`)}>Audit decision</a>
+        <article class="candidate reserve">
+          <div class="candidate-head"><span class="candidate-step">02 · 条件储备</span><span class="candidate-state">CONDITIONAL RESERVE</span></div>
+          <h3>{reserve?.institutions[0]?.name ?? 'Moscow Power Engineering Institute'}</h3>
+          <p class="scholar">Ivanov · 长期热虹吸管研究</p>
+          <strong class="candidate-focus">研究问题：热性能尚稳定时，能否提前识别毛细退化？</strong>
+          <p>42 个月的运行案例具有研究价值，但公开成果不能证明存在连续可用的退化预测数据。</p>
+          <div class="gate"><b>先核实</b><span>运行中间态记录、毛细/表面测量和相对国内氧化与老化方法的增量。</span></div>
+          <a href={href(reserve?.institutions[0]?.href ?? '/partners')}>了解机构与依据 <span aria-hidden="true">↗</span></a>
         </article>
-      ))}
-      <a class="panel-link" href={href('/decisions')}>Open full decision history →</a>
-    </div>
+        <article class="candidate hold">
+          <div class="candidate-head"><span class="candidate-step">03 · 暂缓推进</span><span class="candidate-state">HOLD / REOPEN ONLY</span></div>
+          <h3>{hold?.institutions[0]?.name ?? 'Tomsk Polytechnic University'}</h3>
+          <p class="scholar">Feoktistov · 表面润湿性调控</p>
+          <strong class="candidate-focus">研究问题：是否具有国内成熟超薄器件方案缺少的工艺增量？</strong>
+          <p>激光处理与润湿性研究真实存在，但液滴蒸发结果不能直接转化成手机 VC 散热提升。</p>
+          <div class="gate"><b>重新开启条件</b><span>拿出同条件、手机适用的工艺可靠性或瞬态回润优势证据。</span></div>
+          <a href={href(hold?.institutions[0]?.href ?? '/partners')}>了解机构与依据 <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
 
-    <div class="panel frontier">
-      <div class="panel-head">
-        <div><span>04 · WATCH</span><h2>Frontier coverage</h2></div>
-        <p>Discovery coverage only. Not evidence of partner readiness.</p>
+    <section class="comparison" aria-labelledby="compare">
+      <div class="section-heading"><div><span class="section-label">02 / DIFFERENTIATION</span><h2 id="compare">中俄能力怎么分工，才有实际意义？</h2></div><p>不以论文数量或跨装置散热数值进行国家排名，而是判断谁更适合解决哪一部分问题。</p></div>
+      <div class="compare-columns">
+        <article><div class="compare-country"><span class="symbol">CN</span><span>中国及内部团队</span></div><h3>贴近手机产品工程</h3><p>超薄均热板、毛细结构、制造与封装、器件可靠性、系统温控及量产验证，是合作前必须对照的基线。</p><a href={href('/research-map/china')}>查看中国研究分布 ↗</a></article>
+        <div class="complement"><strong>互补，而非替代</strong><span>相同研究问题</span><span>相同评价条件</span><span>独立增量证据</span></div>
+        <article><div class="compare-country"><span class="symbol ru">RU</span><span>俄罗斯科研团队</span></div><h3>少数机理与方法专长</h3><p>高时空分辨率沸腾观测、长期表面退化案例、热管运行机理与计算方法可能提供新信息，但手机迁移需单独验证。</p><a href={href('/research-map/russia')}>查看俄罗斯研究分布 ↗</a></article>
       </div>
-      <div class="numbers">
-        <b>{vm.frontier.coveredVenueCount}/{vm.frontier.venueCount}</b><span>venues represented</span>
-        <b>{vm.frontier.matchedEvidence}</b><span>matched evidence records</span>
-        <b>{vm.frontier.latestYear ?? '—'}</b><span>latest evidence year</span>
+    </section>
+
+    <section class="future" aria-labelledby="future">
+      <div class="section-heading"><div><span class="section-label">03 / RESEARCH OUTLOOK</span><h2 id="future">面向 2027–2029，应关注哪些尚未解决的问题？</h2></div><p>研究课题与观察方向，不等于预测这些技术将在未来三年进入手机量产。</p></div>
+      <div class="future-grid">
+        <article><span>01 · FAILURE STATE</span><h3>识别失效与恢复状态</h3><p>从稳态热阻，深入到干涸、回润、不可逆边界及可观测性。</p></article>
+        <article><span>02 · RELIABILITY</span><h3>长期热健康状态</h3><p>探索热性能尚稳定时，能否看见毛细与表面退化先兆。</p></article>
+        <article><span>03 · TRANSIENT</span><h3>突发负载与热缓冲恢复</h3><p>比较峰值温度、负载持续时间、PCM 重置与体积代价。</p></article>
+        <article><span>04 · THIN FORM FACTOR</span><h3>超薄两相器件运行边界</h3><p>评估毛细供液、启动稳定性、蒸汽阻力与封装厚度的取舍。</p></article>
       </div>
-      <a class="panel-link" href={href('/frontier')}>Open Frontier Watch →</a>
-    </div>
-  </section>
+      <p class="future-note">TSU 的 PCM 建模、乌拉尔 LHP 与 ICM 的电子热路径研究属于方法储备；不自动升级为与 P1 同级的合作建议。<a href={href('/directions')}>查看技术方向与证据 ↗</a></p>
+    </section>
+
+    <section class="proof" aria-labelledby="proof">
+      <div class="section-heading"><div><span class="section-label">04 / EVIDENCE & DECISION</span><h2 id="proof">这些结论可靠到什么程度？</h2></div></div>
+      <div class="proof-grid">
+        <div class="proof-left"><h3>可以支持的判断</h3><p>存在可识别的俄罗斯研究机构、学者及有原始论文支持的实验或建模能力；可以提出有边界的合作假设与停止条件。</p><h3>尚未获得的证明</h3><p>手机级实测优势、对外合作意愿、原始数据授权、模型在手机传感器下的独立增量，以及最新仓库 CI 的完整通过记录。</p></div>
+        <div class="proof-right"><span class="proof-label">建议的下一项管理决策</span><h3>是否允许先核实 P1 的数据与研究合作可行性？</h3><p>只讨论机理标签、实验条件、数据可用性和合作边界；不是授权联合产品开发。MPEI 继续条件储备，其他团队暂不主动接洽。</p><a class="action-primary" href={href('/partners')}>阅读合作方案 ↗</a></div>
+      </div>
+      <div class="research-links"><b>继续核查资料</b><a href={href('/institutions')}>研究机构</a><a href={href('/scholars')}>核心学者</a><a href={href('/representative-works')}>代表论文</a><a href={href('/claims')}>研究论断</a><a href={href('/evidence')}>来源证据</a><a href={href('/research-coverage')}>覆盖范围</a><a href={href('/decisions')}>决策历史</a></div>
+    </section>
+  </div>
 
   <style>
-    :global(body){
-      background:
-        radial-gradient(circle at 78% 0%, rgba(110,185,255,.20), transparent 34rem),
-        linear-gradient(180deg,#f7fbff 0%,#eef6fc 100%);
-      color:#17324d;
-    }
-
-    .signal{
-      display:grid;
-      grid-template-columns:minmax(0,1.8fr) minmax(380px,.8fr);
-      border:1px solid #cfe1ee;
-      border-radius:18px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 14px 38px rgba(42,96,140,.08);
-    }
-
-    .signal-copy{padding:34px}
-    .tag,.panel-head span,.bar-title,.explore-strip>div>span{
-      font-size:12px;color:#0a6bb7;font-weight:850;letter-spacing:.09em;text-transform:uppercase;
-    }
-
-    .signal h1{
-      font-size:36px;line-height:1.1;max-width:980px;margin:10px 0 16px;letter-spacing:-.035em;color:#153955;
-    }
-
-    .signal-copy>p{max-width:930px;color:#4d6477;margin:0;font-size:16px;line-height:1.65}
-
-    .signal-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
-    .signal-links a{display:inline-flex;align-items:center;min-height:34px;padding:8px 11px;border:1px solid #c9dfed;border-radius:9px;background:#f7fbfe;color:#0b67b2;font-size:12px;font-weight:800;text-decoration:none}
-    .signal-links a:hover,.signal-links a:focus-visible{border-color:#88bce0;background:#edf7fd;outline:none}
-
-    .scoreboard{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      align-content:center;
-      gap:1px;
-      background:#d8e8f4;
-      border-left:1px solid #d8e8f4;
-    }
-
-    .scoreboard a{
-      display:grid;align-content:center;gap:7px;padding:20px;background:linear-gradient(145deg,#e8f4ff,#f4faff);
-      text-decoration:none;
-    }
-
-    .scoreboard b{font-size:34px;color:#0b5fa9}
-    .scoreboard span{font-size:12px;color:#4f687b;font-weight:800;line-height:1.35}
-
-    .basis,.panel,.explore-strip{
-      margin-top:18px;border:1px solid #cfe1ee;background:#fff;border-radius:16px;overflow:hidden;
-      box-shadow:0 10px 28px rgba(42,96,140,.05);
-    }
-
-    .bar-title{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #dbe8f1}
-    .bar-title span:last-child{color:#708697;font-weight:700}
-    .basis-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-    .basis-grid>div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:20px;border-right:1px solid #e0ebf3}
-    .basis-grid>div:last-child{border-right:0}
-    .basis-grid b{color:#0a6bb7;font-size:13px}
-    .basis-grid p{margin:0;font-size:14px;line-height:1.6;color:#435d70}
-
-    .management-strip{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:18px;border:1px solid #cfe1ee;
-      border-radius:16px;overflow:hidden;background:#d7e6f2;box-shadow:0 10px 28px rgba(42,96,140,.05)
-    }
-
-    .management-strip>article{display:grid;gap:8px;padding:20px;background:#fff;color:inherit}
-    .management-strip>article:hover{background:#f8fcff}
-    .management-strip>article>a{width:fit-content;color:#0b67b2;font-size:12px;font-weight:850;text-decoration:none}.management-strip>article>a:hover,.management-strip>article>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
-    .management-strip span{font-size:11px;font-weight:850;letter-spacing:.08em;color:#0a6bb7}
-    .management-strip b{font-size:15px;line-height:1.35;color:#173f5e}
-    .management-strip p{margin:0;font-size:14px;line-height:1.58;color:#405d70}
-
-    .explore-strip{display:flex;justify-content:space-between;gap:28px;padding:18px 20px;align-items:center}
-    .explore-strip>div{display:grid;gap:5px}
-    .explore-strip>div>b{font-size:14px;color:#294f6b}
-    .explore-strip nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
-    .explore-strip nav a{padding:7px 9px;border-radius:8px;background:#eef6fb;color:#315f80;font-size:11px;font-weight:800;text-decoration:none}
-
-    .panel-head{
-      display:flex;justify-content:space-between;gap:30px;padding:19px 20px;border-bottom:1px solid #dbe8f1;
-      background:linear-gradient(180deg,#fbfdff,#f6faff);
-    }
-
-    .panel-head h2{font-size:20px;margin:4px 0 0;color:#183c59;letter-spacing:-.02em}
-    .panel-head p{font-size:14px;line-height:1.55;color:#496276;max-width:540px;margin:0}
-
-    .priority-stack{display:grid}
-    .priority-row{display:grid;grid-template-columns:150px minmax(270px,1.05fr) minmax(260px,1fr) minmax(280px,1.05fr);border-bottom:1px solid #dfeaf2}
-    .priority-row>div{padding:20px;border-right:1px solid #e4edf4}
-    .priority-rank{display:grid;align-content:start;gap:8px;background:#f7fbfe}
-    .priority-rank b{font-size:25px;color:#0b67b2}
-    .priority-rank small{width:fit-content;padding:3px 6px;border-radius:999px;background:#eaf4fb;color:#315f80;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
-    .priority-rank a,.priority-rank span{font-size:13px;font-weight:750;color:#36566e;text-decoration:none}
-    .priority-decision{background:#f1fbf7}
-    .priority-decision>a{text-decoration:none}
-    .priority-row div>span{display:block;margin-bottom:7px;font-size:11px;font-weight:850;letter-spacing:.07em;color:#607c90}
-    .priority-decision strong{font-size:15px;color:#087a66}
-    .priority-row p{margin:8px 0 0;font-size:14px;line-height:1.62;color:#314d61}
-    .priority-gate{background:#f7fbff}
-
-    .compare-summary{display:grid;grid-template-columns:170px 1fr auto;gap:18px;padding:15px 20px;background:#eaf5fd;border-bottom:1px solid #d7e6f2;align-items:start}
-    .compare-summary b{font-size:12px;color:#0a67b0;text-transform:uppercase;letter-spacing:.06em}
-    .compare-summary p{margin:0;font-size:13px;line-height:1.55;color:#405c70}
-    .compare-summary a{font-size:11px;font-weight:800;color:#0b67b2;text-decoration:none;white-space:nowrap}
-
-    .matrix{display:grid;gap:18px;padding:18px;background:#f6fafd}
-    .compare-row{border:1px solid #cfe1ee;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(38,89,130,.05)}
-    .compare-top{display:grid;grid-template-columns:230px 190px minmax(0,1fr);border-bottom:1px solid #dce8f1;background:linear-gradient(180deg,#fbfdff,#f7fbfe)}
-    .compare-top>div,.compare-detail>div{padding:18px;border-right:1px solid #e4edf4}
-    .dir{display:grid;gap:7px;border-left:4px solid #4c9fe0}
-    .dir a{text-decoration:none}.dir b{font-size:15px;color:#254a66}
-    .dir span,small{font-size:11px;color:#617b8f;text-transform:uppercase;letter-spacing:.05em}
-    .decision strong{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:#0878c4}
-    .focus p,.matrix p{font-size:14px;line-height:1.62;color:#314d61;margin:.45rem 0 0}
-    .compare-detail{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:4px solid #f1f6fa}
-    .compare-detail>div{display:block;color:inherit}
-    .baseline{background:#edf6ff}.residual{background:#eef9f6}.next{background:#f8fbfd}
-    .compare-detail>div>a{display:inline-block;margin-top:10px;color:#0b67b2;font-size:11px;font-weight:850;text-decoration:none}.compare-detail>div>a:hover,.compare-detail>div>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
-
-    .lower{display:grid;grid-template-columns:1.5fr .7fr;gap:18px}
-    .kill{display:grid;grid-template-columns:34px 1fr auto;gap:10px;padding:16px 20px;border-bottom:1px solid #e0ebf3;font-size:13px;color:#344f63}
-    .kill:hover{background:#fffafa}.kill>a{align-self:start;color:#0b67b2;font-size:11px;font-weight:850;text-decoration:none;white-space:nowrap}.kill>a:hover,.kill>a:focus-visible{text-decoration:underline;text-underline-offset:.16em}
-    .kill>b{color:#c65454;font-size:16px}.kill strong{font-size:13px;color:#36536a}.kill p{margin:5px 0 0;color:#607688;line-height:1.5}
-    .numbers{display:grid;grid-template-columns:auto 1fr;gap:14px 16px;padding:22px}
-    .numbers b{font-size:28px;color:#0b64aa}.numbers span{font-size:12px;color:#5e7486;align-self:center;line-height:1.35}
-    .panel-link{display:block;width:fit-content;margin:0 20px 18px;color:#0b67b2;font-size:12px;font-weight:850;text-decoration:none}
-
-    @media(max-width:900px){
-      .signal,.lower{grid-template-columns:1fr}
-      .scoreboard{grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid #d8e8f4}
-      .basis-grid,.management-strip{grid-template-columns:1fr}
-      .basis-grid>div{border-right:0;border-bottom:1px solid #e0ebf3}
-      .priority-row,.compare-top,.compare-detail,.compare-summary{grid-template-columns:1fr}
-      .priority-row>div,.compare-top>div,.compare-detail>div{border-right:0;border-bottom:1px solid #e4edf4}
-      .explore-strip{align-items:flex-start;flex-direction:column}
-      .explore-strip nav{justify-content:flex-start}
-    }
-
-    @media(max-width:640px){
-      .signal h1{font-size:29px}
-      .scoreboard{grid-template-columns:1fr}
-      .signal-copy{padding:22px}
-      .scoreboard a{padding:15px 20px}
-    }
+    :global(body){background:#f4f8fb;color:#1b3045}
+    :global(main){padding-top:22px}
+    .overview{display:grid;gap:24px}
+    .hero,.decision-section,.comparison,.future,.proof{border:1px solid #d7e2ea;border-radius:15px;background:#fff;overflow:hidden}
+    .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.77fr);background:#f9fcff}
+    .hero-main{padding:44px 44px 36px}
+    .eyebrow-line,.section-label,.model-kicker{font-size:12px;letter-spacing:.11em;color:#245f88;font-weight:800}
+    .eyebrow-line{display:flex;align-items:center;gap:9px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#168a9a}
+    .hero-date{margin-left:auto;letter-spacing:0;color:#62788b;font-weight:650}
+    h1{font-size:clamp(29px,3vw,43px);line-height:1.32;letter-spacing:-.035em;margin:22px 0 20px;max-width:21em;color:#142f47;font-weight:800}
+    h1 em{font-style:normal;color:#146d89}
+    .lead{font-size:17px;line-height:1.9;margin:0;max-width:49em;color:#354e61}
+    .lead span{font-weight:750;color:#173c5a}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .action-primary,.action-secondary{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:750;text-decoration:none}
+    .action-primary{background:#125979;color:#fff}.action-primary:hover{background:#0b4764}
+    .action-secondary{background:#fff;color:#125979;border:1px solid #aecbdc}.action-secondary:hover{background:#edf7fc}
+    .disclosure{font-size:12px;line-height:1.65;color:#617588;margin:25px 0 0;border-top:1px solid #deeaef;padding-top:15px}
+    .model{padding:34px 28px;background:#e9f3f8;border-left:1px solid #d2e3ec}
+    .model h2{font-size:23px;color:#193a51;margin:9px 0 22px}
+    .model-layer{background:#fff;border:1px solid #c9dde7;border-left:4px solid #328c9b;border-radius:9px;padding:17px 19px}
+    .model-layer.domestic{border-left-color:#235b99}
+    .model-index{display:block;color:#416e83;font-size:11px;font-weight:800;letter-spacing:.07em}
+    .model-layer strong{display:block;font-size:17px;margin:6px 0;color:#16354b}
+    .model-layer p{font-size:13px;margin:0;color:#526c7e}
+    .model-arrow{text-align:center;color:#246b87;font-size:22px;padding:7px 0}
+    .model-arrow span{display:block;font-size:11px;font-weight:700;color:#526c7e}
+    .model-result{border-top:1px solid #c5dce8;margin-top:20px;padding-top:17px;font-size:13px;font-weight:700;line-height:1.65;color:#264d65}
+    .section-heading{display:flex;justify-content:space-between;gap:25px;align-items:end;padding:27px 30px 21px;border-bottom:1px solid #e0e8ee}
+    .section-heading h2{font-size:25px;line-height:1.35;letter-spacing:-.025em;margin:7px 0 0;color:#17344a}
+    .section-heading>p{max-width:410px;color:#536b7d;font-size:14px;line-height:1.7;margin:0}
+    .decision-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+    .candidate{padding:24px 26px 25px;border-right:1px solid #e0e8ee;display:flex;flex-direction:column;gap:0}
+    .candidate:last-child{border-right:0}
+    .candidate.primary{background:#f5fafb}.candidate.hold{background:#fafbfc}
+    .candidate-head{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:11px;font-weight:850}
+    .candidate-step{color:#1d6582}.candidate-state{color:#567487;text-align:right;font-size:10px;letter-spacing:.03em}
+    .candidate h3{font-size:19px;line-height:1.4;margin:16px 0 4px;color:#1a384e}
+    .scholar{font-size:13px!important;color:#62798b!important;margin:0 0 18px!important}
+    .candidate-focus{font-size:16px;line-height:1.65;color:#21445c}
+    .candidate>p:not(.scholar){font-size:14px;line-height:1.75;color:#405b6d}
+    .gate{border-top:1px solid #d7e3ea;margin-top:auto;padding-top:15px;display:grid;gap:5px}
+    .gate b{font-size:12px;color:#165f79}.gate span{font-size:13px;line-height:1.7;color:#435d70}
+    .candidate>a{margin-top:17px;color:#125d80;font-size:13px;font-weight:750;text-decoration:none;width:fit-content}
+    .candidate>a:hover,.compare-columns a:hover,.research-links a:hover{text-decoration:underline;text-underline-offset:3px}
+    .compare-columns{display:grid;grid-template-columns:1fr 180px 1fr;gap:0;padding:25px 28px}
+    .compare-columns article{padding:23px 26px;background:#f7fafc;border:1px solid #dbe5eb;border-radius:10px}
+    .compare-country{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;color:#375770}
+    .symbol{width:38px;height:38px;background:#dbeafa;border-radius:7px;display:grid;place-items:center;color:#245e8d;font-weight:900}
+    .symbol.ru{background:#ddefed;color:#28776d}
+    .compare-columns h3{font-size:20px;margin:18px 0 8px}
+    .compare-columns article p{font-size:15px;line-height:1.75;color:#415b6f;margin:0 0 15px}
+    .compare-columns a{font-size:13px;font-weight:750;color:#155d80;text-decoration:none}
+    .complement{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:11px;text-align:center;color:#657e8e;font-size:12px}
+    .complement strong{color:#1b627e;font-size:15px}
+    .complement span{padding:4px 9px;background:#f0f6f9;border-radius:5px}
+    .future-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+    .future-grid article{padding:26px;border-right:1px solid #e1e9ef}
+    .future-grid article:last-child{border-right:0}
+    .future-grid article>span{font-size:11px;color:#36748e;font-weight:850;letter-spacing:.05em}
+    .future-grid h3{font-size:17px;margin:13px 0 9px;line-height:1.5}
+    .future-grid p{font-size:14px;color:#4a6477;line-height:1.75;margin:0}
+    .future-note{margin:0;border-top:1px solid #e1e9ef;padding:16px 26px;background:#f8fafc;font-size:13px;line-height:1.7;color:#4c6476}
+    .future-note a{color:#135f83;font-weight:750;white-space:nowrap}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr}
+    .proof-left,.proof-right{padding:28px 30px}
+    .proof-left h3{font-size:18px;margin:0 0 7px}
+    .proof-left p{font-size:14px;line-height:1.8;color:#425e70;margin:0 0 20px}
+    .proof-right{background:#eaf3f8;border-left:1px solid #d5e6ed}
+    .proof-label{font-size:12px;color:#1f6786;font-weight:850;letter-spacing:.05em}
+    .proof-right h3{font-size:23px;line-height:1.45;margin:15px 0}
+    .proof-right p{font-size:15px;line-height:1.8;color:#405d71;margin:0 0 21px}
+    .research-links{padding:19px 27px;border-top:1px solid #e0e8ee;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .research-links b{font-size:13px;margin-right:5px;color:#1a3c54}
+    .research-links a{font-size:13px;color:#185e7e;text-decoration:none;font-weight:650}
+    @media(max-width:1100px){.hero{grid-template-columns:1fr}.model{border-left:0;border-top:1px solid #d2e3ec;display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:10px}.model-kicker,.model h2,.model-result{grid-column:1/-1}.model-arrow{transform:rotate(-90deg)}.model-arrow span{display:none}.decision-grid{grid-template-columns:1fr}.candidate{border-right:0;border-bottom:1px solid #e0e8ee}.future-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.hero-main{padding:26px}.model{padding:25px;display:block}.model-arrow{transform:none}.model-arrow span{display:block}.section-heading{display:block;padding:23px}.section-heading>p{margin-top:12px}.compare-columns{grid-template-columns:1fr;gap:13px;padding:15px}.complement{padding:10px;flex-direction:row;flex-wrap:wrap}.future-grid,.proof-grid{grid-template-columns:1fr}.future-grid article{border-bottom:1px solid #e1e9ef;border-right:0}.proof-right{border-left:0;border-top:1px solid #d5e6ed}.candidate{padding:23px}.research-links{gap:13px}.hero h1{font-size:29px}}
   </style>
 </BaseLayout>
