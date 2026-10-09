@@ -83,3 +83,12 @@ Real feature pages must consume page-specific view models built from W1 normaliz
 ## W2 next gate
 
 Stabilize primitives, card contracts, layout/navigation and fixture states before building real Overview / Partner Portfolio pages.
+
+
+## Research Intelligence design refresh (2026-10-09)
+
+- [Evidence-first bilingual Web Design System v1](docs/research-intelligence-design-system-v1-2026-10-09.md)
+- [Overview UX and information-architecture blueprint](docs/overview-ux-blueprint-v1-2026-10-09.md)
+- [Editable Figma concept exploration](https://www.figma.com/design/NAPiueDASYJpYLiiOyYBer) — exploratory only; existing Astro production page not yet replaced under v1.
+
+Design path: scientific/editorial direction -> evidence-linked blueprint -> revised Figma -> browser screenshots and responsive QA -> Astro implementation -> current commit CI. This preserves Phase1 research decisions and avoids shipping an unreviewed webpage.
