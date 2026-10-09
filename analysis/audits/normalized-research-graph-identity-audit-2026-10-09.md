@@ -44,3 +44,16 @@ These are **assertions about existing semantic evidence**, not inference of new 
 **Verification status:** implementation/source-read only; exporter, Astro typecheck and generated HTML link check were **not executed here**. This cannot be reported as test PASS until an actual CI job or local run provides logs.
 
 Remaining generalized need: publication-time affiliation and evidence-to-person provenance is not fully represented as an explicit first-class edge; avoid a universal exact-parent rule that would reject valid collaborations or incorrectly elevate institute-affiliated coauthors to a specific lab.
+
+
+## Cycle 3 — broader structural invariants (2026-10-09)
+
+Commit `ddee03c72f50fd1b6e4bf76dc15d12b412788baa` expands `web/adapters/export_web.py::validate_normalized` beyond named exceptions:
+- Every Actor's resolved `parentId` must be an organization/lab/company (not a person), and actor parent hierarchies must be cycle-free.
+- Each Capability owner (`actorId`) must not be a person.
+- Capability key-person references may not be duplicated or self-referential, in addition to the prior existing-ID and PERSON-type rules.
+- The known Zhukov and Denis/Dmitry Nesterov guards remain active; **no generic same-institute coauthor=lab member inference** is introduced.
+
+The code is wired into the same `build`/`check` exporter, but **no executable exporter test or real deployment verification** was available in this turn. Web access to public GitHub Actions and GitHub Pages returned fetch failure. This does NOT establish an actual broken site, and does not establish CI PASS. More specific author–publication affiliation edges are a data model extension, not something a structural invariant can fabricate.
+
+Review note: Real-world person-parent ambiguity and cross-organizational research collaboration must be modeled separately in future provenance-rich graph work; only hard structural invalidities become build-blocking errors.
