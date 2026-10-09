@@ -27,3 +27,20 @@ Web import `web/src/data/load-normalized.ts` reads `web/data/generated/*.json` a
 - **P0 release gate still open:** latest actual Astro check/build/link output and deployed browser QA not observed.
 
 This is a meaningful **canonical graph correction**, not a certification that all generated edge instances are verified, and not a new science prioritization.
+
+
+## Cycle 2 — exporter guardrails added (2026-10-09)
+
+Commit `f031249de3bc5685e19ef532e6f69df18772b6b4` modifies `web/adapters/export_web.py`'s existing `validate_normalized(datasets)` to enforce:
+
+1. Capability `keyPeopleIds` must resolve not merely to existing actor IDs but specifically to `PERSON` actors.
+2. `CAP-KUT-L13-DRYOUT-DIAGNOSTICS` must not silently regain the unverified `PERSON-ZHUKOV` person–lab capability edge.
+3. `PAPER-RU-ICM-ELECTRONICS-001` must preserve the literal publisher author **Dmitry A. Nesterov** rather than replacing him with current official ICM person **Denis A. Nesterov**.
+
+These are **assertions about existing semantic evidence**, not inference of new lab membership. The ICM person-name conflict is still unresolved. Its lab capability may legitimately name Denis for separately verified engineering work; this does not mean the ambiguous paper belongs to him.
+
+`web/package.json` already invokes `python adapters/export_web.py` in `build` and `check` scripts, so the validation is on those execution paths without a second data store.
+
+**Verification status:** implementation/source-read only; exporter, Astro typecheck and generated HTML link check were **not executed here**. This cannot be reported as test PASS until an actual CI job or local run provides logs.
+
+Remaining generalized need: publication-time affiliation and evidence-to-person provenance is not fully represented as an explicit first-class edge; avoid a universal exact-parent rule that would reject valid collaborations or incorrectly elevate institute-affiliated coauthors to a specific lab.
