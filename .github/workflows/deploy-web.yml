@@ -40,7 +40,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies
         working-directory: web
@@ -49,9 +49,17 @@ jobs:
       - name: Validate repository
         run: python tools/v2repo.py --check
 
+      - name: Type and Astro checks
+        working-directory: web
+        run: npm run check
+
       - name: Build static site
         working-directory: web
         run: npm run build
+
+      - name: Audit generated internal links
+        working-directory: web
+        run: npm run check:links
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
