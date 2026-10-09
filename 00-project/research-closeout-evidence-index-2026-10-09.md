@@ -37,7 +37,7 @@ authority: original Sources / Claims / Actor / Capability / Direction / Decision
 
 - [ICM institute two research tracks](../analysis/academic-team-mapping/icm-krasn-two-tracks-decision-audit-2026-10-09.md), [canonical electronics paper](../01-evidence/papers/PAPER-RU-ICM-ELECTRONICS-001/README.md).
 - Original paper's **Dmitry A. Nesterov** must not silently merge with current official **Denis A. Nesterov**. Paper authorship does not establish current position. ICM engineering and analytical modeling lines are separate teams within one institute.
-- [TPU/Frumkin 2026 microchip-cooling lead](../analysis/coverage/russia-academic-anti-omission-refresh-2026-10-09.md): primary institution reports exist, **publisher original article and exact coauthor affiliation remain a bounded closeout source gate**. No conversion of temperature-change ratios into smartphone product benefit.
+- [TPU/Frumkin 2026 microchip-cooling lead](../analysis/coverage/russia-academic-anti-omission-refresh-2026-10-09.md): primary institution reports exist, **publisher paper identity already resolved as IJHMT 260 (2026) 128413, DOI 10.1016/j.ijheatmasstransfer.2026.128413 (see academic-team-mapping/tpu-frumkin-2026-original-paper-identity-gate.md); exact per-author affiliations and full methods remain bounded verification gaps**. No conversion of temperature-change ratios into smartphone product benefit.
 
 ## Research closure checklist — WP1 evidence integrity
 
