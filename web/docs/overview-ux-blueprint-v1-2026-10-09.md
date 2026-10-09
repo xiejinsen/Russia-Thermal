@@ -117,3 +117,34 @@ The bilingual editorial Homepage was implemented in [web/src/pages/index.astro](
 Code read-back confirms 3 section opening/closing pairs, evidence rail and mobile breakpoint present, 15 internal helper links authored. This is a **static source inspection only**, not an Astro TypeScript or visual rendering test.
 
 **Deployment acceptance OPEN**: combined commit status API returned no statuses for `92e836f`; current Actions run not inspected, `npm run check`/`npm run build`/`npm run check:links` not executed. Browser screenshot comparison with Figma and accessibility inspection at 1440/1024/390 remain required. The older Figma concepts are still comparison sketches, not alternative deployed branches. Any new scientific factual edit must be source checked before approval.
+
+## v2 amendment — Ten questions, five evidence-led web chapters (2026-10-09)
+
+Design authority only; frozen Phase1 decisions unchanged. Replaces previous homepage section *order*, not its scientific truth. No public Q01–Q10 codes.
+
+| Editorial chapter | Question coverage | Homepage display | Detailed route |
+|---|---|---|---|
+| Research Landscape | Q01 Q02 Q03 Q04 | Geolocated institution/academic group browser where coordinates verified; actor → scholar → method → original paper; no Russia-wide census claims | /research-map/russia, /institutions, /scholars, /representative-works |
+| Capability Differentiation | Q05 Q06 | China/global baseline vs published Russian capability vs phone transfer evidence and restrictions, comparative table | /landscape, /capabilities, /claims |
+| Research Outlook 2027–2029 | Q07 | Four conditional scientific questions in editorial annotations, not a predicted product timeline | /directions |
+| Collaboration Value | Q08 | Explicit counterfactual table: Russia research increment / China or internal alternative / data and same-input falsification gate | /partners, /evidence |
+| Partner Opportunities & Decision | Q09 Q10 | Name, PI, study, proposed narrow task, expected evidence, feasibility gate, PRIMARY/RESERVE/HOLD and leadership decision | /partners, /decisions |
+
+### Landscape section specification
+
+Use an institution-directory plus **actual verified geography** as an optional exploratory control, not a decorative Russia silhouette or location guess. Known 28 owner institutions and 34 annotated capabilities are corpus-specific, *not* comprehensive Russia counts. A narrow featured thread shows Kutateladze Lab1.3 / Pavlenko–Surtaev / 2026 dielectric dry-spot experiment; MPEI / Ivanov / thermosyphon exposure; TSU / Sheremet and colleagues / PCM modeling. Institution/person and original study each get specific clickable labels. A responsive mobile list precedes any map.
+
+### Collaboration Value section specification
+
+| Research thesis | Strong alternative | Unproven but testable incremental value / stop |
+|---|---|---|
+| Kutateladze mechanism labels | China handset dryout prior art; independent global segmentation and wick-mode science | Only proceed after legally shareable, repeated labels improve held-out phone validation or protection decision; otherwise no project |
+| MPEI long-duration aging | Domestic oxidation grading, QA and accelerated VC aging | Require time-resolved intermediary capillary/surface evidence distinct from public endpoint; absent chronology means reserve |
+| TPU generic wettability processing | Mature Chinese laser/wick/device production art | HOLD unless device-matched, reliable, new process effect passes benchmark |
+| TSU/ITP/ICM academic methods | Internal numerical/thermal and existing global tools | WATCH until a specific technical problem and nonredundant deliverable are demonstrated |
+
+All partner data access, willingness, IP arrangements, internal personnel cost and smartphone hardware outcomes remain UNKNOWN.
+
+### Editorial and interaction rules
+
+Each major English headline has a concise Chinese subtitle. Keep original paper titles, author names, DOI and technical language in English. No 10 cards for ten questions, no five equal rectangles and no invented heat maps. Distinct visual grammars by content: institution browser, readable evidence table, asymmetric research prose, counterfactual table, ranked decision directory. Critical claims must reveal original paper, author and phone transfer limitation within one or two clicks. Real desktop and mobile review required before shipping implementation.
