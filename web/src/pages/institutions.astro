@@ -212,6 +212,9 @@ const directionOptions = directions
             </div>
 
             <div slot="actions" class="row-actions">
+              {(record.model.id === 'ACT-KUTATELADZE' || record.model.id === 'ACT-KUT-LAB13' || record.model.id === 'ACT-MPEI') && (
+                <a href={`${import.meta.env.BASE_URL}representative-works/#${record.model.id === 'ACT-MPEI' ? 'ACT-MPEI' : 'ACT-KUT-LAB13'}`}>Selected works</a>
+              )}
               <a href={`${import.meta.env.BASE_URL}claims?actor=${encodeURIComponent(record.model.id)}`}>Claims</a>
               <a href={`${import.meta.env.BASE_URL}papers?actor=${encodeURIComponent(record.model.id)}`}>Papers</a>
               <a href={`${import.meta.env.BASE_URL}evidence?actor=${encodeURIComponent(record.model.id)}`}>Evidence</a>
