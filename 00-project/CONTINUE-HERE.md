@@ -2,6 +2,10 @@
 
 Use this file when resuming the project in a new chat/window.
 
+## Pre-PPT research handoff
+
+The [pre-PPT repository audit](../analysis/audits/research-closeout-pre-ppt-repository-final-audit-2026-10-09.md) confirms current research decision coherence and the exact remaining **mechanical full-tree QA** gap; do not mistake research-level acceptance for full-file check PASS. Source content for future slides is the [final WP4 research insight](../reports/final-research-insight-and-collaboration-decision-2026-10-09.md), qualified by the Q01–Q10 acceptance matrix and canonical Phase1 sources. Web and PPT implementation are deferred.
+
 ## Current research-only closeout (2026-10-09)
 
 Start with the [curated closeout evidence index](research-closeout-evidence-index-2026-10-09.md) and [WP1–WP5 work plan](research-closeout-workplan-2026-10-09.md). Q01–Q10 research acceptance is currently prioritized over web/PPT; dated website checks are not scientific evidence gates. The index resolves recent academic partner comparison, Q09 tasks, 2026 TPU–Frumkin lead, identity cautions and accepted public-data limits. Do not treat derived reports as new canonical portfolio decisions.
