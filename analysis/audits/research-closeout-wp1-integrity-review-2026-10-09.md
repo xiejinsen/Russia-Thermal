@@ -18,7 +18,7 @@ scope: research-only Q01–Q10 closeout
 
 **WP1-F03 / accepted and flagged — actor identity:** V.I. vs V.E. Zhukov and Denis/Dmitry Nesterov require preserved author identity, separate from actual lab membership. Known Lab1.3 capability key-person correction and data-check invariants were committed in earlier cycles. Still need current generated-graph execution for full certification.
 
-**WP1-F04 / must bounded-source-check — 2026 TPU–Frumkin:** Institution original news references a chip-cooling-relevant process and reports apparatus-bound surface response. Exact journal article, coauthor roster, affiliations and methods are not yet anchored to a primary publisher paper; no strategic uplift without that evidence.
+**WP1-F04 / must bounded-source-check — 2026 TPU–Frumkin:** Institution original news references a chip-cooling-relevant process and reports apparatus-bound surface response. Exact IJHMT journal article and 7-author roster were already identified in analysis/academic-team-mapping/tpu-frumkin-2026-original-paper-identity-gate.md (DOI 10.1016/j.ijheatmasstransfer.2026.128413); only exact per-author affiliations and full methods remain unverified; no strategic uplift without that evidence.
 
 **WP1-F05 / accepted uncertainty — Q08/Q09:** Partner willingness, usable private experimental histories, IP permissions, internal staffing cost and phone-scale tests cannot be established via public material; these are future authorized feasibility gates, not reasons for unbounded publication searches.
 
