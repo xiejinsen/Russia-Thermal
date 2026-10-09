@@ -171,3 +171,13 @@ next_action: Governance health refresh before Q08: representative-first Q04 adop
 
 V2.1 on main is the authoritative project state.
 Legacy V1 files remain for provenance/history and must not override canonical V2.1 objects.
+
+
+## 2026-10-09 latest audit freshness note (append-only, no CI claim)
+
+- Latest inspected default-branch commit before this update: `90fc7eadead6749997ab0d130e9df0afb5e74413`.
+- GitHub combined commit-status API returned **zero reported statuses** for this SHA; that result does **not** confirm Actions success or failure. Web Actions access and direct remote clone were unavailable in this audit environment.
+- Therefore canonical graph/atlas/dedup PASS above is a **historical 2026-10-08 verified result**, not independently re-run on latest 2026-10-09 HEAD.
+- [Current key Q09-to-canonical evidence trace](../analysis/audits/q09-evidence-trace-repair-2026-10-09.md) and [archive audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md) cover a bounded review, not full file-tree link closure.
+- **Fresh CI gate remains OPEN:** verify `python tools/v2repo.py --check`, `tools/graph_audit.py`, `tools/atlas_coverage_audit.py`, source-dedup and current web/export tests at a recorded actual SHA; record outcome and any warnings. Until then, do not label newest revision as full PASS.
+- The Phase1 P1 primary / MPEI conditional reserve / TPU HOLD decisions remain authoritative. New Q09 methods cards are derived hypothetical research packages, not new approvals.
