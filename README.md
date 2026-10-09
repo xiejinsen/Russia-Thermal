@@ -1,121 +1,105 @@
-# Russia-Thermal
+# Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
-Evidence-backed research on Russian thermal-management capabilities relevant to next-generation **smartphones**, with tablets as a secondary transfer reference.
+本仓库研究**俄罗斯科研机构、实验室与学者在智能手机热管理领域的实际能力，以及相对中国的差异化价值和潜在合作方向**。目标不是单纯收集论文，而是形成**有原始证据、可解释技术边界、可用于团队和领导决策**的研究结论。
 
-## Web research intelligence
+> **研究结题状态（2026-10-09）**：Q01–Q10 十个研究问题均已形成**公开资料范围内的结题判断**，其中 3 项按证据范围接受、7 项附明确限制接受。最终研究洞察报告已归档；**全仓机械检查及派生数据最新一致性尚未获得全量运行验收**。目前准备进入 PPT 内容规划，暂不推进网页制作。
 
-**Live site:** [Open Russia-Thermal Research Intelligence ↗](https://xiejinsen.github.io/Russia-Thermal/)
+## 一、项目目标与研究范围
 
-> GitHub README links open in the current tab by default. Use **Ctrl/Cmd+Click** or the **middle mouse button** to open the web UI in a new tab.
+围绕未来手机热管理技术与俄方学术合作，回答以下问题：
 
-Use the web UI for leadership review, research navigation, and evidence drill-down:
+- **找谁**：哪些俄罗斯大学、研究所、实验室和具体研究人员值得关注？他们实际完成过什么研究？
+- **有什么价值**：论文、专利及公开实验能证明哪些硬件散热、两相流、热可靠性、热建模或软件方法能力？
+- **与中国相比如何**：哪些方向已有强势中国/国际技术基线，俄罗斯还剩什么可验证的增量？
+- **能否用于手机**：从公开实验装置迁移到超薄、低功耗、可靠的手机系统，需要跨过哪些边界？
+- **如何决策**：2027–2029 年哪些问题值得研究；应该优先、储备、暂缓还是不投入？如果未来获准合作，应要求什么交付物与停止条件？
 
-- [Overview ↗](https://xiejinsen.github.io/Russia-Thermal/) — current portfolio thesis, priorities, comparator pressure and management actions
-- [Research Maps ↗](https://xiejinsen.github.io/Russia-Thermal/research-map/) — geographic discovery for Russia / China research capability
-- [Partner Portfolio ↗](https://xiejinsen.github.io/Russia-Thermal/partners/) — current P1 Primary / P2 Reserve / P3 Hold partner dispositions plus technical investment lanes
-- [Russia vs China ↗](https://xiejinsen.github.io/Russia-Thermal/landscape/) — comparator baseline and residual Russian differentiation
-- [Directions ↗](https://xiejinsen.github.io/Russia-Thermal/directions/) — strategic directions and validation gates
-- [Institutions ↗](https://xiejinsen.github.io/Russia-Thermal/institutions/) / [Scholars ↗](https://xiejinsen.github.io/Russia-Thermal/scholars/) — organization and key-person drill-down
-- [Papers ↗](https://xiejinsen.github.io/Russia-Thermal/papers/) / [Claims ↗](https://xiejinsen.github.io/Russia-Thermal/claims/) / [Evidence ↗](https://xiejinsen.github.io/Russia-Thermal/evidence/) — research-object and source traceability
-- [Decisions ↗](https://xiejinsen.github.io/Russia-Thermal/decisions/) — Keep / Narrow / Kill / Watch / Hold decision history
+**智能手机优先，平板仅作次要迁移参考**；其他平台只作为机理或方法证据。研究主要依据公开论文、专利、官方机构与产业资料，**不包含真机验证、未获授权的机构联系或非公开数据访问**。
 
-The website is a **derived presentation layer**. Canonical research truth remains in the repository objects and governance structure below.
+完整的 [Q01–Q10 研究问题与验收标准](00-project/final-insight-acceptance-contract.md) 可供逐项追踪。
 
-## Start here
+## 二、当前最重要的研究结论
 
-For a new chat or a fresh reading session:
+**核心判断：俄罗斯更可能提供有针对性的失效机理、实验数据和科研方法补充，而不是替代中国已有的手机散热器件、制造及可靠性体系。**
 
-1. [00-project/CONTINUE-HERE.md](00-project/CONTINUE-HERE.md)
-2. [00-project/STATUS.md](00-project/STATUS.md)
-3. [00-project/restart-snapshot.md](00-project/restart-snapshot.md)
-4. [views/russia-vs-china/phase1-management.md](views/russia-vs-china/phase1-management.md)
-5. [07-decisions/kill-ledger.md](07-decisions/kill-ledger.md)
+| 决策级别 | 研究机构／方向 | 结论与证据边界 |
+| --- | --- | --- |
+| **P1：优先可行性研究** | Kutateladze Institute，Lab 1.3；Pavlenko／Surtaev | 介电液体沸腾的干斑与失效机理观测具有潜在研究价值；须证明可获取、可重复的机理标签对内部模型或验证决策确有增量。**尚未证明手机 VC 性能优势。** |
+| **P2：条件储备** | Moscow Power Engineering Institute（MPEI）；Ivanov | 42 个月运行后的毛细状态变化提供长期暴露证据；但缺少证明早期预警所需的中间时序数据。 |
+| **HOLD：暂缓** | TPU／Frumkin 表面润湿性与蒸发研究 | 有明确的原始学术成果，但中国的目标器件与表面工艺基线已经较强，尚不足以升级合作优先级。 |
+| **WATCH／方法储备** | ITP Ural、TSU、ICM 等 | 关注 LHP 运行极限、瞬态 PCM 模型、电子设备热路径方法；不等同于已获得手机级验证。 |
+| **不建议投入** | 泛化的“俄罗斯手机散热全面优于中国”等命题 | 现有公开比较证据不支持。 |
 
-## Current architecture
+上述是**研究建议和未来可行性条件**，不代表已批准合作、PoC、数据授权或投资立项。投资排序以仓库内冻结的 [Phase-1 决策依据](reports/leadership-decision-brief.md) 为准。
 
-The repository uses the V2.1 canonical model:
+## 三、项目进展与下一阶段
 
-SOURCE -> CLAIM -> ACTOR / CAPABILITY -> DIRECTION -> VALIDATION -> DECISION_EVENT
+| 工作阶段 | 当前状态 |
+| --- | --- |
+| WP1 — 证据与研究仓库核对 | 已完成重点来源与结构审计；全仓机械执行验收仍待确认 |
+| WP2 — 关键论文、作者、中俄国际对照 | 重点研究线已完成有边界的复核 |
+| WP3 — Q01–Q10 逐项验收 | **10/10 形成公开资料范围内的结题处置** |
+| WP4 — 最终研究洞察与合作判断 | **已形成正式研究综合报告** |
+| WP5 — 最终仓库归档与健康验收 | 内容与项目状态已同步；全量自动校验尚未认证 |
 
-Current canonical directories:
+**下一步**：以最终洞察报告为依据，优先讨论领导汇报 PPT 的**叙事结构、逐页证据及详细备注**；在宣称仓库“所有文件完全无误”之前，仍需取得最新版本全仓校验的真实运行结果。网页开发／部署验收暂时独立搁置。
 
-- `00-project/` — charter, methodology, governance, status, restart protocol
-- `01-evidence/` — primary papers, patents, official/vendor sources
-- `02-claims/` — supportable/refutable propositions
-- `03-actors/` — institutions, labs, people and companies
-- `04-capabilities/` — demonstrated external technical capabilities
-- `05-directions/` — current strategic directions
-- `06-validation/` — data/model/PoC validation objects
-- `07-decisions/` — immutable Keep/Narrow/Kill/Watch/Hold transitions
-- `analysis/` — research analyses and audits
-- `history/` — research transactions and migration provenance
-- `reports/` — derived leadership-facing summaries; never canonical authority
-- `tools/` — deterministic repository generator/health checker
-- `views/` — generated human-readable management views
-- `web/` — derived modular presentation system
+## 四、关键信息入口
 
-## Human presentation model
+### 读研究结论和管理建议
 
-Institution -> Lab/Team -> Key People -> Capability -> Direction
+1. **[最终研究洞察与合作决策报告](reports/final-research-insight-and-collaboration-decision-2026-10-09.md)** — 当前最完整的研究结论、证据对照、2027–2029 年方向及合作停止条件。
+2. [Q01–Q10 最终研究结题矩阵](analysis/audits/research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md) — 每个问题的答案、可信度与接受限制。
+3. [Phase-1 领导决策简报](reports/leadership-decision-brief.md) — **P1／P2／HOLD 的正式决策来源**。
+4. [俄罗斯学术机构与合作方向比较](reports/russia-academic-partner-comparison-2026-10-09.md) — 各团队与中国对照、研究价值及具体课题。
+5. [Q09 合作可行性任务清单](reports/collaboration-opportunities/academic-q09-feasibility-portfolio-2026-10-09.md) — 未来若获授权，优先要求哪些数据和交付物。
 
-Institutions and people are both first-class research entities.
-Organization hierarchy comes first so capability ownership stays clear.
+### 查证据、进度与恢复项目
 
-## Research scope
+- **[研究证据总索引](00-project/research-closeout-evidence-index-2026-10-09.md)** — 从研究问题、机构、代表论文进入原始证据链。
+- [项目权威状态 STATUS](00-project/STATUS.md) — 当前阶段、历史检查记录和技术限制。
+- [跨窗口继续工作 CONTINUE-HERE](00-project/CONTINUE-HERE.md) — 新聊天窗口从这里恢复，不重新启动调研。
+- [Q01–Q10 原始跟踪台账](00-project/final-insight-question-ledger.tsv) — 保留历史任务状态及独立的研究结题处置字段。
+- [PPT 前研究仓库审计](analysis/audits/research-closeout-pre-ppt-repository-final-audit-2026-10-09.md) — 明确哪些已经检查、哪些机械验收尚未完成。
 
-Primary platform:
-- smartphones
+## 五、仓库数据结构与权威关系
 
-Secondary:
-- tablets when the mechanism transfers.
+研究对象按照以下证据链组织，而不是把结论散放在一篇长文中：
 
-Other domains are used only as mechanism, method, reliability, or capability evidence.
+```text
+原始资料 Source（论文／专利／官方来源）
+  → 可核查断言 Claim
+  → 机构／实验室／学者 Actor + 技术能力 Capability
+  → 研究方向 Direction
+  → 未来验证条件 Validation
+  → 决策与变化记录 Decision
+```
 
-The project explicitly distinguishes:
-- source fact;
-- analyst synthesis;
-- hypothesis;
-- negative/public-evidence gap.
+| 路径 | 保存内容 |
+| --- | --- |
+| `00-project/` | 项目目标、规则、状态、十问台账、跨窗口恢复 |
+| `01-evidence/`、`02-claims/` | 原始论文／专利／官方资料及其可核查主张 |
+| `03-actors/`、`04-capabilities/` | 机构、实验室、学者身份，以及有证据边界的技术能力 |
+| `05-directions/`、`06-validation/`、`07-decisions/` | 技术方向、未来验证任务及正式决策历史 |
+| `analysis/` | 原始证据复核、中俄对照、学者归属审计和结题记录 |
+| `reports/` | 综合研究报告及汇报型材料（**派生成果，不覆盖原始证据**） |
+| `tools/`、`views/`、`history/` | 仓库校验与生成视图、历史变更及迁移记录 |
+| `web/` | 网页呈现层；当前不参与研究结题及 PPT 前内容验收 |
 
-“Not publicly evidenced” must never be rewritten as “does not exist”.
+**权威性原则**：原始 Source、Claim、Actor、Capability、Direction 与正式 Decision 是可追溯的依据；研究报告和网页是对它们的综合表达。不能用汇报文字反向覆盖原始论文事实。对于公开资料无法确认的人员归属、手机迁移效果或数据授权，应保留“未知”，而不是推断已证实。
 
-## Current strategic state
+## 六、仓库维护与复核
 
-Do not duplicate detailed current conclusions in this README.
+`main` 为当前权威分支；旧版 V1 仅保留于 Git 历史，不参与现行研究判断。已有校验工具包括：
 
-Authoritative current state lives in:
-- [STATUS](00-project/STATUS.md)
-- [Direction Portfolio](05-directions/portfolio.md)
-- [Phase-1 Management View](views/russia-vs-china/phase1-management.md)
-- [Kill / Downgrade Ledger](07-decisions/kill-ledger.md)
-- [Leadership Dossiers](reports/leadership-dossiers/README.md)
-- [Final Management Synthesis](reports/final-management-synthesis.md)
-- [Web Report System](web/README.md)
+```bash
+python tools/v2repo.py --check
+python tools/graph_audit.py
+python tools/atlas_coverage_audit.py --summary
+```
 
-## Repository health
+这些命令用于核对权威对象、生成视图与研究图结构。**目前不能把旧 CI 检查结果称为最新全仓验收通过**。详见 [最终仓库审计](analysis/audits/research-closeout-pre-ppt-repository-final-audit-2026-10-09.md)。
 
-Canonical references and generated views are checked by:
+---
 
-`python tools/v2repo.py --check`
-
-GitHub Actions runs the health check on the authoritative `main` branch.
-
-## Branch policy
-
-`main` is the single authoritative working branch.
-Historical migration branches are not part of the reading or research workflow.
-
-## Legacy V1
-
-V1 content is intentionally removed from the current working tree after V2.1 cutover.
-
-It is still fully recoverable from Git history, including the frozen V1 baseline:
-
-`c4fa8d070771531f2f912897e055621a5f5d2df4`
-
-Do not restore legacy V1 directories into current `main` unless performing an explicit historical/fidelity investigation.
-
-
-## Leadership
-
-- [Leadership Decision Brief](reports/leadership-decision-brief.md) — preferred Phase-1 management summary and decision source
+*最后研究状态更新：2026-10-09。本文用于项目概览，详细证据及后续变化以以上权威对象和状态文件为准。*
