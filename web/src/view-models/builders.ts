@@ -759,39 +759,69 @@ export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
 
 export function buildLandscapeVM(): LandscapePageVM {
   const rows = sortedDirections.map((direction) => {
-    const relatedClaims = direction.claimIds
-      .map((id) => claimById.get(id))
+    // The canonical Direction plus its Capabilities are the only relation graph
+    // admitted here: Source → Claim → (Direction or linked Capability).
+    // Never infer the paper's present institution or coauthor membership.
+    const relatedClaimIds = [...new Set([
+      ...direction.claimIds,
+      ...capabilityLinks(direction).flatMap(capability => capability.claimIds)
+    ])];
+    const relatedClaims = relatedClaimIds
+      .map(id => claimById.get(id))
       .filter((item): item is ClaimRecord => Boolean(item));
+
+    const relationSourceIds = [...new Set(relatedClaims.flatMap(claim => [
+      ...claim.supportingSourceIds, ...claim.contradictingSourceIds
+    ]))];
+    const references = relationSourceIds
+      .map(id => evidenceById.get(id))
+      .filter((item): item is EvidenceRecord => Boolean(item))
+      .filter(item => item.sourceType === 'PAPER' || item.sourceType === 'PATENT')
+      .sort((a,b) => (b.year ?? 0) - (a.year ?? 0) || a.id.localeCompare(b.id))
+      .map(item => ({
+        id: item.id,
+        title: item.title,
+        year: item.year,
+        sourceType: item.sourceType,
+        primaryUrl: item.primaryUrl,
+        countryContext: item.countryContext
+      }));
 
     const russianActors = [...new Set(
       capabilityLinks(direction)
-        .map((capability) => actorById.get(capability.actorId)?.name)
-        .filter((name): name is string => Boolean(name))
+        .map(capability => actorById.get(capability.actorId))
+        .filter((actor): actor is ActorRecord => Boolean(actor && actor.country === 'RU'))
+        .map(actor => actor.name)
     )];
 
     return {
       direction: directionCard(direction),
-      chinaLabel: 'China · domestic & global comparator baseline',
+      // A narrative baseline may combine CN, global and internal alternatives.
+      // Source links are split by explicit countryContext, not guessed from titles.
+      chinaLabel: 'China and internally controlled methods (baseline text may also cite global science)',
       russiaLabel: russianActors.length
         ? `Russia · ${russianActors.slice(0, 3).join(' / ')}`
-        : 'Russia · linked capability owners',
+        : 'Russia · no named owner in this direction',
       chinaBaseline: direction.strongestBaseline ?? 'No explicit comparator baseline recorded.',
       russiaResidual: direction.residualDifferentiation ?? 'No residual differentiation recorded.',
       decision: humanize(direction.investmentLane),
-      supportingClaimCount: relatedClaims.filter((claim) => claim.supportingSourceIds.length > 0).length,
-      contradictingClaimCount: relatedClaims.filter((claim) => claim.contradictingSourceIds.length > 0).length
+      supportingClaimCount: relatedClaims.filter(claim => claim.supportingSourceIds.length > 0).length,
+      contradictingClaimCount: relatedClaims.filter(claim => claim.contradictingSourceIds.length > 0).length,
+      chinaEvidence: references.filter(source => source.countryContext === 'CN'),
+      internationalEvidence: references.filter(source => source.countryContext !== 'CN' && source.countryContext !== 'RU'),
+      russiaEvidence: references.filter(source => source.countryContext === 'RU'),
+      claimIds: relatedClaimIds
     };
   });
 
   return {
-    eyebrow: 'Comparator pressure',
-    title: 'Russia vs China thermal-management landscape',
+    eyebrow: 'Research comparison / evidence linked',
+    title: 'Russia, China and international thermal research',
     summary:
-      'This landscape does not score countries by publication counts. Each row starts from a strategic direction and shows the strongest comparator baseline, the Russian residual that survived pressure testing, its maturity and current decision lane.',
+      'Direction-by-direction scientific pressure test. The baseline prose may combine China, international work and internal capabilities; linked papers are displayed separately by Source country metadata. A link indicates graph relevance, not a matched-rig advantage or proven product benefit.',
     rows
   };
 }
-
 
 function decisionTone(eventType: string): import('../types/view-models').Tone {
   if (eventType === 'KILL') return 'critical';
