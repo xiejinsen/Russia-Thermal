@@ -192,6 +192,18 @@
         "CONTEXT_ONLY",
         null
       ]
+    },
+    "recordState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identityAliasOf": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": false
