@@ -1,0 +1,37 @@
+name: Refresh canonical generated views
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-generated-views.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate canonical views
+        run: python tools/v2repo.py
+      - name: Confirm generated views and source references
+        run: python tools/v2repo.py --check
+      - name: Commit regenerated files
+        run: |
+          git add -- 01-evidence/index.md 03-actors/index.md 05-directions/portfolio.md 07-decisions/kill-ledger.md 00-project/restart-snapshot.md views/russia-vs-china/phase1-management.md 00-project/id-registry.md history/migrations/origin-index.md
+          if git diff --cached --quiet; then
+            echo "Generated views already fresh"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh deterministic canonical generated views"
+          git push
