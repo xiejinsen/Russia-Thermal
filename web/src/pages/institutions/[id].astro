@@ -45,11 +45,12 @@ const primaryDirection =
   vm.directions[0];
 ---
 
-<BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? vm.name}>
+<BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? vm.name} immersive>
   <SiteHeader slot="header" />
 
   <InstitutionVisualHero name={vm.name} id={vm.id} summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance} capabilityCount={vm.capabilities.length} peopleCount={vm.people.length} paperCount={vm.outputSnapshot.paperCount} officialUrl={vm.officialUrl} />
 
+  <div class="legacy-evidence">
   <DetailHero
     eyebrow={`${vm.kindLabel} detail`}
     title={vm.name}
