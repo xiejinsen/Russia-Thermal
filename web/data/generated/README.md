@@ -16,6 +16,10 @@ python web/adapters/export_web.py
 
 The exporter reuses the canonical parser / validator from `tools/v2repo.py`.
 
+`questionCloseouts.json` is generated from the final WP3 Q01–Q10 acceptance matrix and the historical question ledger. The build checks ten unique questions and the 3 accepted / 7 limitation-accepted disposition split. The legacy workstream state remains separate; no final research conclusion is hand-maintained in Astro code.
+
+`npm run check:research` additionally checks site navigation and the explicit external-outreach authorization boundary.
+
 Generated datasets:
 - actors.json
 - evidence.json
@@ -24,6 +28,10 @@ Generated datasets:
 - directions.json
 - decisions.json
 - priorities.json
+- deepReads.json
+- representativeWorks.json
+- syntheses.json
+- questionCloseouts.json — WP3 Q01–Q10 final answers + ledger provenance / limitations
 - manifest.json
 
 ## Repository policy
