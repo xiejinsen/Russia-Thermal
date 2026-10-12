@@ -1,4 +1,5 @@
 ---
+import InstitutionVisualHero from '../../components/InstitutionVisualHero.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import ExplorerLinkStrip from '../../components/ExplorerLinkStrip.astro';
@@ -46,6 +47,8 @@ const primaryDirection =
 
 <BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? vm.name}>
   <SiteHeader slot="header" />
+
+  <InstitutionVisualHero name={vm.name} id={vm.id} summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance} capabilityCount={vm.capabilities.length} peopleCount={vm.people.length} paperCount={vm.outputSnapshot.paperCount} officialUrl={vm.officialUrl} />
 
   <DetailHero
     eyebrow={`${vm.kindLabel} detail`}
