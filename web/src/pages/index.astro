@@ -2,8 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { buildOverviewVM } from '../view-models/builders';
+import { questionCloseouts } from '../data/load-normalized';
+import { currentActionBoundary } from '../view-models/action-boundary';
 
 const vm = buildOverviewVM();
+const publicResearchAccepted = questionCloseouts.length;
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
 const primary = vm.priorities.find(p => p.priorityClass === 'Primary');
@@ -12,7 +15,7 @@ const hold = vm.priorities.find(p => p.priorityClass === 'Hold');
 const candidates = [
   { name: primary?.institutions[0]?.name ?? 'Kutateladze Institute of Thermophysics', person: 'Pavlenko / Surtaev · Laboratory 1.3', topic: 'Mechanism-resolved dryout', status: 'P1 · PRIMARY FEASIBILITY', gate: 'Can repeatable dry-spot labels improve a handset validation decision?', url: primary?.institutions[0]?.href ?? '/partners' },
   { name: reserve?.institutions[0]?.name ?? 'Moscow Power Engineering Institute', person: 'N. S. Ivanov', topic: '42-month thermosyphon aging', status: 'P2 · CONDITIONAL RESERVE', gate: 'Is intermediate aging-state history and permission to use it available?', url: reserve?.institutions[0]?.href ?? '/partners' },
-  { name: hold?.institutions[0]?.name ?? 'Tomsk Polytechnic University', person: 'Feoktistov · surface engineering', topic: 'Laser processing / wettability', status: 'P3 · HOLD', gate: 'Any phone-device-matched gain over Chinese process prior art?', url: hold?.institutions[0]?.href ?? '/partners' }
+  { name: hold?.institutions[0]?.name ?? 'Tomsk Polytechnic University', person: 'Feoktistov · surface engineering', topic: 'Open-droplet wettability / separate surface-process studies', status: 'P3 · HOLD', gate: 'Any phone-device-matched gain over Chinese process prior art?', url: hold?.institutions[0]?.href ?? '/partners' }
 ];
 const comparisons = [
   { topic: 'Ultra-thin VC manufacturing', baseline: 'China / internal product stack', russia: 'No verified matched phone device advantage', disposition: 'DO NOT INVEST', link: '/landscape' },
@@ -32,6 +35,7 @@ const comparisons = [
           <p class="executive" lang="zh-CN">俄罗斯的潜在价值是补充失效机理、长期退化证据和专项研究方法，而不是替代国内手机散热产品研发。</p>
           <p class="technical-lead">We reviewed named academic teams against Chinese handset-device engineering and independent global research. Only narrow, falsifiable scientific increments survive; a phone-scale hardware advantage has <strong>not</strong> been established.</p>
           <a class="inline-link" href={href('/landscape')}>Explore the research landscape <span aria-hidden="true">↗</span></a>
+          <p class="research-closeout-link"><a class="inline-link" href={href('/research-questions')}>Read the {publicResearchAccepted}/10 bounded public-research conclusions →</a></p>
         </div>
         <aside class="evidence-rail" aria-label="Research thesis provenance and scope">
           <h2>CLAIM / PROVENANCE <span class="cn-inline" lang="zh-CN">· 结论依据</span></h2>
@@ -80,7 +84,8 @@ const comparisons = [
         <a class="paper-title" href="https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855">Investigation of heat transfer, critical heat flux and dry spots dynamics during boiling of dielectric fluids HFE-7100 and Novec 649</a>
         <p>Surtaev et al. · International Journal of Heat and Mass Transfer</p>
         <div class="citation-limit"><strong>SCOPE LIMIT</strong><p>Dielectric open-boiling / optical diagnostics. No sealed smartphone device validation.</p></div>
-        <a href={href('/papers/PAPER-RU-DRY-001')}>Read this paper’s findings and limits →</a>\n        <a href={href('/claims/CLM-PAV-002')}>Inspect the supporting Dryout Claim →</a>
+        <a href={href('/papers/PAPER-RU-DRY-001')}>Read this paper’s findings and limits →</a>
+        <a href={href('/claims/CLM-PAV-002')}>Inspect the supporting Dryout Claim →</a>
       </aside>
     </article>
 
@@ -139,9 +144,9 @@ const comparisons = [
 
     <footer class="decision-footer">
       <p class="eyebrow">MANAGEMENT DECISION / EVIDENCE-LIMITED</p>
-      <h2>Authorize a P1 feasibility inquiry — not product development?<span class="heading-cn" lang="zh-CN">建议决策：是否批准 P1 前期合作可行性接洽？</span></h2>
-      <p lang="zh-CN">建议仅核实 Kutateladze 的实验条件、机理标注、原始数据及合作许可。MPEI 继续条件储备，TPU 保持 HOLD；尚无对外联系授权。</p>
-      <div class="footer-links"><a href={href('/partners')}>Partner work packages ↗</a><a href={href('/claims')}>Audit Claims ↗</a><a href={href('/papers')}>Original Papers ↗</a><a href={href('/research-coverage')}>Coverage and limitations ↗</a></div>
+      <h2>{currentActionBoundary.titleEn}<span class="heading-cn" lang="zh-CN">{currentActionBoundary.titleZh}</span></h2>
+      <p lang="zh-CN">{currentActionBoundary.detailZh} MPEI 继续条件储备，TPU 保持 HOLD。</p>
+      <div class="footer-links"><a href={href('/research-questions')}>Q01–Q10 research conclusions ↗</a><a href={href('/partners')}>Partner work packages ↗</a><a href={href('/claims')}>Audit Claims ↗</a><a href={href('/papers')}>Original Papers ↗</a><a href={href('/research-coverage')}>Coverage and limitations ↗</a></div>
     </footer>
   </div>
 
@@ -160,7 +165,9 @@ const comparisons = [
     a:hover{text-decoration:underline;text-underline-offset:4px}
     a:focus-visible{outline:3px solid #236b99;outline-offset:4px}
     .evidence-rail{border-left:2px solid #b6d4e4;padding-left:28px;align-self:start}
-    .heading-cn{display:block;margin-top:7px;font-family:var(--font-sans);font-size:.58em;font-weight:650;line-height:1.55;letter-spacing:0;color:#355a75}\n    .cn-inline{font-size:12px;letter-spacing:0;font-weight:650;color:#446b84}\n    .evidence-rail h2,.citation>span{font-size:12px;font-weight:850;letter-spacing:.09em;color:#236b99;margin:0 0 20px}
+    .heading-cn{display:block;margin-top:7px;font-family:var(--font-sans);font-size:.58em;font-weight:650;line-height:1.55;letter-spacing:0;color:#355a75}
+    .cn-inline{font-size:12px;letter-spacing:0;font-weight:650;color:#446b84}
+    .evidence-rail h2,.citation>span{font-size:12px;font-weight:850;letter-spacing:.09em;color:#236b99;margin:0 0 20px}
     .rail-entry{padding:0 0 15px;margin-bottom:16px;border-bottom:1px solid #d5e1e8}
     .rail-entry strong{font-size:16px}
     .rail-entry p{font-size:14px;color:#526879;margin:5px 0 0}
@@ -195,7 +202,8 @@ const comparisons = [
     .directory-hint,.method-boundary{font-size:14px;line-height:1.75;color:#526879}
     .directory-hint a{color:#236b99}
     .method-boundary{background:#e8f2f8;padding:17px 21px;margin:24px 0 0}
-    .source-direct{display:inline-block;color:#236b99;font-size:13px;font-weight:700;margin-top:8px;text-decoration:underline;text-underline-offset:3px}\n    .collaboration-value tbody th p{font-size:13px;font-weight:400;color:#526879;margin:6px 0}
+    .source-direct{display:inline-block;color:#236b99;font-size:13px;font-weight:700;margin-top:8px;text-decoration:underline;text-underline-offset:3px}
+    .collaboration-value tbody th p{font-size:13px;font-weight:400;color:#526879;margin:6px 0}
     .table-scroll{overflow-x:auto}
     table{width:100%;border-collapse:collapse;min-width:810px;text-align:left}
     th,td{padding:21px 16px 21px 0;border-bottom:1px solid #d5e1e8;vertical-align:top}
