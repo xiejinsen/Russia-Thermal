@@ -10,6 +10,8 @@ export interface ActorRecord {
   name: string;
   country: string;
   parentId: string | null;
+  recordState: string | null;
+  identityAliasOf: string | null;
   currentRole: string | null;
   officialUrl: string | null;
   publicContact: string | null;
