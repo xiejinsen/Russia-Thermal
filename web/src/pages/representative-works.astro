@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import selectedJson from '../../data/generated/representativeWorks.json';
-import { evidence } from '../data/load-normalized';
+import { actors, evidence } from '../data/load-normalized';
 
 type Selection = {
   id: string; teamId: string; sourceId: string | null; sourceUrl: string;
@@ -14,18 +14,61 @@ const records = selectedJson.records as Selection[];
 const canonical = new Map(evidence.map((source) => [source.id, source]));
 const base = import.meta.env.BASE_URL;
 const url = (path: string) => base + path.replace(/^\//, '');
-const panels = [
-  { id: 'ACT-KUT-LAB13', ordinal: '01', title: 'Kutateladze Institute · Laboratory 1.3',
-    description: 'P1 — studying how local dry spots develop into boiling failure.',
-    leader: 'Alexander Pavlenko; key researcher Anton Surtaev',
-    detail: 'Potential contribution: detailed experimental labels for failure mechanisms. Not yet proven in a sealed, ultra-thin smartphone vapor chamber.' },
-  { id: 'ACT-MPEI', ordinal: '02', title: 'Moscow Power Engineering Institute · Ivanov research line',
-    description: 'P2 reserve — surface coatings and long-term thermosyphon behavior.',
-    leader: 'Nikita Ivanov; academic coauthor Yuri Kuzma-Kichta',
-    detail: 'Potential contribution: observing hidden capillary degradation after long-term operation. No validated early-warning model or phone-scale result.' },
-];
+/** Editorial interpretation of bounded reviewed works, not a list of all institute output. */
+const summaries: Record<string, { short: string; theme: string; boundary: string; status: string }> = {
+  'ACT-KUT-LAB13': {
+    short: 'Kutateladze · Laboratory 1.3',
+    theme: '介电液体沸腾干斑与临界失效的实验观察',
+    boundary: 'HFE-7100 / Novec 649 开放实验，不是手机密封铜水均热板；标签数据使用权仍未知。',
+    status: '优先可行性 / P1'
+  },
+  'ACT-MPEI': {
+    short: 'MPEI · Ivanov 研究线',
+    theme: '两相热虹吸管表面与 42 个月周期运行',
+    boundary: '只有运行后状态不足以证明早期预警；缺少时序数据与手机应用验证。',
+    status: '条件储备 / P2'
+  },
+  'ACT-ITP-UBRAS': {
+    short: 'ITP Ural · LHP 实验室',
+    theme: '环路热管运行边界、铜毛细芯和氨工质实验',
+    boundary: '装置尺寸、回流结构和工质不能直接外推到超薄手机 VC。',
+    status: '科研方法观察'
+  },
+  'ACT-TPU': {
+    short: 'TPU · 表面热物理',
+    theme: '表面粗糙度、润湿性与开放液滴蒸发',
+    boundary: '2026 IJHMT 液滴实验与 Surfaces and Interfaces 激光疏水化是不同论文；逐人归属尚不完整。',
+    status: '暂缓 / HOLD'
+  },
+  'ACT-TSU': {
+    short: 'TSU · 热流体计算实验室',
+    theme: 'PCM 热缓冲、泡沫/肋片和周期热负载数值研究',
+    boundary: '现有论文主要是模型，没有手机级样机与重新凝固周期验证。',
+    status: '科研方法观察'
+  },
+  'ACT-ICM-KRASN': {
+    short: 'ICM Krasnoyarsk · 两条独立研究线',
+    theme: '一组做热管/电子模块实测；另一组研究液气界面理论',
+    boundary: '不得合并两组人员；期刊 Dmitry Nesterov 与官方 Denis Nesterov 不能擅自合一。',
+    status: '方法储备'
+  }
+};
+const actorById = new Map(actors.map(actor => [actor.id, actor]));
+const preferredOrder = ['ACT-KUT-LAB13','ACT-MPEI','ACT-ITP-UBRAS','ACT-TPU','ACT-TSU','ACT-ICM-KRASN'];
+const panels = [...new Set(records.map(record => record.teamId))]
+  .sort((a,b) => (preferredOrder.indexOf(a) < 0 ? 99 : preferredOrder.indexOf(a)) -
+                  (preferredOrder.indexOf(b) < 0 ? 99 : preferredOrder.indexOf(b)) || a.localeCompare(b))
+  .map((id,index) => ({
+    id,
+    ordinal: String(index+1).padStart(2,'0'),
+    title: summaries[id]?.short ?? actorById.get(id)?.name ?? id,
+    description: summaries[id]?.theme ?? actorById.get(id)?.researchRelevance ?? '已整理的科研研究线索',
+    detail: summaries[id]?.boundary ?? '原始科研结论与手机迁移边界须逐篇核对。',
+    status: summaries[id]?.status ?? '研究资料',
+    institutionHref: `/institutions/${id}`
+  }));
 const priority = (r: Selection) => r.deepReadPriority === 'DECISIVE' ? 0 : r.deepReadPriority === 'SUPPORTING' ? 1 : 2;
-const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence graph' : r.evidenceState === 'ORIGINAL_REVIEWED' ? 'Original reviewed · not yet linked' : r.evidenceState === 'SECONDARY_ONLY' ? 'Bibliographic lead · needs verification' : 'Research lead · identity pending';
+const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? '已纳入科研证据图谱' : r.evidenceState === 'ORIGINAL_REVIEWED' ? '原始论文或身份已核验 · 尚未纳入证据图谱' : r.evidenceState === 'SECONDARY_ONLY' ? '文献线索 · 尚待原文核查' : '研究线索 · 身份尚待确认';
 ---
 <BaseLayout title="Representative Works — Russia-Thermal" description="Representative research papers and scientific contributions of Russia thermal research groups, with evidence provenance and smartphone-transfer limits.">
   <SiteHeader slot="header" />
@@ -34,14 +77,14 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
     <header class="intro">
       <p class="eyebrow">Academic research · evidence review</p>
       <h1>Representative research works</h1>
-      <p>Which papers best demonstrate each team's research capability — and what remains unproven for smartphone thermal management?</p>
-      <p class="note">A selected scientific sample, not a complete publication census. Papers awaiting canonical evidence linking are clearly marked, even where their original article has been reviewed.</p>
+      <p>俄罗斯主要机构有哪些值得阅读的代表论文？实验、模型和手机适用性的边界分别是什么？</p>
+      <p class="note">这里只列已核查或明确标注待核验的代表性研究，不等于各机构完整论文总数。论文署名不自动证明作者目前所属实验室；未进入 Source 图谱的论文标注原始来源与核对状态。</p>
     </header>
     <nav class="team-jump" aria-label="Research team quick navigation">
       {panels.map((panel) => (
         <a class="jump-card" href={`#${panel.id}`}>
           <span class="org-index">INSTITUTION / TEAM {panel.ordinal}</span>
-          <span class="jump-label">{panel.id === 'ACT-KUT-LAB13' ? 'P1 · priority candidate' : 'P2 · conditional reserve'}</span>
+          <span class="jump-label">{panel.status}</span>
           <strong>{panel.title}</strong>
           <span class="jump-count"><b>{records.filter((r) => r.teamId === panel.id).length}</b> representative papers</span>
           <span class="jump-desc">{panel.description}</span>
@@ -54,10 +97,10 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
         <div class="team-head">
           <span class="section-number" aria-label={`Team ${panel.ordinal}`}>{panel.ordinal}</span>
           <div>
-            <p class="eyebrow">{panel.id === 'ACT-KUT-LAB13' ? 'Priority research candidate' : 'Conditional research reserve'}</p>
+            <p class="eyebrow">{panel.status}</p>
             <h2>{panel.title}</h2>
             <p>{panel.description}</p>
-            <p><strong>Key researchers:</strong> {panel.leader}</p>
+            <p><a href={url(panel.institutionHref)}>核对机构、实验室及学者归属 →</a></p>
           </div>
           <p class="team-takeaway">{panel.detail}</p>
         </div>
@@ -74,8 +117,10 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
                 </div>
                 <h3><a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{source?.title ?? r.title}</a></h3>
                 <p class="citation">{r.authors} · <em>{r.venue}</em> · {r.year ?? 'Publication year not verified'}</p>
-                <p><strong>Why this matters:</strong> {r.selectionReason}</p>
-                <p><strong>What it does not prove:</strong> {r.selectionLimit}</p>
+                <p><strong>研究价值：</strong> {r.selectionReason}</p>
+                {panel.id === 'ACT-ICM-KRASN' && <p class="research-track"><strong>科研组别：</strong>{r.researchLane.startsWith('TRACK_A') ? '电子散热与热管实验研究线' : '液气界面与热毛细理论研究线'}（两组独立）</p>}
+                {r.sourceId && <p><a href={url(`/papers/${r.sourceId}`)}>查看仓库中的原始论文记录和证据边界 →</a></p>}
+                <p><strong>不支持的外推：</strong> {r.selectionLimit}</p>
                 </div>
               </article>
             );
@@ -97,7 +142,7 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
   .intro>p:not(.eyebrow) {font-size:18px;line-height:1.6}
   .intro .note {font-size:15px!important;color:#3d5268}
   /* Organizations: navigational, solid blue header with large ordinal. */
-  .team-jump {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 40px}
+  .team-jump {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 40px}
   .jump-card {display:flex;flex-direction:column;gap:10px;border:1px solid #2d6b9f;border-radius:8px;padding:22px 24px;background:#205987;color:white;text-decoration:none;min-height:224px}
   .jump-card:hover,.jump-card:focus-visible {background:#16496f;color:white;outline:3px solid #b4d7f1;outline-offset:2px}
   .org-index {font-size:14px;letter-spacing:.12em;font-weight:800;color:#cce5f8}
@@ -126,5 +171,6 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'In evidence g
   .paper p {font-size:16px;line-height:1.55;margin:9px 0}
   .paper .citation {font-size:15px;color:#425c75;margin-bottom:15px}
   .footnote {margin-top:34px;font-size:15px;color:#36546f}
+  @media(max-width:1030px){.team-jump{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(max-width:700px) {.team-jump{grid-template-columns:1fr}.works-page{width:calc(100% - 28px)}.team-head{grid-template-columns:45px minmax(0,1fr);padding:18px 0}.team-takeaway{grid-column:2}.section-number{font-size:28px}.paper{grid-template-columns:48px minmax(0,1fr);gap:10px;padding:17px 0}.paper-index{font-size:14px}.paper h3{font-size:18px}}
 </style>
