@@ -7,6 +7,9 @@ const actors = JSON.parse(read('data/generated/actors.json')).records;
 const canonicalSources = JSON.parse(read('data/generated/evidence.json')).records;
 const actorIds = new Set(actors.map(r => r.id));
 const sourceIds = new Set(canonicalSources.map(r => r.id));
+const alias = actors.find(r => r.id === 'ACT-ICM-SBRAS');
+assert.equal(alias?.recordState, 'HISTORICAL_ALIAS', 'ICM legacy record state lost');
+assert.equal(alias?.identityAliasOf, 'ACT-ICM-KRASN', 'legacy alias not resolved to canonical ICM');
 const required = ['ACT-KUT-LAB13', 'ACT-MPEI', 'ACT-ITP-UBRAS', 'ACT-TPU', 'ACT-TSU', 'ACT-ICM-KRASN'];
 const groupIds = new Set(works.map(r => r.teamId));
 for(const id of required) {
@@ -40,6 +43,7 @@ assert.ok(tpu.some(r=>r.sourceUrl.includes('109390')));
 const atlas = read('src/pages/russia-atlas.astro');
 const atlasModel = read('src/view-models/russia-atlas.ts');
 const representative = read('src/pages/representative-works.astro');
+const directory = read('src/pages/institutions.astro');
 const institution = read('src/pages/institutions/[id].astro');
 const builder = read('src/view-models/builders.ts');
 const home = read('src/pages/index.astro');
@@ -53,5 +57,7 @@ assert.ok(representative.includes('const panels = [...new Set(records.map'), 're
 assert.ok(representative.includes('Dmitry Nesterov') && representative.includes('Denis Nesterov'), 'ICM name collision warning missing');
 assert.ok(institution.includes('reviewedTeams') && institution.includes('/representative-works#'), 'institution representative-work drill-down missing');
 assert.ok(builder.includes('scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)'), 'wrong displayed affiliation in institution view');
+assert.ok(atlasModel.includes("actor.recordState !== 'HISTORICAL_ALIAS'"), 'Russia Atlas includes historical institute alias');
+assert.ok(directory.includes("actor?.recordState !== 'HISTORICAL_ALIAS'"), 'institution directory shows historical alias as new institute');
 assert.ok(nav.includes("path: '/russia-atlas'") && home.includes("href('/russia-atlas')"), 'Russia Atlas not discoverable');
 console.log(`Russia Atlas integrity PASS: ${groupIds.size} reviewed groups, ${works.length} selections, identity disclaimers and deep links`);
