@@ -4,6 +4,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import PartnerPriorityCard from '../components/PartnerPriorityCard.astro';
 import { buildPartnerPortfolioVM } from '../view-models/builders';
+import { currentActionBoundary } from '../view-models/action-boundary';
 
 const vm = buildPartnerPortfolioVM();
 const base = import.meta.env.BASE_URL;
@@ -22,6 +23,13 @@ const priorityDirectionIds = new Set(
     <h1>{vm.title}</h1>
     <p>{vm.summary}</p>
   </section>
+
+  <aside class="authorization-boundary" aria-label="Feasibility authorization boundary">
+    <strong>RESEARCH PROPOSAL / NOT OUTREACH AUTHORIZATION</strong>
+    <p lang="zh-CN">{currentActionBoundary.detailZh}</p>
+    <p>{currentActionBoundary.detailEn}</p>
+    <a href={href('/research-questions')}>See the final Q09–Q10 research decision and limitations →</a>
+  </aside>
 
   <section class="priority-section">
     <SectionHeader
@@ -274,4 +282,8 @@ const priorityDirectionIds = new Set(
     .lane-row { grid-template-columns: 1fr; }
     .lane-row nav { grid-column: auto; }
   }
+.authorization-boundary{margin:var(--space-6) 0;padding:var(--space-5,1.25rem);border-left:3px solid var(--accent);background:var(--surface-muted);color:var(--text)}
+  .authorization-boundary strong{font-size:.78rem;letter-spacing:.06em}
+  .authorization-boundary p{line-height:1.65;margin:.5rem 0}
+  .authorization-boundary a{color:var(--accent);font-weight:700}
 </style>
