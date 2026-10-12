@@ -14,6 +14,7 @@ This directory defines the normalized web-data contracts produced by the canonic
 - `envelope.schema.json`
 - `evidence.schema.json`
 - `priority.schema.json`
+- `question-closeout.schema.json` — Q01–Q10 closeout presentation record
 
 ## Rules
 
@@ -21,3 +22,5 @@ This directory defines the normalized web-data contracts produced by the canonic
 - schema validation failure blocks the generated-data pipeline;
 - breaking contract changes require coordinated exporter and consumer migration;
 - frontend components do not redefine these domain contracts locally.
+
+Note: the Q01–Q10 join/status-count checks are executed by `web/adapters/export_web.py` and `npm run check:research`. The JSON Schema is a versioned documentation contract, not a claim that a separate JSON-Schema validator has been run.
