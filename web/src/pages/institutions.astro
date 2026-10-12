@@ -27,7 +27,11 @@ function descendantIds(rootId: string) {
 
 const researchSortOrder = { PRIMARY: 0, SELECTIVE: 1, CONTEXT_ONLY: 2 } as const;
 
-const records = vm.records.map((model) => {
+// Historical identity aliases stay addressable for provenance but are not current research institutions.
+const records = vm.records.filter(model => {
+  const actor = actorById.get(model.id);
+  return actor?.recordState !== 'HISTORICAL_ALIAS' && !actor?.identityAliasOf;
+}).map((model) => {
   const actor = actorById.get(model.id);
   const scopedIds = descendantIds(model.id);
   const scopedCapabilities = capabilities.filter((capability) => scopedIds.has(capability.actorId));
