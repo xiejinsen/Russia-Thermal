@@ -66,6 +66,7 @@ export interface RussiaAtlasEntry {
 
 export const russiaAtlas = actors
   .filter(actor => actor.country === 'RU' && actor.type !== 'PERSON')
+  .filter(actor => actor.recordState !== 'HISTORICAL_ALIAS' && !actor.identityAliasOf)
   .filter(actor => rootInstitution(actor).id === actor.id)
   .filter(actor => actor.researchClass?.startsWith('ACADEMIC_') || actor.researchDepth === 'PRIMARY' || actor.researchDepth === 'SELECTIVE')
   .map(root => {
@@ -90,7 +91,7 @@ export const russiaAtlas = actors
     const families = [...new Set(scoped.map(cap => cap.capabilityFamily ?? 'UNCLASSIFIED'))];
     const topics = [...new Set(scoped.flatMap(cap => cap.capabilityTopics ?? []))];
     const rank = priorities.filter(priority => priority.targetActorIds.some(id => institutionIds.has(id))).map(p => p.rank);
-    const teamCount = [...institutionIds].filter(id => id !== root.id).length;
+    const teamCount = [...institutionIds].filter(id => id !== root.id && !actorById.get(id)?.identityAliasOf && actorById.get(id)?.recordState !== 'HISTORICAL_ALIAS').length;
     const profileSummary = root.atlasProfile?.leadershipSummary ?? root.researchRelevance ?? '该机构已纳入有界科研样本，公开能力和手机迁移边界请查看原始档案。';
 
     return {
