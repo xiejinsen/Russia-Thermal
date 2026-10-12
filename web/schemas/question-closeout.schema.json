@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research Question Closeout Record (WP3 matrix + 00-project ledger, derived presentation only)",
+  "type": "object",
+  "required": [
+    "id",
+    "questionShort",
+    "answer",
+    "disposition",
+    "confidence",
+    "remainingLimit",
+    "decisionImpact",
+    "historicalWorkstreamState",
+    "referencePaths",
+    "sourcePath",
+    "ledgerPath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q(0[1-9]|10)$"
+    },
+    "questionShort": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disposition": {
+      "enum": [
+        "ACCEPTED_PUBLIC_EVIDENCE",
+        "ACCEPTED_WITH_DISCLOSED_LIMITATION"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "remainingLimit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decisionImpact": {
+      "type": "string"
+    },
+    "historicalWorkstreamState": {
+      "type": "string",
+      "description": "Historical workstream state, not final research acceptance."
+    },
+    "referencePaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ledgerPath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
