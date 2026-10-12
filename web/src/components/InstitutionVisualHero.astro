@@ -1,10 +1,19 @@
 ---
-interface Props {name:string;summary?:string;id:string;capabilityCount:number;peopleCount:number;paperCount:number;officialUrl?:string}
-const {name,summary,id,capabilityCount,peopleCount,paperCount,officialUrl}=Astro.props;
+interface Props {name:string;summary?:string;id:string;country?:string;capabilityCount:number;peopleCount:number;paperCount:number;officialUrl?:string}
+const {name,summary,id,country,capabilityCount,peopleCount,paperCount,officialUrl}=Astro.props;
 const base=import.meta.env.BASE_URL;
 const href=(p:string)=>base+p.replace(/^\//,'');
 const kut=/Kutateladze|Кутателадзе|IT SB RAS/i.test(name);
-const photo=kut ? "https://commons.wikimedia.org/wiki/Special:FilePath/Institute_of_Thermophysics.jpg?width=1280" : /Power Engineering|MPEI/i.test(name) ? "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_Power_Engineering_Institute_main_Building_1.jpg?width=1280" : /Polytechnic/i.test(name) ? "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A2%D0%9F%D0%A3_(%D0%A2%D0%BE%D0%BC%D1%81%D0%BA).jpg?width=1280" : /Tomsk State/i.test(name) ? "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A2%D0%BE%D0%BC%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D0%B0.jpg?width=1280" : null;
+const media: Record<string,{name:string;credit:string;license:string}>={
+ 'ACT-KUTATELADZE':{name:'Institute_of_Thermophysics.jpg',credit:'Obakeneko',license:'CC BY 3.0'},
+ 'ACT-MPEI':{name:'Moscow_Power_Engineering_Institute_main_Building_1.jpg',credit:'Qweasdqwe',license:'CC0'},
+ 'ACT-TPU':{name:'Главный_корпус_ТПУ_(Томск).jpg',credit:'Павел Андрющенко',license:'CC BY-SA 3.0'},
+ 'ACT-TSU':{name:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',credit:'Wikimedia Commons',license:'CC BY-SA 4.0'}
+};
+const building=media[id];
+const photo=building?'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(building.name)+'?width=1280':null;
+const source=building?'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(building.name):null;
+const affiliation=kut?'库塔捷拉泽热物理研究所 · 新西伯利亚':country==='CN'?'中国公开研究对照机构':country==='RU'?'俄罗斯科研机构 · 证据关联档案':'已收录科研机构 · 证据关联档案';
 ---
 <section class="institute-visual" aria-label="机构视觉档案">
   <div class="hero-scene">
@@ -12,7 +21,7 @@ const photo=kut ? "https://commons.wikimedia.org/wiki/Special:FilePath/Institute
     <div class="perspective-panel">
       <span class="kicker">INSTITUTION / RESEARCH PROFILE</span>
       <h2>{name}</h2>
-      <p class="subheading">{kut?'库塔捷拉泽热物理研究所 · 新西伯利亚':'俄罗斯科研机构 · 证据关联档案'}</p>
+      <p class="subheading">{affiliation}</p>
       <p class="synopsis">{summary || '研究机构的技术能力与关联证据，以已收录研究对象为准。'}</p>
       <div class="stat-row">
         <div><strong>{capabilityCount}</strong><span>已关联研究能力</span></div>
@@ -22,12 +31,12 @@ const photo=kut ? "https://commons.wikimedia.org/wiki/Special:FilePath/Institute
       <div class="act-row"><a href={href('/representative-works')}>代表论文 ↗</a><a href={href('/smartphone-transfer')}>手机迁移条件 ↗</a>{officialUrl && <a href={officialUrl} target="_blank" rel="noopener noreferrer">机构官方信息 ↗</a>}</div>
     </div>
     <div class="location-plate"><span>RESEARCH LOCATION</span><strong>{kut?'NOVOSIBIRSK · RUSSIA':'RUSSIAN RESEARCH NETWORK'}</strong><small>机构属性及地理位置请以已核实档案为准</small></div>
-    <span class="visual-credit">{photo ? "WIKIMEDIA COMMONS · VERIFIED BUILDING SUBJECT" : "NO VERIFIED INSTITUTION PHOTO"}</span>
+    {source ? <a class="visual-credit" href={source} target="_blank" rel="noopener noreferrer">建筑历史照片：{building.credit} / {building.license} · 原图与许可 ↗</a> : <span class="visual-credit">暂无经核实的机构建筑照片</span>}
   </div>
   <div class="research-tiles">
-    <a href={href('/capabilities')}><span class="tile-icon">◈</span><div><b>技术能力</b><small>Capabilities / 证据约束</small></div><span>↗</span></a>
-    <a href={href('/representative-works')}><span class="tile-icon">◎</span><div><b>研究成果</b><small>Original Works / 原始论文</small></div><span>↗</span></a>
-    <a href={href('/scholars')}><span class="tile-icon">✧</span><div><b>人员与团队</b><small>Researchers / 归属核验</small></div><span>↗</span></a>
+    <a href={capabilityCount>0 ? href('/institutions/'+id+'#institution-capabilities') : href('/capabilities')}><span class="tile-icon">◈</span><div><b>技术能力</b><small>Capabilities / 证据约束</small></div><span>↗</span></a>
+    <a href={href('/papers?actor='+encodeURIComponent(id))}><span class="tile-icon">◎</span><div><b>研究成果</b><small>Original Works / 原始论文</small></div><span>↗</span></a>
+    <a href={peopleCount>0 ? href('/institutions/'+id+'#institution-people') : href('/scholars')}><span class="tile-icon">✧</span><div><b>人员与团队</b><small>Researchers / 归属核验</small></div><span>↗</span></a>
     <a href={href('/landscape')}><span class="tile-icon">⌁</span><div><b>对照与边界</b><small>Comparator / 手机迁移</small></div><span>↗</span></a>
   </div>
   <p class="scope">视觉区域是浏览入口，不构成机构当前能力或手机级性能的独立证明；以下详细档案、来源与不确定性披露保留为研究权威内容。</p>
@@ -35,7 +44,7 @@ const photo=kut ? "https://commons.wikimedia.org/wiki/Special:FilePath/Institute
 <style>
 .institute-visual{margin:20px auto 42px;width:min(1400px,calc(100% - 24px));color:#effaff;font-family:inherit}.hero-scene{position:relative;min-height:570px;overflow:hidden;border-radius:19px;background:#05213c;box-shadow:0 22px 50px #0b294336}.scene-photo{position:absolute;inset:0;overflow:hidden}.visual-fallback{height:100%;background:radial-gradient(circle at 75% 40%,#1687b0,#03203c 65%)}.scene-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.83) contrast(1.07)}.scene-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#031b36 1%,#073456d9 40%,#06457539 84%),linear-gradient(0deg,#00192db8,transparent 43%)}
 .perspective-panel{position:relative;z-index:1;width:min(66%,840px);min-height:570px;box-sizing:border-box;padding:clamp(28px,4vw,62px);background:linear-gradient(115deg,#032547ed,#065081bd 75%,#43bbe81a);border-right:1px solid #6ce5ff80;clip-path:polygon(0 0,94% 5%,100% 100%,0 100%);display:flex;flex-direction:column;justify-content:center;gap:14px;backdrop-filter:blur(7px)}.kicker{font-size:11px;letter-spacing:.16em;color:#6ce4ff;font-weight:850}.perspective-panel h2{font-size:clamp(32px,3.6vw,53px);letter-spacing:-.025em;line-height:1.12;color:#fff;overflow-wrap:anywhere;margin:10px 45px 0 0}.subheading{font-size:20px;color:#91dafa;margin:0}.synopsis{font-size:15px;line-height:1.85;max-width:620px;color:#e3f2ff;margin:6px 35px 4px 0}.stat-row{display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid #6ad7fb67;padding-top:20px}.stat-row div{min-width:110px}.stat-row strong{display:block;font-size:28px;color:white}.stat-row span{font-size:12px;color:#c1deef}.act-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.act-row a{padding:10px 15px;border-radius:30px;border:1px solid #6cdaff80;color:#e5faff;text-decoration:none;background:#125e87b0;font-size:12px;font-weight:750}
-.location-plate{position:absolute;z-index:2;right:18px;top:18px;padding:15px 18px;background:#03223cbb;backdrop-filter:blur(12px);border:1px solid #6bd2ff80;border-radius:12px;display:grid;gap:5px;max-width:230px}.location-plate span{color:#81dfff;font-size:10px;letter-spacing:.12em}.location-plate strong{font-size:14px}.location-plate small{color:#b8d5e6;font-size:10px}.visual-credit{position:absolute;z-index:2;bottom:13px;right:17px;color:#d3e6f5;font-size:10px;text-shadow:0 1px 5px #000}
+.location-plate{position:absolute;z-index:2;right:18px;top:18px;padding:15px 18px;background:#03223cbb;backdrop-filter:blur(12px);border:1px solid #6bd2ff80;border-radius:12px;display:grid;gap:5px;max-width:230px}.location-plate span{color:#81dfff;font-size:10px;letter-spacing:.12em}.location-plate strong{font-size:14px}.location-plate small{color:#b8d5e6;font-size:10px}.visual-credit{position:absolute;z-index:2;bottom:13px;right:17px;color:#e5faff;font-size:11px;text-shadow:0 1px 5px #000;background:#062844ba;border-radius:6px;padding:5px 8px}
 .research-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:13px}.research-tiles a{display:flex;align-items:center;gap:14px;text-decoration:none;color:#e7f7ff;padding:16px;background:linear-gradient(135deg,#072f54,#06426b);border:1px solid #2d80aa;border-radius:11px}.research-tiles a:hover,.act-row a:hover{background:#12669a}.tile-icon{font-size:26px;color:#80e7ff}.research-tiles div{flex:1;display:grid;gap:4px}.research-tiles b{font-size:14px}.research-tiles small{font-size:11px;color:#acd0e3}.scope{font-size:12px;color:#647c8d;line-height:1.7;margin:14px 0}
 @media(max-width:950px){.perspective-panel{width:85%}.research-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.hero-scene{min-height:640px}.scene-photo img{object-position:70%}.perspective-panel{width:100%;min-height:640px;clip-path:none;padding:24px;background:linear-gradient(180deg,#042b50d6,#03203df0 82%);justify-content:end}.perspective-panel h2{font-size:32px;margin-right:0}.synopsis{margin-right:0}.location-plate{top:12px;right:12px}.research-tiles{grid-template-columns:1fr}.visual-credit{display:none}}
 @media(prefers-reduced-motion:reduce){.research-tiles a{transition:none}}
