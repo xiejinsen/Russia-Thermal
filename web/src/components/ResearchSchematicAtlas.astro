@@ -136,14 +136,14 @@ const catalog=vm.nodes.map(n=>({...n,
  <footer class="atlas-outro"><strong>研究结论与手机产品技术判断之间，必须保留证据边界。</strong><p>这是一张研究主题和机构网络的视觉索引；不能从节点数量、地理集中度或机构名气推断设备级散热优势。</p><div><a href={href('/representative-works')}>查阅代表论文 ↗</a><a href={href('/smartphone-transfer')}>手机迁移边界 ↗</a><a href={href('/research-questions')}>Q01–Q10 结题结论 ↗</a></div></footer>
 </div>
 <script>
- const root=document.querySelector('[data-schematic-root]');
+ const root=document.querySelector<HTMLElement>('[data-schematic-root]');
  if(root){
-  const search=root.querySelector('[data-filter-search]');
-  const city=root.querySelector('[data-filter-city]');
-  const direction=root.querySelector('[data-filter-direction]');
-  const entries=[...root.querySelectorAll('[data-research-item]')];
-  const count=root.querySelector('[data-filter-count]');
-  const empty=root.querySelector('[data-filter-empty]');
+  const search=root.querySelector<HTMLInputElement>('[data-filter-search]');
+  const city=root.querySelector<HTMLSelectElement>('[data-filter-city]');
+  const direction=root.querySelector<HTMLSelectElement>('[data-filter-direction]');
+  const entries=[...root.querySelectorAll<HTMLElement>('[data-research-item]')];
+  const count=root.querySelector<HTMLElement>('[data-filter-count]');
+  const empty=root.querySelector<HTMLElement>('[data-filter-empty]');
   const apply=()=>{
    const q=(search?.value??'').trim().toLowerCase();
    const c=city?.value??'';
