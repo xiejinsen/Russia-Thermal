@@ -1,4 +1,5 @@
 ---
+import ResearchVisualWorld from '../components/ResearchVisualWorld.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { buildOverviewVM } from '../view-models/builders';
@@ -26,6 +27,7 @@ const comparisons = [
 ---
 <BaseLayout title="Where Russian Thermal Science Can Add Value | Russia-Thermal" description="Evidence-linked comparison of Russia thermal science against smartphone device engineering in China and global literature.">
   <SiteHeader slot="header" />
+  <ResearchVisualWorld />
   <div class="editorial-page">
     <header class="masthead">
       <p class="eyebrow">RESEARCH REVIEW / OCTOBER 2026 / SMARTPHONE THERMAL</p>
