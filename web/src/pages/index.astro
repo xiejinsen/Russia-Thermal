@@ -33,7 +33,7 @@ const comparisons = [
       <p class="eyebrow">RESEARCH REVIEW / OCTOBER 2026 / SMARTPHONE THERMAL</p>
       <div class="masthead-grid">
         <div class="thesis">
-          <h1>Where Russian Thermal Science<br class="wide-only" /> Can Add Value</h1>
+          <h2 class="thesis-title">Where Russian Thermal Science<br class="wide-only" /> Can Add Value</h2>
           <p class="executive" lang="zh-CN">俄罗斯的潜在价值是补充失效机理、长期退化证据和专项研究方法，而不是替代国内手机散热产品研发。</p>
           <p class="technical-lead">We reviewed named academic teams against Chinese handset-device engineering and independent global research. Only narrow, falsifiable scientific increments survive; a phone-scale hardware advantage has <strong>not</strong> been established.</p>
           <a class="inline-link" href={href('/landscape')}>Explore the research landscape <span aria-hidden="true">↗</span></a>
@@ -166,7 +166,7 @@ const comparisons = [
     .masthead{padding:64px 45px 60px;border-bottom:1px solid #d5e1e8}
     .masthead-grid{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(260px,.85fr);gap:64px}
     h1,h2,h3,p{overflow-wrap:break-word}
-    h1{font-size:clamp(36px,3.65vw,54px);line-height:1.18;letter-spacing:-.045em;margin:0 0 38px}
+    .thesis-title{font-size:clamp(36px,3.65vw,54px);line-height:1.18;letter-spacing:-.045em;margin:0 0 38px}
     .executive{font-size:21px;font-weight:750;line-height:1.6;max-width:820px;margin:0 0 32px}
     .technical-lead{font-size:18px;line-height:1.8;max-width:760px;color:#526879;margin:0 0 23px}
     .inline-link,.evidence-rail a,.citation>a:last-child,.thread-link,.secondary-thread a,.footer-links a{color:#236b99;font-weight:750;text-decoration:none}
@@ -239,6 +239,6 @@ const comparisons = [
     .decision-footer>p:not(.eyebrow){max-width:900px;font-size:17px}
     .footer-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;font-size:14px}
     @media(max-width:1050px){.landscape-columns{gap:24px}.masthead-grid,.featured{gap:30px}.thread{grid-template-columns:1fr 1fr}.thread-link{grid-column:1/-1;justify-self:start}}
-    @media(max-width:760px){.landscape-columns{grid-template-columns:1fr;gap:20px}.directory-labels span:last-child{display:none}.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer{padding:36px 20px}.masthead-grid,.featured{grid-template-columns:1fr;gap:30px}.evidence-rail{border-left:0;background:#e8f2f8;padding:20px}.wide-only{display:none}h1{font-size:34px}.executive{font-size:18px}.technical-lead{font-size:16px}.study-body h2{font-size:27px}.study-body>p:not(.eyebrow){font-size:16px}.section-intro h2{font-size:26px}.thread{grid-template-columns:1fr;gap:12px}.thread-link{grid-column:auto}.notes{grid-template-columns:1fr;gap:22px}.citation{padding:20px}.decision-footer h2{font-size:26px}}
+    @media(max-width:760px){.landscape-columns{grid-template-columns:1fr;gap:20px}.directory-labels span:last-child{display:none}.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer{padding:36px 20px}.masthead-grid,.featured{grid-template-columns:1fr;gap:30px}.evidence-rail{border-left:0;background:#e8f2f8;padding:20px}.wide-only{display:none} .thesis-title{font-size:34px}.executive{font-size:18px}.technical-lead{font-size:16px}.study-body h2{font-size:27px}.study-body>p:not(.eyebrow){font-size:16px}.section-intro h2{font-size:26px}.thread{grid-template-columns:1fr;gap:12px}.thread-link{grid-column:auto}.notes{grid-template-columns:1fr;gap:22px}.citation{padding:20px}.decision-footer h2{font-size:26px}}
   </style>
 </BaseLayout>
