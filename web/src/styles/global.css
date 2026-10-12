@@ -107,3 +107,42 @@ body.theme-immersive .site-header .menu {background:#092c49;border-color:#39708e
 body.theme-immersive .site-header .menu a {color:#d4ebfa}
 body.theme-immersive .site-header .menu a:hover {background:#14587d;color:white}
 body.theme-immersive main {padding-top:1rem}
+
+/* Contrast contract for the immersed homepage. The editorial sections are light
+   reading surfaces and must NEVER inherit the dark shell's pale text. */
+body.theme-immersive .editorial-page {
+  color: #172f46;
+}
+body.theme-immersive .editorial-page > :is(header, section, article, footer) {
+  color: #172f46;
+  background-color: #e8f3fb;
+}
+body.theme-immersive .editorial-page :is(.masthead, .featured, .comparison, .directory, .outlook, .landscape-index, .collaboration-value, .decision-footer) :is(h1,h2,h3,h4,h5,h6) {
+  color: #102b42 !important;
+  opacity: 1 !important;
+}
+body.theme-immersive .editorial-page .masthead .thesis h1,
+body.theme-immersive .editorial-page .masthead .executive {
+  color: #0a2841 !important;
+  -webkit-text-fill-color: #0a2841;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+body.theme-immersive .editorial-page :is(.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer) :is(p,li,td,th,span,strong,small) {
+  color: #263e53;
+  opacity: 1;
+}
+body.theme-immersive .editorial-page :is(.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer) a {
+  color: #095b88;
+}
+body.theme-immersive .editorial-page :is(.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer) a:hover {
+  color: #003b65;
+  text-decoration: underline;
+}
+body.theme-immersive .editorial-page :is(.masthead,.featured,.comparison,.directory,.outlook,.landscape-index,.collaboration-value,.decision-footer) .eyebrow {
+  color: #0c5f87;
+}
+body.theme-immersive .editorial-page .masthead .technical-lead,
+body.theme-immersive .editorial-page .masthead .rail-entry p {
+  color: #30495e !important;
+}
