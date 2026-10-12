@@ -48,6 +48,7 @@ jobs:
         working-directory: web
         run: npm install
 
+      # The canonical generated views are committed and checked, never regenerated silently at deploy time.
       - name: Validate repository
         run: python tools/v2repo.py --check
 
