@@ -172,3 +172,18 @@ export interface SynthesisRecord {
   assessedAt: string | null;
   sourcePath: string;
 }
+
+/** Final public-research Q01-Q10 judgments; not a new scientific decision object. */
+export interface QuestionCloseoutRecord {
+  id: string;
+  questionShort: string;
+  answer: string;
+  disposition: 'ACCEPTED_PUBLIC_EVIDENCE' | 'ACCEPTED_WITH_DISCLOSED_LIMITATION';
+  confidence: string;
+  remainingLimit: string;
+  decisionImpact: string;
+  historicalWorkstreamState: string;
+  referencePaths: string[];
+  sourcePath: string;
+  ledgerPath: string;
+}
