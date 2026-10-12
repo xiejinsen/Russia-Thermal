@@ -17,11 +17,39 @@ const features = [
       <p class="lead">从科研机构到研究人员、原始论文与技术能力，探索俄罗斯热科学对未来手机热管理可能提供的差异化补充。</p>
       <div class="hero-actions"><a href={href('/russia-atlas')}>探索科研能力 Atlas ↗</a><a href={href('/research-map/russia')}>查看正式科研地图 ↗</a></div>
     </div>
-    <div class="world-map" aria-label="真实坐标科研地图">
-      <div class="live-map-label"><span>GEOREFERENCED RESEARCH MAP</span><strong>俄罗斯科研组织实际地理分布</strong></div>
-      <iframe src={href('/research-map/russia/')} title="基于实际经纬度的俄罗斯科研机构互动地图" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      <a class="map-full-link" href={href('/research-map/russia/')}>打开完整交互地图 ↗</a>
-    </div>
+    <div class="world-map" aria-label="俄罗斯科研分布示意图：城市节点通过引导线连接研究机构介绍卡片">
+      <div class="map-heading"><span>RESEARCH GEOGRAPHY / EDITORIAL ATLAS</span><strong>从地理节点认识代表科研机构</strong><small>地理位置示意 · 不用于精确定位与能力排名</small></div>
+      <div class="map-composition">
+        <svg class="map-art" viewBox="0 0 960 530" role="img" aria-label="俄罗斯示意轮廓，包含莫斯科、叶卡捷琳堡、托木斯克和新西伯利亚区域">
+          <defs>
+            <linearGradient id="rus-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c4e80" stop-opacity=".8"/><stop offset=".57" stop-color="#1874a2" stop-opacity=".44"/><stop offset="1" stop-color="#0d496b" stop-opacity=".28"/></linearGradient>
+            <filter id="node-glow"><feGaussianBlur stdDeviation="7"/></filter>
+          </defs>
+          <path d="M60 220 L86 181 111 189 137 165 160 188 189 130 224 143 253 115 286 141 329 109 367 132 395 106 434 123 482 90 522 113 558 103 602 119 641 95 685 113 731 95 764 126 808 112 840 145 888 136 909 170 873 195 910 228 874 252 833 244 812 276 779 263 747 291 711 274 673 319 636 295 603 333 562 310 531 350 486 325 451 346 419 312 380 330 350 300 323 313 284 277 255 297 226 270 194 290 166 260 122 274 103 244 77 250 Z" fill="url(#rus-fill)" stroke="#5ad7ff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M90 225 Q390 265 805 174 M205 150 Q520 190 860 238 M346 295 Q510 245 700 310" fill="none" stroke="#58bee6" opacity=".21" stroke-dasharray="6 10"/>
+          <g class="connectors" fill="none" stroke="#71e3ff" stroke-width="2">
+            <path d="M162 233 L115 306 L115 365"/><path d="M396 238 L475 317 L475 365"/><path d="M484 259 L594 325 L594 365"/><path d="M523 244 L785 309 L785 365"/>
+          </g>
+          <g fill="#8dedff" opacity=".48" filter="url(#node-glow)"><circle cx="162" cy="233" r="17"/><circle cx="396" cy="238" r="17"/><circle cx="484" cy="259" r="17"/><circle cx="523" cy="244" r="17"/></g>
+          <g fill="#ddffff" stroke="#36dfff" stroke-width="3"><circle cx="162" cy="233" r="7"/><circle cx="396" cy="238" r="7"/><circle cx="484" cy="259" r="7"/><circle cx="523" cy="244" r="7"/></g>
+          <g fill="#e7faff" font-size="16" font-weight="700"><text x="104" y="217">MOSCOW</text><text x="333" y="218">YEKATERINBURG</text><text x="444" y="288">TOMSK</text><text x="525" y="228">NOVOSIBIRSK</text></g>
+          <text x="507" y="179" fill="#8cc9e5" opacity=".45" font-size="43" letter-spacing="15">RUSSIA</text>
+        </svg>
+        <div class="map-callouts">
+          {[
+            {i:1,label:'MOSCOW · MPEI',line:'长期运行与毛细退化'},
+            {i:0,label:'NOVOSIBIRSK · KUTATELADZE',line:'沸腾与 Dryout 机理'},
+            {i:2,label:'TOMSK · TPU',line:'表面润湿与蒸发'},
+            {i:3,label:'TOMSK · TSU',line:'PCM 瞬态研究方法'}
+          ].map((callout) => <a class="map-callout" href={href('/russia-atlas')}>
+            <img src={features[callout.i].image} alt={features[callout.i].cn + ' 建筑资料图片'} loading="lazy"/>
+            <span><b>{callout.label}</b><small>{features[callout.i].cn}</small><em>{callout.line}</em></span>
+            <span class="callout-arrow" aria-hidden="true">↗</span>
+          </a>)}
+        </div>
+      </div>
+      <p class="map-caption">图为信息设计示意，连接线表示「城市 → 机构介绍」，不是实际研究合作关系。<a href={href('/research-map/russia/')}>需要精准地理信息？查看独立研究地图 ↗</a></p>
+    </div>>
   </div>
   <div class="institution-head"><div><span class="micro">FEATURED RESEARCH ORGANIZATIONS</span><h3>代表性科研机构 <span>Featured Institutions</span></h3></div><a href={href('/institutions')}>完整机构档案 ↗</a></div>
   <div class="institution-cards">
@@ -45,4 +73,26 @@ const features = [
 @media(max-width:980px){.world-top{grid-template-columns:1fr}.institution-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.summary{min-height:0}}@media(max-width:560px){.visual-world{margin:12px 0 30px;padding:20px;border-radius:14px}.institution-cards{grid-template-columns:1fr}.institution-head{align-items:start;flex-direction:column}.world-map .map-label{font-size:11px}.photo{height:190px}.hero-copy h2{font-size:36px}}
 @media(prefers-reduced-motion:reduce){.photo-card{transition:none}}
 .world-map{height:370px;border:1px solid #3287b9;border-radius:17px;overflow:hidden;background:#03182b;padding:0;box-shadow:0 20px 55px #0007;display:flex;flex-direction:column}.world-map iframe{flex:1;width:100%;border:0;background:#03182b;min-height:240px}.live-map-label{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:#072b4a}.live-map-label span{font-size:10px;letter-spacing:.12em;color:#65d7f7}.live-map-label strong{font-size:13px;color:#e4faff}.map-full-link{display:block;text-align:right;color:#a7e9ff;padding:10px 17px;font-size:12px;text-decoration:none;background:#05213b}@media(max-width:600px){.world-map{height:360px}.live-map-label{display:grid}}
+ 
+/* Non-GIS editorial map: schematic nodes visibly lead to photo-led institution callouts. */
+.world-map{height:auto!important;min-height:590px;display:block!important;border:1px solid #3287b9;border-radius:18px;background:radial-gradient(ellipse at 55% 30%,#15527e 0%,#062746 45%,#041a31 85%);overflow:hidden;box-shadow:0 22px 48px #0006}
+.map-heading{padding:17px 22px;display:grid;gap:5px;border-bottom:1px solid #31769b;background:#092d4c99}
+.map-heading span{font-size:10px;color:#69dff8;letter-spacing:.14em;font-weight:850}
+.map-heading strong{font-size:17px;color:#fff}
+.map-heading small{font-size:11px;color:#abcce0}
+.map-composition{position:relative;min-height:465px;padding:10px 18px 14px;overflow:hidden}
+.map-art{display:block;width:100%;height:auto;filter:drop-shadow(0 0 18px #25c4ec30)}
+.map-callouts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:-118px;position:relative;z-index:2}
+.map-callout{display:flex;flex-direction:column;color:#e9faff;text-decoration:none;overflow:hidden;border:1px solid #57b4d6;border-radius:10px;background:linear-gradient(145deg,#114b72f5,#061d35fa);box-shadow:0 9px 28px #0008;position:relative;min-height:172px;transition:transform .18s}
+.map-callout:hover,.map-callout:focus-visible{transform:translateY(-6px);outline:2px solid #82eafa}
+.map-callout img{width:100%;height:88px;object-fit:cover;filter:saturate(.85) brightness(.89)}
+.map-callout>span:not(.callout-arrow){padding:10px;display:grid;gap:3px}
+.map-callout b{font-size:9px;letter-spacing:.04em;color:#7de0fb}
+.map-callout small{font-size:12px;font-weight:750;color:white}
+.map-callout em{font-style:normal;font-size:10px;color:#b7d5e7}
+.callout-arrow{position:absolute;right:8px;top:7px;color:white;background:#073253b9;border-radius:100%;padding:2px 7px}
+.map-caption{margin:0;padding:11px 20px 14px;font-size:11px;line-height:1.7;color:#b9d5e6;border-top:1px solid #205778}
+.map-caption a{color:#8de9ff;margin-left:7px}
+@media(max-width:1100px){.map-callouts{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:-55px}.map-composition{min-height:auto}.world-map{min-height:0}}
+@media(max-width:560px){.map-callouts{grid-template-columns:1fr 1fr;gap:7px;margin-top:-10px}.map-callout img{height:70px}.map-art{min-height:210px}.map-callout{min-height:160px}.map-heading{padding:12px}.map-caption{padding:12px;font-size:10px}.map-art text{font-size:19px}}
 </style>
