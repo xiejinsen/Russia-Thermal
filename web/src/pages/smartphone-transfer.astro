@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { directions, capabilities, claims, evidence } from '../data/load-normalized';
+import { directionTitle, humanize, laneRank } from '../view-models/helpers';
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//,'')}`;
+const claimById = new Map(claims.map(c => [c.id,c]));
+const sourceById = new Map(evidence.map(s => [s.id,s]));
+const capById = new Map(capabilities.map(c => [c.id,c]));
+const transferItems = [...directions]
+  .sort((a,b)=>laneRank(a.investmentLane)-laneRank(b.investmentLane) || a.id.localeCompare(b.id))
+  .map(d => {
+    const caps = d.capabilityIds.map(id=>capById.get(id)).filter((c):c is NonNullable<typeof c>=>Boolean(c));
+    const relatedIds = [...new Set([...d.claimIds,...caps.flatMap(c=>c.claimIds)])];
+    const relatedClaims = relatedIds.map(id=>claimById.get(id)).filter((c):c is NonNullable<typeof c>=>Boolean(c));
+    const ids = [...new Set(relatedClaims.flatMap(c=>[...c.supportingSourceIds,...c.contradictingSourceIds]))];
+    const papers = ids.map(id=>sourceById.get(id)).filter((s):s is NonNullable<typeof s>=>Boolean(s&&s.sourceType==='PAPER'));
+    return {d,caps,papers,claimCount:relatedClaims.length};
+  });
+const checklist = [
+  {title:'装置与热路径',body:'厚度、散热面积、热源分布、热阻定义、冷端和安装姿态；不同实验 Rig 不能直接共用性能指标。'},
+  {title:'工质与界面',body:'介电沸腾液体、R410A、铜水封闭式 VC、氨工质 LHP、开放液滴实验各有不同边界。'},
+  {title:'可观测性与功耗',body:'原实验的高速成像或红外真值并不一定能被手机传感器在线观测；主动冷却必须计入风噪、泵功耗或其他寄生代价。'},
+  {title:'可靠性、封装与制造',body:'密封氧化、老化中间历史、姿态敏感性、循环/恢复、成本及数据权利，需要真实工程条件与匹配基线。'},
+];
+---
+<BaseLayout title="手机热管理迁移验证 | Russia-Thermal" description="Physical transfer boundaries from publicly observed Russian academic rigs to smartphone geometry, reliability and product evidence.">
+  <SiteHeader slot="header" />
+  <div class="transfer-page">
+    <header class="intro">
+      <p class="eyebrow">TRANSFER READINESS / PUBLIC EVIDENCE / Q06</p>
+      <h1>从俄罗斯实验研究，到手机散热还有多远？</h1>
+      <p class="lead">原始论文中的“可观测机理”，不自动意味着已经存在手机级硬件、可迁移的数据集或已验证的模型收益。此页把已研究的技术方向、实验边界及可证伪条件并列呈现。</p>
+      <div class="guard"><strong>未通过工程迁移验证：</strong>研究已结题，但不代表同工质/同尺寸手机样机测试完成、外部数据已获授权、优于中国/内部基线，或正式合作已批准。</div>
+    </header>
+    <section class="rules">
+      <h2>跨装置研究首先核查这四类边界</h2>
+      <div class="rule-grid">
+        {checklist.map((rule,i)=><article><span>0{i+1}</span><h3>{rule.title}</h3><p>{rule.body}</p></article>)}
+      </div>
+    </section>
+    <section class="lanes" aria-label="Direction-specific transfer gates">
+      <div class="section-head"><p class="eyebrow">CANONICAL DIRECTION / GATES</p><h2>各项技术方向的证据与停止条件</h2><p>以下依据现有 Direction 与 Capability 原始记录生成。来源论文仅是相关证据，不保证对手机迁移有实证支持。</p></div>
+      {transferItems.map(({d,caps,papers,claimCount})=><article class="lane" id={d.id}>
+        <header><div><span class="tag">{humanize(d.investmentLane)}</span><h3><a href={href(`/directions/${d.id}`)}>{directionTitle(d.id)}</a></h3></div><small>Phone transfer: <strong>{humanize(d.phoneTransferMaturity)}</strong></small></header>
+        <div class="lane-grid">
+          <div>
+            <strong class="label">原研究问题与可保留的价值</strong>
+            <p>{d.problem ?? d.strategicHypothesis ?? '详见关联 Direction 的原始科学问题。'}</p>
+            {d.residualDifferentiation && <p><strong>限定增量：</strong>{d.residualDifferentiation}</p>}
+            <strong class="label">实验/模型迁移限制</strong>
+            {caps.length ? caps.map(cap=><p class="boundary"><a href={href(`/capabilities/${cap.id}`)}>{cap.statement}</a><span>{cap.transferBoundary ?? '请进入能力原始记录核查实验和系统迁移边界。'}</span></p>) : <p class="boundary">没有关联的 Capability；不能推断已通过手机迁移验证。</p>}
+          </div>
+          <div class="gates">
+            <strong class="label">需要证明，才能继续</strong><p>{d.promotionGate ?? '当前没有足够明确的晋级证据；停止在研究观察阶段。'}</p>
+            <strong class="label">触发停止或降级</strong><p>{d.killGate ?? '若无法形成同装置匹配基线、可重复证据和实际工程增量，则不得凭研究主题推进。'}</p>
+            {d.internalControlBoundary && <p class="ownership"><strong>内部控制边界：</strong>{d.internalControlBoundary}</p>}
+          </div>
+        </div>
+        <footer><span>{claimCount} 个关联 Claim · {papers.length} 条关联论文记录（有界源图谱，不是发文总数）</span>
+          <a href={href(`/claims?direction=${encodeURIComponent(d.id)}`)}>核查 Claim →</a>
+          <a href={href(`/evidence?direction=${encodeURIComponent(d.id)}`)}>原始证据 →</a>
+          <a href={href(`/landscape`)}>中俄与国际基线 →</a>
+        </footer>
+      </article>)}
+    </section>
+    <footer class="closing"><h2>研究迁移不是自动立项</h2><p>当前建议仅对 P1 进行内部可行性准备；任何俄方联系、原始数据使用、联合实验和手机级 PoC 都须经过独立审批。</p><a href={href('/research-packages')}>查看研究任务与授权/停止门槛 →</a></footer>
+  </div>
+</BaseLayout>
+<style>
+:global(body){background:#f8fafc;color:#17334a}.transfer-page{width:min(1260px,calc(100% - 40px));margin:auto;padding-bottom:65px}
+.intro{padding:52px 0 30px;border-bottom:1px solid #cbdbe6}.eyebrow,.label{font-size:.75rem;letter-spacing:.07em;font-weight:800;color:#2c6d97}
+h1{font-size:clamp(2rem,3.8vw,3.2rem);line-height:1.2;max-width:950px}.lead{max-width:920px;line-height:1.75;font-size:1.08rem;color:#37566b}
+.guard{border-left:3px solid #2c779e;background:#eaf3f9;padding:17px 20px;font-size:.9rem;line-height:1.7;margin-top:20px}
+.rules{padding:35px 0;border-bottom:1px solid #cbdbe6}.rules h2{font-size:1.3rem}.rule-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.rule-grid article{border-top:2px solid #95b9d2;padding:14px 10px;background:#fff}.rule-grid span{font-size:1rem;color:#34769d;font-weight:800}.rule-grid h3{font-size:1rem;margin:8px 0}.rule-grid p{font-size:.85rem;line-height:1.6;color:#4e6478}
+.lanes{padding-top:32px}.section-head{margin-bottom:26px}.section-head h2{font-size:1.6rem;margin:7px 0}.section-head>p:last-child{color:#627688}
+.lane{border-top:2px solid #3c7798;background:#fff;margin-bottom:28px;padding:24px 24px 14px;scroll-margin-top:90px}
+.lane header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.lane header h3{font-size:1.3rem;line-height:1.4;margin:7px 0 0}.lane a{color:#1c648d}
+.lane header small{color:#546e82;min-width:130px}.tag{display:inline-block;font-size:.68rem;font-weight:750;letter-spacing:.04em;color:#2b6b96;background:#eaf2f7;padding:5px 8px}
+.lane-grid{display:grid;grid-template-columns:1.2fr .85fr;gap:28px;margin:15px 0}.lane-grid>div{min-width:0}.lane-grid p{font-size:.88rem;color:#375267;line-height:1.65}
+.boundary{margin:10px 0;padding:8px 0;border-bottom:1px solid #e2eaf0}.boundary a{font-weight:700}.boundary span{display:block;color:#5b7183;font-size:.84rem;margin-top:5px}
+.gates{background:#f1f6fa;padding:18px 22px}.gates .label{display:block;margin-top:10px}.gates .ownership{border-top:1px solid #d6e2e9;padding-top:12px}
+.lane footer{border-top:1px solid #d6e2e9;padding-top:13px;display:flex;flex-wrap:wrap;gap:11px 20px;align-items:center;color:#687d8a;font-size:.73rem}.lane footer a{font-weight:750}
+.closing{border-top:2px solid #3279a2;padding:24px 0;margin-top:38px}.closing h2{font-size:1.4rem}.closing p{color:#516879;line-height:1.7}.closing a{font-weight:800}
+@media(max-width:940px){.rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.rule-grid,.lane-grid{grid-template-columns:1fr}.lane{padding:18px 13px}.lane header{display:block}.transfer-page{width:calc(100% - 24px)}}
+</style>
