@@ -7,6 +7,7 @@ import claimsJson from '../../data/generated/claims.json';
 import deepReadsJson from '../../data/generated/deepReads.json';
 import decisionsJson from '../../data/generated/decisions.json';
 import synthesesJson from '../../data/generated/syntheses.json';
+import questionCloseoutsJson from '../../data/generated/questionCloseouts.json';
 import type {
   ActorRecord,
   CapabilityRecord,
@@ -17,7 +18,8 @@ import type {
   ClaimRecord,
   DeepReadRecord,
   DecisionRecord,
-  SynthesisRecord
+  SynthesisRecord,
+  QuestionCloseoutRecord
 } from '../types/normalized';
 
 export const actors = (actorsJson as Envelope<ActorRecord>).records;
@@ -33,3 +35,5 @@ export const deepReads = (deepReadsJson as Envelope<DeepReadRecord>).records;
 export const decisions = (decisionsJson as Envelope<DecisionRecord>).records;
 
 export const syntheses = (synthesesJson as Envelope<SynthesisRecord>).records;
+
+export const questionCloseouts = (questionCloseoutsJson as Envelope<QuestionCloseoutRecord>).records;
