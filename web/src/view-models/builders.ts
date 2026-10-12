@@ -411,7 +411,7 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
   const actor = actorById.get(id);
   if (!actor || actor.type === 'PERSON') return null;
 
-  const childActors = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type !== 'PERSON');
+  const childActors = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type !== 'PERSON' && candidate.recordState !== 'HISTORICAL_ALIAS' && !candidate.identityAliasOf);
   // All nested lab / unit descendants, not only direct children.
   const scopedActorIds = new Set(actors
     .filter(candidate => candidate.type !== 'PERSON' && institutionLineageIds(candidate.id).includes(actor.id))
