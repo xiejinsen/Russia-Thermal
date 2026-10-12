@@ -85,3 +85,25 @@ main {
 @media (max-width: 640px) {
   .hero { padding: var(--space-8) var(--space-6); }
 }
+
+/* Continuous cinematic shell; research content retains readable light surfaces. */
+body.theme-immersive {
+  background: radial-gradient(ellipse at 74% 5%, #134d75 0%, transparent 39%), linear-gradient(155deg,#031427 0%,#062f50 54%,#03152a 100%);
+  background-attachment: fixed;
+  color: #dceef9;
+}
+body.theme-immersive .site-header {
+  background: rgba(3,21,39,.95);
+  border-bottom-color: #225b7a;
+}
+body.theme-immersive .site-header .brand {color:#eaf8ff}
+body.theme-immersive .site-header .location-chip{background:#0b3555;border-color:#276788;color:#aee6fd}
+body.theme-immersive .site-header .top-link,
+body.theme-immersive .site-header summary {color:#c8e4f6}
+body.theme-immersive .site-header .top-link:hover,
+body.theme-immersive .site-header .top-link.active,
+body.theme-immersive .site-header details[open]>summary {background:#125579;color:white}
+body.theme-immersive .site-header .menu {background:#092c49;border-color:#39708e}
+body.theme-immersive .site-header .menu a {color:#d4ebfa}
+body.theme-immersive .site-header .menu a:hover {background:#14587d;color:white}
+body.theme-immersive main {padding-top:1rem}
