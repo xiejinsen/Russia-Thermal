@@ -60,8 +60,8 @@ const checklist = [
           </div>
         </div>
         <footer><span>{claimCount} 个关联 Claim · {papers.length} 条关联论文记录（有界源图谱，不是发文总数）</span>
-          <a href={href(`/claims?direction=${encodeURIComponent(d.id)}`)}>核查 Claim →</a>
-          <a href={href(`/evidence?direction=${encodeURIComponent(d.id)}`)}>原始证据 →</a>
+          <a href={href(`/claims/?direction=${encodeURIComponent(d.id)}`)}>核查 Claim →</a>
+          <a href={href(`/evidence/?direction=${encodeURIComponent(d.id)}`)}>原始证据 →</a>
           <a href={href(`/landscape`)}>中俄与国际基线 →</a>
         </footer>
       </article>)}
