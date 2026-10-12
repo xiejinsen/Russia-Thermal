@@ -301,6 +301,16 @@ export interface EvidenceExplorerVM {
   };
 }
 
+/** Raw source pointers linked through Direction/Capability/Claim, not standalone proof of a comparative advantage. */
+export interface LandscapeEvidenceRefVM {
+  id: string;
+  title: string;
+  year: number | null;
+  sourceType: string;
+  primaryUrl: string;
+  countryContext: string | null;
+}
+
 export interface LandscapeRowVM {
   direction: DirectionCardVM;
   chinaLabel: string;
@@ -310,6 +320,10 @@ export interface LandscapeRowVM {
   decision: string;
   supportingClaimCount: number;
   contradictingClaimCount: number;
+  chinaEvidence: LandscapeEvidenceRefVM[];
+  internationalEvidence: LandscapeEvidenceRefVM[];
+  russiaEvidence: LandscapeEvidenceRefVM[];
+  claimIds: string[];
 }
 
 export interface LandscapePageVM {
