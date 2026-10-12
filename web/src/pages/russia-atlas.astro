@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { russiaAtlas, russiaAtlasFamilies } from '../view-models/russia-atlas';
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//,'')}`;
+const totalWithCapabilities = russiaAtlas.filter(item => item.capabilities.length > 0).length;
+const totalTeams = russiaAtlas.reduce((n,item)=>n+item.teamCount,0);
+const families = Object.entries(russiaAtlasFamilies);
+---
+<BaseLayout title="俄罗斯热管理科研能力 Atlas | Russia-Thermal" description="Russia-first research atlas: bounded Russian institution and lab coverage, people, actual capabilities and traceable original evidence.">
+  <SiteHeader slot="header" />
+  <div class="atlas-page">
+    <header class="intro">
+      <p class="eyebrow">RUSSIA-FIRST · SCIENTIFIC CAPABILITY ATLAS</p>
+      <h1>俄罗斯热管理科研能力版图</h1>
+      <p class="summary">从科研机构进入实验室、研究人员、实际技术能力与代表论文。版图回答<strong>“俄罗斯究竟有哪些研究能力？”</strong>，不直接评价其是否优于中国手机散热方案。</p>
+      <div class="stats">
+        <div><strong>{russiaAtlas.length}</strong><span>本页收录俄罗斯学术/重点根机构</span></div>
+        <div><strong>{totalWithCapabilities}</strong><span>至少关联一项研究能力的机构</span></div>
+        <div><strong>{totalTeams}</strong><span>根机构下的已收录研究单位</span></div>
+      </div>
+      <p class="boundary"><strong>统计口径：</strong>以上是此页依据现有 Actor/Capability 图谱筛选的动态结果，并不等同于结题研究中的 28 个已恢复能力根机构或 25 个重点学术机构画像，更不是全俄罗斯机构总量。论文关联不自动证明机构署名或现任人员身份；仅呈现已收录证据。</p>
+      <div class="quick-links">
+        <a href={href('/research-map/russia')}>查看俄罗斯科研地图 ↗</a>
+        <a href={href('/representative-works')}>查看研究团队代表论文 ↗</a>
+        <a href={href('/research-questions#Q01')}>十问研究结论 · Q01/Q02 ↗</a>
+      </div>
+    </header>
+    <section class="atlas-body" aria-label="Russia capability institution directory">
+      <div class="section-heading">
+        <div><p class="eyebrow">RESEARCH ORGANIZATIONS / ORIGINAL EVIDENCE</p><h2>机构与能力目录</h2></div>
+        <p>按科研技术领域筛选，不使用单一科研实力分数。</p>
+      </div>
+      <div class="filter-bar">
+        <label for="atlas-search">检索机构、学者或技术</label>
+        <input type="search" id="atlas-search" placeholder="例如：Kutateladze / dryout / PCM / Maydanik" autocomplete="off" />
+        <label for="atlas-family">能力类别</label>
+        <select id="atlas-family">
+          <option value="">所有研究能力</option>
+          {families.map(([value,label]) => <option value={value}>{label}</option>)}
+        </select>
+        <span id="atlas-visible" aria-live="polite">{russiaAtlas.length} 个机构</span>
+      </div>
+
+      <div class="institution-list">
+        {russiaAtlas.map(institution => (
+          <article class="institution" data-atlas-entry
+            data-search={institution.searchText}
+            data-family={institution.families.join('|')}>
+            <div class="org-column">
+              <div class="org-meta">
+                <span>{institution.city}</span>
+                <span>{institution.researchClass.replaceAll('_',' ')}</span>
+                {institution.priorityRanks.map(rank => <b>{rank}（合作研究优先级，非机构排名）</b>)}
+              </div>
+              <h3><a href={href(`/institutions/${institution.id}`)}>{institution.name}</a></h3>
+              <p class="org-summary">{institution.profileSummary}</p>
+              <p class="org-count">{institution.teamCount} 个收录下属科研单位 · {institution.people.length} 个按 Actor 隶属关系关联的人物 · {institution.capabilities.length} 项已收录能力</p>
+              {institution.people.length > 0 && <div class="people">
+                <span class="label">PERSONNEL IN CURRENT RESEARCH GRAPH / 已建档人物</span>
+                <div>{institution.people.slice(0,5).map(person =>
+                  <a href={href(`/scholars/${person.id}`)}>{person.name}</a>)}</div>
+                {institution.people.length > 5 && <small>另有 {institution.people.length-5} 人请进入机构档案查阅</small>}
+              </div>}
+            </div>
+            <div class="technical-column">
+              <p class="label">ACTUAL RESEARCH / 实际技术能力</p>
+              <div class="family-tags">
+                {institution.families.map(f => <span>{russiaAtlasFamilies[f] ?? f.replaceAll('_',' ')}</span>)}
+              </div>
+              {institution.capabilities.length > 0 ? <div class="cap-list">
+                {institution.capabilities.slice(0,3).map(cap => <div class="capability">
+                  <a href={href(`/capabilities/${cap.id}`)}>{cap.statement}</a>
+                  {cap.transferBoundary && <p>{cap.transferBoundary}</p>}
+                </div>)}
+                {institution.capabilities.length > 3 && <p class="more">还有 {institution.capabilities.length - 3} 项能力；点击机构档案查看完整关联。</p>}
+              </div> : <p class="unverified">目前没有通过 Capability 对象建立的直接技术证据；不据此推断该机构没有研究能力。</p>}
+              <div class="sources">
+                <p class="label">LINKED RUSSIAN SOURCE EVIDENCE / 研究证据关联（非机构发表总量）</p>
+                {institution.linkedRuPapers.length > 0
+                ? institution.linkedRuPapers.slice(0,2).map(paper => <a href={href(`/papers/${paper.id}`)}>{paper.title} <span>({paper.year ?? '年份未验证'}) ↗</span></a>)
+                : <p>尚无通过当前 Claim/Capability 关系关联的俄罗斯论文记录，亦不代表零发表。</p>}
+              </div>
+              {institution.publicGaps.length > 0 && <details class="uncertainty">
+                <summary>已披露的证据缺口</summary>
+                <ul>{institution.publicGaps.slice(0,5).map(gap => <li>{gap}</li>)}</ul>
+              </details>}
+            </div>
+          </article>
+        ))}
+      </div>
+      <p id="atlas-empty" hidden>没有与当前筛选条件匹配的已收录机构。请放宽关键词或能力类型；这不是对俄罗斯全国科研能力的否定。</p>
+    </section>
+    <footer class="atlas-footer">
+      <h2>科研机构版图与合作优先级是两种不同判断</h2>
+      <p>一个研究所拥有原创论文或实验装置，并不自动说明它已经具备智能手机量产级均热板能力。未来是否开展合作，需要进一步证明与中国、国际和内部方案相比的可验证增量及数据授权。</p>
+      <a href={href('/landscape')}>继续阅读中俄及国际技术对照 →</a>
+    </footer>
+  </div>
+</BaseLayout>
+<script>
+  const search = document.querySelector<HTMLInputElement>('#atlas-search');
+  const family = document.querySelector<HTMLSelectElement>('#atlas-family');
+  const visible = document.querySelector<HTMLElement>('#atlas-visible');
+  const empty = document.querySelector<HTMLElement>('#atlas-empty');
+  const entries = [...document.querySelectorAll<HTMLElement>('[data-atlas-entry]')];
+  const refresh = () => {
+    const q = (search?.value ?? '').trim().toLowerCase();
+    const f = family?.value ?? '';
+    let count = 0;
+    for (const node of entries) {
+      const match = (!q || (node.dataset.search ?? '').includes(q)) &&
+        (!f || (node.dataset.family ?? '').split('|').includes(f));
+      node.hidden = !match;
+      if (match) count += 1;
+    }
+    if (visible) visible.textContent = `${count} / ${entries.length} 个机构`;
+    if (empty) empty.hidden = count !== 0;
+  };
+  search?.addEventListener('input',refresh);
+  family?.addEventListener('change',refresh);
+</script>
+<style>
+  :global(body){background:#f8fafc;color:#142b40}
+  .atlas-page{width:min(1320px,calc(100% - 48px));margin:auto;padding:0 0 75px}
+  .intro{padding:57px 0 43px;border-bottom:1px solid #cddbe6}
+  .eyebrow,.label{font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:#2a688d}
+  h1{font-size:clamp(32px,4.1vw,52px);line-height:1.2;margin:20px 0;color:#173a58}
+  .summary{max-width:930px;font-size:19px;line-height:1.75;color:#304d63}
+  .stats{display:flex;gap:35px;margin:28px 0;flex-wrap:wrap}
+  .stats div{border-left:3px solid #26648f;padding:4px 20px}
+  .stats strong{display:block;font-size:28px;font-weight:850}
+  .stats span{font-size:13px;color:#526d80}
+  .boundary{max-width:1120px;background:#ecf3f7;border-left:3px solid #7baaca;padding:15px 20px;font-size:14px;line-height:1.75}
+  .quick-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:25px}
+  a{color:#205e89;text-underline-offset:3px}
+  .quick-links a{font-weight:700;font-size:14px}
+  .atlas-body{margin-top:40px}
+  .section-heading{display:flex;justify-content:space-between;gap:25px;align-items:end}
+  .section-heading h2{font-size:27px;margin:8px 0}
+  .section-heading p:last-child{color:#597183;font-size:14px}
+  .filter-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:20px 0 24px;border-bottom:2px solid #2a688d}
+  .filter-bar label{font-size:13px;font-weight:750;color:#36576c}
+  .filter-bar input,.filter-bar select{background:white;border:1px solid #adc2d1;border-radius:3px;padding:10px 12px;color:#183650;font:inherit}
+  .filter-bar input{min-width:min(390px,100%);flex:1}
+  #atlas-visible{margin-left:auto;font-weight:750;color:#205e89;font-size:13px}
+  .institution{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:52px;padding:35px 4px;border-bottom:1px solid #cfdae3;background:transparent}
+  .institution[hidden],#atlas-empty[hidden]{display:none}
+  .org-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:#536b7f;font-size:11px;letter-spacing:.03em}
+  .org-meta>span,.org-meta>b{padding:5px 8px;background:#e8f1f6;font-weight:650}
+  .org-meta>b{background:#daeaf4}
+  .institution h3{font-size:22px;line-height:1.35;margin:14px 0}
+  .org-summary{line-height:1.65;color:#334f62;font-size:15px}
+  .org-count{font-size:12px;line-height:1.6;color:#53748c}
+  .people{padding-top:15px;border-top:1px solid #d5e0e9;margin-top:18px}
+  .people div{display:flex;flex-wrap:wrap;gap:7px 15px;margin-top:9px}
+  .people a{font-size:13px;font-weight:700}
+  .people small{color:#5a7284}
+  .family-tags{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+  .family-tags span{background:#e6f1f8;border:1px solid #bad5e5;color:#2b5673;font-size:12px;padding:5px 8px}
+  .cap-list{margin-top:12px}
+  .capability{padding:12px 0;border-bottom:1px solid #d7e0e8}
+  .capability>a{font-weight:750;font-size:14px}
+  .capability p,.unverified{color:#5a7180;font-size:13px;line-height:1.65;margin:7px 0}
+  .more{color:#587389;font-size:13px}
+  .sources{padding-top:19px}
+  .sources a{display:block;margin:9px 0;font-size:13px;line-height:1.5}
+  .sources p:not(.label){font-size:12px;color:#627b8f}
+  .uncertainty{border-top:1px solid #d5e0e9;padding-top:14px;color:#597183}
+  .uncertainty summary{cursor:pointer;font-weight:700;font-size:12px}
+  .uncertainty ul{padding-left:20px;line-height:1.6;font-size:12px}
+  #atlas-empty{padding:32px 10px;color:#526a80}
+  .atlas-footer{padding:36px 0;border-top:2px solid #236b99;margin-top:50px}
+  .atlas-footer h2{font-size:24px}
+  .atlas-footer p{line-height:1.75;max-width:880px;color:#496477}
+  @media(max-width:900px){.institution{grid-template-columns:1fr;gap:10px}.section-heading{display:block}}
+  @media(max-width:650px){.atlas-page{width:calc(100% - 26px)}.intro{padding-top:32px}.stats{gap:12px}.stats div{width:calc(50% - 9px)}.filter-bar input{min-width:100%}#atlas-visible{margin-left:0}}
+  a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #2875a2;outline-offset:2px}
+</style>
