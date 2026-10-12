@@ -48,7 +48,7 @@ const primaryDirection =
 <BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? vm.name} immersive>
   <SiteHeader slot="header" />
 
-  <InstitutionVisualHero name={vm.name} id={vm.id} summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance} capabilityCount={vm.capabilities.length} peopleCount={vm.people.length} paperCount={vm.outputSnapshot.paperCount} officialUrl={vm.officialUrl} />
+  <InstitutionVisualHero name={vm.name} id={vm.id} country={vm.country} summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance} capabilityCount={vm.capabilities.length} peopleCount={vm.people.length} paperCount={vm.outputSnapshot.paperCount} officialUrl={vm.officialUrl} />
 
   <div class="legacy-evidence">
   <DetailHero
@@ -177,7 +177,7 @@ const primaryDirection =
       residual={primaryDirection?.residualDifferentiation}
     />
 
-    {vm.people.length > 0 && <section class="panel">
+    {vm.people.length > 0 && <section id="institution-people" class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">People</p><h2>Associated researchers and recorded affiliations (not all current team members)</h2></div>
         <span>{vm.people.length} linked people</span>
@@ -191,7 +191,7 @@ const primaryDirection =
       </div>
     </section>}
 
-    {vm.capabilities.length > 0 && <section class="panel">
+    {vm.capabilities.length > 0 && <section id="institution-capabilities" class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">Capabilities</p><h2>What the evidence says this institution can actually do</h2></div>
         <span>{vm.capabilities.length} documented capabilities</span>
@@ -216,7 +216,7 @@ const primaryDirection =
       </div>
     </section>}
 
-    {vm.claims.length > 0 && <section class="panel">
+    {vm.claims.length > 0 && <section id="institution-claims" class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">Claims</p><h2>Propositions connecting capability to strategic judgment</h2></div>
         <a href={href(`/claims?actor=${encodeURIComponent(vm.id)}`)}>All claims →</a>
@@ -229,7 +229,7 @@ const primaryDirection =
       </div>
     </section>}
 
-    {vm.evidence.length > 0 && <section class="panel">
+    {vm.evidence.length > 0 && <section id="institution-evidence" class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">Evidence</p><h2>Representative sources behind the institution profile</h2></div>
         <a href={href(`/evidence?actor=${encodeURIComponent(vm.id)}`)}>All evidence →</a>
@@ -255,7 +255,7 @@ const primaryDirection =
       </div>
     </section>}
 
-    {vm.directions.length > 0 && <section class="panel">
+    {vm.directions.length > 0 && <section id="institution-directions" class="panel">
       <header class="panel-head">
         <div><p class="section-kicker">Strategy</p><h2>Directions this institution can influence</h2></div>
       </header>
