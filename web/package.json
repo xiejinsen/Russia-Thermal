@@ -8,10 +8,11 @@
     "build": "python adapters/export_web.py && npm run check:research && npm run check:atlas && npm run check:comparison && astro build",
     "preview": "astro preview",
     "check": "python adapters/export_web.py && npm run check:research && npm run check:atlas && npm run check:comparison && astro check",
-    "check:links": "node scripts/check-internal-links.mjs",
+    "check:links": "node scripts/check-internal-links.mjs && npm run check:visual-contract",
     "check:research": "node scripts/check-research-closeout.mjs",
     "check:atlas": "node scripts/check-russia-atlas.mjs",
-    "check:comparison": "node scripts/check-comparison-transfer.mjs"
+    "check:comparison": "node scripts/check-comparison-transfer.mjs",
+    "check:visual-contract": "node scripts/check-web-quality.mjs"
   },
   "dependencies": {
     "astro": "^5.14.1"
