@@ -10,7 +10,7 @@ const repo = 'https://github.com/xiejinsen/Russia-Thermal/blob/main/';
 const sourceHref = (path: string) => repo + path.split('/').map(encodeURIComponent).join('/');
 
 const topicIndex: Record<string, { title: string; subtitle: string; links: Array<{ label: string; path: string }> }> = {
-  Q01: { title: '俄罗斯有哪些相关科研机构？', subtitle: 'Institutions & research landscape', links: [{ label: '机构目录', path: '/institutions' }, { label: '俄罗斯研究地图', path: '/research-map/russia' }] },
+  Q01: { title: '俄罗斯有哪些相关科研机构？', subtitle: 'Institutions & research landscape', links: [{ label: '俄罗斯科研能力 Atlas', path: '/russia-atlas' }, { label: '机构目录', path: '/institutions' }, { label: '俄罗斯研究地图', path: '/research-map/russia' }] },
   Q02: { title: '关键实验室和学者是谁？', subtitle: 'Labs, principal researchers & affiliations', links: [{ label: '学者目录', path: '/scholars' }, { label: '机构与实验室', path: '/institutions' }] },
   Q03: { title: '真实科研能力有哪些？', subtitle: 'Observed capabilities and research methods', links: [{ label: '技术能力', path: '/capabilities' }, { label: '科研覆盖', path: '/research-coverage' }] },
   Q04: { title: '哪些论文和专利有代表性？', subtitle: 'Original scientific evidence and provenance', links: [{ label: '代表性论文', path: '/representative-works' }, { label: '原始论文索引', path: '/papers' }] },
