@@ -4,10 +4,10 @@ const base=import.meta.env.BASE_URL;
 const href=(path:string)=>path==='/'?base:base+path.replace(/^\//,'');
 const rootIds=['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU'];
 const labels=[
- {name:'莫斯科动力工程学院',en:'Moscow Power Engineering Institute',city:'MOSCOW',focus:'长期毛细退化与可靠性研究',note:'公开资料涉及长期运行后的毛细状态变化；中间时间序列与手机应用价值需要进一步核验。',photo:'Moscow_Power_Engineering_Institute_main_Building_1.jpg'},
- {name:'库塔捷拉泽热物理研究所',en:'Kutateladze Institute of Thermophysics',city:'NOVOSIBIRSK',focus:'沸腾 / Dryout 局部机理诊断',note:'实验室光学及红外观测可提供失效状态信息，但不能直接等同于手机密闭均热板性能。',photo:'Institute_of_Thermophysics.jpg'},
- {name:'托木斯克理工大学',en:'Tomsk Polytechnic University',city:'TOMSK',focus:'润湿性、表面工程与蒸发',note:'表面处理和蒸发研究提供科学方法；需要证明相对现有手机工艺的可验证增量。',photo:'Главный_корпус_ТПУ_(Томск).jpg'},
- {name:'托木斯克国立大学',en:'Tomsk State University',city:'TOMSK',focus:'热模型与电子器件传热',note:'已关联电子冷却建模等研究方法；并不意味着存在可直接替换手机产品的成熟方案。',photo:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg'}
+ {name:'莫斯科动力工程学院',en:'Moscow Power Engineering Institute',city:'MOSCOW',focus:'长期毛细退化与可靠性研究',note:'公开资料涉及长期运行后的毛细状态变化；中间时间序列与手机应用价值需要进一步核验。',photo:'Moscow_Power_Engineering_Institute_main_Building_1.jpg',credit:'Qweasdqwe',license:'CC0'},
+ {name:'库塔捷拉泽热物理研究所',en:'Kutateladze Institute of Thermophysics',city:'NOVOSIBIRSK',focus:'沸腾 / Dryout 局部机理诊断',note:'实验室光学及红外观测可提供失效状态信息，但不能直接等同于手机密闭均热板性能。',photo:'Institute_of_Thermophysics.jpg',credit:'Obakeneko',license:'CC BY 3.0'},
+ {name:'托木斯克理工大学',en:'Tomsk Polytechnic University',city:'TOMSK',focus:'润湿性、表面工程与蒸发',note:'表面处理和蒸发研究提供科学方法；需要证明相对现有手机工艺的可验证增量。',photo:'Главный_корпус_ТПУ_(Томск).jpg',credit:'Павел Андрющенко',license:'CC BY-SA 3.0'},
+ {name:'托木斯克国立大学',en:'Tomsk State University',city:'TOMSK',focus:'热模型与电子器件传热',note:'已关联电子冷却建模等研究方法；并不意味着存在可直接替换手机产品的成熟方案。',photo:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',credit:'Александр Рауш',license:'CC BY-SA 4.0'}
 ];
 const entries=rootIds.map((id,i)=>({id,...labels[i],profile:russiaAtlas.find(a=>a.id===id),link:href('/institutions/'+id)}));
 const cities=[
@@ -23,7 +23,7 @@ const cities=[
  <div class="hero-row">
   <div class="hero-copy">
    <p class="kicker">RUSSIA THERMAL RESEARCH / EVIDENCE-LINKED LANDSCAPE</p>
-   <h2 id="world-heading">俄罗斯热管理<br/><span>科研版图</span></h2>
+   <h1 id="world-heading">俄罗斯热管理<br/><span>科研版图</span></h1>
    <p class="english">Russian Thermal Science Landscape</p>
    <p class="lead">从科研机构进入学者、实验研究与原始证据。地图让你看见研究在哪里，机构卡片则解释它们能为手机热管理研究提供什么。</p>
    <div class="hero-actions"><a href={href('/research-map/russia/')}>完整科研图解 ↗</a><a href={href('/russia-atlas/')}>研究能力 Atlas ↗</a></div>
@@ -56,6 +56,7 @@ const cities=[
      <span class="view-link">查看机构、学者与证据 <b aria-hidden="true">↗</b></span>
     </div>
    </a>
+   <p class="image-credit">建筑照片：{school.credit} / {school.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(school.photo)} target="_blank" rel="noopener noreferrer">来源与授权 ↗</a></p>
   </article>)}
  </div>
  <div class="visual-footer"><strong>研究价值需要通过具体证据证明。</strong><span>机构地理位置与论文研究发现，都不能直接推出手机产品级散热优势。</span><a href={href('/smartphone-transfer')}>查看手机迁移边界 ↗</a></div>
@@ -64,8 +65,8 @@ const cities=[
 .visual-world{color:#eaf7ff;background:radial-gradient(ellipse at 80% 0,#145985 0,transparent 38%),linear-gradient(145deg,#03182b,#082f4e 57%,#03172b);border:1px solid #1b5b83;border-radius:20px;padding:clamp(22px,3.5vw,46px);margin:14px 0 40px;box-shadow:0 20px 50px #00152960}
 .hero-row{display:grid;grid-template-columns:minmax(270px,.85fr) minmax(0,1.28fr);gap:20px;align-items:center}
 .kicker{font-size:11px;letter-spacing:.12em;color:#76ddf5;font-weight:850;line-height:1.6;margin:0}
-.hero-copy h2{font-size:clamp(35px,4vw,57px);line-height:1.13;letter-spacing:-.04em;margin:18px 0 8px;color:#fff}
-.hero-copy h2 span{color:#83dfff}.english{font-size:19px;font-weight:650;color:#afdff4;margin:0 0 19px}.lead{font-size:16px;line-height:1.9;color:#daebf5;max-width:550px}
+.hero-copy h1{font-size:clamp(35px,4vw,57px);line-height:1.13;letter-spacing:-.04em;margin:18px 0 8px;color:#fff}
+.hero-copy h1 span{color:#83dfff}.english{font-size:19px;font-weight:650;color:#afdff4;margin:0 0 19px}.lead{font-size:16px;line-height:1.9;color:#daebf5;max-width:550px}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.hero-actions a{padding:11px 18px;text-decoration:none;color:#f3feff;font-weight:750;border:1px solid #4799c2;border-radius:30px;background:#12517b}.hero-actions a:first-child{background:#097cad}.hero-actions a:hover{background:#1e83b4}
 .map-visual{overflow:hidden;border:1px solid #3383aa;border-radius:13px;background:radial-gradient(circle at 35% 60%,#12527c80,#041a2d 75%);box-shadow:0 15px 35px #0007}
 .map-hd{padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #1c5979}.map-hd span{font-size:11px;color:#83e2fc;letter-spacing:.08em;font-weight:750}.map-hd strong{font-size:13px;color:#e9f8ff}
@@ -82,7 +83,7 @@ const cities=[
 .photo{height:145px;position:relative;background:#103a57}.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.87) brightness(.95)}.photo:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(0deg,#0a233cdc,transparent)}
 .badge-number,.city{position:absolute;z-index:1;color:white;font-weight:800;text-shadow:0 1px 5px #000}.badge-number{top:10px;left:10px;font-size:19px}.city{bottom:12px;right:10px;font-size:11px}
 .copy{padding:16px}.copy h4{color:#fff;font-size:16px;line-height:1.35;margin:0 0 4px}.english-name{color:#bedff0;font-size:11px;line-height:1.5;min-height:33px;margin:0 0 15px}.focus{color:#8deaff;border-top:1px solid #32698c;padding-top:12px;font-size:13px;font-weight:800}.description{color:#d0e4ee;font-size:12px;line-height:1.75;min-height:90px}.view-link{display:flex;justify-content:space-between;gap:6px;color:#abedff;font-weight:800;font-size:12px;border-top:1px solid #25638b;padding-top:12px}
-.visual-footer{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;padding-top:20px;margin-top:23px;border-top:1px solid #286d90;font-size:12px;color:#cce6f3}.visual-footer strong{color:white}.visual-footer a{color:#a6edff;margin-left:auto}
+.image-credit{padding:0 15px 12px;color:#c5dfea;font-size:10px;line-height:1.55;margin:0}.image-credit a{color:#a0eeff}.visual-footer{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;padding-top:20px;margin-top:23px;border-top:1px solid #286d90;font-size:12px;color:#cce6f3}.visual-footer strong{color:white}.visual-footer a{color:#a6edff;margin-left:auto}
 @media(max-width:1030px){.hero-row{grid-template-columns:1fr}.institute-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.description{min-height:0}}
 @media(max-width:580px){.visual-world{border-radius:11px;padding:17px}.institute-grid{grid-template-columns:1fr}.institutions-title{flex-direction:column;align-items:start}.photo{height:190px}.map-hd{flex-direction:column;align-items:start}.geo-node b{font-size:8px}.geo-node small{display:none}}
 @media(prefers-reduced-motion:reduce){.institute-card{transition:none}}
