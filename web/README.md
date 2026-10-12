@@ -5,6 +5,15 @@ authority: DERIVED_PRESENTATION_LAYER
 date: 2026-10-12
 
 
+## 2026-10-12 Russia Capability Atlas and representative works (Wave B)
+
+- `/russia-atlas/` is a Russia-first institution/ability explorer derived from normalized Actor/Capability/Claim/Source records, including recorded lab descendants and actual Actor parent-based people affiliations. Search and capability-family filtering do not invent scholarly rankings.
+- `/representative-works/` now contains **27 bounded work selections across six research lines**: Kutateladze Lab 1.3 (10), MPEI (4), ITP Ural (3), TPU (2), TSU (3), and ICM Krasnoyarsk (5). These are **representative selected works**, not a nationwide paper census or verified individual current-lab membership. Unlinked sources remain clearly differentiated from canonical papers.
+- Two independent ICM lines (Nesterov electronics experiments vs Bekezhanova/Stepanova interface theory) are separate. The source byline `Dmitry A. Nesterov` remains distinct from current institute `Denis A. Nesterov`. `ACT-ICM-SBRAS` remains a historical alias under `ACT-ICM-KRASN` and is excluded from current root counts.
+- Institution pages link to curated team work lists and use the actual normalized person-parent affiliation rather than inferring every capability coauthor belongs to the opened institute.
+- `npm run check:atlas` is included in the `check` and `build` pipeline; current code has **not** yet passed a captured end-to-end Astro runtime/build+deployed-browser verification in this session.
+- [Wave B implementation and QA record](../analysis/audits/web-russia-atlas-wave-b-implementation-2026-10-12.md).
+
 ## 2026-10-12 final-research integration (current)
 
 - Research Q01–Q10 answers now have a read-only, generated presentation dataset `questionCloseouts.json`, sourced from WP3 final matrix and the historical final-insight-question ledger. The exporter enforces 10 matching IDs, matching acceptances and the exact 3/7 disposition split.
