@@ -5,6 +5,15 @@ authority: DERIVED_PRESENTATION_LAYER
 date: 2026-10-12
 
 
+## 2026-10-12 evidence-linked comparison, transfer and work packages (Wave C)
+
+- `/landscape/`: one unified research comparison matrix, replacing the earlier duplicated card list; each Direction links to *graph-related* Russian, Chinese, and international/other original sources, full Claim and evidence routes. Source links are scientifically relevant references, NOT proof of same-rig superiority.
+- `/smartphone-transfer/`: Q06 transfer readiness and falsifiable promotion/STOP gates, derived from canonical Direction and Capability boundary fields.
+- `/research-packages/`: Q09 bounded academic research work packages, with direct canonical institution routes, original archived OPP markdown, deliverables, pass and stop conditions. TPU remains HOLD. External contact, data sharing and PoC remain unauthorized; current wording uses `currentActionBoundary`.
+- Both `npm run check` and `npm run build` execute `npm run check:comparison` after data generation and earlier Q01–Q10/Atlas integrity checks. **Latest runtime builds and live Pages availability have not been certified.**
+- Actual published paths to manually review *if a new deployment succeeds*: `https://xiejinsen.github.io/Russia-Thermal/landscape/`, `https://xiejinsen.github.io/Russia-Thermal/smartphone-transfer/`, `https://xiejinsen.github.io/Russia-Thermal/research-packages/`.
+- [Wave C implementation report](../analysis/audits/web-comparison-transfer-wave-c-2026-10-12.md).
+
 ## 2026-10-12 Russia Capability Atlas and representative works (Wave B)
 
 - `/russia-atlas/` is a Russia-first institution/ability explorer derived from normalized Actor/Capability/Claim/Source records, including recorded lab descendants and actual Actor parent-based people affiliations. Search and capability-family filtering do not invent scholarly rankings.
