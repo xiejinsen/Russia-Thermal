@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { questionCloseouts } from '../data/load-normalized';
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
+const repo = 'https://github.com/xiejinsen/Russia-Thermal/blob/main/';
+const sourceHref = (path: string) => repo + path.split('/').map(encodeURIComponent).join('/');
+
+const topicIndex: Record<string, { title: string; subtitle: string; links: Array<{ label: string; path: string }> }> = {
+  Q01: { title: '俄罗斯有哪些相关科研机构？', subtitle: 'Institutions & research landscape', links: [{ label: '机构目录', path: '/institutions' }, { label: '俄罗斯研究地图', path: '/research-map/russia' }] },
+  Q02: { title: '关键实验室和学者是谁？', subtitle: 'Labs, principal researchers & affiliations', links: [{ label: '学者目录', path: '/scholars' }, { label: '机构与实验室', path: '/institutions' }] },
+  Q03: { title: '真实科研能力有哪些？', subtitle: 'Observed capabilities and research methods', links: [{ label: '技术能力', path: '/capabilities' }, { label: '科研覆盖', path: '/research-coverage' }] },
+  Q04: { title: '哪些论文和专利有代表性？', subtitle: 'Original scientific evidence and provenance', links: [{ label: '代表性论文', path: '/representative-works' }, { label: '原始论文索引', path: '/papers' }] },
+  Q05: { title: '与中国及国际研究相比有什么差异？', subtitle: 'China and global strongest alternatives', links: [{ label: '中俄技术比较', path: '/landscape' }, { label: '研究原始证据', path: '/evidence' }] },
+  Q06: { title: '哪些成果能够迁移到手机？', subtitle: 'Smartphone transfer barriers', links: [{ label: '能力和技术边界', path: '/capabilities' }, { label: '技术方向', path: '/directions' }] },
+  Q07: { title: '2027–2029 年值得关注什么？', subtitle: 'Research questions, not product forecasts', links: [{ label: '研究方向', path: '/directions' }, { label: '前沿关注', path: '/frontier' }] },
+  Q08: { title: '为什么不直接依靠中国或内部团队？', subtitle: 'Incremental value against alternatives', links: [{ label: '中俄与国际比较', path: '/landscape' }, { label: '合作价值', path: '/partners' }] },
+  Q09: { title: '可能与谁合作、交付什么？', subtitle: 'Partner feasibility and stop conditions', links: [{ label: '合作方向', path: '/partners' }, { label: '研究机构', path: '/institutions' }] },
+  Q10: { title: '最终该优先、储备或放弃什么？', subtitle: 'Priorities, reserves, hold and kill', links: [{ label: '合作优先级', path: '/partners' }, { label: '正式决策记录', path: '/decisions' }] },
+};
+
+const rows = questionCloseouts.map(q => ({ ...q, topic: topicIndex[q.id] }));
+const direct = rows.filter(q => q.disposition === 'ACCEPTED_PUBLIC_EVIDENCE').length;
+const limited = rows.filter(q => q.disposition === 'ACCEPTED_WITH_DISCLOSED_LIMITATION').length;
+const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
+  ? '公开证据范围内接受'
+  : '附明确限制接受';
+---
+<BaseLayout title="Research Questions & Closeout | Russia-Thermal" description="Q01–Q10 final bounded public-research answers, underlying evidence and explicit limitations.">
+  <SiteHeader slot="header" />
+  <div class="questions-page">
+    <header class="intro">
+      <p class="kicker">RESEARCH CLOSEOUT / PUBLIC EVIDENCE / 2026-10-09</p>
+      <h1>研究问题与结题判断 <span>Research Questions</span></h1>
+      <p class="lead" lang="zh-CN">我们研究了哪些问题、公开资料实际支持什么判断、又有什么仍未得到验证？从十问的最终答案可以直接进入研究机构、学者、论文、Claim 与正式决策。</p>
+      <div class="status-row">
+        <strong>{rows.length} / 10 <small>已形成研究结题判断</small></strong>
+        <strong>{direct} <small>公开证据范围内接受</small></strong>
+        <strong>{limited} <small>附明确限制接受</small></strong>
+      </div>
+      <p class="scope" lang="zh-CN"><strong>重要边界：</strong>研究结题不等于俄罗斯全国穷尽调查、手机实机验证、原始数据授权或俄方同意合作。P1 目前仅建议内部可行性准备；对外接洽需要独立授权。</p>
+    </header>
+
+    <nav class="question-nav" aria-label="Research question index">
+      {rows.map(q => <a href={`#${q.id}`} aria-label={`${q.id}: ${q.topic.title}`}><span>{q.id}</span><b>{q.topic.title}</b></a>)}
+    </nav>
+
+    <section class="results" aria-label="Research closeout conclusions">
+      {rows.map(q => <article class="question" id={q.id}>
+        <header class="question-header">
+          <div class="identity">
+            <span class="number">{q.id}</span>
+            <div><h2>{q.topic.title}</h2><p class="subtitle">{q.topic.subtitle}</p></div>
+          </div>
+          <span class="outcome">{dispositionLabel(q.disposition)}</span>
+        </header>
+        <div class="body">
+          <div class="result">
+            <p class="label">WHAT PUBLIC RESEARCH SUPPORTS · 结题研究判断</p>
+            <p>{q.answer}</p>
+          </div>
+          <aside class="limitations">
+            <p class="label">BOUNDARIES & NEXT EVIDENCE GATE · 证据限制</p>
+            <p>{q.remainingLimit}</p>
+            <p class="confidence">Evidence confidence: <strong>{q.confidence}</strong></p>
+          </aside>
+        </div>
+        <div class="actions">
+          <div class="related">
+            {q.topic.links.map(link => <a href={href(link.path)}>{link.label} <span aria-hidden="true">↗</span></a>)}
+          </div>
+          <details class="sources">
+            <summary>查核源文件与研究过程</summary>
+            <div class="reference-list">
+              <a href={sourceHref(q.sourcePath)} target="_blank" rel="noopener noreferrer">WP3 最终研究判断及处置 ↗</a>
+              <a href={sourceHref(q.ledgerPath)} target="_blank" rel="noopener noreferrer">Q01–Q10 原始研究台账 ↗</a>
+              {q.referencePaths.map(path => <a href={sourceHref(path)} target="_blank" rel="noopener noreferrer">{path} ↗</a>)}
+            </div>
+          </details>
+        </div>
+      </article>)}
+    </section>
+    <footer class="closing">
+      <h2>从研究结论走向实际判断，仍需验证新增价值</h2>
+      <p lang="zh-CN">Kutateladze：优先评估干斑机理标签的数据与模型增量；MPEI：仅在长期老化中间历史确实存在时重新评估；TPU：暂缓。相关原始实验均不能直接证明俄罗斯手机均热板优于中国现有技术。</p>
+      <a href={href('/partners')}>继续查看合作方向与验证条件 →</a>
+      <p class="method">内容来自已归档的 WP3 十问最终矩阵和研究台账，页面构建时从源文件生成，不维护独立的网页科研真值。历史工作流状态与研究结题状态分别保留。</p>
+    </footer>
+  </div>
+</BaseLayout>
+<style>
+  :global(body){background:#f8fafc;color:#142b40}
+  :global(main){max-width:1320px;padding-top:0}
+  .questions-page{padding:0 24px 70px}
+  .intro{padding:54px 12px 42px;border-bottom:1px solid #d5e1e8}
+  .kicker,.label{font-size:12px;letter-spacing:.08em;font-weight:800;color:#236b99}
+  h1{font-size:clamp(32px,4vw,52px);line-height:1.25;letter-spacing:-.025em;margin:20px 0}
+  h1 span{display:block;font-size:.52em;font-weight:500;color:#60788a;margin-top:6px}
+  .lead{max-width:870px;font-size:18px;line-height:1.8;color:#34495e}
+  .status-row{display:flex;flex-wrap:wrap;gap:15px;margin:24px 0}
+  .status-row strong{background:#e8f2f8;border-left:3px solid #236b99;padding:10px 18px;font-size:24px}
+  .status-row small{display:block;font-size:12px;color:#426179;font-weight:600}
+  .scope{font-size:14px;line-height:1.75;color:#43566a;border-top:1px solid #d5e1e8;padding-top:22px;max-width:960px}
+  .question-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:32px 0 44px}
+  .question-nav a{display:flex;gap:9px;padding:12px;background:white;border:1px solid #d5e1e8;color:#1b425e;text-decoration:none;min-height:76px}
+  .question-nav span{font-weight:800;font-size:13px;color:#236b99}
+  .question-nav b{font-size:13px;line-height:1.45;font-weight:650}
+  .question-nav a:hover{background:#e8f2f8;border-color:#9abed4}
+  .results{display:grid;gap:24px}
+  .question{background:white;border:1px solid #d5e1e8;scroll-margin-top:88px}
+  .question-header{display:flex;gap:24px;justify-content:space-between;align-items:flex-start;padding:24px 26px 17px;border-bottom:1px solid #d5e1e8}
+  .identity{display:flex;align-items:flex-start;gap:15px}
+  .number{font-size:20px;font-weight:850;color:#236b99}
+  h2{font-size:22px;line-height:1.4;margin:0}
+  .subtitle{font-size:13px;margin:8px 0 0;color:#647d8f}
+  .outcome{flex-shrink:0;font-size:12px;font-weight:750;border:1px solid #b9d5e5;padding:7px 10px;color:#205779;background:#eff7fb}
+  .body{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+  .body > *{padding:13px 25px 22px;min-width:0}
+  .result p:last-child,.limitations p:nth-child(2){font-size:15px;line-height:1.8;overflow-wrap:anywhere}
+  .limitations{background:#f4f8fb;border-left:1px solid #d5e1e8}
+  .confidence{font-size:12px;color:#60778d;border-top:1px solid #d5e1e8;padding-top:10px}
+  .actions{padding:13px 25px;display:flex;gap:24px;justify-content:space-between;align-items:center;border-top:1px solid #d5e1e8;flex-wrap:wrap}
+  .related{display:flex;flex-wrap:wrap;gap:16px}
+  .actions a,.closing a{color:#236b99;font-size:13px;font-weight:750}
+  details.sources{max-width:100%;color:#55748c;font-size:13px}
+  details summary{cursor:pointer;font-weight:700}
+  .reference-list{display:grid;gap:8px;margin-top:12px;max-width:min(600px,calc(100vw - 64px));overflow-wrap:anywhere}
+  .closing{border-top:2px solid #236b99;margin-top:52px;padding-top:28px}
+  .closing h2{margin:0 0 14px}
+  .closing p{font-size:16px;max-width:900px;line-height:1.8}
+  .closing .method{font-size:13px;color:#62778a;margin-top:28px}
+  @media(max-width:1024px){.question-nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media(max-width:720px){.questions-page{padding:0 12px 40px}.intro{padding:32px 6px 28px}.question-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.question-header{flex-wrap:wrap;padding:18px 15px}.body{grid-template-columns:1fr}.body > *{padding:13px 15px}.limitations{border-left:0;border-top:1px solid #d5e1e8}.actions{padding:14px 15px}.question-nav a{min-height:70px}}
+  a:focus-visible,summary:focus-visible{outline:3px solid #236b99;outline-offset:3px}
+</style>
