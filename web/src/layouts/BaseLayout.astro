@@ -4,11 +4,13 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  immersive?: boolean;
 }
 
 const {
   title,
-  description = 'Russia-Thermal evidence-backed research report'
+  description = 'Russia-Thermal evidence-backed research report',
+  immersive = false
 } = Astro.props;
 ---
 
@@ -21,7 +23,7 @@ const {
     <slot name="head" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class:list={{ 'theme-immersive': immersive }}>
     <slot name="header" />
     <main>
       <slot />
