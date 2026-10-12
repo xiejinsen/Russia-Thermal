@@ -5,10 +5,11 @@
   "scripts": {
     "data:generate": "python adapters/export_web.py",
     "dev": "python adapters/export_web.py && astro dev",
-    "build": "python adapters/export_web.py && astro build",
+    "build": "python adapters/export_web.py && npm run check:research && astro build",
     "preview": "astro preview",
-    "check": "python adapters/export_web.py && astro check",
-    "check:links": "node scripts/check-internal-links.mjs"
+    "check": "python adapters/export_web.py && npm run check:research && astro check",
+    "check:links": "node scripts/check-internal-links.mjs",
+    "check:research": "node scripts/check-research-closeout.mjs"
   },
   "dependencies": {
     "astro": "^5.14.1"
