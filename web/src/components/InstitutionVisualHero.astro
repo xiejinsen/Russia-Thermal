@@ -8,7 +8,7 @@ const media: Record<string,{name:string;credit:string;license:string}>={
  'ACT-KUTATELADZE':{name:'Institute_of_Thermophysics.jpg',credit:'Obakeneko',license:'CC BY 3.0'},
  'ACT-MPEI':{name:'Moscow_Power_Engineering_Institute_main_Building_1.jpg',credit:'Qweasdqwe',license:'CC0'},
  'ACT-TPU':{name:'Главный_корпус_ТПУ_(Томск).jpg',credit:'Павел Андрющенко',license:'CC BY-SA 3.0'},
- 'ACT-TSU':{name:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',credit:'Wikimedia Commons',license:'CC BY-SA 4.0'}
+ 'ACT-TSU':{name:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',credit:'Александр Рауш',license:'CC BY-SA 4.0'}
 };
 const building=media[id];
 const photo=building?'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(building.name)+'?width=1280':null;
@@ -31,7 +31,7 @@ const affiliation=kut?'库塔捷拉泽热物理研究所 · 新西伯利亚':cou
       <div class="act-row"><a href={href('/representative-works')}>代表论文 ↗</a><a href={href('/smartphone-transfer')}>手机迁移条件 ↗</a>{officialUrl && <a href={officialUrl} target="_blank" rel="noopener noreferrer">机构官方信息 ↗</a>}</div>
     </div>
     <div class="location-plate"><span>RESEARCH LOCATION</span><strong>{kut?'NOVOSIBIRSK · RUSSIA':'RUSSIAN RESEARCH NETWORK'}</strong><small>机构属性及地理位置请以已核实档案为准</small></div>
-    {source ? <a class="visual-credit" href={source} target="_blank" rel="noopener noreferrer">建筑历史照片：{building.credit} / {building.license} · 原图与许可 ↗</a> : <span class="visual-credit">暂无经核实的机构建筑照片</span>}
+    {building && source ? <a class="visual-credit" href={source} target="_blank" rel="noopener noreferrer">建筑历史照片：{building.credit} / {building.license} · 原图与许可 ↗</a> : <span class="visual-credit">暂无经核实的机构建筑照片</span>}
   </div>
   <div class="research-tiles">
     <a href={capabilityCount>0 ? href('/institutions/'+id+'#institution-capabilities') : href('/capabilities')}><span class="tile-icon">◈</span><div><b>技术能力</b><small>Capabilities / 证据约束</small></div><span>↗</span></a>
