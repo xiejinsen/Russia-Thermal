@@ -1,0 +1,199 @@
+---
+import type { ResearchMapVM } from '../types/view-models';
+import { actors } from '../data/load-normalized';
+
+interface Props { vm: ResearchMapVM; country: 'RU' | 'CN'; }
+const {vm, country} = Astro.props;
+const isRussia = country === 'RU';
+const base = import.meta.env.BASE_URL;
+const href = (path:string) => path === '/' ? base : base + path.replace(/^\//,'');
+const photos: Record<string, {file:string; author:string; license:string}> = {
+ 'ACT-KUTATELADZE':{file:'Institute_of_Thermophysics.jpg',author:'Obakeneko',license:'CC BY 3.0'},
+ 'ACT-MPEI':{file:'Moscow_Power_Engineering_Institute_main_Building_1.jpg',author:'Qweasdqwe',license:'CC0'},
+ 'ACT-TPU':{file:'Главный_корпус_ТПУ_(Томск).jpg',author:'Павел Андрющенко',license:'CC BY-SA 3.0'},
+ 'ACT-TSU':{file:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',author:'Wikimedia Commons contributor',license:'CC BY-SA 4.0'}
+};
+const canonical = ['ACT-KUTATELADZE','ACT-MPEI','ACT-TPU','ACT-TSU'];
+const nodeById = new Map(vm.nodes.map(n=>[n.actorId,n]));
+const actorById = new Map(actors.map(a=>[a.id,a]));
+const selected = isRussia ? canonical.map(id=>{
+  const node=nodeById.get(id);
+  const actor=actorById.get(id);
+  if(!actor)return null;
+  return {
+    id,name:node?.name ?? actor.name,city:node?.city ?? actor.city ?? '位置待核实',
+    latitude:node?.latitude,longitude:node?.longitude,href:href('/institutions/'+id),
+    priority:node?.priorityRank,capabilityCount:node?.capabilityCount ?? 0,
+    scholarCount:node?.scholarCount ?? 0,description:actor.atlasProfile?.leadershipSummary ?? actor.researchRelevance ?? '',
+    photo:photos[id]
+  };
+}).filter((n):n is NonNullable<typeof n>=>Boolean(n)) : vm.nodes.slice(0,4).map(n=>({
+  id:n.actorId,name:n.name,city:n.city,latitude:n.latitude,longitude:n.longitude,
+  href:href(n.href),priority:n.priorityRank,capabilityCount:n.capabilityCount,
+  scholarCount:n.scholarCount,description:actorById.get(n.actorId)?.researchRelevance ?? '',
+  photo:undefined
+}));
+const bounds=isRussia?{west:17,east:191,north:84,south:40}:{west:73,east:135,north:55,south:17};
+function pin(latitude?:number,longitude?:number) {
+ if(typeof latitude!=='number'||typeof longitude!=='number')return null;
+ const lon=isRussia&&longitude<0?longitude+360:longitude;
+ const x=3.5+(lon-bounds.west)/(bounds.east-bounds.west)*93;
+ const y=(26+(bounds.north-latitude)/(bounds.north-bounds.south)*370)/430*100;
+ if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>100||y<0||y>100)return null;
+ return {x:x.toFixed(2),y:y.toFixed(2)};
+}
+const cityOptions=[...new Set(vm.nodes.map(n=>n.city))].sort((a,b)=>a.localeCompare(b));
+const directions=[...new Map(vm.nodes.flatMap(n=>n.directions).map(d=>[d.id,d])).values()];
+const catalog=vm.nodes.map(n=>({...n,
+  link:href(n.href),
+  searchable:[n.name,n.city,n.region??'',...n.keyPeople.map(p=>p.name),...n.directions.map(d=>d.title)].join(' ').toLowerCase(),
+  directionIds:n.directions.map(d=>d.id).join('|')
+}));
+---
+<div class="schematic-root" data-schematic-root>
+ <header class="atlas-hero">
+  <div class="atlas-intro">
+   <p class="kicker">{isRussia?'RUSSIAN RESEARCH LANDSCAPE':'CHINA COMPARATOR LANDSCAPE'} / VISUAL RESEARCH ATLAS</p>
+   <h1>{isRussia?'俄罗斯热管理科研版图':'中国热管理研究对照版图'}</h1>
+   <p class="english">{isRussia?'Organizations · People · Capabilities · Original Evidence':'Comparator Organizations · Capabilities · Evidence'}</p>
+   <p class="lead">{isRussia?'从城市集群认识俄罗斯研究机构：谁在研究什么、关联哪些学者，以及哪些结论尚不能直接迁移到手机热管理。':'以中国研究机构作为学术与工程对照基线。这里展示已收录样本的研究位置与证据关联，不推断全国科研强弱。'}</p>
+   <div class="metrics">
+    <div><strong>{vm.mappedActorCount}</strong><span>有位置记录的根机构</span></div>
+    <div><strong>{vm.scholarCount}</strong><span>关联人物记录</span></div>
+    <div><strong>{vm.capabilityCount}</strong><span>关联技术能力</span></div>
+    <div><strong>{vm.unmappedActorCount}</strong><span>位置待核验</span></div>
+   </div>
+  </div>
+  <aside class="hero-context">
+   <div class="scope-mark">EVIDENCE / BOUNDARY</div>
+   <h2>地图展示的是研究分布，不是实力排名</h2>
+   <p>节点对应有位置记录的机构，数字和卡片用于关联阅读；研究能力与手机工程价值必须通过原始证据链独立评估。</p>
+   <a href={href(isRussia?'/russia-atlas':'/landscape')}>{isRussia?'进入完整俄罗斯能力 Atlas':'查看中俄及国际研究对照'} ↗</a>
+  </aside>
+ </header>
+
+ <section class="visual-atlas" aria-labelledby="infographic-title">
+  <div class="section-line"><div><p class="kicker">01 / RESEARCH NETWORK</p><h2 id="infographic-title">{isRussia?'科研城市与代表机构':'研究对照机构与区域节点'}</h2></div><span>GEO-REFERENCED OUTLINE · EDITORIAL INFOGRAPHIC</span></div>
+  <div class="atlas-columns">
+   <div class="map-pane">
+    <div class="map-graphic">
+     <img class="country-outline" src={href('/assets/'+(isRussia?'russia':'china')+'-editorial-outline.svg')} alt={isRussia?'俄罗斯地理轮廓示意底图':'中国地理轮廓示意底图'} loading="eager"/>
+     {selected.map((item,i)=>{const coord=pin(item.latitude,item.longitude);return coord &&
+       <a class="city-pin" href={item.href} style={'left:'+coord.x+'%;top:'+coord.y+'%'} aria-label={'第'+(i+1)+'组 '+item.city+'：'+item.name+'，查看机构档案'} title={item.name}>
+        <span class="pin-aura"></span><b>{String(i+1).padStart(2,'0')}</b>
+       </a>})}
+     <div class="map-footnote">{isRussia?'RUSSIA':'CHINA'} / SCIENCE · RESEARCH · TRANSFER</div>
+    </div>
+    <div class="map-key"><span><i></i> 编号节点对应右侧同编号机构</span><span>连线与节点只表达信息关联，不代表学术合作</span></div>
+    <p class="cartography-note">轮廓采用 Natural Earth 公共地理数据转换为静态矢量图；节点根据现有机构经纬度绘制。<strong>非 GIS 工具，不支持拖拽地图。</strong></p>
+   </div>
+   <div class="focus-list">
+    {selected.map((item,i)=><article class="focus-card">
+     <a class="focus-main" href={item.href}>
+      <div class="focus-media">
+       {item.photo?<img src={'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(item.photo.file)+'?width=800'} loading="lazy" alt={item.name+'建筑资料照片'}/>:<span class="visual-no-photo" aria-label="无经核验的建筑照片"><b>RESEARCH</b><small>INSTITUTION</small></span>}
+       <span class="focus-number">{String(i+1).padStart(2,'0')}</span>
+      </div>
+      <div class="focus-copy">
+       <span class="focus-location">{item.city}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
+       <h3>{item.name}</h3>
+       <p>{item.description || '机构档案包含已记录的研究能力、关联学者及其证据边界。'}</p>
+       <span class="focus-bottom">{item.capabilityCount} 能力 · {item.scholarCount} 人物 <em>查看档案 ↗</em></span>
+      </div>
+     </a>
+     {item.photo&&<p class="credit">图像：{item.photo.author} / {item.photo.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(item.photo.file)} target="_blank" rel="noopener noreferrer">查看原始图片与授权 ↗</a></p>}
+    </article>)}
+    {selected.length===0&&<p class="no-data">现有资料中尚未有可展示的地理节点，请在下方查看机构登记和证据缺口。</p>}
+   </div>
+  </div>
+ </section>
+
+ <section class="catalog-section" aria-labelledby="directory-title">
+  <div class="section-line light"><div><p class="kicker">02 / COMPLETE RESEARCH INDEX</p><h2 id="directory-title">机构、研究人员与能力入口</h2></div><a href={href('/institutions')}>完整机构总目录 ↗</a></div>
+  <p class="directory-explain">以下逐项来自研究图谱，不对机构研究水平进行排序。论文关联不等于论文作者归属，也不等于人员现在仍任职于该机构。</p>
+  <div class="catalog-controls">
+   <label>搜索机构 / 人员 / 研究方向<input type="search" data-filter-search placeholder="例如：dryout / Tomsk / thermal..." autocomplete="off"/></label>
+   <label>城市<select data-filter-city><option value="">全部城市</option>{cityOptions.map(city=><option value={city}>{city}</option>)}</select></label>
+   <label>关联研究方向<select data-filter-direction><option value="">全部研究方向</option>{directions.map(d=><option value={d.id}>{d.title}</option>)}</select></label>
+   <span class="counter" data-filter-count aria-live="polite">{catalog.length} 个机构</span>
+  </div>
+  <div class="catalog-grid">
+   {catalog.map(node=><article class="research-row" data-research-item data-search={node.searchable} data-city={node.city} data-direction={node.directionIds}>
+    <div class="row-head"><span>{node.city}</span>{node.priorityRank&&<small>{node.priorityRank} · 合作研究优先级</small>}</div>
+    <h3><a href={node.link}>{node.name} <span aria-hidden="true">↗</span></a></h3>
+    <p>{node.scholarCount} 个关联人物 · {node.capabilityCount} 项研究能力 · {node.directions.length} 条方向关联</p>
+    {node.directions.length>0&&<div class="tags">{node.directions.slice(0,2).map(d=><a href={href('/directions/'+d.id)}>{d.title} ↗</a>)}</div>}
+    {node.keyPeople.length>0&&<div class="people-line"><span>关联学者：</span>{node.keyPeople.slice(0,3).map(person=><a href={href(person.href)}>{person.name} ↗</a>)}</div>}
+   </article>)}
+  </div>
+  <p class="no-data" data-filter-empty hidden>没有符合筛选条件的已收录机构。请更改检索条件。</p>
+ </section>
+ {vm.unmappedActors.length>0&&<section class="coverage-gaps">
+  <p class="kicker">LOCATION COVERAGE / OPEN DATA GAPS</p><h2>尚无可信坐标的研究对象</h2>
+  <p>以下机构保留在研究目录中，但暂不放置示意节点，避免制造并不存在的精确地理信息。</p>
+  <div>{vm.unmappedActors.map(a=><a href={href(a.href)}>{a.name} ↗</a>)}</div>
+ </section>}
+ <footer class="atlas-outro"><strong>研究结论与手机产品技术判断之间，必须保留证据边界。</strong><p>这是一张研究主题和机构网络的视觉索引；不能从节点数量、地理集中度或机构名气推断设备级散热优势。</p><div><a href={href('/representative-works')}>查阅代表论文 ↗</a><a href={href('/smartphone-transfer')}>手机迁移边界 ↗</a><a href={href('/research-questions')}>Q01–Q10 结题结论 ↗</a></div></footer>
+</div>
+<script>
+ const root=document.querySelector('[data-schematic-root]');
+ if(root){
+  const search=root.querySelector('[data-filter-search]');
+  const city=root.querySelector('[data-filter-city]');
+  const direction=root.querySelector('[data-filter-direction]');
+  const entries=[...root.querySelectorAll('[data-research-item]')];
+  const count=root.querySelector('[data-filter-count]');
+  const empty=root.querySelector('[data-filter-empty]');
+  const apply=()=>{
+   const q=(search?.value??'').trim().toLowerCase();
+   const c=city?.value??'';
+   const d=direction?.value??'';
+   let visible=0;
+   for(const item of entries){
+    const ok=(!q||(item.dataset.search??'').includes(q))&&(!c||item.dataset.city===c)&&(!d||(item.dataset.direction??'').split('|').includes(d));
+    item.hidden=!ok;
+    if(ok)visible++;
+   }
+   if(count)count.textContent=visible+' / '+entries.length+' 个机构';
+   if(empty)empty.hidden=visible!==0;
+  };
+  [search,city,direction].forEach(control=>{control?.addEventListener('input',apply);control?.addEventListener('change',apply)});
+ }
+</script>
+<style>
+ :global(body.theme-immersive) {background:radial-gradient(ellipse at 72% 0,#19527a,transparent 36%),linear-gradient(145deg,#031526,#082e50 55%,#041728);color:#e6f6ff}
+ .schematic-root{color:#e8f7ff;max-width:1330px;margin:auto;padding:16px 0 72px}
+ .kicker{margin:0;color:#6ed8f5;font-weight:800;font-size:12px;letter-spacing:.12em}
+ .atlas-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(245px,.75fr);gap:40px;padding:54px 44px 48px;border-radius:20px 20px 0 0;background:radial-gradient(circle at 12% 20%,#134f79 0%,transparent 45%),linear-gradient(120deg,#092b4c,#04172e);border:1px solid #1c5779}
+ .atlas-intro h1{font-size:clamp(30px,4.2vw,58px);color:white;line-height:1.2;margin:20px 0 12px;letter-spacing:-.04em}
+ .english{font-size:19px;color:#b3dcf2;font-weight:650;margin:0 0 18px}.lead{font-size:16px;line-height:1.85;max-width:72ch;color:#e2eff8}
+ .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}.metrics div{border-top:2px solid #428ab0;padding-top:10px}.metrics strong{display:block;color:#fff;font-size:24px}.metrics span{font-size:11px;color:#c1dceb}
+ .hero-context{align-self:center;padding:24px;background:#0b4065b3;border:1px solid #4189ad;border-radius:15px}.scope-mark{color:#7fe5f6;font-size:11px;letter-spacing:.1em;font-weight:850}.hero-context h2{font-size:21px;line-height:1.35;color:white}.hero-context p{font-size:14px;line-height:1.8;color:#d3e8f5}.hero-context a{font-size:13px;font-weight:750;color:#9debff}
+ .visual-atlas{border-inline:1px solid #1c5779;background:linear-gradient(140deg,#072441,#0b3455 50%,#041d37);padding:34px}
+ .section-line{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:22px}.section-line h2{color:white;font-size:26px;line-height:1.3;margin:6px 0 0}.section-line>span{font-size:11px;color:#c1d8e5;letter-spacing:.08em;text-align:right}
+ .atlas-columns{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,1fr);gap:20px}
+ .map-pane{min-width:0;padding:14px;background:#04213bc2;border:1px solid #276a8c;border-radius:15px;align-self:start}
+ .map-graphic{position:relative;aspect-ratio:1000/430;background:radial-gradient(ellipse at 40% 45%,#13527b7a,transparent 72%),repeating-linear-gradient(0deg,transparent 0 31px,#7cccf00d 32px),repeating-linear-gradient(90deg,transparent 0 31px,#7cccf00d 32px);overflow:hidden;border-radius:9px}
+ .country-outline{width:100%;height:100%;display:block}
+ .city-pin{position:absolute;z-index:2;transform:translate(-50%,-50%);width:32px;height:32px;text-decoration:none;display:grid;place-items:center;border:1px solid #c5f8ff;border-radius:50%;background:#076b9e;color:white;box-shadow:0 0 0 5px #2bd7fc3e,0 0 24px 7px #39c8ff80}
+ .city-pin b{font-size:11px;position:relative;z-index:2}.city-pin:hover,.city-pin:focus-visible{background:#159ed4;outline:2px solid white;outline-offset:5px}
+ .map-footnote{position:absolute;left:12px;bottom:8px;letter-spacing:.18em;color:#c0e7f8;font-size:9px}
+ .map-key{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#cce0ef;padding:14px 1px 4px}.map-key i{display:inline-block;background:#63d5f8;width:9px;height:9px;border-radius:50%;margin-right:6px}
+ .cartography-note{font-size:11px;line-height:1.65;color:#b6d4e5;margin:12px 0 0}.cartography-note strong{color:#f1faff}
+ .focus-list{display:grid;gap:10px;align-self:start}.focus-card{min-width:0;overflow:hidden;border:1px solid #2d779b;background:linear-gradient(135deg,#124969,#082c4a);border-radius:12px;box-shadow:0 7px 22px #0003}
+ .focus-main{display:grid;grid-template-columns:minmax(100px,33%) minmax(0,1fr);text-decoration:none;color:#f1fbff;min-height:137px}.focus-main:focus-visible{outline:3px solid #9ff2ff;outline-offset:-4px}
+ .focus-media{position:relative;min-height:110px;background:#0c3857;overflow:hidden}.focus-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.9) saturate(.85)}.focus-media:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#082c4b55)}
+ .focus-number{position:absolute;z-index:1;top:9px;left:10px;font-size:21px;font-weight:850;text-shadow:0 1px 6px #000}
+ .visual-no-photo{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:130px;height:100%;gap:5px;background:radial-gradient(circle at 20% 25%,#1783ad,transparent 65%),#0b3655}.visual-no-photo b{font-size:12px;letter-spacing:.14em}.visual-no-photo small{font-size:9px;color:#b7d9e7;letter-spacing:.12em}
+ .focus-copy{min-width:0;padding:13px 13px 11px}.focus-location{color:#80def4;font-size:11px;font-weight:750}.focus-copy h3{font-size:15px;line-height:1.35;color:#fff;margin:4px 0 6px;overflow-wrap:anywhere}.focus-copy p{color:#d4e8f3;font-size:12px;line-height:1.55;margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.focus-bottom{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:11px;color:#b6ddec}.focus-bottom em{font-style:normal;color:#91f0ff;font-weight:750}
+ .credit{font-size:10px;line-height:1.6;margin:0;color:#c3dce9;padding:0 12px 8px}.credit a{color:#a6edff}
+ .catalog-section{background:#eaf4fb;color:#18334b;padding:42px 38px;border-inline:1px solid #b5d3e5}.section-line.light h2{color:#17334b}.section-line.light .kicker{color:#0d6088}.section-line.light a{color:#075b86;font-size:13px;font-weight:800}
+ .directory-explain{max-width:950px;font-size:14px;line-height:1.8;color:#40596c}
+ .catalog-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:23px 0;padding:20px;border:1px solid #c0d5e3;background:#f7fbff;border-radius:12px}.catalog-controls label{display:grid;gap:7px;flex:1;min-width:175px;font-size:12px;font-weight:800;color:#284e6b}.catalog-controls input,.catalog-controls select{border:1px solid #9bb9ca;background:white;border-radius:7px;padding:11px;color:#142f45;font-size:14px;min-width:0;width:100%}.counter{font-size:13px;font-weight:800;color:#175f86}
+ .catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.research-row{padding:22px;border:1px solid #c0d4e2;border-radius:13px;background:#fff;min-width:0}.research-row[hidden]{display:none}.row-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.row-head span{font-weight:850;color:#145d86;font-size:11px;text-transform:uppercase}.row-head small{font-size:10px;color:#48667b}.research-row h3{font-size:17px;line-height:1.45;margin:9px 0}.research-row h3 a{color:#133a58;text-decoration:none}.research-row h3 a:hover{text-decoration:underline}.research-row>p{color:#486073;font-size:12px;margin:0 0 10px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags a{font-size:11px;color:#155e88;background:#e9f4fb;border-radius:30px;text-decoration:none;padding:5px 8px}.people-line{font-size:11px;display:flex;gap:9px;flex-wrap:wrap;border-top:1px solid #deebf3;margin-top:12px;padding-top:12px;color:#425e74}.people-line a{color:#175d87}.no-data{color:#465e70;font-size:13px}
+ .coverage-gaps{background:#edf6fb;color:#203950;padding:35px 40px;border-inline:1px solid #b5d3e5}.coverage-gaps .kicker{color:#135a83}.coverage-gaps h2{color:#193954;font-size:24px}.coverage-gaps p{color:#475f73;font-size:14px}.coverage-gaps div{display:flex;flex-wrap:wrap;gap:8px}.coverage-gaps a{padding:9px 12px;text-decoration:none;background:#fff;border:1px solid #cbdbe7;border-radius:8px;font-size:12px;color:#175b83}
+ .atlas-outro{background:linear-gradient(115deg,#0a385e,#051a30);border-radius:0 0 18px 18px;padding:32px 40px;border:1px solid #286688;color:#e2f4fc}.atlas-outro strong{color:white;font-size:20px}.atlas-outro p{font-size:14px;max-width:830px;line-height:1.8}.atlas-outro div{display:flex;flex-wrap:wrap;gap:20px}.atlas-outro a{font-size:13px;color:#a3ecff;font-weight:800}
+ @media(max-width:1020px){.atlas-hero{grid-template-columns:1fr}.atlas-columns{grid-template-columns:1fr}.focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-main{grid-template-columns:120px minmax(0,1fr)}}
+ @media(max-width:700px){.schematic-root{padding:0 0 42px}.atlas-hero,.visual-atlas,.catalog-section,.coverage-gaps,.atlas-outro{padding:24px 16px}.atlas-hero{border-radius:10px 10px 0 0;gap:20px}.metrics{grid-template-columns:repeat(2,1fr)}.section-line{flex-direction:column;align-items:start}.section-line>span{text-align:left}.focus-list,.catalog-grid{grid-template-columns:1fr}.map-pane{padding:9px}.city-pin{width:23px;height:23px}.city-pin b{font-size:9px}.focus-main{grid-template-columns:110px minmax(0,1fr)}.catalog-controls{padding:14px}.map-footnote{font-size:7px}}
+ @media(prefers-reduced-motion:reduce){.city-pin{scroll-behavior:auto}}
+</style>
