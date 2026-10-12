@@ -1,8 +1,17 @@
 # Russia-Thermal Web Report
 
-status: W2_DESIGN_SYSTEM_SKELETON
+status: WEB_V1_HISTORICALLY_ACCEPTED / WEB_CLOSEOUT_WAVE_A_IMPLEMENTED / LATEST_SHA_BUILD_BROWSER_QA_PENDING
 authority: DERIVED_PRESENTATION_LAYER
-date: 2026-10-06
+date: 2026-10-12
+
+
+## 2026-10-12 final-research integration (current)
+
+- Research Q01–Q10 answers now have a read-only, generated presentation dataset `questionCloseouts.json`, sourced from WP3 final matrix and the historical final-insight-question ledger. The exporter enforces 10 matching IDs, matching acceptances and the exact 3/7 disposition split.
+- `/research-questions/` is the new final-research answer/index page; the main navigation and home link to it. It shows answer, confidence, evidence limit, linked research routes and original audit/ledger provenance.
+- The home and partner pages explicitly distinguish **P1 internal feasibility preparation** from **separate approval required for external outreach**; priorities remain as historically frozen, not a new decision event. Separate TPU research lines are not collapsed into one original study.
+- `npm run check` / `npm run build` now run `check:research` after data generation. **These checks were committed but their execution against latest HEAD has not been verified in this work session.** Build/Pages deployment, responsive screenshots and final source-link smoke tests remain OPEN.
+- [Wave A final research integration audit](../analysis/audits/web-closeout-wave-a-implementation-2026-10-12.md) records exact changes and verification limits. Older W2 shell notes and [V1 acceptance](docs/production-acceptance-v1.md) below are historical snapshots, not the current release status.
 
 ## Purpose
 
