@@ -412,7 +412,10 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
   if (!actor || actor.type === 'PERSON') return null;
 
   const childActors = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type !== 'PERSON');
-  const scopedActorIds = new Set([actor.id, ...childActors.map((child) => child.id)]);
+  // All nested lab / unit descendants, not only direct children.
+  const scopedActorIds = new Set(actors
+    .filter(candidate => candidate.type !== 'PERSON' && institutionLineageIds(candidate.id).includes(actor.id))
+    .map(candidate => candidate.id));
   const ownCapabilities = capabilities.filter((capability) => scopedActorIds.has(capability.actorId));
   const directPeople = actors.filter((candidate) => candidate.parentId === actor.id && candidate.type === 'PERSON');
   const childPeople = actors.filter(
@@ -502,7 +505,7 @@ export function buildInstitutionPageVM(id: string): InstitutionPageVM | null {
       .map((child) => institutionCard(child, capabilities.filter((c) => c.actorId === child.id)))
       .sort((a, b) => a.name.localeCompare(b.name)),
     people: [...peopleMap.values()]
-      .map((person) => scholarCard(person, actor))
+      .map((person) => scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined))
       .sort((a, b) => a.name.localeCompare(b.name)),
     collaborators: collaboratorCards,
     capabilities: ownCapabilities.map(capabilityDetail),
