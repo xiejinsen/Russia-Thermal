@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { questionCloseouts } from '../data/load-normalized';
+import { currentActionBoundary } from '../view-models/action-boundary';
 
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
@@ -40,7 +41,7 @@ const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
         <strong>{direct} <small>公开证据范围内接受</small></strong>
         <strong>{limited} <small>附明确限制接受</small></strong>
       </div>
-      <p class="scope" lang="zh-CN"><strong>重要边界：</strong>研究结题不等于俄罗斯全国穷尽调查、手机实机验证、原始数据授权或俄方同意合作。P1 目前仅建议内部可行性准备；对外接洽需要独立授权。</p>
+      <p class="scope" lang="zh-CN"><strong>重要边界：</strong>研究结题不等于俄罗斯全国穷尽调查、手机实机验证、原始数据授权或俄方同意合作。{currentActionBoundary.titleZh}。</p>
     </header>
 
     <nav class="question-nav" aria-label="Research question index">
