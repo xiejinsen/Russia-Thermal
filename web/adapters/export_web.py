@@ -477,6 +477,22 @@ def require_nonempty(record: dict[str, Any], field: str, errors: list[str]):
 def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     errors: list[str] = []
 
+    if len(datasets["questionCloseouts"]) != 10:
+        errors.append("questionCloseouts: expected exactly Q01-Q10")
+    expected_question_ids = {f"Q{i:02d}" for i in range(1, 11)}
+    actual_question_ids = [r["id"] for r in datasets["questionCloseouts"]]
+    if len(set(actual_question_ids)) != 10 or set(actual_question_ids) != expected_question_ids:
+        errors.append("questionCloseouts: missing or duplicate Q01-Q10 IDs")
+    for r in datasets["questionCloseouts"]:
+        for f in ("id", "questionShort", "answer", "disposition", "confidence", "remainingLimit", "sourcePath", "ledgerPath"):
+            require_nonempty(r, f, errors)
+        if r["disposition"] not in {"ACCEPTED_PUBLIC_EVIDENCE", "ACCEPTED_WITH_DISCLOSED_LIMITATION"}:
+            errors.append(f"{r['id']}: invalid research closeout disposition {r['disposition']}")
+    direct = sum(r["disposition"] == "ACCEPTED_PUBLIC_EVIDENCE" for r in datasets["questionCloseouts"])
+    limited = sum(r["disposition"] == "ACCEPTED_WITH_DISCLOSED_LIMITATION" for r in datasets["questionCloseouts"])
+    if (direct, limited) != (3, 7):
+        errors.append(f"questionCloseouts: unexpected acceptance counts direct={direct} limited={limited}")
+
     for r in datasets["actors"]:
         for f in ("id", "type", "name", "country", "sourcePath"):
             require_nonempty(r, f, errors)
@@ -755,6 +771,65 @@ def validate_normalized(datasets: dict[str, list[dict[str, Any]]]) -> list[str]:
     return errors
 
 
+
+def load_question_closeouts() -> list[dict[str, Any]]:
+    """Join the authoritative WP3 verdicts with the historical question ledger."""
+    ledger_path = ROOT / "00-project" / "final-insight-question-ledger.tsv"
+    matrix_path = ROOT / "analysis" / "audits" / "research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md"
+    with ledger_path.open(encoding="utf-8-sig", newline="") as source:
+        ledger_rows = list(csv.DictReader(source, delimiter="\t"))
+    ledger = {row["id"]: row for row in ledger_rows}
+
+    conclusions: dict[str, list[str]] = {}
+    for line in matrix_path.read_text(encoding="utf-8").splitlines():
+        if not re.match(r"^\|\s*Q\d{2}\s", line):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) != 5:
+            raise ValueError(f"Malformed WP3 matrix row: {line}")
+        question_id = cells[0].split()[0]
+        if question_id in conclusions:
+            raise ValueError(f"Duplicate WP3 matrix question: {question_id}")
+        conclusions[question_id] = cells
+
+    required = {f"Q{i:02d}" for i in range(1, 11)}
+    if len(ledger_rows) != 10 or set(ledger) != required or set(conclusions) != required:
+        raise ValueError("Q01-Q10 ledger and WP3 matrix must each contain 10 matching unique questions")
+
+    records: list[dict[str, Any]] = []
+    for question_id in sorted(required):
+        row = ledger[question_id]
+        _, answer, disposition, confidence, residual = conclusions[question_id]
+        if disposition != row["research_closeout_disposition"]:
+            raise ValueError(f"{question_id}: WP3 and ledger research disposition disagree")
+
+        refs: list[str] = []
+        for ref in row.get("canonical_or_audit_refs", "").split(";"):
+            ref = ref.strip()
+            if not ref or ref.startswith("/") or ".." in Path(ref).parts:
+                continue
+            if (ROOT / ref).is_file() and ref not in refs:
+                refs.append(ref)
+
+        def plain(value: str) -> str:
+            value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
+            return value.replace("**", "").replace("*", "").replace(chr(96), "")
+
+        records.append({
+            "id": question_id,
+            "questionShort": row["question_short"].strip(),
+            "answer": plain(answer),
+            "disposition": disposition,
+            "confidence": confidence,
+            "remainingLimit": plain(residual),
+            "decisionImpact": row["decision_impact"].strip(),
+            "historicalWorkstreamState": row["state"].strip(),
+            "referencePaths": refs[:6],
+            "sourcePath": matrix_path.relative_to(ROOT).as_posix(),
+            "ledgerPath": ledger_path.relative_to(ROOT).as_posix(),
+        })
+    return records
+
 def load_representative_works() -> list[dict[str, Any]]:
     """Validated editorial links; candidates retain null source IDs."""
     import sys
@@ -787,6 +862,7 @@ def build_datasets() -> dict[str, list[dict[str, Any]]]:
         "decisions": [decision_record(o) for o in db["decision"]],
         "priorities": [priority_record(o) for o in db["priority"]],
         "syntheses": [synthesis_record(o) for o in db["synthesis"]],
+        "questionCloseouts": load_question_closeouts(),
     }
 
 
