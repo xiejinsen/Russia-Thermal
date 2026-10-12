@@ -5,12 +5,13 @@
   "scripts": {
     "data:generate": "python adapters/export_web.py",
     "dev": "python adapters/export_web.py && astro dev",
-    "build": "python adapters/export_web.py && npm run check:research && npm run check:atlas && astro build",
+    "build": "python adapters/export_web.py && npm run check:research && npm run check:atlas && npm run check:comparison && astro build",
     "preview": "astro preview",
-    "check": "python adapters/export_web.py && npm run check:research && npm run check:atlas && astro check",
+    "check": "python adapters/export_web.py && npm run check:research && npm run check:atlas && npm run check:comparison && astro check",
     "check:links": "node scripts/check-internal-links.mjs",
     "check:research": "node scripts/check-research-closeout.mjs",
-    "check:atlas": "node scripts/check-russia-atlas.mjs"
+    "check:atlas": "node scripts/check-russia-atlas.mjs",
+    "check:comparison": "node scripts/check-comparison-transfer.mjs"
   },
   "dependencies": {
     "astro": "^5.14.1"
