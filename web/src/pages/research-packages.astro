@@ -79,7 +79,7 @@ const hold = {
       {packages.map(p => <a href={`#${p.id}`}><span>{p.id}</span>{p.name}</a>)}
       <a href="#TPU-HOLD"><span>HOLD</span>{hold.name}</a>
     </nav>
-    <main class="work">
+    <section class="work" aria-label="Proposed academic research packages">
       {packages.map(p=><article class="package" id={p.id}>
         <header class="package-head">
           <div><span class="eyebrow">{p.id} · {p.status}</span><h2>{p.name}</h2><p>{p.discipline}</p></div>
@@ -99,7 +99,7 @@ const hold = {
         </footer>
       </article>)}
       <article class="package hold" id="TPU-HOLD"><header class="package-head"><div><span class="eyebrow">{hold.status}</span><h2>{hold.name}</h2></div><a href={href(`/institutions/${hold.actor}`)}>科研机构档案 ↗</a></header><p>{hold.note}</p><footer><a href={reportUrl(hold.file)} target="_blank" rel="noopener noreferrer">查看原论文身份和 HOLD 审计 →</a></footer></article>
-    </main>
+    </section>
     <footer class="closing"><h2>公开科研判断不等于已获合作授权</h2>
       <p>本页只是对已归档 OPP 任务的阅读性整理，原始研究文档和正式决策记录仍具有优先权。资料公开，并不代表数据/IP 可共享或研究组愿意合作。</p>
       <a href={href('/research-questions#Q09')}>回到 Q09/Q10 研究结题回答 →</a>
