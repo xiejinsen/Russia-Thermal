@@ -4,8 +4,8 @@ DO NOT EDIT - GENERATED FROM CANONICAL OBJECTS
 
 - authority: AUTHORITATIVE_V2_1_MAIN
 - mode: PHASE1_PUBLIC_EVIDENCE_RESEARCH
-- phase: PHASE1_FROZEN / DECISION_CRITICAL_DEEP_READ_CLOSED / RUSSIA_CAPABILITY_ATLAS_ENRICHMENT_OPEN
-- next: Governance health refresh before Q08: representative-first Q04 adopted; P1 Kutateladze and P2 MPEI joint representative audit bounded pass with unresolved independent omission/contrary check. Known primary academic root Atlas 25/25, known capability-owner Atlas 28/28; neither proves nationwide Russia completeness. Q01 outside-corpus institution recall and NSU person ownership remain open. Prioritize verifying current main CI and generated views, then pilot compact representative-work link modules for P1/P2 without duplicating Source/Claim; proceed to Q08 internal/China build-versus-Russia counterfactual. Annual publication census optional and not a Q04 gate. Existing P1/P2/TPU decisions frozen; no contact or physical tests.
+- phase: PUBLIC_EVIDENCE_RESEARCH_CLOSEOUT_Q01_Q10_ACCEPTED_WITH_LIMITATIONS / PHASE1_FROZEN / PRE_PPT_ARCHIVE_QA
+- next: Finish WP5 research-only repository reconciliation and traceability checks; prepare PPT evidence handoff only after recording unresolved mechanical full-tree validation as OPEN. No new broad research, Q08 repetition, or website/PPT implementation in this phase.
 
 ## Directions
 
