@@ -1,0 +1,54 @@
+---
+const base = import.meta.env.BASE_URL;
+const href = (p: string) => base + p.replace(/^\//,'');
+const features = [
+  { city:'NOVOSIBIRSK', name:'Kutateladze Institute of Thermophysics', cn:'库塔捷拉泽热物理研究所', topic:'Boiling · dryout diagnostics', summary:'以介电液体沸腾、局部干斑与临界热流诊断为代表的实验研究。尚非手机密闭 VC 的验证结果。', query:'Kutateladze', image:'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=85' },
+  { city:'MOSCOW', name:'Moscow Power Engineering Institute', cn:'莫斯科动力工程学院', topic:'Long-duration capillary aging', summary:'公开研究涉及长时间运行后的毛细状态变化；早期预警的时序证据仍待补足。', query:'Moscow Power', image:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000&q=85' },
+  { city:'TOMSK', name:'Tomsk Polytechnic University', cn:'托木斯克理工大学', topic:'Surface wettability · evaporation', summary:'表面润湿与蒸发过程具有学术研究价值；与国内手机器件的增量价值尚未确证。', query:'Tomsk Polytechnic', image:'https://images.unsplash.com/photo-1562774053-701939374585?w=1000&q=85' },
+  { city:'TOMSK', name:'Tomsk State University', cn:'托木斯克国立大学', topic:'PCM · transient models', summary:'关注相变与瞬态热过程的模型方法；实际薄型终端集成还需要工程转移验证。', query:'Tomsk State', image:'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1000&q=85' }
+];
+---
+<section class="visual-world" aria-labelledby="world-heading">
+  <div class="world-top">
+    <div class="hero-copy">
+      <span class="micro">RUSSIA THERMAL RESEARCH / EVIDENCE-LINKED ATLAS</span>
+      <h2 id="world-heading">俄罗斯热管理<span>科研版图</span></h2>
+      <p class="english">Russian Thermal Science Landscape</p>
+      <p class="lead">从科研机构到研究人员、原始论文与技术能力，探索俄罗斯热科学对未来手机热管理可能提供的差异化补充。</p>
+      <div class="hero-actions"><a href={href('/russia-atlas')}>探索科研能力 Atlas ↗</a><a href={href('/research-map/russia')}>查看正式科研地图 ↗</a></div>
+    </div>
+    <div class="world-map" role="img" aria-label="俄罗斯研究地理节点概念示意：莫斯科、叶卡捷琳堡、托木斯克、新西伯利亚。节点位置仅为页面示意，精确位置请查看科研地图">
+      <div class="gridglow"></div>
+      <svg viewBox="0 0 650 310" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+        <defs><linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b497c" stop-opacity=".72"/><stop offset=".55" stop-color="#155d93" stop-opacity=".48"/><stop offset="1" stop-color="#36c9ef" stop-opacity=".17"/></linearGradient></defs>
+        <path class="territory" d="M38 137 L78 106 103 112 138 75 176 87 199 54 234 77 278 65 319 83 350 53 387 79 440 67 468 92 519 81 539 106 601 97 623 130 595 151 616 181 581 193 541 177 525 206 495 218 452 200 419 231 387 212 359 240 316 224 293 249 253 229 232 254 198 220 173 230 145 209 105 214 83 183 48 180 Z" fill="url(#ice)" stroke="#47caff" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M125 155 Q220 110 306 164 Q372 192 417 165 M125 155 Q250 228 417 165" stroke="#50ddff" stroke-width="1.7" fill="none" opacity=".64"/>
+        <g fill="#8af0ff" stroke="#8af0ff"><circle cx="125" cy="155" r="5"/><circle cx="306" cy="164" r="5"/><circle cx="383" cy="178" r="5"/><circle cx="417" cy="165" r="5"/></g>
+        <g class="map-label" fill="#e9faff" font-size="14" font-weight="650"><text x="85" y="141">MOSCOW</text><text x="268" y="148">YEKATERINBURG</text><text x="363" y="202">TOMSK</text><text x="426" y="151">NOVOSIBIRSK</text></g>
+        <text x="290" y="112" fill="#9fdaf4" opacity=".6" letter-spacing="11" font-size="25">RUSSIA</text>
+      </svg>
+      <span class="map-note">DESIGN-LEVEL GEOGRAPHIC OVERVIEW · NOT TO SCALE</span>
+    </div>
+  </div>
+  <div class="institution-head"><div><span class="micro">FEATURED RESEARCH ORGANIZATIONS</span><h3>代表性科研机构 <span>Featured Institutions</span></h3></div><a href={href('/institutions')}>完整机构档案 ↗</a></div>
+  <div class="institution-cards">
+    {features.map((item,index) => <article class="photo-card">
+      <div class="photo"><img src={item.image} alt="科研与大学建筑氛围示意图，非该机构官方照片" loading="lazy"/><span class="number">0{index+1}</span><span class="city">{item.city}</span></div>
+      <div class="card-body"><span class="image-note">ILLUSTRATIVE IMAGE · 非机构实景认证</span><h4>{item.cn}</h4><p class="en-name">{item.name}</p><div class="topic">{item.topic}</div><p class="summary">{item.summary}</p><a href={href('/russia-atlas')}>查看机构及原始证据 ↗</a></div>
+    </article>)}
+  </div>
+  <div class="world-foot"><strong>科学发现 ≠ 手机产品验证</strong><span>所有能力与合作判断均需返回原始论文、Claim 和手机工程迁移条件核查。</span><a href={href('/smartphone-transfer')}>手机迁移边界 ↗</a></div>
+</section>
+<style>
+.visual-world{color:#eaf7ff;background:radial-gradient(ellipse at 78% 2%,#13568a 0%,transparent 40%),linear-gradient(140deg,#031629,#082c4e 52%,#041526);padding:clamp(28px,4vw,62px);border-radius:24px;box-shadow:0 22px 65px #061d3430;isolation:isolate;margin:24px 0 56px;overflow:hidden}
+.world-top{display:grid;grid-template-columns:.92fr 1.25fr;align-items:center;gap:26px;min-height:350px}
+.micro{font-size:11px;letter-spacing:.15em;color:#61d8fa;font-weight:850}
+.hero-copy h2{font-size:clamp(34px,4vw,62px);line-height:1.13;letter-spacing:-.045em;margin:22px 0 8px;color:#fff}.hero-copy h2 span{display:block;color:#81dcff}
+.english{color:#a3d9fa;font-size:20px;margin:0 0 24px;font-weight:600}
+.lead{font-size:16px;line-height:1.85;color:#d1e3f2;max-width:580px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.hero-actions a,.world-foot a{border:1px solid #47b5e5;padding:11px 17px;border-radius:25px;color:#e6f9ff;text-decoration:none;font-weight:750;background:#19547c8a}.hero-actions a:first-child{background:#097ab3}
+.world-map{position:relative;min-width:0;padding:10px 0}.world-map svg{width:100%;display:block;filter:drop-shadow(0 0 13px #11a9e84d)}.gridglow{position:absolute;inset:10% 0;background:repeating-linear-gradient(0deg,transparent 0 31px,#55b5ea16 32px),repeating-linear-gradient(90deg,transparent 0 31px,#55b5ea16 32px);transform:perspective(550px) rotateX(18deg);mask-image:linear-gradient(90deg,transparent,#000,transparent)}.map-note{position:absolute;bottom:0;right:0;font-size:9px;color:#89b4d1;letter-spacing:.08em}.territory{filter:drop-shadow(0 0 8px #1cbbfd)}
+.institution-head{display:flex;align-items:end;justify-content:space-between;border-top:1px solid #2e698b;padding:32px 0 20px;gap:15px}.institution-head h3{font-size:25px;margin:6px 0 0;color:white}.institution-head h3 span{font-size:13px;font-weight:500;color:#a5c5da;margin-left:12px}.institution-head a{color:#a4ddfa;font-size:13px}
+.institution-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.photo-card{overflow:hidden;border:1px solid #2a688d;border-radius:13px;background:linear-gradient(155deg,#11416a,#071e37);transition:transform .2s,box-shadow .2s}.photo-card:hover{transform:translateY(-6px);box-shadow:0 18px 32px #0006}.photo{position:relative;height:150px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) contrast(1.1)}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07182a10 40%,#071e37a8)}.city,.number{position:absolute;z-index:1;font-size:12px;font-weight:750;color:white}.number{top:12px;left:12px;font-size:19px}.city{bottom:12px;right:12px}.card-body{padding:17px}.image-note{color:#8db8d1;font-size:9px;letter-spacing:.05em}.card-body h4{font-size:18px;line-height:1.35;color:white;margin:10px 0 5px}.en-name{font-size:12px;color:#a6d5f2;margin:0 0 15px;min-height:30px}.topic{font-size:12px;font-weight:800;color:#7de0ff;border-top:1px solid #32698b;padding-top:12px}.summary{font-size:13px;color:#cfdfeb;line-height:1.65;min-height:90px}.card-body a{color:#9aeaff;font-size:12px;font-weight:750}.world-foot{display:flex;gap:18px;align-items:center;flex-wrap:wrap;border-top:1px solid #2b6083;margin-top:30px;padding-top:20px;font-size:12px;color:#bdcfdf}.world-foot strong{color:#a7eeff}.world-foot a{margin-left:auto;padding:7px 12px}
+@media(max-width:980px){.world-top{grid-template-columns:1fr}.institution-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.summary{min-height:0}}@media(max-width:560px){.visual-world{margin:12px 0 30px;padding:20px;border-radius:14px}.institution-cards{grid-template-columns:1fr}.institution-head{align-items:start;flex-direction:column}.world-map .map-label{font-size:11px}.photo{height:190px}.hero-copy h2{font-size:36px}}
+@media(prefers-reduced-motion:reduce){.photo-card{transition:none}}
+</style>
