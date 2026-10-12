@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { currentActionBoundary } from '../view-models/action-boundary';
+
+const base = import.meta.env.BASE_URL;
+const href = (path: string) => `${base}${path.replace(/^\//,'')}`;
+const repo = 'https://github.com/xiejinsen/Russia-Thermal/blob/main/';
+const reportUrl = (path: string) => repo + path;
+
+const packages = [
+  {
+    id: 'OPP-01', status: '优先可行性 · 内部准备', name: 'Kutateladze Lab 1.3',
+    actor: 'ACT-KUT-LAB13', discipline: '干斑失效机理与同步实验标签',
+    question: '真实机理标签是否能在相同输入下，给手机热设计/失效判断带来超过温度/功率阈值、国际饱和状态模型及国内基线的新增信息？',
+    asset: '具有装置、工质、压力、时序对齐、可逆/不可逆失效定义、重复实验的数据说明和可复现标签；数据本身尚未获授权。',
+    pass: '先内部列出所需输入与对照方法；未来若获授权取得数据，再测试机理标签是否改变工程判断。',
+    stop: '只有论文图片、无可用原始数据/标注权利，或相同输入下与已有方法无实质区别，即不推进 PoC。',
+    condition: '仅内部准备；不能因为 P1 排首位而外联。',
+    file: 'reports/collaboration-opportunities/OPP-01-KUTATELADZE-FAILURE-GROUND-TRUTH.md'
+  },
+  {
+    id: 'OPP-02', status: '条件储备', name: 'MPEI · Ivanov',
+    actor: 'ACT-MPEI', discipline: '长期热虹吸管毛细状态与材料老化',
+    question: '42 个日历月周期运行后的毛细变化，是否具有可恢复的中间时序/化学数据，足以证明超越标准氧化和常规热阻监测的早期信息？',
+    asset: '中间浸润、毛细或表面化学历史；仅起点/终点特征无法训练或验证早期退化预警。',
+    pass: '证明真实数据存在且有合法使用条件，并能以同输入对照中国与内部可靠性基础方法。',
+    stop: '如果只有 42 个月之后的结局数据，维持文献级储备。',
+    condition: '不作为第二个并行合作项目；不获授权不得接洽。',
+    file: 'reports/collaboration-opportunities/OPP-02-MPEI-LONG-DURATION-RELIABILITY.md'
+  },
+  {
+    id: 'OPP-04', status: '科研方法观察', name: 'ITP Ural · Maydanik/Chernysheva',
+    actor: 'ACT-ITP-UBRAS', discipline: '环路热管运行极限和毛细回流边界',
+    question: '现有大尺寸 LHP 理论和实验能否可靠缩放到受手机厚度、姿态与工质制约的目标拓扑？',
+    asset: '包含启动/毛细失效与压降边界、适用范围、工质和几何不确定性的模型。',
+    pass: '提出受限几何下有新增价值、可重复的预测边界，并能改变同规格基线的可行性判断。',
+    stop: '大尺寸装置不能有根据地外推，或国内/中国同类模型已有充分解答。',
+    condition: '仅 WATCH，不是待启动外联任务。',
+    file: 'reports/collaboration-opportunities/OPP-04-ITP-URAL-LHP-OPERABILITY-METHOD.md'
+  },
+  {
+    id: 'OPP-05', status: '科研方法观察', name: 'TSU · Sheremet/Bondareva/Gibanov',
+    actor: 'ACT-TSU', discipline: 'PCM 瞬态热缓冲和恢复时间模型',
+    question: '固定整机体积/质量约束下，真实 burst-idle 负载与 PCM 重新凝固是否能够形成净收益？',
+    asset: '具备全熔融/凝固循环和误差范围、与无 PCM/国内方法公平对比的数值模型。',
+    pass: '在封装、温度、重量与循环约束满足时确实改变温升或持续峰值功耗的决策。',
+    stop: 'PCM 无法在工作间歇重新凝固、漏液/厚度代价过大，或国内模型已足够。',
+    condition: '仅 WATCH；数值研究不是已量产手机散热组件。',
+    file: 'reports/collaboration-opportunities/OPP-05-TSU-PCM-TRANSIENT-METHOD.md'
+  },
+  {
+    id: 'OPP-06', status: '工程方法储备', name: 'ICM Krasnoyarsk · Flat HP/LTCC 实验线',
+    actor: 'ACT-ICM-KRASN', discipline: '平板热管与电子模块热路拓扑',
+    question: '现有 T 型铜/钛热管和 LTCC 模块经验是否提供比同规格国内散热路径更实用的结构或失效预测？',
+    asset: '已验证原始尺寸、热源/冷端条件、封装和模型适用范围的热路设计与失效敏感性。',
+    pass: '得出真正改变手机设计选择、可控制工艺和可靠性的可复现结果。',
+    stop: '尺寸明显不适用、当前方法所有权不明、国内方法充分或无可转移的新增价值。',
+    condition: 'ICM 两条研究线不能合并，Denis/Dmitry Nesterov 不自动视为同一作者。',
+    file: 'reports/collaboration-opportunities/OPP-06-ICM-ELECTRONICS-INTEGRATION-METHOD.md'
+  }
+] as const;
+const hold = {
+  actor: 'ACT-TPU', name: 'TPU / Frumkin 表面研究', status: 'HOLD · 暂缓',
+  note: '具有开放液滴热传递的学术实验和另一项独立激光表面研究，但缺少密封铜水手机 VC 的匹配工程增量；不从学术新论文自动升级为合作机会。',
+  file: 'analysis/academic-team-mapping/tpu-frumkin-2026-original-paper-identity-gate.md'
+};
+---
+<BaseLayout title="俄罗斯学术合作研究任务与停止门槛 | Russia-Thermal" description="Bounded scientific cooperation questions, research artifacts and stage gates. No external contact, rights or PoC is authorized.">
+  <SiteHeader slot="header" />
+  <div class="packages-page">
+    <header class="intro">
+      <p class="eyebrow">Q09/Q10 · SCIENTIFIC WORK PACKAGE / NOT AN APPROVED PARTNERSHIP</p>
+      <h1>潜在研究合作，应要求什么交付物？</h1>
+      <p class="lead">优先级不是合作许可。每条学术研究任务都必须回答：俄方真实能提供什么、何以超过中国/国际/内部方案、何时停止。</p>
+      <aside class="permission" lang="zh-CN"><strong>{currentActionBoundary.titleZh}</strong><p>{currentActionBoundary.detailZh}</p></aside>
+    </header>
+    <nav class="quick" aria-label="Research work package index">
+      {packages.map(p => <a href={`#${p.id}`}><span>{p.id}</span>{p.name}</a>)}
+      <a href="#TPU-HOLD"><span>HOLD</span>{hold.name}</a>
+    </nav>
+    <main class="work">
+      {packages.map(p=><article class="package" id={p.id}>
+        <header class="package-head">
+          <div><span class="eyebrow">{p.id} · {p.status}</span><h2>{p.name}</h2><p>{p.discipline}</p></div>
+          <a href={href(`/institutions/${p.actor}`)}>科研机构档案 ↗</a>
+        </header>
+        <div class="question"><strong>可证伪的问题</strong><p>{p.question}</p></div>
+        <div class="details">
+          <section><h3>若将来获准，最小有用产物</h3><p>{p.asset}</p></section>
+          <section><h3>晋级条件</h3><p>{p.pass}</p></section>
+          <section><h3>停止条件 / Kill gate</h3><p>{p.stop}</p></section>
+          <section><h3>当前合作状态</h3><p>{p.condition}</p></section>
+        </div>
+        <footer>
+          <a href={reportUrl(p.file)} target="_blank" rel="noopener noreferrer">核查原始研究任务文档 →</a>
+          <a href={href('/landscape')}>回看中俄与国际基线 →</a>
+          <a href={href('/smartphone-transfer')}>手机迁移门槛 →</a>
+        </footer>
+      </article>)}
+      <article class="package hold" id="TPU-HOLD"><header class="package-head"><div><span class="eyebrow">{hold.status}</span><h2>{hold.name}</h2></div><a href={href(`/institutions/${hold.actor}`)}>科研机构档案 ↗</a></header><p>{hold.note}</p><footer><a href={reportUrl(hold.file)} target="_blank" rel="noopener noreferrer">查看原论文身份和 HOLD 审计 →</a></footer></article>
+    </main>
+    <footer class="closing"><h2>公开科研判断不等于已获合作授权</h2>
+      <p>本页只是对已归档 OPP 任务的阅读性整理，原始研究文档和正式决策记录仍具有优先权。资料公开，并不代表数据/IP 可共享或研究组愿意合作。</p>
+      <a href={href('/research-questions#Q09')}>回到 Q09/Q10 研究结题回答 →</a>
+      <p><a href={reportUrl('reports/collaboration-opportunities/academic-q09-feasibility-portfolio-2026-10-09.md')} target="_blank" rel="noopener noreferrer">查阅整套学术合作可行性档案（历史版本的“初步接洽”建议不构成当前授权） →</a></p>
+    </footer>
+  </div>
+</BaseLayout>
+<style>
+:global(body){background:#f8fafc;color:#17384f}.packages-page{width:min(1230px,calc(100% - 42px));margin:auto;padding:0 0 70px}
+.intro{padding:55px 0 36px;border-bottom:1px solid #cfdfeb}.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.07em;color:#246792}
+h1{font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.22;margin:14px 0}.lead{max-width:880px;color:#3b5970;font-size:1.08rem;line-height:1.7}
+.permission{border-left:4px solid #2c779e;background:#eaf3f8;padding:20px;margin-top:24px}.permission strong{font-size:1rem}.permission p{font-size:.9rem;line-height:1.7;margin:9px 0 0}
+.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:28px 0}.quick a{display:flex;gap:11px;align-items:center;padding:12px 15px;background:#fff;border:1px solid #c9dce9;font-size:.78rem;text-decoration:none;color:#245e86}.quick span{font-weight:800}
+.work{display:grid;gap:28px}.package{padding:25px 28px;border:1px solid #cddde7;background:white;scroll-margin-top:88px}.package-head{display:flex;justify-content:space-between;gap:18px;align-items:start;border-bottom:1px solid #d7e4ed;padding-bottom:15px}.package-head h2{font-size:1.48rem;margin:8px 0 6px}.package-head p{color:#4d6879}.package a{color:#246992;font-weight:700}.package-head>a{font-size:.8rem}
+.question{padding:19px 0}.question strong{font-size:.72rem;letter-spacing:.04em;color:#286e9c}.question p{font-size:1rem;line-height:1.65;max-width:1040px}
+.details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.details section{padding:14px 16px;background:#f1f6fa}.details h3{font-size:.9rem;color:#1c5276;margin:0 0 8px}.details p{font-size:.86rem;line-height:1.7;color:#405d71;margin:0}
+.package footer{display:flex;flex-wrap:wrap;gap:12px 24px;border-top:1px solid #d7e4ed;margin-top:18px;padding-top:14px}.package footer a{font-size:.78rem}.hold{border-left:4px solid #91a8b9}.hold>p{font-size:.95rem;line-height:1.7}
+.closing{margin-top:43px;padding:30px 0;border-top:2px solid #34769e}.closing h2{font-size:1.3rem}.closing p{line-height:1.7;max-width:930px;color:#4a6879}.closing a{color:#276991;font-weight:700}
+@media(max-width:850px){.quick{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.packages-page{width:calc(100% - 26px)}.quick,.details{grid-template-columns:1fr}.package{padding:18px 14px}.package-head{display:block}}
+</style>
