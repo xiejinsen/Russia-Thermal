@@ -6,6 +6,7 @@ on:
     paths:
       - 'web/**'
       - '00-project/**'
+      - 'analysis/audits/research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md'
       - '01-evidence/**'
       - '02-claims/**'
       - '03-actors/**'
