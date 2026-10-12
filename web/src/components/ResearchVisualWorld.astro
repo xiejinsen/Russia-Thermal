@@ -8,15 +8,16 @@ const features = [
   { city:'TOMSK', name:'Tomsk Polytechnic University', cn:'托木斯克理工大学', topic:'Surface wettability · evaporation', summary:'表面润湿与蒸发过程具有学术研究价值；与国内手机器件的增量价值尚未确证。', query:'Tomsk Polytechnic', image:'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A2%D0%9F%D0%A3_(%D0%A2%D0%BE%D0%BC%D1%81%D0%BA).jpg?width=960' },
   { city:'TOMSK', name:'Tomsk State University', cn:'托木斯克国立大学', topic:'PCM · transient models', summary:'关注相变与瞬态热过程的模型方法；实际薄型终端集成还需要工程转移验证。', query:'Tomsk State', image:'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A2%D0%BE%D0%BC%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D0%B0.jpg?width=960' }
 ];
+const canonicalIds: Record<string,string> = {
+  'Kutateladze':'ACT-KUTATELADZE',
+  'Moscow Power':'ACT-MPEI',
+  'Tomsk Polytechnic':'ACT-TPU',
+  'Tomsk State':'ACT-TSU'
+};
 const resolved = features.map(item => {
-  const root = russiaAtlas.find(actor => {
-    const name = actor.name.toLowerCase();
-    if(item.query === 'Kutateladze') return name.includes('kutateladze') || name.includes('кутателадзе');
-    if(item.query === 'Moscow Power') return name.includes('power engineering') || name.includes('мэи');
-    if(item.query === 'Tomsk Polytechnic') return name.includes('tomsk polytechnic') || name.includes('томский политехнический');
-    return name.includes('tomsk state university') || name.includes('томский государственный университет');
-  });
-  return {...item, detailHref: root ? href('/institutions/' + root.id) : href('/russia-atlas')};
+  const actorId = canonicalIds[item.query];
+  const exists = russiaAtlas.some(actor => actor.id === actorId);
+  return {...item, detailHref: exists ? href('/institutions/' + actorId) : href('/russia-atlas')};
 });
 ---
 <section class="visual-world" aria-labelledby="world-heading">
