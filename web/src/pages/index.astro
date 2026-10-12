@@ -64,8 +64,8 @@ const comparisons = [
         <div class="actor-directory">
           <div class="directory-labels"><span>INSTITUTION / RESEARCH ROLE</span><span>CANONICAL PROFILE</span></div>
           {vm.institutions.slice(0,6).map(institution => <div class="actor-entry">
-            <div><a class="actor-name" href={href(institution.href)}>{institution.name}</a><p>{institution.capabilityCount} linked capability records in the active portfolio view</p></div>
-            <a href={href(institution.href)}>Profile ↗</a>
+            <div><a class="actor-name" href={href(institution.href ?? '/institutions')}>{institution.name}</a><p>{institution.capabilityCount} linked capability records in the active portfolio view</p></div>
+            <a href={href(institution.href ?? '/institutions')}>Profile ↗</a>
           </div>)}
           <p class="directory-hint">The active-portfolio index is selective. Browse the full <a href={href('/institutions')}>institution atlas</a>, <a href={href('/scholars')}>scholars</a> and <a href={href('/representative-works')}>representative original papers</a> for the wider research corpus.</p>
         </div>
