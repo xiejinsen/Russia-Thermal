@@ -50,7 +50,7 @@ const records=vm.records.map((claim)=>({
       </div>
       <div class="summary-chips">
         <span>{records.length} claims</span>
-        <span>{records.filter((claim)=>claim.supportingCount>0).length} with support</span>
+        <span>{records.filter((claim)=>claim.status==='Supported').length} SUPPORTED · {records.filter((claim)=>claim.status==='Open').length} OPEN · {records.filter((claim)=>claim.status==='Refuted').length} REFUTED</span>
         <span>{records.filter((claim)=>claim.contradictingCount>0).length} pressure-tested</span>
       </div>
     </section>
