@@ -72,3 +72,18 @@ release_gate: BROWSER_RENDER_AND_INTERACTION / NOT_A_FULL_ACCESSIBILITY_CERTIFIC
 ## 六、维护门禁
 
 `.github/workflows/visual-browser-qa.yml` + `web/scripts/browser-visual-qa.mjs` 在网页源码变动时运行 Chromium 多尺寸截图与筛选交互验收，发布 `russia-thermal-browser-screenshots`。结构测试 `web/scripts/check-web-quality.mjs` 会检查关键原始资料能否在证据入口见到，并拒绝恢复英文为主的主要筛选控件。
+
+
+## 附：2026-10-13 关键证据入口范围纠偏
+
+网页先前在“核心研究依据与技术对照”下**只列 5 项人工精选资料**，与已归档的研究证据链覆盖范围不相称，且名称容易误导读者以为全部研究仅依据五条资料。这是**网页导读范围设计错误**，不是科学洞察结论或原始 Source 数据缺失。
+
+已调整为“**按结题判断查看关键原始资料**”：四组共 **17 条从正式 Source 中选择的阅读入口**，每条保留原论文/专利/官方原文链接及不同技术边界。
+- P1/P2 直接实验依据：2 条；
+- 中国及国际关键技术对照：8 条；
+- 其他俄罗斯科研方法与适用边界：4 条；
+- 学者身份和研究活动的官方材料：3 条。
+
+该 17 条列表是**便于领导和技术专家浏览的导览，不是“全部结论证据”或新形成的强弱排名**。网页原有 162 条正式 Source 目录仍完整展示，其中 151 条有 Claim 直接关联、11 条作为显式上下文材料保留。另提供“按机构查看 27 项代表作”跳转；该选目清单和正式 Source 的概念与验证状态不同，不得把 27 项都等同于已形成独立 Source→Claim 证据关系。
+
+代码位置：`web/src/view-models/source-emphasis.ts`（严格以已核验的 canonical Source ID 定义分组及页面语义）、`web/src/pages/evidence.astro`（分组展示、全部目录）、`web/scripts/check-web-quality.mjs`（防回归）。全站研究决策和科学结题未改变。
