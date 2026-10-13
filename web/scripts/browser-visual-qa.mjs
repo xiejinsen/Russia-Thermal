@@ -1,6 +1,6 @@
 import {chromium} from 'playwright-core';
 import {spawn,execFileSync} from 'node:child_process';
-import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {existsSync,mkdirSync,writeFileSync,symlinkSync} from 'node:fs';
 import path from 'node:path';
 
 const host='http://127.0.0.1:4173/Russia-Thermal';
@@ -15,8 +15,11 @@ const pages=[
 ];
 const sizes=[['desktop',1440,900],['tablet',768,940],['mobile',390,844]];
 const outputDir='visual-audit';
+const serverRoot='visual-audit-site';
+mkdirSync(serverRoot,{recursive:true});
+if(!existsSync(serverRoot+'/Russia-Thermal'))symlinkSync('../dist',serverRoot+'/Russia-Thermal','dir');
 mkdirSync(outputDir,{recursive:true});
-const server=spawn('python3',['-m','http.server','4173','--bind','127.0.0.1','--directory','dist'],{stdio:['ignore','pipe','pipe']});
+const server=spawn('python3',['-m','http.server','4173','--bind','127.0.0.1','--directory',serverRoot],{stdio:['ignore','pipe','pipe']});
 let execPath;
 for(const p of ['/usr/bin/google-chrome','/usr/bin/chromium','/opt/google/chrome/chrome','/usr/bin/google-chrome-stable']){
  if(existsSync(p)){execPath=p;break;}
