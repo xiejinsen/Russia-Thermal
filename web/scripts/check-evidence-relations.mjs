@@ -86,6 +86,10 @@ if(!p1||p1.status!=='SUPPORTED'||!p1.supportingSourceIds.includes('PAPER-RU-DRY-
   errors.push('P1 decisive Claim-Source chain damaged');
 if(!p2||p2.status!=='OPEN'||!p2.supportingSourceIds.includes('PAPER-RU-AGE-001'))
   errors.push('P2 hypothesis incorrectly promoted or lost aging Source');
+const surtaev=by('actors','PERSON-SURTAEV');
+if(!surtaev||!/^Anton S\. Surtaev$/.test(surtaev.name)||
+   surtaev.parentId!=='ACT-KUT-LAB13')
+  errors.push('Surtaev person identity/affiliation regressed against official Anton Sergeevich roster');
 const diagnostic=by('capabilities','CAP-KUT-L13-DRYOUT-DIAGNOSTICS');
 if(!diagnostic||!diagnostic.claimIds.includes('CLM-PAV-002')||diagnostic.keyPeopleIds.includes('PERSON-ZHUKOV'))
   errors.push('Kutateladze capability: missing core Claim or reintroduced unverified V.I. Zhukov');
