@@ -7,7 +7,7 @@ const vm = buildDecisionsVM();
 ---
 <BaseLayout title="Russia-Thermal — Decisions" description={vm.summary}>
 <SiteHeader slot="header" />
-<section class="hero"><p class="eyebrow">{vm.eyebrow}</p><h1>{vm.title}</h1><p>{vm.summary}</p></section>
+<section class="hero"><p class="eyebrow">{vm.eyebrow}</p><h1>研究决策与调整记录</h1><p>{vm.summary}</p></section>
 <section class="stack">{vm.events.map((model) => <DecisionEventCard model={model} />)}</section>
 </BaseLayout>
 <style>.stack{display:grid;gap:var(--space-6);margin-top:var(--space-12)}</style>
