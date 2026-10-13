@@ -21,6 +21,7 @@ const directionOptions = [...new Map(
   .map(([value,label])=>({value,label}))
   .sort((a,b)=>a.label.localeCompare(b.label));
 
+const usageRoleLabel=(role?:string)=>role ? ({CONTEXT_PROFILE:'机构背景',RANKING_CONTEXT:'排名背景',FRONTIER_DISCOVERY:'前沿线索',BACKGROUND_CONTEXT:'辅助资料',UNRESOLVED:'待确认'} as Record<string,string>)[role] ?? role : '研究主张引用';
 const featured = Object.entries(coreSourceContexts).map(([id,context])=>({record:vm.records.find(r=>r.id===id),context})).filter((x):x is {record:(typeof vm.records)[number];context:(typeof coreSourceContexts)[string]}=>Boolean(x.record));
 const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
 const patentCount = vm.records.filter((record) => record.id.startsWith('PATENT-')).length;
@@ -185,7 +186,7 @@ const records = vm.records.map((record) => {
               </div>
               <div class="role-line">
                 <span>资料用途</span>
-                <b>{record.usageRole ? ({CONTEXT_PROFILE:'机构背景',RANKING_CONTEXT:'排名背景',FRONTIER_DISCOVERY:'前沿线索',BACKGROUND_CONTEXT:'辅助资料',UNRESOLVED:'待确认'} as Record<string,string>)[record.usageRole]??record.usageRole : '研究主张引用'}</b>
+                <b>{usageRoleLabel(record.usageRole)}</b>
               </div>
               {record.linkedDirections.length > 0 && (
                 <div class="direction-line">
