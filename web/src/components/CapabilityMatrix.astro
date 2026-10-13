@@ -45,7 +45,7 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
               <div><b>国际/其他国别或未分类</b>{row.internationalEvidence.slice(0,3).map(s => <a href={s.primaryUrl} target="_blank" rel="noopener noreferrer">{s.title} ({s.year ?? '年份未知'}) ↗</a>)}{row.internationalEvidence.length===0 && <small>无独立关联记录或来源未收录</small>}</div>
               <div><b>俄罗斯来源</b>{row.russiaEvidence.slice(0,3).map(s => <a href={s.primaryUrl} target="_blank" rel="noopener noreferrer">{s.title} ({s.year ?? '年份未知'}) ↗</a>)}{row.russiaEvidence.length===0 && <small>暂无已关联的俄方论文，不表示没有科研成果</small>}</div>
             </div>
-            <div class="claim-links"><span>{row.supportingClaimCount} 条有支持来源的 Claim · {row.contradictingClaimCount} 条有反证来源的 Claim</span>
+            <div class="claim-links"><span>{row.supportingClaimCount} 条包含支持引用的 Claim（含尚未证实假说） · {row.contradictingClaimCount} 条有反证来源的 Claim</span>
               <a href={href(`/claims/?direction=${encodeURIComponent(row.direction.id)}`)}>核查完整 Claim →</a>
               <a href={href(`/evidence/?direction=${encodeURIComponent(row.direction.id)}`)}>全部证据 →</a>
               <a href={href(`/smartphone-transfer/#${row.direction.id}`)}>手机迁移条件 →</a>
