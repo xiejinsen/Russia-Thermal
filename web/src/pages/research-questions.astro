@@ -25,6 +25,7 @@ const topicIndex: Record<string, { title: string; subtitle: string; links: Array
 const rows = questionCloseouts.map(q => ({ ...q, topic: topicIndex[q.id] }));
 const direct = rows.filter(q => q.disposition === 'ACCEPTED_PUBLIC_EVIDENCE').length;
 const limited = rows.filter(q => q.disposition === 'ACCEPTED_WITH_DISCLOSED_LIMITATION').length;
+const confidenceZh=(value:string)=>({HIGH:'高',MEDIUM:'中',LOW:'低'} as Record<string,string>)[value.toUpperCase()]??value;
 const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
   ? '公开证据范围内接受'
   : '附明确限制接受';
@@ -65,7 +66,7 @@ const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
           <aside class="limitations">
             <p class="label">证据限制与后续验证条件</p>
             <p>{q.remainingLimit}</p>
-            <p class="confidence">证据可信度：<strong>{({HIGH:"高",MEDIUM:"中",LOW:"低"} as Record<string,string>)[q.confidence.toUpperCase()] ?? q.confidence}</strong></p>
+            <p class="confidence">证据可信度：<strong>{confidenceZh(q.confidence)}</strong></p>
           </aside>
         </div>
         <div class="actions">
