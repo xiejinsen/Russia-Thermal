@@ -20,6 +20,15 @@ const photos: Record<string, {file:string; author:string; license:string}> = {
 const canonical = isRussia
  ? ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']
  : ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT','ACT-USTC','ACT-ZJU','ACT-BIT','ACT-HUST','ACT-HIT'];
+const chineseSchoolNames:Record<string,string>={
+ 'ACT-PKU':'北京大学','ACT-SEU':'东南大学','ACT-SJTU':'上海交通大学',
+ 'ACT-SCUT':'华南理工大学','ACT-USTC':'中国科学技术大学','ACT-ZJU':'浙江大学',
+ 'ACT-BIT':'北京理工大学','ACT-HUST':'华中科技大学','ACT-HIT':'哈尔滨工业大学'
+};
+const chinaCities:Record<string,string>={
+ Beijing:'北京',Nanjing:'南京',Shanghai:'上海',Guangzhou:'广州',
+ Hefei:'合肥',Hangzhou:'杭州',Wuhan:'武汉',Harbin:'哈尔滨'
+};
 const nodeById = new Map(vm.nodes.map(n=>[n.actorId,n]));
 const actorById = new Map(actors.map(a=>[a.id,a]));
 const selected = canonical.map(id=>{
@@ -27,7 +36,7 @@ const selected = canonical.map(id=>{
  const actor=actorById.get(id);
  if(!actor)return null;
  return {
-   id,name:node?.name??actor.name,city:node?.city??actor.city??'城市尚未核实',
+   id,name:!isRussia?(chineseSchoolNames[id]??actor.name):(node?.name??actor.name),originalName:actor.name,city:!isRussia?(chinaCities[node?.city??actor.city??'']??node?.city??actor.city??'城市尚未核实'):(node?.city??actor.city??'城市尚未核实'),
    latitude:node?.latitude??actor.latitude??undefined,longitude:node?.longitude??actor.longitude??undefined,
    href:href('/institutions/'+id),
    priority:node?.priorityRank,capabilityCount:node?.capabilityCount??0,
@@ -145,7 +154,7 @@ const catalog=vm.nodes.map(n=>({...n,
       </div>
       <div class="focus-copy">
        <span class="focus-location">{item.city}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
-       <h3>{item.name}</h3>
+       <h3>{item.name}</h3>{!isRussia&&<small class="school-en">{item.originalName}</small>}
        <p>{item.description || '机构档案包含已记录的研究能力、关联学者及其证据边界。'}</p>
        <span class="focus-bottom">{item.capabilityCount} 能力 · {item.scholarCount} 人物 <em>查看档案 ↗</em></span>
       </div>
@@ -157,7 +166,7 @@ const catalog=vm.nodes.map(n=>({...n,
    {!isRussia&&<div class="additional-orgs" aria-label="其他中国科研高校">
     <div class="additional-heading"><strong>其余 5 所已收录高校</strong><span>地图编号与机构档案一一对应</span></div>
     <div class="additional-list">{additionalPositions.map(item=><a class="additional-org" id={'atlas-feature-'+item.number} href={item.href}>
-      <strong>{item.number}</strong><div><b>{item.name}</b><span>{item.city}{item.cityOnly?' · 城市级位置（非校区坐标）':' · 有校区位置记录'}</span></div><em>机构档案 ↗</em>
+      <strong>{item.number}</strong><div><b>{item.name}</b><small class="school-en">{item.originalName}</small><span>{item.city}{item.cityOnly?' · 城市级位置（非校区坐标）':' · 有校区位置记录'}</span></div><em>机构档案 ↗</em>
     </a>)}</div>
    </div>}
   </div>
@@ -168,13 +177,13 @@ const catalog=vm.nodes.map(n=>({...n,
   <p class="directory-explain">以下逐项来自研究图谱，不对机构研究水平进行排序。论文关联不等于论文作者归属，也不等于人员现在仍任职于该机构。</p>
   <div class="catalog-controls">
    <label>搜索机构 / 人员 / 研究方向<input type="search" data-filter-search placeholder="例如：dryout / Tomsk / thermal..." autocomplete="off"/></label>
-   <label>城市<select data-filter-city><option value="">全部城市</option>{cityOptions.map(city=><option value={city}>{city}</option>)}</select></label>
+   <label>城市<select data-filter-city><option value="">全部城市</option>{cityOptions.map(city=><option value={city}>{!isRussia?(chinaCities[city]??city):city}</option>)}</select></label>
    <label>关联研究方向<select data-filter-direction><option value="">全部研究方向</option>{directions.map(d=><option value={d.id}>{d.title}</option>)}</select></label>
    <span class="counter" data-filter-count aria-live="polite">{catalog.length} 个机构</span>
   </div>
   <div class="catalog-grid">
    {catalog.map(node=><article class="research-row" data-research-item data-search={node.searchable} data-city={node.city} data-direction={node.directionIds}>
-    <div class="row-head"><span>{node.city}</span>{node.priorityRank&&<small>{node.priorityRank} · 合作研究优先级</small>}</div>
+    <div class="row-head"><span>{!isRussia ? (chinaCities[node.city]??node.city) : node.city}</span>{node.priorityRank&&<small>{node.priorityRank} · 合作研究优先级</small>}</div>
     <h3><a href={node.link}>{node.name} <span aria-hidden="true">↗</span></a></h3>
     <p>{node.scholarCount} 个关联人物 · {node.capabilityCount} 项研究能力 · {node.directions.length} 条方向关联</p>
     {node.directions.length>0&&<div class="tags">{node.directions.slice(0,2).map(d=><a href={href('/directions/'+d.id)}>{d.title} ↗</a>)}</div>}
@@ -216,6 +225,7 @@ const catalog=vm.nodes.map(n=>({...n,
  }
 </script>
 <style>
+.school-en{font-size:11px;color:#a5cbdf;line-height:1.45;display:block;margin:-2px 0 9px}.additional-org .school-en{margin:0;color:#98c9dd}
 
  .china-map .pin-city-label,.china-map .pin-actor-label{display:none}
  .china-map .pin-group.city-only .pin-label-bg{stroke-dasharray:4 3}
