@@ -11,7 +11,7 @@ const pages=[
  ['evidence','/evidence/'],['claims','/claims/'],['claim','/claims/CLM-PAV-002/'],
  ['patent','/patents/PATENT-GLOBAL-DRYOUT-OBS-001/'],
  ['capability','/capabilities/CAP-KUT-L13-DRYOUT-DIAGNOSTICS/'],
- ['compare','/landscape/'],['directory','/site-directory/']
+ ['compare','/landscape/'],['partners','/partners/'],['directory','/site-directory/']
 ];
 const sizes=[['desktop',1440,900],['tablet',768,940],['mobile',390,844]];
 const outputDir='visual-audit';
@@ -64,6 +64,11 @@ try{
      };
     });
     const item={view,slug,route,status,...layout,error,jsErrors:scriptErrors.splice(0)};
+    if(slug==='partners'){
+      const counts=await page.evaluate(()=>({cards:document.querySelectorAll('.priority-overview').length,details:document.querySelectorAll('.decision-row').length,folders:document.querySelectorAll('.direction-folder').length,links:[...document.querySelectorAll('.source-links a')].length}));
+      item.partnerCheck=counts;
+      if(counts.cards!==3||counts.details!==3||counts.folders<3||counts.links<7)fatal.push({...item,error:'Partner priorities no longer have a complete, source-linked P1/P2/P3 decision board'});
+    }
     results.push(item);
     if(status!==200||error||layout.scrollWidth>width+10)fatal.push(item);
     // Exercise the same search/reset interactions people use in the result indexes.
@@ -91,7 +96,7 @@ try{
     const target=path.join(outputDir,view+'-'+slug+'.png');
     await page.screenshot({path:target,fullPage:true,animations:'disabled',timeout:25000});
     // Inspectable above-fold browser captures encoded into Actions logs; no mockups.
-    if((view==='desktop'&&['home','evidence','papers'].includes(slug)) || (view==='mobile'&&['home','evidence','china-map'].includes(slug)) || (view==='tablet'&&slug==='home')){
+    if((view==='desktop'&&['home','evidence','papers','partners'].includes(slug)) || (view==='mobile'&&['home','evidence','china-map','partners'].includes(slug)) || (view==='tablet'&&slug==='home')){
       const shot=await page.screenshot({type:'jpeg',quality:38,fullPage:false});
       console.log('QA_IMAGE_BEGIN '+view+'-'+slug+' '+shot.toString('base64')+' QA_IMAGE_END');
     }
