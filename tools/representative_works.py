@@ -23,6 +23,14 @@ FIELDS = ("selection_id","work_ref","source_locator","scholar_refs","research_la
 STATES = {"CANONICAL","ORIGINAL_REVIEWED","SECONDARY_ONLY","PENDING_IDENTITY"}
 PRIORITIES = {"DECISIVE","SUPPORTING","CONTEXT"}
 
+# Verified Russian-original / English-translation DOI identity pair; ONE scientific work.
+# Original (Teploenergetika 2025): https://sciencejournals.ru/view-article/?a=TepEn2570115Chernysheva&j=tepen&n=12&v=0&y=2025
+# English (Thermal Engineering 72(12)): https://www.pleiades.online/cgi-perl/search.pl?name=thermeng&number=12&page=1108&type=abstract&year=25
+# Do not allow generic DOI mismatch or infer equivalence from similar titles alone.
+CANONICAL_TRANSLATION_ALIASES = {
+    ("PAPER-RU-LHP-001", "10.56304/s0040363625701152", "10.1134/s0040601525700661"),
+}
+
 def checked_records():
     db = v2repo.load_all()
     sources = {o["id"]: o for o in db["source"]}
@@ -69,7 +77,7 @@ def checked_records():
                         errors.append(f"{mark}: linked canonical Source must state CANONICAL")
                     expected = v2repo.normalize_doi(source.get("source_key") or source.get("primary_url"))
                     observed = v2repo.normalize_doi(locator)
-                    if expected and observed != expected:
+                    if expected and observed != expected and (work, expected.lower(), observed.lower()) not in CANONICAL_TRANSLATION_ALIASES:
                         errors.append(f"{mark}: canonical DOI mismatch {expected} != {observed}")
                 for person in row["scholar_refs"].split(";"):
                     if person.startswith("NAME:") and len(person) > 5:
