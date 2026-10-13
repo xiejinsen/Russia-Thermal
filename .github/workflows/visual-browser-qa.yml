@@ -1,0 +1,46 @@
+name: Visual Browser QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/visual-browser-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package.json
+      - name: Install app and browser automation
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright-core
+          google-chrome --version || chromium --version
+      - name: Build website from research SSOT
+        run: npm run build
+      - name: Capture and test real browser views (1440 / 768 / 390)
+        run: node scripts/browser-visual-qa.mjs
+      - name: Upload screenshots and layout report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: russia-thermal-browser-screenshots
+          path: web/visual-audit/
+          retention-days: 30
