@@ -56,7 +56,7 @@ for(const id of ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']){
 for(const photo of [
  'Peking%20University%20West%20Gate.jpg',
  'Southeast%20University.jpg',
- '%E4%B8%9C%E4%B8%AD%E9%99%A21.jpg',
+ 'Shanghai%20Jiao%20Tong%20University%20Gate.jpg',
  'South%20China%20University%20of%20Technology%20Building%20No.%208.jpg'
 ]) {
  if(!cn.includes(photo))failures.push('China infographic missing sourced campus photo: '+photo);
