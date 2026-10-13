@@ -1,5 +1,12 @@
 # V2.1 STATUS
 
+## 2026-10-13 browser visual release acceptance (most recent)
+
+- [42-view real Chromium visual QA](https://github.com/xiejinsen/Russia-Thermal/actions/runs/38404072459) PASSED for 14 representative routes at 1440/768/390px; no page overflow, broken image or browser JS/H1 anomalies. Search/reset workflows for paper, Source and Claim directories passed 9 interaction cases.
+- [Screenshots + layout metrics ZIP](https://github.com/xiejinsen/Russia-Thermal/actions/runs/38404072459/artifacts/11816901595), [deployment](https://github.com/xiejinsen/Russia-Thermal/actions/runs/38404072338) and [release checklist](../analysis/audits/web-visual-browser-qa-2026-10-13.md) are current. Screenshot archive expires after 30 days.
+- Chinese navigation and main research section titles, filters, Clear/All buttons and research-question numbers have been localized without changing paper titles or canonical IDs. P1/P2 original papers and specific Chinese/global paper/patent comparators are visually differentiated from ordinary background sources.
+- No scientific P1/P2/HOLD or Q01–Q10 conclusion was changed. This is a website visual/semantic release acceptance, not a claim of full WCAG certification, all-source factual re-review, mobile device testing, or partner/data authorization.
+
 ## 2026-10-13 webpage evidence chain and archive QA (newest operational snapshot)
 
 - **Scientific authority unchanged:** Q01–Q10 = 10/10 bounded public evidence judgments (3 direct / 7 limited), P1 Kutateladze mechanism-label feasibility, P2 MPEI conditional reserve, TPU HOLD. This is NOT device proof, collaboration outreach consent or data/IP authorization.
