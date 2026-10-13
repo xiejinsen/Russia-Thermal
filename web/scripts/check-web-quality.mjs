@@ -69,6 +69,27 @@ for(const id of ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT']){
  if(start>=0&&!block.includes('原图与授权'))
   failures.push('China featured card lacks image source and credit: '+id);
 }
+// Homepage is a three-stage summary, not a duplicate technical directory.
+for(const name of ['thesis','research-values','decision-section']){
+ if(!homepage.includes('class="'+name+'"'))failures.push('Homepage narrative block missing: '+name);
+}
+if(homepage.includes('class="landscape-index"')||homepage.includes('class="actor-directory"'))
+ failures.push('Homepage has regressed to a duplicate institution directory');
+if(!homepage.includes('/papers/PAPER-RU-DRY-001')||!homepage.includes('/research-questions'))
+ failures.push('Homepage lost primary paper or bounded research-question trail');
+
+const kut=read('institutions/ACT-KUTATELADZE/index.html');
+if(!kut.includes('class="kut-editorial"')||!kut.includes('id="kut-research-heading"'))
+ failures.push('Kutateladze research-first profile section missing');
+for(const id of ['institution-people','institution-capabilities','institution-evidence']){
+ if(!kut.includes('id="'+id+'"')||!kut.includes('href="#'+id+'"'))
+  failures.push('Kutateladze evidence jump not connected: '+id);
+}
+if(!kut.includes('10.1016/j.ijheatmasstransfer.2025.127855'))
+ failures.push('Kutateladze flagship source paper missing');
+const kutH1=[...kut.matchAll(/<h1\b/g)].length;
+if(kutH1!==1) failures.push('Kutateladze should have one page H1, found '+kutH1);
+
 if(!hub.includes('research-map/russia')||!hub.includes('research-map/china'))failures.push('Research infographic hub route missing');
 if(!homepage.includes('俄罗斯热管理')||!homepage.includes('SCIENCE'))failures.push('Homepage scientific atlas hero unexpectedly absent');
 
