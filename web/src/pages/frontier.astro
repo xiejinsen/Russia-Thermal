@@ -7,7 +7,7 @@ const vm = buildFrontierWatchVM();
 ---
 <BaseLayout title="Russia-Thermal — Frontier Watch" description={vm.summary}>
 <SiteHeader slot="header" />
-<section class="hero"><p class="eyebrow">{vm.eyebrow}</p><h1>{vm.title}</h1><p>{vm.summary}</p></section>
+<section class="hero"><p class="eyebrow">{vm.eyebrow}</p><h1>科研前沿与持续关注</h1><p>{vm.summary}</p></section>
 <aside class="policy">{vm.policyNote}</aside>
 <section class="stack">{vm.venues.map((model) => <FrontierVenueCard model={model} />)}</section>
 </BaseLayout>
