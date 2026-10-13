@@ -64,6 +64,22 @@ try{
      };
     });
     const item={view,slug,route,status,...layout,error,jsErrors:scriptErrors.splice(0)};
+    if(slug==='china-map'){
+      const mapCheck=await page.evaluate(()=>{
+        const labels=[...document.querySelectorAll('.china-map .feature-pin')];
+        const rects=labels.map(label=>label.querySelector('.pin-label-bg')?.getBoundingClientRect()).filter(Boolean);
+        const overlaps=[];
+        for(let a=0;a<rects.length;a++)for(let b=a+1;b<rects.length;b++){
+          const x=Math.min(rects[a].right,rects[b].right)-Math.max(rects[a].left,rects[b].left);
+          const y=Math.min(rects[a].bottom,rects[b].bottom)-Math.max(rects[a].top,rects[b].top);
+          if(x>2&&y>2)overlaps.push([a+1,b+1]);
+        }
+        return {pins:labels.length,cityMarkers:document.querySelectorAll('.china-map .pin-group.city-only').length,profiles:document.querySelectorAll('.china-map .additional-org').length,overlaps};
+      });
+      item.chinaMapCheck=mapCheck;
+      if(mapCheck.pins!==9||mapCheck.cityMarkers!==3||mapCheck.profiles!==5||mapCheck.overlaps.length)
+        fatal.push({...item,error:'China map locations/anchors overlap or incomplete: '+JSON.stringify(mapCheck)});
+    }
     if(slug==='partners'){
       const counts=await page.evaluate(()=>({cards:document.querySelectorAll('.priority-overview').length,details:document.querySelectorAll('.decision-row').length,folders:document.querySelectorAll('.direction-folder').length,links:[...document.querySelectorAll('.source-links a')].length}));
       item.partnerCheck=counts;
@@ -106,7 +122,7 @@ try{
  } finally{await browser.close()}
 }finally{server.kill('SIGTERM')}
 writeFileSync(path.join(outputDir,'results.json'),JSON.stringify(results,null,2));
-const report={total:results.length,filterTests:results.filter(x=>x.filterTest).map(x=>({view:x.view,page:x.slug,...x.filterTest})),failures:fatal.map(x=>({view:x.view,page:x.slug,status:x.status,overflow:x.scrollWidth-x.clientWidth,error:x.error})),broken:results.filter(x=>x.brokenImages.length).map(x=>({view:x.view,page:x.slug,images:x.brokenImages})),issues:results.filter(x=>x.h1.length!==1||x.jsErrors.length||x.emptyLinks>0).map(x=>({view:x.view,page:x.slug,h1:x.h1,jsErrors:x.jsErrors,emptyLinks:x.emptyLinks})),sourceCount:results.filter(x=>x.slug==='evidence').map(x=>({view:x.view,important:x.importantSource}))};
+const report={total:results.length,chinaMap:results.filter(x=>x.chinaMapCheck).map(x=>({view:x.view,...x.chinaMapCheck})),filterTests:results.filter(x=>x.filterTest).map(x=>({view:x.view,page:x.slug,...x.filterTest})),failures:fatal.map(x=>({view:x.view,page:x.slug,status:x.status,overflow:x.scrollWidth-x.clientWidth,error:x.error})),broken:results.filter(x=>x.brokenImages.length).map(x=>({view:x.view,page:x.slug,images:x.brokenImages})),issues:results.filter(x=>x.h1.length!==1||x.jsErrors.length||x.emptyLinks>0).map(x=>({view:x.view,page:x.slug,h1:x.h1,jsErrors:x.jsErrors,emptyLinks:x.emptyLinks})),sourceCount:results.filter(x=>x.slug==='evidence').map(x=>({view:x.view,important:x.importantSource}))};
 writeFileSync(path.join(outputDir,'summary.json'),JSON.stringify(report,null,2));
 console.log('BROWSER_QA_SUMMARY '+JSON.stringify(report));
 if(fatal.length)process.exitCode=1;
