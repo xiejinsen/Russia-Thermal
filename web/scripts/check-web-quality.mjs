@@ -61,6 +61,24 @@ for(const photo of [
 ]) {
  if(!cn.includes(photo))failures.push('China infographic missing sourced campus photo: '+photo);
 }
+// All nine Chinese university Actors must appear on the geography map,
+// not only the former four manually featured photo institutions.
+const cnIds=['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT','ACT-USTC','ACT-ZJU','ACT-BIT','ACT-HUST','ACT-HIT'];
+for(const id of cnIds){
+ if(!cn.includes(id))failures.push('China university not indexed: '+id);
+ if(!cn.includes('/institutions/'+id))failures.push('China geographic institute link missing '+id);
+}
+if((cn.match(/class="feature-pin"/g)||[]).length!==9)failures.push('China map must show exactly nine linked university markers');
+if((cn.match(/class="additional-org"/g)||[]).length!==5)failures.push('China map must provide five additional full-name institute rows below four photographed cards');
+for(const n of ['05','06','07','08','09']){
+ if(!cn.includes('id="atlas-feature-'+n+'"')||!cn.includes('href="#atlas-feature-'+n+'"'))
+ failures.push('China location label/target missing: '+n);
+}
+for(const id of ['ACT-BIT','ACT-HUST','ACT-HIT']){
+ if(!cn.includes('/institutions/'+id)) failures.push('City-level-only university has no link: '+id);
+}
+if(!cn.includes('城市级位置（非校区坐标）')||!cn.includes('6 所记录了校区坐标'))
+ failures.push('China map must disclose city-only anchors and verified campus records separately');
 for(const id of ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT']){
  const start=cn.indexOf('id="atlas-feature-0'+(['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT'].indexOf(id)+1)+'"');
  const block=cn.slice(start,start+2000);
