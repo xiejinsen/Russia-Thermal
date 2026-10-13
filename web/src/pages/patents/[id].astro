@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import TechnicalDeepRead from '../../components/TechnicalDeepRead.astro';
 import { buildPatentPageVM, patentIds } from '../../view-models/builders';
+import {sourceContext,sourceEmphasis,countryName} from '../../view-models/source-emphasis';
 
 export function getStaticPaths() {
   return patentIds().map((id) => ({ params: { id } }));
@@ -19,33 +20,34 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 <BaseLayout title={`Russia-Thermal — ${vm.title}`} description={vm.findings[0] ?? vm.title}>
   <SiteHeader slot="header" />
 
-  <section class="patent-hero">
-    <p class="eyebrow">Patent detail · {vm.id}</p>
+  <section class:list={["patent-hero",sourceEmphasis(vm.id)]}>
+    <p class="eyebrow">专利公开原文 · {vm.id}</p>
+    {sourceContext(vm.id)&&<div class:list={["source-context",sourceEmphasis(vm.id)]}><strong>{sourceContext(vm.id)?.label}</strong><span>{sourceContext(vm.id)?.context}</span></div>}
     <h1>{vm.title}</h1>
     <div class="metadata">
-      {vm.deepRead && <span>{vm.deepRead.level} Deep Read</span>}
+      {vm.deepRead && <span>{vm.deepRead.level} 深读记录</span>}
       {vm.year && <span>{vm.year}</span>}
-      {vm.countryContext && <span>{vm.countryContext}</span>}
+      {vm.countryContext && <span>{countryName(vm.countryContext)}</span>}
     </div>
-    {vm.authors.length > 0 && <p class="authors"><b>Inventors:</b> {vm.authors.join(', ')}</p>}
-    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">Open public patent record ↗</a>
+    {vm.authors.length > 0 && <p class="authors"><b>发明人：</b> {vm.authors.join(', ')}</p>}
+    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">查看专利公开记录 ↗</a>
   </section>
 
   <section class="read-grid">
     <article class="main-read">
-      <span>CLAIM-REVIEWED SCOPE</span>
-      <h2>What this patent actually covers in the project record</h2>
+      <span>已核查的专利权利要求内容</span>
+      <h2>本专利记录公开的技术范围</h2>
       {vm.findings.length ? (
         <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
       ) : (
-        <p>No claim-reviewed finding has been recorded for this patent yet.</p>
+        <p>未归档经核查的专利权利要求发现。</p>
       )}
     </article>
 
     <article class="boundary-card">
-      <span>LEGAL / TECHNICAL BOUNDARY</span>
-      <h2>What this review does not establish</h2>
-      <p>{vm.boundary ?? 'No additional evidence boundary is currently recorded.'}</p>
+      <span>法律与技术边界</span>
+      <h2>现有资料不能据此证明什么</h2>
+      <p>{vm.boundary ?? '未记录额外证据限制。'}</p>
     </article>
   </section>
 
@@ -135,6 +137,8 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <style>
+.patent-hero.comparator{border-top:5px solid #6979a4;background:linear-gradient(150deg,#fefeff,#eef0f8)}.source-context{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0;padding:12px 15px;border-radius:8px;background:#e8ecf7;border:1px solid #c6cde2}.source-context strong{color:#465b8c;font-size:12px}.source-context span{font-size:12px;color:#506a86}
+
     .patent-hero{padding:28px;border:1px solid #cfe1ee;border-radius:17px;background:#fff;box-shadow:0 10px 30px rgba(42,96,140,.06)}
     .patent-hero h1{max-width:1100px;margin:6px 0 12px;font-size:25px;line-height:1.25;letter-spacing:-.03em}
     .metadata{display:flex;gap:7px;flex-wrap:wrap}.metadata span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:10px;font-weight:800}
