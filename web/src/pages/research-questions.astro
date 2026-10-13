@@ -29,12 +29,12 @@ const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
   ? '公开证据范围内接受'
   : '附明确限制接受';
 ---
-<BaseLayout title="Research Questions & Closeout | Russia-Thermal" description="Q01–Q10 final bounded public-research answers, underlying evidence and explicit limitations.">
+<BaseLayout title="研究十问与结题判断 | Russia-Thermal" description="Q01–Q10 final bounded public-research answers, underlying evidence and explicit limitations.">
   <SiteHeader slot="header" />
   <div class="questions-page">
     <header class="intro">
       <p class="kicker">RESEARCH CLOSEOUT / PUBLIC EVIDENCE / 2026-10-09</p>
-      <h1>研究问题与结题判断 <span>Research Questions</span></h1>
+      <h1>研究问题与结题判断</h1>
       <p class="lead" lang="zh-CN">我们研究了哪些问题、公开资料实际支持什么判断、又有什么仍未得到验证？从十问的最终答案可以直接进入研究机构、学者、论文、Claim 与正式决策。</p>
       <div class="status-row">
         <strong>{rows.length} / 10 <small>已形成研究结题判断</small></strong>
@@ -44,28 +44,28 @@ const dispositionLabel = (value: string) => value === 'ACCEPTED_PUBLIC_EVIDENCE'
       <p class="scope" lang="zh-CN"><strong>重要边界：</strong>研究结题不等于俄罗斯全国穷尽调查、手机实机验证、原始数据授权或俄方同意合作。{currentActionBoundary.titleZh}。</p>
     </header>
 
-    <nav class="question-nav" aria-label="Research question index">
-      {rows.map(q => <a href={`#${q.id}`} aria-label={`${q.id}: ${q.topic.title}`}><span>{q.id}</span><b>{q.topic.title}</b></a>)}
+    <nav class="question-nav" aria-label="十项研究问题索引">
+      {rows.map(q => <a href={`#${q.id}`} aria-label={`${q.id}: ${q.topic.title}`}><span>第{Number(q.id.slice(1))}问</span><b>{q.topic.title}</b></a>)}
     </nav>
 
     <section class="results" aria-label="Research closeout conclusions">
       {rows.map(q => <article class="question" id={q.id}>
         <header class="question-header">
           <div class="identity">
-            <span class="number">{q.id}</span>
+            <span class="number">第{Number(q.id.slice(1))}问</span>
             <div><h2>{q.topic.title}</h2><p class="subtitle">{q.topic.subtitle}</p></div>
           </div>
           <span class="outcome">{dispositionLabel(q.disposition)}</span>
         </header>
         <div class="body">
           <div class="result">
-            <p class="label">WHAT PUBLIC RESEARCH SUPPORTS · 结题研究判断</p>
+            <p class="label">结题研究判断</p>
             <p>{q.answer}</p>
           </div>
           <aside class="limitations">
-            <p class="label">BOUNDARIES & NEXT EVIDENCE GATE · 证据限制</p>
+            <p class="label">证据限制与后续验证条件</p>
             <p>{q.remainingLimit}</p>
-            <p class="confidence">Evidence confidence: <strong>{q.confidence}</strong></p>
+            <p class="confidence">证据可信度：<strong>{({HIGH:"高",MEDIUM:"中",LOW:"低"} as Record<string,string>)[q.confidence.toUpperCase()] ?? q.confidence}</strong></p>
           </aside>
         </div>
         <div class="actions">
