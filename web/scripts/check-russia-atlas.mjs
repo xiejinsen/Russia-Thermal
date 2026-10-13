@@ -48,6 +48,7 @@ const institution = read('src/pages/institutions/[id].astro');
 const builder = read('src/view-models/builders.ts');
 const home = read('src/pages/index.astro');
 const nav = read('src/components/SiteHeader.astro');
+const contentIndex = read('src/pages/site-directory.astro');
 assert.ok(atlas.includes("russiaAtlas.map("), 'Russia Atlas must render the derived institution registry');
 assert.ok(atlas.includes('id="atlas-search"') && atlas.includes('id="atlas-family"'), 'Atlas filtering controls missing');
 assert.ok(atlasModel.includes('person.parentId && institutionIds.has(person.parentId)'), 'must use recorded parent affiliation for people');
@@ -59,5 +60,5 @@ assert.ok(institution.includes('reviewedTeams') && institution.includes('/repres
 assert.ok(builder.includes('scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)'), 'wrong displayed affiliation in institution view');
 assert.ok(atlasModel.includes("actor.recordState !== 'HISTORICAL_ALIAS'"), 'Russia Atlas includes historical institute alias');
 assert.ok(directory.includes("actor?.recordState !== 'HISTORICAL_ALIAS'"), 'institution directory shows historical alias as new institute');
-assert.ok(nav.includes("path: '/russia-atlas'") && home.includes("href('/russia-atlas')"), 'Russia Atlas not discoverable');
+assert.ok(nav.includes("'/site-directory'") && contentIndex.includes("path:'/russia-atlas'") && home.includes("href('/russia-atlas')"), 'Russia Atlas not discoverable via content directory and homepage');
 console.log(`Russia Atlas integrity PASS: ${groupIds.size} reviewed groups, ${works.length} selections, identity disclaimers and deep links`);
