@@ -37,10 +37,10 @@ const selected = canonical.map(id=>{
 }).filter((n):n is NonNullable<typeof n>=>Boolean(n));
 // Never promote city centers to canonical campus coordinates. These three
 // ACT records are city-identified, but have no verified campus lat/long.
- // City-center anchors: GeoNames Beijing (1816670), Wuhan (1808926), Harbin (2037013).
+ // City-center anchors: GeoNames Beijing (1816670), Wuhan (1791247), Harbin (2037013).
 const chinaCityAnchors:Record<string,{latitude:number;longitude:number;source:string}>={
  'ACT-BIT':{latitude:39.9075,longitude:116.39723,source:'https://www.geonames.org/1816670/beijing.html'},
- 'ACT-HUST':{latitude:30.5833333,longitude:114.2666667,source:'https://www.geonames.org/1808926/wuhan.html'},
+ 'ACT-HUST':{latitude:30.5833333,longitude:114.2666667,source:'https://www.geonames.org/1791247/wuhan.html'},
  'ACT-HIT':{latitude:45.75,longitude:126.65,source:'https://www.geonames.org/2037013/harbin.html'}
 };
 const bounds=isRussia?{west:17,east:191,north:84,south:40}:{west:73,east:135,north:55,south:17};
