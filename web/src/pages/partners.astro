@@ -1,290 +1,225 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import SectionHeader from '../components/SectionHeader.astro';
-import PartnerPriorityCard from '../components/PartnerPriorityCard.astro';
 import { buildPartnerPortfolioVM } from '../view-models/builders';
 import { currentActionBoundary } from '../view-models/action-boundary';
+import { actors, priorities } from '../data/load-normalized';
 
 const vm = buildPartnerPortfolioVM();
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
-
-const priorityDirectionIds = new Set(
-  vm.priorities.flatMap((priority) => priority.directions.map((direction) => direction.id))
-);
+const repo = 'https://github.com/xiejinsen/Russia-Thermal/blob/main/';
+const authority = new Map(priorities.map(priority => [priority.rank, priority]));
+const actorNames = new Map(actors.map(actor => [actor.id, actor.name]));
+const rationale: Record<string, {
+ state: string; heading: string; topic: string; finding: string; limit: string; action: string; gate: string;
+ source: string; sourceId: string; relatedClaim?: string; sourceLabel: string; stage: string
+}> = {
+ P1: {
+  state:'优先：仅内部可行性准备',
+  heading:'Kutateladze 研究所 · Lab 1.3',
+  topic:'沸腾失效与干斑状态的可重复诊断',
+  finding:'红外／光学实验记录了干斑演化及临界状态，可能提供现有方法难以区分的失效机理标签。',
+  limit:'实验不是密封手机均热板；原始数据、标签可重复性与增量价值尚未验证。',
+  action:'内部准备数据需求、机理标签定义及对照基线，不得擅自联系合作方。',
+  gate:'若无法取得合法可用的原始数据，或对相同输入的工程判断没有新增价值，则停止。',
+  source:'PAPER-RU-DRY-001',sourceId:'PAPER-RU-DRY-001',relatedClaim:'CLM-PAV-002',
+  sourceLabel:'原始实验论文',stage:'第一优先研究问题'
+ },
+ P2: {
+  state:'条件储备',
+  heading:'莫斯科动力学院 · MPEI',
+  topic:'长期运行后的毛细／润湿状态变化',
+  finding:'42 个月周期运行后观察到毛细状态变化，为长期可靠性研究提供了少见的日历时间证据。',
+  limit:'没有连续的早期退化时间序列，不能宣称已经实现寿命预警；国内相关可靠性基线更贴近铜水 VC。',
+  action:'仅保留资料性研究；只有存在可合法获取的中间状态数据，才考虑进一步评估。',
+  gate:'如仅有运行终点数据，维持文献储备，不启动寿命预测 PoC。',
+  source:'PAPER-RU-AGE-001',sourceId:'PAPER-RU-AGE-001',relatedClaim:'CLM-MPEI-008',
+  sourceLabel:'原始长期运行论文 · 早期预警仍待验证',stage:'不与 P1 并行启动'
+ },
+ P3: {
+  state:'暂缓推进（HOLD）',
+  heading:'托木斯克理工大学 · TPU',
+  topic:'表面工艺与润湿性优化',
+  finding:'具备表面处理与蒸发实验研究；但中国已有实际 0.4 mm 超薄 VC 中的润湿图案技术对照。',
+  limit:'开放液滴或表面工艺改善，不能直接证明密闭手机器件性能或独有合作增量。',
+  action:'不主动推进合作，保留已有研究档案和对照证据。',
+  gate:'只有出现可重复的、手机约束条件匹配的差异化数据，再重新讨论。',
+  source:'PAPER-CN-UTVC-WP-001',sourceId:'PAPER-CN-UTVC-WP-001',
+  sourceLabel:'关键中国器件级对照',stage:'非第三个待启动任务'
+ }
+};
+const summary = vm.priorities.map(model => {
+ const raw=authority.get(model.rank);
+ const editorial=rationale[model.rank];
+ if (!raw || !editorial) throw new Error('Missing partner-priority authority or Chinese editorial presentation: '+model.rank);
+ const targets=raw.targetActorIds.map(id=>({id,name:actorNames.get(id)??id}));
+ if((model.rank==='P1' && (raw.priorityClass!=='PRIMARY'||!raw.targetActorIds.includes('ACT-KUT-LAB13'))) ||
+    (model.rank==='P2' && (raw.priorityClass!=='RESERVE'||!raw.targetActorIds.includes('ACT-MPEI'))) ||
+    (model.rank==='P3' && (raw.priorityClass!=='HOLD'||!raw.targetActorIds.includes('ACT-TPU'))))
+   throw new Error('Priority SSOT changed; editorial copy requires audit: '+model.rank);
+ return {model,raw,editorial,targets,rank:model.rank};
+});
+const laneLabels:Record<string,{label:string;desc:string}>={
+ 'strategic-candidate':{label:'优先研究方向',desc:'保留研究价值，但仍需通过未来数据或实验门槛'},
+ 'stage0-challenger':{label:'预备挑战方向',desc:'是技术路线的条件性分类，不表示对应机构获得合作许可'},
+ reserve:{label:'条件性技术储备',desc:'保留研究问题，未安排并行合作执行'},
+ watch:{label:'科研方法观察',desc:'关注研究方法，不作为当前合作立项'},
+ hold:{label:'暂缓的技术方向',desc:'保留证据与重新评估门槛，当前不推进'}
+};
+const statusZh=(s?:string)=>({
+ 'Low':'低','Low Medium':'低至中','Medium':'中','Medium High':'中至高','High':'高',
+ 'Not Demonstrated':'未验证','Early Research':'早期研究','Laboratory':'实验室研究'
+} as Record<string,string>)[s??'']??(s??'未单独记录');
+const compareLink=href('/landscape');
 ---
+<BaseLayout title="合作机构与研究优先级 | Russia-Thermal" description="俄罗斯热管理科研合作对象的公开证据判断：P1 内部可行性、P2 条件储备、P3 暂缓；含关键原始论文、验证门槛与授权边界。">
+ <SiteHeader slot="header"/>
+ <div class="partner-page">
+  <header class="page-intro">
+   <p class="kicker">RUSSIA–THERMAL / COLLABORATION DECISION</p>
+   <h1>合作机构与研究优先级</h1>
+   <p>现有公开证据支持优先研究一个问题、条件保留一个方向、暂缓一个方向。<strong>排序代表研究关注程度，不代表已经批准对外合作。</strong></p>
+   <nav class="intro-links" aria-label="相关研究入口">
+    <a href={href('/research-questions/#Q09')}>Q09–Q10 结题依据 ↗</a>
+    <a href={compareLink}>中俄与国际技术对照 ↗</a>
+    <a href={href('/research-packages')}>研究任务与停止条件 ↗</a>
+   </nav>
+  </header>
 
-<BaseLayout title="Russia-Thermal — Partner Portfolio" description={vm.summary}>
-  <SiteHeader slot="header" />
-
-  <section class="hero">
-    <p class="eyebrow">{vm.eyebrow}</p>
-    <h1>合作机构与研究优先级</h1>
-    <p>{vm.summary}</p>
+  <section class="decision-summary" aria-labelledby="decision-summary-title">
+   <div class="section-head">
+    <div><p class="kicker">01 / RESEARCH PRIORITY</p><h2 id="decision-summary-title">研究优先级：一项优先、一项储备、一项暂缓</h2></div>
+   </div>
+   <div class="priority-grid">
+    {summary.map(({rank,editorial,targets,model})=><article class:list={['priority-overview',rank.toLowerCase()]} id={'priority-'+rank.toLowerCase()}>
+      <div class="priority-top"><span class="priority-number">{rank}</span><span class="priority-state">{editorial.state}</span></div>
+      <h3>{editorial.heading}</h3>
+      <p class="priority-topic">{editorial.topic}</p>
+      <div class="priority-insight">
+       <strong>值得关注的依据</strong><p>{editorial.finding}</p>
+      </div>
+      <div class="priority-limit">
+       <strong>不能直接证明</strong><p>{editorial.limit}</p>
+      </div>
+      <a class="priority-jump" href={'#details-'+rank.toLowerCase()}>研究任务、原文和停止条件 <span aria-hidden="true">↓</span></a>
+     </article>)}
+   </div>
   </section>
 
-  <aside class="authorization-boundary" aria-label="Feasibility authorization boundary">
-    <strong>RESEARCH PROPOSAL / NOT OUTREACH AUTHORIZATION</strong>
-    <p lang="zh-CN">{currentActionBoundary.detailZh}</p>
-    <p>{currentActionBoundary.detailEn}</p>
-    <a href={href('/research-questions/#Q09')}>See the Q09–Q10 public research limits →</a>
-    <a href={href('/research-packages')}>Read specific research outputs, comparison baselines and STOP gates →</a>
+  <aside class="authorization" aria-label="研究合作授权边界">
+   <div><strong>{currentActionBoundary.titleZh}</strong><p>{currentActionBoundary.detailZh}</p></div>
+   <a href={href('/research-packages')}>查看具体验证任务 ↗</a>
   </aside>
 
-  <section class="priority-section">
-    <SectionHeader
-      eyebrow="Management priority"
-      title="Partner actions now differ by disposition: Primary, Reserve and Hold"
-      description="P1/P2/P3 preserve the historical partner ranking, but they are no longer equal outreach priorities. Current action follows each partner's disposition and the connected technical direction."
-    />
-    <div class="priority-stack">
-      {vm.priorities.map((model) => <PartnerPriorityCard model={model} />)}
-    </div>
+  <section class="decision-detail" aria-labelledby="detail-heading">
+   <div class="section-head"><div><p class="kicker">02 / EVIDENCE & NEXT GATE</p><h2 id="detail-heading">对应的研究任务与原始依据</h2></div></div>
+   <div class="detail-list">
+    {summary.map(({rank,editorial,raw,targets,model})=><article class:list={['decision-row',rank.toLowerCase()]} id={'details-'+rank.toLowerCase()}>
+      <div class="decision-row-identity">
+       <span class="decision-row-rank">{rank}</span>
+       <div><h3>{editorial.heading}</h3><span>{editorial.state}</span></div>
+       <div class="target-links">
+        {targets.map(target=><a href={href('/institutions/'+target.id)}>机构／实验室档案 ↗</a>)}
+       </div>
+      </div>
+      <div class="decision-row-body">
+       <div class="decision-field"><strong>当前处理</strong><p>{editorial.action}</p></div>
+       <div class="decision-field stop"><strong>继续或停止的条件</strong><p>{editorial.gate}</p></div>
+       <div class="source-field">
+        <div class="source-label"><span>{editorial.sourceLabel}</span><b>{editorial.sourceId}</b></div>
+        <div class="source-links">
+         <a href={href('/papers/'+editorial.source)}>查看正式论文记录 ↗</a>
+         {editorial.relatedClaim&&<a href={href('/claims/'+editorial.relatedClaim)}>对应研究主张 ↗</a>}
+         <a href={repo+'07-decisions/priorities/'+raw.id+'.md'} target="_blank" rel="noopener noreferrer">研究优先级原始记录 ↗</a>
+        </div>
+       </div>
+      </div>
+     </article>)}
+   </div>
   </section>
 
-  <section class="lane-section">
-    <SectionHeader
-      eyebrow="Technical lane index"
-      title="Technical portfolio by investment lane"
-      description="Use this index to review every Strategic Candidate, Reserve, Watch and Hold direction, then drill into the relevant partners, claims and evidence."
-    />
-
-    <div class="lane-groups">
-      {vm.groups.map((group) => (
-        <section class="lane-group" id={group.id}>
-          <header>
-            <div>
-              <span>{group.directions.length} direction{group.directions.length === 1 ? '' : 's'}</span>
-              <h2>{group.title}</h2>
-              <p>{group.description}</p>
-            </div>
-          </header>
-
-          <div class="lane-rows">
-            {group.directions.map((direction) => (
-              <article class="lane-row">
-                <div class="direction-main">
-                  <div class="direction-topline">
-                    <span>{direction.lane.label}</span>
-                    {priorityDirectionIds.has(direction.id) && <b>Priority-linked</b>}
-                  </div>
-                  <a class="direction-title" href={href(`/directions/${direction.id}`)}>{direction.title}</a>
-                  <p>{direction.recommendation}</p>
-                </div>
-
-                <div class="direction-meta">
-                  <div><span>Phone maturity</span><b>{direction.phoneTransferMaturity}</b></div>
-                  <div><span>Differentiation</span><b>{direction.differentiationConfidence}</b></div>
-                </div>
-
-                <nav aria-label={`Explore relationships for ${direction.title}`}>
-                  <a class="primary" href={href(`/directions/${direction.id}`)}>Open direction →</a>
-                  <a href={href(`/claims?direction=${encodeURIComponent(direction.id)}`)}>Claims</a>
-                  <a href={href(`/evidence?direction=${encodeURIComponent(direction.id)}`)}>Evidence</a>
-                  <a href={href(`/institutions?direction=${encodeURIComponent(direction.id)}`)}>Institutions</a>
-                  <a href={href(`/scholars?direction=${encodeURIComponent(direction.id)}`)}>Scholars</a>
-                </nav>
-              </article>
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+  <section class="technical-directions" aria-labelledby="directions-heading">
+   <div class="section-head">
+    <div><p class="kicker">03 / TECHNICAL REFERENCE</p><h2 id="directions-heading">全部技术方向：供深入核查</h2><p>机构合作排序与技术方向的研究状态是两种不同维度；例如 TPU 当前为 HOLD，并不因相关方向保留在技术记录中而自动晋级。</p></div>
+   </div>
+   <div class="direction-folders">
+    {vm.groups.map(group=><details class="direction-folder" id={group.id}>
+      <summary><span><b>{laneLabels[group.id]?.label??group.title}</b><small>{laneLabels[group.id]?.desc??group.description}</small></span><em>{group.directions.length} 项 <span aria-hidden="true">⌄</span></em></summary>
+      <div class="direction-items">
+       {group.directions.map(direction=><article class="direction-item">
+        <div><a class="direction-link" href={href('/directions/'+direction.id)}>{direction.title} ↗</a><p>{direction.recommendation}</p></div>
+        <div class="direction-side">
+         <span>手机适用成熟度：{statusZh(direction.phoneTransferMaturity)}</span>
+         <span>差异化证据：{statusZh(direction.differentiationConfidence)}</span>
+        </div>
+        <div class="direction-actions"><a href={href('/evidence?direction='+encodeURIComponent(direction.id))}>相关原始资料 ↗</a><a href={href('/claims?direction='+encodeURIComponent(direction.id))}>相关研究主张 ↗</a></div>
+       </article>)}
+      </div>
+    </details>)}
+   </div>
   </section>
+
+  <footer class="page-end"><strong>研究结题不等于合作启动。</strong><span>优先级与技术阶段均来自现有研究档案；机构与人的关联不等于论文署名，研究方法价值不等于手机产品性能。</span><a href={href('/research-questions')}>查看完整十问结论 ↗</a></footer>
+ </div>
 </BaseLayout>
-
 <style>
-  .priority-section,
-  .lane-section {
-    display: grid;
-    gap: var(--space-6);
-    margin-top: var(--space-10, 2.5rem);
-  }
-
-  .priority-stack {
-    display: grid;
-    gap: var(--space-6);
-  }
-
-  .lane-groups {
-    display: grid;
-    gap: 14px;
-  }
-
-  .lane-group {
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    box-shadow: var(--shadow-1);
-  }
-
-  .lane-group>header {
-    padding: 15px 18px;
-    border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg,#fbfdff,#f5faff);
-  }
-
-  .lane-group>header>div {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 3px 12px;
-    align-items: baseline;
-  }
-
-  .lane-group>header span {
-    color: var(--accent-vivid);
-    font-size: .63rem;
-    font-weight: 900;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-
-  .lane-group h2 {
-    margin: 0;
-    font-size: 1rem;
-    letter-spacing: -.015em;
-  }
-
-  .lane-group>header p {
-    grid-column: 1/-1;
-    max-width: 90ch;
-    margin: 3px 0 0;
-    color: var(--text-muted);
-    font-size: .82rem;
-    line-height: 1.55;
-  }
-
-  .lane-rows { display: grid; }
-
-  .lane-row {
-    display: grid;
-    grid-template-columns: minmax(20rem,1.45fr) minmax(15rem,.6fr) minmax(22rem,.85fr);
-    gap: 18px;
-    align-items: center;
-    padding: 13px 16px;
-    border-bottom: 1px solid #e4edf3;
-  }
-
-  .lane-row:last-child { border-bottom: 0; }
-  .direction-main { display: grid; gap: 4px; min-width: 0; }
-
-  .direction-topline {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .direction-topline span,
-  .direction-topline b {
-    padding: 3px 6px;
-    border-radius: 999px;
-    font-size: .52rem;
-    font-weight: 900;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-
-  .direction-topline span { background: #eef6fb; color: #315f80; }
-  .direction-topline b { background: #e8f6ef; color: #087a66; }
-
-  .direction-title {
-    width: fit-content;
-    color: #193f5c;
-    font-size: .88rem;
-    font-weight: 850;
-    line-height: 1.35;
-    text-decoration: none;
-  }
-
-  .direction-title:hover,
-  .direction-title:focus-visible {
-    color: var(--accent-vivid);
-    text-decoration: underline;
-    text-underline-offset: .16em;
-  }
-
-  .direction-main p {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: .82rem;
-    line-height: 1.5;
-  }
-
-  .direction-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    overflow: hidden;
-    border: 1px solid #dce8f0;
-    border-radius: 8px;
-    background: #dce8f0;
-  }
-
-  .direction-meta div {
-    display: grid;
-    gap: 3px;
-    padding: 8px 9px;
-    background: #f8fbfd;
-  }
-
-  .direction-meta span {
-    color: #708596;
-    font-size: .53rem;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
-  .direction-meta b {
-    color: #315f80;
-    font-size: .67rem;
-    overflow-wrap: anywhere;
-  }
-
-  .lane-row nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-
-  .lane-row nav a {
-    padding: 5px 7px;
-    border: 1px solid #d8e7f1;
-    border-radius: 6px;
-    background: #fff;
-    color: #43677f;
-    font-size: .7rem;
-    font-weight: 800;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .lane-row nav a:hover,
-  .lane-row nav a:focus-visible {
-    background: #eef6fb;
-    color: var(--accent-vivid);
-  }
-
-  .lane-row nav .primary {
-    border-color: #b9d7ea;
-    background: #edf7fd;
-    color: #0b67b2;
-  }
-
-  @media (max-width: 1050px) {
-    .lane-row { grid-template-columns: 1fr 1fr; }
-    .lane-row nav { grid-column: 1/-1; justify-content: flex-start; }
-  }
-
-  @media (max-width: 720px) {
-    .lane-row { grid-template-columns: 1fr; }
-    .lane-row nav { grid-column: auto; }
-  }
-.authorization-boundary{margin:var(--space-6) 0;padding:var(--space-5,1.25rem);border-left:3px solid var(--accent);background:var(--surface-muted);color:var(--text)}
-  .authorization-boundary strong{font-size:.78rem;letter-spacing:.06em}
-  .authorization-boundary p{line-height:1.65;margin:.5rem 0}
-  .authorization-boundary a{color:var(--accent);font-weight:700}
+:global(main){max-width:1320px}.partner-page{width:100%;display:grid;gap:34px;padding:12px 0 55px;color:#183a51}
+.kicker{margin:0;font-size:11px;letter-spacing:.1em;font-weight:850;color:#266f95}
+.page-intro{padding:30px clamp(22px,3vw,40px);border-radius:16px;background:linear-gradient(128deg,#f5fbfe,#dcecf6);border:1px solid #bdd5e5}
+.page-intro h1{font-size:clamp(29px,3.65vw,46px);line-height:1.25;letter-spacing:-.025em;color:#163a54;margin:12px 0 16px}
+.page-intro>p:not(.kicker){font-size:16px;line-height:1.75;color:#3a5b70;max-width:75ch;margin:0}
+.page-intro>p strong{color:#155d81}
+.intro-links{display:flex;flex-wrap:wrap;gap:12px 23px;margin-top:23px}
+.intro-links a,.page-end a{font-size:13px;color:#0d638d;font-weight:800;text-decoration:none}
+.intro-links a:hover,.page-end a:hover{text-decoration:underline}
+.section-head{display:flex;justify-content:space-between;gap:15px;margin:0 0 17px}
+.section-head h2{color:#183c55;font-size:clamp(22px,2.5vw,29px);margin:8px 0 0;line-height:1.35}
+.section-head p:not(.kicker){color:#597285;font-size:13px;line-height:1.75;max-width:83ch;margin:8px 0 0}
+.priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.priority-overview{display:flex;flex-direction:column;min-width:0;padding:24px 24px 19px;background:#fff;border:1px solid #cbdde9;border-top:5px solid #87a5b9;border-radius:13px;box-shadow:0 7px 21px #12496a0a;scroll-margin-top:95px}
+.priority-overview.p1{border-top-color:#167eab;background:linear-gradient(165deg,#f9fdff,#e9f6fc)}
+.priority-overview.p2{border-top-color:#6c88ad}
+.priority-overview.p3{border-top-color:#a5aeb7;background:#fafbfc}
+.priority-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.priority-number{font-size:27px;line-height:1;font-weight:900;color:#216b91;letter-spacing:-.035em}
+.priority-state{border:1px solid #bdd4e2;border-radius:7px;padding:6px 8px;color:#245b78;font-size:12px;font-weight:850;background:#edf6fa}
+.priority-overview.p2 .priority-state{background:#eef2f9;color:#536b91;border-color:#c9d4e8}
+.priority-overview.p3 .priority-state{background:#f0f2f4;color:#596877;border-color:#d4dce0}
+.priority-overview h3{color:#183b54;font-size:21px;line-height:1.4;margin:21px 0 7px}
+.priority-topic{font-size:14px;line-height:1.6;color:#3f6881;font-weight:700;margin:0 0 23px}
+.priority-insight,.priority-limit{border-top:1px solid #d5e4ed;padding-top:15px;margin-top:auto}
+.priority-limit{margin-top:16px;border-top-color:#e1e8ed}
+.priority-insight strong,.priority-limit strong,.decision-field strong{font-size:12px;color:#1b678f}
+.priority-limit strong{color:#626f7d}
+.priority-insight p,.priority-limit p{color:#385a70;line-height:1.7;font-size:13px;margin:8px 0 0}
+.priority-jump{margin-top:22px;text-decoration:none;font-size:13px;font-weight:850;color:#08638d;display:flex;justify-content:space-between;gap:13px}
+.authorization{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid #aacddd;border-left:4px solid #1a7ea6;background:#e9f4fa;border-radius:10px;padding:18px 23px}
+.authorization strong{font-size:14px;color:#174965}.authorization p{margin:6px 0 0;font-size:13px;color:#45677b;line-height:1.7}
+.authorization a{font-size:12px;color:#0b658f;font-weight:800;white-space:nowrap}
+.detail-list{display:grid;gap:13px}.decision-row{display:grid;grid-template-columns:minmax(195px,.34fr) minmax(0,1fr);border:1px solid #cbdce7;border-radius:13px;overflow:hidden;background:#fff;scroll-margin-top:86px}
+.decision-row-identity{background:#f1f7fb;padding:20px;display:flex;flex-direction:column;gap:13px;border-right:1px solid #d7e5ed}
+.decision-row.p1 .decision-row-identity{background:#e9f5fc}.decision-row.p3 .decision-row-identity{background:#f5f7f8}
+.decision-row-rank{font-size:26px;color:#176d98;font-weight:900}
+.decision-row-identity h3{font-size:17px;color:#1b425b;line-height:1.4;margin:0 0 7px}
+.decision-row-identity span:not(.decision-row-rank){color:#506d83;font-size:12px;font-weight:700}
+.target-links{display:grid;gap:6px;margin-top:auto}.target-links a{color:#135e88;font-size:12px;font-weight:850}
+.decision-row-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 23px;padding:21px 24px}
+.decision-field{min-width:0}.decision-field p{font-size:13px;color:#48667a;line-height:1.75;margin:7px 0 0}
+.decision-field.stop strong{color:#626f7b}.source-field{grid-column:1/-1;padding-top:15px;border-top:1px solid #d8e6ed}
+.source-label{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.source-label span{background:#e8f4fb;border:1px solid #b9d8e7;color:#195d81;font-size:12px;font-weight:800;padding:5px 8px;border-radius:5px}.decision-row.p3 .source-label span{background:#edf0f8;color:#4a6088;border-color:#c7d2e5}
+.source-label b{font-size:11px;color:#58758a;overflow-wrap:anywhere}.source-links{display:flex;flex-wrap:wrap;gap:10px 19px;margin-top:12px}.source-links a{font-size:12px;color:#0b648e;font-weight:750;text-decoration:none}.source-links a:hover{text-decoration:underline}
+.direction-folders{display:grid;gap:9px}.direction-folder{border:1px solid #ccdce6;border-radius:10px;background:#fff;overflow:hidden}
+.direction-folder>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;cursor:pointer;padding:17px 20px;background:#f1f7fa}
+.direction-folder>summary::-webkit-details-marker{display:none}.direction-folder>summary:focus-visible{outline:2px solid #267fa7;outline-offset:-3px}
+.direction-folder>summary>span{display:grid;gap:5px}.direction-folder>summary b{color:#224961;font-size:15px}.direction-folder>summary small{color:#627c8c;font-size:12px;line-height:1.55}
+.direction-folder>summary em{font-size:12px;font-style:normal;white-space:nowrap;color:#2a6683;font-weight:850}
+.direction-folder>summary em span{display:inline-block;transition:transform .15s}.direction-folder[open]>summary em span{transform:rotate(180deg)}
+.direction-items{padding:0 18px}.direction-item{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(150px,.8fr) minmax(150px,.7fr);align-items:center;gap:15px;padding:17px 3px;border-bottom:1px solid #e2ebf0}.direction-item:last-child{border-bottom:0}
+.direction-link{color:#184d6b;font-size:14px;line-height:1.45;font-weight:850;text-decoration:none}.direction-item p{color:#5b7587;font-size:12px;line-height:1.75;margin:7px 0 0}.direction-side{display:grid;gap:7px;color:#49677d;font-size:12px}.direction-actions{display:grid;gap:7px}.direction-actions a{font-size:12px;color:#166991;font-weight:800}
+.page-end{display:flex;flex-wrap:wrap;gap:9px 18px;border-top:1px solid #cbdce7;padding:23px 4px;color:#536d81;font-size:12px;line-height:1.7}
+.page-end strong{color:#20455f}.page-end a{margin-left:auto}
+@media(max-width:1030px){.priority-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.priority-overview.p3{grid-column:1/-1}.direction-item{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.direction-actions{grid-column:1/-1;display:flex;gap:20px}.decision-row{grid-template-columns:minmax(155px,.32fr) minmax(0,1fr)}}
+@media(max-width:700px){.partner-page{gap:25px;padding:0 0 36px}.page-intro{padding:24px 19px}.page-intro h1{font-size:29px}.page-intro>p:not(.kicker){font-size:14px}.intro-links{margin-top:16px;gap:10px 16px}.priority-grid{grid-template-columns:1fr}.priority-overview.p3{grid-column:auto}.priority-overview{padding:20px}.priority-overview h3{font-size:18px;margin-top:16px}.priority-topic{margin-bottom:15px}.authorization{align-items:flex-start;flex-direction:column;padding:16px}.decision-row{grid-template-columns:1fr}.decision-row-identity{border-right:0;border-bottom:1px solid #d7e5ed}.decision-row-body{grid-template-columns:1fr;padding:18px}.source-field{grid-column:1}.direction-item{grid-template-columns:1fr;gap:9px}.direction-actions{grid-column:1;display:flex;flex-wrap:wrap}.direction-folder>summary{padding:15px}.section-head h2{font-size:21px}.page-end a{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.direction-folder>summary em span{transition:none}}
 </style>
