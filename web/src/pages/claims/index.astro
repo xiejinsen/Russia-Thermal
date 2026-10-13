@@ -8,6 +8,9 @@ import { buildClaimExplorerVM } from '../../view-models/builders';
 import { directionTitle } from '../../view-models/helpers';
 
 const vm = buildClaimExplorerVM();
+const zhStatus=(v:string)=>({Supported:'证据支持',Open:'尚待验证',Refuted:'证据否定'} as Record<string,string>)[v]??v;
+const zhConfidence=(v:string)=>({High:'高',Medium:'中',Low:'低'} as Record<string,string>)[v]??v;
+const zhRole=(v:string)=>({PARTNER_READINESS:'合作准备条件',PORTFOLIO_RATIONALE:'方向判断依据',COMPARATOR_UMBRELLA:'技术对照',FRONTIER_DISCOVERY:'前沿研究线索',EVIDENCE_GAP:'证据缺口',BACKGROUND:'背景资料',UNRESOLVED:'待确认',NO_ROLE:'无特殊角色'} as Record<string,string>)[v]??v;
 const base = import.meta.env.BASE_URL;
 const href=(path:string)=>`${base}${path.replace(/^\//,'')}`;
 const rawClaimById = new Map(claimRecords.map((claim) => [claim.id, claim]));
@@ -38,20 +41,20 @@ const records=vm.records.map((claim)=>({
 }));
 ---
 
-<BaseLayout title="Russia-Thermal — Claims" description={vm.summary}>
+<BaseLayout title="研究主张与证据状态 | Russia-Thermal" description={vm.summary}>
   <SiteHeader slot="header" />
 
   <div data-explorer-root>
     <section class="hero compact-hero">
       <div>
-        <p class="eyebrow">Decision claim explorer</p>
-        <h1>{vm.title}</h1>
+        <p class="eyebrow">EVIDENCE REVIEW / CLAIMS</p>
+        <h1>研究主张与证据状态</h1>
         <p>{vm.summary}</p>
       </div>
       <div class="summary-chips">
-        <span>{records.length} claims</span>
-        <span>{records.filter((claim)=>claim.status==='Supported').length} SUPPORTED · {records.filter((claim)=>claim.status==='Open').length} OPEN · {records.filter((claim)=>claim.status==='Refuted').length} REFUTED</span>
-        <span>{records.filter((claim)=>claim.contradictingCount>0).length} pressure-tested</span>
+        <span>{records.length} 条主张</span>
+        <span>{records.filter((claim)=>claim.status==='Supported').length} 已支持 · {records.filter((claim)=>claim.status==='Open').length} 待验证 · {records.filter((claim)=>claim.status==='Refuted').length} 已否定</span>
+        <span>{records.filter((claim)=>claim.contradictingCount>0).length} 条有反证／对照资料</span>
       </div>
     </section>
 
@@ -60,20 +63,20 @@ const records=vm.records.map((claim)=>({
       compact
       total={records.length}
       urlFilterKeys={['capability', 'actor', 'person']}
-      searchPlaceholder="Search proposition, boundary, Claim ID, role, Direction…"
+      searchPlaceholder="检索研究判断、证据边界、主张编号…"
       filters={[
-        { key:'status', label:'Status', options:statuses.map((value)=>({value,label:value})) },
-        { key:'confidence', label:'Confidence', options:confidences.map((value)=>({value,label:value})) },
+        { key:'status', label:'研究状态', options:statuses.map((value)=>({value,label:zhStatus(value)})) },
+        { key:'confidence', label:'可信度', options:confidences.map((value)=>({value,label:zhConfidence(value)})) },
         {
           key:'role',
-          label:'Decision role',
-          options:[...roles.map((value)=>({value,label:value})),{value:'NO_ROLE',label:'No special role'}]
+          label:'决策作用',
+          options:[...roles.map((value)=>({value,label:zhRole(value)})),{value:'NO_ROLE',label:'无特殊角色'}]
         },
-        {key:'direction',label:'Direction',options:directionOptions}
+        {key:'direction',label:'研究方向',options:directionOptions}
       ]}
     />
 
-    <section class="dense-list" aria-label="Claim research index">
+    <section class="dense-list" aria-label="研究主张目录">
       {records.map((claim)=>(
         <div
           data-explorer-record
@@ -90,8 +93,8 @@ const records=vm.records.map((claim)=>({
             <div slot="main" class="claim-main">
               <div class="topline">
                 <span>{claim.id}</span>
-                <b>{claim.status}</b>
-                <em>{claim.confidence}</em>
+                <b>{zhStatus(claim.status)}</b>
+                <em>{zhConfidence(claim.confidence)}</em>
               </div>
               <a class="title" href={href(claim.href)}>{claim.proposition}</a>
             </div>
@@ -99,41 +102,41 @@ const records=vm.records.map((claim)=>({
             <div slot="details" class="claim-details">
               {claim.raw?.boundary ? (
                 <div>
-                  <span>Boundary</span>
+                  <span>适用边界</span>
                   <p>{claim.raw.boundary}</p>
                 </div>
               ) : (
-                <p class="muted">No separate Claim boundary recorded.</p>
+                <p class="muted">当前未单独记录该主张的适用边界。</p>
               )}
               {claim.decisionRole && (
                 <div>
-                  <span>Decision role</span>
-                  <p>{claim.decisionRole}</p>
+                  <span>决策作用</span>
+                  <p>{zhRole(claim.decisionRole)}</p>
                 </div>
               )}
             </div>
 
             <div slot="meta" class="claim-meta">
               <div class="relation-metrics">
-                <span><b>{claim.supportingCount}</b> support</span>
-                <span class="pressure"><b>{claim.contradictingCount}</b> pressure</span>
-                <span><b>{claim.directionCount}</b> Directions</span>
+                <span><b>{claim.supportingCount}</b> 支持引用</span>
+                <span class="pressure"><b>{claim.contradictingCount}</b> 反证／对照</span>
+                <span><b>{claim.directionCount}</b> 方向</span>
               </div>
               {claim.directionIds.length > 0 && (
                 <div class="direction-line">
-                  <span>Direction context</span>
+                  <span>关联方向</span>
                   <p>{claim.directionIds.slice(0,2).map(directionTitle).join(' · ')}{claim.directionIds.length > 2 ? ' …' : ''}</p>
                 </div>
               )}
               {claim.capabilityIds.length > 0 && (
-                <span class="cap-count">{claim.capabilityIds.length} linked capabilit{claim.capabilityIds.length === 1 ? 'y' : 'ies'}</span>
+                <span class="cap-count">{claim.capabilityIds.length} 项关联能力</span>
               )}
             </div>
 
             <div slot="actions" class="row-actions">
-              <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=supporting`)}>Support</a>
-              {claim.contradictingCount > 0 && <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=pressure`)}>Pressure</a>}
-              <a href={href(`/papers?claim=${encodeURIComponent(claim.id)}`)}>Papers</a>
+              <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=supporting`)}>支持资料</a>
+              {claim.contradictingCount > 0 && <a href={href(`/evidence?claim=${encodeURIComponent(claim.id)}&relation=pressure`)}>对照／反证</a>}
+              <a href={href(`/papers?claim=${encodeURIComponent(claim.id)}`)}>论文</a>
             </div>
           </DenseObjectRow>
         </div>
