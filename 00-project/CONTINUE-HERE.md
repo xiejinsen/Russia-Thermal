@@ -1,5 +1,17 @@
 # CONTINUE HERE — Russia-Thermal
 
+## 当前接续状态（2026-10-13）：网页证据链已复核
+
+本项目的决策目标仍是从公开原始资料判断俄罗斯热管理科研对智能手机是否具有相对中国／国际研究的可验证增量。Q01–Q10 研究结题为 **10/10（3 项接受、7 项附限制接受）**；P1 Kutateladze、P2 MPEI、TPU HOLD 的研究结论没有变更，任何外部接洽、实验或数据授权均未获批准。
+
+**恢复项目首先阅读：** [权威状态](STATUS.md) → [2026-10-13 全站证据链语义审计](../analysis/audits/web-evidence-chain-audit-2026-10-13.md) → [27 篇代表论文与正式 Source 对照](../analysis/audits/representative-evidence-link-audit-2026-10-13.md) → [Q01–Q10 结题矩阵](../analysis/audits/research-closeout-wp3-q01-q10-final-matrix-2026-10-09.md)。
+
+**本轮结果：** 155 Actor / 162 Source / 123 Claim / 52 Capability / 8 Direction / 28 Decision 已通过生产构建中的 ID 与关键语义检查；151 Source 被 Claim 直接引用、11 条仅作明确角色的背景资料。曾误写为 Anton V. Surtaev 的核心研究人员已依据官方俄文名册更正为 Anton S. Surtaev。网页不再利用姓氏自动推断论文作者；`OPEN` Claim 的支持引文不代表假说已证明。浏览器逐屏视觉验收、完整原文独立再审和真实设备测试仍未完成。
+
+**已核验 CI：** [Web UI Check](https://github.com/xiejinsen/Russia-Thermal/actions/runs/38398953372) 与 [GitHub Pages Deploy](https://github.com/xiejinsen/Russia-Thermal/actions/runs/38398953469) 均通过。保留以下 2026-10-09 的交接说明作为历史记录，不要把当时的“网页尚未构建”误认为当前状态。
+
+## 历史交接记录（2026-10-09）
+
 Use this file when resuming the project in a new chat/window.
 
 ## Pre-PPT research handoff
