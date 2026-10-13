@@ -5,6 +5,7 @@ import ExplorerToolbar from '../components/ExplorerToolbar.astro';
 import DenseObjectRow from '../components/DenseObjectRow.astro';
 import { buildEvidenceExplorerVM } from '../view-models/builders';
 import { directionTitle } from '../view-models/helpers';
+import {coreSourceContexts, sourceEmphasis, sourceKindLabel, sourceContext, countryName} from '../view-models/source-emphasis';
 
 const vm = buildEvidenceExplorerVM();
 const base = import.meta.env.BASE_URL;
@@ -20,6 +21,7 @@ const directionOptions = [...new Map(
   .map(([value,label])=>({value,label}))
   .sort((a,b)=>a.label.localeCompare(b.label));
 
+const featured = Object.entries(coreSourceContexts).map(([id,context])=>({record:vm.records.find(r=>r.id===id),context})).filter((x):x is {record:(typeof vm.records)[number];context:(typeof coreSourceContexts)[string]}=>Boolean(x.record));
 const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
 const patentCount = vm.records.filter((record) => record.id.startsWith('PATENT-')).length;
 const otherSourceCount = vm.records.length - paperCount - patentCount;
@@ -63,25 +65,26 @@ const records = vm.records.map((record) => {
 });
 ---
 
-<BaseLayout title="Russia-Thermal — Evidence Explorer" description={vm.summary}>
+<BaseLayout title="原始资料与证据索引 | Russia-Thermal" description={vm.summary}>
   <SiteHeader slot="header" />
 
   <div data-explorer-root>
     <section class="hero compact-hero">
       <div>
-        <p class="eyebrow">{vm.eyebrow}</p>
-        <h1>{vm.title}</h1>
+        <p class="eyebrow">RESEARCH SOURCES</p>
+        <h1>原始资料与证据索引</h1>
         <p>{vm.summary}</p>
       </div>
       <div class="summary-chips">
-        <span>{vm.totalEvidence} sources</span>
-        <span>{paperCount} Paper sources</span>
-        <span>{patentCount} Patent sources</span>
-        <span>{otherSourceCount} other sources</span>
+        <span>{vm.totalEvidence} 条原始资料</span>
+        <span>{paperCount} 篇论文</span>
+        <span>{patentCount} 件专利</span>
+        <span>{otherSourceCount} 条官方及其他资料</span>
       </div>
     </section>
 
     <p class="relation-note"><strong>关系口径：</strong>Source 的作者是原始文献署名；筛选中的机构和人员来自 Capability/Claim 研究关联，<strong>不表示他们发表、拥有或独立验证了该 Source</strong>。与 OPEN Claim 的支持资料关联，亦不代表其假说得到证明。</p>
+    <section class="essential-sources" aria-labelledby="essential-heading"><div class="essential-head"><div><p class="eyebrow">关键原始资料</p><h2 id="essential-heading">核心研究依据与技术对照</h2></div><a href={href("/research-questions")}>研究结论 ↗</a></div><div class="essential-grid">{featured.map(({record,context})=><article class:list={["essential-item",context.emphasis]}><div class="essential-type"><span>{sourceKindLabel(record.id)}</span><b>{context.label}</b></div><h3><a href={href(record.id.startsWith("PATENT-")?"/patents/"+record.id:"/papers/"+record.id)}>{record.title}</a></h3><p>{context.context}</p><div class="essential-actions">{context.claimId&&<a href={href("/claims/"+context.claimId)}>关联研究主张 ↗</a>}<a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">查看原始资料 ↗</a></div></article>)}</div></section>
     <ExplorerToolbar
       sticky
       compact
@@ -89,35 +92,36 @@ const records = vm.records.map((record) => {
       urlFilterKeys={['claim', 'capability', 'actor', 'person']}
       searchPlaceholder="搜索来源、发现、限制、原文作者、研究关联机构/人员、Claim…"
       filters={[
-        { key:'sourceType', label:'Type', options:sourceTypes.map((value)=>({value,label:value})) },
+        { key:'sourceType', label:'资料类型', options:sourceTypes.map((value)=>({value,label:value})) },
         {
           key:'country',
-          label:'Country',
-          options:countries.map((value)=>({value,label:value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value}))
+          label:'国家／地区',
+          options:countries.map((value)=>({value,label:value === 'RU' ? '俄罗斯' : value === 'CN' ? '中国' : value}))
         },
-        { key:'year', label:'Year', options:years.map((value)=>({value:String(value),label:String(value)})) },
+        { key:'year', label:'年份', options:years.map((value)=>({value:String(value),label:String(value)})) },
         {
           key:'usageRole',
-          label:'Role',
-          options:[...usageRoles.map((value)=>({value,label:value})),{value:'NO_ROLE',label:'Claim-linked / no context role'}]
+          label:'证据用途',
+          options:[...usageRoles.map((value)=>({value,label:value})),{value:'NO_ROLE',label:'直接关联研究主张'}]
         },
         {
           key:'relation',
-          label:'Relation',
+          label:'关联性质',
           options:[
             {value:'supporting',label:'列为 Claim 支持资料（不代表 Claim 已证实）'},
             {value:'pressure',label:'反证或对照压力'},
             {value:'context',label:'背景资料'}
           ]
         },
-        { key:'direction', label:'Direction', options:directionOptions }
+        { key:'direction', label:'研究方向', options:directionOptions }
       ]}
     />
 
-    <section class="dense-list" aria-label="Evidence research index">
+    <section class="dense-list" aria-label="科研资料目录">
       {records.map((record) => (
         <div
           data-explorer-record
+          data-importance={sourceEmphasis(record.id)}
           data-source-type={record.sourceType}
           data-country={record.countryContext ?? ''}
           data-year={record.year ? String(record.year) : ''}
@@ -140,9 +144,10 @@ const records = vm.records.map((record) => {
             <div slot="main" class="source-main">
               <div class="topline">
                 <span>{record.id}</span>
-                <b>{record.sourceType}</b>
+                <b class:list={["kind-tag",record.isPaper?"is-paper":record.isPatent?"is-patent":"is-other"]}>{sourceKindLabel(record.id,record.sourceType)}</b>
+                {sourceContext(record.id)&&<strong class:list={["source-priority",sourceEmphasis(record.id)]}>{sourceContext(record.id)?.label}</strong>}
                 {record.year && <em>{record.year}</em>}
-                {record.countryContext && <i>{record.countryContext}</i>}
+                {record.countryContext && <i>{countryName(record.countryContext)}</i>}
               </div>
               {record.localDetailHref ? (
                 <a class="title" href={href(record.localDetailHref)}>{record.title}</a>
@@ -158,15 +163,15 @@ const records = vm.records.map((record) => {
             <div slot="details" class="source-details">
               {record.findings.length > 0 ? (
                 <div>
-                  <span>Direct finding</span>
+                  <span>原始资料中的直接发现</span>
                   <p>{record.findings[0]}</p>
                 </div>
               ) : (
-                <p class="muted">Context source without a technical direct-finding statement.</p>
+                <p class="muted">此资料用于背景研究，无直接实验发现记录。</p>
               )}
               {record.boundary && (
                 <div>
-                  <span>Boundary</span>
+                  <span>证据适用边界</span>
                   <p>{record.boundary}</p>
                 </div>
               )}
@@ -174,26 +179,26 @@ const records = vm.records.map((record) => {
 
             <div slot="meta" class="source-meta">
               <div class="relation-metrics">
-                <span><b>{record.supportingClaims.length}</b> support</span>
-                <span class="pressure"><b>{record.contradictingClaims.length}</b> pressure</span>
-                <span><b>{record.linkedCapabilities.length}</b> capabilities</span>
+                <span><b>{record.supportingClaims.length}</b> 支持引用</span>
+                <span class="pressure"><b>{record.contradictingClaims.length}</b> 对照／反证</span>
+                <span><b>{record.linkedCapabilities.length}</b> 关联能力</span>
               </div>
               <div class="role-line">
-                <span>Role</span>
-                <b>{record.usageRole ?? 'Claim-linked'}</b>
+                <span>资料用途</span>
+                <b>{record.usageRole ? ({CONTEXT_PROFILE:'机构背景',RANKING_CONTEXT:'排名背景',FRONTIER_DISCOVERY:'前沿线索',BACKGROUND_CONTEXT:'辅助资料',UNRESOLVED:'待确认'} as Record<string,string>)[record.usageRole]??record.usageRole : '研究主张引用'}</b>
               </div>
               {record.linkedDirections.length > 0 && (
                 <div class="direction-line">
-                  <span>Direction context</span>
+                  <span>关联研究方向</span>
                   <p>{record.linkedDirections.slice(0,2).map((direction)=>direction.title || directionTitle(direction.id)).join(' · ')}{record.linkedDirections.length > 2 ? ' …' : ''}</p>
                 </div>
               )}
             </div>
 
             <div slot="actions" class="row-actions">
-              {record.localDetailHref && <a href={href(record.localDetailHref)}>Detail</a>}
-              <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
-              {(record.supportingClaims.length > 0 || record.contradictingClaims.length > 0) && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>Claims</a>}
+              {record.localDetailHref && <a href={href(record.localDetailHref)}>查看记录</a>}
+              <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">原始资料 ↗</a>
+              {(record.supportingClaims.length > 0 || record.contradictingClaims.length > 0) && <a href={href(`/claims?q=${encodeURIComponent(record.id)}`)}>研究主张</a>}
               {record.linkedCapabilities.slice(0,2).map((capability) => <a href={href(`/capabilities/${capability.id}`)}>{capability.id}</a>)}
             </div>
           </DenseObjectRow>
@@ -203,6 +208,13 @@ const records = vm.records.map((record) => {
   </div>
 
   <style>
+
+.essential-sources{margin:17px 0 22px}.essential-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:13px}.essential-head h2{font-size:clamp(20px,2vw,25px);color:#163b55;margin:5px 0}.essential-head>a{font-size:13px;color:#155f89;font-weight:800}.essential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.essential-item{min-width:0;display:flex;flex-direction:column;gap:9px;padding:18px 20px;border:1px solid #bdd8e6;border-left:5px solid #3282ac;border-radius:12px;background:linear-gradient(150deg,#fff,#edf7fc)}.essential-item.comparator{border-left-color:#5d7199;background:linear-gradient(150deg,#fff,#f1f4fa)}.essential-type{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.essential-type span{font-size:11px;color:#245b7a;font-weight:800}.essential-type b{font-size:11px;color:#096189;border:1px solid #98c8de;border-radius:4px;padding:3px 6px}.essential-item.comparator .essential-type b{color:#4b5e8a;border-color:#bdc6da}.essential-item h3{font-size:15px;line-height:1.5;margin:1px 0 0;overflow-wrap:anywhere}.essential-item h3 a{color:#193d58;text-decoration:none}.essential-item h3 a:hover{text-decoration:underline}.essential-item>p{font-size:12px;color:#43647b;line-height:1.65;margin:0;flex:1}.essential-actions{display:flex;gap:13px;flex-wrap:wrap}.essential-actions a{font-size:12px;color:#08628d;font-weight:800}.essential-item.comparator .essential-actions a{color:#405e84}
+[data-explorer-record][data-importance="decision"]{border-left:5px solid #217da7;background:#f0f8fd}[data-explorer-record][data-importance="comparator"]{border-left:5px solid #677da7;background:#f5f7fb}
+.kind-tag.is-paper{background:#e7f3fc!important;color:#195f8b!important}.kind-tag.is-patent{background:#efeefa!important;color:#59549a!important}.kind-tag.is-other{background:#eef3f1!important;color:#3a7161!important}
+.source-priority{display:inline-flex;padding:3px 7px;border-radius:5px;border:1px solid #8bbcd3;background:#dceef7;color:#165a7e;font-size:11px;line-height:1.35}.source-priority.comparator{background:#e9ecf6;border-color:#bec8e0;color:#495f8c}
+@media(max-width:1000px){.essential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.essential-grid{grid-template-columns:1fr}.essential-head{align-items:start;flex-direction:column}}
+
 .relation-note{padding:14px 18px;margin:13px 0 22px;background:#eef6fb;border:1px solid #cee1ed;border-radius:10px;color:#264c67;font-size:13px;line-height:1.75}.relation-note strong{color:#173d55}
 
     .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.compact-hero>div:first-child{max-width:72rem}.compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}.compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:84ch;color:var(--text-muted);line-height:1.55}
