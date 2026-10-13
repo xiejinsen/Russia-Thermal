@@ -42,8 +42,8 @@ const primaryDirection =
       <ExplorerLinkStrip
         links={[
           { label: 'Related Claims', href: href(`/claims?person=${encodeURIComponent(vm.id)}`) },
-          { label: 'Related Papers', href: href(`/papers?person=${encodeURIComponent(vm.id)}`) },
-          { label: 'All Evidence', href: href(`/evidence?person=${encodeURIComponent(vm.id)}`), primary: true }
+          { label: '研究方向相关论文（非个人发表清单）', href: href(`/papers?person=${encodeURIComponent(vm.id)}`) },
+          { label: '关联证据（非署名证明）', href: href(`/evidence?person=${encodeURIComponent(vm.id)}`), primary: true }
         ]}
       />
       {vm.officialUrl && <a class="official-link" href={vm.officialUrl} target="_blank" rel="noopener noreferrer">Official profile ↗</a>}
@@ -60,6 +60,7 @@ const primaryDirection =
   </DetailHero>
 
   <div class="detail-stack">
+    <aside class="identity-boundary" aria-label="学者身份与论文归属边界"><strong>文献关联不等于论文署名</strong><p>以下技术能力、Claim 与论文的关联来自当前科研图谱；网页不会根据相同姓氏、机构或合作关系推定个人发表论文。论文作者以原始 Source 的署名为准，具体人与每篇论文的身份对应需另行核查。</p></aside>
     <RelationPath
       nodes={[
         { label: 'Scholar', value: 1 },
@@ -141,8 +142,8 @@ const primaryDirection =
     {vm.authoredEvidence.length > 0 && <section class="panel">
       <header class="panel-head">
         <div>
-          <p class="section-kicker">Direct authored evidence</p>
-          <h2>Sources whose author field directly matches this scholar</h2>
+          <p class="section-kicker">VERIFIED PUBLICATION BYLINES</p>
+          <h2>已独立核实个人身份的署名论文</h2>
         </div>
         <span>{vm.authoredEvidence.length} matched sources</span>
       </header>
@@ -232,6 +233,8 @@ const primaryDirection =
 </BaseLayout>
 
 <style>
+.identity-boundary{padding:18px 22px;border:1px solid #b9d6e6;border-left:4px solid #31769b;border-radius:9px;background:#eaf4fa;color:#1a3b53}.identity-boundary strong{font-size:14px}.identity-boundary p{font-size:13px;line-height:1.75;margin:8px 0 0;color:#3d5f75}
+
   .official-link{display:inline-block;margin-top:.7rem;color:var(--accent-vivid);font-size:.72rem;font-weight:800;text-decoration:none}
   .detail-stack{display:grid;gap:1rem;margin-top:1rem}
   .split-section{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr);gap:1rem}
