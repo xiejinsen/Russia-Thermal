@@ -32,10 +32,9 @@ const cities=[
    <div class="map-hd"><span>RUSSIA / RESEARCH GEOGRAPHY</span><strong>地理节点 → 机构档案</strong></div>
    <div class="map-geometry">
     <img src={href('/assets/russia-editorial-outline.svg')} alt="根据 Natural Earth 地理轮廓绘制的俄罗斯科研版图示意图"/>
-    {cities.map(city=><a href={city.link} class="geo-node" style={'left:'+city.x+'%;top:'+city.y+'%'} title={city.name+' · '+city.sub} aria-label={city.name+' 对应机构 '+city.sub+'，打开机构档案'}><span></span><b>{city.name}</b><small>{city.sub}</small></a>)}
+    {cities.map(city=><a href={city.link} class:list={["geo-node",city.name.toLowerCase()]} style={'left:'+city.x+'%;top:'+city.y+'%'} title={city.name+' · '+city.sub} aria-label={city.name+' 对应机构 '+city.sub+'，打开机构档案'}><span></span><b>{city.name}</b><small>{city.sub}</small></a>)}
     <span class="map-brand">SCIENCE / RESEARCH / EVIDENCE</span>
    </div>
-   <div class="geo-note">示意地理分布，非实力排名 · Tomsk 的两所高校共享城市节点 · 点击城市或下方机构卡片进入档案</div>
   </div>
  </div>
  <div class="institutions-title">
@@ -74,6 +73,10 @@ const cities=[
 .map-geometry>img{display:block;width:100%;height:100%}
 .geo-node{position:absolute;z-index:2;transform:translate(-50%,-50%);width:19px;height:19px;border-radius:50%;background:#56dfff;border:4px solid #dcfaff;box-shadow:0 0 0 8px #16b5e54d,0 0 26px #29baf2;color:#fff;text-decoration:none}
 .geo-node span{display:block;width:100%;height:100%}.geo-node b{position:absolute;top:22px;left:-12px;background:#062b47cf;padding:2px 5px;border-radius:4px;color:white;white-space:nowrap;font-size:10px}.geo-node small{position:absolute;top:39px;left:-12px;white-space:nowrap;color:#bce8fa;font-size:8px}
+.geo-node.novosibirsk b{left:-133px;top:-8px;width:127px;text-align:right}
+.geo-node.novosibirsk small{left:-133px;top:10px;width:127px;text-align:right}
+.geo-node.tomsk b{left:34px;top:-8px}
+.geo-node.tomsk small{left:34px;top:10px}
 .geo-node:hover,.geo-node:focus-visible{background:white;outline:2px solid #ecffff;outline-offset:6px}.map-brand{position:absolute;right:10px;bottom:9px;font-size:9px;letter-spacing:.12em;color:#a1cce0}
 .geo-note{font-size:11px;line-height:1.7;color:#cce4f0;padding:12px 17px;border-top:1px solid #19516d}
 .institutions-title{display:flex;align-items:end;justify-content:space-between;gap:12px;padding:31px 0 20px;border-top:1px solid #327796;margin-top:30px}.institutions-title h3{font-size:26px;color:#fff;margin:5px 0 0}.institutions-title a{color:#a5ebff;font-size:13px}
