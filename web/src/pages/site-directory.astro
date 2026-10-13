@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+const base=import.meta.env.BASE_URL;
+const href=(path:string)=>path==='/'?base:base+path.replace(/^\//,'');
+const collections=[
+ {
+  tag:'01 / RESEARCH OUTCOMES',
+  title:'研究结论与合作判断',
+  caption:'优先回答我们知道什么、还缺什么、下一步值得验证什么。',
+  links:[
+   {label:'十问研究结论',path:'/research-questions',desc:'Q01–Q10：结论、依据与公开资料限制'},
+   {label:'中俄与全球对照',path:'/landscape',desc:'俄罗斯研究与国内及全球技术基线'},
+   {label:'合作机构优先级',path:'/partners',desc:'具备研究价值的具体团队与合作条件'},
+   {label:'研究方向',path:'/directions',desc:'值得继续推进的技术问题和证明条件'},
+   {label:'手机工程迁移',path:'/smartphone-transfer',desc:'从实验室结果到手机热管理的限制'},
+   {label:'研究工作包',path:'/research-packages',desc:'可执行的验证问题与资料需求'},
+   {label:'决策记录',path:'/decisions',desc:'重要判断、修订和保留条件'}
+  ]
+ },
+ {
+  tag:'02 / RESEARCH LANDSCAPE',
+  title:'机构、学者与技术能力',
+  caption:'从科研版图进入具体人物、实验室和代表研究。',
+  links:[
+   {label:'中俄科研版图',path:'/research-map',desc:'地理示意图、城市节点与机构介绍'},
+   {label:'俄罗斯能力 Atlas',path:'/russia-atlas',desc:'俄罗斯大学、研究所与已收录能力'},
+   {label:'机构与实验室',path:'/institutions',desc:'跨国机构、实验室与背景档案'},
+   {label:'研究人员',path:'/scholars',desc:'学者、研究关联和机构归属证据'},
+   {label:'技术能力',path:'/capabilities',desc:'逐条技术能力和适用边界'},
+   {label:'代表性研究成果',path:'/representative-works',desc:'科研团队的重要原始论文'},
+   {label:'研究覆盖范围',path:'/research-coverage',desc:'收录口径、覆盖深度与缺失记录'}
+  ]
+ },
+ {
+  tag:'03 / EVIDENCE & VERIFICATION',
+  title:'原始资料与论据核验',
+  caption:'深入核查论文、证据关系和有争议的判断。',
+  links:[
+   {label:'研究主张',path:'/claims',desc:'具体论点及其支持或反驳证据'},
+   {label:'论文数据库',path:'/papers',desc:'论文书目信息、深读与引用'},
+   {label:'证据目录',path:'/evidence',desc:'原始论文、机构资料和引用链'},
+   {label:'前沿观察',path:'/frontier',desc:'会议、期刊与最新研究趋势'}
+  ]
+ }
+];
+---
+<BaseLayout title="全部研究内容 | Russia-Thermal" description="俄罗斯热管理研究网站全站中文导航与研究内容索引">
+ <SiteHeader slot="header" />
+ <div class="directory-page">
+  <header class="directory-hero">
+   <p class="kicker">RUSSIA–THERMAL / RESEARCH CONTENTS</p>
+   <h1>全部研究内容</h1>
+   <p>先读研究结论，还是从机构、学者或原始论文查起？这里按阅读目标整理所有公开研究成果。</p>
+  </header>
+  <div class="directory-sections">
+   {collections.map(group=><section class="directory-group">
+    <div class="group-intro">
+     <span class="group-tag">{group.tag}</span><h2>{group.title}</h2><p>{group.caption}</p>
+    </div>
+    <div class="entry-grid">
+     {group.links.map(link=><a href={href(link.path)} class="directory-entry">
+      <strong>{link.label}</strong><span>{link.desc}</span><em aria-hidden="true">↗</em>
+     </a>)}
+    </div>
+   </section>)}
+  </div>
+  <footer class="directory-footer"><a href={href('/')}>返回首页 ↗</a><span>研究结论与合作判断都以可追溯的公开证据为限。</span></footer>
+ </div>
+</BaseLayout>
+<style>
+.directory-page{max-width:1250px;margin:0 auto;color:#1a344a}
+.directory-hero{padding:30px 0 36px;border-bottom:1px solid #c8dbe8}
+.kicker,.group-tag{font-size:11px;letter-spacing:.13em;color:#0e6794;font-weight:850}
+.directory-hero h1{font-size:clamp(30px,4vw,50px);line-height:1.2;letter-spacing:-.035em;margin:14px 0 12px;color:#112f48}
+.directory-hero>p:last-child{font-size:16px;line-height:1.8;color:#405e73;max-width:800px;margin:0}
+.directory-sections{display:grid;gap:35px;padding:35px 0 60px}
+.directory-group{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:25px}
+.group-intro{padding:9px 18px 0 0}
+.group-intro h2{font-size:22px;line-height:1.35;color:#193b55;margin:13px 0 12px}
+.group-intro p{color:#587087;font-size:14px;line-height:1.75;margin:0}
+.entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.directory-entry{position:relative;display:flex;flex-direction:column;gap:7px;padding:18px 38px 19px 19px;background:#fff;border:1px solid #cfdeea;border-radius:12px;text-decoration:none;min-width:0;box-shadow:0 4px 18px rgb(30 73 104 / .035);transition:border .15s,transform .15s}
+.directory-entry:hover{transform:translateY(-2px);border-color:#5da8ce}
+.directory-entry:focus-visible{outline:2px solid #1b8cbc;outline-offset:3px}
+.directory-entry strong{color:#173b57;font-size:15px;line-height:1.4}
+.directory-entry span{color:#526d81;line-height:1.6;font-size:12px}
+.directory-entry em{position:absolute;right:17px;top:17px;font-style:normal;color:#216f9b}
+.directory-footer{border-top:1px solid #c3d9e6;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:22px 0;color:#5b7488;font-size:13px}
+.directory-footer a{color:#125e8c;font-weight:800;text-decoration:none}
+@media(max-width:900px){.directory-group{grid-template-columns:1fr;gap:14px}.group-intro{padding:0}.directory-sections{gap:42px}}
+@media(max-width:640px){.directory-hero{padding-top:4px}.entry-grid{grid-template-columns:1fr}.directory-entry{padding:17px 38px 17px 17px}}
+@media(prefers-reduced-motion:reduce){.directory-entry{transition:none}}
+</style>
