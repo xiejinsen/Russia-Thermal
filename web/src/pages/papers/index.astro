@@ -6,6 +6,7 @@ import DenseObjectRow from '../../components/DenseObjectRow.astro';
 import { directions, evidence } from '../../data/load-normalized';
 import { buildPaperExplorerVM } from '../../view-models/builders';
 import { directionTitle } from '../../view-models/helpers';
+import {sourceContext, sourceEmphasis, countryName} from '../../view-models/source-emphasis';
 
 const vm = buildPaperExplorerVM();
 const deepReadCount = vm.records.filter((paper) => Boolean(paper.deepReadLevel)).length;
@@ -42,20 +43,20 @@ const records = vm.records.map((paper) => {
 });
 ---
 
-<BaseLayout title="Russia-Thermal — Papers" description={vm.summary}>
+<BaseLayout title="原始论文与深读记录 | Russia-Thermal" description={vm.summary}>
   <SiteHeader slot="header" />
 
   <div data-explorer-root>
     <section class="hero compact-hero">
       <div>
-        <p class="eyebrow">Paper evidence explorer</p>
-        <h1>{vm.title}</h1>
+        <p class="eyebrow">PAPERS / ORIGINAL EVIDENCE</p>
+        <h1>原始论文与深读记录</h1>
         <p>{vm.summary}</p>
       </div>
       <div class="summary-chips">
-        <span>{vm.records.length} Paper sources · all also in Evidence</span>
-        <span>{deepReadCount} Deep Reads</span>
-        <span>{vm.records.length - deepReadCount} reference / supporting only</span>
+        <span>{vm.records.length} 篇正式论文 Source</span>
+        <span>{deepReadCount} 篇已建深读记录</span>
+        <span>{vm.records.length - deepReadCount} 篇作为引用资料</span>
       </div>
     </section>
 
@@ -64,27 +65,27 @@ const records = vm.records.map((paper) => {
       compact
       total={records.length}
       urlFilterKeys={['claim', 'capability', 'actor', 'person', 'relation']}
-      searchPlaceholder="Search title, author, venue, finding, ID, Direction…"
+      searchPlaceholder="检索论文、作者、期刊、结论或研究方向…"
       filters={[
         {
           key: 'country',
-          label: 'Country',
-          options: countries.map((value) => ({ value, label: value === 'RU' ? 'Russia' : value === 'CN' ? 'China' : value }))
+          label: '国家／地区',
+          options: countries.map((value) => ({ value, label: value === 'RU' ? '俄罗斯' : value === 'CN' ? '中国' : value }))
         },
         {
           key: 'year',
-          label: 'Year',
+          label: '年份',
           options: years.map((value) => ({ value: String(value), label: String(value) }))
         },
         {
           key: 'deep',
-          label: 'Read depth',
+          label: '阅读深度',
           options: [
-            { value: 'DEEP_READ', label: 'Deep Read complete' },
-            { value: 'REFERENCE_ONLY', label: 'Reference / supporting only' }
+            { value: 'DEEP_READ', label: '有深读记录' },
+            { value: 'REFERENCE_ONLY', label: '常规引用资料' }
           ]
         },
-        { key: 'direction', label: 'Direction', options: directionOptions }
+        { key: 'direction', label: '研究方向', options: directionOptions }
       ]}
     />
 
@@ -92,6 +93,7 @@ const records = vm.records.map((paper) => {
       {records.map((paper) => (
         <div
           data-explorer-record
+          data-importance={sourceEmphasis(paper.id)}
           data-country={paper.countryContext ?? ''}
           data-year={paper.year ? String(paper.year) : ''}
           data-deep={paper.deepClass}
@@ -108,8 +110,9 @@ const records = vm.records.map((paper) => {
             <div slot="main" class="paper-main">
               <div class="topline">
                 <span>{paper.id}</span>
+                {sourceContext(paper.id)&&<strong class:list={["source-priority",sourceEmphasis(paper.id)]}>{sourceContext(paper.id)?.label}</strong>}
                 {paper.year && <b>{paper.year}</b>}
-                {paper.countryContext && <em>{paper.countryContext}</em>}
+                {paper.countryContext && <em>{countryName(paper.countryContext)}</em>}
               </div>
               <a class="title" href={href(paper.href)}>{paper.title}</a>
               <p class="authors">{paper.authors.slice(0,4).join(' · ')}{paper.authors.length > 4 ? ' et al.' : ''}</p>
@@ -119,15 +122,15 @@ const records = vm.records.map((paper) => {
             <div slot="details" class="paper-details">
               {paper.source?.directFindings?.length ? (
                 <div>
-                  <span>Direct finding</span>
+                  <span>论文直接报告的发现</span>
                   <p>{paper.source.directFindings[0]}</p>
                 </div>
               ) : (
-                <p class="muted">No extracted direct finding in the source record.</p>
+                <p class="muted">尚无已归档的直接实验发现。</p>
               )}
               {paper.source?.boundary && (
                 <div>
-                  <span>Boundary</span>
+                  <span>证据边界</span>
                   <p>{paper.source.boundary}</p>
                 </div>
               )}
@@ -135,26 +138,26 @@ const records = vm.records.map((paper) => {
 
             <div slot="meta" class="paper-meta">
               <div class="relation-metrics">
-                <span><b>{paper.claimCount}</b> Claims</span>
-                <span><b>{paper.directionCount}</b> Directions</span>
+                <span><b>{paper.claimCount}</b> 关联主张</span>
+                <span><b>{paper.directionCount}</b> 研究方向</span>
               </div>
               {paper.deepReadLevel ? (
                 <div class="deep-state">
-                  <b>{paper.deepReadLevel} Deep Read</b>
-                  <span>{paper.reviewStatus ?? 'Review basis recorded'}</span>
+                  <b>{paper.deepReadLevel} 深读记录</b>
+                  <span>{paper.reviewStatus ?? '已记录核验依据'}</span>
                 </div>
-              ) : <span class="reference-state">Reference / supporting only</span>}
+              ) : <span class="reference-state">常规引用资料</span>}
               {paper.directionIds.length > 0 && (
                 <div class="direction-line">
-                  <span>Direction context</span>
+                  <span>关联研究方向</span>
                   <p>{paper.directionIds.slice(0,2).map(directionTitle).join(' · ')}{paper.directionIds.length > 2 ? ' …' : ''}</p>
                 </div>
               )}
             </div>
 
             <div slot="actions" class="row-actions">
-              {paper.source?.primaryUrl && <a href={paper.source.primaryUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>}
-              {paper.claimCount > 0 && <a href={href(`/claims?q=${encodeURIComponent(paper.id)}`)}>Claims</a>}
+              {paper.source?.primaryUrl && <a href={paper.source.primaryUrl} target="_blank" rel="noopener noreferrer">论文原文 ↗</a>}
+              {paper.claimCount > 0 && <a href={href(`/claims?q=${encodeURIComponent(paper.id)}`)}>相关主张</a>}
             </div>
           </DenseObjectRow>
         </div>
@@ -163,6 +166,8 @@ const records = vm.records.map((paper) => {
   </div>
 
   <style>
+[data-explorer-record][data-importance="decision"]{border-left:5px solid #237ba6;background:#f0f8fd}[data-explorer-record][data-importance="comparator"]{border-left:5px solid #7581a5;background:#f4f6fb}.source-priority{display:inline-flex;border:1px solid #92c5de;background:#dfedf7;color:#205e7d;border-radius:4px;padding:3px 7px;font-size:11px;font-weight:850}.source-priority.comparator{border-color:#c4cadc;background:#e8ebf6;color:#485c87}
+
     .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.compact-hero>div:first-child{max-width:72rem}.compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}.compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:82ch;color:var(--text-muted);line-height:1.55}
     .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:20rem}.summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
     .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
