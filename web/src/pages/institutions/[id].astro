@@ -43,6 +43,7 @@ const primaryDirection =
   vm.directions.find((item) => item.lane.label === 'Strategic Candidate') ??
   vm.directions.find((item) => item.lane.label === 'Reserve') ??
   vm.directions[0];
+const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 ---
 
 <BaseLayout title={`Russia-Thermal — ${vm.name}`} description={vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? vm.name} immersive>
@@ -50,8 +51,41 @@ const primaryDirection =
 
   <InstitutionVisualHero name={vm.name} id={vm.id} country={vm.country} summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance} capabilityCount={vm.capabilities.length} peopleCount={vm.people.length} paperCount={vm.outputSnapshot.paperCount} officialUrl={vm.officialUrl} />
 
+  {isKutateladze && <section class="kut-editorial" aria-labelledby="kut-research-heading">
+    <div class="kut-editorial-top">
+      <div class="kut-lead">
+        <p class="kut-kicker">RESEARCH VALUE / EXPERIMENTAL MECHANISMS</p>
+        <h2 id="kut-research-heading">重点不是散热器件本身，而是<strong>识别局部干涸如何演化为不可逆失效</strong></h2>
+        <p>代表性公开论文研究介电液体在沸腾临界区的局部干斑演化，利用红外与光学方法区分实验状态。对手机热管理的潜在价值在于更精确的失效验证方法；这仍然只是需要检验的合作研究假设。</p>
+      </div>
+      <div class="kut-lane">
+        <span>RESEARCH POSITION</span><strong>优先：数据与方法可行性</strong>
+        <p>尚无手机密闭 UTVC 级性能优势证据。论文研究条件不能直接外推到终端产品。</p>
+        <a href={href('/partners')}>合作研究判断 ↗</a>
+      </div>
+    </div>
+    <div class="kut-methods">
+      <article><span>01 / 观测</span><h3>IR / Optical diagnostics</h3><p>公开研究在特定沸腾实验条件下记录局部干斑及临界状态。</p></article>
+      <article><span>02 / 研究假设</span><h3>Failure-state labeling</h3><p>评估可重复的状态标签，能否为终端热失效验证增加有效信息。</p></article>
+      <article><span>03 / 证明条件</span><h3>Phone-relevant validation</h3><p>需要原始数据、标注可重复性和相对于现有方案的实证增量。</p></article>
+    </div>
+    <div class="kut-research-path">
+      <div class="kut-primary-source">
+        <span>REPRESENTATIVE EVIDENCE · 2026</span>
+        <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2025.127855" target="_blank" rel="noopener noreferrer"><i>Investigation of heat transfer, critical heat flux and dry spots dynamics during boiling of dielectric fluids HFE-7100 and Novec 649</i> ↗</a>
+        <small>Surtaev et al. · International Journal of Heat and Mass Transfer</small>
+      </div>
+      <nav class="kut-jumps" aria-label="本机构研究档案的关键内容">
+        {vm.people.length > 0 && <a href="#institution-people">研究人员 <b>{vm.people.length}</b> ↘</a>}
+        {vm.capabilities.length > 0 && <a href="#institution-capabilities">技术能力 <b>{vm.capabilities.length}</b> ↘</a>}
+        {vm.evidence.length > 0 && <a href="#institution-evidence">原始证据 <b>{vm.evidenceStats.evidenceCount}</b> ↘</a>}
+        <a href={href('/smartphone-transfer')}>手机迁移边界 ↗</a>
+      </nav>
+    </div>
+  </section>}
+
   <div class="legacy-evidence">
-  <DetailHero
+  {!isKutateladze && <DetailHero
     eyebrow={`${vm.kindLabel} detail`}
     title={vm.name}
     summary={vm.atlasProfile?.leadershipSummary ?? vm.relevance}
@@ -76,10 +110,10 @@ const primaryDirection =
         { label: 'Patents', value: vm.outputSnapshot.patentCount }
       ]}
     />
-  </DetailHero>
+  </DetailHero>}
 
   <div class="detail-stack">
-    <RelationPath
+    {!isKutateladze && <RelationPath
       nodes={[
         { label: 'Institution', value: 1, note: vm.kindLabel },
         { label: 'Scholars', value: vm.people.length },
@@ -88,7 +122,7 @@ const primaryDirection =
         { label: 'Evidence', value: vm.evidenceStats.evidenceCount, href: href(`/evidence?actor=${encodeURIComponent(vm.id)}`) },
         { label: 'Directions', value: vm.directions.length }
       ]}
-    />
+    />}
 
     {reviewedTeams.length > 0 && <aside class="works-link">
       <strong>机构代表成果已收录</strong>
@@ -272,6 +306,35 @@ const primaryDirection =
 </BaseLayout>
 
 <style>
+  .kut-editorial{margin:0 10px 24px;border:1px solid #276486;border-radius:17px;overflow:hidden;background:linear-gradient(135deg,#082d4d,#051f38);color:#eaf8ff;box-shadow:0 14px 28px #001d3470}
+  .kut-editorial-top{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(255px,.65fr);gap:25px;padding:clamp(24px,3.5vw,42px)}
+  .kut-kicker{font-size:11px;color:#82dcf4;font-weight:850;letter-spacing:.13em;margin:0}
+  .kut-lead h2{font-size:clamp(24px,2.65vw,35px);line-height:1.38;color:#f7fdff;margin:15px 0 15px;font-weight:760;letter-spacing:-.025em}
+  .kut-lead h2 strong{color:#80e5ff;font-weight:850}
+  .kut-lead>p:last-child{max-width:800px;color:#d5ebf5;line-height:1.85;font-size:15px;margin:0}
+  .kut-lane{display:grid;align-content:center;gap:11px;padding:24px;border-radius:11px;border:1px solid #3a829f;background:#0d4568}
+  .kut-lane span,.kut-primary-source>span{color:#91e7fd;font-size:11px;letter-spacing:.1em;font-weight:800}
+  .kut-lane strong{color:#fff;font-size:21px;line-height:1.4}
+  .kut-lane p{color:#cce5f3;font-size:13px;line-height:1.8;margin:0}
+  .kut-lane a{font-size:13px;color:#a0ecff;font-weight:800}
+  .kut-methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#367d9c;border-block:1px solid #367d9c}
+  .kut-methods article{padding:23px 27px;background:#0b3554}
+  .kut-methods span{color:#8edbf5;font-size:12px;font-weight:800}
+  .kut-methods h3{color:white;font-size:17px;line-height:1.4;margin:10px 0}
+  .kut-methods p{color:#d0e5f0;font-size:13px;line-height:1.75;margin:0}
+  .kut-research-path{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:25px 39px}
+  .kut-primary-source{display:grid;gap:8px}
+  .kut-primary-source>a{color:#f0fbff;font-size:14px;line-height:1.65;font-weight:700;text-decoration:none}
+  .kut-primary-source>a:hover{text-decoration:underline}
+  .kut-primary-source small{color:#b2d6e9;font-size:12px}
+  .kut-jumps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .kut-jumps a{display:flex;justify-content:space-between;align-items:center;gap:9px;text-decoration:none;color:#c9effd;font-size:13px;font-weight:800;border:1px solid #3b7999;border-radius:8px;padding:12px 13px}
+  .kut-jumps a:hover{background:#125779;color:white}
+  .kut-jumps b{color:white;font-size:12px}
+  .kut-editorial a:focus-visible{outline:3px solid #b4f6ff;outline-offset:3px}
+  #institution-people,#institution-capabilities,#institution-evidence,#institution-claims,#institution-directions{scroll-margin-top:95px}
+  @media(max-width:880px){.kut-editorial-top,.kut-research-path{grid-template-columns:1fr}.kut-methods{grid-template-columns:1fr}.kut-methods article{padding:20px 24px}.kut-research-path{padding:24px}}
+  @media(max-width:530px){.kut-editorial{margin-inline:0}.kut-editorial-top{padding:23px}.kut-jumps{grid-template-columns:1fr}}
   .legacy-evidence{background:linear-gradient(135deg,#edf6fc,#f7fbff);border-radius:18px;padding:20px;margin:15px 0 45px;color:#17364d}
   .official-link{display:inline-block;margin-top:.7rem;color:var(--accent-vivid);font-size:.72rem;font-weight:800;text-decoration:none}
   .detail-stack{display:grid;gap:1rem;margin-top:1rem}
