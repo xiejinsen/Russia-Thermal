@@ -81,12 +81,13 @@ const records = vm.records.map((record) => {
       </div>
     </section>
 
+    <p class="relation-note"><strong>关系口径：</strong>Source 的作者是原始文献署名；筛选中的机构和人员来自 Capability/Claim 研究关联，<strong>不表示他们发表、拥有或独立验证了该 Source</strong>。与 OPEN Claim 的支持资料关联，亦不代表其假说得到证明。</p>
     <ExplorerToolbar
       sticky
       compact
       total={records.length}
       urlFilterKeys={['claim', 'capability', 'actor', 'person']}
-      searchPlaceholder="Search source, finding, boundary, author, institution, person, Claim…"
+      searchPlaceholder="搜索来源、发现、限制、原文作者、研究关联机构/人员、Claim…"
       filters={[
         { key:'sourceType', label:'Type', options:sourceTypes.map((value)=>({value,label:value})) },
         {
@@ -104,9 +105,9 @@ const records = vm.records.map((record) => {
           key:'relation',
           label:'Relation',
           options:[
-            {value:'supporting',label:'Supports Claim'},
-            {value:'pressure',label:'Pressures Claim'},
-            {value:'context',label:'Context only'}
+            {value:'supporting',label:'列为 Claim 支持资料（不代表 Claim 已证实）'},
+            {value:'pressure',label:'反证或对照压力'},
+            {value:'context',label:'背景资料'}
           ]
         },
         { key:'direction', label:'Direction', options:directionOptions }
@@ -202,6 +203,8 @@ const records = vm.records.map((record) => {
   </div>
 
   <style>
+.relation-note{padding:14px 18px;margin:13px 0 22px;background:#eef6fb;border:1px solid #cee1ed;border-radius:10px;color:#264c67;font-size:13px;line-height:1.75}.relation-note strong{color:#173d55}
+
     .compact-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.compact-hero>div:first-child{max-width:72rem}.compact-hero h1{margin:0;font-size:clamp(1.65rem,2.5vw,2.25rem);letter-spacing:-.045em}.compact-hero p:not(.eyebrow){margin:.55rem 0 0;max-width:84ch;color:var(--text-muted);line-height:1.55}
     .summary-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:20rem}.summary-chips span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:9px;font-weight:850;white-space:nowrap}
     .dense-list{margin-top:12px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-1)}
