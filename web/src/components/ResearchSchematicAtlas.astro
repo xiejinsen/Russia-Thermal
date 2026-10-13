@@ -13,35 +13,55 @@ const photos: Record<string, {file:string; author:string; license:string}> = {
  'ACT-TPU':{file:'Главный_корпус_ТПУ_(Томск).jpg',author:'Павел Андрющенко',license:'CC BY-SA 3.0'},
  'ACT-TSU':{file:'2018-11-10_0002_-_Главный_корпус_ТГУ.jpg',author:'Александр Рауш',license:'CC BY-SA 4.0'}
 };
-const canonical = ['ACT-KUTATELADZE','ACT-MPEI','ACT-TPU','ACT-TSU'];
+const canonical = isRussia
+ ? ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']
+ : ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT'];
 const nodeById = new Map(vm.nodes.map(n=>[n.actorId,n]));
 const actorById = new Map(actors.map(a=>[a.id,a]));
-const selected = isRussia ? canonical.map(id=>{
-  const node=nodeById.get(id);
-  const actor=actorById.get(id);
-  if(!actor)return null;
-  return {
-    id,name:node?.name ?? actor.name,city:node?.city ?? actor.city ?? '位置待核实',
-    latitude:node?.latitude,longitude:node?.longitude,href:href('/institutions/'+id),
-    priority:node?.priorityRank,capabilityCount:node?.capabilityCount ?? 0,
-    scholarCount:node?.scholarCount ?? 0,description:actor.atlasProfile?.leadershipSummary ?? actor.researchRelevance ?? '',
-    photo:photos[id]
-  };
-}).filter((n):n is NonNullable<typeof n>=>Boolean(n)) : vm.nodes.slice(0,4).map(n=>({
-  id:n.actorId,name:n.name,city:n.city,latitude:n.latitude,longitude:n.longitude,
-  href:href(n.href),priority:n.priorityRank,capabilityCount:n.capabilityCount,
-  scholarCount:n.scholarCount,description:actorById.get(n.actorId)?.researchRelevance ?? '',
-  photo:undefined
-}));
+const selected = canonical.map(id=>{
+ const node=nodeById.get(id);
+ const actor=actorById.get(id);
+ if(!actor)return null;
+ return {
+   id,name:node?.name??actor.name,city:node?.city??actor.city??'城市尚未核实',
+   latitude:node?.latitude??actor.latitude??undefined,longitude:node?.longitude??actor.longitude??undefined,
+   href:href('/institutions/'+id),
+   priority:node?.priorityRank,capabilityCount:node?.capabilityCount??0,
+   scholarCount:node?.scholarCount??0,description:actor.atlasProfile?.leadershipSummary??actor.researchRelevance??'',
+   photo:photos[id]
+ };
+}).filter((n):n is NonNullable<typeof n>=>Boolean(n));
 const bounds=isRussia?{west:17,east:191,north:84,south:40}:{west:73,east:135,north:55,south:17};
 function pin(latitude?:number,longitude?:number) {
  if(typeof latitude!=='number'||typeof longitude!=='number')return null;
  const lon=isRussia&&longitude<0?longitude+360:longitude;
- const x=3.5+(lon-bounds.west)/(bounds.east-bounds.west)*93;
- const y=(26+(bounds.north-latitude)/(bounds.north-bounds.south)*370)/430*100;
- if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>100||y<0||y>100)return null;
- return {x:x.toFixed(2),y:y.toFixed(2)};
+ const x=35+(lon-bounds.west)/(bounds.east-bounds.west)*930;
+ const y=26+(bounds.north-latitude)/(bounds.north-bounds.south)*370;
+ if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>1000||y<0||y>430)return null;
+ return {x,y};
 }
+// The Tomsk State University root record has no verified campus coordinates.
+// Show its affiliation with the Tomsk *city cluster*, never an invented campus pin.
+const positions = selected.map((item,i)=>{
+ let actual=pin(item.latitude,item.longitude);
+ let cityOnly=false;
+ if(!actual&&item.id==='ACT-TSU'){
+  const tomsk=selected.find(other=>other.city.toLowerCase()==='tomsk'&&other.id!==item.id&&typeof other.latitude==='number'&&typeof other.longitude==='number');
+  if(tomsk){actual=pin(tomsk.latitude,tomsk.longitude);cityOnly=true;}
+ }
+ const offsets=isRussia
+  ? [[-33,-77],[-114,-92],[90,-54],[115,66]]
+  : [[-73,-70],[-90,-64],[93,62],[85,-60]];
+ const [dx,dy]=offsets[i]??[0,-65];
+ const lx=actual?Math.max(74,Math.min(901,actual.x+dx)):0;
+ const ly=actual?Math.max(47,Math.min(361,actual.y+dy)):0;
+ return {...item,i,actual,cityOnly,marker:{x:lx,y:ly},number:String(i+1).padStart(2,'0')};
+});
+const visiblePositions=positions.filter(item=>item.actual!==null);
+const contextNodes=vm.nodes
+ .filter(node=>!canonical.includes(node.actorId))
+ .map(node=>({id:node.actorId,name:node.name,city:node.city,actual:pin(node.latitude,node.longitude)}))
+ .filter((node):node is typeof node & {actual:{x:number,y:number}}=>Boolean(node.actual));
 const cityOptions=[...new Set(vm.nodes.map(n=>n.city))].sort((a,b)=>a.localeCompare(b));
 const directions=[...new Map(vm.nodes.flatMap(n=>n.directions).map(d=>[d.id,d])).values()];
 const catalog=vm.nodes.map(n=>({...n,
@@ -77,33 +97,54 @@ const catalog=vm.nodes.map(n=>({...n,
   <div class="atlas-columns">
    <div class="map-pane">
     <div class="map-graphic">
-     <img class="country-outline" src={href('/assets/'+(isRussia?'russia':'china')+'-editorial-outline.svg')} alt={isRussia?'俄罗斯地理轮廓示意底图':'中国地理轮廓示意底图'} loading="eager"/>
-     {selected.map((item,i)=>{const coord=pin(item.latitude,item.longitude);return coord &&
-       <a class="city-pin" href={item.href} style={'left:'+coord.x+'%;top:'+coord.y+'%'} aria-label={'第'+(i+1)+'组 '+item.city+'：'+item.name+'，查看机构档案'} title={item.name}>
-        <span class="pin-aura"></span><b>{String(i+1).padStart(2,'0')}</b>
-       </a>})}
-     <div class="map-footnote">{isRussia?'RUSSIA':'CHINA'} / SCIENCE · RESEARCH · TRANSFER</div>
+     <img class="country-outline" src={href('/assets/'+(isRussia?'russia':'china')+'-editorial-outline.svg')} alt={isRussia?'俄罗斯真实轮廓构成的科研版图背景':'中国真实轮廓构成的科研版图背景'} loading="eager"/>
+     <svg class="location-overlay" viewBox="0 0 1000 430" role="img" aria-label={isRussia?'俄罗斯科研机构地点与机构编号：01莫斯科、02新西伯利亚、03及04托木斯克城市集群':'中国科研机构地点与编号：01北京、02南京、03上海、04广州'}>
+      <defs>
+       <filter id={isRussia?'ru-marker-halo':'cn-marker-halo'} x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="7"/>
+       </filter>
+      </defs>
+      {contextNodes.map(node=><g class="context-position" aria-label={node.name+' · '+node.city}>
+       <circle cx={node.actual.x} cy={node.actual.y} r="4" fill="#57afcf" stroke="#a8e7ff" stroke-width="1.2"/>
+      </g>)}
+      {visiblePositions.map(item=><g class="pin-group">
+       <circle cx={item.actual!.x} cy={item.actual!.y} r="14" fill="#38d7ff" opacity=".45" filter={'url(#'+(isRussia?'ru-marker-halo':'cn-marker-halo')+')'}/>
+       <circle class="true-location-dot" cx={item.actual!.x} cy={item.actual!.y} r="6" fill="#e8fbff" stroke="#17afe6" stroke-width="2"/>
+       <path class="pin-leader" d={'M '+item.actual!.x+' '+item.actual!.y+' L '+item.marker.x+' '+item.marker.y} fill="none" stroke={item.cityOnly?'#9dd1e6':'#52d7f9'} stroke-dasharray={item.cityOnly?'5 5':undefined} stroke-width="2"/>
+       <a class="feature-pin" href={'#atlas-feature-'+item.number} aria-label={item.number+' '+item.name+' · '+item.city+(item.cityOnly?' 城市集群示意':' 地理坐标')+'，查看下方图文简介'}>
+        <title>{item.name} · {item.city}{item.cityOnly?' · 城市集群示意，不代表精确校舍坐标':''}</title>
+        <rect class="pin-label-bg" x={item.marker.x-23} y={item.marker.y-18} width="46" height="36" rx="10" fill="#082945" stroke="#74e8ff" stroke-width="2"/>
+        <text x={item.marker.x} y={item.marker.y+5} fill="#f5fdff" font-size="17" font-weight="800" text-anchor="middle">{item.number}</text>
+       </a>
+      </g>)}
+     </svg>
+     <div class="map-footnote">{isRussia?'RUSSIA':'CHINA'} / GEOREFERENCED SCIENCE · EDITORIAL LANDSCAPE</div>
     </div>
-    <div class="map-key"><span><i></i> 编号节点对应右侧同编号机构</span><span>连线与节点只表达信息关联，不代表学术合作</span></div>
-    <p class="cartography-note">轮廓采用 Natural Earth 公共地理数据转换为静态矢量图；节点根据现有机构经纬度绘制。<strong>非 GIS 工具，不支持拖拽地图。</strong></p>
+    <div class="map-key">
+     <span><i class="primary-dot"></i> 编号 = 下方机构卡片</span>
+     <span><i class="secondary-dot"></i> 小点 = 其他有坐标的机构</span>
+     <span>引线从实际地理位置延伸至错位展示标签</span>
+    </div>
+    <p class="cartography-note">基于已归档地理坐标与静态地图轮廓生成，非 GIS 地图。{isRussia?'Tomsk State University 暂无独立核实坐标，04 号仅表示 Tomsk 城市集群；虚线不表示校舍位置。':''} <strong>引线用于阅读，不表示机构之间存在合作。</strong></p>
    </div>
+   <div class="feature-header"><span>FEATURED / 代表机构</span><strong>点击地图编号定位介绍；点击卡片进入对应机构档案</strong></div>
    <div class="focus-list">
-    {selected.map((item,i)=><article class="focus-card">
+    {positions.map(item=><article class="focus-card" id={'atlas-feature-'+item.number}>
      <a class="focus-main" href={item.href}>
       <div class="focus-media">
        {item.photo?<img src={'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(item.photo.file)+'?width=800'} loading="lazy" alt={item.name+'建筑资料照片'}/>:<span class="visual-no-photo" aria-label="无经核验的建筑照片"><b>RESEARCH</b><small>INSTITUTION</small></span>}
-       <span class="focus-number">{String(i+1).padStart(2,'0')}</span>
+       <span class="focus-number">{item.number}</span>
       </div>
       <div class="focus-copy">
-       <span class="focus-location">{item.city}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
+       <span class="focus-location">{item.city}{item.cityOnly?' · 城市集群位置示意':''}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
        <h3>{item.name}</h3>
        <p>{item.description || '机构档案包含已记录的研究能力、关联学者及其证据边界。'}</p>
        <span class="focus-bottom">{item.capabilityCount} 能力 · {item.scholarCount} 人物 <em>查看档案 ↗</em></span>
       </div>
      </a>
-     {item.photo&&<p class="credit">图像：{item.photo.author} / {item.photo.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(item.photo.file)} target="_blank" rel="noopener noreferrer">查看原始图片与授权 ↗</a></p>}
+     {item.photo&&<p class="credit">图像：{item.photo.author} / {item.photo.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(item.photo.file)} target="_blank" rel="noopener noreferrer">原图与授权 ↗</a></p>}
     </article>)}
-    {selected.length===0&&<p class="no-data">现有资料中尚未有可展示的地理节点，请在下方查看机构登记和证据缺口。</p>}
+    {selected.length===0&&<p class="no-data">当前没有可展示的代表机构，详见下方机构及证据目录。</p>}
    </div>
   </div>
  </section>
@@ -171,29 +212,53 @@ const catalog=vm.nodes.map(n=>({...n,
  .hero-context{align-self:center;padding:24px;background:#0b4065b3;border:1px solid #4189ad;border-radius:15px}.scope-mark{color:#7fe5f6;font-size:11px;letter-spacing:.1em;font-weight:850}.hero-context h2{font-size:21px;line-height:1.35;color:white}.hero-context p{font-size:14px;line-height:1.8;color:#d3e8f5}.hero-context a{font-size:13px;font-weight:750;color:#9debff}
  .visual-atlas{border-inline:1px solid #1c5779;background:linear-gradient(140deg,#072441,#0b3455 50%,#041d37);padding:34px}
  .section-line{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:22px}.section-line h2{color:white;font-size:26px;line-height:1.3;margin:6px 0 0}.section-line>span{font-size:11px;color:#c1d8e5;letter-spacing:.08em;text-align:right}
- .atlas-columns{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,1fr);gap:20px}
- .map-pane{min-width:0;padding:14px;background:#04213bc2;border:1px solid #276a8c;border-radius:15px;align-self:start}
- .map-graphic{position:relative;aspect-ratio:1000/430;background:radial-gradient(ellipse at 40% 45%,#13527b7a,transparent 72%),repeating-linear-gradient(0deg,transparent 0 31px,#7cccf00d 32px),repeating-linear-gradient(90deg,transparent 0 31px,#7cccf00d 32px);overflow:hidden;border-radius:9px}
+ .atlas-columns{display:flex;flex-direction:column;gap:0}
+ .map-pane{min-width:0;padding:18px 18px 12px;background:#041f38c9;border:1px solid #387fa1;border-radius:15px 15px 0 0}
+ .map-graphic{position:relative;width:100%;aspect-ratio:1000/430;background:radial-gradient(ellipse at 40% 45%,#13527b7a,transparent 72%),repeating-linear-gradient(0deg,transparent 0 31px,#7cccf00d 32px),repeating-linear-gradient(90deg,transparent 0 31px,#7cccf00d 32px);overflow:hidden;border-radius:11px}
  .country-outline{width:100%;height:100%;display:block}
- .city-pin{position:absolute;z-index:2;transform:translate(-50%,-50%);width:32px;height:32px;text-decoration:none;display:grid;place-items:center;border:1px solid #c5f8ff;border-radius:50%;background:#076b9e;color:white;box-shadow:0 0 0 5px #2bd7fc3e,0 0 24px 7px #39c8ff80}
- .city-pin b{font-size:11px;position:relative;z-index:2}.city-pin:hover,.city-pin:focus-visible{background:#159ed4;outline:2px solid white;outline-offset:5px}
- .map-footnote{position:absolute;left:12px;bottom:8px;letter-spacing:.18em;color:#c0e7f8;font-size:9px}
- .map-key{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#cce0ef;padding:14px 1px 4px}.map-key i{display:inline-block;background:#63d5f8;width:9px;height:9px;border-radius:50%;margin-right:6px}
- .cartography-note{font-size:11px;line-height:1.65;color:#b6d4e5;margin:12px 0 0}.cartography-note strong{color:#f1faff}
- .focus-list{display:grid;gap:10px;align-self:start}.focus-card{min-width:0;overflow:hidden;border:1px solid #2d779b;background:linear-gradient(135deg,#124969,#082c4a);border-radius:12px;box-shadow:0 7px 22px #0003}
- .focus-main{display:grid;grid-template-columns:minmax(100px,33%) minmax(0,1fr);text-decoration:none;color:#f1fbff;min-height:137px}.focus-main:focus-visible{outline:3px solid #9ff2ff;outline-offset:-4px}
- .focus-media{position:relative;min-height:110px;background:#0c3857;overflow:hidden}.focus-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.9) saturate(.85)}.focus-media:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#082c4b55)}
- .focus-number{position:absolute;z-index:1;top:9px;left:10px;font-size:21px;font-weight:850;text-shadow:0 1px 6px #000}
- .visual-no-photo{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:130px;height:100%;gap:5px;background:radial-gradient(circle at 20% 25%,#1783ad,transparent 65%),#0b3655}.visual-no-photo b{font-size:12px;letter-spacing:.14em}.visual-no-photo small{font-size:9px;color:#b7d9e7;letter-spacing:.12em}
- .focus-copy{min-width:0;padding:13px 13px 11px}.focus-location{color:#80def4;font-size:11px;font-weight:750}.focus-copy h3{font-size:15px;line-height:1.35;color:#fff;margin:4px 0 6px;overflow-wrap:anywhere}.focus-copy p{color:#d4e8f3;font-size:12px;line-height:1.55;margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.focus-bottom{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:11px;color:#b6ddec}.focus-bottom em{font-style:normal;color:#91f0ff;font-weight:750}
- .credit{font-size:10px;line-height:1.6;margin:0;color:#c3dce9;padding:0 12px 8px}.credit a{color:#a6edff}
+ .location-overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+ .location-overlay .feature-pin{pointer-events:all;cursor:pointer}
+ .true-location-dot{filter:drop-shadow(0 0 3px #7df2ff)}
+ .pin-label-bg{filter:drop-shadow(0 3px 7px #00172acc)}
+ .feature-pin:hover .pin-label-bg,.feature-pin:focus .pin-label-bg{fill:#167da9;stroke:#eaffff;stroke-width:3}
+ .feature-pin:focus{outline:none}
+ .map-footnote{position:absolute;right:14px;bottom:12px;letter-spacing:.13em;color:#daf0fc;font-size:11px;background:#062a4688;padding:5px 9px;border-radius:5px}
+ .map-key{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#cfe6f2;padding:17px 2px 7px}
+ .map-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+ .map-key .primary-dot{background:#aaf4ff;box-shadow:0 0 0 3px #53c8ed61}
+ .map-key .secondary-dot{background:#57afcf}
+ .cartography-note{font-size:12px;line-height:1.75;color:#d4e9f4;margin:10px 0 0}
+ .cartography-note strong{color:#f5fcff}
+ .feature-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:23px 4px 16px}
+ .feature-header span{font-size:12px;letter-spacing:.12em;color:#70ddf3;font-weight:850}
+ .feature-header strong{font-size:13px;color:#dcecf7;font-weight:600}
+ .focus-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;align-items:stretch}
+ .focus-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #3c81a2;background:linear-gradient(148deg,#154f75,#082640);border-radius:12px;box-shadow:0 7px 22px #0003;scroll-margin-top:100px}
+ .focus-card:target{outline:3px solid #80e6fd;outline-offset:3px}
+ .focus-main{display:flex;flex-direction:column;flex:1;text-decoration:none;color:#f1fbff}
+ .focus-main:focus-visible{outline:3px solid #9ff2ff;outline-offset:-4px}
+ .focus-media{position:relative;height:150px;background:#0c3857;overflow:hidden}
+ .focus-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.92) saturate(.86)}
+ .focus-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,#082c4b99)}
+ .focus-number{position:absolute;z-index:1;top:10px;left:11px;font-size:22px;font-weight:850;text-shadow:0 1px 6px #000}
+ .visual-no-photo{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:150px;height:100%;gap:5px;background:radial-gradient(circle at 20% 25%,#1783ad,transparent 65%),#0b3655}
+ .visual-no-photo b{font-size:12px;letter-spacing:.14em}.visual-no-photo small{font-size:10px;color:#cbe6f2;letter-spacing:.12em}
+ .focus-copy{min-width:0;padding:17px 15px 15px;flex:1;display:flex;flex-direction:column}
+ .focus-location{color:#9aeefa;font-size:12px;font-weight:750}
+ .focus-copy h3{font-size:17px;line-height:1.35;color:#fff;margin:8px 0 9px;overflow-wrap:anywhere}
+ .focus-copy p{color:#d4e8f3;font-size:13px;line-height:1.7;margin:0 0 12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+ .focus-bottom{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:12px;color:#c8e8f6;margin-top:auto;border-top:1px solid #377595;padding-top:12px}
+ .focus-bottom em{font-style:normal;color:#91f0ff;font-weight:750}
+ .credit{font-size:10px;line-height:1.65;margin:0;color:#c6e1ed;padding:8px 14px 12px;border-top:1px solid #317396}.credit a{color:#a6edff}
+ @media(max-width:1080px){.focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ @media(max-width:590px){.map-pane{padding:10px}.focus-list{grid-template-columns:1fr}.feature-header{flex-direction:column;align-items:start}.focus-media{height:190px}.map-footnote{font-size:8px}.map-key{font-size:11px}}
  .catalog-section{background:#eaf4fb;color:#18334b;padding:42px 38px;border-inline:1px solid #b5d3e5}.section-line.light h2{color:#17334b}.section-line.light .kicker{color:#0d6088}.section-line.light a{color:#075b86;font-size:13px;font-weight:800}
  .directory-explain{max-width:950px;font-size:14px;line-height:1.8;color:#40596c}
  .catalog-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:23px 0;padding:20px;border:1px solid #c0d5e3;background:#f7fbff;border-radius:12px}.catalog-controls label{display:grid;gap:7px;flex:1;min-width:175px;font-size:12px;font-weight:800;color:#284e6b}.catalog-controls input,.catalog-controls select{border:1px solid #9bb9ca;background:white;border-radius:7px;padding:11px;color:#142f45;font-size:14px;min-width:0;width:100%}.counter{font-size:13px;font-weight:800;color:#175f86}
  .catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.research-row{padding:22px;border:1px solid #c0d4e2;border-radius:13px;background:#fff;min-width:0}.research-row[hidden]{display:none}.row-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.row-head span{font-weight:850;color:#145d86;font-size:11px;text-transform:uppercase}.row-head small{font-size:10px;color:#48667b}.research-row h3{font-size:17px;line-height:1.45;margin:9px 0}.research-row h3 a{color:#133a58;text-decoration:none}.research-row h3 a:hover{text-decoration:underline}.research-row>p{color:#486073;font-size:12px;margin:0 0 10px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags a{font-size:11px;color:#155e88;background:#e9f4fb;border-radius:30px;text-decoration:none;padding:5px 8px}.people-line{font-size:11px;display:flex;gap:9px;flex-wrap:wrap;border-top:1px solid #deebf3;margin-top:12px;padding-top:12px;color:#425e74}.people-line a{color:#175d87}.no-data{color:#465e70;font-size:13px}
  .coverage-gaps{background:#edf6fb;color:#203950;padding:35px 40px;border-inline:1px solid #b5d3e5}.coverage-gaps .kicker{color:#135a83}.coverage-gaps h2{color:#193954;font-size:24px}.coverage-gaps p{color:#475f73;font-size:14px}.coverage-gaps div{display:flex;flex-wrap:wrap;gap:8px}.coverage-gaps a{padding:9px 12px;text-decoration:none;background:#fff;border:1px solid #cbdbe7;border-radius:8px;font-size:12px;color:#175b83}
  .atlas-outro{background:linear-gradient(115deg,#0a385e,#051a30);border-radius:0 0 18px 18px;padding:32px 40px;border:1px solid #286688;color:#e2f4fc}.atlas-outro strong{color:white;font-size:20px}.atlas-outro p{font-size:14px;max-width:830px;line-height:1.8}.atlas-outro div{display:flex;flex-wrap:wrap;gap:20px}.atlas-outro a{font-size:13px;color:#a3ecff;font-weight:800}
- @media(max-width:1020px){.atlas-hero{grid-template-columns:1fr}.atlas-columns{grid-template-columns:1fr}.focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-main{grid-template-columns:120px minmax(0,1fr)}}
- @media(max-width:700px){.schematic-root{padding:0 0 42px}.atlas-hero,.visual-atlas,.catalog-section,.coverage-gaps,.atlas-outro{padding:24px 16px}.atlas-hero{border-radius:10px 10px 0 0;gap:20px}.metrics{grid-template-columns:repeat(2,1fr)}.section-line{flex-direction:column;align-items:start}.section-line>span{text-align:left}.focus-list,.catalog-grid{grid-template-columns:1fr}.map-pane{padding:9px}.city-pin{width:23px;height:23px}.city-pin b{font-size:9px}.focus-main{grid-template-columns:110px minmax(0,1fr)}.catalog-controls{padding:14px}.map-footnote{font-size:7px}}
+ @media(max-width:1020px){.atlas-hero{grid-template-columns:1fr}}
+ @media(max-width:700px){.schematic-root{padding:0 0 42px}.atlas-hero,.visual-atlas,.catalog-section,.coverage-gaps,.atlas-outro{padding:24px 16px}.atlas-hero{border-radius:10px 10px 0 0;gap:20px}.metrics{grid-template-columns:repeat(2,1fr)}.section-line{flex-direction:column;align-items:start}.section-line>span{text-align:left}.catalog-grid{grid-template-columns:1fr}.catalog-controls{padding:14px}}
  @media(prefers-reduced-motion:reduce){.city-pin{scroll-behavior:auto}}
 </style>
