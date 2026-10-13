@@ -22,6 +22,18 @@ for(const [name,body,asset] of [
  if(/<iframe\b/i.test(body))failures.push(name+' has embedded map iframe');
  if(!body.includes('data-research-item'))failures.push(name+' lost institution evidence index');
  if(!body.includes('data-filter-search'))failures.push(name+' lost accessible search filtering');
+ // Show geographic anchors and disambiguated, accessible institution callouts.
+ const markers=[...body.matchAll(/class="feature-pin"/g)];
+ const leaders=[...body.matchAll(/class="pin-leader"/g)];
+ const anchorDots=[...body.matchAll(/class="true-location-dot"/g)];
+ if(markers.length<4)failures.push(name+' shows fewer than four numbered institution location labels: '+markers.length);
+ if(leaders.length<4||anchorDots.length<4)failures.push(name+' missing geographic anchor points or visible connector leaders');
+ if(!body.includes('class="focus-list"'))failures.push(name+' lost institution information cards');
+ for(const n of ['01','02','03','04']){
+  if(!body.includes('id="atlas-feature-'+n+'"'))failures.push(name+' missing target for map label '+n);
+  if(!body.includes('href="#atlas-feature-'+n+'"'))failures.push(name+' missing clickable map label '+n);
+ }
+ if(!body.includes('location-overlay'))failures.push(name+' missing SVG location overlay');
 }
 for(const file of ['russia-editorial-outline.svg','china-editorial-outline.svg']){
  const svg=read('assets/'+file);
