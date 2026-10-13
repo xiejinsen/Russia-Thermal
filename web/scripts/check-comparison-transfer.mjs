@@ -9,6 +9,7 @@ const packages = read('src/pages/research-packages.astro');
 const questions = read('src/pages/research-questions.astro');
 const partners = read('src/pages/partners.astro');
 const nav = read('src/components/SiteHeader.astro');
+const contentIndex = read('src/pages/site-directory.astro');
 const builders = read('src/view-models/builders.ts');
 const types = read('src/types/view-models.ts');
 
@@ -32,7 +33,7 @@ for(const match of pathMatches) {
 }
 assert.ok(packages.includes('TPU-HOLD') && packages.includes('tpu-frumkin-2026-original-paper-identity-gate.md'), 'TPU HOLD boundary missing');
 for(const route of ['/landscape','/smartphone-transfer','/research-packages']) {
-  assert.ok(nav.includes(`path: '${route}'`), `top navigation missing ${route}`);
+  assert.ok(nav.includes("'/site-directory'") && contentIndex.includes(`path:'${route}'`), `content directory missing ${route}`);
 }
 assert.ok(questions.includes("'/smartphone-transfer'") && questions.includes("'/research-packages'"), 'Q06/Q09 research-question drilldowns missing');
 assert.ok(partners.includes("href('/research-packages')"), 'portfolio research package link missing');
