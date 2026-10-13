@@ -10,7 +10,7 @@ const current=norm(route);
 const nav=[
  {label:'首页',path:'/',aliases:[]},
  {label:'科研版图',path:'/research-map',aliases:['/russia-atlas']},
- {label:'研究结论',path:'/research-questions',aliases:['/landscape','/smartphone-transfer','/decisions']},
+ {label:'研究结论',path: '/research-questions',aliases:['/landscape','/smartphone-transfer','/decisions']},
  {label:'机构与学者',path:'/institutions',aliases:['/scholars']},
  {label:'合作方向',path:'/partners',aliases:['/directions','/research-packages']},
  {label:'全部内容',path:'/site-directory',aliases:[]}
@@ -18,7 +18,7 @@ const nav=[
 function matches(path:string){const target=norm(path);return target==='/'?current==='/':current===target||current.startsWith(target+'/');}
 const currentTab=nav.find(item=>item.path!=='/site-directory'&&(matches(item.path)||item.aliases.some(matches)))?.label??(current==='/'?'首页':'全部内容');
 ---
-<header class="site-header">
+<header class="site-header" lang="zh-CN">
  <div class="inner">
   <a class="brand" href={href('/')} aria-label="俄罗斯热管理研究 · 首页">
    <span class="brand-cn">俄罗斯热管理研究</span><span class="brand-en">RUSSIA–THERMAL</span>
