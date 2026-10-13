@@ -34,6 +34,11 @@ for(const [name,body,asset] of [
   if(!body.includes('href="#atlas-feature-'+n+'"'))failures.push(name+' missing clickable map label '+n);
  }
  if(!body.includes('location-overlay'))failures.push(name+' missing SVG location overlay');
+ if(body.includes('class="context-position"'))failures.push(name+' shows unlinked/unlabeled geographic points');
+ if(body.includes('class="map-key"')||body.includes('class="cartography-note"'))
+   failures.push(name+' contains explanatory legend/caption removed by design review');
+ if(body.includes('点击地图编号定位介绍')||body.includes('引线从实际地理位置'))
+   failures.push(name+' reintroduced tutorial-style instructions in map section');
 }
 for(const file of ['russia-editorial-outline.svg','china-editorial-outline.svg']){
  const svg=read('assets/'+file);
