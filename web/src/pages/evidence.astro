@@ -5,7 +5,7 @@ import ExplorerToolbar from '../components/ExplorerToolbar.astro';
 import DenseObjectRow from '../components/DenseObjectRow.astro';
 import { buildEvidenceExplorerVM } from '../view-models/builders';
 import { directionTitle } from '../view-models/helpers';
-import {coreSourceContexts, sourceEmphasis, sourceKindLabel, sourceContext, countryName} from '../view-models/source-emphasis';
+import {coreSourceContexts, sourceGroups, sourceEmphasis, sourceKindLabel, sourceContext, countryName} from '../view-models/source-emphasis';
 
 const vm = buildEvidenceExplorerVM();
 const base = import.meta.env.BASE_URL;
@@ -22,7 +22,16 @@ const directionOptions = [...new Map(
   .sort((a,b)=>a.label.localeCompare(b.label));
 
 const usageRoleLabel=(role?:string)=>role ? ({CONTEXT_PROFILE:'机构背景',RANKING_CONTEXT:'排名背景',FRONTIER_DISCOVERY:'前沿线索',BACKGROUND_CONTEXT:'辅助资料',UNRESOLVED:'待确认'} as Record<string,string>)[role] ?? role : '研究主张引用';
-const featured = Object.entries(coreSourceContexts).map(([id,context])=>({record:vm.records.find(r=>r.id===id),context})).filter((x):x is {record:(typeof vm.records)[number];context:(typeof coreSourceContexts)[string]}=>Boolean(x.record));
+const catalogById=new Map(vm.records.map(record=>[record.id,record]));
+const featuredGroups=sourceGroups.map(group=>({
+  ...group,
+  items:Object.entries(coreSourceContexts)
+    .filter(([,context])=>context.group===group.id)
+    .map(([id,context])=>({record:catalogById.get(id),context,id}))
+    .filter((x):x is {record:(typeof vm.records)[number];context:(typeof coreSourceContexts)[string];id:string}=>Boolean(x.record))
+}));
+const featuredCount=featuredGroups.reduce((sum,group)=>sum+group.items.length,0);
+if(featuredCount!==Object.keys(coreSourceContexts).length)throw new Error('Curated source feature references unknown canonical Source IDs');
 const paperCount = vm.records.filter((record) => record.id.startsWith('PAPER-')).length;
 const patentCount = vm.records.filter((record) => record.id.startsWith('PATENT-')).length;
 const otherSourceCount = vm.records.length - paperCount - patentCount;
@@ -85,7 +94,39 @@ const records = vm.records.map((record) => {
     </section>
 
     <p class="relation-note"><strong>关系口径：</strong>Source 的作者是原始文献署名；筛选中的机构和人员来自 Capability/Claim 研究关联，<strong>不表示他们发表、拥有或独立验证了该 Source</strong>。与 OPEN Claim 的支持资料关联，亦不代表其假说得到证明。</p>
-    <section class="essential-sources" aria-labelledby="essential-heading"><div class="essential-head"><div><p class="eyebrow">关键原始资料</p><h2 id="essential-heading">核心研究依据与技术对照</h2></div><a href={href("/research-questions")}>研究结论 ↗</a></div><div class="essential-grid">{featured.map(({record,context})=><article class:list={["essential-item",context.emphasis]}><div class="essential-type"><span>{sourceKindLabel(record.id)}</span><b>{context.label}</b></div><h3><a href={href(record.id.startsWith("PATENT-")?"/patents/"+record.id:"/papers/"+record.id)}>{record.title}</a></h3><p>{context.context}</p><div class="essential-actions">{context.claimId&&<a href={href("/claims/"+context.claimId)}>关联研究主张 ↗</a>}<a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">查看原始资料 ↗</a></div></article>)}</div></section>
+    <section class="essential-sources" aria-labelledby="essential-heading">
+      <div class="essential-head">
+        <div>
+          <p class="eyebrow">KEY READING / 代表性原始资料</p>
+          <h2 id="essential-heading">按结题判断查看关键原始资料</h2>
+          <p class="essential-subtitle">这里是从正式 Source 中挑选的 <strong>{featuredCount} 条导读入口</strong>，不是全部关键证据的封闭名单。下方仍完整收录 <strong>{vm.totalEvidence} 条资料</strong>。</p>
+        </div>
+        <div class="essential-head-actions">
+          <a href={href("/research-questions")}>Q01–Q10 结论 ↗</a>
+          <a href={href("/representative-works")}>按机构查看 27 项代表作 ↗</a>
+        </div>
+      </div>
+      <div class="source-groups">
+        {featuredGroups.map(group=><details class:list={["source-group",group.id]} open={group.open}>
+          <summary>
+            <span class="source-group-head"><b>{group.title}</b><small>{group.scope}</small></span>
+            <span class="source-group-count">{group.items.length} 条 <span aria-hidden="true">⌄</span></span>
+          </summary>
+          <div class="essential-grid">
+            {group.items.map(({record,context})=><article class:list={["essential-item",context.emphasis]}>
+              <div class="essential-type"><span>{sourceKindLabel(record.id)}</span><b>{context.label}</b></div>
+              <h3><a href={record.id.startsWith("PATENT-")?href("/patents/"+record.id):record.id.startsWith("PAPER-")?href("/papers/"+record.id):record.primaryUrl} target={record.id.startsWith("OFFICIAL-")?"_blank":undefined} rel={record.id.startsWith("OFFICIAL-")?"noopener noreferrer":undefined}>{record.title}</a></h3>
+              <p>{context.context}</p>
+              <div class="essential-actions">
+                {context.claimId&&<a href={href("/claims/"+context.claimId)}>关联研究主张 ↗</a>}
+                <a href={record.primaryUrl} target="_blank" rel="noopener noreferrer">查看原始资料 ↗</a>
+              </div>
+            </article>)}
+          </div>
+        </details>)}
+      </div>
+      <p class="index-intro">全部资料索引 · {vm.totalEvidence} 条（可按论文、专利、官方来源、年份及研究方向筛选）</p>
+    </section>
     <ExplorerToolbar
       sticky
       compact
@@ -210,11 +251,12 @@ const records = vm.records.map((record) => {
 
   <style>
 
-.essential-sources{margin:17px 0 22px}.essential-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:13px}.essential-head h2{font-size:clamp(20px,2vw,25px);color:#163b55;margin:5px 0}.essential-head>a{font-size:13px;color:#155f89;font-weight:800}.essential-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:11px}.essential-item{grid-column:span 2}.essential-item:nth-child(n+4){grid-column:span 3}.essential-item{min-width:0;display:flex;flex-direction:column;gap:9px;padding:18px 20px;border:1px solid #bdd8e6;border-left:5px solid #3282ac;border-radius:12px;background:linear-gradient(150deg,#fff,#edf7fc)}.essential-item.comparator{border-left-color:#5d7199;background:linear-gradient(150deg,#fff,#f1f4fa)}.essential-type{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.essential-type span{font-size:11px;color:#245b7a;font-weight:800}.essential-type b{font-size:11px;color:#096189;border:1px solid #98c8de;border-radius:4px;padding:3px 6px}.essential-item.comparator .essential-type b{color:#4b5e8a;border-color:#bdc6da}.essential-item h3{font-size:15px;line-height:1.5;margin:1px 0 0;overflow-wrap:anywhere}.essential-item h3 a{color:#193d58;text-decoration:none}.essential-item h3 a:hover{text-decoration:underline}.essential-item>p{font-size:12px;color:#43647b;line-height:1.65;margin:0;flex:1}.essential-actions{display:flex;gap:13px;flex-wrap:wrap}.essential-actions a{font-size:12px;color:#08628d;font-weight:800}.essential-item.comparator .essential-actions a{color:#405e84}
+
+.essential-sources{margin:20px 0 16px}.essential-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:16px}.essential-head h2{font-size:clamp(20px,2vw,25px);color:#163b55;margin:5px 0}.essential-subtitle{margin:9px 0 0;max-width:64rem;color:#4f6575;font-size:13px;line-height:1.7}.essential-head-actions{display:grid;gap:9px;flex:0 0 auto}.essential-head-actions a{font-size:12px;color:#155f89;font-weight:800;white-space:nowrap}.source-groups{display:grid;gap:11px}.source-group{background:#fff;border:1px solid #c9dce8;border-radius:12px;overflow:hidden}.source-group>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer;list-style:none;background:#f3f8fc}.source-group>summary::-webkit-details-marker{display:none}.source-group>summary:hover{background:#eaf4fb}.source-group:focus-within{border-color:#5894b8}.source-group-head{display:grid;gap:5px;min-width:0}.source-group-head>b{font-size:16px;color:#1a405b}.source-group-head>small{font-size:12px;color:#557184;line-height:1.55}.source-group-count{white-space:nowrap;color:#185d7c;font-size:12px;font-weight:850}.source-group-count span{display:inline-block;transition:transform .18s}.source-group[open] .source-group-count span{transform:rotate(180deg)}.source-group.decision>summary{border-left:5px solid #2583ad}.source-group.comparator>summary{border-left:5px solid #6d7ba5}.source-group.method>summary{border-left:5px solid #769797}.source-group.identity>summary{border-left:5px solid #8f8f8f}.essential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:13px}.source-group.decision .essential-grid,.source-group.method .essential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.essential-item{min-width:0;display:flex;flex-direction:column;gap:9px;padding:16px 18px;border:1px solid #bdd8e6;border-left:4px solid #3282ac;border-radius:10px;background:linear-gradient(150deg,#fff,#edf7fc)}.essential-item.comparator{border-color:#ccd5e4;border-left-color:#6b7fac;background:linear-gradient(150deg,#fff,#f1f4fa)}.essential-item.method{border-left-color:#63928c;background:#f8fbfa}.essential-item.identity{border-left-color:#899297;background:#fafbfc}.essential-type{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.essential-type span{font-size:11px;color:#245b7a;font-weight:800}.essential-type b{font-size:11px;color:#096189;border:1px solid #98c8de;border-radius:4px;padding:3px 6px}.essential-item.comparator .essential-type b{color:#4b5e8a;border-color:#bdc6da}.essential-item.method .essential-type b{color:#466e67;border-color:#b5d3ca}.essential-item.identity .essential-type b{color:#596873;border-color:#c7d2d8}.essential-item h3{font-size:14px;line-height:1.52;margin:1px 0 0;overflow-wrap:anywhere}.essential-item h3 a{color:#193d58;text-decoration:none}.essential-item h3 a:hover{text-decoration:underline}.essential-item>p{font-size:12px;color:#43647b;line-height:1.65;margin:0;flex:1}.essential-actions{display:flex;gap:12px;flex-wrap:wrap}.essential-actions a{font-size:12px;color:#08628d;font-weight:800}.essential-item.comparator .essential-actions a{color:#405e84}.index-intro{margin:17px 0 0;font-size:14px;color:#264961;font-weight:800}
 [data-explorer-record][data-importance="decision"]{border-left:5px solid #217da7;background:#f0f8fd}[data-explorer-record][data-importance="comparator"]{border-left:5px solid #677da7;background:#f5f7fb}
 .kind-tag.is-paper{background:#e7f3fc!important;color:#195f8b!important}.kind-tag.is-patent{background:#efeefa!important;color:#59549a!important}.kind-tag.is-other{background:#eef3f1!important;color:#3a7161!important}
-.source-priority{display:inline-flex;padding:3px 7px;border-radius:5px;border:1px solid #8bbcd3;background:#dceef7;color:#165a7e;font-size:11px;line-height:1.35}.source-priority.comparator{background:#e9ecf6;border-color:#bec8e0;color:#495f8c}
-@media(max-width:1000px){.essential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.essential-item,.essential-item:nth-child(n+4){grid-column:auto}}@media(max-width:650px){.essential-grid{grid-template-columns:1fr}.essential-head{align-items:start;flex-direction:column}}
+.source-priority{display:inline-flex;padding:3px 7px;border-radius:5px;border:1px solid #8bbcd3;background:#dceef7;color:#165a7e;font-size:11px;line-height:1.35}.source-priority.comparator{background:#e9ecf6;border-color:#bec8e0;color:#495f8c}.source-priority.method{background:#edf6f1;color:#416e60;border-color:#b4d3c7}.source-priority.identity{background:#f1f3f5;color:#54646e;border-color:#d1d8dd}
+@media(max-width:1000px){.essential-grid,.source-group.decision .essential-grid,.source-group.method .essential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.essential-grid,.source-group.decision .essential-grid,.source-group.method .essential-grid{grid-template-columns:1fr}.essential-head{align-items:start;flex-direction:column}.essential-head-actions{display:flex;flex-wrap:wrap}.source-group>summary{padding:13px}.source-group-head>b{font-size:14px}.source-group-head>small{font-size:11px}}
 
 .relation-note{padding:14px 18px;margin:13px 0 22px;background:#eef6fb;border:1px solid #cee1ed;border-radius:10px;color:#264c67;font-size:13px;line-height:1.75}.relation-note strong{color:#173d55}
 
