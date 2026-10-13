@@ -52,6 +52,23 @@ for(const id of ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']){
  if(!institution.includes('institution-capabilities'))failures.push('Institution capabilities anchor missing '+id);
  if(!institution.includes('institution-people'))failures.push('Institution people anchor missing '+id);
 }
+// Chinese comparator organizations must receive the same photographic treatment as Russian organizations.
+for(const photo of [
+ 'Peking%20University%20West%20Gate.jpg',
+ 'Southeast%20University.jpg',
+ '%E4%B8%9C%E4%B8%AD%E9%99%A21.jpg',
+ 'South%20China%20University%20of%20Technology%20Building%20No.%208.jpg'
+]) {
+ if(!cn.includes(photo))failures.push('China infographic missing sourced campus photo: '+photo);
+}
+for(const id of ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT']){
+ const start=cn.indexOf('id="atlas-feature-0'+(['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT'].indexOf(id)+1)+'"');
+ const block=cn.slice(start,start+2000);
+ if(start<0||!block.includes('commons.wikimedia.org/wiki/Special:FilePath/'))
+  failures.push('China featured card lacks a real Commons campus photo: '+id);
+ if(start>=0&&!block.includes('原图与授权'))
+  failures.push('China featured card lacks image source and credit: '+id);
+}
 if(!hub.includes('research-map/russia')||!hub.includes('research-map/china'))failures.push('Research infographic hub route missing');
 if(!homepage.includes('俄罗斯热管理')||!homepage.includes('SCIENCE'))failures.push('Homepage scientific atlas hero unexpectedly absent');
 
