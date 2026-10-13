@@ -84,6 +84,10 @@ try{
         }
       }
     }
+    // Navigating after interactions can restore a mid-page scroll position.
+    // Inspect the true first viewport rather than a stale scrolled position.
+    await page.evaluate(()=>window.scrollTo(0,0));
+    await page.waitForTimeout(90);
     const target=path.join(outputDir,view+'-'+slug+'.png');
     await page.screenshot({path:target,fullPage:true,animations:'disabled',timeout:25000});
     // Inspectable above-fold browser captures encoded into Actions logs; no mockups.
