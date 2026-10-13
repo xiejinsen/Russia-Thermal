@@ -93,6 +93,20 @@ if(kutH1!==1) failures.push('Kutateladze should have one page H1, found '+kutH1)
 if(!hub.includes('research-map/russia')||!hub.includes('research-map/china'))failures.push('Research infographic hub route missing');
 if(!homepage.includes('俄罗斯热管理')||!homepage.includes('SCIENCE'))failures.push('Homepage scientific atlas hero unexpectedly absent');
 
+const partnerPage=read('partners/index.html');
+for(const rank of ['p1','p2','p3']){
+ if(!partnerPage.includes('id="priority-'+rank+'"')||!partnerPage.includes('id="details-'+rank+'"'))
+  failures.push('Partner priority summary and deep-evidence entry must both exist: '+rank);
+}
+for(const evidenceId of ['PAPER-RU-DRY-001','PAPER-RU-AGE-001','PAPER-CN-UTVC-WP-001']){
+ if(!partnerPage.includes('/papers/'+evidenceId))failures.push('Partner evidence trail missing '+evidenceId);
+}
+if((partnerPage.match(/class="priority-overview /g)||[]).length!==3)
+ failures.push('Partner decision board must show exactly the 3 approved P1/P2/P3 priority classes');
+if(partnerPage.includes('Partner actions now differ by disposition')||partnerPage.includes('Technical portfolio by investment lane'))
+ failures.push('Partner page reverted to jargon-heavy duplicate card layout');
+if(!partnerPage.includes('对外接洽须另行授权')||!partnerPage.includes('暂缓推进'))
+ failures.push('Partner priority page lost the current consent boundary or HOLD recommendation');
 const evidenceIndex=read('evidence/index.html'),paperIndex=read('papers/index.html');
 const patentComparator=read('patents/PATENT-GLOBAL-DRYOUT-OBS-001/index.html');
 const questionIndex=read('research-questions/index.html');
