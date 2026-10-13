@@ -72,13 +72,13 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'Source 已归
 const stateCount = (value:string) => records.filter(r=>r.evidenceState===value).length;
 const formalPaperCount=evidence.filter(s=>s.sourceType==='PAPER').length;
 ---
-<BaseLayout title="Representative Works — Russia-Thermal" description="Representative research papers and scientific contributions of Russia thermal research groups, with evidence provenance and smartphone-transfer limits.">
+<BaseLayout title="俄罗斯科研团队代表论文 | Russia-Thermal" description="Representative research papers and scientific contributions of Russia thermal research groups, with evidence provenance and smartphone-transfer limits.">
   <SiteHeader slot="header" />
   <div class="works-page">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href={url('research-coverage/')}>Explore / Research Coverage</a><span aria-hidden="true">›</span><span>Representative Works</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href={url('research-coverage/')}>科研覆盖</a><span aria-hidden="true">›</span><span>代表论文</span></nav>
     <header class="intro">
-      <p class="eyebrow">Academic research · evidence review</p>
-      <h1>Representative research works</h1>
+      <p class="eyebrow">REPRESENTATIVE WORKS / 机构代表论文</p>
+      <h1>俄罗斯科研团队代表论文</h1>
       <p>俄罗斯主要机构有哪些值得阅读的代表论文？实验、模型和手机适用性的边界分别是什么？</p>
       <p class="note">本页是一份按研究团队整理的代表作清单，不是研究结论所使用的全部论文库。论文的书目核验、正式 Source 归档，以及用于支持哪条 Claim，是三个不同步骤。</p>
     </header>
@@ -105,12 +105,12 @@ const formalPaperCount=evidence.filter(s=>s.sourceType==='PAPER').length;
     <nav class="team-jump" aria-label="Research team quick navigation">
       {panels.map((panel) => (
         <a class="jump-card" href={`#${panel.id}`}>
-          <span class="org-index">INSTITUTION / TEAM {panel.ordinal}</span>
+          <span class="org-index">研究团队 {panel.ordinal}</span>
           <span class="jump-label">{panel.status}</span>
           <strong>{panel.title}</strong>
-          <span class="jump-count"><b>{records.filter((r) => r.teamId === panel.id).length}</b> representative papers</span>
+          <span class="jump-count"><b>{records.filter((r) => r.teamId === panel.id).length}</b> 项代表论文</span>
           <span class="jump-desc">{panel.description}</span>
-          <span class="jump-action">View research papers ↓</span>
+          <span class="jump-action">查看对应论文 ↓</span>
         </a>
       ))}
     </nav>
@@ -134,11 +134,11 @@ const formalPaperCount=evidence.filter(s=>s.sourceType==='PAPER').length;
                 <span class="paper-index" aria-label={`Paper ${panel.ordinal}.${String(paperIndex+1).padStart(2, '0')}`}>{panel.ordinal}.{String(paperIndex+1).padStart(2, '0')}</span>
                 <div class="paper-body">
                 <div class="paper-top">
-                  <span class="focus">{r.deepReadPriority === 'DECISIVE' ? 'Key paper' : r.deepReadPriority === 'SUPPORTING' ? 'Supporting study' : 'Context'}</span>
+                  <span class="focus">{r.deepReadPriority === 'DECISIVE' ? '关键代表作' : r.deepReadPriority === 'SUPPORTING' ? '补充研究' : '背景资料'}</span>
                   <span class:list={['status',r.evidenceState.toLowerCase()]}>{stage(r)}</span>
                 </div>
                 <h3><a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{source?.title ?? r.title}</a></h3>
-                <p class="citation">{r.authors} · <em>{r.venue}</em> · {r.year ?? 'Publication year not verified'}</p>
+                <p class="citation">{r.authors} · <em>{r.venue}</em> · {r.year ?? '年份待核验'}</p>
                 <p><strong>研究价值：</strong> {r.selectionReason}</p>
                 {panel.id === 'ACT-ICM-KRASN' && <p class="research-track"><strong>科研组别：</strong>{r.researchLane.startsWith('TRACK_A') ? '电子散热与热管实验研究线' : '液气界面与热毛细理论研究线'}（两组独立）</p>}
                 {r.sourceId
@@ -152,7 +152,7 @@ const formalPaperCount=evidence.filter(s=>s.sourceType==='PAPER').length;
         </div>
       </section>
     ))}
-    <p class="footnote">Scientific credibility and smartphone product readiness are different questions. The P1/P2 collaboration rankings are unchanged. <a href={url('research-coverage/')}>Back to research coverage</a>.</p>
+    <p class="footnote">Scientific credibility and smartphone product readiness are different questions. The P1/P2 collaboration rankings are unchanged. <a href={url('research-coverage/')}>返回科研覆盖</a>.</p>
   </div>
 </BaseLayout>
 
