@@ -565,10 +565,14 @@ export function buildScholarPageVM(id: string): ScholarPageVM | null {
     .filter((item): item is EvidenceRecord => Boolean(item))
     .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
 
-  const surname = person.name.trim().split(/\s+/).at(-1)?.toLowerCase() ?? '';
-  const authoredEvidenceRecords = linkedEvidenceRecords.filter((item) =>
-    surname && item.authors.some((author) => author.toLowerCase().includes(surname))
-  );
+  // Never infer a real-world author identity using surname substrings.
+  // Current canonical graph has person->capability and paper->Claim links, but
+  // has no separately verified author-person-id relation per publication.
+  // An author may share a surname/initials with another researcher (notably
+  // the independently documented Denis/Dmitry Nesterov identity collision).
+  // Keep literal publication bylines in Source; show people only as
+  // capability-associated, NOT as proven coauthors until that edge is curated.
+  const authoredEvidenceRecords: EvidenceRecord[] = [];
 
   const collaboratorIds = new Set(relatedCapabilities.flatMap((capability) => capability.collaboratingActorIds ?? []));
   const collaboratorInstitutions = [...collaboratorIds]
@@ -741,7 +745,7 @@ export function buildEvidenceExplorerVM(): EvidenceExplorerVM {
     eyebrow: 'Evidence audit',
     title: 'Evidence Explorer — All Sources',
     summary:
-      'The complete verified source collection: papers, patents, official profiles, rankings, conference and journal sources. Use the filters to trace how each source supports or pressures the current research conclusions.',
+      'Archived source records include papers, patents, institutional profiles and other public materials. Claim links describe how each source is used; a linked source does not, by itself, establish product performance, current staff membership, or that an OPEN hypothesis has been proven.',
     totalEvidence: evidence.length,
     totalClaims: claims.length,
     records,
