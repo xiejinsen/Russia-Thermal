@@ -84,7 +84,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
     </div>
   </section>}
 
-  <div class="legacy-evidence">
+  <div class:list={["legacy-evidence",{"kut-evidence":isKutateladze}]}>
   {!isKutateladze && <DetailHero
     eyebrow={`${vm.kindLabel} detail`}
     title={vm.name}
@@ -132,8 +132,8 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     <section class="split-section">
       <article class="why">
-        <p class="section-kicker">Why it matters</p>
-        <h2>What this institution actually contributes to the portfolio</h2>
+        <p class="section-kicker">{isKutateladze ? '研究意义' : 'Why it matters'}</p>
+        <h2>{isKutateladze ? '从实验诊断转向可验证的问题' : 'What this institution actually contributes to the portfolio'}</h2>
         <p>{vm.atlasProfile?.leadershipSummary ?? vm.relevance ?? 'A concise project-specific relevance summary has not yet been added.'}</p>
         {primaryDirection && (
           <div class="decision-line">
@@ -147,8 +147,8 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
       </article>
 
       <article class="hierarchy">
-        <p class="section-kicker">Organization context</p>
-        <h2>Where this team sits</h2>
+        <p class="section-kicker">{isKutateladze ? '研究团队结构' : 'Organization context'}</p>
+        <h2>{isKutateladze ? '关联实验室与研究团队' : 'Where this team sits'}</h2>
         {vm.parent && <a class="hierarchy-row" href={href(vm.parent.href ?? `/institutions/${vm.parent.id}`)}>
           <span>Parent</span><b>{vm.parent.name}</b>
         </a>}
@@ -213,7 +213,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     {vm.people.length > 0 && <section id="institution-people" class="panel">
       <header class="panel-head">
-        <div><p class="section-kicker">People</p><h2>Associated researchers and recorded affiliations (not all current team members)</h2></div>
+        <div><p class="section-kicker">PEOPLE</p><h2>{isKutateladze ? '已建档研究人员与关联单位' : 'Associated researchers and recorded affiliations (not all current team members)'}</h2></div>
         <span>{vm.people.length} linked people</span>
       </header>
       <div class="people-list">
@@ -227,7 +227,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     {vm.capabilities.length > 0 && <section id="institution-capabilities" class="panel">
       <header class="panel-head">
-        <div><p class="section-kicker">Capabilities</p><h2>What the evidence says this institution can actually do</h2></div>
+        <div><p class="section-kicker">CAPABILITIES</p><h2>{isKutateladze ? '实验团队已经有公开证据支撑的能力' : 'What the evidence says this institution can actually do'}</h2></div>
         <span>{vm.capabilities.length} documented capabilities</span>
       </header>
       <div class="capability-list">
@@ -252,7 +252,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     {vm.claims.length > 0 && <section id="institution-claims" class="panel">
       <header class="panel-head">
-        <div><p class="section-kicker">Claims</p><h2>Propositions connecting capability to strategic judgment</h2></div>
+        <div><p class="section-kicker">CLAIMS</p><h2>{isKutateladze ? '研究判断及其证据状态' : 'Propositions connecting capability to strategic judgment'}</h2></div>
         <a href={href(`/claims?actor=${encodeURIComponent(vm.id)}`)}>All claims →</a>
       </header>
       <div class="claim-list">
@@ -265,7 +265,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     {vm.evidence.length > 0 && <section id="institution-evidence" class="panel">
       <header class="panel-head">
-        <div><p class="section-kicker">Evidence</p><h2>Representative sources behind the institution profile</h2></div>
+        <div><p class="section-kicker">EVIDENCE</p><h2>{isKutateladze ? '代表论文与可核查来源' : 'Representative sources behind the institution profile'}</h2></div>
         <a href={href(`/evidence?actor=${encodeURIComponent(vm.id)}`)}>All evidence →</a>
       </header>
       <div class="evidence-list">
@@ -291,7 +291,7 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 
     {vm.directions.length > 0 && <section id="institution-directions" class="panel">
       <header class="panel-head">
-        <div><p class="section-kicker">Strategy</p><h2>Directions this institution can influence</h2></div>
+        <div><p class="section-kicker">STRATEGY</p><h2>{isKutateladze ? '关联研究方向与后续验证' : 'Directions this institution can influence'}</h2></div>
       </header>
       <div class="direction-list">
         {vm.directions.map((direction) => <a href={href(`/directions/${direction.id}`)}>
@@ -306,6 +306,31 @@ const isKutateladze = vm.id === 'ACT-KUTATELADZE';
 </BaseLayout>
 
 <style>
+
+  /* Flagship research profile: readable source-first panels without altering the raw evidence content. */
+  .kut-evidence{padding:clamp(17px,2.7vw,28px);background:#eaf4fb;color:#16354c}
+  .kut-evidence .detail-stack{gap:18px}
+  .kut-evidence .panel-head{padding:19px 22px}
+  .kut-evidence .panel-head h2,.kut-evidence .why h2,.kut-evidence .hierarchy h2,.kut-evidence .atlas-card h2{font-size:19px;line-height:1.4;color:#183c55}
+  .kut-evidence .section-kicker{font-size:11px}
+  .kut-evidence .people-list a,.kut-evidence .claim-list a,.kut-evidence .direction-list a{padding:16px 21px}
+  .kut-evidence .people-list b,.kut-evidence .claim-list b,.kut-evidence .direction-list b{font-size:15px;line-height:1.5;color:#203e56}
+  .kut-evidence .people-list span,.kut-evidence .claim-list span,.kut-evidence .direction-list span{font-size:11px}
+  .kut-evidence .people-list p,.kut-evidence .direction-list p{font-size:13px;line-height:1.75;color:#4b6375}
+  .kut-evidence .people-list strong,.kut-evidence .claim-list strong,.kut-evidence .direction-list strong{font-size:12px}
+  .kut-evidence .capability-list article{padding:19px 22px;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.75fr)}
+  .kut-evidence .cap-main a{font-size:15px;line-height:1.6;color:#153e59}
+  .kut-evidence .cap-main p{font-size:12px}
+  .kut-evidence dt{font-size:11px}.kut-evidence dd{font-size:12px}
+  .kut-evidence .boundary{font-size:12px;color:#526b7d;line-height:1.75}
+  .kut-evidence .source-meta span{font-size:11px}
+  .kut-evidence .source-copy h3{font-size:15px;line-height:1.5;color:#244159}
+  .kut-evidence .source-copy p{font-size:13px;line-height:1.65;color:#4c687c}
+  .kut-evidence .source-actions a{font-size:12px}
+  .kut-evidence .evidence-list article{grid-template-columns:8rem minmax(0,1fr) auto;padding:18px 21px}
+  .kut-evidence .atlas-card>p:not(.section-kicker),.kut-evidence .why>p:last-of-type{font-size:13px;line-height:1.8}
+  .kut-evidence .gap-card ul{font-size:13px;line-height:1.75}
+  @media(max-width:830px){.kut-evidence .capability-list article,.kut-evidence .evidence-list article{grid-template-columns:1fr}.kut-evidence .source-actions{justify-items:start}}
   .kut-editorial{margin:0 10px 24px;border:1px solid #276486;border-radius:17px;overflow:hidden;background:linear-gradient(135deg,#082d4d,#051f38);color:#eaf8ff;box-shadow:0 14px 28px #001d3470}
   .kut-editorial-top{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(255px,.65fr);gap:25px;padding:clamp(24px,3.5vw,42px)}
   .kut-kicker{font-size:11px;color:#82dcf4;font-weight:850;letter-spacing:.13em;margin:0}
