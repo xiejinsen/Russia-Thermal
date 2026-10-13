@@ -2,7 +2,7 @@
 
 本仓库研究**俄罗斯科研机构、实验室与学者在智能手机热管理领域的实际能力，以及相对中国的差异化价值和潜在合作方向**。目标不是单纯收集论文，而是形成**有原始证据、可解释技术边界、可用于团队和领导决策**的研究结论。
 
-> **当前状态（2026-10-13）**：Q01–Q10 在公开资料范围内全部形成结题判断（3 项接受、7 项附明确限制接受）。GitHub Actions 最新归一化研究图检查和 Astro/链接检查已实际成功运行；网页已发布，但**尚未做逐页真实浏览器视觉验收或每条科学事实的独立再审**。本轮扩展检查 155 个 Actor、162 条 Source、123 条 Claim、52 项 Capability、8 个 Direction、28 条 Decision，以及 P1/P2/TPU 关键证据链；确认并纠正了 Surtaev 的人物姓名首字母错误，清理了对论文作者身份、OPEN Claim、合作授权容易产生误解的网页措辞。详见[网页证据链审计（2026-10-13）](analysis/audits/web-evidence-chain-audit-2026-10-13.md)。
+> **当前状态（2026-10-13）**：Q01–Q10 在公开资料范围内全部形成结题判断（3 项接受、7 项附明确限制接受）。GitHub Actions 最新归一化研究图检查和 Astro/链接检查已实际成功运行；网页已发布，并完成 **14 类页面 × 3 种视口（42 次）的真实 Chromium 浏览器验收**，截图、移动端修复与论文／专利视觉分级已归档；每条科学事实的全量独立再审不在本轮网站验收范围内。本轮扩展检查 155 个 Actor、162 条 Source、123 条 Claim、52 项 Capability、8 个 Direction、28 条 Decision，以及 P1/P2/TPU 关键证据链；确认并纠正了 Surtaev 的人物姓名首字母错误，清理了对论文作者身份、OPEN Claim、合作授权容易产生误解的网页措辞。详见[网页证据链审计（2026-10-13）](analysis/audits/web-evidence-chain-audit-2026-10-13.md)。
 
 ## 一、项目目标与研究范围
 
@@ -40,9 +40,9 @@
 | WP2 — 关键论文、作者、中俄国际对照 | 重点研究线已完成有边界的复核 |
 | WP3 — Q01–Q10 逐项验收 | **10/10 形成公开资料范围内的结题处置** |
 | WP4 — 最终研究洞察与合作判断 | **已形成正式研究综合报告** |
-| WP5 — 最终仓库归档与健康验收 | 结构检查与网页构建已通过；证据归属残余例外、实机试验和浏览器视觉验收另行保留 |
+| WP5 — 最终仓库归档与健康验收 | 归一化证据链、网站构建、42 次浏览器截图/交互与 Pages 发布已通过；未授权合作、实机试验及全部原文重新核验不在结题范围 |
 
-**当前工作重点**：PPT 暂停；科研网站已经发布并完成多轮内容整理，本轮重点验证网页每个 Actor/Source/Claim/Capability/Direction/Decision 的**真实语义关系**。最新结构/引用/类型 CI 已经实际通过；对尚未核实的作者身份、数据使用权、手机器件性能或真实浏览器视觉效果，继续保留明确限制。参见[最新证据链审计](analysis/audits/web-evidence-chain-audit-2026-10-13.md)。
+**当前工作重点**：PPT 暂停；科研网站已经发布并完成多轮内容整理，本轮重点验证网页每个 Actor/Source/Claim/Capability/Direction/Decision 的**真实语义关系**。最新结构/引用/类型 CI 已经实际通过；对尚未核实的作者身份、数据使用权和手机器件性能继续保留明确限制；**浏览器 42 视图验收已实际通过**。参见[最新证据链审计](analysis/audits/web-evidence-chain-audit-2026-10-13.md)。
 
 ## 四、关键信息入口
 
@@ -60,6 +60,7 @@
 - [项目权威状态 STATUS](00-project/STATUS.md) — 当前阶段、历史检查记录和技术限制。
 - [跨窗口继续工作 CONTINUE-HERE](00-project/CONTINUE-HERE.md) — 新聊天窗口从这里恢复，不重新启动调研。
 - [Q01–Q10 原始跟踪台账](00-project/final-insight-question-ledger.tsv) — 保留历史任务状态及独立的研究结题处置字段。
+- **[网页 42 视图真实浏览器验收与中文／原始证据分级（2026-10-13）](analysis/audits/web-visual-browser-qa-2026-10-13.md)** — 真实截图、中文标题和筛选项优化、关键原始论文及专利视觉区分、移动端优化与回归测试。
 - **[最新网页证据链与语义验收（2026-10-13）](analysis/audits/web-evidence-chain-audit-2026-10-13.md)** — 汇总 Actor→Source→Claim→Capability→Direction→Decision/Q01–Q10 的自动核查、姓名修复、残余限制与质量门禁。
 - [27 篇代表论文与正式 Source 关联审计](analysis/audits/representative-evidence-link-audit-2026-10-13.md) — 逐篇交叉确认核验状态，不能与 60 个正式论文 Source 混为一谈。
 - [PPT 前研究仓库审计](analysis/audits/research-closeout-pre-ppt-repository-final-audit-2026-10-09.md)
@@ -67,7 +68,7 @@
 - [网页第一轮实施记录](analysis/audits/web-closeout-wave-a-implementation-2026-10-12.md) — 最新十问网页入口、授权口径修复与待验收运行项。
 - [网页第二轮 Russia Capability Atlas 实施记录](analysis/audits/web-russia-atlas-wave-b-implementation-2026-10-12.md) — 六组科研研究线、27 条代表论文、人员与机构消歧、Atlas 展示及验收边界。
 - [网页第三轮比较与研究任务实施记录](analysis/audits/web-comparison-transfer-wave-c-2026-10-12.md) — 中俄/国际源论文矩阵、Q06 手机工程迁移门槛、Q09 研究交付及停止条件，含直接线上检查网址。
-- [研究对照网页](https://xiejinsen.github.io/Russia-Thermal/landscape/)｜[手机迁移](https://xiejinsen.github.io/Russia-Thermal/smartphone-transfer/)｜[合作任务](https://xiejinsen.github.io/Russia-Thermal/research-packages/) — 已发布的网页入口；代码构建/链接审计通过，真实浏览器逐页视觉审查仍未完成。
+- [研究对照网页](https://xiejinsen.github.io/Russia-Thermal/landscape/)｜[手机迁移](https://xiejinsen.github.io/Russia-Thermal/smartphone-transfer/)｜[合作任务](https://xiejinsen.github.io/Russia-Thermal/research-packages/) — 已发布的网页入口；代码构建/链接审计及代表页 Chromium 浏览器 1440/768/390px 截图验收均已通过。
 - [俄罗斯科研能力 Atlas 页面源码](web/src/pages/russia-atlas.astro) — 研究机构、下属实验室、学者、能力与论文证据的可追溯浏览入口。
 
 ## 五、仓库数据结构与权威关系
@@ -92,7 +93,7 @@
 | `analysis/` | 原始证据复核、中俄对照、学者归属审计和结题记录 |
 | `reports/` | 综合研究报告及汇报型材料（**派生成果，不覆盖原始证据**） |
 | `tools/`、`views/`、`history/` | 仓库校验与生成视图、历史变更及迁移记录 |
-| `web/` | 科研网页呈现层；Q01–Q10、论文与证据关系已接入，静态构建/引用检查通过；真实浏览器截图验收另行进行 |
+| `web/` | 科研网页呈现层；Q01–Q10、论文与证据关系已接入，静态构建/引用检查以及多尺寸真实浏览器截图和筛选交互检查已通过 |
 
 **权威性原则**：原始 Source、Claim、Actor、Capability、Direction 与正式 Decision 是可追溯的依据；研究报告和网页是对它们的综合表达。不能用汇报文字反向覆盖原始论文事实。对于公开资料无法确认的人员归属、手机迁移效果或数据授权，应保留“未知”，而不是推断已证实。
 
