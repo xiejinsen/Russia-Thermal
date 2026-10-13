@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   filters,
-  searchPlaceholder = 'Search records…',
+  searchPlaceholder = '搜索研究内容…',
   total,
   sticky = false,
   compact = false,
@@ -25,7 +25,7 @@ const {
   data-url-filter-keys={urlFilterKeys.join('|')}
 >
   <label class="search-box">
-    <span>Search</span>
+    <span>检索</span>
     <input type="search" placeholder={searchPlaceholder} data-explorer-search />
   </label>
 
@@ -33,7 +33,7 @@ const {
     <label>
       <span>{filter.label}</span>
       <select data-explorer-filter data-filter-key={filter.key}>
-        <option value="">{compact ? `${filter.label}: All` : 'All'}</option>
+        <option value="">{compact ? `${filter.label}：全部` : '全部'}</option>
         {filter.options.map((option) => <option value={option.value}>{option.label}</option>)}
       </select>
     </label>
@@ -43,10 +43,10 @@ const {
 
   <div class="toolbar-result">
     <strong data-explorer-count>{total}</strong>
-    <span>visible</span>
+    <span>条结果</span>
   </div>
 
-  <button type="button" data-explorer-reset>Reset</button>
+  <button type="button" data-explorer-reset>清除筛选</button>
 </div>
 
 <script>
@@ -97,11 +97,11 @@ const {
       const labels: string[] = [];
       for (const key of extraKeys) {
         const value = url.get(key);
-        if (value) labels.push(`${key}: ${value}`);
+        if (value) labels.push(`${({actor:'机构', person:'研究人员', capability:'技术能力', claim:'研究主张', relation:'证据关系'} as Record<string,string>)[key] ?? key}：${value}`);
       }
       const relation = url.get('relation');
-      if (relation && !extraKeys.includes('relation')) labels.push(`relation: ${relation}`);
-      scope.textContent = labels.length ? `Scope · ${labels.join(' · ')}` : '';
+      if (relation && !extraKeys.includes('relation')) labels.push(`证据关系：${relation}`);
+      scope.textContent = labels.length ? `筛选范围 · ${labels.join(' · ')}` : '';
       scope.hidden = labels.length === 0;
     };
 
@@ -196,13 +196,12 @@ const {
   .explorer-toolbar.compact{
     display:flex;
     align-items:center;
-    gap:6px;
+    flex-wrap:wrap;
+    gap:8px;
     margin-top:12px;
-    padding:6px 8px;
-    border-radius:9px;
-    overflow-x:auto;
-    overscroll-behavior-x:contain;
-    scrollbar-width:thin;
+    padding:12px;
+    border-radius:11px;
+    overflow:visible;
   }
   .explorer-toolbar.compact label{
     display:block;
@@ -212,13 +211,13 @@ const {
     display:none;
   }
   .explorer-toolbar.compact .search-box{
-    flex:1 0 17rem;
-    min-width:17rem;
-    max-width:28rem;
+    flex:2 1 18rem;
+    min-width:min(100%,17rem);
+    max-width:none;
   }
   .explorer-toolbar.compact label:not(.search-box){
-    min-width:8.5rem;
-    max-width:12rem;
+    min-width:9.3rem;
+    max-width:15rem;
   }
   .explorer-toolbar.compact input,
   .explorer-toolbar.compact select{
@@ -269,7 +268,7 @@ const {
 
   .explorer-toolbar.sticky{
     position:sticky;
-    top:2.85rem;
+    top:4rem;
     z-index:80;
     background:rgb(255 255 255 / .96);
     backdrop-filter:blur(14px);
@@ -306,4 +305,7 @@ const {
   @media(max-width:950px){.explorer-toolbar:not(.compact){grid-template-columns:1fr 1fr}.explorer-toolbar:not(.compact) .search-box{grid-column:1/-1}}
   @media(max-width:860px){.explorer-toolbar.sticky{top:5.9rem}}
   @media(max-width:620px){.explorer-toolbar:not(.compact){grid-template-columns:1fr}.explorer-toolbar:not(.compact) .search-box{grid-column:auto}.explorer-toolbar.compact .search-box{flex-basis:14rem;min-width:14rem}}
+
+@media(max-width:680px){.explorer-toolbar.compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.explorer-toolbar.compact label.search-box{grid-column:1/-1;min-width:0}.explorer-toolbar.compact label:not(.search-box){min-width:0;max-width:none}.explorer-toolbar.compact .toolbar-scope{grid-column:1/-1;max-width:100%;white-space:normal}.explorer-toolbar.compact .toolbar-result{justify-content:flex-start;padding:0}.explorer-toolbar.compact button{justify-self:end;min-width:92px}.explorer-toolbar.sticky{position:relative;top:auto}.explorer-toolbar.compact input,.explorer-toolbar.compact select{min-height:42px;height:42px}}
+
 </style>
