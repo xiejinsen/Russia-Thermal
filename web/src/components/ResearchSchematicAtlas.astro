@@ -100,12 +100,19 @@ const catalog=vm.nodes.map(n=>({...n,
    <p class="kicker">{isRussia?'RUSSIAN RESEARCH LANDSCAPE':'CHINA COMPARATOR LANDSCAPE'} / VISUAL RESEARCH ATLAS</p>
    <h1>{isRussia?'俄罗斯热管理科研版图':'中国热管理研究对照版图'}</h1>
    <p class="english">{isRussia?'Organizations · People · Capabilities · Original Evidence':'Comparator Organizations · Capabilities · Evidence'}</p>
-   <p class="lead">{isRussia?'从城市集群认识俄罗斯研究机构：谁在研究什么、关联哪些学者，以及哪些结论尚不能直接迁移到手机热管理。':'以中国研究机构作为学术与工程对照基线。这里展示已收录样本的研究位置与证据关联，不推断全国科研强弱。'}</p>
+   <p class="lead">{isRussia?'从城市集群认识俄罗斯研究机构：谁在研究什么、关联哪些学者，以及哪些结论尚不能直接迁移到手机热管理。':'从已有中国技术对照档案中，列出全部九所相关高校，并链接研究能力、人物和论文；其他类型机构仍保留在下方研究索引。'}</p>
    <div class="metrics">
-    <div><strong>{vm.mappedActorCount}</strong><span>有位置记录的根机构</span></div>
-    <div><strong>{vm.scholarCount}</strong><span>关联人物记录</span></div>
-    <div><strong>{vm.capabilityCount}</strong><span>关联技术能力</span></div>
-    <div><strong>{vm.unmappedActorCount}</strong><span>位置待核验</span></div>
+    {isRussia ? <>
+      <div><strong>{vm.mappedActorCount}</strong><span>有位置记录的根机构</span></div>
+      <div><strong>{vm.scholarCount}</strong><span>关联人物记录</span></div>
+      <div><strong>{vm.capabilityCount}</strong><span>关联技术能力</span></div>
+      <div><strong>{vm.unmappedActorCount}</strong><span>位置待核验</span></div>
+    </> : <>
+      <div><strong>{selected.length}</strong><span>纳入本图的高校</span></div>
+      <div><strong>{visiblePositions.length-cityApproximateCount}</strong><span>有校区坐标记录</span></div>
+      <div><strong>{cityApproximateCount}</strong><span>仅城市级定位</span></div>
+      <div><strong>{vm.scholarCount}</strong><span>中国相关人物记录</span></div>
+    </>}
    </div>
   </div>
   <aside class="hero-context">
