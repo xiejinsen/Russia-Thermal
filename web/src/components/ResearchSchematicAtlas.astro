@@ -51,17 +51,13 @@ const positions = selected.map((item,i)=>{
  }
  const offsets=isRussia
   ? [[-33,-77],[-114,-92],[90,-54],[115,66]]
-  : [[-73,-70],[-90,-64],[93,62],[85,-60]];
+  : [[-73,-70],[-90,-64],[93,62],[-125,-55]];
  const [dx,dy]=offsets[i]??[0,-65];
  const lx=actual?Math.max(74,Math.min(901,actual.x+dx)):0;
  const ly=actual?Math.max(47,Math.min(361,actual.y+dy)):0;
  return {...item,i,actual,cityOnly,marker:{x:lx,y:ly},number:String(i+1).padStart(2,'0')};
 });
 const visiblePositions=positions.filter(item=>item.actual!==null);
-const contextNodes=vm.nodes
- .filter(node=>!canonical.includes(node.actorId))
- .map(node=>({id:node.actorId,name:node.name,city:node.city,actual:pin(node.latitude,node.longitude)}))
- .filter((node):node is typeof node & {actual:{x:number,y:number}}=>Boolean(node.actual));
 const cityOptions=[...new Set(vm.nodes.map(n=>n.city))].sort((a,b)=>a.localeCompare(b));
 const directions=[...new Map(vm.nodes.flatMap(n=>n.directions).map(d=>[d.id,d])).values()];
 const catalog=vm.nodes.map(n=>({...n,
@@ -93,7 +89,7 @@ const catalog=vm.nodes.map(n=>({...n,
  </header>
 
  <section class="visual-atlas" aria-labelledby="infographic-title">
-  <div class="section-line"><div><p class="kicker">01 / RESEARCH NETWORK</p><h2 id="infographic-title">{isRussia?'科研城市与代表机构':'研究对照机构与区域节点'}</h2></div><span>GEO-REFERENCED OUTLINE · EDITORIAL INFOGRAPHIC</span></div>
+  <div class="section-line"><div><p class="kicker">01 / RESEARCH NETWORK</p><h2 id="infographic-title">{isRussia?'科研城市与代表机构':'研究对照机构与区域节点'}</h2></div></div>
   <div class="atlas-columns">
    <div class="map-pane">
     <div class="map-graphic">
@@ -104,32 +100,22 @@ const catalog=vm.nodes.map(n=>({...n,
         <feGaussianBlur stdDeviation="7"/>
        </filter>
       </defs>
-      {contextNodes.map(node=><g class="context-position" aria-label={node.name+' · '+node.city}>
-       <circle cx={node.actual.x} cy={node.actual.y} r="4" fill="#57afcf" stroke="#a8e7ff" stroke-width="1.2"/>
-      </g>)}
       {visiblePositions.map(item=><g class="pin-group">
        <circle cx={item.actual!.x} cy={item.actual!.y} r="14" fill="#38d7ff" opacity=".45" filter={'url(#'+(isRussia?'ru-marker-halo':'cn-marker-halo')+')'}/>
        <circle class="true-location-dot" cx={item.actual!.x} cy={item.actual!.y} r="6" fill="#e8fbff" stroke="#17afe6" stroke-width="2"/>
        <path class="pin-leader" d={'M '+item.actual!.x+' '+item.actual!.y+' L '+item.marker.x+' '+item.marker.y} fill="none" stroke={item.cityOnly?'#9dd1e6':'#52d7f9'} stroke-dasharray={item.cityOnly?'5 5':undefined} stroke-width="2"/>
-       <a class="feature-pin" href={'#atlas-feature-'+item.number} aria-label={item.number+' '+item.name+' · '+item.city+(item.cityOnly?' 城市集群示意':' 地理坐标')+'，查看下方图文简介'}>
+       <a class="feature-pin" href={'#atlas-feature-'+item.number} aria-label={item.number+' '+item.name+' · '+item.city}>
         <title>{item.name} · {item.city}{item.cityOnly?' · 城市集群示意，不代表精确校舍坐标':''}</title>
         <rect class="pin-label-bg" x={item.marker.x-23} y={item.marker.y-18} width="46" height="36" rx="10" fill="#082945" stroke="#74e8ff" stroke-width="2"/>
         <text x={item.marker.x} y={item.marker.y+5} fill="#f5fdff" font-size="17" font-weight="800" text-anchor="middle">{item.number}</text>
-        <text class="pin-city-label" x={item.marker.x+(item.marker.x>760?-33:33)} y={item.marker.y-3} text-anchor={item.marker.x>760?'end':'start'}>{item.city.toUpperCase()}</text>
-        <text class="pin-actor-label" x={item.marker.x+(item.marker.x>760?-33:33)} y={item.marker.y+14} text-anchor={item.marker.x>760?'end':'start'}>{item.id.replace('ACT-','')}{item.cityOnly?' · CITY CLUSTER':''}</text>
+        <text class="pin-city-label" x={item.marker.x+(item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?-33:33)} y={item.marker.y-3} text-anchor={item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?'end':'start'}>{item.city.toUpperCase()}</text>
+        <text class="pin-actor-label" x={item.marker.x+(item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?-33:33)} y={item.marker.y+14} text-anchor={item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?'end':'start'}>{item.id.replace('ACT-','')}{item.cityOnly?' · CITY CLUSTER':''}</text>
        </a>
       </g>)}
      </svg>
-     <div class="map-footnote">{isRussia?'RUSSIA':'CHINA'} / GEOREFERENCED SCIENCE · EDITORIAL LANDSCAPE</div>
     </div>
-    <div class="map-key">
-     <span><i class="primary-dot"></i> 编号 = 下方机构卡片</span>
-     <span><i class="secondary-dot"></i> 小点 = 其他有坐标的机构</span>
-     <span>引线从实际地理位置延伸至错位展示标签</span>
-    </div>
-    <p class="cartography-note">基于已归档地理坐标与静态地图轮廓生成，非 GIS 地图。{isRussia?'Tomsk State University 暂无独立核实坐标，04 号仅表示 Tomsk 城市集群；虚线不表示校舍位置。':''} <strong>引线用于阅读，不表示机构之间存在合作。</strong></p>
    </div>
-   <div class="feature-header"><span>FEATURED / 代表机构</span><strong>点击地图编号定位介绍；点击卡片进入对应机构档案</strong></div>
+   <div class="feature-header"><span>FEATURED / 代表机构</span></div>
    <div class="focus-list">
     {positions.map(item=><article class="focus-card" id={'atlas-feature-'+item.number}>
      <a class="focus-main" href={item.href}>
@@ -138,7 +124,7 @@ const catalog=vm.nodes.map(n=>({...n,
        <span class="focus-number">{item.number}</span>
       </div>
       <div class="focus-copy">
-       <span class="focus-location">{item.city}{item.cityOnly?' · 城市集群位置示意':''}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
+       <span class="focus-location">{item.city}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
        <h3>{item.name}</h3>
        <p>{item.description || '机构档案包含已记录的研究能力、关联学者及其证据边界。'}</p>
        <span class="focus-bottom">{item.capabilityCount} 能力 · {item.scholarCount} 人物 <em>查看档案 ↗</em></span>
@@ -215,7 +201,7 @@ const catalog=vm.nodes.map(n=>({...n,
  .visual-atlas{border-inline:1px solid #1c5779;background:linear-gradient(140deg,#072441,#0b3455 50%,#041d37);padding:34px}
  .section-line{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:22px}.section-line h2{color:white;font-size:26px;line-height:1.3;margin:6px 0 0}.section-line>span{font-size:11px;color:#c1d8e5;letter-spacing:.08em;text-align:right}
  .atlas-columns{display:flex;flex-direction:column;gap:0}
- .map-pane{min-width:0;padding:18px 18px 12px;background:#041f38c9;border:1px solid #387fa1;border-radius:15px 15px 0 0}
+ .map-pane{min-width:0;padding:18px;background:#041f38c9;border:1px solid #387fa1;border-radius:15px 15px 0 0}
  .map-graphic{position:relative;width:100%;aspect-ratio:1000/430;background:radial-gradient(ellipse at 40% 45%,#13527b7a,transparent 72%),repeating-linear-gradient(0deg,transparent 0 31px,#7cccf00d 32px),repeating-linear-gradient(90deg,transparent 0 31px,#7cccf00d 32px);overflow:hidden;border-radius:11px}
  .country-outline{width:100%;height:100%;display:block}
  .location-overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
@@ -226,13 +212,6 @@ const catalog=vm.nodes.map(n=>({...n,
  .pin-label-bg{filter:drop-shadow(0 3px 7px #00172acc)}
  .feature-pin:hover .pin-label-bg,.feature-pin:focus .pin-label-bg{fill:#167da9;stroke:#eaffff;stroke-width:3}
  .feature-pin:focus{outline:none}
- .map-footnote{position:absolute;right:14px;bottom:12px;letter-spacing:.13em;color:#daf0fc;font-size:11px;background:#062a4688;padding:5px 9px;border-radius:5px}
- .map-key{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#cfe6f2;padding:17px 2px 7px}
- .map-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
- .map-key .primary-dot{background:#aaf4ff;box-shadow:0 0 0 3px #53c8ed61}
- .map-key .secondary-dot{background:#57afcf}
- .cartography-note{font-size:12px;line-height:1.75;color:#d4e9f4;margin:10px 0 0}
- .cartography-note strong{color:#f5fcff}
  .feature-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:23px 4px 16px}
  .feature-header span{font-size:12px;letter-spacing:.12em;color:#70ddf3;font-weight:850}
  .feature-header strong{font-size:13px;color:#dcecf7;font-weight:600}
@@ -255,7 +234,7 @@ const catalog=vm.nodes.map(n=>({...n,
  .focus-bottom em{font-style:normal;color:#91f0ff;font-weight:750}
  .credit{font-size:10px;line-height:1.65;margin:0;color:#c6e1ed;padding:8px 14px 12px;border-top:1px solid #317396}.credit a{color:#a6edff}
  @media(max-width:1080px){.focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
- @media(max-width:590px){.map-pane{padding:10px;overflow-x:auto}.map-graphic{min-width:680px}.focus-list{grid-template-columns:1fr}.feature-header{flex-direction:column;align-items:start}.focus-media{height:190px}.map-footnote{font-size:8px}.map-key{font-size:11px}}
+ @media(max-width:590px){.map-pane{padding:10px;overflow-x:auto}.map-graphic{min-width:680px}.focus-list{grid-template-columns:1fr}.feature-header{flex-direction:column;align-items:start}.focus-media{height:190px}}
  .catalog-section{background:#eaf4fb;color:#18334b;padding:42px 38px;border-inline:1px solid #b5d3e5}.section-line.light h2{color:#17334b}.section-line.light .kicker{color:#0d6088}.section-line.light a{color:#075b86;font-size:13px;font-weight:800}
  .directory-explain{max-width:950px;font-size:14px;line-height:1.8;color:#40596c}
  .catalog-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:23px 0;padding:20px;border:1px solid #c0d5e3;background:#f7fbff;border-radius:12px}.catalog-controls label{display:grid;gap:7px;flex:1;min-width:175px;font-size:12px;font-weight:800;color:#284e6b}.catalog-controls input,.catalog-controls select{border:1px solid #9bb9ca;background:white;border-radius:7px;padding:11px;color:#142f45;font-size:14px;min-width:0;width:100%}.counter{font-size:13px;font-weight:800;color:#175f86}
