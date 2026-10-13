@@ -17,7 +17,7 @@ assert.ok(linked('TPU-02','PAPER-RU-TPU-002'), 'TPU laser paper was already cano
 assert.ok(linked('ITP-01','PAPER-RU-LHP-001'), 'ITP Russian-original / English-translation source relation missing');
 assert.ok(linked('KUT-10','PAPER-RU-DRY-001'), 'P1 decision source must retain canonical link');
 assert.ok(linked('MPEI-04','PAPER-RU-AGE-001'), 'P2 decision source must retain canonical link');
-const evidenceAudit = read('analysis/audits/representative-evidence-link-audit-2026-10-13.md');
+const evidenceAudit = read('../analysis/audits/representative-evidence-link-audit-2026-10-13.md');
 assert.ok(evidenceAudit.includes('CANONICAL 5 / ORIGINAL_REVIEWED 17 / SECONDARY_ONLY 2 / PENDING_IDENTITY 3'), 'representative evidence audit summary drift');
 
 for(const id of required) {
