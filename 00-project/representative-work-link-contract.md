@@ -1,8 +1,16 @@
 # Representative-work selection links — V2.1 additive pilot
 
-state: PILOT / NONCANONICAL_LINK_LAYER
-date: 2026-10-08
-scope: ACT-KUT-LAB13, ACT-MPEI
+state: CURRENT_DERIVED_SELECTION / NONCANONICAL_LINK_LAYER
+date: 2026-10-08 (pilot); crosswalk reconciled 2026-10-13
+scope: ACT-KUT-LAB13, ACT-MPEI, ACT-ITP-UBRAS, ACT-TPU, ACT-TSU, ACT-ICM-KRASN
+
+## Current status (2026-10-13)
+
+This document records the original two-team pilot and remains valid as the selection schema contract. The selection layer has since expanded to six team manifests / 27 representative entries. It must not be confused with the canonical PAPER Source corpus, or with the paper evidence actually used in Q01–Q10.
+
+A [27-work canonical crosswalk audit](../analysis/audits/representative-evidence-link-audit-2026-10-13.md) reconciles the current six manifests: 5 Source-linked, 17 original-locator/identity reviewed selections, 2 secondary-only leads, and 3 pending-identity leads. Crucial corrected links: `TPU-02` → `PAPER-RU-TPU-002`; `ITP-01` English DOI → `PAPER-RU-LHP-001` Russian DOI (verified translation pair, count one work). Remaining candidate selections cannot automatically validate any new Claim or change P1/P2/TPU dispositions.
+
+## Historical pilot contract (2026-10-08)
 policy: user-approved representative-first Q04
 
 A representative-work TSV is an **editorial selection manifest**, not a new PAPER, CLAIM, CAPABILITY, LAB, or graph authority. One row points to a verified canonical SOURCE when known; otherwise to a DOI/original locator with explicit staging status. Reuse existing canonical IDs and original evidence rather than copying factual methods/results.
