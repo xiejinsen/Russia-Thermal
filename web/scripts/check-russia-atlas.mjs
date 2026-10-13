@@ -12,6 +12,14 @@ assert.equal(alias?.recordState, 'HISTORICAL_ALIAS', 'ICM legacy record state lo
 assert.equal(alias?.identityAliasOf, 'ACT-ICM-KRASN', 'legacy alias not resolved to canonical ICM');
 const required = ['ACT-KUT-LAB13', 'ACT-MPEI', 'ACT-ITP-UBRAS', 'ACT-TPU', 'ACT-TSU', 'ACT-ICM-KRASN'];
 const groupIds = new Set(works.map(r => r.teamId));
+const linked = (id, sourceId) => works.some(r => r.id === id && r.sourceId === sourceId && r.evidenceState === 'CANONICAL');
+assert.ok(linked('TPU-02','PAPER-RU-TPU-002'), 'TPU laser paper was already canonical and must not appear as secondary-only');
+assert.ok(linked('ITP-01','PAPER-RU-LHP-001'), 'ITP Russian-original / English-translation source relation missing');
+assert.ok(linked('KUT-10','PAPER-RU-DRY-001'), 'P1 decision source must retain canonical link');
+assert.ok(linked('MPEI-04','PAPER-RU-AGE-001'), 'P2 decision source must retain canonical link');
+const evidenceAudit = read('analysis/audits/representative-evidence-link-audit-2026-10-13.md');
+assert.ok(evidenceAudit.includes('CANONICAL 5 / ORIGINAL_REVIEWED 17 / SECONDARY_ONLY 2 / PENDING_IDENTITY 3'), 'representative evidence audit summary drift');
+
 for(const id of required) {
   assert.ok(actorIds.has(id), `missing actor ${id}`);
   assert.ok(groupIds.has(id), `missing representative research line ${id}`);
@@ -55,6 +63,8 @@ assert.ok(atlasModel.includes('person.parentId && institutionIds.has(person.pare
 assert.ok(atlasModel.includes('sourceType === \'PAPER\''), 'paper evidence filter not present');
 assert.ok(atlas.includes('非机构发表总量'), 'linked papers are not authored-output counts');
 assert.ok(representative.includes('const panels = [...new Set(records.map'), 'representative works no longer generates navigation from records');
+assert.ok(representative.includes('formalPaperCount') && representative.includes('Source 已归档') && !representative.includes('尚未纳入证据图谱'),
+  'representative paper page must distinguish source-backed conclusions from provenance-only selections');
 assert.ok(representative.includes('Dmitry Nesterov') && representative.includes('Denis Nesterov'), 'ICM name collision warning missing');
 assert.ok(institution.includes('reviewedTeams') && institution.includes('/representative-works#'), 'institution representative-work drill-down missing');
 assert.ok(builder.includes('scholarCard(person, person.parentId ? actorById.get(person.parentId) : undefined)'), 'wrong displayed affiliation in institution view');
