@@ -96,13 +96,30 @@ if(!homepage.includes('俄罗斯热管理')||!homepage.includes('SCIENCE'))failu
 const evidenceIndex=read('evidence/index.html'),paperIndex=read('papers/index.html');
 const patentComparator=read('patents/PATENT-GLOBAL-DRYOUT-OBS-001/index.html');
 const questionIndex=read('research-questions/index.html');
-for(const id of ['PAPER-RU-DRY-001','PAPER-RU-AGE-001','PAPER-CN-UTVC-WP-001','PATENT-CN-VC-AGING-001','PATENT-GLOBAL-DRYOUT-OBS-001']){
- if(!evidenceIndex.includes(id))failures.push('Key original lost from featured evidence section: '+id);
+// Every editorial highlight is a separately archived, canonical Source.
+const groupedSources={
+ decision:['PAPER-RU-DRY-001','PAPER-RU-AGE-001'],
+ comparator:[
+ 'PAPER-CN-SJTU-DRY-001','PAPER-GLOBAL-DRY-TRANSIENT-001',
+ 'PAPER-GLOBAL-INTERNAL-DRYOUT-001','PAPER-CN-AGE-001',
+ 'PAPER-CN-AGE-002','PAPER-CN-UTVC-WP-001',
+ 'PATENT-CN-VC-AGING-001','PATENT-GLOBAL-DRYOUT-OBS-001'],
+ method:['PAPER-RU-DRY-002','PAPER-RU-LHP-001','PAPER-RU-TPU-002','PAPER-RU-ICM-ELECTRONICS-001'],
+ identity:['OFFICIAL-RAS-PAVLENKO-001','OFFICIAL-MPEI-IVANOV-001','OFFICIAL-TPU-FEOKTISTOV-ROLE-001']
+};
+for(const [group,ids] of Object.entries(groupedSources)){
+ if(!evidenceIndex.includes('class="source-group '+group+'"'))failures.push('Evidence index lost semantic source group: '+group);
+ for(const id of ids){
+  if(!evidenceIndex.includes(id))failures.push('Curated original missing from evidence index: '+id);
+ }
 }
-if((evidenceIndex.match(/class="essential-item /g)||[]).length!==5)failures.push('Expected five distinctly highlighted decision/comparator originals');
-if(!paperIndex.includes('核心结论原文')||!paperIndex.includes('关键中国对照'))
- failures.push('Paper index no longer distinguishes key conclusions from comparison originals');
-if(!patentComparator.includes('关键专利对照'))failures.push('Patent prior-art page missing comparison emphasis');
+if((evidenceIndex.match(/class="essential-item /g)||[]).length!==17)
+ failures.push('Evidence index should feature 17 identified originals grouped by decision relevance (not five arbitrary items)');
+if(!evidenceIndex.includes('下方仍完整收录')||!evidenceIndex.includes('代表性原始资料'))
+ failures.push('Evidence highlights must declare that featured entries are a selection, not the entire corpus');
+if(!paperIndex.includes('P1 直接实验')||!paperIndex.includes('中国超薄 VC 对照'))
+ failures.push('Paper index lost semantic source badges distinguishing P1 original and China comparator');
+if(!patentComparator.includes('国际干涸监测专利'))failures.push('Patent prior-art page missing comparator emphasis');
 for(const [p,html] of [['evidence',evidenceIndex],['papers',paperIndex],['questions',questionIndex]]){
  if(!html.includes('<html lang="zh-CN"'))failures.push(p+' document language not Chinese');
 }
