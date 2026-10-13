@@ -93,6 +93,23 @@ if(kutH1!==1) failures.push('Kutateladze should have one page H1, found '+kutH1)
 if(!hub.includes('research-map/russia')||!hub.includes('research-map/china'))failures.push('Research infographic hub route missing');
 if(!homepage.includes('俄罗斯热管理')||!homepage.includes('SCIENCE'))failures.push('Homepage scientific atlas hero unexpectedly absent');
 
+const evidenceIndex=read('evidence/index.html'),paperIndex=read('papers/index.html');
+const patentComparator=read('patents/PATENT-GLOBAL-DRYOUT-OBS-001/index.html');
+const questionIndex=read('research-questions/index.html');
+for(const id of ['PAPER-RU-DRY-001','PAPER-RU-AGE-001','PAPER-CN-UTVC-WP-001','PATENT-CN-VC-AGING-001','PATENT-GLOBAL-DRYOUT-OBS-001']){
+ if(!evidenceIndex.includes(id))failures.push('Key original lost from featured evidence section: '+id);
+}
+if((evidenceIndex.match(/class="essential-item /g)||[]).length!==5)failures.push('Expected five distinctly highlighted decision/comparator originals');
+if(!paperIndex.includes('核心结论原文')||!paperIndex.includes('关键中国对照'))
+ failures.push('Paper index no longer distinguishes key conclusions from comparison originals');
+if(!patentComparator.includes('关键专利对照'))failures.push('Patent prior-art page missing comparison emphasis');
+for(const [p,html] of [['evidence',evidenceIndex],['papers',paperIndex],['questions',questionIndex]]){
+ if(!html.includes('<html lang="zh-CN"'))failures.push(p+' document language not Chinese');
+}
+if(!paperIndex.includes('清除筛选')||!evidenceIndex.includes('国家／地区'))
+ failures.push('Primary evidence navigation lost Chinese filtering labels');
+
+
 for(const [name,html] of [['homepage',homepage],['Russia infographic',ru],['China infographic',cn]]){
  const images=[...html.matchAll(/<img\b[^>]*>/gi)];
  for(const img of images){
