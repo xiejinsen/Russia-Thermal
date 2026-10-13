@@ -69,9 +69,9 @@ try{
     const target=path.join(outputDir,view+'-'+slug+'.png');
     await page.screenshot({path:target,fullPage:true,animations:'disabled',timeout:25000});
     // Inspectable above-fold browser captures encoded into Actions logs; no mockups.
-    if(view==='desktop'&&['home','evidence','papers'].includes(slug)){
+    if((view==='desktop'&&['home','evidence','papers'].includes(slug)) || (view==='mobile'&&['home','evidence','china-map'].includes(slug)) || (view==='tablet'&&slug==='home')){
       const shot=await page.screenshot({type:'jpeg',quality:38,fullPage:false});
-      console.log('QA_IMAGE_BEGIN '+slug+' '+shot.toString('base64')+' QA_IMAGE_END');
+      console.log('QA_IMAGE_BEGIN '+view+'-'+slug+' '+shot.toString('base64')+' QA_IMAGE_END');
     }
    }
    await context.close();
