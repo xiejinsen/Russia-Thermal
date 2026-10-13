@@ -68,7 +68,9 @@ const panels = [...new Set(records.map(record => record.teamId))]
     institutionHref: `/institutions/${id}`
   }));
 const priority = (r: Selection) => r.deepReadPriority === 'DECISIVE' ? 0 : r.deepReadPriority === 'SUPPORTING' ? 1 : 2;
-const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? '已纳入科研证据图谱' : r.evidenceState === 'ORIGINAL_REVIEWED' ? '原始论文或身份已核验 · 尚未纳入证据图谱' : r.evidenceState === 'SECONDARY_ONLY' ? '文献线索 · 尚待原文核查' : '研究线索 · 身份尚待确认';
+const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? 'Source 已归档' : r.evidenceState === 'ORIGINAL_REVIEWED' ? '已核对出处 · 代表作补充' : r.evidenceState === 'SECONDARY_ONLY' ? '原文方法待核查' : '书目或人员归属待核验';
+const stateCount = (value:string) => records.filter(r=>r.evidenceState===value).length;
+const formalPaperCount=evidence.filter(s=>s.sourceType==='PAPER').length;
 ---
 <BaseLayout title="Representative Works — Russia-Thermal" description="Representative research papers and scientific contributions of Russia thermal research groups, with evidence provenance and smartphone-transfer limits.">
   <SiteHeader slot="header" />
@@ -78,8 +80,28 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? '已纳入科�
       <p class="eyebrow">Academic research · evidence review</p>
       <h1>Representative research works</h1>
       <p>俄罗斯主要机构有哪些值得阅读的代表论文？实验、模型和手机适用性的边界分别是什么？</p>
-      <p class="note">这里只列已核查或明确标注待核验的代表性研究，不等于各机构完整论文总数。论文署名不自动证明作者目前所属实验室；未进入 Source 图谱的论文标注原始来源与核对状态。</p>
+      <p class="note">本页是一份按研究团队整理的代表作清单，不是研究结论所使用的全部论文库。论文的书目核验、正式 Source 归档，以及用于支持哪条 Claim，是三个不同步骤。</p>
     </header>
+    <section class="evidence-guide" aria-labelledby="evidence-guide-heading">
+      <div class="guide-intro">
+        <p class="eyebrow">SOURCE GRAPH / DECISION TRACE</p>
+        <h2 id="evidence-guide-heading">结论依据来自正式证据链，代表作清单另行维护</h2>
+        <p>正式证据库目前有 <strong>{formalPaperCount} 个论文 Source 对象</strong>，结题材料通过 Source → Claim → Capability / Direction / Decision 追溯论据。下方 <strong>{records.length} 篇</strong>是机构代表作选目，其中 <strong>{stateCount('CANONICAL')} 篇</strong>已直接建立 Source 关联。其他条目根据核验程度保留为补充研究资料，<strong>不能仅凭选目标签作为独立的结论证明</strong>。</p>
+      </div>
+      <div class="evidence-levels">
+        <div><strong>{stateCount('CANONICAL')}</strong><span>正式 Source 关联</span></div>
+        <div><strong>{stateCount('ORIGINAL_REVIEWED')}</strong><span>原始出处或身份已核对</span></div>
+        <div><strong>{stateCount('SECONDARY_ONLY') + stateCount('PENDING_IDENTITY')}</strong><span>存在原文或身份核验缺口</span></div>
+      </div>
+      <div class="decision-source-links">
+        <a href={url('/papers/PAPER-RU-DRY-001')}>P1：Kutateladze 干斑原始论文 ↗</a>
+        <a href={url('/claims/CLM-PAV-002')}>P1：实验结论的 Claim ↗</a>
+        <a href={url('/papers/PAPER-RU-AGE-001')}>P2：MPEI 42 个月原始论文 ↗</a>
+        <a href={url('/claims/CLM-MPEI-008')}>P2：尚待验证的退化假说 ↗</a>
+        <a href={url('/research-questions#Q04')}>Q04：代表论文结题范围与限制 ↗</a>
+        <a href="https://github.com/xiejinsen/Russia-Thermal/blob/main/analysis/audits/representative-evidence-link-audit-2026-10-13.md" target="_blank" rel="noopener noreferrer">27 篇逐项证据关联审计 ↗</a>
+      </div>
+    </section>
     <nav class="team-jump" aria-label="Research team quick navigation">
       {panels.map((panel) => (
         <a class="jump-card" href={`#${panel.id}`}>
@@ -113,13 +135,15 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? '已纳入科�
                 <div class="paper-body">
                 <div class="paper-top">
                   <span class="focus">{r.deepReadPriority === 'DECISIVE' ? 'Key paper' : r.deepReadPriority === 'SUPPORTING' ? 'Supporting study' : 'Context'}</span>
-                  <span class="status">{stage(r)}</span>
+                  <span class:list={['status',r.evidenceState.toLowerCase()]}>{stage(r)}</span>
                 </div>
                 <h3><a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{source?.title ?? r.title}</a></h3>
                 <p class="citation">{r.authors} · <em>{r.venue}</em> · {r.year ?? 'Publication year not verified'}</p>
                 <p><strong>研究价值：</strong> {r.selectionReason}</p>
                 {panel.id === 'ACT-ICM-KRASN' && <p class="research-track"><strong>科研组别：</strong>{r.researchLane.startsWith('TRACK_A') ? '电子散热与热管实验研究线' : '液气界面与热毛细理论研究线'}（两组独立）</p>}
-                {r.sourceId && <p><a href={url(`/papers/${r.sourceId}`)}>查看仓库中的原始论文记录和证据边界 →</a></p>}
+                {r.sourceId
+                  ? <p class="evidence-path"><a href={url(`/papers/${r.sourceId}`)}>正式证据记录：{r.sourceId} ↗</a></p>
+                  : <p class="evidence-path pending">此条为补充代表作选目，暂无独立 Source–Claim 证据关联；不能据此直接支持产品或合作结论。</p>}
                 <p><strong>不支持的外推：</strong> {r.selectionLimit}</p>
                 </div>
               </article>
@@ -133,6 +157,22 @@ const stage = (r: Selection) => r.evidenceState === 'CANONICAL' ? '已纳入科�
 </BaseLayout>
 
 <style>
+  .evidence-guide{margin:4px 0 34px;padding:25px 30px;background:linear-gradient(110deg,#e8f4fa,#f7fbfd);border:1px solid #b9d5e5;border-radius:13px}
+  .evidence-guide h2{font-size:23px;color:#173951;line-height:1.4;margin:6px 0 12px}
+  .guide-intro>p:last-child{font-size:15px;line-height:1.8;color:#31546d;max-width:980px;margin:0}
+  .evidence-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:21px 0}
+  .evidence-levels div{display:flex;align-items:center;gap:12px;border:1px solid #c1d9e8;background:white;border-radius:9px;padding:13px}
+  .evidence-levels strong{font-size:28px;color:#0c658e;line-height:1}
+  .evidence-levels span{font-size:12px;color:#385f78;line-height:1.4}
+  .decision-source-links{display:flex;gap:10px 21px;flex-wrap:wrap;padding-top:16px;border-top:1px solid #c8dce8}
+  .decision-source-links a{font-size:12px;line-height:1.7;color:#0c5e85;font-weight:750}
+  .status{font-size:12px;color:#315876;font-weight:750}
+  .status.canonical{color:#116955}
+  .status.original_reviewed{color:#1e5b83}
+  .status.secondary_only,.status.pending_identity{color:#856027}
+  .evidence-path{font-size:13px!important;line-height:1.6;color:#2b607b}
+  .evidence-path.pending{color:#546a7a}
+  @media(max-width:700px){.evidence-guide{padding:19px}.evidence-levels{grid-template-columns:1fr}}
   .works-page {width:min(1080px,calc(100% - 40px));margin:auto;padding:28px 0 76px;color:#172b44;}
   .crumbs {display:flex;gap:12px;align-items:center;font-size:14px;margin-bottom:28px;color:#476788}
   a {color:#165ca8;text-decoration:underline;text-underline-offset:3px}
