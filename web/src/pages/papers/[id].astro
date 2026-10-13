@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import TechnicalDeepRead from '../../components/TechnicalDeepRead.astro';
 import { buildPaperPageVM, paperIds } from '../../view-models/builders';
+import { sourceContext,sourceEmphasis,countryName } from '../../view-models/source-emphasis';
 
 export function getStaticPaths() {
   return paperIds().map((id) => ({ params: { id } }));
@@ -19,34 +20,35 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
 <BaseLayout title={`Russia-Thermal — ${vm.title}`} description={vm.findings[0] ?? vm.title}>
   <SiteHeader slot="header" />
 
-  <section class="paper-hero">
-    <p class="eyebrow">Paper detail · {vm.id}</p>
+  <section class:list={["paper-hero",sourceEmphasis(vm.id)]}>
+    <p class="eyebrow">原始论文 · {vm.id}</p>
+    {sourceContext(vm.id)&&<div class:list={["source-context",sourceEmphasis(vm.id)]}><strong>{sourceContext(vm.id)?.label}</strong><span>{sourceContext(vm.id)?.context}</span>{sourceContext(vm.id)?.claimId&&<a href={href("/claims/"+sourceContext(vm.id)?.claimId)}>核查关联 Claim ↗</a>}</div>}
     <h1>{vm.title}</h1>
     <div class="metadata">
-      {vm.deepRead && <span>{vm.deepRead.level} Deep Read</span>}
+      {vm.deepRead && <span>{vm.deepRead.level} 深读记录</span>}
       {vm.year && <span>{vm.year}</span>}
-      {vm.countryContext && <span>{vm.countryContext}</span>}
+      {vm.countryContext && <span>{countryName(vm.countryContext)}</span>}
       {vm.venue && <span>{vm.venue}</span>}
     </div>
     {vm.authors.length > 0 && <p class="authors">{vm.authors.join(', ')}</p>}
-    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">Open original source ↗</a>
+    <a class="source-link" href={vm.primaryUrl} target="_blank" rel="noreferrer">查看论文原文 ↗</a>
   </section>
 
   <section class="read-grid">
     <article class="main-read">
-      <span>WHAT THIS PAPER ESTABLISHES</span>
-      <h2>Direct reported findings</h2>
+      <span>原始论文报告</span>
+      <h2>论文直接报告的发现</h2>
       {vm.findings.length ? (
         <ul>{vm.findings.map((finding) => <li>{finding}</li>)}</ul>
       ) : (
-        <p>No direct finding has been recorded for this paper yet.</p>
+        <p>暂未归档可直接核验的发现。</p>
       )}
     </article>
 
     <article class="boundary-card">
-      <span>BOUNDARY</span>
-      <h2>What this paper does not prove</h2>
-      <p>{vm.boundary ?? 'No additional evidence boundary is currently recorded.'}</p>
+      <span>证据边界</span>
+      <h2>这篇论文不能直接证明什么</h2>
+      <p>{vm.boundary ?? '未记录额外的证据边界。'}</p>
     </article>
   </section>
 
@@ -136,6 +138,8 @@ const href = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <style>
+.paper-hero.decision{border-top:5px solid #207caa;background:linear-gradient(150deg,#f6fcff,#e6f4fc)}.paper-hero.comparator{border-top:5px solid #7786b3;background:linear-gradient(150deg,#fff,#f0f3fa)}.source-context{display:flex;flex-wrap:wrap;gap:8px 13px;align-items:center;padding:10px 13px;border:1px solid #a3c9e0;background:#e5f2fa;border-radius:8px;margin:12px 0}.source-context.comparator{border-color:#c2c9df;background:#eef0f9}.source-context strong{font-size:12px;color:#175f83}.source-context span{font-size:12px;color:#365f7a}.source-context a{font-size:12px;color:#0b648e;font-weight:800}
+
     .paper-hero{padding:28px;border:1px solid #cfe1ee;border-radius:17px;background:#fff;box-shadow:0 10px 30px rgba(42,96,140,.06)}
     .paper-hero h1{max-width:1100px;margin:6px 0 12px;font-size:25px;line-height:1.25;letter-spacing:-.03em}
     .metadata{display:flex;gap:7px;flex-wrap:wrap}.metadata span{padding:5px 8px;border-radius:999px;background:#eef6fb;color:#365f7c;font-size:10px;font-weight:800}
