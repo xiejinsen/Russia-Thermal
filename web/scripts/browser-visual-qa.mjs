@@ -8,7 +8,7 @@ const pages=[
  ['home','/'],['russia-map','/research-map/russia/'],['china-map','/research-map/china/'],
  ['questions','/research-questions/'],['institute','/institutions/ACT-KUTATELADZE/'],
  ['scholar','/scholars/PERSON-SURTAEV/'],['papers','/papers/'],
- ['evidence','/evidence/'],['claim','/claims/CLM-PAV-002/'],
+ ['evidence','/evidence/'],['claims','/claims/'],['claim','/claims/CLM-PAV-002/'],
  ['patent','/patents/PATENT-GLOBAL-DRYOUT-OBS-001/'],
  ['capability','/capabilities/CAP-KUT-L13-DRYOUT-DIAGNOSTICS/'],
  ['compare','/landscape/'],['directory','/site-directory/']
@@ -66,6 +66,24 @@ try{
     const item={view,slug,route,status,...layout,error,jsErrors:scriptErrors.splice(0)};
     results.push(item);
     if(status!==200||error||layout.scrollWidth>width+10)fatal.push(item);
+    // Exercise the same search/reset interactions people use in the result indexes.
+    if(['evidence','papers','claims'].includes(slug) && !error && status===200){
+      const field=page.locator('[data-explorer-search]');
+      if(await field.count()){
+        const before=await page.locator('[data-explorer-record]:not([hidden])').count();
+        const term=slug==='claims'?'CLM-PAV-002':'PAPER-RU-DRY-001';
+        await field.fill(term);
+        await page.waitForTimeout(140);
+        const matched=await page.locator('[data-explorer-record]:not([hidden])').count();
+        await page.locator('[data-explorer-reset]').click();
+        await page.waitForTimeout(140);
+        const restored=await page.locator('[data-explorer-record]:not([hidden])').count();
+        item.filterTest={before,matched,restored};
+        if(!(matched>=1 && matched<before && restored===before)){
+          fatal.push({...item,error:'Search/reset regression'});
+        }
+      }
+    }
     const target=path.join(outputDir,view+'-'+slug+'.png');
     await page.screenshot({path:target,fullPage:true,animations:'disabled',timeout:25000});
     // Inspectable above-fold browser captures encoded into Actions logs; no mockups.
@@ -79,7 +97,7 @@ try{
  } finally{await browser.close()}
 }finally{server.kill('SIGTERM')}
 writeFileSync(path.join(outputDir,'results.json'),JSON.stringify(results,null,2));
-const report={total:results.length,failures:fatal.map(x=>({view:x.view,page:x.slug,status:x.status,overflow:x.scrollWidth-x.clientWidth,error:x.error})),broken:results.filter(x=>x.brokenImages.length).map(x=>({view:x.view,page:x.slug,images:x.brokenImages})),issues:results.filter(x=>x.h1.length!==1||x.jsErrors.length||x.emptyLinks>0).map(x=>({view:x.view,page:x.slug,h1:x.h1,jsErrors:x.jsErrors,emptyLinks:x.emptyLinks})),sourceCount:results.filter(x=>x.slug==='evidence').map(x=>({view:x.view,important:x.importantSource}))};
+const report={total:results.length,filterTests:results.filter(x=>x.filterTest).map(x=>({view:x.view,page:x.slug,...x.filterTest})),failures:fatal.map(x=>({view:x.view,page:x.slug,status:x.status,overflow:x.scrollWidth-x.clientWidth,error:x.error})),broken:results.filter(x=>x.brokenImages.length).map(x=>({view:x.view,page:x.slug,images:x.brokenImages})),issues:results.filter(x=>x.h1.length!==1||x.jsErrors.length||x.emptyLinks>0).map(x=>({view:x.view,page:x.slug,h1:x.h1,jsErrors:x.jsErrors,emptyLinks:x.emptyLinks})),sourceCount:results.filter(x=>x.slug==='evidence').map(x=>({view:x.view,important:x.importantSource}))};
 writeFileSync(path.join(outputDir,'summary.json'),JSON.stringify(report,null,2));
 console.log('BROWSER_QA_SUMMARY '+JSON.stringify(report));
 if(fatal.length)process.exitCode=1;
