@@ -19,7 +19,7 @@ const photos: Record<string, {file:string; author:string; license:string}> = {
 };
 const canonical = isRussia
  ? ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']
- : ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT'];
+ : ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT','ACT-USTC','ACT-ZJU','ACT-BIT','ACT-HUST','ACT-HIT'];
 const nodeById = new Map(vm.nodes.map(n=>[n.actorId,n]));
 const actorById = new Map(actors.map(a=>[a.id,a]));
 const selected = canonical.map(id=>{
@@ -35,6 +35,14 @@ const selected = canonical.map(id=>{
    photo:photos[id]
  };
 }).filter((n):n is NonNullable<typeof n>=>Boolean(n));
+// Never promote city centers to canonical campus coordinates. These three
+// ACT records are city-identified, but have no verified campus lat/long.
+ // City-center anchors: GeoNames Beijing (1816670), Wuhan (1808926), Harbin (2037013).
+const chinaCityAnchors:Record<string,{latitude:number;longitude:number;source:string}>={
+ 'ACT-BIT':{latitude:39.9075,longitude:116.39723,source:'https://www.geonames.org/1816670/beijing.html'},
+ 'ACT-HUST':{latitude:30.5833333,longitude:114.2666667,source:'https://www.geonames.org/1808926/wuhan.html'},
+ 'ACT-HIT':{latitude:45.75,longitude:126.65,source:'https://www.geonames.org/2037013/harbin.html'}
+};
 const bounds=isRussia?{west:17,east:191,north:84,south:40}:{west:73,east:135,north:55,south:17};
 function pin(latitude?:number,longitude?:number) {
  if(typeof latitude!=='number'||typeof longitude!=='number')return null;
@@ -49,19 +57,26 @@ function pin(latitude?:number,longitude?:number) {
 const positions = selected.map((item,i)=>{
  let actual=pin(item.latitude,item.longitude);
  let cityOnly=false;
+ if(!isRussia&&!actual&&chinaCityAnchors[item.id]){
+  const cityAnchor=chinaCityAnchors[item.id];
+  actual=pin(cityAnchor.latitude,cityAnchor.longitude);cityOnly=true;
+ }
  if(!actual&&item.id==='ACT-TSU'){
   const tomsk=selected.find(other=>other.city.toLowerCase()==='tomsk'&&other.id!==item.id&&typeof other.latitude==='number'&&typeof other.longitude==='number');
   if(tomsk){actual=pin(tomsk.latitude,tomsk.longitude);cityOnly=true;}
  }
  const offsets=isRussia
   ? [[-33,-77],[-114,-92],[90,-54],[115,66]]
-  : [[-73,-70],[-90,-64],[93,62],[-125,-55]];
+  : [[-112,-64],[90,-62],[120,45],[-87,40],[-125,-36],[20,94],[110,-66],[-120,40],[53,-65]];
  const [dx,dy]=offsets[i]??[0,-65];
  const lx=actual?Math.max(74,Math.min(901,actual.x+dx)):0;
  const ly=actual?Math.max(47,Math.min(361,actual.y+dy)):0;
  return {...item,i,actual,cityOnly,marker:{x:lx,y:ly},number:String(i+1).padStart(2,'0')};
 });
 const visiblePositions=positions.filter(item=>item.actual!==null);
+const photoPositions=isRussia?positions:positions.filter(item=>Boolean(item.photo));
+const additionalPositions=isRussia?[]:positions.filter(item=>!item.photo);
+const cityApproximateCount=visiblePositions.filter(item=>item.cityOnly).length;
 const cityOptions=[...new Set(vm.nodes.map(n=>n.city))].sort((a,b)=>a.localeCompare(b));
 const directions=[...new Map(vm.nodes.flatMap(n=>n.directions).map(d=>[d.id,d])).values()];
 const catalog=vm.nodes.map(n=>({...n,
@@ -70,7 +85,7 @@ const catalog=vm.nodes.map(n=>({...n,
   directionIds:n.directions.map(d=>d.id).join('|')
 }));
 ---
-<div class="schematic-root" data-schematic-root>
+<div class:list={["schematic-root",{"china-map":!isRussia}]} data-schematic-root>
  <header class="atlas-hero">
   <div class="atlas-intro">
    <p class="kicker">{isRussia?'RUSSIAN RESEARCH LANDSCAPE':'CHINA COMPARATOR LANDSCAPE'} / VISUAL RESEARCH ATLAS</p>
@@ -98,19 +113,19 @@ const catalog=vm.nodes.map(n=>({...n,
    <div class="map-pane">
     <div class="map-graphic">
      <img class="country-outline" src={href('/assets/'+(isRussia?'russia':'china')+'-editorial-outline.svg')} alt={isRussia?'俄罗斯真实轮廓构成的科研版图背景':'中国真实轮廓构成的科研版图背景'} loading="eager"/>
-     <svg class="location-overlay" viewBox="0 0 1000 430" role="img" aria-label={isRussia?'俄罗斯科研机构地点与机构编号：01莫斯科、02新西伯利亚、03及04托木斯克城市集群':'中国科研机构地点与编号：01北京、02南京、03上海、04广州'}>
+     <svg class="location-overlay" viewBox="0 0 1000 430" role="img" aria-label={isRussia?'俄罗斯科研机构地点与机构编号：01莫斯科、02新西伯利亚、03及04托木斯克城市集群':'中国九所已归档高校的研究分布编号；实心地点为有坐标的学校，虚线地点仅为城市级位置。下方逐号列出全部九所高校'}>
       <defs>
        <filter id={isRussia?'ru-marker-halo':'cn-marker-halo'} x="-100%" y="-100%" width="300%" height="300%">
         <feGaussianBlur stdDeviation="7"/>
        </filter>
       </defs>
-      {visiblePositions.map(item=><g class="pin-group">
+      {visiblePositions.map(item=><g class:list={["pin-group",{"city-only":item.cityOnly}]}>
        <circle cx={item.actual!.x} cy={item.actual!.y} r="14" fill="#38d7ff" opacity=".45" filter={'url(#'+(isRussia?'ru-marker-halo':'cn-marker-halo')+')'}/>
-       <circle class="true-location-dot" cx={item.actual!.x} cy={item.actual!.y} r="6" fill="#e8fbff" stroke="#17afe6" stroke-width="2"/>
-       <path class="pin-leader" d={'M '+item.actual!.x+' '+item.actual!.y+' L '+item.marker.x+' '+item.marker.y} fill="none" stroke={item.cityOnly?'#9dd1e6':'#52d7f9'} stroke-dasharray={item.cityOnly?'5 5':undefined} stroke-width="2"/>
+       <circle class="true-location-dot" cx={item.actual!.x} cy={item.actual!.y} r="6" fill={item.cityOnly?"#041f38":"#e8fbff"} stroke={item.cityOnly?"#ffcf7c":"#17afe6"} stroke-width="2"/>
+       <path class="pin-leader" d={'M '+item.actual!.x+' '+item.actual!.y+' L '+item.marker.x+' '+item.marker.y} fill="none" stroke={item.cityOnly?'#ffcf7c':'#52d7f9'} stroke-dasharray={item.cityOnly?'5 5':undefined} stroke-width="2"/>
        <a class="feature-pin" href={'#atlas-feature-'+item.number} aria-label={item.number+' '+item.name+' · '+item.city}>
-        <title>{item.name} · {item.city}{item.cityOnly?' · 城市集群示意，不代表精确校舍坐标':''}</title>
-        <rect class="pin-label-bg" x={item.marker.x-23} y={item.marker.y-18} width="46" height="36" rx="10" fill="#082945" stroke="#74e8ff" stroke-width="2"/>
+        <title>{item.name} · {item.city}{item.cityOnly?' · 城市级示意，不代表精确校区坐标':''}</title>
+        <rect class="pin-label-bg" x={item.marker.x-23} y={item.marker.y-18} width="46" height="36" rx="10" fill={item.cityOnly?"#3e3a35":"#082945"} stroke={item.cityOnly?"#ffcf7c":"#74e8ff"} stroke-width="2"/>
         <text x={item.marker.x} y={item.marker.y+5} fill="#f5fdff" font-size="17" font-weight="800" text-anchor="middle">{item.number}</text>
         <text class="pin-city-label" x={item.marker.x+(item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?-33:33)} y={item.marker.y-3} text-anchor={item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?'end':'start'}>{item.city.toUpperCase()}</text>
         <text class="pin-actor-label" x={item.marker.x+(item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?-33:33)} y={item.marker.y+14} text-anchor={item.marker.x>760||(!isRussia&&item.id==='ACT-SEU')?'end':'start'}>{item.id.replace('ACT-','')}{item.cityOnly?' · CITY CLUSTER':''}</text>
@@ -119,9 +134,10 @@ const catalog=vm.nodes.map(n=>({...n,
      </svg>
     </div>
    </div>
-   <div class="feature-header"><span>FEATURED / 代表机构</span></div>
+   {!isRussia&&<div class="map-directory-head"><strong>地图覆盖 {positions.length} 所高校</strong><span>6 所记录了校区坐标 · {cityApproximateCount} 所暂按城市定位</span></div>}
+   <div class="feature-header"><span>{isRussia?'FEATURED / 代表机构':'CAMPUS PHOTOS / 四所高校实景资料'}</span></div>
    <div class="focus-list">
-    {positions.map(item=><article class="focus-card" id={'atlas-feature-'+item.number}>
+    {photoPositions.map(item=><article class="focus-card" id={'atlas-feature-'+item.number}>
      <a class="focus-main" href={item.href}>
       <div class="focus-media">
        {item.photo?<img src={'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(item.photo.file)+'?width=800'} loading="lazy" alt={item.name+'建筑资料照片'}/>:<span class="visual-no-photo" aria-label="无经核验的建筑照片"><b>RESEARCH</b><small>INSTITUTION</small></span>}
@@ -138,6 +154,12 @@ const catalog=vm.nodes.map(n=>({...n,
     </article>)}
     {selected.length===0&&<p class="no-data">当前没有可展示的代表机构，详见下方机构及证据目录。</p>}
    </div>
+   {!isRussia&&<div class="additional-orgs" aria-label="其他中国科研高校">
+    <div class="additional-heading"><strong>其余 5 所已收录高校</strong><span>地图编号与机构档案一一对应</span></div>
+    <div class="additional-list">{additionalPositions.map(item=><a class="additional-org" id={'atlas-feature-'+item.number} href={item.href}>
+      <strong>{item.number}</strong><div><b>{item.name}</b><span>{item.city}{item.cityOnly?' · 城市级位置（非校区坐标）':' · 有校区位置记录'}</span></div><em>机构档案 ↗</em>
+    </a>)}</div>
+   </div>}
   </div>
  </section>
 
@@ -194,6 +216,28 @@ const catalog=vm.nodes.map(n=>({...n,
  }
 </script>
 <style>
+
+ .china-map .pin-city-label,.china-map .pin-actor-label{display:none}
+ .china-map .pin-group.city-only .pin-label-bg{stroke-dasharray:4 3}
+ .map-directory-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 4px 3px}
+ .map-directory-head strong{font-size:15px;color:#e9faff}
+ .map-directory-head span{font-size:12px;color:#a8d9ee}
+ .additional-orgs{padding-top:21px}
+ .additional-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+ .additional-heading strong{font-size:15px;color:#effcff}
+ .additional-heading span{color:#9bcfe6;font-size:12px}
+ .additional-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+ .additional-org{display:flex;gap:12px;align-items:center;min-width:0;padding:15px;border-radius:10px;border:1px solid #3a789a;background:#103c59;text-decoration:none;color:#e8f6fc;scroll-margin-top:100px}
+ .additional-org:target{outline:3px solid #8be7fa;outline-offset:2px}
+ .additional-org>strong{border:1px solid #80e1fb;border-radius:8px;font-size:17px;color:#f2fcff;padding:8px}
+ .additional-org>div{display:grid;gap:6px;min-width:0;flex:1}
+ .additional-org b{font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+ .additional-org span{font-size:11px;color:#aad7e7;line-height:1.55}
+ .additional-org em{font-size:11px;color:#8ceafa;font-style:normal;font-weight:800;white-space:nowrap}
+ .additional-org:hover,.additional-org:focus-visible{background:#175375;border-color:#91edff}
+ @media(max-width:1000px){.additional-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ @media(max-width:590px){.additional-list{grid-template-columns:1fr}.additional-heading{align-items:flex-start;flex-direction:column}.map-directory-head{align-items:flex-start;flex-direction:column}.additional-org{padding:13px}}
+
  :global(body.theme-immersive) {background:radial-gradient(ellipse at 72% 0,#19527a,transparent 36%),linear-gradient(145deg,#031526,#082e50 55%,#041728);color:#e6f6ff}
  .schematic-root{color:#e8f7ff;max-width:1330px;margin:auto;padding:16px 0 72px}
  .kicker{margin:0;color:#6ed8f5;font-weight:800;font-size:12px;letter-spacing:.12em}
