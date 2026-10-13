@@ -1,276 +1,71 @@
 ---
-const base = import.meta.env.BASE_URL;
-const href = (path: string) => path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
+const base=import.meta.env.BASE_URL;
+const href=(path:string)=>path==='/'?base:base+path.replace(/^\//,'');
+const prefix=base.endsWith('/')?base.slice(0,-1):base;
+const pathname=Astro.url.pathname;
+const route=pathname.startsWith(prefix)?pathname.slice(prefix.length)||'/':pathname;
+const norm=(path:string)=>path==='/'?'/':path.replace(/\/$/,'');
+const current=norm(route);
 
-const pathname = Astro.url.pathname;
-const basePath = base.endsWith('/') ? base.slice(0, -1) : base;
-const route = pathname.startsWith(basePath) ? pathname.slice(basePath.length) || '/' : pathname;
-const normalize = (path: string) => path === '/' ? '/' : path.replace(/\/$/, '');
-const currentRoute = normalize(route);
-const isActivePath = (path: string) => {
-  const target = normalize(path);
-  return target === '/' ? currentRoute === '/' : currentRoute === target || currentRoute.startsWith(target + '/');
-};
-
-const groups = [
-  { label: 'Overview', path: '/' },
-  {
-    label: 'Decide',
-    children: [
-      { label: 'Research Questions', path: '/research-questions' },
-      { label: 'Partner Portfolio', path: '/partners' },
-      { label: 'Directions', path: '/directions' },
-      { label: 'China / Global comparison', path: '/landscape' },
-      { label: 'Smartphone Transfer', path: '/smartphone-transfer' },
-      { label: 'Research Work Packages', path: '/research-packages' },
-      { label: 'Decisions', path: '/decisions' }
-    ]
-  },
-  {
-    label: 'Explore',
-    children: [
-      { label: 'Research Coverage', path: '/research-coverage' },
-      { label: 'Representative Works', path: '/representative-works' },
-      { label: 'Russia Capability Atlas', path: '/russia-atlas' },
-      { label: 'Research Infographics', path: '/research-map' },
-      { label: 'Institutions', path: '/institutions' },
-      { label: 'Scholars', path: '/scholars' },
-      { label: 'Capabilities', path: '/capabilities' }
-    ]
-  },
-  {
-    label: 'Audit',
-    children: [
-      { label: 'Claims', path: '/claims' },
-      { label: 'Papers', path: '/papers' },
-      { label: 'Evidence', path: '/evidence' },
-      { label: 'Frontier Watch', path: '/frontier' }
-    ]
-  }
+const nav=[
+ {label:'首页',path:'/',aliases:[]},
+ {label:'科研版图',path:'/research-map',aliases:['/russia-atlas']},
+ {label:'研究结论',path:'/research-questions',aliases:['/landscape','/smartphone-transfer','/decisions']},
+ {label:'机构与学者',path:'/institutions',aliases:['/scholars']},
+ {label:'合作方向',path:'/partners',aliases:['/directions','/research-packages']},
+ {label:'全部内容',path:'/site-directory',aliases:[]}
 ];
-
-const activeGroup = groups.find((item) =>
-  item.path ? isActivePath(item.path) : item.children?.some((child) => isActivePath(child.path))
-);
-const activeChild = activeGroup && !activeGroup.path
-  ? activeGroup.children?.find((child) => isActivePath(child.path))
-  : undefined;
-const locationLabel = activeGroup && activeChild
-  ? `${activeGroup.label} · ${activeChild.label}`
-  : activeGroup?.label ?? 'Research Intelligence';
+function matches(path:string){const target=norm(path);return target==='/'?current==='/':current===target||current.startsWith(target+'/');}
+const currentTab=nav.find(item=>item.path!=='/site-directory'&&(matches(item.path)||item.aliases.some(matches)))?.label??(current==='/'?'首页':'全部内容');
 ---
-
 <header class="site-header">
-  <div class="inner">
-    <div class="brand-area">
-      <a class="brand" href={href('/')}>Russia-Thermal</a>
-      <span class="location-chip">{locationLabel}</span>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      {groups.map((item) => item.path ? (
-        <a class:list={['top-link', { active: isActivePath(item.path) }]} href={href(item.path)} aria-current={isActivePath(item.path) ? 'page' : undefined}>{item.label}</a>
-      ) : (
-        <details class:list={['nav-group', { 'is-active': item.children?.some((child) => isActivePath(child.path)) }]} data-nav-group>
-          <summary>{item.label}<span aria-hidden="true">⌄</span></summary>
-          <div class="menu">
-            {item.children?.map((child) => <a class:list={{ active: isActivePath(child.path) }} href={href(child.path)} aria-current={isActivePath(child.path) ? 'page' : undefined}>{child.label}</a>)}
-          </div>
-        </details>
-      ))}
-    </nav>
-  </div>
+ <div class="inner">
+  <a class="brand" href={href('/')} aria-label="俄罗斯热管理研究 · 首页">
+   <span class="brand-cn">俄罗斯热管理研究</span><span class="brand-en">RUSSIA–THERMAL</span>
+  </a>
+  <nav class="desktop-nav" aria-label="主导航">
+   {nav.map(item=><a href={href(item.path)} class:list={{active:currentTab===item.label}}
+      aria-current={matches(item.path)?'page':undefined}>{item.label}</a>)}
+  </nav>
+  <details class="mobile-nav">
+   <summary aria-label="展开网站导航">栏目 <span aria-hidden="true">☰</span></summary>
+   <nav aria-label="移动端主导航">
+    {nav.map(item=><a href={href(item.path)} class:list={{active:currentTab===item.label}}
+       aria-current={matches(item.path)?'page':undefined}>{item.label}</a>)}
+   </nav>
+  </details>
+ </div>
 </header>
-
-<script>
-  const navGroups = document.querySelectorAll('[data-nav-group]');
-  const desktop = window.matchMedia('(hover: hover) and (pointer: fine)');
-
-  navGroups.forEach((group) => {
-    let closeTimer: number | undefined;
-
-    const openGroup = () => {
-      if (!desktop.matches) return;
-      clearTimeout(closeTimer);
-      navGroups.forEach((other) => {
-        if (other !== group) other.removeAttribute('open');
-      });
-      group.setAttribute('open', '');
-    };
-
-    const closeGroup = () => {
-      if (!desktop.matches) return;
-      clearTimeout(closeTimer);
-      closeTimer = window.setTimeout(() => {
-        if (!group.matches(':hover') && !group.matches(':focus-within')) {
-          group.removeAttribute('open');
-        }
-      }, 120);
-    };
-
-    group.addEventListener('mouseenter', openGroup);
-    group.addEventListener('mouseleave', closeGroup);
-    group.addEventListener('focusin', openGroup);
-    group.addEventListener('focusout', closeGroup);
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!desktop.matches) return;
-    navGroups.forEach((group) => {
-      const target = event.target;
-      if (!(target instanceof Node) || !group.contains(target)) group.removeAttribute('open');
-    });
-  });
-</script>
-
 <style>
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--line);
-    background: rgb(248 252 255 / 0.94);
-    backdrop-filter: blur(18px);
-  }
-
-  .inner {
-    width: min(calc(100% - 2rem), var(--content-max));
-    margin: 0 auto;
-    min-height: 2.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: .75rem;
-  }
-
-  .brand-area {
-    display: flex;
-    align-items: center;
-    gap: .65rem;
-    min-width: 0;
-    flex: 0 0 auto;
-  }
-
-  .brand {
-    flex: 0 0 auto;
-    color: #183b58;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-
-  .location-chip {
-    max-width: 15rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: .12rem .38rem;
-    border: 1px solid #d8e7f1;
-    border-radius: 999px;
-    background: #eef6fb;
-    color: #4d6f87;
-    font-size: .63rem;
-    font-weight: 800;
-    letter-spacing: .02em;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    gap: .3rem;
-  }
-
-  .top-link,
-  summary {
-    display: inline-flex;
-    align-items: center;
-    gap: .3rem;
-    min-height: 1.72rem;
-    padding: 0 .54rem;
-    border-radius: .6rem;
-    color: #35546c;
-    font-size: .79rem;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    list-style: none;
-    white-space: nowrap;
-  }
-
-  summary::-webkit-details-marker { display: none; }
-
-  .top-link:hover,
-  .top-link:focus-visible,
-  .top-link.active,
-  summary:hover,
-  summary:focus-visible,
-  details[open] > summary,
-  .nav-group.is-active > summary {
-    background: #eaf4fb;
-    color: #0b67b2;
-    outline: none;
-  }
-
-  .nav-group {
-    position: relative;
-  }
-
-  .menu {
-    position: absolute;
-    top: calc(100% + .45rem);
-    right: 0;
-    min-width: 12.5rem;
-    padding: .45rem;
-    border: 1px solid #d4e4ef;
-    border-radius: .75rem;
-    background: #fff;
-    box-shadow: 0 14px 34px rgb(31 76 112 / 0.12);
-  }
-
-  .menu a {
-    display: block;
-    padding: .62rem .72rem;
-    border-radius: .5rem;
-    color: #35546c;
-    font-size: .8rem;
-    font-weight: 650;
-    text-decoration: none;
-  }
-
-  .menu a:hover,
-  .menu a:focus-visible,
-  .menu a.active {
-    background: #f0f7fc;
-    color: #0b67b2;
-    outline: none;
-  }
-
-  @media (max-width: 860px) {
-    .inner {
-      align-items: flex-start;
-      flex-direction: column;
-      padding-block: .45rem;
-    }
-
-    .location-chip { max-width: 11rem; }
-
-    nav {
-      width: 100%;
-      overflow-x: auto;
-      padding-bottom: .15rem;
-    }
-
-    .nav-group {
-      position: static;
-    }
-
-    .menu {
-      position: fixed;
-      left: 1rem;
-      right: 1rem;
-      top: 5.5rem;
-      min-width: 0;
-      z-index: 120;
-    }
-  }
+.site-header{position:sticky;top:0;z-index:100;border-bottom:1px solid #d3e1ec;background:rgb(249 252 255 / .95);backdrop-filter:blur(17px)}
+.inner{width:min(calc(100% - 2rem),var(--content-max));min-height:4rem;margin:auto;display:flex;gap:24px;align-items:center;justify-content:space-between}
+.brand{min-width:0;display:flex;flex-direction:column;gap:0;text-decoration:none;line-height:1.15;color:#173951;white-space:nowrap}
+.brand-cn{font-size:16px;letter-spacing:.01em;font-weight:850}
+.brand-en{font-size:9px;letter-spacing:.15em;color:#5a7890;font-weight:750;padding-top:5px}
+.desktop-nav{display:flex;align-items:center;gap:4px}
+.desktop-nav a,.mobile-nav a{color:#294d67;font-size:14px;font-weight:720;text-decoration:none;white-space:nowrap;border-radius:8px;transition:background .15s,color .15s}
+.desktop-nav a{padding:10px 12px}
+.desktop-nav a:hover,.desktop-nav a:focus-visible,.desktop-nav a.active{color:#0c5b85;background:#e8f3fa}
+.desktop-nav a:focus-visible,.mobile-nav a:focus-visible,.mobile-nav summary:focus-visible{outline:2px solid #249acb;outline-offset:2px}
+.mobile-nav{display:none;position:relative}
+.mobile-nav summary{display:flex;align-items:center;gap:10px;list-style:none;padding:9px 13px;font-size:14px;font-weight:800;color:#254e69;border-radius:9px;border:1px solid #b8cedd;cursor:pointer}
+.mobile-nav summary::-webkit-details-marker{display:none}
+.mobile-nav summary span{font-size:18px;line-height:1}
+.mobile-nav nav{position:absolute;right:0;top:calc(100% + 9px);width:min(290px,calc(100vw - 34px));display:grid;gap:4px;padding:10px;border:1px solid #c6d9e5;border-radius:12px;background:#fbfdff;box-shadow:0 12px 32px #001b3466}
+.mobile-nav a{display:block;padding:12px 14px}
+.mobile-nav a:hover,.mobile-nav a:focus-visible,.mobile-nav a.active{color:#075681;background:#e6f3fa}
+:global(body.theme-immersive) .site-header{background:rgb(4 25 44 / .96);border-color:#24607f}
+:global(body.theme-immersive) .site-header .brand{color:#f0faff}
+:global(body.theme-immersive) .site-header .brand-en{color:#afd5e7}
+:global(body.theme-immersive) .site-header .desktop-nav a{color:#d3eaf6}
+:global(body.theme-immersive) .site-header .desktop-nav a:hover,
+:global(body.theme-immersive) .site-header .desktop-nav a:focus-visible,
+:global(body.theme-immersive) .site-header .desktop-nav a.active{background:#14577a;color:#fff}
+:global(body.theme-immersive) .site-header .mobile-nav summary{color:#edf9ff;background:#104365;border-color:#407da1}
+:global(body.theme-immersive) .site-header .mobile-nav nav{background:#082c49;border-color:#377392}
+:global(body.theme-immersive) .site-header .mobile-nav a{color:#e5f4fb}
+:global(body.theme-immersive) .site-header .mobile-nav a:hover,
+:global(body.theme-immersive) .site-header .mobile-nav a.active{color:#fff;background:#145a81}
+@media(max-width:920px){.desktop-nav{display:none}.mobile-nav{display:block}.inner{min-height:3.7rem}}
+@media(prefers-reduced-motion:reduce){.desktop-nav a,.mobile-nav a{transition:none}}
 </style>
