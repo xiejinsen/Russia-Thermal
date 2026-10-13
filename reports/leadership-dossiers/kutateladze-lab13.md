@@ -6,7 +6,7 @@ primary_direction: DIR-FAILURE-AWARE-UTVC
 
 ## One-line leadership summary
 
-**Best current outreach-ready Russian partner package for mechanism-specific phase-change failure / boiling-crisis work.**
+**Priority candidate for an internally scoped scientific-data feasibility study of phase-change failure mechanisms; any external contact requires separate authorization.**
 
 ## Institution / team
 
@@ -18,9 +18,9 @@ Lab 1.3 / low-temperature thermophysics line.
 
 Key people:
 - Alexander N. Pavlenko — senior scientific leader / primary outreach anchor.
-- Anton V. Surtaev — current dryout / boiling / wettability research.
+- Anton S. Surtaev — current dryout / boiling / wettability research (name verified by Kutateladze Lab 1.3 official roster).
 - Dmitry A. Shvetsov — modified mesh / capillary-porous boiling work.
-- V. I. Zhukov — current modified-surface / boiling evidence line.
+- V. I. Zhukov — recorded research coauthor at the institute; current Lab 1.3 membership not verified; not the roster's V. E. Zhukov.
 
 Canonical actors:
 - ACT-KUTATELADZE
@@ -118,3 +118,8 @@ mechanism-specific irreversible-transition interpretation. SJTU strengthens the 
 
 Reason:
 strongest combination of mechanism relevance + named scientific leadership + repeated industrial/international collaboration evidence.
+
+
+## Provenance correction — 2026-10-13
+
+Corrected Surtaev's middle initial from V. to **S.** based on the institute's current Russian-language personnel roster (Антон Сергеевич Суртаев, [official Lab 1.3](https://www.itp.nsc.ru/structura/nauchnye_porazdeleniya/13_laboratoriya_nizkotemperaturnoy_teplofiziki.html)). The original outreach-ready phrasing was also replaced with the current internal-feasibility / separately authorized contact boundary. The historical V. I. Zhukov paper author is not treated as verified current Lab 1.3 staff.
