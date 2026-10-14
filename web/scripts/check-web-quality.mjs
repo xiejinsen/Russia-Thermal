@@ -61,7 +61,7 @@ for(const photo of [
  'Gate%20of%20University%20of%20Science%20and%20Technology%20of%20China%20(180405).jpg',
  'Teaching%20building%2C%20Zijingang%20Campus%2C%20Zhejiang%20University.jpg',
  'Main%20gate%20of%20Beijing%20Institute%20of%20Technology%20main%20campus%20(20210523072112).jpg',
- 'HUST%20gate%2001.jpg',
+ '%E5%8D%8E%E7%A7%91%E6%A0%A1%E9%97%A8.JPG',
  'Main%20Building%20HIT.jpg'
 ]) {
  if(!cn.includes(photo))failures.push('China infographic missing sourced campus photo: '+photo);
@@ -77,6 +77,14 @@ if((cn.match(/class="feature-pin"/g)||[]).length!==9)failures.push('China map mu
 if((cn.match(/class="focus-card"/g)||[]).length!==9)failures.push('China map must have exactly nine photographed university profile cards');
 if((cn.match(/class="additional-org"/g)||[]).length!==0)failures.push('Old unpictured Chinese text-only card rows must be removed');
 if((cn.match(/class="credit"/g)||[]).length!==9)failures.push('Every Chinese campus photograph must show source, author and license');
+const hustCard=cn.slice(cn.indexOf('id="atlas-feature-08"'),cn.indexOf('id="atlas-feature-09"'));
+if(!hustCard.includes('%E5%8D%8E%E7%A7%91%E6%A0%A1%E9%97%A8.JPG')||!hustCard.includes('Glrain')||!hustCard.includes('CC BY-SA 4.0'))
+ failures.push('HUST photo must use the explicitly named, attributable university gate image');
+const hustProfile=read('institutions/ACT-HUST/index.html');
+if(!hustProfile.includes('%E5%8D%8E%E7%A7%91%E6%A0%A1%E9%97%A8.JPG')||!hustProfile.includes('Glrain'))
+ failures.push('HUST institution hero image/credit inconsistent with research map');
+if(hustCard.includes('HUST%20gate%2001.jpg')||hustProfile.includes('HUST%20gate%2001.jpg'))
+ failures.push('Ambiguous old HUST thumbnail reused');
 for(const n of ['05','06','07','08','09']){
  if(!cn.includes('id="atlas-feature-'+n+'"')||!cn.includes('href="#atlas-feature-'+n+'"'))
  failures.push('China location label/target missing: '+n);
