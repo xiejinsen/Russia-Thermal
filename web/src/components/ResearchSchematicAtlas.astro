@@ -15,7 +15,12 @@ const photos: Record<string, {file:string; author:string; license:string}> = {
  'ACT-PKU':{file:'Peking University West Gate.jpg',author:'Harryswordsman',license:'CC BY-SA 4.0'},
  'ACT-SEU':{file:'Southeast University.jpg',author:'Zhou Guanhuai',license:'CC BY-SA 4.0'},
  'ACT-SJTU':{file:'Shanghai Jiao Tong University Gate.jpg',author:'谢宇杰',license:'CC BY-SA 4.0'},
- 'ACT-SCUT':{file:'South China University of Technology Building No. 8.jpg',author:'古海岸遗址',license:'CC BY-SA 4.0'}
+ 'ACT-SCUT':{file:'South China University of Technology Building No. 8.jpg',author:'古海岸遗址',license:'CC BY-SA 4.0'},
+ 'ACT-USTC':{file:'Gate of University of Science and Technology of China (180405).jpg',author:'Leiem',license:'CC BY-SA 4.0'},
+ 'ACT-ZJU':{file:'Teaching building, Zijingang Campus, Zhejiang University.jpg',author:'Alex Needham',license:'Public domain'},
+ 'ACT-BIT':{file:'Main gate of Beijing Institute of Technology main campus (20210523072112).jpg',author:'N509FZ',license:'CC BY-SA 4.0'},
+ 'ACT-HUST':{file:'HUST gate 01.jpg',author:'Fxqf',license:'CC BY-SA 4.0'},
+ 'ACT-HIT':{file:'Main Building HIT.jpg',author:'Mike hangzhou',license:'CC BY-SA 4.0'}
 };
 const canonical = isRussia
  ? ['ACT-MPEI','ACT-KUTATELADZE','ACT-TPU','ACT-TSU']
@@ -83,8 +88,7 @@ const positions = selected.map((item,i)=>{
  return {...item,i,actual,cityOnly,marker:{x:lx,y:ly},number:String(i+1).padStart(2,'0')};
 });
 const visiblePositions=positions.filter(item=>item.actual!==null);
-const photoPositions=isRussia?positions:positions.filter(item=>Boolean(item.photo));
-const additionalPositions=isRussia?[]:positions.filter(item=>!item.photo);
+const photoPositions=positions;
 const cityApproximateCount=visiblePositions.filter(item=>item.cityOnly).length;
 const cityOptions=[...new Set(vm.nodes.map(n=>n.city))].sort((a,b)=>a.localeCompare(b));
 const directions=[...new Map(vm.nodes.flatMap(n=>n.directions).map(d=>[d.id,d])).values()];
@@ -151,7 +155,7 @@ const catalog=vm.nodes.map(n=>({...n,
     </div>
    </div>
    {!isRussia&&<div class="map-directory-head"><strong>地图覆盖 {positions.length} 所高校</strong><span>6 所记录了校区坐标 · {cityApproximateCount} 所暂按城市定位</span></div>}
-   <div class="feature-header"><span>{isRussia?'FEATURED / 代表机构':'CAMPUS PHOTOS / 四所高校实景资料'}</span></div>
+   <div class="feature-header"><span>{isRussia?'FEATURED / 代表机构':'九所高校 · 实景图文档案'}</span></div>
    <div class="focus-list">
     {photoPositions.map(item=><article class="focus-card" id={'atlas-feature-'+item.number}>
      <a class="focus-main" href={item.href}>
@@ -160,22 +164,17 @@ const catalog=vm.nodes.map(n=>({...n,
        <span class="focus-number">{item.number}</span>
       </div>
       <div class="focus-copy">
-       <span class="focus-location">{item.city}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
+       <span class="focus-location">{item.city}{item.cityOnly?' · 城市级位置':''}{item.priority?' · '+item.priority+' 研究优先级':''}</span>
        <h3>{item.name}</h3>{!isRussia&&<small class="school-en">{item.originalName}</small>}
        <p>{item.description || '机构档案包含已记录的研究能力、关联学者及其证据边界。'}</p>
        <span class="focus-bottom">{item.capabilityCount} 能力 · {item.scholarCount} 人物 <em>查看档案 ↗</em></span>
       </div>
      </a>
-     {item.photo&&<p class="credit">图像：{item.photo.author} / {item.photo.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(item.photo.file)} target="_blank" rel="noopener noreferrer">原图与授权 ↗</a></p>}
+     {item.photo&&<p class="credit">图片：{item.photo.author} / {item.photo.license} · <a href={'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(item.photo.file)} target="_blank" rel="noopener noreferrer">原图与授权 ↗</a></p>}
     </article>)}
     {selected.length===0&&<p class="no-data">当前没有可展示的代表机构，详见下方机构及证据目录。</p>}
    </div>
-   {!isRussia&&<div class="additional-orgs" aria-label="其他中国科研高校">
-    <div class="additional-heading"><strong>其余 5 所已收录高校</strong><span>地图编号与机构档案一一对应</span></div>
-    <div class="additional-list">{additionalPositions.map(item=><a class="additional-org" id={'atlas-feature-'+item.number} href={item.href}>
-      <strong>{item.number}</strong><div><b>{item.name}</b><small class="school-en">{item.originalName}</small><span>{item.city}{item.cityOnly?' · 城市级位置（非校区坐标）':' · 有校区位置记录'}</span></div><em>机构档案 ↗</em>
-    </a>)}</div>
-   </div>}
+
   </div>
  </section>
 
@@ -239,22 +238,6 @@ const catalog=vm.nodes.map(n=>({...n,
  .map-directory-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 4px 3px}
  .map-directory-head strong{font-size:15px;color:#e9faff}
  .map-directory-head span{font-size:12px;color:#a8d9ee}
- .additional-orgs{padding-top:21px}
- .additional-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
- .additional-heading strong{font-size:15px;color:#effcff}
- .additional-heading span{color:#9bcfe6;font-size:12px}
- .additional-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
- .additional-org{display:flex;gap:12px;align-items:center;min-width:0;padding:15px;border-radius:10px;border:1px solid #3a789a;background:#103c59;text-decoration:none;color:#e8f6fc;scroll-margin-top:100px}
- .additional-org:target{outline:3px solid #8be7fa;outline-offset:2px}
- .additional-org>strong{border:1px solid #80e1fb;border-radius:8px;font-size:17px;color:#f2fcff;padding:8px}
- .additional-org>div{display:grid;gap:6px;min-width:0;flex:1}
- .additional-org b{font-size:13px;line-height:1.45;overflow-wrap:anywhere}
- .additional-org span{font-size:11px;color:#aad7e7;line-height:1.55}
- .additional-org em{font-size:11px;color:#8ceafa;font-style:normal;font-weight:800;white-space:nowrap}
- .additional-org:hover,.additional-org:focus-visible{background:#175375;border-color:#91edff}
- @media(max-width:1000px){.additional-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
- @media(max-width:590px){.additional-list{grid-template-columns:1fr}.additional-heading{align-items:flex-start;flex-direction:column}.map-directory-head{align-items:flex-start;flex-direction:column}.additional-org{padding:13px}}
-
  :global(body.theme-immersive) {background:radial-gradient(ellipse at 72% 0,#19527a,transparent 36%),linear-gradient(145deg,#031526,#082e50 55%,#041728);color:#e6f6ff}
  .schematic-root{color:#e8f7ff;max-width:1330px;margin:auto;padding:16px 0 72px}
  .kicker{margin:0;color:#6ed8f5;font-weight:800;font-size:12px;letter-spacing:.12em}
@@ -280,7 +263,7 @@ const catalog=vm.nodes.map(n=>({...n,
  .feature-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:23px 4px 16px}
  .feature-header span{font-size:12px;letter-spacing:.12em;color:#70ddf3;font-weight:850}
  .feature-header strong{font-size:13px;color:#dcecf7;font-weight:600}
- .focus-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;align-items:stretch}
+ .focus-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;align-items:stretch}.china-map .focus-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
  .focus-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #3c81a2;background:linear-gradient(148deg,#154f75,#082640);border-radius:12px;box-shadow:0 7px 22px #0003;scroll-margin-top:100px}
  .focus-card:target{outline:3px solid #80e6fd;outline-offset:3px}
  .focus-main{display:flex;flex-direction:column;flex:1;text-decoration:none;color:#f1fbff}
@@ -298,8 +281,8 @@ const catalog=vm.nodes.map(n=>({...n,
  .focus-bottom{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:12px;color:#c8e8f6;margin-top:auto;border-top:1px solid #377595;padding-top:12px}
  .focus-bottom em{font-style:normal;color:#91f0ff;font-weight:750}
  .credit{font-size:10px;line-height:1.65;margin:0;color:#c6e1ed;padding:8px 14px 12px;border-top:1px solid #317396}.credit a{color:#a6edff}
- @media(max-width:1080px){.focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
- @media(max-width:590px){.map-pane{padding:7px;overflow:hidden}.map-graphic{min-width:0;aspect-ratio:1000/430}.location-overlay{overflow:hidden}.pin-city-label,.pin-actor-label{display:none}.pin-label-bg{transform:scale(1.65);transform-box:fill-box;transform-origin:center}.feature-pin text:not(.pin-city-label):not(.pin-actor-label){font-size:25px}.focus-list{grid-template-columns:1fr}.feature-header{flex-direction:column;align-items:start}.focus-media{height:190px}}
+ @media(max-width:1080px){.focus-list,.china-map .focus-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ @media(max-width:590px){.map-pane{padding:7px;overflow:hidden}.map-graphic{min-width:0;aspect-ratio:1000/430}.location-overlay{overflow:hidden}.pin-city-label,.pin-actor-label{display:none}.pin-label-bg{transform:scale(1.65);transform-box:fill-box;transform-origin:center}.feature-pin text:not(.pin-city-label):not(.pin-actor-label){font-size:25px}.focus-list,.china-map .focus-list{grid-template-columns:1fr}.feature-header{flex-direction:column;align-items:start}.focus-media{height:190px}}
  .catalog-section{background:#eaf4fb;color:#18334b;padding:42px 38px;border-inline:1px solid #b5d3e5}.section-line.light h2{color:#17334b}.section-line.light .kicker{color:#0d6088}.section-line.light a{color:#075b86;font-size:13px;font-weight:800}
  .directory-explain{max-width:950px;font-size:14px;line-height:1.8;color:#40596c}
  .catalog-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:23px 0;padding:20px;border:1px solid #c0d5e3;background:#f7fbff;border-radius:12px}.catalog-controls label{display:grid;gap:7px;flex:1;min-width:175px;font-size:12px;font-weight:800;color:#284e6b}.catalog-controls input,.catalog-controls select{border:1px solid #9bb9ca;background:white;border-radius:7px;padding:11px;color:#142f45;font-size:14px;min-width:0;width:100%}.counter{font-size:13px;font-weight:800;color:#175f86}
