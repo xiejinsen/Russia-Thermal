@@ -12,12 +12,12 @@ scientific_scope: CN comparator institutions for Russia-Thermal, not a China-wid
 
 | 地图编号 | 学校 | ACT | 已有校区位置 | 地图处理 |
 | --- | --- | --- | --- | --- |
-| 01 | 北京大学 | ACT-PKU | 北京 39.9928, 116.3055 | 校区坐标记录；原有学校照片卡 |
-| 02 | 东南大学 | ACT-SEU | 南京 32.0572, 118.786 | 校区坐标记录；原有学校照片卡 |
-| 03 | 上海交通大学 | ACT-SJTU | 上海 31.0247, 121.4339 | 校区坐标记录；原有学校照片卡 |
-| 04 | 华南理工大学 | ACT-SCUT | 广州 23.1513, 113.3447 | 校区坐标记录；原有学校照片卡 |
-| 05 | 中国科学技术大学 | ACT-USTC | 合肥 31.8206, 117.2808 | 校区坐标记录；紧凑档案入口 |
-| 06 | 浙江大学 | ACT-ZJU | 杭州 30.2636, 120.1203 | 校区坐标记录；紧凑档案入口 |
+| 01 | 北京大学 | ACT-PKU | 北京 39.9928, 116.3055 | 校区坐标记录；统一校园图文卡片 |
+| 02 | 东南大学 | ACT-SEU | 南京 32.0572, 118.786 | 校区坐标记录；统一校园图文卡片 |
+| 03 | 上海交通大学 | ACT-SJTU | 上海 31.0247, 121.4339 | 校区坐标记录；统一校园图文卡片 |
+| 04 | 华南理工大学 | ACT-SCUT | 广州 23.1513, 113.3447 | 校区坐标记录；统一校园图文卡片 |
+| 05 | 中国科学技术大学 | ACT-USTC | 合肥 31.8206, 117.2808 | 校区坐标记录；统一校园图文卡片 |
+| 06 | 浙江大学 | ACT-ZJU | 杭州 30.2636, 120.1203 | 校区坐标记录；统一校园图文卡片 |
 | 07 | 北京理工大学 | ACT-BIT | 无校区坐标 | 仅北京城市级近似位置，虚线区别 |
 | 08 | 华中科技大学 | ACT-HUST | 无校区坐标 | 仅武汉城市级近似位置，虚线区别 |
 | 09 | 哈尔滨工业大学 | ACT-HIT | 无校区坐标 | 仅哈尔滨城市级近似位置，虚线区别 |
@@ -32,12 +32,26 @@ scientific_scope: CN comparator institutions for Russia-Thermal, not a China-wid
 ## 页面范围
 
 请区别下列对象计数：
-1. 中国版图顶部：**9 所特别列出的高校**，其中 6 个校区位置记录、3 个城市级替代标记；4 张学校图片是有来源的图文重点入口，不等于仅有 4 所高校。
+1. 中国版图顶部：**9 所特别列出的高校**，其中 6 个校区位置记录、3 个城市级替代标记；9 所高校目前统一采用含真实校园建筑或校门照片的图文卡片，照片不代表新的研究结论。
 2. `buildResearchMapVM('CN')` 在 `vm.nodes` 中包含所有已记录位置的中国根 Actor，除了高校还可能是其他组织类型；`vm.unmappedActors` 保留待核位置的非人物 Actor。这套统计口径与“9 所高校”不是一回事。
 3. 中国不是此次主调研对象，不以标记数量推断中国高校总量、研究强弱或终端产品性能。核心研究结题 Q01–Q10、P1/P2/TPU HOLD 和原始 Source/Claim 没有更改。
 
 ## 网站质量门禁
 
-- `web/scripts/check-web-quality.mjs` 要求九所高校的机构链接、九个编号节点与五所扩展机构入口存在，并且地图标注区分城市级位置与校区坐标。
-- `web/scripts/browser-visual-qa.mjs` 在 1440/768/390px 下检查九个真实渲染地图编号、三所城市级标记、五个扩展档案入口及编号框之间的视觉重叠。
+- `web/scripts/check-web-quality.mjs` 要求九所高校的机构链接、九个编号节点与九所统一图片卡片存在，并且地图标注区分城市级位置与校区坐标。
+- `web/scripts/browser-visual-qa.mjs` 在 1440/768/390px 下检查九个真实渲染地图编号、三所城市级标记、九个照片卡片及授权来源及编号框之间的视觉重叠。
 - 实际浏览器截图和构建结果以 GitHub Actions `Visual Browser QA` 和 `Web UI Check` 最新通过记录为准。发布链接：https://xiejinsen.github.io/Russia-Thermal/research-map/china/
+
+## 2026-10-14 图片完善：五所新增高校实景照片
+
+九所中国高校统一展示图片、学校中英文名、城市、研究简介、地图编号与机构档案入口；桌面三列、平板两列、手机一列。新增 5 所学校照片均为 Wikimedia Commons **真实校园照片**，未使用 AI 绘制的模拟校园图，完整摄影/许可标注保留在卡片底部。
+
+| 编号 | 高校 | 真实照片来源 | 作者 | 标注许可 |
+| --- | --- | --- | --- | --- |
+| 05 | 中国科学技术大学 | [学校校门](https://commons.wikimedia.org/wiki/File:Gate_of_University_of_Science_and_Technology_of_China_(180405).jpg) | Leiem | CC BY-SA 4.0 |
+| 06 | 浙江大学 | [紫金港校区教学楼](https://commons.wikimedia.org/wiki/File:Teaching_building,_Zijingang_Campus,_Zhejiang_University.jpg) | Alex Needham | Public domain |
+| 07 | 北京理工大学 | [中关村校区正门](https://commons.wikimedia.org/wiki/File:Main_gate_of_Beijing_Institute_of_Technology_main_campus_(20210523072112).jpg) | N509FZ | CC BY-SA 4.0 |
+| 08 | 华中科技大学 | [校门](https://commons.wikimedia.org/wiki/File:HUST_gate_01.jpg) | Fxqf | CC BY-SA 4.0 |
+| 09 | 哈尔滨工业大学 | [主楼](https://commons.wikimedia.org/wiki/File:Main_Building_HIT.jpg) | Mike hangzhou | CC BY-SA 4.0 |
+
+与地理数据口径的区别：北理工、华中科大、哈工大卡片有真实照片，但地图仍只显示已确认城市位置；**照片里的具体校门/建筑并未据此写成 Actor 已核实校区坐标**。本轮同时在 5 所高校的详情页接入同源照片并纠正中国高校详情页误写俄罗斯研究网络的提示。
