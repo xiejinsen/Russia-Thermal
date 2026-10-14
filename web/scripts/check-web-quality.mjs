@@ -57,7 +57,12 @@ for(const photo of [
  'Peking%20University%20West%20Gate.jpg',
  'Southeast%20University.jpg',
  'Shanghai%20Jiao%20Tong%20University%20Gate.jpg',
- 'South%20China%20University%20of%20Technology%20Building%20No.%208.jpg'
+ 'South%20China%20University%20of%20Technology%20Building%20No.%208.jpg',
+ 'Gate%20of%20University%20of%20Science%20and%20Technology%20of%20China%20(180405).jpg',
+ 'Teaching%20building%2C%20Zijingang%20Campus%2C%20Zhejiang%20University.jpg',
+ 'Main%20gate%20of%20Beijing%20Institute%20of%20Technology%20main%20campus%20(20210523072112).jpg',
+ 'HUST%20gate%2001.jpg',
+ 'Main%20Building%20HIT.jpg'
 ]) {
  if(!cn.includes(photo))failures.push('China infographic missing sourced campus photo: '+photo);
 }
@@ -69,7 +74,9 @@ for(const id of cnIds){
  if(!cn.includes('/institutions/'+id))failures.push('China geographic institute link missing '+id);
 }
 if((cn.match(/class="feature-pin"/g)||[]).length!==9)failures.push('China map must show exactly nine linked university markers');
-if((cn.match(/class="additional-org"/g)||[]).length!==5)failures.push('China map must provide five additional full-name institute rows below four photographed cards');
+if((cn.match(/class="focus-card"/g)||[]).length!==9)failures.push('China map must have exactly nine photographed university profile cards');
+if((cn.match(/class="additional-org"/g)||[]).length!==0)failures.push('Old unpictured Chinese text-only card rows must be removed');
+if((cn.match(/class="credit"/g)||[]).length!==9)failures.push('Every Chinese campus photograph must show source, author and license');
 for(const n of ['05','06','07','08','09']){
  if(!cn.includes('id="atlas-feature-'+n+'"')||!cn.includes('href="#atlas-feature-'+n+'"'))
  failures.push('China location label/target missing: '+n);
@@ -77,16 +84,21 @@ for(const n of ['05','06','07','08','09']){
 for(const id of ['ACT-BIT','ACT-HUST','ACT-HIT']){
  if(!cn.includes('/institutions/'+id)) failures.push('City-level-only university has no link: '+id);
 }
-if(!cn.includes('城市级位置（非校区坐标）')||!cn.includes('6 所记录了校区坐标'))
+if(!cn.includes('城市级位置')||!cn.includes('6 所记录了校区坐标'))
  failures.push('China map must disclose city-only anchors and verified campus records separately');
-for(const id of ['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT']){
- const start=cn.indexOf('id="atlas-feature-0'+(['ACT-PKU','ACT-SEU','ACT-SJTU','ACT-SCUT'].indexOf(id)+1)+'"');
- const block=cn.slice(start,start+2000);
+for(const [i,id] of cnIds.entries()){
+ const start=cn.indexOf('id="atlas-feature-'+String(i+1).padStart(2,'0')+'"');
+ const block=cn.slice(start,start+4200);
  if(start<0||!block.includes('commons.wikimedia.org/wiki/Special:FilePath/'))
   failures.push('China featured card lacks a real Commons campus photo: '+id);
  if(start>=0&&!block.includes('原图与授权'))
   failures.push('China featured card lacks image source and credit: '+id);
+  const institution=read('institutions/'+id+'/index.html');
+  if(!institution.includes('commons.wikimedia.org/wiki/Special:FilePath/')||!institution.includes('原图与许可')){
+    failures.push('Linked Chinese university profile has no credited building photo: '+id);
+  }
 }
+if(!cn.includes('九所高校 · 实景图文档案'))failures.push('China photo grid title must reflect all nine universities');
 // Homepage is a three-stage summary, not a duplicate technical directory.
 for(const name of ['thesis','research-values','decision-section']){
  if(!homepage.includes('class="'+name+'"'))failures.push('Homepage narrative block missing: '+name);
