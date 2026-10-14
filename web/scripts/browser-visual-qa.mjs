@@ -115,6 +115,24 @@ try{
     await page.waitForTimeout(90);
     const target=path.join(outputDir,view+'-'+slug+'.png');
     await page.screenshot({path:target,fullPage:true,animations:'disabled',timeout:25000});
+    // Confirm the specific HUST card shows a recognizable campus sign,
+    // rather than trusting Wikimedia filename/metadata alone.
+    if(slug==='china-map' && (view==='desktop'||view==='mobile')){
+      const hustCard=page.locator('#atlas-feature-08');
+      await hustCard.scrollIntoViewIfNeeded();
+      const hustImage=hustCard.locator('.focus-media img');
+      await hustImage.evaluate(async img=>{
+        if(!img.complete)await new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});});
+      });
+      const hustInfo=await hustImage.evaluate(img=>({src:img.currentSrc,width:img.naturalWidth,height:img.naturalHeight}));
+      item.hustPhotoCheck=hustInfo;
+      if(!hustInfo.src.includes('%E5%8D%8E%E7%A7%91%E6%A0%A1%E9%97%A8.JPG')||!hustInfo.width){
+        fatal.push({...item,error:'HUST campus photo is not the confirmed school-sign image: '+JSON.stringify(hustInfo)});
+      }
+      await hustCard.screenshot({path:path.join(outputDir,view+'-hust-08-card.png')});
+      const cardPreview=await hustCard.screenshot({type:'jpeg',quality:55});
+      console.log('QA_IMAGE_BEGIN '+view+'-hust-card '+cardPreview.toString('base64')+' QA_IMAGE_END');
+    }
     // Inspectable above-fold browser captures encoded into Actions logs; no mockups.
     if((view==='desktop'&&['home','evidence','papers','partners'].includes(slug)) || (view==='mobile'&&['home','evidence','china-map','partners'].includes(slug)) || (view==='tablet'&&slug==='home')){
       const shot=await page.screenshot({type:'jpeg',quality:38,fullPage:false});
