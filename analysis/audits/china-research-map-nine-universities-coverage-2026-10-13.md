@@ -51,7 +51,15 @@ scientific_scope: CN comparator institutions for Russia-Thermal, not a China-wid
 | 05 | 中国科学技术大学 | [学校校门](https://commons.wikimedia.org/wiki/File:Gate_of_University_of_Science_and_Technology_of_China_(180405).jpg) | Leiem | CC BY-SA 4.0 |
 | 06 | 浙江大学 | [紫金港校区教学楼](https://commons.wikimedia.org/wiki/File:Teaching_building,_Zijingang_Campus,_Zhejiang_University.jpg) | Alex Needham | Public domain |
 | 07 | 北京理工大学 | [中关村校区正门](https://commons.wikimedia.org/wiki/File:Main_gate_of_Beijing_Institute_of_Technology_main_campus_(20210523072112).jpg) | N509FZ | CC BY-SA 4.0 |
-| 08 | 华中科技大学 | [校门](https://commons.wikimedia.org/wiki/File:HUST_gate_01.jpg) | Fxqf | CC BY-SA 4.0 |
+| 08 | 华中科技大学 | [刻有清晰中英文校名的主校门](https://commons.wikimedia.org/wiki/File:华科校门.JPG) | Glrain | CC BY-SA 4.0 |
 | 09 | 哈尔滨工业大学 | [主楼](https://commons.wikimedia.org/wiki/File:Main_Building_HIT.jpg) | Mike hangzhou | CC BY-SA 4.0 |
 
 与地理数据口径的区别：北理工、华中科大、哈工大卡片有真实照片，但地图仍只显示已确认城市位置；**照片里的具体校门/建筑并未据此写成 Actor 已核实校区坐标**。本轮同时在 5 所高校的详情页接入同源照片并纠正中国高校详情页误写俄罗斯研究网络的提示。
+
+## 2026-10-14 华中科技大学照片复核与纠正
+
+用户反馈第 08 号 HUST 图片不符合预期。原照片 [HUST gate 01.jpg](https://commons.wikimedia.org/wiki/File:HUST_gate_01.jpg) 在 Wikimedia Commons 的**资料描述**确实写作华中科技大学正门，拍摄者 Fxqf，2021-07-08；因此不能据此断言照片属于另一所学校。然而该画面不具备足够直观的校名辨识特征，不满足科研版图卡片的识别目标。
+
+更换为 [华科校门.JPG](https://commons.wikimedia.org/wiki/File:华科校门.JPG)：2015-03-22 拍摄者 **Glrain**，CC BY-SA 4.0，照片前景有完整的“**华中科技大学 / HUAZHONG UNIVERSITY OF SCIENCE & TECHNOLOGY**”文字及学校标识，可明确核对学校身份。同步修改 `ResearchSchematicAtlas.astro` 的 08 照片卡片和 `InstitutionVisualHero.astro` 的 ACT-HUST 机构详情横幅；单独设置偏下的图像取景位置，以优先展示校名标识。
+
+已加 CI：`check-web-quality.mjs` 必须检查 HUST 两处均使用新照片和作者；`browser-visual-qa.mjs` 单独在桌面和手机捕获 `08 华中科技大学` 的卡片截图，校验浏览器实际加载结果。中国地图三所城市级示意坐标保持不变，这张可识别照片并不构成校区坐标已核实的依据。
