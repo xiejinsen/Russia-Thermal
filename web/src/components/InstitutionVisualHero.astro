@@ -26,7 +26,7 @@ const affiliation=kut?'库塔捷拉泽热物理研究所 · 新西伯利亚':cou
 ---
 <section class="institute-visual" aria-label="机构视觉档案">
   <div class:list={["hero-scene",{"kut-scene":kut}]}>
-    <div class="scene-photo">{photo ? <img src={photo} alt={name + " 历史建筑影像"} /> : <div class="visual-fallback" aria-label="暂无经过核验的机构建筑照片"></div>}</div>
+    <div class="scene-photo">{photo ? <img src={photo} alt={name + " 校园／机构建筑实景照片"} /> : <div class="visual-fallback" aria-label="暂无经过核验的机构建筑照片"></div>}</div>
     <div class="perspective-panel">
       <span class="kicker">INSTITUTION / RESEARCH PROFILE</span>
       {kut ? <h1>{name}</h1> : <h2>{name}</h2>}
@@ -39,8 +39,8 @@ const affiliation=kut?'库塔捷拉泽热物理研究所 · 新西伯利亚':cou
       </div>
       <div class="act-row"><a href={kut ? href('/representative-works#ACT-KUT-LAB13') : href('/representative-works')}>代表论文 ↗</a><a href={kut ? href('/institutions/ACT-KUTATELADZE#institution-capabilities') : href('/smartphone-transfer')}>{kut ? '研究能力与证据' : '手机迁移条件'} ↗</a>{officialUrl && <a href={officialUrl} target="_blank" rel="noopener noreferrer">机构官方信息 ↗</a>}</div>
     </div>
-    <div class="location-plate"><span>RESEARCH LOCATION</span><strong>{kut?'NOVOSIBIRSK · RUSSIA':'RUSSIAN RESEARCH NETWORK'}</strong><small>机构属性及地理位置请以已核实档案为准</small></div>
-    {building && source ? <a class="visual-credit" href={source} target="_blank" rel="noopener noreferrer">建筑历史照片：{building.credit} / {building.license} · 原图与许可 ↗</a> : <span class="visual-credit">暂无经核实的机构建筑照片</span>}
+    <div class="location-plate"><span>RESEARCH LOCATION</span><strong>{kut?'NOVOSIBIRSK · RUSSIA':country==='CN'?'CHINA · UNIVERSITY RESEARCH':'RUSSIAN RESEARCH NETWORK'}</strong><small>机构属性及地理位置请以已核实档案为准</small></div>
+    {building && source ? <a class="visual-credit" href={source} target="_blank" rel="noopener noreferrer">实景照片：{building.credit} / {building.license} · 原图与许可 ↗</a> : <span class="visual-credit">暂无经核实的机构建筑照片</span>}
   </div>
   {!kut && <div class="research-tiles">
     <a href={capabilityCount>0 ? href('/institutions/'+id+'#institution-capabilities') : href('/capabilities')}><span class="tile-icon">◈</span><div><b>技术能力</b><small>Capabilities / 证据约束</small></div><span>↗</span></a>
