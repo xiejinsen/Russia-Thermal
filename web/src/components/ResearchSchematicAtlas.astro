@@ -19,7 +19,7 @@ const photos: Record<string, {file:string; author:string; license:string}> = {
  'ACT-USTC':{file:'Gate of University of Science and Technology of China (180405).jpg',author:'Leiem',license:'CC BY-SA 4.0'},
  'ACT-ZJU':{file:'Teaching building, Zijingang Campus, Zhejiang University.jpg',author:'Alex Needham',license:'Public domain'},
  'ACT-BIT':{file:'Main gate of Beijing Institute of Technology main campus (20210523072112).jpg',author:'N509FZ',license:'CC BY-SA 4.0'},
- 'ACT-HUST':{file:'HUST gate 01.jpg',author:'Fxqf',license:'CC BY-SA 4.0'},
+ 'ACT-HUST':{file:'华科校门.JPG',author:'Glrain',license:'CC BY-SA 4.0'},
  'ACT-HIT':{file:'Main Building HIT.jpg',author:'Mike hangzhou',license:'CC BY-SA 4.0'}
 };
 const canonical = isRussia
@@ -270,6 +270,7 @@ const catalog=vm.nodes.map(n=>({...n,
  .focus-main:focus-visible{outline:3px solid #9ff2ff;outline-offset:-4px}
  .focus-media{position:relative;height:150px;background:#0c3857;overflow:hidden}
  .focus-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.92) saturate(.86)}
+ .china-map #atlas-feature-08 .focus-media img{object-position:center 73%;filter:brightness(.99) saturate(.96)}
  .focus-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,#082c4b99)}
  .focus-number{position:absolute;z-index:1;top:10px;left:11px;font-size:22px;font-weight:850;text-shadow:0 1px 6px #000}
  .visual-no-photo{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:150px;height:100%;gap:5px;background:radial-gradient(circle at 20% 25%,#1783ad,transparent 65%),#0b3655}
