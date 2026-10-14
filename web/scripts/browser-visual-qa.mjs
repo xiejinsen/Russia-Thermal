@@ -74,10 +74,14 @@ try{
           const y=Math.min(rects[a].bottom,rects[b].bottom)-Math.max(rects[a].top,rects[b].top);
           if(x>2&&y>2)overlaps.push([a+1,b+1]);
         }
-        return {pins:labels.length,cityMarkers:document.querySelectorAll('.china-map .pin-group.city-only').length,profiles:document.querySelectorAll('.china-map .additional-org').length,overlaps};
+        const cards=[...document.querySelectorAll('.china-map .focus-card')];
+        const photos=cards.filter(card=>card.querySelector('.focus-media img'));
+        const credits=cards.filter(card=>card.querySelector('.credit a[href*="commons.wikimedia.org"]'));
+        const broken=photos.filter(card=>{const img=card.querySelector('img');return img.complete&&img.naturalWidth===0}).map(card=>card.id);
+        return {pins:labels.length,cityMarkers:document.querySelectorAll('.china-map .pin-group.city-only').length,profiles:cards.length,photos:photos.length,credits:credits.length,broken,overlaps};
       });
       item.chinaMapCheck=mapCheck;
-      if(mapCheck.pins!==9||mapCheck.cityMarkers!==3||mapCheck.profiles!==5||mapCheck.overlaps.length)
+      if(mapCheck.pins!==9||mapCheck.cityMarkers!==3||mapCheck.profiles!==9||mapCheck.photos!==9||mapCheck.credits!==9||mapCheck.broken.length||mapCheck.overlaps.length)
         fatal.push({...item,error:'China map locations/anchors overlap or incomplete: '+JSON.stringify(mapCheck)});
     }
     if(slug==='partners'){
