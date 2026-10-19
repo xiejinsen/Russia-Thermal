@@ -270,8 +270,10 @@ const catalog=vm.nodes.map(n=>({...n,
  .focus-main:focus-visible{outline:3px solid #9ff2ff;outline-offset:-4px}
  .focus-media{position:relative;height:150px;background:#0c3857;overflow:hidden}
  .focus-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.92) saturate(.86)}
- .china-map #atlas-feature-08 .focus-media img{object-position:center 73%;filter:brightness(.99) saturate(.96)}
+ .china-map #atlas-feature-08 .focus-media img{object-position:center 73%;filter:brightness(1.1) contrast(1.04) saturate(.98)}
  .focus-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,#082c4b99)}
+ /* HUST gate sign occupies the lower third; do not darken the school name. */
+ .china-map #atlas-feature-08 .focus-media:after{background:linear-gradient(180deg,transparent 72%,#082c4b2b)}
  .focus-number{position:absolute;z-index:1;top:10px;left:11px;font-size:22px;font-weight:850;text-shadow:0 1px 6px #000}
  .visual-no-photo{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:150px;height:100%;gap:5px;background:radial-gradient(circle at 20% 25%,#1783ad,transparent 65%),#0b3655}
  .visual-no-photo b{font-size:12px;letter-spacing:.14em}.visual-no-photo small{font-size:10px;color:#cbe6f2;letter-spacing:.12em}
