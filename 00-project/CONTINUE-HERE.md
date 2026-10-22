@@ -264,3 +264,12 @@ Before restarting individual institute literature searches, use the [current res
 2. 完成中国 2008 年理论论文的全文公式级审计。
 3. 对中方 2008/2009/2010 年实验论文按作者和实验数据去重。
 4. 将俄罗斯 2016–2023 年稳定性工作按作者谱系去重，识别真正的方法创新。
+
+
+## 2026-10-22 第十轮：中俄数学物理方法贡献去重
+
+- 新增专项审计：`analysis/russia-china-math-physics-round10-method-contribution-dedup-2026-10-22.md`。
+- 原始期刊再核：Ji/Liu/Liu (2008) *Chinese Physics Letters*；Ji/Liu/Zhu (2008) *Chinese Journal of Space Science*；Bekezhanova/Shefer (2018) *Microgravity Science and Technology* 与 ICM/SFU 机构出版目录。
+- 重要收敛：俄方 ICM/SFU/Altai 的连续数学物理研究谱系有较强证据，但 2016–2024 年同作者解族的综述、稳定性延伸及边界参数扩展不能当作彼此独立的新数学方法；中国 2008 年两篇相关理论文章亦属于有重叠的研究簇。
+- 仍需：2018 俄文/英文稳定性论文完整扰动方程逐式核验，中国 2008 年耦合模型公式/边界条件全文核验，同题同方法独立研究贡献对照；全文未取得不得编造。
+- 决策不变：基础建模 RESERVE、P1/P2/HOLD 不变，尚不形成俄罗斯整体超越中国的比较结论。
