@@ -574,8 +574,8 @@ H2 不能从 H1 自动推出。两国都可能拥有高水平基础理论和工�
 
 机构与来源：
 - 作者单位：Institute of Computational Modelling SB RAS、Siberian Federal University。
-- ICM 研究人员的官方/机构出版目录将其列入 2018 年研究谱系。
-- 可访问的 Springer/ResearchGate 出版商预览与 CORE 索引文本提供了摘要、模型背景和部分正文片段。
+- ICM 研究人员的[机构出版目录](https://icm.krasn.ru/refs.php?epubs=0&persid=7)将其列入 2018 年研究谱系。
+- 可访问的[ResearchGate 出版商预览](https://www.researchgate.net/publication/326207485_Influence_of_Gravity_on_the_Stability_of_Evaporative_Convection_Regimes)与[CORE 索引 PDF](https://files01.core.ac.uk/download/pdf/220103859.pdf)提供了摘要、模型背景和部分正文片段；[Springer DOI 页面](https://doi.org/10.1007/s12217-018-9628-3)作为正式出版记录。
 
 **已核实的方法要素：**
 1. 以 Oberbeck–Boussinesq 框架下的两层 Navier–Stokes 对流方程描述蒸发液体与气—蒸汽混合物的共存流动。
