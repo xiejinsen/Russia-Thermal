@@ -150,3 +150,22 @@ Before restarting individual institute literature searches, use the [current res
 1. 继续寻找中国同题的显式气相/热质交叉扩散模型，尤其是双层流、非均匀蒸发和稳定性分析的组合。
 2. 补齐俄罗斯 2018、2022 论文的全文和验证证据。
 3. 核实俄方理论组与 Institute of Thermophysics SB RAS 实验线之间的实际合作关系，并与中国对应团队比较。
+
+## 2026-10-22 最新增量：补入中国蒸发耦合候选与国际双侧模型基线
+
+新增内容见：
+- [同领域对照报告第 13 节](../analysis/russia-china-thin-film-stability-matched-comparison-2026-10-22.md)
+- [专项审计第 14 节](../analysis/russia-china-mathematical-physics-paradigm-audit-2026-10-22.md)
+
+### 本轮新增发现
+- 中国期刊论文候选 Ji, Liu & Liu (2008) 研究蒸发与热毛细对流耦合，基于二维瞬态 Navier–Stokes 和能量方程，分析蒸发 Biot 数与 Marangoni 数。当前仅掌握摘要级方法证据；气相处理、Soret/Dufour 与作者机构归属待全文核验。
+- 国际强基线 Grigoriev & Qin (2018, *Journal of Fluid Mechanics*) 显式求解液相/气相、气相空气与蒸汽输运、界面相变通量，并进行线性稳定性分析。作者单位为美国 Georgia Tech，因此只作国际方法基线，不计入中国样本。
+- 该国际基线说明“双侧气液 + 气相热质传递 + 相变界面 + 稳定性”并非俄罗斯独有。俄罗斯可能的窄差异在于 ICM/Altai 连续研究谱系中，部分不变精确解、Soret/Dufour、非均匀蒸发与稳定性分析的组合。
+
+### 当前判断
+研究已从泛泛的“俄罗斯理论更强”收敛为一个可审计的窄假设：俄罗斯 ICM/Altai 研究线是否在特定两层蒸发流问题中，具有比中国同题研究更连续、更集中或更具解释/预测增量的方法组合。尚不能推断俄罗斯整体数学物理能力强于中国。
+
+### 下一步
+1. 对中国 2008 年论文全文编码，确认气相方程、界面条件、数学方法与验证。
+2. 补齐俄罗斯 2018、2022 年论文全文及验证证据。
+3. 对中俄同题研究做机构/作者谱系去重，并将国际基线单独呈现。
