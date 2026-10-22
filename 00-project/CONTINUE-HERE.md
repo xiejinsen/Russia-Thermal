@@ -104,3 +104,12 @@ V2.1 on main is now authoritative. Always trust [STATUS.md](STATUS.md) for the c
 Before restarting individual institute literature searches, use the [current research archive map](../analysis/research-archive-index-2026-10-09.md). It points to the [latest Russian academic partner comparison](../reports/russia-academic-partner-comparison-2026-10-09.md), [Q09 conditional academic task portfolio](../reports/collaboration-opportunities/academic-q09-feasibility-portfolio-2026-10-09.md), and [final-insight/archive audit](../analysis/audits/final-insight-and-archive-audit-2026-10-09.md).
 
 **Freshness caveat:** the 2026-10-07 graph PASS and the CI run recorded in 2026-10-08 STATUS predate new 2026-10-09 analysis/reports. Do not describe them as a current HEAD full-tree/CI result. Canonical Phase1 P1 Primary / P2 Conditional Reserve / TPU HOLD remains unchanged. Current audit found no basis for unauthorized collaboration, phone prototype assertion or automatic research-source promotion.
+
+## 2026-10-22 最新增量：首篇中国理论论文完成全文级试编码
+
+- 已审阅赵诚卓、胡开鑫（宁波大学）2022 年“双自由面溶质—热毛细液层的不稳定性”全文 PDF；确认其包含无量纲控制方程、物理边界条件、基态构造、线性稳定性与能量分析。
+- 该论文在 PHYS/MATH/MECH/PRED 四个维度均为高档，直接反驳“中国缺少严密数学物理研究”的宽泛说法。
+- 与俄罗斯 PAPER-RU-MODEL-002 对照后，俄方的部分不变精确解路线仍具方法特色，但两篇物理边界不同，不能据此判定国家整体优劣。
+- 最新更新见 [首个同领域对照报告第 8 节](../analysis/russia-china-thin-film-stability-matched-comparison-2026-10-22.md)。
+
+**继续动作：** 对中国候选的非模态稳定性、环形液池稳定性和三维非线性蒸发薄膜研究继续全文编码；同步复核俄罗斯 2018/2023/2024 精确解论文，保持同等级别证据审查。
