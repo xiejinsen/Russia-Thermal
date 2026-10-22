@@ -209,3 +209,20 @@ Before restarting individual institute literature searches, use the [current res
 2. 对中国 2008 年论文做全文编码，尤其核对气相模型、界面条件和验证方式。
 3. 按作者谱系去重，区分方法创新和参数拓展。
 4. 分别评价解析可解释性、稳定性预测、三维扩展和实验验证能力。
+
+## 2026-10-22 第七轮：俄罗斯 2023 年论文完成全文级审计
+
+详细内容见：
+- [薄膜蒸发与界面稳定性对照报告第 16 节](../analysis/russia-china-thin-film-stability-matched-comparison-2026-10-22.md)
+- [数学物理范式专项审计第 17 节](../analysis/russia-china-mathematical-physics-paradigm-audit-2026-10-22.md)
+
+### 新完成的证据
+- 逐页审阅 Makarov (2023) 的公开 PDF。确认作者机构为 Altai State University 与 Institute of Computational Modelling SB RAS。
+- 核对两相 Navier–Stokes / Oberbeck–Boussinesq 方程、气相蒸汽对流扩散、Soret/Dufour 交叉扩散、热毛细应力、潜热平衡、饱和蒸汽界面条件，以及 Ostroumov–Birikh 型精确解如何将 PDE 约化为 ODE/代数系统。
+- 该文提供俄罗斯特定研究线的直接正向证据：方程—界面条件—结构化解析约化—边界条件求解—参数机制解释。
+- 同时记录限制：平直界面、特定精确解结构、被动蒸汽假设；不能将其当成通用瞬态模型或已完成独立实验定量验证的手机热管理模型。
+
+### 当前下一步
+1. 对俄罗斯 2018 年稳定性论文做全文级审计，检查精确基态、特征扰动与临界稳定曲线。
+2. 对中国 Ji、Liu、Liu (2008) 论文全文编码，并补入中国科学院力学研究所相关实验论文。
+3. 建立作者去重后的对照矩阵，区分数学建模方法、实验验证能力和国家层面研究分布。
