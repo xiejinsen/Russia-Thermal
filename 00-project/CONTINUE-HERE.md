@@ -292,3 +292,13 @@ Before restarting individual institute literature searches, use the [current res
 - 俄罗斯优势假设收窄为 ICM/SFU/Altai 2023—24 多篇的“显式双层蒸发模型 + 特殊精确基态 + 气相热扩散 + normal-mode 阈值”连续研究组合；新增 Goncharova 2023 三维精确解/约化论文及 2024 双语期刊同一工作去重，Prokudina 2024 属另一个俄罗斯独立研究线。
 - 尚未逐式复核所有 PDF；不宣称俄罗斯相对中国有国家级数学优势或手机级 VC 性能优势。建模 RESERVE 和 P1/P2/HOLD 不变。
 - 下一轮：找近期中方双层蒸发/精确基态同题样本，补方程/边界与同条件预测比较，再判断窄增量。
+
+
+## 2026-10-23 第十二轮：RU23 PDF 全文方法验证与 CN24 三维长波模型比较
+
+- 新研究文件：`analysis/russia-china-math-physics-round12-fulltext-matched-methods-2026-10-23.md`。继续执行 **2021—2026 近期论文优先**，不重启 2008 年模型深读。
+- **实际新增证据：** 完整读取 Bekezhanova/Shefer (2023) *Computational Continuum Mechanics* 13 页期刊原始 PDF：验证部分不变精确基态、平面/空间 normal-mode 扰动的指数 ansatz、正文式 (9)—(12) 的耦合谱边界问题和正交化谱求解方法；未独立复算全部谱根或中性曲线。
+- **中国对照：** Jiang/Huang/Yang/Ding (2024) *Fluids* 的公开全文公式/搜索内容核实三维长波展开、相变界面条件、色散关系、非线性膜破裂及蒸汽反冲/有效压力作用。双方都是较强数学物理研究，不允许称“中国只会工程”。
+- **扩展俄方近期谱系：** South Ural State University Prokudina (2024) 非线性四阶液膜 PDE，以及 (2025) 波包非线性包络方程（目前书目与摘要级，公式待核）；视为同作者持续路线而非两项已验证独立理论突破。
+- **新结论：** RU23 的精确基态—线性谱阈值方法特色在原文公式级获得加强；CN24 的三维非线性长波演化同样有深数学推导。方法任务差异不等于国家强弱排名。基础建模继续 RESERVE，既有 P1/P2/HOLD 均不变。
+- **下一轮：** RU24/RU25 全文贡献去重；寻找 2021—2026 中国精确基态+谱稳定性同问题对照；建立同输入/阈值/误差/计算开销的模型预测对比契约。
