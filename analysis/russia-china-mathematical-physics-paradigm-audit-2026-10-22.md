@@ -591,7 +591,7 @@ H2 不能从 H1 自动推出。两国都可能拥有高水平基础理论和工�
 
 ### 19.2 中国理论模型：二维瞬态方程耦合与参数机制分析
 
-论文：Ji Yan, Liu Qiu-Sheng & Liu Rong, “Coupling of Evaporation and Thermocapillary Convection in a Liquid Layer with Mass and Heat Exchanging Interface,” *Chinese Physics Letters* 25(2), 608–611 (2008). DOI: https://doi.org/10.1088/0256-307X/25/2/069
+论文：Ji Yan, Liu Qiu-Sheng & Liu Rong, “Coupling of Evaporation and Thermocapillary Convection in a Liquid Layer with Mass and Heat Exchanging Interface,” *Chinese Physics Letters* 25(2), 608–611 (2008). [出版社全文/摘要入口](https://cpl.iphy.ac.cn/article/id/35743)，DOI: https://doi.org/10.1088/0256-307X/25/2/069
 
 同年中文期刊版本/相关研究：
 Ji Yan, Liu Qiusheng & Zhu Zhiqiang, “Numerical Simulation of Thermocapillary Convection in an Evaporating Liquid Layer Under Microgravity Condition,” *Chinese Journal of Space Science* 28(4), 350–355 (2008). DOI: https://doi.org/10.11728/cjss2008.04.350
