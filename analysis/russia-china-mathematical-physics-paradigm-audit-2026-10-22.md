@@ -608,7 +608,7 @@ Ji Yan, Liu Qiusheng & Zhu Zhiqiang, “Numerical Simulation of Thermocapillary 
 
 ### 19.3 中国实验样本：直接测量与 PIV 流型观测
 
-论文：Zhu Zhiqiang, Ji Yan, Liu Qiusheng, Yan Jiaping & Xie Jingchang, “Experimental Study on the Coupling of Thermocapillary Convection and Evaporation Effect in a Liquid Layer,” *Chinese Journal of Space Science* 28(1), 12–16 (2008). DOI: https://doi.org/10.11728/cjss2008.01.012
+论文：Zhu Zhiqiang, Ji Yan, Liu Qiusheng, Yan Jiaping & Xie Jingchang, “Experimental Study on the Coupling of Thermocapillary Convection and Evaporation Effect in a Liquid Layer,” *Chinese Journal of Space Science* 28(1), 12–16 (2008). [期刊全文/摘要入口](https://www.cjss.ac.cn/en/article/doi/10.11728/cjss2008.01.012)，DOI: https://doi.org/10.11728/cjss2008.01.012
 
 作者单位：Institute of Mechanics, Chinese Academy of Sciences / National Microgravity Laboratory。
 
