@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-10-23 Math-Physics Substream Round 15
+
+- **Latest report:** [Round 15 Prokudina 2024–2025 model-lineage audit](../analysis/russia-china-math-physics-round15-prokudina-model-lineage-audit-2026-10-23.md).
+- **Lineage confirmed at abstract/bibliographic level:** Prokudina 2014 already describes a nonlinear fourth-order free-surface PDE; 2014/2015 studies discuss nonlinear wave-packet/envelope models; 2011 covers multiscale perturbation self-organization; a 2019 indexed record shows a related free-surface PDE.
+- **Bounded novelty judgment:** 2024 should not be called the first fourth-order free-surface film PDE; 2025 should not be called the first nonlinear parabolic envelope equation. Candidate increments concern evaporation-focused simulation/critical Marangoni values and long-term packet interaction near maximum growth rate, respectively. Exact equation-level novelty remains OPEN.
+- **Blocker:** Math-Net page/PDF fetch returned cache miss and direct download failed. Full equation-level PDF audit is BLOCKED; abstract-level evidence has not been promoted to full-text evidence.
+- **Next P0:** obtain readable RU24/RU25 PDFs and compare terms, coefficients, assumptions, boundary/initial conditions, nondimensional groups, envelope derivation, convergence, independent validation and new predictive outputs against 2014/2015/2019 predecessors.
+- **Current decision:** team-level method lineage is worth investigating; country-wide superiority NOT ESTABLISHED; phone VC/wick transfer UNPROVEN; modelling RESERVE; P1/P2/HOLD unchanged.
+- **Parallel workstream:** general academic ecosystem / validation audit remains at Round 29; this is the distinct mathematical-physics lineage substream.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Math-Physics Substream Round 14
 
 - **Latest report:** [Round 14 differentiated capability matrix](../analysis/russia-china-math-physics-round14-differentiated-capability-matrix-2026-10-23.md).
