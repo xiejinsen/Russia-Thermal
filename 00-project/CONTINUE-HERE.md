@@ -1,3 +1,19 @@
+# 最新接续状态（2026-10-23：数学物理学术生态调查，第十七轮）
+
+- 新专项目录：[research/academic-ecosystem/README.md](../research/academic-ecosystem/README.md)；本轮报告：[第十七轮学术生态旁证调查](../analysis/russia-thermal-academic-ecosystem-round17-2026-10-23.md)。
+- 机构登记表：[institution-matrix.tsv](../research/academic-ecosystem/registry/institution-matrix.tsv)；来源登记：[source-register.md](../research/academic-ecosystem/evidence/source-register.md)。
+- 已建立机构档案：NSU、TSU、TPU、MPEI，位于 `research/academic-ecosystem/profiles/`。
+- RAEX 2026 数学排名背景：NSU #6、TSU #10、TPU #15、ITMO #7、SFU #20。排名仅为高校层面背景，不等于热管理团队数学物理实力。
+- NSU：公开院系材料确认数学与力学系和多个 SB RAS 研究所存在科研人才培养合作；与 Kutateladze 热管理团队的直接关系仍 OPEN。
+- TSU：官方资料确认 Centre for Fundamental and Mathematical Physics，以及使用解析/数值方法研究对流热质传递的实验室；两者之间的共同论文/项目/人员传导关系仍 OPEN。
+- TPU：官方实验室页面明确列出含相变的热质传递解析解、数值模拟、液滴/液膜研究；具体论文原创性和与校内数学单位的传导关系仍 OPEN。
+- MPEI：具体数学物理实验室和关联尚未核实，不得凭工程声誉推断。
+- 核心证据链：排名/学科背景 → 具体实验室/学者 → 共同作者/项目/指导/任职关系 → 热管理论文中实际使用的数学物理方法。不可跳步。
+- 下一步：先做 TSU 作者与单位关联图、TPU 解析解代表论文审计、NSU—SB RAS—Kutateladze 的直接关联核查，再补 MPEI 官方单位证据。
+- 当前判断：环境证据初步支持；直接传导 OPEN；国家级比较 NOT_EVALUABLE。P1/P2/HOLD 与建模 RESERVE 决策不变。
+
+---
+
 # 最新接续状态（2026-10-23：第十六轮）
 
 - 当前专项：中俄热管理相关数学物理方法对照；优先窗口 2021—2026。不要重开 Q01–Q10、机构普查或早期机构地图。
