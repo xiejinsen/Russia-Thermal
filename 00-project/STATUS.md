@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 29
+
+- **Latest report:** [Round 29 validation-independence audit](../analysis/russia-thermal-academic-ecosystem-round29-validation-independence-audit-2026-10-23.md).
+- **Russia:** ITP 2014 author reports satisfactory agreement with experiment; ITP 2017 discloses low-heat-flux discrepancy. No common-data/common-metric 2014→2017 accuracy improvement confirmed.
+- **China:** Dalian 2015 integrated experimental correlations into a 3D distributed-parameter model; independence of whole-device validation remains OPEN. Dalian 2024 reports explicit water/seawater non-boiling experimental scope, but paper-specific MAE/RMSE and holdout/external validation remain OPEN.
+- **International reporting baselines (not direct country comparisons):** Shah 2021 1237 points / 22 sources / MAD 17.4%; Lin et al. 2024 4114 points / 8 sources / MAD 28.3%, R² 0.86. Geometry/fluid/mechanism differences prevent naïve ranking.
+- **Evidence governance:** Added calibration-vs-validation data provenance, metric definition, scope, uncertainty, convergence and failure-domain requirements.
+- **Current conclusion:** No grounded country-level numerical accuracy or mathematics superiority ranking; NOT EVALUABLE. Portfolio P1/P2/HOLD and modelling RESERVE unchanged.
+- **Next:** extract original plots/figures, paper-specific error tables and validation dataset provenance, and only compare after shared benchmark contract is met.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 28
 
 - **Latest report:** [Round 28 quantitative contribution audit (phase 1)](../analysis/russia-thermal-academic-ecosystem-round28-quantitative-contribution-audit-2026-10-23.md).
