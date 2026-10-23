@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 21
+
+- **Latest report:** [Round 21 full-text equation audit](../analysis/russia-thermal-academic-ecosystem-round21-fulltext-equation-audit-2026-10-23.md).
+- **China paper audited:** The 2024 instrument-compartment PCM paper uses a Lightfoot/Green-function one-dimensional moving-interface model and a physical thermal experiment. Limitations include no liquid-phase flow, ignored volume change/internal radiation, mismatch between model boundary temperature and measured casing temperature, and no standardized MAE/RMSE found.
+- Some equations in the HTML rendering look potentially inconsistent; verify against the formal PDF before judging mathematical correctness.
+- **Russian paper:** Public abstract supports analytical heat/diffusion solutions, Kolmogorov kinetics, in-house experimental validation and COMSOL verification, with late-stage overprediction explicitly discussed. Full equation-level audit remains incomplete because publisher access was unavailable.
+- **Bounded conclusion:** Both research networks have examples of analytical modelling; relative quality remains unresolved. Country-level superiority remains NOT_EVALUABLE.
+- **Next:** verify the Chinese paper's PDF equations, obtain the Russian full text, and seek closer matched papers on electronics/mobile thermal management.
+- **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 20
 
 - **Latest report:** [Round 20 analytical model comparison](../analysis/russia-thermal-academic-ecosystem-round20-analytical-model-comparison-2026-10-23.md).
