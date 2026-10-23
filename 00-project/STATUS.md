@@ -1,3 +1,13 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 26
+
+- **Latest report:** [Round 26 China longitudinal comparison baseline](../analysis/russia-thermal-academic-ecosystem-round26-china-longitudinal-comparison-baseline-2026-10-23.md).
+- **Chinese candidate A:** Dalian University of Technology (Mu Xingsen / Shen Shengqiang group), with visible 2023–2025 work on thin-film flashing, horizontal-tube falling-film evaporation, saltwater/seawater heat-mass transfer, correlations and dynamic fouling. Confirmed span is only three years, not the planned 5–10-year audit.
+- **Chinese candidate B:** Tsinghua 2019 falling-film stability/rivulet studies use 3D regularized/weighted-residual models, linear stability analysis and 3D simulation; these are direct evidence of mathematical-physics analysis in China, though not identical to Russian cryogenic boiling/quenching conditions.
+- **Next:** trace Dalian group publications back to 2015–2022; audit full texts for equations, closure, errors, independent validation and novelty; extend the Tsinghua paper chain.
+- **Bounded conclusion:** A Chinese longitudinal baseline is established, but the planned 5–10-year audit is incomplete. Country-level superiority remains OPEN / NOT ESTABLISHED. Portfolio unchanged: P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 25
 
 - **Latest report:** [Round 25 ITP longitudinal falling-film/quenching audit](../analysis/russia-thermal-academic-ecosystem-round25-longitudinal-film-research-audit-2026-10-23.md).
