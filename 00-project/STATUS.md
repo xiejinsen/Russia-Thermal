@@ -1,3 +1,13 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 27
+
+- **Latest report:** [Round 27 China falling-film longitudinal audit](../analysis/russia-thermal-academic-ecosystem-round27-china-falling-film-longitudinal-audit-2026-10-23.md).
+- **Chinese line extended to 2012–2025:** experimental HTC baseline (2012); seawater experiments and 3D distributed-parameter model (2015); CFD/VOF film thickness (2016); coupled inside/outside heat transfer (2017); seawater fouling (2018); droplet flow/scale inhibitor (2019); 3D air-water heat/mass transfer (2022); GA-BP prediction (2023); multiple-precision-expansion correlation and spatial HTC (2024); seawater correlation/dynamic fouling (2025).
+- **Interpretation:** A decade-plus research network is visible, but this is not proof that all papers belong to one fixed team or one continuously evolved model. Methods mainly include experiments, CFD/VOF, system models, correlations and data-driven prediction. A 2024 paper proposes a film-thickness/turbulence competitive mechanism; sustained fundamental-mathematics originality is not established.
+- **Next:** extract equations, closures, error and external validation from matched Russian and Chinese representative papers; distinguish theoretical, scenario and validation increments.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. Portfolio unchanged: P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 26
 
 - **Latest report:** [Round 26 China longitudinal comparison baseline](../analysis/russia-thermal-academic-ecosystem-round26-china-longitudinal-comparison-baseline-2026-10-23.md).
