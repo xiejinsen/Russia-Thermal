@@ -1,3 +1,14 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 22
+
+- **Latest report:** [Round 22 matched falling-film comparison](../analysis/russia-thermal-academic-ecosystem-round22-matched-falling-film-comparison-2026-10-23.md).
+- **Russian line:** ITP 2014/2017 papers model unsteady wavy falling films, wave/velocity/temperature fields, boiling onset/local evaporation and compare predictions with experiments; a 2017 quenching study compares predicted front geometry/velocity/wall temperature against experiment.
+- **Chinese counterexamples:** Tsinghua 2017 performs linear stability analysis on a vertical falling film using 3D model equations; a 2023 partial dry-out study uses conservation equations and interfacial evaporation closure with multiple experimental validations.
+- **Bounded insight:** Russian research continuity and transient-mechanism/model/experiment linkage are worth testing; China also has explicit theory and mechanistic modelling. The simple “Russia theory, China engineering” split is not supported.
+- **Next:** audit full text for Russian 2014/2017, Tsinghua 2017 and Chinese 2023 papers; compare equations, assumptions, theory, error, extrapolation and failure limits.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 21
 
 - **Latest report:** [Round 21 full-text equation audit](../analysis/russia-thermal-academic-ecosystem-round21-fulltext-equation-audit-2026-10-23.md).
