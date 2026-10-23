@@ -1,5 +1,13 @@
 # Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
+## 最新专项进展（2026-10-23：学术生态调查，第二十六轮）
+
+- 新增 [第二十六轮：中国液膜传热团队纵向对照基线](analysis/russia-thermal-academic-ecosystem-round26-china-longitudinal-comparison-baseline-2026-10-23.md)。
+- 中国侧建立两个候选线：大连理工牟兴森/沈胜强团队 2023–2025 年薄膜闪蒸、水平管降膜蒸发、盐水/海水热质传递与污垢研究；清华大学 2019 年下降液膜线性稳定性和溪流形成研究。
+- 清华样本明确采用三维 regularized/weighted-residual 模型与线性稳定性分析，是“中国缺少数学物理分析”的直接反例。
+- 大连理工候选线目前只确认 2023–2025 三年，不满足原定 5–10 年纵向跨度；需向前追溯并取得论文全文，才能评价数学原创性、误差与验证质量。
+- 当前结论：中俄在问题选择和方法组合上有差异线索，国家级优势仍未成立。
+
 ## 最新专项进展（2026-10-23：学术生态调查，第二十五轮）
 
 - 新增 [第二十五轮：ITP 下降液膜/淬冷研究纵向积累审计](analysis/russia-thermal-academic-ecosystem-round25-longitudinal-film-research-audit-2026-10-23.md)。
