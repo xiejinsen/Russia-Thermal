@@ -1,5 +1,13 @@
 # Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
+## 最新专项进展（2026-10-23：学术生态调查，第二十轮）
+
+- 新增 [第二十轮：解析模型证据深化与中国同类反例审计](analysis/russia-thermal-academic-ecosystem-round20-analytical-model-comparison-2026-10-23.md)。
+- TPU 相关研究网络的 2026 年盐液膜结晶模型使用热传导与组分扩散解析解、Kolmogorov 结晶动力学，并以自有实验数据验证；同时报告忽略晶体相互作用造成的后期预测偏差。Pavel Strizhak 为共同作者，但不能将成果归为 TPU 单一团队或电子热管理成果。
+- 2024 年三层墙体 PCM 论文报告新的非稳态多层热传递解析解，并与 COMSOL 比较；这不是独立实验验证，且对象是建筑围护结构。
+- 中国直接反例：2024 年相变仪器舱研究使用 Lightfoot 积分方程方法获得一维相变解析解，并以仪器舱热实验验证，面向电子设备热防护。
+- 当前结论：解析建模、物理模型与实验验证并非俄罗斯独有。俄罗斯部分研究网络存在此类能力证据，但国家级优势仍 NOT EVALUABLE；需要同类物理问题和同等验证标准下比较。
+
 ## 最新专项进展（2026-10-23：学术生态调查，第十九轮）
 
 - 新增 [第十九轮：代表论文方法审计与中俄可比证据试配](analysis/russia-thermal-academic-ecosystem-round19-paper-method-audit-2026-10-23.md)，并新增 [ITP-Kutateladze 机构档案](research/academic-ecosystem/profiles/ITP-Kutateladze.md)。
