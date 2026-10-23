@@ -1,5 +1,13 @@
 # Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
+## 最新专项进展（2026-10-23：学术生态调查，第二十一轮）
+
+- 新增 [第二十一轮全文方程审计](analysis/russia-thermal-academic-ecosystem-round21-fulltext-equation-audit-2026-10-23.md)。
+- 中国 2024 年相变仪器舱论文已完成全文方法审计：使用 Lightfoot/Green 函数处理一维移动相界面，给出边界/界面条件并开展实物热实验；但模型忽略液相流动、体积变化和内部辐射等因素，理论与实测温度位置不同，未见标准化 MAE/RMSE。
+- 中国论文 HTML 中个别公式呈现存在可疑不一致，须与正式 PDF 对照，不能直接判定理论推导错误。
+- 俄罗斯 2026 年盐液膜结晶模型：公开摘要支持解析热传导/扩散解、Kolmogorov 动力学、实验验证和 COMSOL 数值核验；后期晶体质量高估的失效边界明确。但本轮未能取得可逐式审计的完整正文。
+- 两篇论文并非严格同题匹配。当前结论为“双方均有解析建模实例，质量差异未判定”；国家级优势仍 NOT EVALUABLE。
+
 ## 最新专项进展（2026-10-23：学术生态调查，第二十轮）
 
 - 新增 [第二十轮：解析模型证据深化与中国同类反例审计](analysis/russia-thermal-academic-ecosystem-round20-analytical-model-comparison-2026-10-23.md)。
