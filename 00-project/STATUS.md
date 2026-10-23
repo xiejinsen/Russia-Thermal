@@ -1,3 +1,18 @@
+# CURRENT UPDATE — 2026-10-23 Math-Physics Substream Round 14
+
+- **Latest report:** [Round 14 differentiated capability matrix](../analysis/russia-china-math-physics-round14-differentiated-capability-matrix-2026-10-23.md).
+- **Scope:** evidence-based candidate matrix for Russian team-level mathematical-physics methods and their Chinese/global counterexamples; this is a distinct substream from the general academic-ecosystem validation audit (latest report there: Round 29).
+- **Candidate strengths:** explicit phase-change/vapor-transport/base-state/spectral-stability combination; nonlinear free-surface film evolution; narrow-band wave-packet envelope modelling; transient reduced-order thermal modelling; model–experiment closure; topic continuity.
+- **China counterexamples retained:** Ningbo University 2022 critical modes/energy analysis, non-modal transient amplification and Bingham-layer stability; Jiang et al. 2024 3D evaporation/condensation long-wave instability; 2023 local-dryout model. These are related but not all exact physical matches.
+- **Bounded conclusion:** selected Russian research lines show methods worth further testing, not a proven exclusive or country-wide advantage. Country-level superiority is NOT ESTABLISHED; phone VC/wick transfer is UNPROVEN.
+- **Next P0:** full equation-level audit of Prokudina 2024/2025 original PDFs, including equations, nondimensional groups, boundary/initial conditions, discretization/envelope derivation, convergence, validity and incremental contribution.
+- **Next P1:** targeted 2021–2026 China search for explicit vapor transport + phase-change interface + exact base state/spectral stability; record search scope and negative-result limits.
+- **Next P2:** define a same-input/same-boundary/same-output benchmark with uncertainty, error metrics and compute cost; distinguish free films, industrial evaporators, sealed VC and porous wicks.
+- **Decision status:** modelling RESERVE; P1/P2/HOLD unchanged. No country-wide ranking or engineering-transfer claim.
+- **Research caveat:** Round 14 synthesizes already archived primary-source records; it does not claim a new exhaustive web search or full-text equation audit.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 29
 
 - **Latest report:** [Round 29 validation-independence audit](../analysis/russia-thermal-academic-ecosystem-round29-validation-independence-audit-2026-10-23.md).
