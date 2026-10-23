@@ -1,3 +1,12 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 25
+
+- **Latest report:** [Round 25 ITP longitudinal falling-film/quenching audit](../analysis/russia-thermal-academic-ecosystem-round25-longitudinal-film-research-audit-2026-10-23.md).
+- **Research timeline:** 2011 evaporation fronts/boiling crisis; 2012/2014 rewetting of superheated surfaces; 2014 unsteady wavy-film boiling-wait/local-evaporation model; 2017 critical-heat-flux modelling and cryogenic quench-front prediction; 2021–2024 coatings, wetting and falling-film exchanger applications.
+- **Evidence:** 2017 quenching work compares front geometry/velocity and surface-temperature evolution with experiments, while acknowledging strong assumptions (zero heat flux in dry region, constant wetted-zone HTC) and uncertain parameters.
+- **Bounded conclusion:** Longitudinal research continuity and model–experiment–mechanism linkage are supported. Quantitative improvement from 2014 to 2017, resolution of low-heat-flux discrepancy, and superiority in original mathematical theory remain unproven. 2021–2024 application studies are not automatically direct descendants of the early mathematical model.
+- **Next:** longitudinally audit a Chinese team's 5–10 year paper chain using the same metrics: model structure, theoretical increment, validation quality and failure boundaries.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 24
 
 - **Latest report:** [Round 24 model lineage and novelty audit](../analysis/russia-thermal-academic-ecosystem-round24-model-lineage-and-novelty-audit-2026-10-23.md).
