@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 24
+
+- **Latest report:** [Round 24 model lineage and novelty audit](../analysis/russia-thermal-academic-ecosystem-round24-model-lineage-and-novelty-audit-2026-10-23.md).
+- **Russian ITP 2017:** Uses a pre-existing Kapitza–Shkadov-type low-dimensional film model coupled with unsteady heat-transfer calculations. The paper's defensible contribution is scenario extension/coupling for liquid-nitrogen films under unsteady heating, predicting boiling wait, local evaporation and film decay. New analytical theory is not established; low-heat-flux discrepancy is reported.
+- **Chinese Tsinghua 2019:** Uses a 3D regularized/weighted-residual model and linear stability analysis.
+- **Chinese partial dry-out 2023:** Combines IR coverage measurements, 3D wall conduction, conservation equations/interfacial evaporation closure and multiple experimental datasets.
+- **Bounded conclusion:** Russian research continuity and transient-scenario modelling are plausible strengths to test; mathematical originality superiority is not established. Reduced-order film models belong to an international shared methods lineage.
+- **Next:** compare Russian 2014/2017 versions for incremental contribution; compare Tsinghua 2019 against international WRM/RM baselines; extract quantitative errors and independent validation cases from the Chinese 2023 paper.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 23
 
 - **Latest report:** [Round 23 falling-film equation/method audit](../analysis/russia-thermal-academic-ecosystem-round23-falling-film-equation-method-audit-2026-10-23.md).
