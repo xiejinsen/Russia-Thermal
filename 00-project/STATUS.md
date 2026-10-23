@@ -1,3 +1,19 @@
+# CURRENT UPDATE — 2026-10-23 Round 16
+
+> This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical records are retained below.
+
+- **Latest report:** [Round 16 Prokudina 2014/2024/2025 lineage differential audit](../analysis/russia-china-math-physics-round16-prokudina-lineage-differential-audit-2026-10-23.md).
+- **RU14 (2014, DOI 10.14529/mmp140211):** original abstract confirms Navier–Stokes/continuity equations plus heat/mass-transfer boundary conditions leading to a fourth-order nonlinear free-surface PDE, solved by finite differences for Marangoni perturbations.
+- **RU24 (2024):** abstract confirms a fourth-order nonlinear free-surface PDE for an evaporating film with surface tension, thermocapillary and evaporation terms. Since RU14 already establishes the general PDE/finite-difference/Marangoni method family, RU24 cannot be counted as a new method innovation on that description alone. Exact incremental equation/boundary-condition contribution remains OPEN.
+- **RU14 wave-packet paper (2014, DOI 10.1134/S1063776114020046):** public abstract already reports continuous-band nonlinear disturbances, a nonlinear parabolic equation, wave-packet self-organization and maximum-growth harmonic behavior.
+- **RU25 (2025):** abstract confirms a nonlinear parabolic envelope equation with coefficients based on growth rate, frequency and derivatives. Specific coefficient/derivation novelty and long-time evolution increment remain OPEN pending full-text audit.
+- **Bounded conclusion:** cross-year continuity in one Russian research line is supported; Russian national-level superiority over China is not established. Incremental originality, prediction-accuracy advantage and direct smartphone VC gain remain unproven. Evidence maturity = STRUCTURAL_SIGNAL; country-level comparison = NOT_EVALUABLE.
+- **China comparator:** Jiang et al. (2024) long-wave asymptotic evaporation/condensation-film model remains a strong theoretical counterexample; compare only aligned physical closure and mathematical tasks.
+- **Next action:** full-text equation/reference-chain audit for RU24/RU25, then matched comparison with Jiang et al. No change to P1/P2/HOLD or modelling RESERVE decisions.
+- **QA boundary:** RU24/RU25 full equation audit and current-SHA whole-repository mechanical QA remain OPEN.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Round 15
 
 > This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical fields later in this file remain preserved as historical records.
