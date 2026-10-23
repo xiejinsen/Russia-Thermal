@@ -1,3 +1,15 @@
+# 最新接续状态（2026-10-23：学术生态调查，第十八轮）
+
+- 最新报告：[第十八轮学术生态与真实建模能力关联核查](../analysis/russia-thermal-academic-ecosystem-round18-method-linkage-audit-2026-10-23.md)。
+- 维护入口：[research/academic-ecosystem/README.md](../research/academic-ecosystem/README.md)；机构矩阵与来源登记见该目录下 registry/ 和 evidence/。
+- TSU：团队长期从事热质传递建模；2017 年论文比较有限差分与有限体积方法。数学物理中心与热传递团队的共同论文/项目/指导关系尚未证实。
+- TPU：官方实验室说明开展含相变/反应的解析解、数值模拟与光学测量；具体论文的解析推导、原创性、误差与实验验证尚待逐篇核验。
+- NSU—ITP：ITP 官方履历确认 Pavlenko 毕业于 NSU 物理系；这是人才联系，不等于当前联合项目。ITP Lab 1.3 公开成果含理论模型、数值模拟与实验。
+- 当前判断：存在俄罗斯特定热物理研究线结合模型、数值与实验的初步证据；跨单位方法传导 OPEN；国家级优于中国 NOT_EVALUABLE。
+- 下一步：审计 TPU 2–3 篇解析模型论文；审计 ITP Pavlenko–Surtaev 液膜/沸腾论文的方程与验证；再建立同题中国对照。原 P1/P2/HOLD 与建模 RESERVE 不变。
+
+---
+
 # 最新接续状态（2026-10-23：数学物理学术生态调查，第十七轮）
 
 - 新专项目录：[research/academic-ecosystem/README.md](../research/academic-ecosystem/README.md)；本轮报告：[第十七轮学术生态旁证调查](../analysis/russia-thermal-academic-ecosystem-round17-2026-10-23.md)。
