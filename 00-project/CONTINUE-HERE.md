@@ -1,3 +1,14 @@
+# 最新接续状态（2026-10-23：第二十一轮）
+
+- 最新报告：[第二十一轮全文方程审计](../analysis/russia-thermal-academic-ecosystem-round21-fulltext-equation-audit-2026-10-23.md)。
+- 中国 2024 相变仪器舱论文已做全文方法审计：明确使用 Lightfoot/Green 函数处理一维移动相界面，有边界/界面条件和实物热实验；但采用无液相流动、忽略体积变化、绝热边界等简化，理论与实验测点温度定义不完全一致，未见标准化 MAE/RMSE。
+- 中国论文 HTML 公式展示存在可能的排版/转录不一致，必须与正式 PDF 对照后再判定，不能直接断言推导错误。
+- 俄罗斯 2026 盐液膜结晶模型：摘要证实热传导/组分扩散解析解、Kolmogorov 动力学、实验 validation、COMSOL verification；后期晶体质量高估的限制已明确。但出版商本轮拒绝完整页面访问，尚不能声称已逐式审计。
+- 两篇研究不是严格同题匹配；当前方法存在性证据成立，质量优劣和国家级结论仍 OPEN。
+- 下一步：核对中国论文原版 PDF 公式；获取俄罗斯论文全文；寻找更接近手机热管理的同题中俄论文。P1/P2/HOLD 与建模 RESERVE 不变。
+
+---
+
 # 最新接续状态（2026-10-23：学术生态调查，第二十轮）
 
 - 最新报告：[第二十轮解析模型证据深化与中国同类反例审计](../analysis/russia-thermal-academic-ecosystem-round20-analytical-model-comparison-2026-10-23.md)。
