@@ -1,5 +1,12 @@
 # Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
+## 最新专项进展（2026-10-23：学术生态调查，第二十四轮）
+
+- 新增 [第二十四轮：数学原创性与模型谱系审计](analysis/russia-thermal-academic-ecosystem-round24-model-lineage-and-novelty-audit-2026-10-23.md)。
+- 俄罗斯 ITP 2017 液膜研究采用 Kapitza–Shkadov 型低维模型与非稳态热传递耦合；该模型谱系是已有理论，当前证据不支持称其为原创数学理论。可确认的贡献是针对液氮、非稳态热负载的沸腾等待、局部蒸发和液膜衰减预测，且低热流区域存在偏差。
+- 中国清华 2019 研究采用三维 regularized/weighted-residual 模型与线性稳定性分析；中国 2023 局部干涸研究结合红外覆盖率、三维壁内导热、守恒方程/界面蒸发闭合和多组实验验证。
+- 当前判断：俄罗斯 ITP 的连续研究积累和复杂瞬态场景建模值得继续验证；数学原创性领先未证实。降阶模型属于国际共同发展的方法谱系。
+
 ## 最新专项进展（2026-10-23：学术生态调查，第二十三轮）
 
 - 新增 [第二十三轮：下降液膜方程与方法审计](analysis/russia-thermal-academic-ecosystem-round23-falling-film-equation-method-audit-2026-10-23.md)。
