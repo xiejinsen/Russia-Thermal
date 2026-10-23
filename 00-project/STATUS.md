@@ -1,3 +1,18 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Workstream
+
+> This header adds the university/math-physics ecosystem inquiry without replacing the existing Russia-Thermal decision portfolio.
+
+- **Latest report:** [Round 17 academic ecosystem survey](../analysis/russia-thermal-academic-ecosystem-round17-2026-10-23.md).
+- **Workstream rules and index:** [research/academic-ecosystem/README.md](../research/academic-ecosystem/README.md).
+- **Registry:** [institution-matrix.tsv](../research/academic-ecosystem/registry/institution-matrix.tsv); source register at [source-register.md](../research/academic-ecosystem/evidence/source-register.md).
+- **Profiles created:** NSU, TSU, TPU, MPEI in `research/academic-ecosystem/profiles/`.
+- **Initial evidence:** RAEX 2026 ranks NSU #6, TSU #10, TPU #15 in Russian university mathematics. TSU officially lists both a fundamental/mathematical physics centre and a convective heat/mass transfer lab using analytical/numerical methods. TPU's heat-transfer lab explicitly lists analytical solutions for heat/mass transfer with phase change. NSU material documents training links with multiple SB RAS institutes.
+- **Main open question:** no direct cross-unit transfer into a particular thermal-management research line is established yet. Need joint papers, shared projects, co-supervision, joint appointments or traceable method reuse in thermal papers.
+- **Bounded conclusion:** environment evidence is provisionally supported; thermal-method resources at TSU/TPU are supported by official descriptions; direct transfer remains OPEN; national-level comparison NOT_EVALUABLE.
+- **Portfolio unchanged:** P1 Kutateladze feasibility hypothesis; P2 MPEI conditional reserve; TPU/Frumkin HOLD; mathematical modelling RESERVE. This inquiry does not authorize outreach, data access or PoC.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Round 16
 
 > This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical records are retained below.
