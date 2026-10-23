@@ -124,6 +124,15 @@ python tools/atlas_coverage_audit.py --summary
 *项目状态概览原始网站审计日期为 2026-10-13；数学物理专项研究于 2026-10-22 新增。原始对象与决策事件优先于派生报告及网页。*
 
 
+## 最新专项进展（2026-10-23：第十五轮）
+
+- 新增 [第十五轮：公式级方法审计与中俄同题对照](analysis/russia-china-math-physics-round15-formula-audit-and-matched-comparison-2026-10-23.md)。
+- 重要去重修正：Prokudina 2014 年论文已包含“自由表面四阶非线性 PDE + 有限差分 + Marangoni 扰动演化”。因此不能将 2024 年摘要中相同的一般性方法描述自动算作新创新；2024 的具体新增物理项、边界条件和验证仍需逐式核对。
+- Prokudina 2025 年摘要确认窄带波包包络非线性抛物方程，但完整推导、渐近阶数及其与 2024 方程的关系仍 OPEN。
+- 中国强对照加强：Jiang et al. 2024 原文方法章节明确显示控制方程/界面条件 → 长波渐近展开 → 非线性演化方程 → normal-mode 稳定性与非线性演化；Zhao/Hu 2022、Wang/Hu Bingham 液层及 Su et al. 2026 Floquet 液膜稳定性构成理论反例。
+- 当前结论继续受限：俄罗斯特定研究谱系的连续性有结构性证据；国家整体理论能力排序、同题原创性优劣、手机 VC 直接收益仍未证实。RU24/RU25 全文公式审计未完成。
+- 下一步优先对照 Prokudina 2014 与 2024 的实际贡献差分，取得并审计 2025 全文，再收窄中国 2021—2026 年蒸发/冷凝液膜同题文献检索。现有投资组合决策不变。
+
 ## 最新专项进展（2026-10-23：第十四轮）
 
 - 新增 [第十四轮：近期液膜论文原文核验状态与中国强对照扩展](analysis/russia-china-math-physics-round14-recent-film-papers-and-china-counterexamples-2026-10-23.md)。
