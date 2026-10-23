@@ -1,3 +1,13 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 20
+
+- **Latest report:** [Round 20 analytical model comparison](../analysis/russia-thermal-academic-ecosystem-round20-analytical-model-comparison-2026-10-23.md).
+- **TPU-linked analytical evidence:** A 2026 salt-film crystallization paper uses analytical heat-transfer and component-diffusion solutions plus Kolmogorov crystallization theory, validated with in-house data. It reports a limitation from neglecting crystal interactions. Pavel Strizhak is a coauthor; this does not prove TPU-only ownership or electronics thermal-management applicability.
+- **Additional model:** A 2024 three-layer wall/PCM paper reports a new analytical solution and compares its algorithm with COMSOL; this is numerical verification, not independent experimental validation.
+- **Chinese counterexample:** A 2024 PCM instrument-compartment paper reports a Lightfoot-integral-method analytical solution and thermal experiment comparison for electronic-equipment thermal protection.
+- **Bounded conclusion:** Analytical modelling plus validation is not Russia-exclusive. Some Russian research-network evidence exists, but country-level superiority remains NOT_EVALUABLE.
+- **Next:** audit full-text equations, boundary conditions, error and applicability in the 2026 salt-film and Chinese instrument-compartment papers; verify affiliations/contributions for the 2024 wall paper; find closer matched two-phase/PCM studies.
+- **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 19
 
 - **Latest report:** [Round 19 representative paper method audit](../analysis/russia-thermal-academic-ecosystem-round19-paper-method-audit-2026-10-23.md).
