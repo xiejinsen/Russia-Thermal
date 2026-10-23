@@ -1,3 +1,14 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 28
+
+- **Latest report:** [Round 28 quantitative contribution audit (phase 1)](../analysis/russia-thermal-academic-ecosystem-round28-quantitative-contribution-audit-2026-10-23.md).
+- **Russia ITP 2014:** Unsteady wavy-film model predicts boiling waiting time/local total evaporation; abstract reports satisfactory experiment agreement, but no standardized error or uncertainty metrics were found.
+- **Russia ITP 2017:** Extends the framing to critical heat flux/film decay; low-heat-flux discrepancy is explicitly reported. No comparable MAE/RMSE, error budget or convergence data were found, so improved accuracy over 2014 is not established.
+- **China Dalian 2012:** Direct experimental baseline. **2015:** integrates several experiments/correlations into a 3D tube-bundle HTC distribution model. **2024:** water/seawater correlation covers D=19–38 mm, s/D=1.3–2.25, 50–70°C, ReΓ=118–1979 and salinity 0–60 g/kg; proposes film-thickness/turbulence competition mechanism. Paper-specific MAE/RMSE not confirmed from accessible page.
+- **Bounded conclusion:** Observed contributions mainly concern experiments, scenario/output expansion, engineering system models and correlations. New foundational mathematical theory is not established on either side. Next step is full-text extraction of equations, error definitions, independent validation and model validity limits.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. Portfolio unchanged: P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 27
 
 - **Latest report:** [Round 27 China falling-film longitudinal audit](../analysis/russia-thermal-academic-ecosystem-round27-china-falling-film-longitudinal-audit-2026-10-23.md).
