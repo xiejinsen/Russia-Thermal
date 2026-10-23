@@ -1,5 +1,15 @@
 # Russia-Thermal｜俄罗斯智能手机热管理科研洞察
 
+## 最新专项进展（2026-10-23：数学物理学术生态调查，第十七轮）
+
+- 新增 [学术生态调查维护规范与入口](research/academic-ecosystem/README.md)，把高校排名/学科背景、具体实验室与学者、与热管理团队的真实关联、热管理论文中的方法传导分开记录。
+- 新增机构登记表 [institution-matrix.tsv](research/academic-ecosystem/registry/institution-matrix.tsv)、[来源登记册](research/academic-ecosystem/evidence/source-register.md)，以及 [NSU](research/academic-ecosystem/profiles/NSU.md)、[TSU](research/academic-ecosystem/profiles/TSU.md)、[TPU](research/academic-ecosystem/profiles/TPU.md)、[MPEI](research/academic-ecosystem/profiles/MPEI.md) 四份机构档案。
+- 第十七轮报告：[俄罗斯热管理机构的数学物理学术生态旁证调查](analysis/russia-thermal-academic-ecosystem-round17-2026-10-23.md)。
+- 首轮公开证据：RAEX 2026 数学学科排名中 NSU 第 6、TSU 第 10、TPU 第 15；NSU 与多家科学院西伯利亚分院研究所存在人才培养合作网络；TSU 同时有数学物理中心与对流热质传递实验室；TPU 热质传递实验室明确列出相变热质传递解析解与数值模拟。
+- 证据边界：排名与实验室共存只能证明学术环境和资源，不证明资源已传导至某条热管理研究线。共同论文、项目、共同指导/任职及热管理论文中的具体方法关联仍是下一阶段核心。
+- 当前状态：环境证据初步支持；TSU/TPU 热传递方法资源有官方资料支持；跨团队传导 OPEN；国家级比较 NOT_EVALUABLE。原 P1/P2/HOLD 与建模 RESERVE 决策不变。
+
+
 本仓库研究**俄罗斯科研机构、实验室与学者在智能手机热管理领域的实际能力，以及相对中国的差异化价值和潜在合作方向**。目标不是单纯收集论文，而是形成**有原始证据、可解释技术边界、可用于团队和领导决策**的研究结论。
 
 > **原项目结题与网页验收状态（2026-10-13；数学物理专项研究更新至 2026-10-22）**：Q01–Q10 在公开资料范围内全部形成结题判断（3 项接受、7 项附明确限制接受）。GitHub Actions 最新归一化研究图检查和 Astro/链接检查已实际成功运行；网页已发布，并完成 **14 类页面 × 3 种视口（42 次）的真实 Chromium 浏览器验收**，截图、移动端修复与论文／专利视觉分级已归档；每条科学事实的全量独立再审不在本轮网站验收范围内。本轮扩展检查 155 个 Actor、162 条 Source、123 条 Claim、52 项 Capability、8 个 Direction、28 条 Decision，以及 P1/P2/TPU 关键证据链；确认并纠正了 Surtaev 的人物姓名首字母错误，清理了对论文作者身份、OPEN Claim、合作授权容易产生误解的网页措辞。详见[网页证据链审计（2026-10-13）](analysis/audits/web-evidence-chain-audit-2026-10-13.md)。
