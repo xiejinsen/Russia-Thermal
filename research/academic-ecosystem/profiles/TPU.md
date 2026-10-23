@@ -3,21 +3,38 @@
 - 机构 ID：AE-TPU
 - 状态：ACTIVE_WAVE_A
 - 最近核查：2026-10-23
-- 当前判断：热质传递实验室明确宣称开展相变/反应问题解析解、数值模拟与实验测量；具体论文原创性和理论深度仍需全文审计。
+- 当前判断：TPU 相关研究网络中存在解析热传导/扩散模型实例；必须区分共同作者网络、具体实验室归属与研究对象的电子热管理相关性。
 
-## 官方资源
+## 官方研究资源
 - RAEX 2026 俄罗斯高校数学学科排名第 15，仅作背景：https://raex-rr.com/education/subject_ranking/Maths/2026/
-- 实验室研究方向包括含相变和化学反应的热质传递解析解、自研代码/数学模拟软件、液滴/射流/液膜热质传递、高速视频和非接触光学测量：https://hmtslab.tpu.ru/en/research/
-- 实验室团队列出 Geniy Kuznetsov、Pavel Strizhak、Dmitriy Glushkov 等：https://hmtslab.wixsite.com/hmtslab/team
-- TPU 学术页面列出 Strizhak 的实验室职务与出版物：https://portal.tpu.ru/SHARED/p/PAVELSPA/publications?p=55
+- 实验室官方页面列出含相变/化学反应的热质传递解析解、自研代码、数值模拟与光学测量：https://hmtslab.tpu.ru/en/research/
+- Pavel Strizhak 出版物目录：https://portal.tpu.ru/SHARED/p/PAVELSPA/publications/Tab?p=1
+
+## 代表论文 A：液膜蒸发与盐结晶（2026）
+S. Ya. Misyura, D. V. Antonov, A. V. Mikulich et al., “A simple model of salt crystal formation in an evaporating liquid film,” *International Journal of Heat and Mass Transfer* 256 (2026), 128056. DOI 10.1016/j.ijheatmasstransfer.2025.128056.
+来源：https://www.sciencedirect.com/science/article/pii/S0017931025013912
+
+可核实的方法：
+- 使用薄液膜热传导方程解析解和组分扩散方程解析解；
+- 结合 Kolmogorov 结晶动力学；
+- 使用自有实验数据验证盐溶液质量与晶体质量的时间演化；
+- 与 COMSOL 的数值解比较验证代码；
+- 明确报告忽略晶体相互作用导致后期晶体质量高估的局限。
+
+**方法编码：** M1 支持；M2 解析方法与理论框架支持，但解析解是否为本文新创 OPEN；M3 数值实现验证支持，但新通用算法未确认；M4 实验验证支持；M5 部分支持。
+**边界：** Pavel Strizhak 为共同作者，但不可将整项成果归于 TPU 单一团队。对象是盐溶液液膜蒸发/结晶，不是电子设备热管理。
+
+## 代表论文 B：三层墙体中的相变热传递（2024）
+D. Antonov, M. Nizovtsev, E. Shchepakina, V. Sobolev, P. Strizhak, S. Sazhin, “Heat transfer through a three-layer wall considering the contribution of phase change,” *International Journal of Heat and Mass Transfer* 226 (2024), 125500.
+来源：https://research.brighton.ac.uk/en/publications/heat-transfer-through-a-three-layer-wall-considering-the-contribu/
+
+摘要称论文得到含相变的多层墙体非稳态热传递方程新解析解，并将其嵌入时间步进算法；验证主要是与 COMSOL 在同一输入条件下比较。模型应用于含石蜡层的建筑墙体。
+**边界：** 这是解析解的明确实例，但摘要未报告独立实验验证；建筑围护结构不能直接替代电子热管理；需核实作者单位与具体贡献后才能归入 TPU 机构能力。
 
 ## 方法判断
-官方资料证明团队将解析模型、数值计算和测量方法纳入研究组合，但不证明每篇论文都同时具备这三类方法，也不证明解析模型具有原创性。下一步需从原始论文提取控制方程、相变界面条件、解析解假设、数值实现与实验验证。
-
-ITP 的学术会议资料讨论了将液相解析热传导解与气相质量/动量/能量守恒相结合，并以极限模型对照和实验数据验证的液滴蒸发模型：https://www.itp.nsc.ru/conferences/sts40/en
-该资料只能证明俄罗斯热物理学术网络中存在这种建模路线，不能自动归属为 TPU 的独有成果。
+目前有证据表明 TPU 相关研究网络包含解析热传导/扩散、相变建模、数值实现和实验验证的组合。尚不能据此判断该方法在俄罗斯普遍领先，也不能证明每项成果来自 TPU 实验室本身。
 
 ## 下一步
-1. 选 2–3 篇明确使用 analytical solution / phase change / droplet evaporation 的论文逐篇审计。
-2. 区分严格解析解、半解析模型、经验关联式和数值求解。
-3. 核验验证数据来源、误差、参数范围与可复现性。
+1. 核对 2026 论文全文中的边界条件、特征根/级数、热—扩散耦合、实验误差和失效边界。
+2. 核对 2024 三层墙体论文作者单位与贡献声明。
+3. 与中国 2024 相变仪器舱论文按同一标准比较解析推导、实验误差、适用假设与对象相关性。
