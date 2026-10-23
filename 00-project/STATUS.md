@@ -1,3 +1,14 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 19
+
+- **Latest report:** [Round 19 representative paper method audit](../analysis/russia-thermal-academic-ecosystem-round19-paper-method-audit-2026-10-23.md).
+- **New profile:** [ITP-Kutateladze](../research/academic-ecosystem/profiles/ITP-Kutateladze.md).
+- **ITP evidence:** Surtaev & Pavlenko (2014) provide high-speed IR/video observations of falling-film boiling crisis; Chernyavskii & Pavlenko (2017) provide a time-evolving model, CHF/regime predictions and experimental comparison, with reported discrepancies at low heat flux. Theory novelty, convergence and uncertainty remain OPEN.
+- **TPU evidence:** the selected 2015 droplet paper is numerical modelling, not proof of the lab-level analytical-solution claim. Need true analytical-model papers.
+- **China counterevidence:** Zhang et al. (2023) mechanistic falling-film dry-out model; Li et al. (2024) microstructured film-boiling model; Liu et al. (2024) separated-flow/instability model near CHF.
+- **Bounded conclusion:** theory/model + numerical + experimental workflow is visible in some Russian thermal-physics lines; country-level superiority remains NOT_EVALUABLE, with strong Chinese counterexamples.
+- **Next:** obtain/audit ITP 2017 full text; select TPU papers with actual analytical derivations; audit Chinese full texts under the same M1–M5 rubric.
+- **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 18
 
 - **Latest report:** [Round 18 method-linkage audit](../analysis/russia-thermal-academic-ecosystem-round18-method-linkage-audit-2026-10-23.md).
