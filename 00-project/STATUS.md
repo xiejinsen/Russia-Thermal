@@ -1,3 +1,19 @@
+# CURRENT UPDATE — 2026-10-23 Round 14
+
+> This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical fields later in this file remain preserved as historical records and must not be interpreted as a live round-14 status.
+
+- **Current workstream:** recent Russia–China mathematical-physics method comparison; primary comparison window 2021–2026.
+- **Latest round:** [Round 14 audit](../analysis/russia-china-math-physics-round14-recent-film-papers-and-china-counterexamples-2026-10-23.md).
+- **RU24 (Prokudina 2024):** publisher metadata and searchable PDF extract confirm a nonlinear fourth-order free-surface PDE, with surface tension, thermocapillary and evaporation terms, converted to a difference equation and numerically studied. Full equation/boundary-condition/convergence audit remains OPEN.
+- **RU25 (Prokudina 2025):** publisher abstract confirms a nonlinear parabolic envelope equation for a narrow wave packet with coefficients based on growth rate, frequency and derivatives. Full derivation and relation to RU24 remain OPEN.
+- **China counterexamples:** recent theoretical and mechanistic research includes two-free-surface thermocapillary stability (2022), 3D evaporation/condensation film instability (2024), a 3D heated-film dry-patch model with experiments (2025), and recent thermocapillary evaporation experiments (2026).
+- **Current bounded conclusion:** structural signal for sustained nonlinear-film modelling/instability work in selected Russian research lines; no country-wide superiority, superior predictive accuracy, or direct smartphone VC performance gain established.
+- **Next action:** complete line-by-line RU24/RU25 PDF review; continue focused 2021–2026 Chinese exact-topic search; record unmatched search boundaries and model-comparison contract.
+- **Portfolio unchanged:** P1 Kutateladze feasibility hypothesis; P2 MPEI conditional reserve; TPU/Frumkin HOLD; mathematical modelling RESERVE. No external outreach, data/IP access, PoC or hardware experiment authorized by this update.
+- **Evidence maturity:** STRUCTURAL_SIGNAL. This update is not a full-paper formula audit or a current-SHA mechanical repository QA pass.
+
+---
+
 # V2.1 STATUS
 
 ## 2026-10-13 browser visual release acceptance (most recent)
