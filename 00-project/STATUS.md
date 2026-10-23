@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 23
+
+- **Latest report:** [Round 23 falling-film equation/method audit](../analysis/russia-thermal-academic-ecosystem-round23-falling-film-equation-method-audit-2026-10-23.md).
+- **Russian ITP 2017:** Open conference full-text text supports a Kapitza–Shkadov-type reduced-film model using h(x,t), Q(x,t), mass conservation h_t + Q_x = 0, moving-domain coordinate transformation for transient heat conduction, and predictions of boiling wait/local evaporation/regime map compared with liquid-nitrogen experiments. Extracted equation symbols are damaged; new analytical theory not established.
+- **Chinese Tsinghua:** 3D regularized model, linear stability analysis and 3D simulation of disturbance growth, unstable wavenumbers and film rupture.
+- **Chinese 2023 partial dry-out:** IR coverage measurement, 3D wall conduction model, conservation equations and interfacial evaporation closure, validated against multiple experiments.
+- **Bounded conclusion:** Russian research continuity and reduced-model/transient-heat-transfer/experiment linkage are plausible differentiators to test; mathematical originality superiority is not established. Chinese theory and mechanistic-model counterexamples remain material.
+- **Next:** compare Russian journal article against conference version; audit Tsinghua PDF linearization; extract Chinese 2023 validation cases and quantitative errors.
+- **Country-level superiority:** OPEN / NOT ESTABLISHED. **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 22
 
 - **Latest report:** [Round 22 matched falling-film comparison](../analysis/russia-thermal-academic-ecosystem-round22-matched-falling-film-comparison-2026-10-23.md).
