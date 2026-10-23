@@ -1,3 +1,13 @@
+# CURRENT UPDATE — 2026-10-23 Academic Ecosystem Round 18
+
+- **Latest report:** [Round 18 method-linkage audit](../analysis/russia-thermal-academic-ecosystem-round18-method-linkage-audit-2026-10-23.md).
+- **TSU:** Long-running heat/mass-transfer modelling and a 2017 finite-difference vs finite-volume comparison are documented. Direct collaboration between the heat-transfer lab and the university's theoretical/mathematical physics centre remains OPEN.
+- **TPU:** Official lab page states analytical solutions for heat/mass transfer with phase change/reactions, numerical codes and optical measurements. Paper-level originality and validation remain OPEN.
+- **NSU–ITP:** ITP official biography confirms Pavlenko graduated from NSU Physics; this is a concrete alumni link, not proof of a current joint project. ITP publications span model development, numerical simulation and experiments.
+- **Bounded conclusion:** Some Russian thermal-physics lines show a combined theory/model, numerical and experimental workflow. National-level superiority over China remains NOT_EVALUABLE; direct cross-unit transfer remains OPEN.
+- **Next:** audit 2–3 TPU analytical-model papers; audit ITP Pavlenko–Surtaev film/boiling papers for equations and validation; then compare with matched Chinese research.
+- **Portfolio unchanged:** P1/P2/HOLD and modelling RESERVE remain unchanged.
+
 # CURRENT UPDATE — 2026-10-23 Academic Ecosystem Workstream
 
 > This header adds the university/math-physics ecosystem inquiry without replacing the existing Russia-Thermal decision portfolio.
