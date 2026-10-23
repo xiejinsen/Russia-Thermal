@@ -1,3 +1,19 @@
+# CURRENT UPDATE — 2026-10-23 Round 15
+
+> This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical fields later in this file remain preserved as historical records.
+
+- **Current workstream:** Russia–China mathematical-physics method comparison, with recent literature window 2021–2026.
+- **Latest report:** [Round 15 formula-level method audit and matched comparison](../analysis/russia-china-math-physics-round15-formula-audit-and-matched-comparison-2026-10-23.md).
+- **Key de-duplication correction:** Prokudina 2014 already reports a fourth-order nonlinear free-surface PDE, finite-difference solution, and Marangoni disturbance evolution. Do not count the same general method description in RU24 (2024) as a new contribution without a line-by-line 2014/2024 difference audit.
+- **RU25 (2025):** abstract supports a nonlinear parabolic envelope equation for narrow wave packets; full derivation, asymptotic assumptions and relation to RU24 remain OPEN.
+- **China counterevidence strengthened:** Jiang et al. (2024) full method section shows governing equations/interface conditions -> long-wave expansion -> nonlinear evolution equation -> normal-mode stability and nonlinear evolution. Zhao/Hu (2022), Wang/Hu Bingham layer, and Su et al. (2026) provide adjacent theory/stability counterexamples, not all strict same-topic matches.
+- **Bounded conclusion:** sustained nonlinear-film modelling in selected Russian research lines is a structural signal. Country-wide superiority, superior same-topic novelty, and direct smartphone VC gain remain unproven. Evidence maturity = STRUCTURAL_SIGNAL; country-level comparison = NOT_EVALUABLE.
+- **Next action:** compare Prokudina 2014 vs 2024 equations, physical terms, conditions, discretization and results; audit the RU25 full envelope derivation; continue China recent evaporation/condensation-film exact-topic search.
+- **Portfolio unchanged:** P1 Kutateladze feasibility hypothesis; P2 MPEI conditional reserve; TPU/Frumkin HOLD; mathematical modelling RESERVE.
+- **QA boundary:** RU24/RU25 full equation audit and current-SHA whole-repository mechanical QA remain OPEN.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Round 14
 
 > This header supersedes stale operational snapshots below for the active mathematical-physics workstream. Historical fields later in this file remain preserved as historical records and must not be interpreted as a live round-14 status.
