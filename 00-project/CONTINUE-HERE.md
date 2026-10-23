@@ -1,3 +1,15 @@
+# 最新接续状态（2026-10-23：学术生态调查，第十九轮）
+
+- 最新报告：[第十九轮代表论文方法审计与中俄可比证据试配](../analysis/russia-thermal-academic-ecosystem-round19-paper-method-audit-2026-10-23.md)。
+- 新增 ITP 档案：[ITP-Kutateladze.md](../research/academic-ecosystem/profiles/ITP-Kutateladze.md)；机构总表和来源登记册已更新。
+- ITP 代表论文：Surtaev & Pavlenko 2014 降膜沸腾危机研究以高速红外/视频实验识别不同 Re 下失效机制；Chernyavskii & Pavlenko 2017 建立时变波状降膜模型并与实验比较，报告低热流区域偏差。强证据是模型—实验结合，不是已证实的新数学理论。
+- TPU 已审计到的 2015 单滴蒸发论文主要是数值研究；不可据此证明具体解析解创新。下一步要从实验室目录中找真正的解析模型论文。
+- 中国对照：Zhang et al. 2023 降膜干涸模型考虑守恒方程、液体覆盖率、界面蒸发与过冷，并用多组实验验证；Li et al. 2024 建立微结构液膜沸腾机理模型；Liu et al. 2024 使用分离流模型和失稳分析预测 CHF 附近液汽结构。
+- 当前结论：俄罗斯部分研究线的模型—数值—实验组合有证据；国家级优势 NOT EVALUABLE，且中国同题/邻近题存在强反例。
+- 下一步：取得 ITP 2017 论文全文审计方程/收敛/误差；选择 TPU 真正解析解论文；统一审计中国论文全文并做严格同题匹配。原 P1/P2/HOLD 与建模 RESERVE 不变。
+
+---
+
 # 最新接续状态（2026-10-23：学术生态调查，第十八轮）
 
 - 最新报告：[第十八轮学术生态与真实建模能力关联核查](../analysis/russia-thermal-academic-ecosystem-round18-method-linkage-audit-2026-10-23.md)。
