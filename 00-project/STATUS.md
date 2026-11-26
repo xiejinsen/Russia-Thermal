@@ -1,3 +1,14 @@
+# CURRENT UPDATE — 2026-11-26 Integrated insight S1
+
+- **Current entry:** [S1 integrated evidence and gap matrix](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md).
+- **Stage:** S1 repository-level synthesis complete; S2 decision-relevant external evidence refresh pending. S1 did not independently re-read all original articles, conduct experiments, or change canonical decisions.
+- **Reconciliation:** 23 archived specialty reports (Math-Physics R10–16, Academic Ecosystem R17–29); 79 source-register entries / 63 exact URL strings; 11 repeated-URL groups retained as provenance, not independent votes. R16 exists; prior R15-only handoff was incomplete.
+- **Q01–Q10:** research closeout dispositions unchanged: 3 accepted public evidence / 7 with disclosed limitations. P1 Kutateladze feasibility, P2 MPEI conditional reserve, TPU HOLD, foundational modeling RESERVE and WATCH unchanged.
+- **Next:** S2 scoped refresh (2026-10-24 through 2026-11-26); then S3 causal/ecosystem analysis, S4 comparative capability, S5 phone mapping, S6 integrated Chinese report V2. Prokudina full-text gap and older accuracy gaps are nonblocking unless decision-critical.
+- **Validation:** previous baseline HEAD 8c187257 had successful Repository Health, Web Data Check and Deploy Web Report; Markdown link scan nonblocking. New HEAD checks must be observed separately.
+
+---
+
 # CURRENT UPDATE — 2026-10-23 Math-Physics Substream Round 15
 
 - **Latest report:** [Round 15 Prokudina 2024–2025 model-lineage audit](../analysis/russia-china-math-physics-round15-prokudina-model-lineage-audit-2026-10-23.md).
