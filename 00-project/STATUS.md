@@ -1,3 +1,12 @@
+# CURRENT UPDATE — 2026-11-27 S2 bounded evidence refresh
+
+- [S2 report](../analysis/audits/s2-recent-evidence-refresh-2026-11-27.md) covers 2026-10-24 to 2026-11-27; dates distinguished from preprints and earlier public coverage.
+- New comparator leads: micromembrane UTVC, dual-source thermal SOA, PCM regeneration, confined VC wettability LBM, miniature active cooling; ITP official dissertation/supervisor and Lab1.3 project leads for S3.
+- No decision-changing evidence identified in this bounded scan. Russian and patent coverage incomplete; publisher access limited. No canonical evidence promotion or full-text certification. Q01–Q10 dispositions and P1/P2/HOLD/RESERVE/WATCH unchanged.
+- Next S3: trace actual training, organizational, project and method links and competing explanations; close with boundary when public evidence is insufficient. S4/S5 comparator deep reads only if decision-critical. No outreach or experiments.
+
+---
+
 # CURRENT UPDATE — 2026-11-26 Integrated insight S1
 
 - **Current entry:** [S1 integrated evidence and gap matrix](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md).
