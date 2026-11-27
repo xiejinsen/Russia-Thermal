@@ -1,3 +1,12 @@
+# 当前接续入口（2026-11-27）｜S2 有界扫描完成 / S3 待执行
+
+先读 [S2 增量更新](../analysis/audits/s2-recent-evidence-refresh-2026-11-27.md) 和 [S1 整合矩阵](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md)。S2 检索2026-10-24至11-27；区分较早预印本/报道与窗口活动/刊期。仅有界检索、未作全文及全面专利审计，不以俄方命中少推断研究不存在。
+- S3 下一步：ITP/NSU 的人才与实验室培养链（含Mungalov答辩公告）、ICM/SFU/Altai的共同研究链、TSU/TPU人员与项目关系、MPEI对照；分别编码环境、能力、关联、实际传导及替代解释。一次定向检索后可有边界收敛。
+- S4/S5保留S2-01/02超薄VC与多热源动态边界作为优先对照候选；只有决策关键且完成身份/证据核验才提升canonical。
+- Q01–Q10公共研究验收3直接/7带限制；正式组合不变；无实验/外联授权。
+
+---
+
 # 当前接续入口（2026-11-26）｜S1 完成 / S2 待执行
 
 先读 [S1 全局证据矩阵与关键缺口](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md)，再按 [章程](charter.md)、[十问验收合同](final-insight-acceptance-contract.md) 和 [月度研究更新契约](governance/monthly-research-update.md) 执行。以下旧轮次保留历史，不能作为当前待办优先级。
