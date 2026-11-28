@@ -1,3 +1,12 @@
+# CURRENT UPDATE — 2026-11-28 S3 research-capability formation
+
+- [S3 report](../analysis/audits/s3-research-capability-formation-2026-11-28.md): direct institutional training, personnel overlap, cross-institution paper affiliations and supervisor-method lineage, plus China counterexamples. CLOSED_WITH_BOUNDARY: national superiority and counterfactual causality not established.
+- NSU–ITP training base; Lab6.6 mentor link; TSU theoretical-mechanics personnel overlap and current-role caveat; ICM collaboration; TPU training/experimental organization; MPEI 2024 thesis abstract and mentor correlation. Some official pages only indexed, PDF screenshot partial.
+- Q01–Q10 dispositions unchanged (3 direct/7 limited). No new formal decision, canonical technical claim, contact or experiment. P1/P2/HOLD/RESERVE/WATCH unchanged.
+- Next S4 capability comparison and complementarity; S5 phone mapping; S6 integrated report. See S3 report for provenance and stopping boundaries. New HEAD validation must be checked separately.
+
+---
+
 # CURRENT UPDATE — 2026-11-27 S2 bounded evidence refresh
 
 - [S2 report](../analysis/audits/s2-recent-evidence-refresh-2026-11-27.md) covers 2026-10-24 to 2026-11-27; dates distinguished from preprints and earlier public coverage.
