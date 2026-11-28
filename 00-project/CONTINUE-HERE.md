@@ -1,3 +1,12 @@
+# 当前接续入口（2026-11-28）｜S3 完成（有边界）/ S4 待执行
+
+先读 [S3 科研能力形成机制](../analysis/audits/s3-research-capability-formation-2026-11-28.md)、[S2 增量更新](../analysis/audits/s2-recent-evidence-refresh-2026-11-27.md)、[S1 整合矩阵](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md)。
+- S3 直接证据：NSU–ITP研究基地与课程、ITP Lab6.6培养（与Lab1.3分开）、TSU理论力学人员交叉（目录列Gibanov为实验室负责人，旧Sheremet任职勿无日期沿用）、ICM/SFU/Altai/Lavrentyev共同论文、TPU培养/设备、MPEI Ivanov 2024学位摘要中的导师及换热公式使用。中国科学院力学所、上海交大、清华对照明确组织机制非俄方独占。
+- 下一步S4：将已有八方向与八类能力组织成中俄/全球/内部替代矩阵，按任务、证据级、物理边界、可比输出、实际增量、访问权及内部建设价值分层；优先S2微膜UTVC和双热源安全域对照，不能按国家论文数量排名。S5完成手机映射；S6统一报告。
+- Q01–Q10原验收3直接/7有边界；P1/P2/HOLD/RESERVE/WATCH不变；无实验/外联授权。S3不宣称国家总体因果优势；缺失全文与角色贡献只在决策关键时重启。
+
+---
+
 # 当前接续入口（2026-11-27）｜S2 有界扫描完成 / S3 待执行
 
 先读 [S2 增量更新](../analysis/audits/s2-recent-evidence-refresh-2026-11-27.md) 和 [S1 整合矩阵](../analysis/audits/s1-integrated-evidence-and-gap-matrix-2026-11-26.md)。S2 检索2026-10-24至11-27；区分较早预印本/报道与窗口活动/刊期。仅有界检索、未作全文及全面专利审计，不以俄方命中少推断研究不存在。
